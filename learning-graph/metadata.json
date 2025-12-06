@@ -1,0 +1,13 @@
+{
+  "title": "Learning Linux",
+  "description": "A comprehensive 15-week course teaching high school students Linux fundamentals, from UNIX history and shell commands to Raspberry Pi projects, cloud computing, and career pathways. This intelligent textbook covers 550 concepts across shell scripting, file systems, networking, security, and hands-on capstone projects.",
+  "creator": "Dan McCreary",
+  "date": "2025-12-06",
+  "version": "1.0",
+  "format": "Learning Graph JSON v1.0",
+  "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+  "license": "CC BY-NC-SA 4.0 DEED",
+  "audience": "High school students",
+  "duration": "15 weeks",
+  "conceptCount": 550
+}

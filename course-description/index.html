@@ -1,0 +1,1214 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A 15-week course on Linux for high-school students">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../learning-graph/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Learning Linux - Learning Linux</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#learning-linux-course-description" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Learning Linux" class="md-header__button md-logo" aria-label="Learning Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Learning Linux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Learning Linux
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../learning-graph/" class="md-tabs__link">
+          
+  
+  Learning Graph
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../sims/graph-viewer/" class="md-tabs__link">
+          
+  
+  MicroSims
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../supplementary-content/low-cost-raspberry-pd/" class="md-tabs__link">
+          
+  
+  Supplementary Content
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Learning Linux" class="md-nav__button md-logo" aria-label="Learning Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Learning Linux
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Course
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-course-is-different" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why this Course is Different
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topics-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topics Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topics-not-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topics Not Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning Objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remember
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understand
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apply" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apply
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyze" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analyze
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Learning Graph
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-graph/concept-list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-graph/concept-taxonomy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept Taxonomy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-graph/quality-metrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quality Metrics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-graph/taxonomy-distribution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Taxonomy Distribution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            MicroSims
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sims/graph-viewer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learning Graph Viewer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Supplementary Content
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Supplementary Content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supplementary-content/low-cost-raspberry-pd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Low Cost Raspberry Pi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supplementary-content/raspberry-pi-500-plus-impact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raspberry Pi 500+
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supplementary-content/claude-code-skills/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Claude Code Skills
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supplementary-content/intelligent-textbook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intelligent Textbooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="learning-linux-course-description">Learning Linux Course Description</h1>
+<p><strong>Title:</strong> Learning Linux<br/>
+<strong>Length:</strong> 15-week semester long course<br/>
+<strong>Audience:</strong> High school students<br/>
+<strong>Course Description Quality Score:</strong> 91/100 (Excellent)</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Students must have strong typing skills including the use of the copy/cut and paste commands.</li>
+<li>Students should have access to a Linux terminal shell.  Any of the following is acceptable:<ul>
+<li>Mac Terminal</li>
+<li>Windows Windows System for Linux (WSL)</li>
+<li>Chromebook in developer mode</li>
+<li>Raspberry Pi (available in classrooms for under $100/student without a monitor) See <a href="../supplementary-content/low-cost-raspberry-pd/">here</a> for details.</li>
+</ul>
+</li>
+</ul>
+<h2 id="why-this-course">Why This Course</h2>
+<p>In late September 2025 The Raspberry Pi Foundation announced the <a href="../supplementary-content/raspberry-pi-500-plus-impact/">Raspberry Pi 500+</a>.
+Although this is just one announcement in a long line of Raspberry Pi products, the features and performance of the 500+ was
+stunning.  But this was not just for the Do-It-Yourself (DIY) crowd.  This
+was a device that could compete with some of the best desktop computers.
+And the nice thing about the 500+ was that it had all the hardware ports for
+connecting it to thousands of sensors and motors to control lab equipment in schools.</p>
+<p>However, the 500+ lacked one big component: A really fun book to teach kids how
+to use the powerful Linux operating system that powered the 500+.</p>
+<p>To put this in context, this was just around the time that Anthropic <a href="../supplementary-content/claude-code-skills/">Claude Code Skills</a> were
+taking off.  And Claude Code was build around what core skill?  If you guess Linux shell commands you were <strong>RIGHT!</strong>.  In summary, I realized we could combine the need for Linux education with Claude Code to build a really fun world-class textbook
+targeting high-school students that would empower them with the knowledge they need to use these powerful tools.</p>
+<h2 id="why-this-course-is-different">Why this Course is Different</h2>
+<p>If you do a Google Search, you can find hundreds of books on UNIX and Linux going back to the 1980s.
+But many of them are static printed books that are not designed for our TikTok obsessed youth that
+have the attention span of a gnat.  They need fun, engaging and <strong>interactive</strong> systems that can
+keep their attention and intelligent textbook interaction points that allow instructors to monitor their progress.</p>
+<h2 id="topics-covered">Topics Covered</h2>
+<ul>
+<li>UNIX</li>
+<li>UNIX and C</li>
+<li>Portability</li>
+<li>Linux</li>
+<li>Shell</li>
+<li>Startup</li>
+<li>Dot files</li>
+<li>.bashrc</li>
+<li>.zshrc</li>
+<li>Shortcuts</li>
+<li>tab completion</li>
+<li>Fonts and appearance</li>
+<li>Terminal Size</li>
+<li>Automating Startup</li>
+<li>Shell Commands</li>
+<li>Shell Programs</li>
+<li>Command Options</li>
+<li>grep</li>
+<li>regular expressions</li>
+<li>The Shell Pipe</li>
+<li>Input</li>
+<li>Output</li>
+<li>wc</li>
+<li>sort</li>
+<li>JSON</li>
+<li>jc</li>
+<li>Markdown</li>
+<li>network</li>
+<li>ping</li>
+<li>traceroute</li>
+<li>wifi</li>
+<li>curl</li>
+<li>wget</li>
+<li>version info</li>
+<li>shutdown</li>
+<li>text editing</li>
+<li>nano</li>
+<li>vi and vim</li>
+<li>find</li>
+<li>locate</li>
+<li>awk</li>
+<li>sed</li>
+<li>compression</li>
+<li>tar</li>
+<li>zip</li>
+<li>gzip</li>
+<li>diff</li>
+<li>cron</li>
+<li>history</li>
+<li>Design Philosophy</li>
+<li>Small Modular Tools</li>
+<li>Basic Commands</li>
+<li>Navigation</li>
+<li>Home Directory</li>
+<li>Environment Variables</li>
+<li>Ownership</li>
+<li>Permissions</li>
+<li>Directories</li>
+<li>File Systems</li>
+<li>Mounting Devices</li>
+<li>USB Drives</li>
+<li>USB Ports</li>
+<li>PATH</li>
+<li>PATH Order</li>
+<li>Override</li>
+<li>Alias</li>
+<li>Whereis</li>
+<li>Which</li>
+<li>Processes</li>
+<li>ps</li>
+<li>kill</li>
+<li>Debugging</li>
+<li>Installing</li>
+<li>Updates</li>
+<li>apt</li>
+<li>brew</li>
+<li>SSH</li>
+<li>remote login</li>
+<li>Firewalls</li>
+<li>sudo</li>
+<li>Shell prompts</li>
+<li>Customizing Terminal</li>
+<li>Terminal Themes</li>
+<li>Terminal in VSCode</li>
+<li>Terminal in Thonny</li>
+<li>Desktops</li>
+<li>Linux Versions</li>
+<li>Debian</li>
+<li>Real Time</li>
+<li>Ubuntu</li>
+<li>UNIX System V</li>
+<li>Berkley Distribution</li>
+<li>BSD Releases</li>
+<li>Virtual Memory</li>
+<li>Tuning UNIX</li>
+<li>Flash Drives</li>
+<li>Swap Drives</li>
+<li>top</li>
+<li>measuring performance</li>
+<li>CPU benchmarks</li>
+<li>Disk benchmarks</li>
+<li>GPU</li>
+<li>GPU benchmarks</li>
+<li>Adding a GPU to the Pi</li>
+<li>GPU drivers</li>
+<li>Webcams</li>
+<li>Adding a camera to a Pi</li>
+<li>Bluetooth</li>
+<li>printers</li>
+<li>displays</li>
+<li>HDMI ports</li>
+<li>Pi HDMI Micro Port</li>
+<li>Multiple Displays</li>
+<li>Display RAM</li>
+<li>Sounds</li>
+<li>Easter Eggs</li>
+<li>NVIDIA drivers on Pi</li>
+<li>Low Cost Linux</li>
+<li>Raspberry Pi Zero</li>
+<li>Linux in STEP</li>
+<li>Linux in Maker Spaces</li>
+<li>40-pin port on the Pi</li>
+<li>Voltage Pins</li>
+<li>External Power</li>
+<li>Data Pins</li>
+<li>Monitoring Current</li>
+<li>LED Strip</li>
+<li>Motors</li>
+<li>Servos</li>
+<li>IoT</li>
+<li>Linux at Home</li>
+<li>Monitoring Your Home</li>
+<li>Docker</li>
+<li>Spinning up Linux on the Cloud</li>
+<li>Terraform</li>
+<li>Python</li>
+<li>PIP</li>
+<li>Python VMs</li>
+<li>Secrets</li>
+<li>GitHub</li>
+<li>git clone</li>
+<li>C</li>
+<li>The Future of Linux</li>
+<li>C vs. RUST</li>
+<li>Final Projects</li>
+<li>Web server</li>
+<li>Game Server</li>
+<li>Media Server</li>
+<li>Ad Blocker</li>
+<li>Retro Gaming</li>
+<li>VPN Setup</li>
+<li>VSCode</li>
+<li>Linux Careers</li>
+<li>Network admin</li>
+<li>Linux in Space</li>
+<li>Linux in Cars</li>
+</ul>
+<h2 id="topics-not-covered">Topics Not Covered</h2>
+<ul>
+<li>Linux Internals</li>
+<li>Compiling Linux</li>
+<li>Device Drivers</li>
+<li>Linux Research</li>
+<li>Advanced RUST</li>
+<li>Advanced C</li>
+</ul>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>The following learning objectives are classified according to Bloom's Revised Taxonomy (Anderson and Krathwohl, 2001), organized from lower-order to higher-order cognitive skills.</p>
+<h3 id="remember">Remember</h3>
+<p>By the end of this course, students will be able to:</p>
+<ol>
+<li>Recall the historical origins of UNIX and its relationship to the C programming language</li>
+<li>List common Linux shell commands (ls, cd, pwd, cp, mv, rm, mkdir, cat, grep, chmod)</li>
+<li>Identify the components of the Linux file system hierarchy</li>
+<li>Recognize the purpose of environment variables such as PATH and HOME</li>
+<li>Name the major Linux distributions (Debian, Ubuntu, BSD variants)</li>
+</ol>
+<h3 id="understand">Understand</h3>
+<p>By the end of this course, students will be able to:</p>
+<ol>
+<li>Explain the UNIX design philosophy of small, modular tools</li>
+<li>Describe how the shell pipe connects command input and output</li>
+<li>Summarize the difference between file ownership and permissions</li>
+<li>Interpret file permission notation (rwx, numeric modes)</li>
+<li>Explain the purpose of package managers (apt, brew) in system maintenance</li>
+<li>Describe the role of processes and how they are managed in Linux</li>
+</ol>
+<h3 id="apply">Apply</h3>
+<p>By the end of this course, students will be able to:</p>
+<ol>
+<li>Navigate the Linux file system using command-line tools</li>
+<li>Execute shell commands with appropriate options and arguments</li>
+<li>Set and modify environment variables and aliases</li>
+<li>Install, update, and remove software using package managers</li>
+<li>Mount and unmount USB drives and external storage devices</li>
+<li>Use process management commands (ps, top, kill) to monitor and control running programs</li>
+<li>Clone repositories from GitHub using git commands</li>
+</ol>
+<h3 id="analyze">Analyze</h3>
+<p>By the end of this course, students will be able to:</p>
+<ol>
+<li>Diagnose permission errors and determine appropriate solutions</li>
+<li>Analyze system performance using benchmarking tools (CPU, disk, GPU)</li>
+<li>Compare different Linux distributions and their use cases</li>
+<li>Interpret system resource usage from tools like top</li>
+<li>Troubleshoot PATH-related issues when commands are not found</li>
+<li>Examine the differences between C and Rust for systems programming</li>
+</ol>
+<h3 id="evaluate">Evaluate</h3>
+<p>By the end of this course, students will be able to:</p>
+<ol>
+<li>Assess appropriate permission settings for security and functionality</li>
+<li>Evaluate which Linux distribution is suitable for a given application</li>
+<li>Judge the trade-offs between different hardware configurations (Pi Zero vs Pi 500+)</li>
+<li>Critique shell scripts for efficiency and best practices</li>
+<li>Assess system performance bottlenecks and recommend improvements</li>
+</ol>
+<h3 id="create">Create</h3>
+<p>By the end of this course, students will be able to:</p>
+<ol>
+<li>Write shell scripts that automate repetitive tasks</li>
+<li>Design a home monitoring system using IoT sensors and a Raspberry Pi</li>
+<li>Construct a development environment with Python, virtual environments, and version control</li>
+<li>Build Docker containers to deploy Linux applications</li>
+<li>Develop projects that interface with the Raspberry Pi GPIO pins (LEDs, motors, servos)</li>
+<li>Compose infrastructure-as-code configurations using Terraform for cloud Linux instances</li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "toc.integrate", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

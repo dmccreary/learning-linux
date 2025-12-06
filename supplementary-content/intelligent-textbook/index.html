@@ -1,0 +1,1239 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+      
+        <link rel="prev" href="../claude-code-skills/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Intelligent Textbooks - Learning Linux</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#intelligent-textbooks-a-five-level-framework" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Learning Linux" class="md-header__button md-logo" aria-label="Learning Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Learning Linux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intelligent Textbooks
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../course-description/" class="md-tabs__link">
+        
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../learning-graph/" class="md-tabs__link">
+          
+  
+  Learning Graph
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../sims/graph-viewer/" class="md-tabs__link">
+          
+  
+  MicroSims
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../low-cost-raspberry-pd/" class="md-tabs__link">
+          
+  
+  Supplementary Content
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Learning Linux" class="md-nav__button md-logo" aria-label="Learning Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Learning Linux
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Learning Graph
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/concept-list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/concept-taxonomy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept Taxonomy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/quality-metrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quality Metrics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/taxonomy-distribution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Taxonomy Distribution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            MicroSims
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/graph-viewer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learning Graph Viewer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Supplementary Content
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Supplementary Content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../low-cost-raspberry-pd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Low Cost Raspberry Pi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raspberry-pi-500-plus-impact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raspberry Pi 500+
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../claude-code-skills/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Claude Code Skills
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Intelligent Textbooks
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Intelligent Textbooks
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-five-levels-of-intelligent-textbooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Five Levels of Intelligent Textbooks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Five Levels of Intelligent Textbooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level-1-static-textbooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 1: Static Textbooks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-2-interactive-textbooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 2: Interactive Textbooks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-3-adaptive-textbooks-this-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 3: Adaptive Textbooks (This Course)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-4-chatbot-integrated-textbooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 4: Chatbot-Integrated Textbooks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-5-autonomous-ai-textbooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level 5: Autonomous AI Textbooks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-record-store-lrs-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Record Store (LRS) Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning Record Store (LRS) Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-learning-record-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a Learning Record Store?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xapi-statement-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      xAPI Statement Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-this-course-uses-lrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      How This Course Uses LRS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-lrs-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available LRS Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privacy-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privacy and Compliance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Privacy and Compliance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ferpa-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      FERPA Compliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-level-3-for-this-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Level 3 for This Course?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#economic-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Economic Considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="intelligent-textbooks-a-five-level-framework">Intelligent Textbooks: A Five-Level Framework</h1>
+<h2 id="overview">Overview</h2>
+<p>This Learning Linux course is designed as a <strong>Level 3 Intelligent Textbook</strong>—an adaptive learning system that dynamically adjusts content based on individual learner performance. This page explains the intelligent textbook framework and how this course integrates with learning analytics systems.</p>
+<h2 id="the-five-levels-of-intelligent-textbooks">The Five Levels of Intelligent Textbooks</h2>
+<p>The <a href="https://github.com/dmccreary/intelligent-textbooks">Five Levels of Intelligent Textbooks</a> framework provides a standardized classification system for educational technology, inspired by the SAE J3016 autonomous vehicle standards. Each level represents increasing sophistication in personalization and AI integration.</p>
+<h3 id="level-1-static-textbooks">Level 1: Static Textbooks</h3>
+<p>Traditional digital textbooks with fixed content and no interactivity. These are essentially PDF versions of printed books—the content remains the same for every learner regardless of their progress or comprehension.</p>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>Fixed, unchanging content</li>
+<li>No learner interaction tracking</li>
+<li>No personalization</li>
+<li>Minimal data collection requirements</li>
+</ul>
+<h3 id="level-2-interactive-textbooks">Level 2: Interactive Textbooks</h3>
+<p>Textbooks incorporating multimedia, hyperlinks, and basic assessments. This level adds engagement through enriched media and quizzes but does not adapt to individual learners.</p>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>Embedded videos, animations, and simulations (MicroSims)</li>
+<li>Hyperlinked navigation</li>
+<li>Basic quizzes and self-assessments</li>
+<li>Learning graphs as core data structures</li>
+<li>Limited learner data collection</li>
+</ul>
+<h3 id="level-3-adaptive-textbooks-this-course">Level 3: Adaptive Textbooks (This Course)</h3>
+<p>Systems that dynamically adjust content based on individual learner performance, personalizing the educational experience in real time. <strong>This Learning Linux course operates at Level 3.</strong></p>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>Real-time content adaptation based on performance</li>
+<li>Personalized learning paths</li>
+<li>Progress tracking and analytics</li>
+<li>Integration with Learning Record Stores (LRS)</li>
+<li>Prerequisite-aware content sequencing</li>
+<li>Targeted remediation and enrichment</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Privacy Inflection Point</p>
+<p>Level 3 represents a critical <strong>privacy inflection point</strong> in the framework. Systems at this level and above require increasingly detailed individual learning histories, behavioral patterns, and performance data. This triggers regulatory compliance requirements under:</p>
+<ul>
+<li><strong>FERPA</strong> (Family Educational Rights and Privacy Act) - US</li>
+<li><strong>COPPA</strong> (Children's Online Privacy Protection Act) - US, for students under 13</li>
+<li><strong>GDPR</strong> (General Data Protection Regulation) - European Union</li>
+</ul>
+</div>
+<h3 id="level-4-chatbot-integrated-textbooks">Level 4: Chatbot-Integrated Textbooks</h3>
+<p>Textbooks employing large language models for conversational tutoring, enabling dialogue-based learning support.</p>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>Natural language Q&amp;A with AI tutors</li>
+<li>Conversational explanations of concepts</li>
+<li>On-demand help and clarification</li>
+<li>Conversation logs and interaction histories</li>
+<li>Increased data collection for personalization</li>
+</ul>
+<h3 id="level-5-autonomous-ai-textbooks">Level 5: Autonomous AI Textbooks</h3>
+<p>Fully autonomous AI systems capable of comprehensive, real-time personalization across all learning contexts—the educational equivalent of fully self-driving vehicles.</p>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>Complete curriculum management by AI</li>
+<li>Cross-context learning adaptation</li>
+<li>Predictive learning path optimization</li>
+<li>Comprehensive behavioral modeling</li>
+<li>Maximum data requirements and privacy implications</li>
+</ul>
+<h2 id="learning-record-store-lrs-integration">Learning Record Store (LRS) Integration</h2>
+<h3 id="what-is-a-learning-record-store">What is a Learning Record Store?</h3>
+<p>A <a href="https://xapi.com/learning-record-store/">Learning Record Store (LRS)</a> is a specialized database that receives, stores, and returns learning activity statements using the xAPI (Experience API) standard. The LRS serves as the heart of any xAPI ecosystem, enabling:</p>
+<ul>
+<li><strong>Cross-platform tracking</strong>: Capture learning activities from multiple sources—web, mobile, simulations, and real-world activities</li>
+<li><strong>Standardized data format</strong>: Use xAPI statements (Actor-Verb-Object) for consistent data representation</li>
+<li><strong>Analytics and reporting</strong>: Generate insights from aggregated learning data</li>
+<li><strong>Adaptive learning support</strong>: Provide data to intelligent systems that personalize content</li>
+</ul>
+<h3 id="xapi-statement-structure">xAPI Statement Structure</h3>
+<p>Learning activities are recorded as xAPI statements following an Actor-Verb-Object pattern:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;actor&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jane Doe&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;mbox&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mailto:jane@school.edu&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;verb&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://adlnet.gov/expapi/verbs/completed&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;display&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;en-US&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;completed&quot;</span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;object&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://learning-linux.org/chapters/03-navigation&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;definition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;en-US&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Chapter 3: File System Navigation&quot;</span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;scaled&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.85</span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;completion&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="how-this-course-uses-lrs">How This Course Uses LRS</h3>
+<p>The Learning Linux course can integrate with an LRS to track:</p>
+<table>
+<thead>
+<tr>
+<th>Activity Type</th>
+<th>Example xAPI Verbs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chapter completion</td>
+<td><code>completed</code>, <code>progressed</code></td>
+</tr>
+<tr>
+<td>Quiz performance</td>
+<td><code>answered</code>, <code>passed</code>, <code>failed</code></td>
+</tr>
+<tr>
+<td>MicroSim interactions</td>
+<td><code>interacted</code>, <code>experienced</code></td>
+</tr>
+<tr>
+<td>Terminal exercises</td>
+<td><code>attempted</code>, <code>mastered</code></td>
+</tr>
+<tr>
+<td>Time-on-task</td>
+<td><code>initialized</code>, <code>terminated</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="available-lrs-options">Available LRS Options</h3>
+<p>Schools implementing this course can choose from several LRS solutions:</p>
+<table>
+<thead>
+<tr>
+<th>LRS</th>
+<th>Type</th>
+<th>Cost</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.sqllrs.com">SQL LRS</a></td>
+<td>Open Source</td>
+<td>Free</td>
+<td>Self-hosted, Docker available</td>
+</tr>
+<tr>
+<td><a href="https://lrs.io">Veracity</a></td>
+<td>SaaS/On-prem</td>
+<td>Free tier</td>
+<td>Moodle LTI integration</td>
+</tr>
+<tr>
+<td><a href="https://www.watershedlrs.com">Watershed</a></td>
+<td>Enterprise SaaS</td>
+<td>Free basic</td>
+<td>Advanced analytics paid</td>
+</tr>
+<tr>
+<td><a href="https://learningpool.com/learning-record-store">Learning Pool</a></td>
+<td>Enterprise SaaS</td>
+<td>Paid</td>
+<td>Comprehensive tools</td>
+</tr>
+</tbody>
+</table>
+<h2 id="privacy-and-compliance">Privacy and Compliance</h2>
+<h3 id="ferpa-compliance">FERPA Compliance</h3>
+<p>For US educational institutions, FERPA requires:</p>
+<ul>
+<li>Student education records remain confidential</li>
+<li>Access limited to authorized personnel only</li>
+<li>Clear policies for record disclosure</li>
+<li>Third-party vendor contracts specifying data handling responsibilities</li>
+</ul>
+<h3 id="implementation-recommendations">Implementation Recommendations</h3>
+<ol>
+<li><strong>Authentication</strong>: Implement robust identity verification</li>
+<li><strong>Encryption</strong>: Use encryption for data storage and transmission</li>
+<li><strong>Access Control</strong>: Role-based permissions for viewing student data</li>
+<li><strong>Data Retention</strong>: Clear policies on how long learning records are kept</li>
+<li><strong>Vendor Review</strong>: Verify LRS vendor privacy policies and security measures</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Institutional Responsibility</p>
+<p>Schools deploying Level 3+ intelligent textbooks should work with their IT and legal departments to ensure proper data governance frameworks are in place before collecting detailed learning analytics.</p>
+</div>
+<h2 id="why-level-3-for-this-course">Why Level 3 for This Course?</h2>
+<p>The Learning Linux course implements Level 3 capabilities because:</p>
+<ol>
+<li>
+<p><strong>Prerequisite Dependencies</strong>: Linux concepts build on each other—file navigation before permissions, permissions before scripting. Adaptive sequencing ensures students master prerequisites.</p>
+</li>
+<li>
+<p><strong>Skill Verification</strong>: Terminal commands require hands-on practice. Tracking actual command execution (not just reading) ensures competency.</p>
+</li>
+<li>
+<p><strong>Personalized Pacing</strong>: High school students have varying backgrounds. Some need more time on fundamentals; others can accelerate.</p>
+</li>
+<li>
+<p><strong>Instructor Visibility</strong>: Teachers need dashboards showing class progress, struggling students, and concept mastery rates.</p>
+</li>
+<li>
+<p><strong>Actionable Analytics</strong>: Data-driven insights enable targeted interventions rather than one-size-fits-all instruction.</p>
+</li>
+</ol>
+<h2 id="economic-considerations">Economic Considerations</h2>
+<p>Research indicates that by 2030, producing basic interactive content (Levels 1-2) will cost "pennies per student per day," fundamentally disrupting traditional textbook economics. This means:</p>
+<ul>
+<li><strong>Commodity content</strong>: Static and basic interactive materials become freely available</li>
+<li><strong>Value migration</strong>: Competitive advantage shifts to personalization (Level 3+)</li>
+<li><strong>Institutional strategy</strong>: Schools must prioritize adaptive learning to stay relevant</li>
+</ul>
+<p>The Learning Linux course embraces this reality by building Level 3 capabilities from the start, ensuring the content remains valuable as educational technology evolves.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://github.com/dmccreary/intelligent-textbooks">Intelligent Textbooks Project</a> - Framework and research papers</li>
+<li><a href="https://xapi.com">xAPI.com</a> - Experience API specification and resources</li>
+<li><a href="https://scorm.com/what-is-an-lrs-learning-record-store/">What is an LRS?</a> - SCORM explanation of Learning Record Stores</li>
+<li><a href="https://www.valamis.com/hub/learning-record-store">Valamis LRS Guide</a> - Comprehensive LRS overview</li>
+<li><a href="https://moldstud.com/articles/p-understanding-data-privacy-in-custom-lms-compliance-with-ferpa-and-gdpr-regulations">FERPA Compliance for LMS</a> - Data privacy in educational systems</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "toc.integrate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
