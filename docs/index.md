@@ -4,6 +4,8 @@ description: An intelligent textbook for high-school students on learning the li
 image: /img/cover.png
 og:image: /img/cover.png
 twitter:image: /img/cover.png
+social:
+   cards: false
 hide:
     toc
 ---
