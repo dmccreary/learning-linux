@@ -4,7 +4,9 @@ site_author: Dan McCreary
 
 nav:
   - Home: index.md
+  # - About This Course: about.md
   - Course Description: course-description.md
+
   - Chapters:
     - Overview: chapters/index.md
     - Introduction to Operating Systems and UNIX History: chapters/01-unix-history/index.md
@@ -53,6 +55,11 @@ nav:
     - List of Prompts: prompts/index.md
     - Bloom Taxonomy: prompts/bloom-taxonomy.md
 
+    - Glossary of Terms: glossary.md
+    # - faqs.md
+    - License: license.md
+    - Contact: contact.md
+
 theme:
   name: material
   logo: img/logo.png
@@ -79,7 +86,7 @@ theme:
     # this adds the prev and next icons in the footer
     - navigation.footer
     - content.action.edit
-    
+
 markdown_extensions:
   - md_in_html
   - attr_list
