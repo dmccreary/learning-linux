@@ -35,6 +35,7 @@ nav:
     - Terminal Customization and Fun: chapters/24-customization/index.md
     - Capstone Projects: chapters/25-capstone/index.md
     - Linux Careers and the Future: chapters/26-careers/index.md
+  
   - Supplementary Content:
     - Low Cost Raspberry Pi: supplementary-content/low-cost-raspberry-pd.md
     - Raspberry Pi 500+: supplementary-content/raspberry-pi-500-plus-impact.md
@@ -54,11 +55,13 @@ nav:
   - Sample Prompts:
     - List of Prompts: prompts/index.md
     - Bloom Taxonomy: prompts/bloom-taxonomy.md
+    - Book Icon: prompts/book-icon.md
+    - Cover Image: prompts/cover-image.md
 
-    - Glossary of Terms: glossary.md
-    # - faqs.md
-    - License: license.md
-    - Contact: contact.md
+  - Glossary of Terms: glossary.md
+  # - faqs.md
+  - License: license.md
+  - Contact: contact.md
 
 theme:
   name: material
