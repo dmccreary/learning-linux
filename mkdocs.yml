@@ -5,9 +5,34 @@ site_author: Dan McCreary
 nav:
   - Home: index.md
   - Course Description: course-description.md
-
-  
-   
+  - Chapters:
+    - Overview: chapters/index.md
+    - Introduction to Operating Systems and UNIX History: chapters/01-unix-history/index.md
+    - Getting Started with the Terminal: chapters/02-terminal-basics/index.md
+    - Basic Shell Commands and Help Systems: chapters/03-shell-commands/index.md
+    - File System Fundamentals: chapters/04-file-system/index.md
+    - File Operations and Manipulation: chapters/05-file-operations/index.md
+    - Advanced File Operations: chapters/06-advanced-files/index.md
+    - File Permissions and Ownership: chapters/07-permissions/index.md
+    - Text Processing with Grep and Regular Expressions: chapters/08-grep-regex/index.md
+    - Advanced Text Processing - Sed, Awk, and Pipes: chapters/09-sed-awk-pipes/index.md
+    - Text Editors - Nano and Vim: chapters/10-text-editors/index.md
+    - Shell Configuration and Environment: chapters/11-shell-config/index.md
+    - Process Management and Job Control: chapters/12-processes/index.md
+    - Shell Scripting and Automation: chapters/13-scripting/index.md
+    - Package Management: chapters/14-package-mgmt/index.md
+    - Networking Fundamentals: chapters/15-networking/index.md
+    - SSH and Remote Access: chapters/16-ssh-security/index.md
+    - Compression, Archives, and File Search: chapters/17-compression-search/index.md
+    - Storage Devices and System Performance: chapters/18-storage-perf/index.md
+    - Introduction to Raspberry Pi: chapters/19-raspberry-pi/index.md
+    - GPIO Programming and Hardware Projects: chapters/20-gpio-iot/index.md
+    - Cloud Computing and Containers: chapters/21-cloud-containers/index.md
+    - Development Tools and Version Control: chapters/22-dev-tools/index.md
+    - System Administration Essentials: chapters/23-sys-admin/index.md
+    - Terminal Customization and Fun: chapters/24-customization/index.md
+    - Capstone Projects: chapters/25-capstone/index.md
+    - Linux Careers and the Future: chapters/26-careers/index.md
   - Supplementary Content:
     - Low Cost Raspberry Pi: supplementary-content/low-cost-raspberry-pd.md
     - Raspberry Pi 500+: supplementary-content/raspberry-pi-500-plus-impact.md
