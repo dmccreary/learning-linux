@@ -38,6 +38,8 @@ This chapter covers the following 20 concepts from the learning graph:
 28. File Command
 29. Stat Command
 30. Pathnames
+31. macOS open command
+32. Open alias on linux
 
 ## Prerequisites
 
