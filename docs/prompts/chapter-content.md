@@ -69,3 +69,11 @@ Use the chapter-content-generator skill to write chapter 9 @docs/chapters/09-sed
     Make the text compelling and encouraging people to take the journey to become a master of Linux.
     Log your progress on this session to logs/ch-09.md
     Do not add spaces or tabs at the start of lines inside the <details> elements.
+
+
+Use the chapter-content-generator skill to write chapter 10 @docs/chapters/10-text-editors/index.md
+    Maintain a fun informal tone as though you are having a conversation with a high-school student that is curious about Linux.
+    Feel free to and puns and jokes to break up the text.
+    Make the text compelling and encouraging people to take the journey to become a master of Linux.
+    Log your progress on this session to logs/ch-10.md
+    Do not add spaces or tabs at the start of lines inside the <details> elements.
