@@ -1,10 +1,14 @@
 site_name: Learning Linux
 site_description: A comprehensive 15-week course teaching high school students Linux fundamentals
 site_author: Dan McCreary
+repo_name: 'GitHub Repo'
+site_url: 'https://dmccreary.github.io/learning-linux/'
+repo_url: 'https://github.com/dmccreary/learniing-linux'
+edit_uri: 'blob/master/docs'
 
 nav:
   - Home: index.md
-  # - About This Course: about.md
+  - About This Course: about.md
   - Course Description: course-description.md
 
   - Chapters:
@@ -57,6 +61,7 @@ nav:
     - Bloom Taxonomy: prompts/bloom-taxonomy.md
     - Book Icon: prompts/book-icon.md
     - Cover Image: prompts/cover-image.md
+    - Chapter Content: prompts/chapter-content.md
 
   - Glossary of Terms: glossary.md
   # - faqs.md

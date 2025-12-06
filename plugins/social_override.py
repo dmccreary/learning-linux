@@ -13,9 +13,10 @@ class SocialOverridePlugin(BasePlugin):
         # Only process pages with custom image
         if not hasattr(page, 'custom_image'):
             return html
-        
+
         # Build the full URL for the custom image
-        site_url = config['site_url'].rstrip('/')
+        site_url = config.get('site_url') or ''
+        site_url = site_url.rstrip('/')
         image_path = '/' + page.custom_image.lstrip('/')
         full_image_url = site_url + image_path
         
