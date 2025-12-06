@@ -6,11 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+        <meta name="description" content="Learn to navigate the Linux file system hierarchy and understand directory structure">
       
       
         <meta name="author" content="Dan McCreary">
       
+      
+        <link rel="canonical" href="https://dmccreary.github.io/learning-linux/chapters/04-file-system/">
       
       
         <link rel="prev" href="../03-shell-commands/">
@@ -67,6 +69,32 @@
   
 
     
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="File System Fundamentals - Learning Linux" >
+      
+        <meta  property="og:description"  content="Learn to navigate the Linux file system hierarchy and understand directory structure" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/04-file-system/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/learning-linux/chapters/04-file-system/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="File System Fundamentals - Learning Linux" >
+      
+        <meta  name="twitter:description"  content="Learn to navigate the Linux file system hierarchy and understand directory structure" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/04-file-system/index.png" >
+      
     
     
   </head>
@@ -185,6 +213,18 @@
 </div>
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -218,6 +258,18 @@
     Learning Linux
   </label>
   
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
   <ul class="md-nav__list" data-md-scrollfix>
     
       
@@ -232,6 +284,26 @@
   
   <span class="md-ellipsis">
     Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Course
   </span>
   
 
@@ -388,7 +460,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
@@ -404,14 +476,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Chapters
           </label>
@@ -556,6 +628,444 @@
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#everything-is-a-file-no-really" class="md-nav__link">
+    <span class="md-ellipsis">
+      Everything Is a File (No, Really!)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-root-of-all-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Root of All Files: /
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#home-sweet-home-your-home-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Home Sweet Home: Your Home Directory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Home Sweet Home: Your Home Directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#home-subdirectories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Home Subdirectories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-am-i-the-current-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where Am I? The Current Directory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moving-around-the-cd-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving Around: The cd Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Moving Around: The cd Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-parent-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Parent Directory: ..
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-current-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Current Directory: .
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#absolute-vs-relative-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Absolute vs Relative Paths
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Absolute vs Relative Paths">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#absolute-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Absolute Paths
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relative-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relative Paths
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relative Paths">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-absolute-vs-relative-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Absolute vs Relative Paths
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listing-files-the-ls-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing Files: The ls Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Listing Files: The ls Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-ls-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Ls Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-ls-l-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding ls -l Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hidden-files-and-dot-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hidden Files and Dot Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-linux-directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Linux Directory Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Linux Directory Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bin-essential-binaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      /bin - Essential Binaries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etc-configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      /etc - Configuration Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#var-variable-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      /var - Variable Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmp-temporary-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      /tmp - Temporary Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usr-user-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      /usr - User Programs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opt-optional-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      /opt - Optional Software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dev-device-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      /dev - Device Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proc-process-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      /proc - Process Information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="/proc - Process Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-linux-directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Linux Directory Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-directory-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Directory Reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-tree-command-visualize-the-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Tree Command: Visualize the Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-file-command-what-kind-of-file-is-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      The File Command: What Kind of File Is This?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-stat-command-file-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Stat Command: File Statistics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pathnames-putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathnames: Putting It All Together
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-files-the-open-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opening Files: The open Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Opening Files: The open Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#macos-the-open-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      macOS: The open Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-xdg-open-and-aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux: xdg-open and Aliases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-navigation-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Navigation Exercises
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Navigation Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-1-where-am-i" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 1: Where Am I?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-2-explore-the-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 2: Explore the System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-3-path-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 3: Path Practice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-4-hidden-files-hunt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 4: Hidden Files Hunt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise 4: Hidden Files Hunt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-file-system-navigation-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: File System Navigation MicroSim
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
     </span>
   </a>
   
@@ -1196,6 +1706,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -1216,7 +1730,7 @@
         
   
   
-    <a href="../../prompts/index.md" class="md-nav__link">
+    <a href="../../prompts/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1348,6 +1862,444 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#everything-is-a-file-no-really" class="md-nav__link">
+    <span class="md-ellipsis">
+      Everything Is a File (No, Really!)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-root-of-all-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Root of All Files: /
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#home-sweet-home-your-home-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Home Sweet Home: Your Home Directory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Home Sweet Home: Your Home Directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#home-subdirectories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Home Subdirectories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-am-i-the-current-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where Am I? The Current Directory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moving-around-the-cd-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving Around: The cd Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Moving Around: The cd Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-parent-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Parent Directory: ..
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-current-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Current Directory: .
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#absolute-vs-relative-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Absolute vs Relative Paths
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Absolute vs Relative Paths">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#absolute-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Absolute Paths
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relative-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relative Paths
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relative Paths">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-absolute-vs-relative-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Absolute vs Relative Paths
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listing-files-the-ls-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing Files: The ls Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Listing Files: The ls Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-ls-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Ls Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-ls-l-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding ls -l Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hidden-files-and-dot-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hidden Files and Dot Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-linux-directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Linux Directory Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Linux Directory Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bin-essential-binaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      /bin - Essential Binaries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etc-configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      /etc - Configuration Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#var-variable-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      /var - Variable Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmp-temporary-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      /tmp - Temporary Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usr-user-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      /usr - User Programs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opt-optional-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      /opt - Optional Software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dev-device-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      /dev - Device Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proc-process-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      /proc - Process Information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="/proc - Process Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-linux-directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Linux Directory Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-directory-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Directory Reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-tree-command-visualize-the-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Tree Command: Visualize the Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-file-command-what-kind-of-file-is-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      The File Command: What Kind of File Is This?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-stat-command-file-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Stat Command: File Statistics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pathnames-putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathnames: Putting It All Together
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-files-the-open-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opening Files: The open Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Opening Files: The open Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#macos-the-open-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      macOS: The open Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-xdg-open-and-aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux: xdg-open and Aliases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-navigation-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Navigation Exercises
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Navigation Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-1-where-am-i" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 1: Where Am I?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-2-explore-the-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 2: Explore the System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-3-path-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 3: Path Practice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-4-hidden-files-hunt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 4: Hidden Files Hunt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise 4: Hidden Files Hunt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-file-system-navigation-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: File System Navigation MicroSim
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1362,12 +2314,20 @@
                 
                   
 
+  
+    <a href="https://github.com/dmccreary/learniing-linux/blob/master/docs/chapters/04-file-system/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
 
 <h1 id="file-system-fundamentals">File System Fundamentals</h1>
 <h2 id="summary">Summary</h2>
 <p>This chapter explores the Linux file system hierarchy, teaching you how everything in Linux is organized as files and directories. You'll learn to navigate using absolute and relative paths, understand the purpose of key system directories like /bin, /etc, and /home, and master essential navigation commands. Understanding the file system is crucial for working effectively in Linux.</p>
 <h2 id="concepts-covered">Concepts Covered</h2>
-<p>This chapter covers the following 20 concepts from the learning graph:</p>
+<p>This chapter covers the following 32 concepts from the learning graph:</p>
 <ol>
 <li>File System</li>
 <li>Root Directory</li>
@@ -1400,7 +2360,7 @@
 <li>Stat Command</li>
 <li>Pathnames</li>
 <li>macOS open command</li>
-<li>Open alias on linux</li>
+<li>Open alias on Linux</li>
 </ol>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>This chapter builds on concepts from:</p>
@@ -1409,13 +2369,1274 @@
 <li><a href="../02-terminal-basics/">Chapter 2: Getting Started with the Terminal</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<h2 id="everything-is-a-file-no-really">Everything Is a File (No, Really!)</h2>
+<p>One of the most mind-bending things about Linux is its philosophy that <strong>everything is a file</strong>. Not just your documents and photos—EVERYTHING:</p>
+<ul>
+<li>Regular files? Files. ✓</li>
+<li>Directories? Special files that contain other files. ✓</li>
+<li>Your keyboard? A file. ✓</li>
+<li>Your screen? A file. ✓</li>
+<li>Your USB drive? A file. ✓</li>
+<li>Network connections? Files. ✓</li>
+<li>Running processes? Files. ✓</li>
+</ul>
+<p>This might sound weird, but it's actually brilliant. Because everything is accessed the same way, you can use the same tools and concepts for nearly everything in the system. Learn to work with files, and you've learned to work with Linux.</p>
+<p>In this chapter, we'll explore how Linux organizes its <strong>file system</strong>—the structure that holds all these files. Think of it as learning the layout of a new city. Once you know the neighborhoods and how the streets connect, you can get anywhere!</p>
+<div class="admonition tip">
+<p class="admonition-title">Why File System Knowledge Matters</p>
+<p>Understanding the file system is like having a map. Without it, you're wandering aimlessly, guessing where things are. With it, you'll know exactly where to find configuration files, executables, logs, and your own data.</p>
+</div>
+<h2 id="the-root-of-all-files">The Root of All Files: /</h2>
+<p>Every Linux file system starts at a single point called the <strong>root directory</strong>, written as just a forward slash: <code>/</code></p>
+<p>This is the top of the tree—the ultimate parent directory that contains everything else. Unlike Windows, which has separate drives (C:, D:, E:), Linux has ONE unified tree starting at root. Everything—every file, every device, every directory—lives somewhere under <code>/</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>/                   ← The root directory (top of everything)
+├── bin/            ← Essential commands
+├── etc/            ← System configuration
+├── home/           ← User home directories
+│   ├── dan/        ← Dan&#39;s home
+│   └── alice/      ← Alice&#39;s home
+├── tmp/            ← Temporary files
+├── usr/            ← User programs
+├── var/            ← Variable data (logs, etc.)
+└── ...             ← Many more directories
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Root Directory vs Root User</p>
+<p>Don't confuse them! The <strong>root directory</strong> (<code>/</code>) is the top of the file system. The <strong>root user</strong> is the administrator account. They share a name because root user's home directory is <code>/root</code> (a directory INSIDE the root directory). Confusing? A little. Just remember: <code>/</code> = file system top, <code>root</code> = admin user.</p>
+</div>
+<h2 id="home-sweet-home-your-home-directory">Home Sweet Home: Your Home Directory</h2>
+<p>While the root directory contains the whole system, your <strong>home directory</strong> is your personal space. It's where:</p>
+<ul>
+<li>Your personal files live (Documents, Downloads, Pictures)</li>
+<li>Your configuration files are stored</li>
+<li>You have full permission to create, modify, and delete files</li>
+</ul>
+<p>Your home directory is located at <code>/home/username</code>. So if your username is "dan", your home is <code>/home/dan</code>.</p>
+<p>There's a super handy shortcut for your home directory: the tilde character <code>~</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># These are all equivalent for user &quot;dan&quot;:</span>
+<span class="nb">cd</span><span class="w"> </span>/home/dan
+<span class="nb">cd</span><span class="w"> </span>~
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$HOME</span>
+<span class="nb">cd</span><span class="w">          </span><span class="c1"># Just &quot;cd&quot; with no arguments goes home!</span>
+</code></pre></div></td></tr></table></div>
+<p>The <code>~</code> is incredibly useful:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Go to your Documents folder</span>
+<span class="nb">cd</span><span class="w"> </span>~/Documents
+
+<span class="c1"># Copy a file to your home directory</span>
+cp<span class="w"> </span>somefile.txt<span class="w"> </span>~
+
+<span class="c1"># List files in your Desktop</span>
+ls<span class="w"> </span>~/Desktop
+</code></pre></div></td></tr></table></div>
+<h3 id="home-subdirectories">Home Subdirectories</h3>
+<p>Most Linux systems create standard folders in your home directory:</p>
+<table>
+<thead>
+<tr>
+<th>Directory</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Desktop</strong></td>
+<td>Files/folders shown on your desktop GUI</td>
+</tr>
+<tr>
+<td><strong>Documents</strong></td>
+<td>General documents</td>
+</tr>
+<tr>
+<td><strong>Downloads</strong></td>
+<td>Downloaded files (browsers save here by default)</td>
+</tr>
+<tr>
+<td><strong>Music</strong></td>
+<td>Audio files</td>
+</tr>
+<tr>
+<td><strong>Pictures</strong></td>
+<td>Images and photos</td>
+</tr>
+<tr>
+<td><strong>Videos</strong></td>
+<td>Video files</td>
+</tr>
+<tr>
+<td><strong>Templates</strong></td>
+<td>Document templates</td>
+</tr>
+<tr>
+<td><strong>Public</strong></td>
+<td>Files you want to share with other users</td>
+</tr>
+</tbody>
+</table>
+<p>These are just conventions—you can organize your files however you like! But many programs expect these directories to exist.</p>
+<h2 id="where-am-i-the-current-directory">Where Am I? The Current Directory</h2>
+<p>At any moment, your terminal is "in" a specific directory called the <strong>current directory</strong> (also called "working directory" or "present working directory"). When you run commands, they operate relative to this location.</p>
+<p>The <strong>pwd command</strong> (Print Working Directory) tells you where you are:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">pwd</span>
+<span class="c1"># /home/dan/Documents</span>
+</code></pre></div></td></tr></table></div>
+<p>That's it! <code>pwd</code> is your "You Are Here" marker on the file system map.</p>
+<p>Your shell prompt usually shows the current directory too:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>dan@raspberry:~/Documents$
+<span class="c1">#             ↑ This shows current directory</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Lost? Just pwd!</p>
+<p>Whenever you're not sure where you are in the file system, type <code>pwd</code>. It's the command-line equivalent of looking at the GPS on your phone.</p>
+</div>
+<h2 id="moving-around-the-cd-command">Moving Around: The cd Command</h2>
+<p>The <strong>cd command</strong> (Change Directory) is how you move through the file system. It's like walking from one room to another in a building.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Go to a specific directory</span>
+<span class="nb">cd</span><span class="w"> </span>/home/dan/Documents
+
+<span class="c1"># Go to your home directory</span>
+<span class="nb">cd</span><span class="w"> </span>~
+<span class="c1"># or just</span>
+<span class="nb">cd</span>
+
+<span class="c1"># Go to the root directory</span>
+<span class="nb">cd</span><span class="w"> </span>/
+
+<span class="c1"># Go up one level (to parent directory)</span>
+<span class="nb">cd</span><span class="w"> </span>..
+
+<span class="c1"># Go back to the previous directory</span>
+<span class="nb">cd</span><span class="w"> </span>-
+</code></pre></div></td></tr></table></div>
+<h3 id="the-parent-directory">The Parent Directory: ..</h3>
+<p>The <strong>parent directory</strong> is the directory that contains the current one. It's represented by two dots: <code>..</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>/home/dan/Documents/Projects
+       ↑                ↑
+       └── Parent of ───┘
+</code></pre></div></td></tr></table></div>
+<p>So if you're in <code>/home/dan/Documents/Projects</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">pwd</span>
+<span class="c1"># /home/dan/Documents/Projects</span>
+
+<span class="nb">cd</span><span class="w"> </span>..
+<span class="nb">pwd</span>
+<span class="c1"># /home/dan/Documents</span>
+
+<span class="nb">cd</span><span class="w"> </span>..
+<span class="nb">pwd</span>
+<span class="c1"># /home/dan</span>
+
+<span class="nb">cd</span><span class="w"> </span>..
+<span class="nb">pwd</span>
+<span class="c1"># /home</span>
+
+<span class="nb">cd</span><span class="w"> </span>..
+<span class="nb">pwd</span>
+<span class="c1"># /</span>
+</code></pre></div></td></tr></table></div>
+<p>You can chain <code>..</code> to go up multiple levels:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>../..<span class="w">        </span><span class="c1"># Go up two levels</span>
+<span class="nb">cd</span><span class="w"> </span>../../..<span class="w">     </span><span class="c1"># Go up three levels</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="the-current-directory">The Current Directory: .</h3>
+<p>A single dot <code>.</code> represents the current directory. It seems pointless ("I'm already here!"), but it's useful in certain contexts:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Run a script in the current directory</span>
+./myscript.sh
+
+<span class="c1"># Copy files TO the current directory</span>
+cp<span class="w"> </span>/some/file.txt<span class="w"> </span>.
+
+<span class="c1"># List the current directory explicitly</span>
+ls<span class="w"> </span>.
+</code></pre></div></td></tr></table></div>
+<h2 id="absolute-vs-relative-paths">Absolute vs Relative Paths</h2>
+<p>Here's a crucial concept: there are two ways to specify a location in the file system.</p>
+<h3 id="absolute-paths">Absolute Paths</h3>
+<p>An <strong>absolute path</strong> starts from the root directory <code>/</code> and specifies the complete location:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>/home/dan/Documents/report.txt
+/etc/passwd
+/usr/bin/python3
+</code></pre></div></td></tr></table></div>
+<p>Absolute paths work from anywhere—they're like giving a complete street address.</p>
+<h3 id="relative-paths">Relative Paths</h3>
+<p>A <strong>relative path</strong> starts from your current directory:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># If you&#39;re in /home/dan:</span>
+Documents/report.txt<span class="w">     </span><span class="c1"># Relative to where you are</span>
+../alice/photos<span class="w">          </span><span class="c1"># Go up, then into alice, then photos</span>
+./script.sh<span class="w">              </span><span class="c1"># Current directory</span>
+</code></pre></div></td></tr></table></div>
+<p>Relative paths are like giving directions from where you are ("go two blocks north, turn left").</p>
+<table>
+<thead>
+<tr>
+<th>Path Type</th>
+<th>Starts With</th>
+<th>Example</th>
+<th>Works From</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Absolute</td>
+<td><code>/</code></td>
+<td><code>/home/dan/file.txt</code></td>
+<td>Anywhere</td>
+</tr>
+<tr>
+<td>Relative</td>
+<td>No <code>/</code></td>
+<td><code>Documents/file.txt</code></td>
+<td>Current directory only</td>
+</tr>
+<tr>
+<td>Home-relative</td>
+<td><code>~</code></td>
+<td><code>~/Documents/file.txt</code></td>
+<td>Anywhere (expands to absolute)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-absolute-vs-relative-paths">Diagram: Absolute vs Relative Paths</h4>
+<details>
+<summary>Understanding Path Types</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Understand, Apply
+Learning Objective: Help students visualize the difference between absolute and relative paths with concrete examples.</p>
+<p>Components to show:
+- File system tree visualization
+- Current directory highlighted
+- Three example paths shown: absolute, relative, and home-relative
+- Arrows showing how each path type navigates the tree</p>
+<p>Layout: Tree diagram on left, path examples on right</p>
+<p>Example scenario:
+- Tree showing /home/dan/Documents/Projects/
+- Current directory: /home/dan/Documents
+- Target: /home/dan/Documents/Projects/report.txt</p>
+<p>Paths compared:
+- Absolute: /home/dan/Documents/Projects/report.txt (starts at root, follows full path)
+- Relative: Projects/report.txt (starts at current dir)
+- Home-relative: ~/Documents/Projects/report.txt (starts at ~)</p>
+<p>Color coding:
+- Root (/): Red
+- Home directory: Green
+- Current directory: Blue highlight
+- Target file: Gold star</p>
+<p>Interactive features:
+- Click to change "current directory"
+- See how relative paths change but absolute stays same</p>
+<p>Implementation: p5.js or HTML/CSS</p>
+</details>
+<h2 id="listing-files-the-ls-command">Listing Files: The ls Command</h2>
+<p>The <strong>ls command</strong> is your window into directories. It lists the contents of a directory:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ls
+<span class="c1"># Desktop  Documents  Downloads  Music  Pictures  Videos</span>
+</code></pre></div></td></tr></table></div>
+<p>By default, <code>ls</code> shows the current directory. You can specify any path:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>/etc<span class="w">              </span><span class="c1"># List /etc directory</span>
+ls<span class="w"> </span>~/Documents<span class="w">       </span><span class="c1"># List your Documents</span>
+ls<span class="w"> </span>..<span class="w">                </span><span class="c1"># List parent directory</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="essential-ls-options">Essential Ls Options</h3>
+<p>The <code>ls</code> command becomes much more powerful with <strong>ls options</strong>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Long format (detailed info)</span>
+ls<span class="w"> </span>-l
+<span class="c1"># -rw-r--r-- 1 dan dan 4096 Dec  6 14:30 file.txt</span>
+
+<span class="c1"># Show hidden files</span>
+ls<span class="w"> </span>-a
+<span class="c1"># .  ..  .bashrc  .config  Documents  Downloads</span>
+
+<span class="c1"># Human-readable sizes</span>
+ls<span class="w"> </span>-h
+<span class="c1"># (use with -l) Shows &quot;4.0K&quot; instead of &quot;4096&quot;</span>
+
+<span class="c1"># Combine options</span>
+ls<span class="w"> </span>-la<span class="w">         </span><span class="c1"># Long format + hidden files</span>
+ls<span class="w"> </span>-lah<span class="w">        </span><span class="c1"># Long + hidden + human-readable</span>
+
+<span class="c1"># Sort by time (newest first)</span>
+ls<span class="w"> </span>-lt
+
+<span class="c1"># Sort by size (largest first)</span>
+ls<span class="w"> </span>-lS
+
+<span class="c1"># Reverse sort order</span>
+ls<span class="w"> </span>-lr
+
+<span class="c1"># Recursive (show subdirectories too)</span>
+ls<span class="w"> </span>-R
+</code></pre></div></td></tr></table></div>
+<h3 id="understanding-ls-l-output">Understanding ls -l Output</h3>
+<p>The long format (<code>ls -l</code>) shows lots of info:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>-rw-r--r-- 1 dan dan 4096 Dec  6 14:30 report.txt
+│├──┬───┘  │  │   │    │      │         │
+││  │      │  │   │    │      │         └── Filename
+││  │      │  │   │    │      └── Modification date/time
+││  │      │  │   │    └── File size (bytes)
+││  │      │  │   └── Group owner
+││  │      │  └── User owner
+││  │      └── Number of links
+││  └── Permissions (owner/group/others)
+│└── File type (- = file, d = directory, l = link)
+</code></pre></div></td></tr></table></div>
+<p>Common file types in the first character:</p>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-</code></td>
+<td>Regular file</td>
+</tr>
+<tr>
+<td><code>d</code></td>
+<td>Directory</td>
+</tr>
+<tr>
+<td><code>l</code></td>
+<td>Symbolic link</td>
+</tr>
+<tr>
+<td><code>c</code></td>
+<td>Character device</td>
+</tr>
+<tr>
+<td><code>b</code></td>
+<td>Block device</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hidden-files-and-dot-files">Hidden Files and Dot Files</h2>
+<p>In Linux, any file or directory whose name starts with a dot (<code>.</code>) is hidden. These are called <strong>hidden files</strong> or <strong>dot files</strong>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>ls
+<span class="c1"># Documents  Downloads  Music</span>
+
+ls<span class="w"> </span>-a
+<span class="c1"># .  ..  .bashrc  .config  .hidden_file  Documents  Downloads  Music</span>
+</code></pre></div></td></tr></table></div>
+<p>Why hide files? Mostly to reduce clutter. Your home directory contains LOTS of configuration files that you don't need to see daily:</p>
+<table>
+<thead>
+<tr>
+<th>Dot File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.bashrc</code></td>
+<td>Bash shell configuration</td>
+</tr>
+<tr>
+<td><code>.bash_history</code></td>
+<td>Your command history</td>
+</tr>
+<tr>
+<td><code>.config/</code></td>
+<td>Application configurations</td>
+</tr>
+<tr>
+<td><code>.ssh/</code></td>
+<td>SSH keys and settings</td>
+</tr>
+<tr>
+<td><code>.gitconfig</code></td>
+<td>Git configuration</td>
+</tr>
+<tr>
+<td><code>.vimrc</code></td>
+<td>Vim editor settings</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Dot Files are Your Settings</p>
+<p>When you customize your shell, editor, or other programs, those settings are usually saved in dot files in your home directory. Learning to edit them gives you tremendous control over your environment!</p>
+</div>
+<p>To show ONLY hidden files:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>-d<span class="w"> </span>.*<span class="w">        </span><span class="c1"># List only dot files/directories in current dir</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="the-linux-directory-structure">The Linux Directory Structure</h2>
+<p>Now let's explore the major directories in Linux. Understanding the <strong>directory structure</strong> helps you know where to find (and put) things.</p>
+<h3 id="bin-essential-binaries">/bin - Essential Binaries</h3>
+<p>The <strong>bin directory</strong> (<code>/bin</code>) contains essential commands that must be available even if other parts of the system aren't mounted. These are commands needed to boot and repair the system:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>/bin
+<span class="c1"># bash  cat  cp  ls  mkdir  mv  rm  ...</span>
+</code></pre></div></td></tr></table></div>
+<p>Commands like <code>ls</code>, <code>cp</code>, <code>mv</code>, <code>cat</code>, <code>bash</code>—the basics that you've been learning—live here.</p>
+<div class="admonition note">
+<p class="admonition-title">Modern Systems: /bin → /usr/bin</p>
+<p>On modern Linux systems, <code>/bin</code> is often a symbolic link to <code>/usr/bin</code>. They've been merged for simplicity. You'll still see <code>/bin</code> referenced everywhere though!</p>
+</div>
+<h3 id="etc-configuration-files">/etc - Configuration Files</h3>
+<p>The <strong>etc directory</strong> (<code>/etc</code>) contains system-wide configuration files. The name supposedly came from "et cetera" (everything else), but it's now thought of as "Editable Text Configuration."</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>/etc
+<span class="c1"># apt/  bash.bashrc  hostname  hosts  passwd  ssh/  ...</span>
+</code></pre></div></td></tr></table></div>
+<p>Important files in /etc:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/etc/passwd</code></td>
+<td>User account information</td>
+</tr>
+<tr>
+<td><code>/etc/hosts</code></td>
+<td>Local DNS mappings</td>
+</tr>
+<tr>
+<td><code>/etc/hostname</code></td>
+<td>System's hostname</td>
+</tr>
+<tr>
+<td><code>/etc/apt/</code></td>
+<td>APT package manager config</td>
+</tr>
+<tr>
+<td><code>/etc/ssh/</code></td>
+<td>SSH server configuration</td>
+</tr>
+</tbody>
+</table>
+<p>Rule of thumb: If you need to configure something system-wide, look in <code>/etc</code>.</p>
+<h3 id="var-variable-data">/var - Variable Data</h3>
+<p>The <strong>var directory</strong> (<code>/var</code>) contains files that change frequently during system operation:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>/var
+<span class="c1"># cache/  lib/  log/  mail/  spool/  tmp/  ...</span>
+</code></pre></div></td></tr></table></div>
+<p>Most importantly:</p>
+<ul>
+<li><code>/var/log/</code> - System log files (check here when debugging!)</li>
+<li><code>/var/cache/</code> - Application cache data</li>
+<li><code>/var/www/</code> - Web server files (on web servers)</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># View recent system logs</span>
+ls<span class="w"> </span>/var/log/
+sudo<span class="w"> </span>tail<span class="w"> </span>/var/log/syslog
+</code></pre></div></td></tr></table></div>
+<h3 id="tmp-temporary-files">/tmp - Temporary Files</h3>
+<p>The <strong>tmp directory</strong> (<code>/tmp</code>) is for temporary files. Key characteristics:</p>
+<ul>
+<li>Anyone can write here</li>
+<li>Files may be deleted on reboot</li>
+<li>Good for scratch space</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create a temp file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;test&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/mytest.txt
+
+<span class="c1"># It&#39;s there...</span>
+cat<span class="w"> </span>/tmp/mytest.txt
+
+<span class="c1"># But might be gone after reboot!</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="usr-user-programs">/usr - User Programs</h3>
+<p>The <strong>usr directory</strong> (<code>/usr</code>) contains user-installed programs, libraries, and documentation. Despite the name, "usr" doesn't mean "user"—it historically meant "Unix System Resources."</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>/usr
+<span class="c1"># bin/  include/  lib/  local/  share/  ...</span>
+</code></pre></div></td></tr></table></div>
+<p>Key subdirectories:</p>
+<ul>
+<li><code>/usr/bin/</code> - Most user commands</li>
+<li><code>/usr/lib/</code> - Libraries</li>
+<li><code>/usr/share/</code> - Shared data (docs, icons, etc.)</li>
+<li><code>/usr/local/</code> - Locally compiled/installed software</li>
+</ul>
+<h3 id="opt-optional-software">/opt - Optional Software</h3>
+<p>The <strong>opt directory</strong> (<code>/opt</code>) is for optional, third-party software packages. When you install something that doesn't come from your distribution's package manager, it often goes here:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>/opt
+<span class="c1"># google/  zoom/  discord/  ...</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="dev-device-files">/dev - Device Files</h3>
+<p>The <strong>dev directory</strong> (<code>/dev</code>) contains device files—remember "everything is a file"? Here's where your hardware lives as files:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>/dev
+<span class="c1"># disk/  null  random  sda  tty  urandom  zero  ...</span>
+</code></pre></div></td></tr></table></div>
+<p>Interesting devices:</p>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>What It Is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/dev/null</code></td>
+<td>The "black hole"—discards anything written to it</td>
+</tr>
+<tr>
+<td><code>/dev/zero</code></td>
+<td>Produces infinite zeros</td>
+</tr>
+<tr>
+<td><code>/dev/random</code></td>
+<td>Random number generator</td>
+</tr>
+<tr>
+<td><code>/dev/sda</code></td>
+<td>First storage device</td>
+</tr>
+<tr>
+<td><code>/dev/tty</code></td>
+<td>Current terminal</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Send output to nowhere</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;This disappears&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+
+<span class="c1"># Generate random data</span>
+head<span class="w"> </span>-c<span class="w"> </span><span class="m">10</span><span class="w"> </span>/dev/random<span class="w"> </span><span class="p">|</span><span class="w"> </span>xxd
+</code></pre></div></td></tr></table></div>
+<h3 id="proc-process-information">/proc - Process Information</h3>
+<p>The <strong>proc directory</strong> (<code>/proc</code>) is a virtual filesystem that provides information about running processes and the kernel:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>/proc
+<span class="c1"># 1/  2/  3/  cpuinfo  meminfo  version  ...</span>
+</code></pre></div></td></tr></table></div>
+<p>The numbered directories are process IDs. The files provide system info:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># CPU information</span>
+cat<span class="w"> </span>/proc/cpuinfo
+
+<span class="c1"># Memory information</span>
+cat<span class="w"> </span>/proc/meminfo
+
+<span class="c1"># Kernel version</span>
+cat<span class="w"> </span>/proc/version
+
+<span class="c1"># Currently running processes (each number is a PID)</span>
+ls<span class="w"> </span>/proc<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;^[0-9]+$&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>head
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">/proc is Virtual</p>
+<p>The files in <code>/proc</code> don't actually exist on disk—they're generated on-the-fly by the kernel when you read them. It's like a window into the system's soul!</p>
+</div>
+<h4 id="diagram-linux-directory-structure">Diagram: Linux Directory Structure</h4>
+<details>
+<summary>Linux File System Hierarchy</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Remember, Understand
+Learning Objective: Provide a visual map of the Linux file system hierarchy that students can reference when navigating.</p>
+<p>Components to show:
+- Tree structure starting from / (root)
+- Major directories with icons representing their purpose
+- Brief description of each directory's role</p>
+<p>Layout: Hierarchical tree diagram</p>
+<p>Directories to show (with icons):
+- / (root) - House foundation icon
+  - /bin - Toolbox icon "Essential commands"
+  - /etc - Gear/settings icon "System configuration"
+  - /home - House icon "User home directories"
+    - /home/dan - Person icon
+    - /home/alice - Person icon
+  - /var - Stack of papers icon "Variable/changing data"
+    - /var/log - Scroll icon "Log files"
+  - /tmp - Trash/temp icon "Temporary files"
+  - /usr - Library icon "User programs"
+    - /usr/bin - Toolbox icon
+    - /usr/lib - Books icon
+    - /usr/local - Pin icon "Locally installed"
+  - /opt - Package icon "Optional software"
+  - /dev - USB/hardware icon "Device files"
+  - /proc - CPU icon "Process info (virtual)"</p>
+<p>Color coding:
+- System critical: Red
+- Configuration: Orange
+- User data: Green
+- Variable data: Blue
+- Virtual: Purple dashed</p>
+<p>Interactive features:
+- Hover for expanded description
+- Click to see example contents
+- Quiz mode: "Where would you find log files?"</p>
+<p>Implementation: p5.js or vis-network</p>
+</details>
+<h2 id="quick-directory-reference">Quick Directory Reference</h2>
+<p>Here's a cheat sheet for the major directories:</p>
+<table>
+<thead>
+<tr>
+<th>Directory</th>
+<th>Contents</th>
+<th>Remember It As</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/</code></td>
+<td>Root of everything</td>
+<td>"The trunk of the tree"</td>
+</tr>
+<tr>
+<td><code>/bin</code></td>
+<td>Essential commands</td>
+<td>"Binary essentials"</td>
+</tr>
+<tr>
+<td><code>/etc</code></td>
+<td>Configuration files</td>
+<td>"Settings central"</td>
+</tr>
+<tr>
+<td><code>/home</code></td>
+<td>User directories</td>
+<td>"Your personal space"</td>
+</tr>
+<tr>
+<td><code>/var</code></td>
+<td>Changing data, logs</td>
+<td>"Variables and logs"</td>
+</tr>
+<tr>
+<td><code>/tmp</code></td>
+<td>Temporary files</td>
+<td>"Scratch paper"</td>
+</tr>
+<tr>
+<td><code>/usr</code></td>
+<td>User programs</td>
+<td>"Program library"</td>
+</tr>
+<tr>
+<td><code>/opt</code></td>
+<td>Optional software</td>
+<td>"Third-party apps"</td>
+</tr>
+<tr>
+<td><code>/dev</code></td>
+<td>Device files</td>
+<td>"Hardware as files"</td>
+</tr>
+<tr>
+<td><code>/proc</code></td>
+<td>Process info</td>
+<td>"System's pulse"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-tree-command-visualize-the-structure">The Tree Command: Visualize the Structure</h2>
+<p>The <strong>tree command</strong> displays directories in a tree format—much easier to read than multiple <code>ls</code> commands:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>tree
+<span class="c1"># .</span>
+<span class="c1"># ├── Documents</span>
+<span class="c1"># │   ├── report.txt</span>
+<span class="c1"># │   └── notes.md</span>
+<span class="c1"># ├── Downloads</span>
+<span class="c1"># │   └── file.zip</span>
+<span class="c1"># └── Pictures</span>
+<span class="c1">#     ├── photo1.jpg</span>
+<span class="c1">#     └── photo2.jpg</span>
+</code></pre></div></td></tr></table></div>
+<p>Useful tree options:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Limit depth</span>
+tree<span class="w"> </span>-L<span class="w"> </span><span class="m">2</span><span class="w">           </span><span class="c1"># Only 2 levels deep</span>
+
+<span class="c1"># Show hidden files</span>
+tree<span class="w"> </span>-a
+
+<span class="c1"># Show only directories</span>
+tree<span class="w"> </span>-d
+
+<span class="c1"># Include file sizes</span>
+tree<span class="w"> </span>-h<span class="w">             </span><span class="c1"># Human-readable sizes</span>
+
+<span class="c1"># Show full path</span>
+tree<span class="w"> </span>-f
+
+<span class="c1"># Colorize output</span>
+tree<span class="w"> </span>-C
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Installing Tree</p>
+<p>Tree might not be installed by default. Install it with:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>tree<span class="w">     </span><span class="c1"># Debian/Ubuntu</span>
+brew<span class="w"> </span>install<span class="w"> </span>tree<span class="w">         </span><span class="c1"># macOS</span>
+</code></pre></div></td></tr></table></div></p>
+</div>
+<h2 id="the-file-command-what-kind-of-file-is-this">The File Command: What Kind of File Is This?</h2>
+<p>The <strong>file command</strong> tells you what type of file something is, regardless of its extension:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>file<span class="w"> </span>report.txt
+<span class="c1"># report.txt: ASCII text</span>
+
+file<span class="w"> </span>photo.jpg
+<span class="c1"># photo.jpg: JPEG image data</span>
+
+file<span class="w"> </span>program
+<span class="c1"># program: ELF 64-bit executable</span>
+
+file<span class="w"> </span>/bin/ls
+<span class="c1"># /bin/ls: ELF 64-bit LSB pie executable, x86-64</span>
+</code></pre></div></td></tr></table></div>
+<p>This is super useful because:
+- Linux doesn't rely on file extensions
+- You can identify unknown files
+- You can verify files are what they claim to be</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Someone sent you &quot;document.pdf&quot; but it won&#39;t open?</span>
+file<span class="w"> </span>document.pdf
+<span class="c1"># document.pdf: ASCII text</span>
+<span class="c1"># It&#39;s actually a text file with wrong extension!</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="the-stat-command-file-statistics">The Stat Command: File Statistics</h2>
+<p>The <strong>stat command</strong> shows detailed statistics about a file:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>stat<span class="w"> </span>report.txt
+</code></pre></div></td></tr></table></div>
+<p>Output includes:</p>
+<ul>
+<li>File size</li>
+<li>Block size and count</li>
+<li>Device info</li>
+<li>Inode number</li>
+<li>Access, modification, and change times</li>
+<li>Permissions in multiple formats</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>  File: report.txt
+  Size: 4096        Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d  Inode: 1234567     Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/dan)   Gid: ( 1000/dan)
+Access: 2025-12-06 14:30:00.000000000 -0800
+Modify: 2025-12-06 14:25:00.000000000 -0800
+Change: 2025-12-06 14:25:00.000000000 -0800
+ Birth: 2025-12-06 10:00:00.000000000 -0800
+</code></pre></div></td></tr></table></div>
+<p>Three important timestamps:</p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Meaning</th>
+<th>Updated When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Access (atime)</td>
+<td>Last read</td>
+<td>File was read</td>
+</tr>
+<tr>
+<td>Modify (mtime)</td>
+<td>Last content change</td>
+<td>File contents changed</td>
+</tr>
+<tr>
+<td>Change (ctime)</td>
+<td>Last metadata change</td>
+<td>Permissions, owner, etc. changed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pathnames-putting-it-all-together">Pathnames: Putting It All Together</h2>
+<p><strong>Pathnames</strong> are the full address of a file in the file system. Everything we've learned comes together here:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Absolute pathnames</span>
+/home/dan/Documents/report.txt
+/etc/ssh/sshd_config
+/var/log/syslog
+
+<span class="c1"># Relative pathnames (depends on current directory)</span>
+Documents/report.txt
+../alice/photos/vacation.jpg
+./script.sh
+
+<span class="c1"># Home-relative pathnames</span>
+~/Documents/report.txt
+~alice/photos/vacation.jpg
+</code></pre></div></td></tr></table></div>
+<p>Tips for working with pathnames:</p>
+<ul>
+<li>Use Tab completion! (Press Tab to auto-complete paths)</li>
+<li>Use quotes for paths with spaces: <code>"My Documents/file.txt"</code></li>
+<li>Use wildcards: <code>ls *.txt</code> matches all .txt files</li>
+<li>Escape spaces with backslash: <code>My\ Documents/file.txt</code></li>
+</ul>
+<h2 id="opening-files-the-open-command">Opening Files: The open Command</h2>
+<p>Want to open a file with its default application from the command line?</p>
+<h3 id="macos-the-open-command">macOS: The open Command</h3>
+<p>On macOS, the <strong>macOS open command</strong> opens files with their default application:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>open<span class="w"> </span>report.pdf<span class="w">       </span><span class="c1"># Opens in Preview</span>
+open<span class="w"> </span>photo.jpg<span class="w">        </span><span class="c1"># Opens in Photos</span>
+open<span class="w"> </span>.<span class="w">                </span><span class="c1"># Opens current directory in Finder</span>
+open<span class="w"> </span>-a<span class="w"> </span>Safari<span class="w"> </span>url<span class="w">    </span><span class="c1"># Open with specific app</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="linux-xdg-open-and-aliases">Linux: xdg-open and Aliases</h3>
+<p>On Linux, use <code>xdg-open</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>xdg-open<span class="w"> </span>report.pdf<span class="w">   </span><span class="c1"># Opens with default PDF viewer</span>
+xdg-open<span class="w"> </span>photo.jpg<span class="w">    </span><span class="c1"># Opens with default image viewer</span>
+xdg-open<span class="w"> </span>.<span class="w">            </span><span class="c1"># Opens file manager</span>
+</code></pre></div></td></tr></table></div>
+<p>Since <code>xdg-open</code> is harder to type, many people create an <strong>open alias on Linux</strong>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Add to your ~/.bashrc</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">open</span><span class="o">=</span><span class="s1">&#39;xdg-open&#39;</span>
+
+<span class="c1"># Now you can use:</span>
+open<span class="w"> </span>file.pdf
+</code></pre></div></td></tr></table></div>
+<p>Other options depending on your desktop environment:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># GNOME</span>
+gio<span class="w"> </span>open<span class="w"> </span>file.pdf
+
+<span class="c1"># KDE</span>
+kde-open<span class="w"> </span>file.pdf
+
+<span class="c1"># Generic (with alias)</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">open</span><span class="o">=</span><span class="s1">&#39;xdg-open 2&gt;/dev/null&#39;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="practical-navigation-exercises">Practical Navigation Exercises</h2>
+<p>Let's practice! Try these in your terminal:</p>
+<h3 id="exercise-1-where-am-i">Exercise 1: Where Am I?</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Print your current directory</span>
+<span class="nb">pwd</span>
+
+<span class="c1"># Go home</span>
+<span class="nb">cd</span>
+
+<span class="c1"># Verify you&#39;re home</span>
+<span class="nb">pwd</span>
+
+<span class="c1"># What&#39;s in your home directory?</span>
+ls<span class="w"> </span>-la
+</code></pre></div></td></tr></table></div>
+<h3 id="exercise-2-explore-the-system">Exercise 2: Explore the System</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Go to root</span>
+<span class="nb">cd</span><span class="w"> </span>/
+
+<span class="c1"># List top-level directories</span>
+ls
+
+<span class="c1"># Explore /etc</span>
+<span class="nb">cd</span><span class="w"> </span>/etc
+ls<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-20
+
+<span class="c1"># Look at a config file</span>
+cat<span class="w"> </span>hostname
+
+<span class="c1"># Go back home</span>
+<span class="nb">cd</span><span class="w"> </span>~
+</code></pre></div></td></tr></table></div>
+<h3 id="exercise-3-path-practice">Exercise 3: Path Practice</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create a test structure</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>~/test/level1/level2/level3
+<span class="nb">cd</span><span class="w"> </span>~/test/level1/level2/level3
+
+<span class="c1"># Where are you? (absolute path)</span>
+<span class="nb">pwd</span>
+
+<span class="c1"># Go up two levels</span>
+<span class="nb">cd</span><span class="w"> </span>../..
+<span class="nb">pwd</span>
+
+<span class="c1"># Go back down using relative path</span>
+<span class="nb">cd</span><span class="w"> </span>level2/level3
+<span class="nb">pwd</span>
+
+<span class="c1"># Go home with ~</span>
+<span class="nb">cd</span><span class="w"> </span>~
+
+<span class="c1"># Clean up</span>
+rm<span class="w"> </span>-r<span class="w"> </span>~/test
+</code></pre></div></td></tr></table></div>
+<h3 id="exercise-4-hidden-files-hunt">Exercise 4: Hidden Files Hunt</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Go home</span>
+<span class="nb">cd</span><span class="w"> </span>~
+
+<span class="c1"># List visible files</span>
+ls
+
+<span class="c1"># List ALL files (including hidden)</span>
+ls<span class="w"> </span>-la
+
+<span class="c1"># Count your dot files</span>
+ls<span class="w"> </span>-a<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">&#39;^\.&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+
+<span class="c1"># Look at your .bashrc</span>
+cat<span class="w"> </span>~/.bashrc<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-20
+</code></pre></div></td></tr></table></div>
+<h4 id="diagram-file-system-navigation-microsim">Diagram: File System Navigation MicroSim</h4>
+<details>
+<summary>Interactive File System Navigator</summary>
+<p>Type: microsim</p>
+<p>Bloom Taxonomy: Apply, Analyze
+Learning Objective: Let students practice navigating the file system with cd, ls, and pwd in a safe simulated environment.</p>
+<p>Canvas layout (responsive, ~750px max width):
+- Top area (100px): Current path display (like a breadcrumb)
+- Middle area (350px): Visual file system tree
+- Bottom area (150px): Terminal input and output</p>
+<p>Visual elements:
+- Tree visualization of a simulated file system
+- Current directory highlighted
+- Clickable directories in the tree
+- Terminal-style command input
+- Output display</p>
+<p>Simulated file system:
+- /
+  - home/
+    - student/
+      - Documents/
+        - report.txt
+        - notes.md
+      - Downloads/
+        - image.png
+      - .bashrc (hidden)
+      - .config/ (hidden)
+  - etc/
+    - hosts
+    - hostname
+  - var/
+    - log/
+  - tmp/</p>
+<p>Interactive elements:
+- Type commands: cd, ls, pwd, ls -a, ls -l
+- Click directories in tree to navigate (auto-generates cd command)
+- "pwd" updates the breadcrumb display
+- Tab completion simulation</p>
+<p>Challenges (optional):
+1. "Navigate to your Documents folder"
+2. "List hidden files in your home directory"
+3. "Go to /var/log and back home in one command"
+4. "What's the absolute path of report.txt?"</p>
+<p>Behavior:
+- Commands execute and update visualization
+- Invalid commands show helpful errors
+- Tree view highlights current location
+- Success animations for completed challenges</p>
+<p>Implementation: p5.js</p>
+</details>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>You've learned how to navigate the Linux file system like a pro! Here's what to remember:</p>
+<ul>
+<li><strong>Everything is a file</strong> in Linux—even devices and processes</li>
+<li>The <strong>root directory</strong> (<code>/</code>) is the top of the file system tree</li>
+<li>Your <strong>home directory</strong> (<code>~</code>) is your personal space</li>
+<li>Use <strong>pwd</strong> to see where you are, <strong>cd</strong> to move around</li>
+<li><strong>Absolute paths</strong> start with <code>/</code>, <strong>relative paths</strong> don't</li>
+<li><strong>Hidden files</strong> start with a dot (<code>.</code>)</li>
+<li>Use <strong>ls -la</strong> to see everything including hidden files</li>
+<li>Key directories: <code>/bin</code> (commands), <code>/etc</code> (config), <code>/home</code> (users), <code>/var</code> (logs)</li>
+<li><strong>tree</strong> shows directory structure visually</li>
+<li><strong>file</strong> tells you what type of file something is</li>
+<li><strong>stat</strong> shows detailed file information</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">You Can Navigate!</p>
+<p>You now have a mental map of the Linux file system. You know where system files live, where your files go, and how to get anywhere using paths. This knowledge will serve you in every future chapter!</p>
+</div>
+<h2 id="whats-next">What's Next?</h2>
+<p>Now that you can navigate the file system, it's time to learn how to actually DO things with files! In the next chapter, you'll master:</p>
+<ul>
+<li>Creating files and directories</li>
+<li>Copying, moving, and renaming files</li>
+<li>Deleting files (carefully!)</li>
+<li>Working with file content</li>
+</ul>
+<p>Time to stop just looking at files and start manipulating them!</p>
+<hr />
+<details class="question">
+<summary>Quick Quiz: File System Fundamentals</summary>
+<ol>
+<li>What character represents the root directory?</li>
+<li>What command shows your current directory?</li>
+<li>How do you go to your home directory from anywhere?</li>
+<li>What's the difference between <code>/etc</code> and <code>/tmp</code>?</li>
+<li>How do you list hidden files?</li>
+</ol>
+</details>
+<details class="note">
+<summary>Quiz Answers</summary>
+<ol>
+<li><code>/</code> (forward slash)</li>
+<li><code>pwd</code> (print working directory)</li>
+<li><code>cd ~</code> or just <code>cd</code> with no arguments</li>
+<li><code>/etc</code> contains configuration files; <code>/tmp</code> contains temporary files that may be deleted on reboot</li>
+<li><code>ls -a</code> (the -a flag shows all files including hidden)</li>
+</ol>
+</details>
 
 
 
 
 
 
+
+  
+  
 
 
 

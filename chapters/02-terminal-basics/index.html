@@ -6,11 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+        <meta name="description" content="Learn to use the command line interface, shells, and essential terminal navigation techniques">
       
       
         <meta name="author" content="Dan McCreary">
       
+      
+        <link rel="canonical" href="https://dmccreary.github.io/learning-linux/chapters/02-terminal-basics/">
       
       
         <link rel="prev" href="../01-unix-history/">
@@ -67,6 +69,32 @@
   
 
     
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Getting Started with the Terminal - Learning Linux" >
+      
+        <meta  property="og:description"  content="Learn to use the command line interface, shells, and essential terminal navigation techniques" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/02-terminal-basics/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/learning-linux/chapters/02-terminal-basics/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Getting Started with the Terminal - Learning Linux" >
+      
+        <meta  name="twitter:description"  content="Learn to use the command line interface, shells, and essential terminal navigation techniques" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/02-terminal-basics/index.png" >
+      
     
     
   </head>
@@ -185,6 +213,18 @@
 </div>
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -218,6 +258,18 @@
     Learning Linux
   </label>
   
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
   <ul class="md-nav__list" data-md-scrollfix>
     
       
@@ -232,6 +284,26 @@
   
   <span class="md-ellipsis">
     Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Course
   </span>
   
 
@@ -388,7 +460,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
@@ -404,14 +476,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Chapters
           </label>
@@ -514,6 +586,492 @@
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-matrix-sort-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the Matrix (Sort Of)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a Shell?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is a Shell?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-brief-history-of-shells" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Brief History of Shells
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bash-the-default-champion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bash: The Default Champion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zsh-the-fancy-newcomer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zsh: The Fancy Newcomer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zsh: The Fancy Newcomer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-shell-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Shell Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-terminal-emulator-your-window-to-the-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Terminal Emulator: Your Window to the Shell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-command-line-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Command Line Interface
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomy-of-the-shell-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anatomy of the Shell Prompt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anatomy of the Shell Prompt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-anatomy-of-a-shell-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Anatomy of a Shell Prompt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-syntax-the-grammar-of-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Syntax: The Grammar of Linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options-and-flags-customizing-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options and Flags: Customizing Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Options and Flags: Customizing Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#short-options-single-dash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Short Options (Single Dash)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-options-double-dash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Long Options (Double Dash)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Long Options (Double Dash)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-command-syntax-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Command Syntax Breakdown
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-arguments-telling-commands-what-to-work-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Arguments: Telling Commands What to Work On
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tab-completion-your-new-best-friend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tab Completion: Your New Best Friend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tab Completion: Your New Best Friend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#completing-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Completing Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#completing-file-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      Completing File Names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-there-are-multiple-matches" class="md-nav__link">
+    <span class="md-ellipsis">
+      When There Are Multiple Matches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-completion-for-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tab Completion for Paths
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tab Completion for Paths">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-tab-completion-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Tab Completion MicroSim
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-history-the-shell-remembers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command History: The Shell Remembers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command History: The Shell Remembers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-arrow-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Arrow Keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-history-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The History Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#history-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      History Shortcuts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searching-history-with-ctrlr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Searching History with Ctrl+R
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#essential-ctrl-key-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Ctrl Key Shortcuts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Essential Ctrl Key Shortcuts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#movement-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Movement Shortcuts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing Shortcuts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control Shortcuts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-clear-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Clear Command
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-exit-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Exit Command
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-types-login-interactive-and-non-interactive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell Types: Login, Interactive, and Non-Interactive
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shell Types: Login, Interactive, and Non-Interactive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login Shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interactive-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-interactive-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-Interactive Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Non-Interactive Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-shell-types-flowchart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Shell Types Flowchart
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-1-explore-your-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 1: Explore Your Prompt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-2-command-syntax-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 2: Command Syntax Practice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-3-tab-completion-speed-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 3: Tab Completion Speed Run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-4-history-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 4: History Navigation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-5-keyboard-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 5: Keyboard Shortcuts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
     </span>
   </a>
   
@@ -1196,6 +1754,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -1216,7 +1778,7 @@
         
   
   
-    <a href="../../prompts/index.md" class="md-nav__link">
+    <a href="../../prompts/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1348,6 +1910,492 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-matrix-sort-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the Matrix (Sort Of)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a Shell?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is a Shell?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-brief-history-of-shells" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Brief History of Shells
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bash-the-default-champion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bash: The Default Champion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zsh-the-fancy-newcomer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zsh: The Fancy Newcomer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zsh: The Fancy Newcomer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-shell-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Shell Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-terminal-emulator-your-window-to-the-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Terminal Emulator: Your Window to the Shell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-command-line-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Command Line Interface
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomy-of-the-shell-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anatomy of the Shell Prompt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anatomy of the Shell Prompt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-anatomy-of-a-shell-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Anatomy of a Shell Prompt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-syntax-the-grammar-of-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Syntax: The Grammar of Linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options-and-flags-customizing-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options and Flags: Customizing Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Options and Flags: Customizing Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#short-options-single-dash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Short Options (Single Dash)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-options-double-dash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Long Options (Double Dash)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Long Options (Double Dash)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-command-syntax-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Command Syntax Breakdown
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-arguments-telling-commands-what-to-work-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Arguments: Telling Commands What to Work On
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tab-completion-your-new-best-friend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tab Completion: Your New Best Friend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tab Completion: Your New Best Friend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#completing-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Completing Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#completing-file-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      Completing File Names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-there-are-multiple-matches" class="md-nav__link">
+    <span class="md-ellipsis">
+      When There Are Multiple Matches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-completion-for-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tab Completion for Paths
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tab Completion for Paths">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-tab-completion-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Tab Completion MicroSim
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-history-the-shell-remembers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command History: The Shell Remembers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command History: The Shell Remembers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-arrow-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Arrow Keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-history-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The History Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#history-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      History Shortcuts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searching-history-with-ctrlr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Searching History with Ctrl+R
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#essential-ctrl-key-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Ctrl Key Shortcuts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Essential Ctrl Key Shortcuts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#movement-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Movement Shortcuts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing Shortcuts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control Shortcuts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-clear-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Clear Command
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-exit-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Exit Command
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-types-login-interactive-and-non-interactive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell Types: Login, Interactive, and Non-Interactive
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shell Types: Login, Interactive, and Non-Interactive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login Shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interactive-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-interactive-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-Interactive Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Non-Interactive Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-shell-types-flowchart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Shell Types Flowchart
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-1-explore-your-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 1: Explore Your Prompt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-2-command-syntax-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 2: Command Syntax Practice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-3-tab-completion-speed-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 3: Tab Completion Speed Run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-4-history-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 4: History Navigation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-5-keyboard-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercise 5: Keyboard Shortcuts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1361,6 +2409,14 @@
               <article class="md-content__inner md-typeset">
                 
                   
+
+  
+    <a href="https://github.com/dmccreary/learniing-linux/blob/master/docs/chapters/02-terminal-basics/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
 
 
 <h1 id="getting-started-with-the-terminal">Getting Started with the Terminal</h1>
@@ -1396,13 +2452,1358 @@
 <li><a href="../01-unix-history/">Chapter 1: Introduction to Operating Systems and UNIX History</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<h2 id="welcome-to-the-matrix-sort-of">Welcome to the Matrix (Sort Of)</h2>
+<p>Okay, you've learned the history. You know about Thompson, Ritchie, Torvalds, and all those computing legends. Now it's time to stop reading about Linux and start DOING Linux. And that means one thing: the <strong>command line</strong>.</p>
+<p>If you've ever seen a movie where a hacker furiously types green text on a black screen while dramatic music plays... that's the command line. (Well, a Hollywood version of it. Real hacking involves a lot more Googling and coffee.)</p>
+<p>The command line might look intimidating at first—just a blinking cursor waiting for you to type something. But here's the secret: the command line is actually your friend. It's faster than clicking through menus, more powerful than any graphical interface, and once you learn it, you'll wonder how you ever lived without it.</p>
+<div class="admonition tip">
+<p class="admonition-title">Why Bother with the Command Line?</p>
+<ul>
+<li><strong>Speed</strong> – Type a command in 2 seconds vs. clicking through 5 menus</li>
+<li><strong>Power</strong> – Do things that are impossible in graphical interfaces</li>
+<li><strong>Automation</strong> – Write scripts to do repetitive tasks for you</li>
+<li><strong>Remote access</strong> – Control servers on the other side of the world</li>
+<li><strong>Cool factor</strong> – Let's be honest, it looks awesome</li>
+</ul>
+</div>
+<p>Let's dive in!</p>
+<h2 id="what-is-a-shell">What is a Shell?</h2>
+<p>When you type commands in the terminal, you're not actually talking directly to the Linux kernel (the core of the operating system). Instead, you're talking to a program called a <strong>shell</strong>.</p>
+<p>Think of the shell as a translator between you and the operating system. You speak Human (well, Human-ish commands), the shell translates that into something the kernel understands, the kernel does the work, and then the shell shows you the results.</p>
+<p>The word "shell" makes sense when you think about it—it's the outer layer that wraps around the kernel, just like an egg shell wraps around the egg inside. (I promise that's the last egg-related metaphor. Maybe.)</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>┌─────────────────────────────────┐
+│            YOU                  │
+│     (typing commands)           │
+└───────────────┬─────────────────┘
+                │
+                ▼
+┌─────────────────────────────────┐
+│           SHELL                 │
+│  (interprets your commands)     │
+└───────────────┬─────────────────┘
+                │
+                ▼
+┌─────────────────────────────────┐
+│          KERNEL                 │
+│   (does the actual work)        │
+└─────────────────────────────────┘
+</code></pre></div></td></tr></table></div>
+<p>The shell does several important jobs:</p>
+<ul>
+<li><strong>Interprets commands</strong> – Figures out what you're asking for</li>
+<li><strong>Manages processes</strong> – Starts and stops programs</li>
+<li><strong>Handles input/output</strong> – Connects programs together (remember pipes from Chapter 1?)</li>
+<li><strong>Provides scripting</strong> – Lets you automate tasks with shell scripts</li>
+<li><strong>Maintains your environment</strong> – Keeps track of settings and variables</li>
+</ul>
+<h3 id="a-brief-history-of-shells">A Brief History of Shells</h3>
+<p>Just like there are different web browsers (Chrome, Firefox, Safari), there are different shells. They all do basically the same thing, but with different features and syntax quirks.</p>
+<table>
+<thead>
+<tr>
+<th>Shell</th>
+<th>Name Stands For</th>
+<th>Year</th>
+<th>Fun Fact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sh</td>
+<td>Bourne Shell</td>
+<td>1979</td>
+<td>The original! Written by Stephen Bourne</td>
+</tr>
+<tr>
+<td>csh</td>
+<td>C Shell</td>
+<td>1978</td>
+<td>Syntax looks like C programming</td>
+</tr>
+<tr>
+<td>ksh</td>
+<td>Korn Shell</td>
+<td>1983</td>
+<td>Combined best of sh and csh</td>
+</tr>
+<tr>
+<td>bash</td>
+<td>Bourne Again Shell</td>
+<td>1989</td>
+<td>Get it? "Born again"? Programmers love puns</td>
+</tr>
+<tr>
+<td>zsh</td>
+<td>Z Shell</td>
+<td>1990</td>
+<td>The "ultimate" shell (z = last letter)</td>
+</tr>
+<tr>
+<td>fish</td>
+<td>Friendly Interactive Shell</td>
+<td>2005</td>
+<td>Focus on user-friendliness</td>
+</tr>
+</tbody>
+</table>
+<p>For this course, we'll focus on the two most popular shells on modern Linux systems: <strong>Bash</strong> and <strong>Zsh</strong>.</p>
+<h2 id="bash-the-default-champion">Bash: The Default Champion</h2>
+<p>The <strong>Bash Shell</strong> (Bourne Again Shell) is the most widely used shell in the Linux world. It's been the default shell on most Linux distributions for decades, and it's what you'll find on:</p>
+<ul>
+<li>Most Linux servers</li>
+<li>Raspberry Pi (Raspberry Pi OS)</li>
+<li>macOS (until recently)</li>
+<li>Windows Subsystem for Linux (WSL)</li>
+<li>Git Bash on Windows</li>
+</ul>
+<p>Bash was created in 1989 by Brian Fox as a free software replacement for the original Bourne shell. Remember the GNU Project from Chapter 1? Bash was one of their key achievements!</p>
+<p>Bash is like the Honda Civic of shells—reliable, everywhere, well-documented, and gets the job done. Not flashy, but you can't go wrong with it.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check if you&#39;re running Bash</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$SHELL</span>
+<span class="c1"># Output: /bin/bash</span>
+
+<span class="c1"># Or check the version</span>
+bash<span class="w"> </span>--version
+<span class="c1"># Output: GNU bash, version 5.x.x...</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="zsh-the-fancy-newcomer">Zsh: The Fancy Newcomer</h2>
+<p>The <strong>Zsh Shell</strong> (Z Shell) is like Bash's cooler younger sibling who went to art school. It does everything Bash does, but with more style and extra features.</p>
+<p>Zsh has been around since 1990, but it really took off when Apple made it the default shell on macOS starting with Catalina (2019). Suddenly millions of developers were using Zsh, and the ecosystem exploded with themes and plugins.</p>
+<p>What makes Zsh special?</p>
+<ul>
+<li><strong>Better tab completion</strong> – It's almost psychic</li>
+<li><strong>Spelling correction</strong> – "Did you mean 'git'?"</li>
+<li><strong>Themes and customization</strong> – Make your terminal beautiful</li>
+<li><strong>Plugin ecosystem</strong> – Especially with Oh My Zsh</li>
+<li><strong>Shared command history</strong> – Between terminal windows</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check if you&#39;re running Zsh</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$SHELL</span>
+<span class="c1"># Output: /bin/zsh</span>
+
+<span class="c1"># Zsh version</span>
+zsh<span class="w"> </span>--version
+<span class="c1"># Output: zsh 5.x.x...</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Bash vs Zsh: Which Should You Use?</p>
+<p>For learning, <strong>Bash</strong> is the better choice because:</p>
+<ul>
+<li>More tutorials and documentation exist for Bash</li>
+<li>Most servers run Bash</li>
+<li>Scripts written in Bash work almost everywhere</li>
+<li>Once you know Bash, switching to Zsh is easy</li>
+</ul>
+<p>That said, if you're on a Mac or just want a fancier experience, Zsh is great too! Most commands work identically in both.</p>
+</div>
+<h4 id="diagram-shell-comparison">Diagram: Shell Comparison</h4>
+<details>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;summary&gt;Bash vs Zsh Feature Comparison&lt;/summary&gt;
+Type: infographic
+
+Bloom Taxonomy: Understand, Analyze
+Learning Objective: Help students understand the key differences between Bash and Zsh to make informed choices about which shell to use.
+
+Layout: Two-column comparison with visual icons and ratings
+
+Left Column - Bash (Orange theme):
+- Logo/Icon: Terminal with $ prompt
+- &quot;The Classic&quot;
+- Strengths:
+  - Universal compatibility (5 stars)
+  - Documentation available (5 stars)
+  - Server standard (5 stars)
+  - Beginner resources (5 stars)
+- Weaknesses:
+  - Customization (3 stars)
+  - Tab completion (3 stars)
+  - Modern features (3 stars)
+
+Right Column - Zsh (Green theme):
+- Logo/Icon: Terminal with % prompt
+- &quot;The Modern Choice&quot;
+- Strengths:
+  - Tab completion (5 stars)
+  - Customization (5 stars)
+  - Plugin ecosystem (5 stars)
+  - User experience (5 stars)
+- Weaknesses:
+  - Learning curve (4 stars)
+  - Script portability (4 stars)
+
+Bottom section:
+- Venn diagram showing: Both support same basic commands
+- &quot;Start with Bash, graduate to Zsh when ready!&quot;
+
+Interactive features:
+- Hover for detailed explanations
+- Click examples to see syntax differences
+
+Implementation: HTML/CSS or p5.js
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="the-terminal-emulator-your-window-to-the-shell">The Terminal Emulator: Your Window to the Shell</h2>
+<p>Here's something that confuses beginners: the <strong>terminal emulator</strong> and the shell are NOT the same thing.</p>
+<p>The <strong>shell</strong> is the program that interprets your commands (Bash, Zsh, etc.).</p>
+<p>The <strong>terminal emulator</strong> is the window/application that displays the shell and lets you type into it.</p>
+<p>Think of it like watching TV: the shell is the TV show (the content), and the terminal emulator is the TV set (how you view it). You can watch the same show on different TVs, and you can run the same shell in different terminal emulators.</p>
+<p>Popular terminal emulators include:</p>
+<table>
+<thead>
+<tr>
+<th>Terminal</th>
+<th>Platform</th>
+<th>Notable Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GNOME Terminal</td>
+<td>Linux</td>
+<td>Default on Ubuntu and many distros</td>
+</tr>
+<tr>
+<td>Konsole</td>
+<td>Linux</td>
+<td>KDE's terminal, very customizable</td>
+</tr>
+<tr>
+<td>iTerm2</td>
+<td>macOS</td>
+<td>Split panes, search, profiles</td>
+</tr>
+<tr>
+<td>Terminal.app</td>
+<td>macOS</td>
+<td>Built-in, simple</td>
+</tr>
+<tr>
+<td>Windows Terminal</td>
+<td>Windows</td>
+<td>Modern, tabbed, customizable</td>
+</tr>
+<tr>
+<td>Alacritty</td>
+<td>Cross-platform</td>
+<td>GPU-accelerated, blazing fast</td>
+</tr>
+<tr>
+<td>Kitty</td>
+<td>Cross-platform</td>
+<td>GPU-based, images in terminal!</td>
+</tr>
+</tbody>
+</table>
+<p>For this course, whatever terminal emulator came with your system is perfectly fine. They all do the same basic job of giving you access to the shell.</p>
+<div class="admonition tip">
+<p class="admonition-title">Opening the Terminal</p>
+<ul>
+<li><strong>Ubuntu/Linux</strong>: Press <code>Ctrl+Alt+T</code> or search for "Terminal"</li>
+<li><strong>macOS</strong>: Press <code>Cmd+Space</code>, type "Terminal", hit Enter</li>
+<li><strong>Raspberry Pi</strong>: Click the terminal icon in the taskbar</li>
+<li><strong>Windows (WSL)</strong>: Search for "Ubuntu" or "Windows Terminal"</li>
+</ul>
+</div>
+<h2 id="the-command-line-interface">The Command Line Interface</h2>
+<p>When you open a terminal, you're greeted by the <strong>command line interface</strong> (CLI). Unlike a graphical user interface (GUI) where you click buttons and icons, a CLI is all text—you type commands, and it types back results.</p>
+<p>The CLI consists of:</p>
+<ol>
+<li><strong>The prompt</strong> – Shows you're ready for input</li>
+<li><strong>Your command</strong> – What you type</li>
+<li><strong>The output</strong> – What the computer responds with</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>┌────────────────────────────────────────────────┐
+│ dan@raspberry:~$                               │  ← The prompt
+│ dan@raspberry:~$ ls                            │  ← You type &quot;ls&quot;
+│ Documents  Downloads  Pictures  Videos         │  ← The output
+│ dan@raspberry:~$                               │  ← Ready for next command
+└────────────────────────────────────────────────┘
+</code></pre></div></td></tr></table></div>
+<p>The CLI might seem old-fashioned compared to pretty graphical interfaces, but it has MASSIVE advantages:</p>
+<ul>
+<li><strong>Precision</strong> – Say exactly what you want</li>
+<li><strong>Speed</strong> – Faster than clicking through menus</li>
+<li><strong>Scriptability</strong> – Automate repeated tasks</li>
+<li><strong>Remote access</strong> – Works over slow connections</li>
+<li><strong>Resource-efficient</strong> – Uses almost no memory or CPU</li>
+</ul>
+<h2 id="anatomy-of-the-shell-prompt">Anatomy of the Shell Prompt</h2>
+<p>The <strong>shell prompt</strong> is that little bit of text that appears when the terminal is waiting for you to type something. It might look something like:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dan@raspberry:~$
+</code></pre></div></td></tr></table></div>
+<p>Let's decode this:</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dan</code></td>
+<td>Your username</td>
+</tr>
+<tr>
+<td><code>@</code></td>
+<td>"at" separator</td>
+</tr>
+<tr>
+<td><code>raspberry</code></td>
+<td>The hostname (computer's name)</td>
+</tr>
+<tr>
+<td><code>:</code></td>
+<td>Separator</td>
+</tr>
+<tr>
+<td><code>~</code></td>
+<td>Current directory (~ means home folder)</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>You're a regular user (# means root/admin)</td>
+</tr>
+</tbody>
+</table>
+<p>The prompt can be customized to show all sorts of information—time, git branch, battery level, weather (okay, maybe not weather). We'll cover customization in a later chapter.</p>
+<div class="admonition warning">
+<p class="admonition-title">The Superuser Prompt</p>
+<p>If your prompt ends with <code>#</code> instead of <code>$</code>, you're logged in as the root user (superuser/administrator). Be careful! Root can delete anything, including critical system files. Only use root when necessary.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>root@raspberry:~#  ← This is root! Be careful!
+</code></pre></div></td></tr></table></div>
+</div>
+<h4 id="diagram-anatomy-of-a-shell-prompt">Diagram: Anatomy of a Shell Prompt</h4>
+<details>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;summary&gt;Understanding the Shell Prompt&lt;/summary&gt;
+Type: diagram
+
+Bloom Taxonomy: Remember, Understand
+Learning Objective: Help students recognize and understand each component of a typical shell prompt.
+
+Components to show:
+- A sample prompt: &quot;dan@raspberry:~/Documents$&quot;
+- Callout boxes pointing to each part with explanations
+- Color coding for each component
+
+Layout: Horizontal prompt with annotation arrows pointing to each section
+
+Labels and arrows:
+- &quot;dan&quot; → &quot;Username (who you are)&quot;
+- &quot;@&quot; → &quot;At separator&quot;
+- &quot;raspberry&quot; → &quot;Hostname (which computer)&quot;
+- &quot;:&quot; → &quot;Separator&quot;
+- &quot;~/Documents&quot; → &quot;Current directory (where you are)&quot;
+- &quot;$&quot; → &quot;User indicator ($ = normal, # = root)&quot;
+
+Additional examples below:
+- &quot;student@ubuntu:~$&quot; - Ubuntu default
+- &quot;pi@raspberrypi:~$&quot; - Raspberry Pi default
+- &quot;root@server:/#&quot; - Root user (danger zone!)
+
+Color scheme:
+- Username: Blue
+- Hostname: Green
+- Path: Yellow/Orange
+- Prompt symbol: Red (if root) or Gray (if normal)
+
+Interactive features:
+- Hover over each part for detailed explanation
+- Click to see different prompt styles
+
+Implementation: HTML/CSS or p5.js
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="command-syntax-the-grammar-of-linux">Command Syntax: The Grammar of Linux</h2>
+<p>Every command you type follows a specific pattern. Understanding <strong>command syntax</strong> is like learning the grammar of a new language—once you get it, everything makes sense.</p>
+<p>The basic structure is:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>command [options] [arguments]
+</code></pre></div></td></tr></table></div>
+<p>Let's break this down:</p>
+<ul>
+<li><strong>command</strong> – The program you want to run (like <code>ls</code>, <code>cd</code>, <code>cp</code>)</li>
+<li><strong>options</strong> – Modifiers that change how the command works (usually start with <code>-</code> or <code>--</code>)</li>
+<li><strong>arguments</strong> – The things you want the command to work on (files, directories, etc.)</li>
+</ul>
+<p>Here's a real example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>-la<span class="w"> </span>/home/dan
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>What It Is</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ls</code></td>
+<td>Command</td>
+<td>Lists directory contents</td>
+</tr>
+<tr>
+<td><code>-la</code></td>
+<td>Options</td>
+<td><code>-l</code> = long format, <code>-a</code> = show hidden files</td>
+</tr>
+<tr>
+<td><code>/home/dan</code></td>
+<td>Argument</td>
+<td>The directory to list</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Spaces Matter!</p>
+<p>In the command line, spaces separate different parts of the command. This means:</p>
+<ul>
+<li><code>ls -la</code> = the <code>ls</code> command with options <code>-la</code></li>
+<li><code>ls-la</code> = trying to run a command literally called "ls-la" (doesn't exist!)</li>
+</ul>
+<p>If you need to use a filename with spaces, put it in quotes: <code>"my file.txt"</code></p>
+</div>
+<h2 id="options-and-flags-customizing-commands">Options and Flags: Customizing Commands</h2>
+<p><strong>Command options</strong> (also called <strong>command flags</strong>) modify how a command behaves. They're like the settings on a video game—same game, different experience.</p>
+<p>Most options come in two flavors:</p>
+<h3 id="short-options-single-dash">Short Options (Single Dash)</h3>
+<p>Short options use a single dash followed by a letter:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>-l<span class="w">    </span><span class="c1"># Long listing format</span>
+ls<span class="w"> </span>-a<span class="w">    </span><span class="c1"># Show all files (including hidden)</span>
+ls<span class="w"> </span>-h<span class="w">    </span><span class="c1"># Human-readable file sizes</span>
+</code></pre></div></td></tr></table></div>
+<p>You can combine short options:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>-l<span class="w"> </span>-a<span class="w"> </span>-h<span class="w">    </span><span class="c1"># Three separate options</span>
+ls<span class="w"> </span>-lah<span class="w">        </span><span class="c1"># Same thing, combined (order doesn&#39;t matter)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="long-options-double-dash">Long Options (Double Dash)</h3>
+<p>Long options use two dashes followed by a word:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>--all<span class="w">           </span><span class="c1"># Same as -a</span>
+ls<span class="w"> </span>--human-readable<span class="w"> </span><span class="c1"># Same as -h</span>
+ls<span class="w"> </span>--help<span class="w">          </span><span class="c1"># Show help for the command</span>
+</code></pre></div></td></tr></table></div>
+<p>Long options are easier to remember and read, but take longer to type. Use whichever you prefer!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># These all do the same thing:</span>
+ls<span class="w"> </span>-a
+ls<span class="w"> </span>--all
+<span class="c1"># Most people use -a because it&#39;s faster to type</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="diagram-command-syntax-breakdown">Diagram: Command Syntax Breakdown</h4>
+<details>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;summary&gt;Command Syntax Visual Guide&lt;/summary&gt;
+Type: diagram
+
+Bloom Taxonomy: Understand, Apply
+Learning Objective: Visualize the structure of Linux commands and understand how options and arguments work together.
+
+Components:
+- Large example command: &quot;cp -rv ~/Documents/project /backup/&quot;
+- Color-coded boxes around each part
+- Annotation lines with explanations
+
+Main visualization:
+- Command box (Blue): &quot;cp&quot; - &quot;The program to run&quot;
+- Options box (Green): &quot;-rv&quot; - &quot;How to run it&quot;
+  - Expanded: &quot;-r = recursive, -v = verbose&quot;
+- Argument 1 box (Orange): &quot;~/Documents/project&quot; - &quot;Source (from)&quot;
+- Argument 2 box (Purple): &quot;/backup/&quot; - &quot;Destination (to)&quot;
+
+Below: Three more examples showing the pattern
+1. &quot;ls&quot; - command only (no options or arguments)
+2. &quot;ls -la&quot; - command with options
+3. &quot;cat file.txt&quot; - command with argument
+4. &quot;grep -i &#39;hello&#39; file.txt&quot; - command with options and multiple arguments
+
+Interactive elements:
+- Hover over each colored section for tooltips
+- Toggle between different example commands
+
+Implementation: HTML/CSS or p5.js
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="command-arguments-telling-commands-what-to-work-on">Command Arguments: Telling Commands What to Work On</h2>
+<p><strong>Command arguments</strong> are the targets of your command—the files, directories, or other inputs you want the command to process.</p>
+<p>Some commands require arguments:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/home<span class="w">        </span><span class="c1"># cd needs a directory to change to</span>
+cat<span class="w"> </span>file.txt<span class="w">    </span><span class="c1"># cat needs a file to display</span>
+cp<span class="w"> </span>a.txt<span class="w"> </span>b.txt<span class="w">  </span><span class="c1"># cp needs source and destination</span>
+</code></pre></div></td></tr></table></div>
+<p>Some commands work without arguments (using defaults):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w">              </span><span class="c1"># Lists current directory if no argument given</span>
+<span class="nb">pwd</span><span class="w">             </span><span class="c1"># Prints working directory (no argument needed)</span>
+date<span class="w">            </span><span class="c1"># Shows current date/time (no argument needed)</span>
+</code></pre></div></td></tr></table></div>
+<p>Some commands accept multiple arguments:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>cp<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt<span class="w"> </span>file3.txt<span class="w"> </span>destination/<span class="w">  </span><span class="c1"># Copy multiple files</span>
+cat<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt<span class="w"> </span>file3.txt<span class="w">              </span><span class="c1"># Display multiple files</span>
+rm<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt<span class="w"> </span>file3.txt<span class="w">               </span><span class="c1"># Delete multiple files</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Reading Command Help</p>
+<p>When you see command documentation, brackets indicate optional parts:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ls [OPTION]... [FILE]...
+</code></pre></div></td></tr></table></div>
+<p>This means:
+- <code>ls</code> – Can be run alone
+- <code>[OPTION]...</code> – Can have zero or more options
+- <code>[FILE]...</code> – Can have zero or more files</p>
+<p>The <code>...</code> means "you can have multiple of these."</p>
+</div>
+<h2 id="tab-completion-your-new-best-friend">Tab Completion: Your New Best Friend</h2>
+<p>Okay, here's where things get GOOD. <strong>Tab completion</strong> is one of the most useful features in the terminal, and once you start using it, you'll wonder how you ever typed full commands.</p>
+<p>The concept is simple: start typing something, press <code>Tab</code>, and the shell will try to complete it for you.</p>
+<h3 id="completing-commands">Completing Commands</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Type:</span>
+hist&lt;Tab&gt;
+<span class="c1"># Shell completes to:</span>
+<span class="nb">history</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="completing-file-names">Completing File Names</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Your directory has: report_2024_final.pdf</span>
+<span class="c1"># Type:</span>
+cat<span class="w"> </span>rep&lt;Tab&gt;
+<span class="c1"># Shell completes to:</span>
+cat<span class="w"> </span>report_2024_final.pdf
+</code></pre></div></td></tr></table></div>
+<h3 id="when-there-are-multiple-matches">When There Are Multiple Matches</h3>
+<p>If there's more than one possibility, press <code>Tab</code> twice to see all options:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Directory has: file1.txt, file2.txt, file3.txt</span>
+<span class="c1"># Type:</span>
+cat<span class="w"> </span>file&lt;Tab&gt;&lt;Tab&gt;
+<span class="c1"># Shell shows:</span>
+file1.txt<span class="w">  </span>file2.txt<span class="w">  </span>file3.txt
+<span class="c1"># Type more to narrow it down:</span>
+cat<span class="w"> </span>file1&lt;Tab&gt;
+<span class="c1"># Shell completes to:</span>
+cat<span class="w"> </span>file1.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="tab-completion-for-paths">Tab Completion for Paths</h3>
+<p>You can tab-complete through directory paths:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Type:</span>
+<span class="nb">cd</span><span class="w"> </span>/ho&lt;Tab&gt;/da&lt;Tab&gt;/Doc&lt;Tab&gt;
+<span class="c1"># Expands to:</span>
+<span class="nb">cd</span><span class="w"> </span>/home/dan/Documents/
+</code></pre></div></td></tr></table></div>
+<div class="admonition success">
+<p class="admonition-title">Pro Tip: Tab Early, Tab Often</p>
+<p>Get in the habit of pressing Tab after typing just a few characters. This:</p>
+<ul>
+<li>Saves typing time</li>
+<li>Prevents typos</li>
+<li>Confirms the file/command exists</li>
+<li>Shows you what's available</li>
+</ul>
+<p>If Tab doesn't complete anything, it means nothing matches what you've typed!</p>
+</div>
+<h4 id="diagram-tab-completion-microsim">Diagram: Tab Completion MicroSim</h4>
+<details>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;summary&gt;Interactive Tab Completion Demo&lt;/summary&gt;
+Type: microsim
+
+Bloom Taxonomy: Apply
+Learning Objective: Let students practice tab completion in a safe, interactive environment before trying it on a real terminal.
+
+Canvas layout (responsive, ~700px max width):
+- Top area (350px): Simulated terminal display
+- Bottom area (150px): Instructions and hint panel
+
+Visual elements:
+- Terminal-style interface with black background, green text
+- Blinking cursor
+- File listing panel showing available files
+- &quot;Tab key&quot; visual indicator that lights up when pressed
+- Completion animation showing text being filled in
+
+Simulated file system:
+- Documents/
+  - report.txt
+  - readme.md
+  - research_notes.txt
+- Downloads/
+  - image.png
+  - installer.deb
+- Pictures/
+
+Interactive exercises (3 levels):
+1. Basic: Type &quot;cd Doc&lt;Tab&gt;&quot; - completes to &quot;cd Documents/&quot;
+2. Intermediate: Type &quot;cat re&lt;Tab&gt;&lt;Tab&gt;&quot; - shows options, complete &quot;cat readme.md&quot;
+3. Advanced: Type &quot;ls ~/Do&lt;Tab&gt;&quot; - multiple matches, narrow down
+
+Controls:
+- Text input field for typing commands
+- Keyboard capture for Tab key
+- &quot;Reset&quot; button
+- &quot;Next Challenge&quot; button
+- Hint toggle
+
+Behavior:
+- Simulate actual tab completion behavior
+- Show visual feedback when Tab is pressed
+- Celebrate correct completions with brief animation
+- Provide helpful hints if stuck
+
+Default state:
+- Level 1 challenge active
+- Instructions visible
+- Cursor blinking in terminal
+
+Implementation: p5.js
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="command-history-the-shell-remembers">Command History: The Shell Remembers</h2>
+<p>Here's another massive productivity booster: the shell remembers every command you've typed. This is called <strong>command history</strong>, and it's saved even after you close the terminal.</p>
+<h3 id="using-arrow-keys">Using Arrow Keys</h3>
+<p>The simplest way to access history is with <strong>arrow key navigation</strong>:</p>
+<ul>
+<li><strong>Up Arrow (↑)</strong> – Go to previous command</li>
+<li><strong>Down Arrow (↓)</strong> – Go to next command</li>
+</ul>
+<p>Try it now! Open a terminal, type a few commands, then press Up Arrow to cycle through them.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Type these commands:</span>
+ls
+<span class="nb">pwd</span>
+date
+
+<span class="c1"># Now press Up Arrow three times to go back through them</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="the-history-command">The History Command</h3>
+<p>The <strong>history command</strong> shows your complete command history:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">history</span>
+<span class="c1"># Output:</span>
+<span class="w">  </span><span class="m">501</span><span class="w">  </span>ls<span class="w"> </span>-la
+<span class="w">  </span><span class="m">502</span><span class="w">  </span><span class="nb">cd</span><span class="w"> </span>Documents
+<span class="w">  </span><span class="m">503</span><span class="w">  </span>cat<span class="w"> </span>readme.txt
+<span class="w">  </span><span class="m">504</span><span class="w">  </span><span class="nb">pwd</span>
+<span class="w">  </span><span class="m">505</span><span class="w">  </span><span class="nb">history</span>
+</code></pre></div></td></tr></table></div>
+<p>Each command has a number. You can re-run any command using <code>!</code> followed by its number:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>!501<span class="w">        </span><span class="c1"># Runs: ls -la</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="history-shortcuts">History Shortcuts</h3>
+<p>Here are some handy shortcuts:</p>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>!!</code></td>
+<td>Run the last command again</td>
+</tr>
+<tr>
+<td><code>!xyz</code></td>
+<td>Run the most recent command starting with "xyz"</td>
+</tr>
+<tr>
+<td><code>!?xyz</code></td>
+<td>Run the most recent command containing "xyz"</td>
+</tr>
+<tr>
+<td><code>!-2</code></td>
+<td>Run the second-to-last command</td>
+</tr>
+<tr>
+<td><code>history 10</code></td>
+<td>Show only the last 10 commands</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>!!</code> shortcut is especially useful when you forget <code>sudo</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>apt<span class="w"> </span>update<span class="w">                    </span><span class="c1"># Oops, need sudo!</span>
+<span class="c1"># Permission denied</span>
+sudo<span class="w"> </span>!!<span class="w">                       </span><span class="c1"># Runs: sudo apt update</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="searching-history-with-ctrlr">Searching History with Ctrl+R</h3>
+<p>This one's a game-changer: <strong>Ctrl+R</strong> lets you search your command history interactively.</p>
+<ol>
+<li>Press <code>Ctrl+R</code></li>
+<li>Start typing any part of the command you're looking for</li>
+<li>It finds the most recent match</li>
+<li>Press <code>Ctrl+R</code> again to find older matches</li>
+<li>Press <code>Enter</code> to run the command, or <code>Esc</code> to edit it first</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Press Ctrl+R, then type &quot;git&quot;</span>
+<span class="o">(</span>reverse-i-search<span class="o">)</span><span class="sb">`</span>git<span class="err">&#39;</span>:<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+<span class="c1"># Found it! Press Enter to run, or keep typing to narrow search</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Where is History Stored?</p>
+<p>Your command history is saved in a hidden file in your home directory:</p>
+<ul>
+<li>Bash: <code>~/.bash_history</code></li>
+<li>Zsh: <code>~/.zsh_history</code></li>
+</ul>
+<p>You can view it with <code>cat ~/.bash_history</code> (or the appropriate file for your shell).</p>
+</div>
+<h2 id="essential-ctrl-key-shortcuts">Essential Ctrl Key Shortcuts</h2>
+<p>Beyond Ctrl+R for history search, there are many <strong>Ctrl key shortcuts</strong> that make terminal work faster. These work in most shells and are worth memorizing.</p>
+<h3 id="movement-shortcuts">Movement Shortcuts</h3>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl+A</code></td>
+<td>Move cursor to beginning of line</td>
+</tr>
+<tr>
+<td><code>Ctrl+E</code></td>
+<td>Move cursor to end of line</td>
+</tr>
+<tr>
+<td><code>Ctrl+B</code></td>
+<td>Move cursor back one character</td>
+</tr>
+<tr>
+<td><code>Ctrl+F</code></td>
+<td>Move cursor forward one character</td>
+</tr>
+<tr>
+<td><code>Alt+B</code></td>
+<td>Move cursor back one word</td>
+</tr>
+<tr>
+<td><code>Alt+F</code></td>
+<td>Move cursor forward one word</td>
+</tr>
+</tbody>
+</table>
+<h3 id="editing-shortcuts">Editing Shortcuts</h3>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl+U</code></td>
+<td>Delete from cursor to beginning of line</td>
+</tr>
+<tr>
+<td><code>Ctrl+K</code></td>
+<td>Delete from cursor to end of line</td>
+</tr>
+<tr>
+<td><code>Ctrl+W</code></td>
+<td>Delete the word before the cursor</td>
+</tr>
+<tr>
+<td><code>Ctrl+Y</code></td>
+<td>Paste (yank) previously deleted text</td>
+</tr>
+<tr>
+<td><code>Ctrl+_</code></td>
+<td>Undo last edit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="control-shortcuts">Control Shortcuts</h3>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl+C</code></td>
+<td>Cancel/kill the current command</td>
+</tr>
+<tr>
+<td><code>Ctrl+D</code></td>
+<td>Exit the shell (or send EOF)</td>
+</tr>
+<tr>
+<td><code>Ctrl+Z</code></td>
+<td>Suspend the current process</td>
+</tr>
+<tr>
+<td><code>Ctrl+L</code></td>
+<td>Clear the screen (same as <code>clear</code> command)</td>
+</tr>
+<tr>
+<td><code>Ctrl+S</code></td>
+<td>Pause terminal output (oh no!)</td>
+</tr>
+<tr>
+<td><code>Ctrl+Q</code></td>
+<td>Resume terminal output (phew!)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Ctrl+S Panic</p>
+<p>If your terminal suddenly freezes and won't respond to anything... you probably pressed <code>Ctrl+S</code> by accident. This is "flow control" that pauses output. Just press <code>Ctrl+Q</code> to unfreeze it!</p>
+</div>
+<h2 id="the-clear-command">The Clear Command</h2>
+<p>Your terminal can get cluttered with lots of output. The <strong>clear command</strong> wipes the screen and gives you a fresh start:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>clear
+</code></pre></div></td></tr></table></div>
+<p>Or use the keyboard shortcut:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Ctrl+L
+</code></pre></div></td></tr></table></div>
+<p>Both do the same thing. The history is still there—you just can't see the old output anymore. It's like erasing a whiteboard but keeping your notes in a notebook.</p>
+<div class="admonition note">
+<p class="admonition-title">Clear vs Reset</p>
+<p>If <code>clear</code> doesn't seem to work properly (weird characters, broken display), try:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>reset
+</code></pre></div></td></tr></table></div>
+<p>This fully resets the terminal to its default state. It's the "have you tried turning it off and on again" of terminals.</p>
+</div>
+<h2 id="the-exit-command">The Exit Command</h2>
+<p>When you're done with a terminal session, you can close it with the <strong>exit command</strong>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">exit</span>
+</code></pre></div></td></tr></table></div>
+<p>Or use the keyboard shortcut:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Ctrl+D
+</code></pre></div></td></tr></table></div>
+<p>This closes the current shell session. If you're:</p>
+<ul>
+<li>In a terminal window → The window closes</li>
+<li>SSH'd into a server → You disconnect</li>
+<li>In a nested shell → You return to the parent shell</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Multiple Exit Levels</p>
+<p>Sometimes you might be "nested" multiple shells deep (like if you ran <code>bash</code> inside bash). Each <code>exit</code> takes you up one level. Keep typing <code>exit</code> until the window closes or you're where you want to be.</p>
+</div>
+<h2 id="shell-types-login-interactive-and-non-interactive">Shell Types: Login, Interactive, and Non-Interactive</h2>
+<p>Not all shell sessions are created equal! Understanding <strong>shell types</strong> helps you know when certain configuration files are loaded.</p>
+<h3 id="login-shell">Login Shell</h3>
+<p>A <strong>login shell</strong> is the first shell that runs when you log into a system. It's called "login" because you had to authenticate (enter username/password) to get it.</p>
+<p>Login shells read special startup files like <code>~/.bash_profile</code> or <code>~/.profile</code>.</p>
+<p>Examples of login shells:</p>
+<ul>
+<li>Logging into a Linux console (no GUI)</li>
+<li>SSH'ing into a remote server</li>
+<li>Opening Terminal on macOS (technically)</li>
+</ul>
+<h3 id="interactive-shell">Interactive Shell</h3>
+<p>An <strong>interactive shell</strong> is any shell that's connected to a terminal and waiting for your input. You type, it responds—that's "interactive."</p>
+<p>Interactive shells read <code>~/.bashrc</code> (for Bash) or <code>~/.zshrc</code> (for Zsh).</p>
+<p>Examples:</p>
+<ul>
+<li>Opening a terminal window</li>
+<li>Running <code>bash</code> from another shell</li>
+</ul>
+<h3 id="non-interactive-shell">Non-Interactive Shell</h3>
+<p>A <strong>non-interactive shell</strong> runs without user input—typically executing a script. You don't type anything; the shell just runs commands from a file.</p>
+<p>Examples:</p>
+<ul>
+<li>Running a shell script: <code>./myscript.sh</code></li>
+<li>Cron jobs (scheduled tasks)</li>
+<li>Commands run via SSH without a terminal: <code>ssh server 'ls -la'</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Shell Type</th>
+<th>You Type Commands?</th>
+<th>Reads ~/.bashrc?</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Login + Interactive</td>
+<td>Yes</td>
+<td>Yes (usually)</td>
+<td>SSH login, console login</td>
+</tr>
+<tr>
+<td>Non-Login + Interactive</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Opening terminal in GUI</td>
+</tr>
+<tr>
+<td>Non-Login + Non-Interactive</td>
+<td>No</td>
+<td>No</td>
+<td>Running a script</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Why Does This Matter?</p>
+<p>If you add something to <code>~/.bashrc</code> and it doesn't seem to work when you SSH in, it might be because SSH creates a login shell that reads <code>~/.bash_profile</code> instead. We'll cover configuration files in detail in Chapter 11!</p>
+</div>
+<h4 id="diagram-shell-types-flowchart">Diagram: Shell Types Flowchart</h4>
+<details>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;summary&gt;Shell Types Decision Flowchart&lt;/summary&gt;
+Type: workflow
+
+Bloom Taxonomy: Analyze
+Learning Objective: Help students determine what type of shell they&#39;re using and which configuration files will be loaded.
+
+Visual style: Flowchart with decision diamonds and outcome rectangles
+
+Steps:
+1. Start: &quot;How was the shell started?&quot;
+
+2. Decision: &quot;Did you log in (enter password)?&quot;
+   - Yes → &quot;LOGIN SHELL&quot; label
+   - No → Continue
+
+3. Decision: &quot;Can you type commands interactively?&quot;
+   - Yes → &quot;INTERACTIVE SHELL&quot; label
+   - No → &quot;NON-INTERACTIVE SHELL&quot; label
+
+4. Outcome boxes showing config files:
+   - Login + Interactive: &quot;Reads: /etc/profile, ~/.bash_profile, ~/.bashrc&quot;
+   - Non-Login + Interactive: &quot;Reads: ~/.bashrc&quot;
+   - Non-Interactive: &quot;Reads: Nothing (usually), uses BASH_ENV if set&quot;
+
+Examples alongside each outcome:
+- Login: SSH to server, console login
+- Interactive: Open terminal app in GUI
+- Non-Interactive: Run script, cron job
+
+Color coding:
+- Decision diamonds: Yellow
+- Login shells: Blue
+- Interactive: Green
+- Non-Interactive: Gray
+- Config file boxes: Orange
+
+Implementation: Mermaid or HTML/CSS
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="putting-it-all-together">Putting It All Together</h2>
+<p>Let's practice combining everything we've learned. Try these exercises in your terminal!</p>
+<h3 id="exercise-1-explore-your-prompt">Exercise 1: Explore Your Prompt</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># What&#39;s your username?</span>
+whoami
+
+<span class="c1"># What&#39;s your hostname?</span>
+hostname
+
+<span class="c1"># What shell are you using?</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$SHELL</span>
+
+<span class="c1"># What&#39;s your current directory?</span>
+<span class="nb">pwd</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="exercise-2-command-syntax-practice">Exercise 2: Command Syntax Practice</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># List files (no options)</span>
+ls
+
+<span class="c1"># List files with details</span>
+ls<span class="w"> </span>-l
+
+<span class="c1"># List ALL files (including hidden) with details</span>
+ls<span class="w"> </span>-la
+
+<span class="c1"># List with human-readable sizes</span>
+ls<span class="w"> </span>-lh
+
+<span class="c1"># Combine them all!</span>
+ls<span class="w"> </span>-lah
+</code></pre></div></td></tr></table></div>
+<h3 id="exercise-3-tab-completion-speed-run">Exercise 3: Tab Completion Speed Run</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Try completing these (type just what&#39;s shown, then Tab):</span>
+<span class="c1"># cd /h&lt;Tab&gt;/[your username first letters]&lt;Tab&gt;</span>
+<span class="c1"># cat /et&lt;Tab&gt;/hos&lt;Tab&gt;</span>
+<span class="c1"># ls /us&lt;Tab&gt;/bi&lt;Tab&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="exercise-4-history-navigation">Exercise 4: History Navigation</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Type a few commands</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello World&quot;</span>
+date
+cal
+ls<span class="w"> </span>-la
+
+<span class="c1"># Now navigate with arrows</span>
+<span class="c1"># Press Up, Up, Up, Down, Enter</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="exercise-5-keyboard-shortcuts">Exercise 5: Keyboard Shortcuts</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Type a long command but don&#39;t press Enter:</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;This is a very long command that I am typing&quot;</span>
+
+<span class="c1"># Now try:</span>
+<span class="c1"># Ctrl+A - go to beginning</span>
+<span class="c1"># Ctrl+E - go to end</span>
+<span class="c1"># Ctrl+U - delete all</span>
+<span class="c1"># Ctrl+L - clear screen</span>
+<span class="c1"># Ctrl+C - cancel command</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>You've learned a LOT in this chapter! Let's recap:</p>
+<ul>
+<li>The <strong>shell</strong> is a program that interprets your commands (Bash, Zsh)</li>
+<li>The <strong>terminal emulator</strong> is the window that displays the shell</li>
+<li>The <strong>command line interface (CLI)</strong> is text-based input/output</li>
+<li><strong>Command syntax</strong> follows the pattern: <code>command [options] [arguments]</code></li>
+<li><strong>Options/flags</strong> modify command behavior (<code>-l</code>, <code>--all</code>)</li>
+<li><strong>Tab completion</strong> auto-completes commands and filenames (USE IT!)</li>
+<li><strong>Command history</strong> saves your previous commands (Up Arrow, <code>history</code>, Ctrl+R)</li>
+<li><strong>Ctrl shortcuts</strong> make you faster (Ctrl+C, Ctrl+L, Ctrl+R, etc.)</li>
+<li><strong>Shell types</strong> affect which config files are loaded</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">You're a Terminal User Now!</p>
+<p>Congratulations! You've taken your first steps into the command line. These skills—tab completion, history, shortcuts—will save you HOURS over your Linux journey. Practice them until they become muscle memory!</p>
+</div>
+<h2 id="whats-next">What's Next?</h2>
+<p>Now that you can navigate the terminal, it's time to learn actual commands! In the next chapter, you'll master:</p>
+<ul>
+<li>Moving around the file system (<code>cd</code>, <code>pwd</code>)</li>
+<li>Listing and viewing files (<code>ls</code>, <code>cat</code>, <code>less</code>)</li>
+<li>Understanding the Linux directory structure</li>
+<li>Working with paths (absolute vs relative)</li>
+</ul>
+<p>The terminal is your spaceship, and you've just learned the controls. Time to explore the galaxy!</p>
+<hr />
+<details class="question">
+<summary>Quick Quiz: Test Your Terminal Knowledge!</summary>
+<ol>
+<li>What's the difference between a shell and a terminal emulator?</li>
+<li>What key do you press to auto-complete a command or filename?</li>
+<li>How do you run the previous command again?</li>
+<li>What does Ctrl+C do?</li>
+<li>In <code>ls -la /home</code>, which part is the option and which is the argument?</li>
+</ol>
+</details>
+<details class="note">
+<summary>Quiz Answers</summary>
+<ol>
+<li>The shell interprets commands (Bash, Zsh); the terminal emulator is the window that displays the shell</li>
+<li>Tab key</li>
+<li>Press Up Arrow and Enter, or type <code>!!</code> and Enter</li>
+<li>Cancels/kills the current command</li>
+<li><code>-la</code> is the option(s), <code>/home</code> is the argument</li>
+</ol>
+</details>
 
 
 
 
 
 
+
+  
+  
 
 
 
