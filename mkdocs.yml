@@ -3,7 +3,7 @@ site_description: A comprehensive 15-week course teaching high school students L
 site_author: Dan McCreary
 repo_name: 'GitHub Repo'
 site_url: 'https://dmccreary.github.io/learning-linux/'
-repo_url: 'https://github.com/dmccreary/learniing-linux'
+repo_url: 'https://github.com/dmccreary/learning-linux'
 edit_uri: 'blob/master/docs'
 
 nav:
@@ -47,7 +47,9 @@ nav:
     - Intelligent Textbooks: supplementary-content/intelligent-textbook.md
 
   - MicroSims:
+    - List of Microsims: sims/index.md
     - Learning Graph Viewer: sims/graph-viewer/index.md
+    - Unix Family Tree: sims/unix-family-tree/index.md
   
   - Learning Graph:
     - Introduction: learning-graph/index.md
@@ -101,12 +103,11 @@ plugins:
   - social_override
   
 markdown_extensions:
-  - md_in_html
-  - attr_list
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-  
+  - attr_list
+  - md_in_html
   - pymdownx.highlight:
       linenums: true
   - pymdownx.arithmatex:
@@ -116,10 +117,10 @@ markdown_extensions:
   - tables
 
 extra_css:
-    - styles/extra.css
+    - css/extra.css
 
 extra_javascript:
-    - js/extra.css
+    - js/extra.js
 
 copyright: Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
 

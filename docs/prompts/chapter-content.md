@@ -27,10 +27,45 @@
     Log your progress on this session to logs/ch-04.md
     Do not add spaces or tabs inside the <details> elements.
 
-    !!! prompt
-        Use the chapter-content-generator skill to write chapter 5 @docs/chapters/05-file-operations/index.md
-        Maintain a fun informal tone as though you are having a conversation with a high-school student that is curious about Linux.
-        Feel free to and puns and jokes to break up the text.
-        Make the text compelling and encouraging people to take the journey to become a master of Linux.
-        Log your progress on this session to logs/ch-05.md
-        Do not add spaces or tabs inside the <details> elements.
+!!! prompt
+    Use the chapter-content-generator skill to write chapter 5 @docs/chapters/05-file-operations/index.md
+    Maintain a fun informal tone as though you are having a conversation with a high-school student that is curious about Linux.
+    Feel free to and puns and jokes to break up the text.
+    Make the text compelling and encouraging people to take the journey to become a master of Linux.
+    Log your progress on this session to logs/ch-05.md
+    Do not add spaces or tabs inside the <details> elements.
+
+
+!!! prompt
+    Use the chapter-content-generator skill to write chapter 6 @docs/chapters/06-advanced-files/index.md
+    Maintain a fun informal tone as though you are having a conversation with a high-school student that is curious about Linux.
+    Feel free to and puns and jokes to break up the text.
+    Make the text compelling and encouraging people to take the journey to become a master of Linux.
+    Log your progress on this session to logs/ch-06.md
+    Do not add spaces or tabs inside the <details> elements.
+
+
+!!! prompt
+    Use the chapter-content-generator skill to write chapter 7 @docs/chapters/07-permissions/index.md
+    Maintain a fun informal tone as though you are having a conversation with a high-school student that is curious about Linux.
+    Feel free to and puns and jokes to break up the text.
+    Make the text compelling and encouraging people to take the journey to become a master of Linux.
+    Log your progress on this session to logs/ch-07.md
+    Do not add spaces or tabs at the start of lines inside the <details> elements.
+
+
+!!! prompt
+    Use the chapter-content-generator skill to write chapter 8 @docs/chapters/08-grep-regex/index.md
+    Maintain a fun informal tone as though you are having a conversation with a high-school student that is curious about Linux.
+    Feel free to and puns and jokes to break up the text.
+    Make the text compelling and encouraging people to take the journey to become a master of Linux.
+    Log your progress on this session to logs/ch-08.md
+    Do not add spaces or tabs at the start of lines inside the <details> elements.
+
+
+Use the chapter-content-generator skill to write chapter 9 @docs/chapters/09-sed-awk-pipes/index.md
+    Maintain a fun informal tone as though you are having a conversation with a high-school student that is curious about Linux.
+    Feel free to and puns and jokes to break up the text.
+    Make the text compelling and encouraging people to take the journey to become a master of Linux.
+    Log your progress on this session to logs/ch-09.md
+    Do not add spaces or tabs at the start of lines inside the <details> elements.

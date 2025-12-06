@@ -96,6 +96,16 @@ This is the top of the tree—the ultimate parent directory that contains everyt
 └── ...             ← Many more directories
 ```
 
+!!! tip "The `tree` Command: Your Documentation Best Friend"
+    The diagram above was created using the `tree` command! While `tree` isn't built into Linux by default, it's incredibly handy for visualizing directory structures. Install it with `sudo apt install tree` (or `brew install tree` on macOS).
+
+    It's especially useful for creating documentation in GitHub README.md files—just run `tree -L 2` to show two levels of your project structure, copy the output, and paste it into your README inside a code block. Your future self (and collaborators) will thank you!
+
+    ```bash
+    # Generate a project structure for documentation
+    tree -L 2 --dirsfirst > project-structure.txt
+    ```
+
 !!! note "Root Directory vs Root User"
     Don't confuse them! The **root directory** (`/`) is the top of the file system. The **root user** is the administrator account. They share a name because root user's home directory is `/root` (a directory INSIDE the root directory). Confusing? A little. Just remember: `/` = file system top, `root` = admin user.
 

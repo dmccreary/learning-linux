@@ -82,6 +82,9 @@ Yes, you read that right. One of the most important pieces of software in human 
 
 #### Diagram: UNIX Family Tree
 
+<iframe src="/../sims/unix-family-tree/main.html" width="100%" height="600px" scrolling="no"></iframe>
+[View the UNIX family tree Full Screen](../../sims/unix-family-tree/main.html)
+
 <details markdown="1">
     <summary>UNIX Family Tree</summary>
     Type: timeline
