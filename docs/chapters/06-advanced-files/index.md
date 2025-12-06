@@ -229,6 +229,7 @@ ln -sv source.txt link.txt
 
 !!! warning "Hard Link Limitations"
     Hard links have restrictions:
+    
     - Can't link to directories (prevents infinite loops)
     - Can't cross filesystem boundaries (different partitions)
     - Only work within the same filesystem
