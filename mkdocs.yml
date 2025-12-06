@@ -1,1 +1,53 @@
-site_name: My Docs
+site_name: Learning Linux
+site_description: A comprehensive 15-week course teaching high school students Linux fundamentals
+site_author: Dan McCreary
+
+nav:
+  - Home: index.md
+  - Course Description: course-description.md
+  - Learning Graph:
+    - Introduction: learning-graph/index.md
+    - Concept List: learning-graph/concept-list.md
+    - Concept Taxonomy: learning-graph/concept-taxonomy.md
+    - Quality Metrics: learning-graph/quality-metrics.md
+    - Taxonomy Distribution: learning-graph/taxonomy-distribution.md
+  - MicroSims:
+    - Learning Graph Viewer: sims/graph-viewer/index.md
+  - Supplementary Content:
+    - Low Cost Raspberry Pi: supplementary-content/low-cost-raspberry-pd.md
+    - Raspberry Pi 500+: supplementary-content/raspberry-pi-500-plus-impact.md
+    - Claude Code Skills: supplementary-content/claude-code-skills.md
+    - Intelligent Textbooks: supplementary-content/intelligent-textbook.md
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html

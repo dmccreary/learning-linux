@@ -1,3 +1,8 @@
+---
+title: Learning Linux
+description: A 15-week course on Linux for high-school students
+quality_score: 91
+---
 # Learning Linux Course Description
 
 **Title:** Learning Linux<br/>
@@ -8,7 +13,7 @@
 ## Prerequisites
 
 - Students must have strong typing skills including the use of the copy/cut and paste commands.
-- Students should have access to a Linux terminal shell.  Any of the following is acceptable
+- Students should have access to a Linux terminal shell.  Any of the following is acceptable:
     - Mac Terminal
     - Windows Windows System for Linux (WSL)
     - Chromebook in developer mode
