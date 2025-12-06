@@ -1,8 +1,10 @@
-# Terminal Customization and Fun
+# Automation
 
 ## Summary
 
-This chapter explores the fun side of Linux! Learn to customize your terminal with colorful prompts using PS1 and ANSI color codes, display system information with neofetch, and discover classic Linux easter eggs like cowsay, figlet, and the infamous sl command. A personalized terminal makes daily work more enjoyable.
+This chapter explores ways we can use Linux to Automate our world.
+
+ Learn to customize your terminal with colorful prompts using PS1 and ANSI color codes, display system information with neofetch, and discover classic Linux easter eggs like cowsay, figlet, and the infamous sl command. A personalized terminal makes daily work more enjoyable.
 
 ## Concepts Covered
 

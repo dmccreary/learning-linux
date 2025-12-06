@@ -190,3 +190,79 @@ Use the chapter-content-generator skill to write chapter 14 @docs/chapters/13-pa
     The tone should be enthusiastic and fun.  You can use your linux knowledge to 
     do many creative fun DIY projects at school or around your home.
     Please go into detail about how the Pi 5 has an entirely new chip dedicated to moving data around without bothering the CPU.  This chip has made the old anemic Pi 4 pale in comparison.  Note that a $300 Raspberry Pi 500+ with 16GB RAM is a replacement for even powerful desktop system.  Note that a great I/O chip makes even old CPUs look great!
+
+## 20 GPIO and IOT
+
+Use the chapter-content-generator skill to write chapter 20 @docs/chapters/20-gpio-iot/index.md
+    Maintain a fun informal tone as though you are having a conversation with a high-school student that is curious about Linux.
+    Feel free to and puns and jokes to break up the text.
+    Make the text compelling and encouraging people to take the journey to become a master of Linux.
+    Log your progress on this session to logs/ch-20.md
+    Do not add spaces or tabs at the start of lines inside the <details> elements.
+    Describe the Thonny IDE that comes built-in to the Raspberry Pi OS.
+    Rave about how fun MicroPython is to program.
+    Mention the other intelligent textbooks:
+    https://dmccreary.github.io/learning-micropython/ - Using Thonny to program in MicroPython
+    https://dmccreary.github.io/moving-rainbow/ - Using Thonny to program LED strips for lights,costumes etc.
+    https://dmccreary.github.io/clocks-and-watches/ - Using Thonny to build your own smart clock and watch
+
+## 21 Cloud Containers
+
+Use the chapter-content-generator skill to write chapter 21 @docs/chapters/21-cloud-containers/index.md
+    Maintain a fun informal tone as though you are having a conversation with a high-school student that is curious about Linux.
+    Feel free to and puns and jokes to break up the text.
+    Make the text compelling and encouraging people to take the journey to become a master of Linux.
+    Log your progress on this session to logs/ch-21.md
+    Do not add spaces or tabs at the start of lines inside the <details> elements.
+
+
+## 22  Dev Tools
+
+Use the chapter-content-generator skill to write chapter 22 @docs/chapters/22-dev-tools/index.md
+    Maintain a fun informal tone as though you are having a conversation with a high-school student that is curious about Linux.
+    Feel free to and puns and jokes to break up the text.
+    Make the text compelling and encouraging people to take the journey to become a master of Linux.
+    Log your progress on this session to logs/ch-22.md
+    Do not add spaces or tabs at the start of lines inside the <details> elements.
+
+## 23 System Admin
+
+Use the chapter-content-generator skill to write chapter 23 @docs/chapters/23-sys-admin/index.md
+    Maintain a fun informal tone as though you are having a conversation with a high-school student that is curious about Linux.
+    Feel free to and puns and jokes to break up the text.
+    Make the text compelling and encouraging people to take the journey to become a master of Linux.
+    Log your progress on this session to logs/ch-23.md
+    Do not add spaces or tabs at the start of lines inside the <details> elements.
+    Note that system administration can be a thankless job.  Everyone is quite
+    when things are working OK.  But if one disk gets full, the system breaks everyone will be
+    texting your phone even if it is 3am!  The secret to a great system administrator
+    is to write a lot of tools to monitor resources BEFORE the cause problems.  Trust me on this.
+
+# 24 Automation
+
+Use the chapter-content-generator skill to write chapter 24 @docs/chapters/24-automation/index.md
+    Maintain a fun informal tone as though you are having a conversation with a high-school student that is curious about Linux.
+    Feel free to and puns and jokes to break up the text.
+    Make the text compelling and encouraging people to take the journey to become a master of Linux.
+    Log your progress on this session to logs/ch-24.md
+    Do not add spaces or tabs at the start of lines inside the <details> elements.
+
+
+# 25 Capstone
+
+Use the chapter-content-generator skill to write chapter 25 @docs/chapters/25-capstone/index.md
+    Maintain a fun informal tone as though you are having a conversation with a high-school student that is curious about Linux.
+    Feel free to and puns and jokes to break up the text.
+    Make the text compelling and encouraging people to take the journey to become a master of Linux.
+    Log your progress on this session to logs/ch-25.md
+    Do not add spaces or tabs at the start of lines inside the <details> elements.
+
+# 26 Careers
+
+Use the chapter-content-generator skill to write chapter 26 @docs/chapters/26-careers/index.md
+    Maintain a fun informal tone as though you are having a conversation with a high-school student that is curious about Linux.
+    Feel free to use puns and jokes to break up the text.
+    Make the text compelling and encouraging people to take the journey to become a master of Linux.
+    Log your progress on this session to logs/ch-26.md
+    Do not add spaces or tabs at the start of lines inside the <details> elements.
+
