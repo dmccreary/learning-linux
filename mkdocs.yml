@@ -90,6 +90,11 @@ theme:
     - navigation.footer
     - content.action.edit
 
+plugins:
+  - search
+  - social
+  - social_override
+  
 markdown_extensions:
   - md_in_html
   - attr_list
