@@ -67,25 +67,21 @@ theme:
     - scheme: default
       primary: indigo
       accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
 
 markdown_extensions:
+  - md_in_html
+  - attr_list
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.tabbed:
       alternate_style: true
   - tables
-  - attr_list
-  - md_in_html
 
 extra_css:
     - styles/extra.css
