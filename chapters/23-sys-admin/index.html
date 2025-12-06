@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+        <meta name="description" content="Learn user management, systemd services, boot processes, display and audio configuration, terminal multiplexers, and encryption">
       
       
         <meta name="author" content="Dan McCreary">
@@ -18,7 +18,7 @@
         <link rel="prev" href="../22-dev-tools/">
       
       
-        <link rel="next" href="../24-customization/">
+        <link rel="next" href="../25-capstone/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -52,7 +52,7 @@
       
     
     
-      <link rel="stylesheet" href="../../styles/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -75,7 +75,7 @@
       
         <meta  property="og:title"  content="System Administration Essentials - Learning Linux" >
       
-        <meta  property="og:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  property="og:description"  content="Learn user management, systemd services, boot processes, display and audio configuration, terminal multiplexers, and encryption" >
       
         <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/23-sys-admin/index.png" >
       
@@ -91,7 +91,7 @@
       
         <meta  name="twitter:title"  content="System Administration Essentials - Learning Linux" >
       
-        <meta  name="twitter:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  name="twitter:description"  content="Learn user management, systemd services, boot processes, display and audio configuration, terminal multiplexers, and encryption" >
       
         <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/23-sys-admin/index.png" >
       
@@ -214,7 +214,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -259,7 +259,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -439,8 +439,6 @@
           
         
       
-        
-          
         
       
         
@@ -1032,6 +1030,618 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-world-of-system-administration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the World of System Administration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-management-youre-the-bouncer-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Management: You're the Bouncer Now
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Management: You're the Bouncer Now">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-users-with-useradd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Users with useradd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-users-with-usermod" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifying Users with usermod
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-users-with-userdel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing Users with userdel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Removing Users with userdel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-user-lifecycle-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: User Lifecycle Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-management-the-vip-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group Management: The VIP Sections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password-management-with-passwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password Management with passwd
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Password Management with passwd">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-password-and-user-database-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Password and User Database Files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-services-keeping-the-gears-turning" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Services: Keeping the Gears Turning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Services: Keeping the Gears Turning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-systemctl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding systemctl
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-service-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking Service Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-and-stopping-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting and Stopping Services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Starting and Stopping Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-systemd-service-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Systemd Service Lifecycle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-all-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing All Services
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-boot-process-from-power-button-to-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Boot Process: From Power Button to Login
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Boot Process: From Power Button to Login">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boot-sequence-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boot Sequence Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boot Sequence Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-linux-boot-process-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Linux Boot Process Timeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemd-targets-modern-runlevels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systemd Targets (Modern Runlevels)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shutdown-and-reboot-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shutdown and Reboot Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-configuration-making-things-look-good" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display Configuration: Making Things Look Good
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Display Configuration: Making Things Look Good">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hdmi-output-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      HDMI Output Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-display-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Display Resolution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-displays-double-the-fun" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Displays: Double the Fun
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple Displays: Double the Fun">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-multiple-display-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Multiple Display Configurations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminal-multiplexers-screen-and-tmux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal Multiplexers: Screen and Tmux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Terminal Multiplexers: Screen and Tmux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-screen-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The screen Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-tmux-multiplexer" class="md-nav__link">
+    <span class="md-ellipsis">
+      The tmux Multiplexer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The tmux Multiplexer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-terminal-multiplexer-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Terminal Multiplexer Concept
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio-configuration-making-your-pi-sing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audio Configuration: Making Your Pi Sing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Audio Configuration: Making Your Pi Sing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-linux-audio-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Linux Audio Stack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alsa-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      ALSA Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pulseaudio-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      PulseAudio Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PulseAudio Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-linux-audio-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Linux Audio Stack
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-audio-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Audio Output
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-audio-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      USB Audio Devices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bluetooth-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bluetooth Audio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sound Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audio Troubleshooting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-encryption-with-gpg" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Encryption with GPG
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Encryption with GPG">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gpg-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      GPG Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encrypting-and-decrypting-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encrypting and Decrypting Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signing-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signing Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Signing Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-gpg-encryption-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: GPG Encryption Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-resources-the-secret-to-sysadmin-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring Resources: The Secret to Sysadmin Success
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring Resources: The Secret to Sysadmin Success">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-things-to-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Things to Monitor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-monitoring-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Monitoring Scripts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-health-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Health Checks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Health Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-system-health-dashboard-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: System Health Dashboard Concept
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-a-day-in-the-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: A Day in the Life
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together: A Day in the Life">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-new-user-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 1: New User Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-service-wont-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 2: Service Won't Start
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-setting-up-a-presentation-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 3: Setting Up a Presentation Display
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-audio-for-a-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 4: Audio for a Demo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice Exercises
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1048,7 +1658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../24-customization/" class="md-nav__link">
+      <a href="../24-customization/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,6 +1783,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1186,7 +1804,7 @@
         
   
   
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1424,6 +2042,618 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-world-of-system-administration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the World of System Administration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-management-youre-the-bouncer-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Management: You're the Bouncer Now
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Management: You're the Bouncer Now">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-users-with-useradd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Users with useradd
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-users-with-usermod" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifying Users with usermod
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-users-with-userdel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing Users with userdel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Removing Users with userdel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-user-lifecycle-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: User Lifecycle Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-management-the-vip-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group Management: The VIP Sections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password-management-with-passwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password Management with passwd
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Password Management with passwd">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-password-and-user-database-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Password and User Database Files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-services-keeping-the-gears-turning" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Services: Keeping the Gears Turning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Services: Keeping the Gears Turning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-systemctl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding systemctl
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-service-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking Service Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-and-stopping-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting and Stopping Services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Starting and Stopping Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-systemd-service-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Systemd Service Lifecycle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-all-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing All Services
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-boot-process-from-power-button-to-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Boot Process: From Power Button to Login
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Boot Process: From Power Button to Login">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boot-sequence-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boot Sequence Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boot Sequence Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-linux-boot-process-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Linux Boot Process Timeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemd-targets-modern-runlevels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systemd Targets (Modern Runlevels)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shutdown-and-reboot-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shutdown and Reboot Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-configuration-making-things-look-good" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display Configuration: Making Things Look Good
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Display Configuration: Making Things Look Good">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hdmi-output-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      HDMI Output Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-display-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Display Resolution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-displays-double-the-fun" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Displays: Double the Fun
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple Displays: Double the Fun">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-multiple-display-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Multiple Display Configurations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminal-multiplexers-screen-and-tmux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal Multiplexers: Screen and Tmux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Terminal Multiplexers: Screen and Tmux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-screen-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The screen Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-tmux-multiplexer" class="md-nav__link">
+    <span class="md-ellipsis">
+      The tmux Multiplexer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The tmux Multiplexer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-terminal-multiplexer-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Terminal Multiplexer Concept
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio-configuration-making-your-pi-sing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audio Configuration: Making Your Pi Sing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Audio Configuration: Making Your Pi Sing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-linux-audio-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Linux Audio Stack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alsa-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      ALSA Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pulseaudio-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      PulseAudio Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PulseAudio Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-linux-audio-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Linux Audio Stack
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-audio-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Audio Output
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-audio-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      USB Audio Devices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bluetooth-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bluetooth Audio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sound Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audio Troubleshooting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-encryption-with-gpg" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Encryption with GPG
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Encryption with GPG">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gpg-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      GPG Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encrypting-and-decrypting-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encrypting and Decrypting Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signing-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signing Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Signing Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-gpg-encryption-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: GPG Encryption Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-resources-the-secret-to-sysadmin-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring Resources: The Secret to Sysadmin Success
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring Resources: The Secret to Sysadmin Success">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-things-to-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Things to Monitor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-monitoring-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Monitoring Scripts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-health-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Health Checks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Health Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-system-health-dashboard-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: System Health Dashboard Concept
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-a-day-in-the-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: A Day in the Life
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together: A Day in the Life">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-new-user-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 1: New User Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-service-wont-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 2: Service Won't Start
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-setting-up-a-presentation-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 3: Setting Up a Presentation Display
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-audio-for-a-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 4: Audio for a Demo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice Exercises
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1439,7 +2669,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/learniing-linux/blob/master/docs/chapters/23-sys-admin/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/learning-linux/blob/master/docs/chapters/23-sys-admin/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1451,7 +2681,7 @@
 <h2 id="summary">Summary</h2>
 <p>This chapter covers essential system administration tasks. You'll learn user and group management, controlling system services with systemd, understanding the boot process, and configuring displays and audio. These skills prepare you for managing Linux systems in both personal and professional environments.</p>
 <h2 id="concepts-covered">Concepts Covered</h2>
-<p>This chapter covers the following 25 concepts from the learning graph:</p>
+<p>This chapter covers the following 32 concepts from the learning graph:</p>
 <ol>
 <li>System Administration</li>
 <li>User Management</li>
@@ -1494,7 +2724,1765 @@
 <li><a href="../14-package-mgmt/">Chapter 14: Package Management</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<h2 id="welcome-to-the-world-of-system-administration">Welcome to the World of System Administration</h2>
+<p>Congratulations! You've made it to the chapter where you get to feel like you're running the show. System administration (or "sysadmin" work, as the cool kids call it) is all about keeping Linux systems running smoothly, managing users, controlling services, and generally being the person everyone calls when something breaks.</p>
+<p>Here's a little secret about being a sysadmin: it's often a thankless job. When everything is working perfectly, nobody notices. Your servers are humming along, users are happy, and you might as well be invisible. But the <em>moment</em> one disk fills up at 3 AM? Your phone will light up like a Christmas tree with panicked messages. The secret to being a <em>great</em> sysadmin is writing tools to monitor your resources <em>before</em> they cause problems. Trust me on this one—proactive monitoring beats emergency firefighting every single time.</p>
+<p>Think of yourself as the wizard behind the curtain, pulling the levers that make the whole system work. Let's learn how to pull those levers effectively!</p>
+<h2 id="user-management-youre-the-bouncer-now">User Management: You're the Bouncer Now</h2>
+<p>One of the most fundamental sysadmin tasks is managing users. Who gets to use the system? What can they access? Can they install software or are they limited to just browsing cat pictures? These are the questions you'll be answering.</p>
+<p>Linux is a multi-user operating system, meaning multiple people can use the same computer (either at different times or even simultaneously over a network). Each user has their own account, home directory, and set of permissions. It's like an apartment building where everyone has their own unit, and you're the building manager.</p>
+<h3 id="creating-users-with-useradd">Creating Users with useradd</h3>
+<p>The <code>useradd</code> command creates new user accounts. Here's the basic syntax:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>useradd<span class="w"> </span>username
+</code></pre></div></td></tr></table></div>
+<p>But wait—that creates a pretty bare-bones account! Let's look at some useful options:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-m</code></td>
+<td>Create home directory</td>
+<td><code>useradd -m alice</code></td>
+</tr>
+<tr>
+<td><code>-s</code></td>
+<td>Set default shell</td>
+<td><code>useradd -s /bin/bash bob</code></td>
+</tr>
+<tr>
+<td><code>-c</code></td>
+<td>Add a comment (usually full name)</td>
+<td><code>useradd -c "Alice Smith" alice</code></td>
+</tr>
+<tr>
+<td><code>-G</code></td>
+<td>Add to additional groups</td>
+<td><code>useradd -G sudo,developers charlie</code></td>
+</tr>
+<tr>
+<td><code>-e</code></td>
+<td>Set account expiration date</td>
+<td><code>useradd -e 2025-12-31 intern</code></td>
+</tr>
+</tbody>
+</table>
+<p>A more complete example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>useradd<span class="w"> </span>-m<span class="w"> </span>-s<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;Alice Smith&quot;</span><span class="w"> </span>-G<span class="w"> </span>developers<span class="w"> </span>alice
+</code></pre></div></td></tr></table></div>
+<p>This creates a user named "alice" with a home directory, bash as her shell, a full name for reference, and membership in the "developers" group. It's like setting up a new tenant with their apartment, mailbox, and building access card all at once!</p>
+<div class="admonition tip">
+<p class="admonition-title">Pro Tip: adduser vs useradd</p>
+<p>On Debian-based systems (including Raspberry Pi OS and Ubuntu), you might also see <code>adduser</code>, which is a friendlier wrapper around <code>useradd</code> that prompts you for information interactively. Both work, but <code>useradd</code> is more portable across different Linux distributions.</p>
+</div>
+<h3 id="modifying-users-with-usermod">Modifying Users with usermod</h3>
+<p>People change, and so do their account requirements. The <code>usermod</code> command lets you modify existing accounts:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Change Alice&#39;s default shell to zsh</span>
+sudo<span class="w"> </span>usermod<span class="w"> </span>-s<span class="w"> </span>/bin/zsh<span class="w"> </span>alice
+
+<span class="c1"># Add Bob to the audio group (without removing his other groups!)</span>
+sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>audio<span class="w"> </span>bob
+
+<span class="c1"># Lock an account (disable login)</span>
+sudo<span class="w"> </span>usermod<span class="w"> </span>-L<span class="w"> </span>troublemaker
+
+<span class="c1"># Unlock an account</span>
+sudo<span class="w"> </span>usermod<span class="w"> </span>-U<span class="w"> </span>forgiven_user
+
+<span class="c1"># Change username (careful with this one!)</span>
+sudo<span class="w"> </span>usermod<span class="w"> </span>-l<span class="w"> </span>newname<span class="w"> </span>oldname
+</code></pre></div></td></tr></table></div>
+<p>The <code>-aG</code> combination is super important! The <code>-a</code> means "append"—without it, using <code>-G</code> would <em>replace</em> all the user's groups with just the one you specified. Many a sysadmin has accidentally removed users from important groups by forgetting that <code>-a</code>. Don't be that sysadmin!</p>
+<h3 id="removing-users-with-userdel">Removing Users with userdel</h3>
+<p>When someone leaves (or when you're cleaning up old accounts), <code>userdel</code> removes user accounts:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Remove user but keep their home directory</span>
+sudo<span class="w"> </span>userdel<span class="w"> </span>alice
+
+<span class="c1"># Remove user AND their home directory (scorched earth approach)</span>
+sudo<span class="w"> </span>userdel<span class="w"> </span>-r<span class="w"> </span>alice
+</code></pre></div></td></tr></table></div>
+<p>The <code>-r</code> flag removes the user's home directory and mail spool. Use this when you're sure you don't need any of their files. If you're not sure, just remove the user and archive their home directory first—better safe than sorry!</p>
+<h4 id="diagram-user-lifecycle-workflow">Diagram: User Lifecycle Workflow</h4>
+<details>
+<summary>User Lifecycle Workflow</summary>
+<p>Type: workflow</p>
+<p>Purpose: Show the complete lifecycle of a user account from creation to deletion</p>
+<p>Bloom Taxonomy: Understand (L2)</p>
+<p>Learning Objective: Students will understand the stages of user account management and which commands are used at each stage</p>
+<p>Visual style: Flowchart with process boxes and decision diamonds</p>
+<p>Steps:
+1. Start: "New Employee/Student Arrives"
+   Hover text: "HR or instructor notifies IT of new user requirement"</p>
+<ol>
+<li>
+<p>Process: "Create Account (useradd -m -s /bin/bash)"
+   Hover text: "Create user with home directory and default shell"</p>
+</li>
+<li>
+<p>Process: "Set Initial Password (passwd username)"
+   Hover text: "Set temporary password, force change on first login"</p>
+</li>
+<li>
+<p>Process: "Add to Groups (usermod -aG)"
+   Hover text: "Grant access to required resources based on role"</p>
+</li>
+<li>
+<p>Process: "User Active Period"
+   Hover text: "User performs regular work, may need group changes"</p>
+</li>
+<li>
+<p>Decision: "Account Changes Needed?"
+   Hover text: "Role change, department transfer, or access request"</p>
+</li>
+</ol>
+<p>7a. Process: "Modify Account (usermod)"
+   Hover text: "Update shell, groups, or other settings"
+   Loops back to "User Active Period"</p>
+<p>7b. Process: "No Changes - Continue"
+   Loops back to "User Active Period"</p>
+<ol>
+<li>
+<p>Decision: "User Leaving?"
+   Hover text: "Employee departure, student graduation, or account cleanup"</p>
+</li>
+<li>
+<p>Process: "Lock Account (usermod -L)"
+   Hover text: "Immediately prevent login while preserving data"</p>
+</li>
+<li>
+<p>Process: "Archive Home Directory"
+    Hover text: "Backup user's files before deletion"</p>
+</li>
+<li>
+<p>Process: "Delete Account (userdel -r)"
+    Hover text: "Remove user and their files from system"</p>
+</li>
+<li>
+<p>End: "Account Removed"</p>
+</li>
+</ol>
+<p>Color coding:
+- Green: Creation steps
+- Blue: Modification/maintenance steps
+- Yellow: Decision points
+- Red: Removal steps</p>
+<p>Implementation: Mermaid flowchart or HTML/CSS/JS workflow diagram</p>
+</details>
+<h3 id="group-management-the-vip-sections">Group Management: The VIP Sections</h3>
+<p>Groups are like VIP sections in a club—they let you control who has access to what. Instead of setting permissions for each user individually (nightmare!), you can add users to groups and set permissions for the whole group.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create a new group</span>
+sudo<span class="w"> </span>groupadd<span class="w"> </span>developers
+
+<span class="c1"># Create a group with a specific GID (group ID)</span>
+sudo<span class="w"> </span>groupadd<span class="w"> </span>-g<span class="w"> </span><span class="m">1500</span><span class="w"> </span>scientists
+
+<span class="c1"># Delete a group</span>
+sudo<span class="w"> </span>groupdel<span class="w"> </span>oldgroup
+
+<span class="c1"># See what groups a user belongs to</span>
+groups<span class="w"> </span>alice
+
+<span class="c1"># See all groups on the system</span>
+cat<span class="w"> </span>/etc/group
+</code></pre></div></td></tr></table></div>
+<p>Common system groups you'll encounter:</p>
+<ul>
+<li><strong>sudo</strong> or <strong>wheel</strong>: Can run commands as root</li>
+<li><strong>audio</strong>: Can access sound devices</li>
+<li><strong>video</strong>: Can access video/graphics devices</li>
+<li><strong>plugdev</strong>: Can mount removable devices</li>
+<li><strong>docker</strong>: Can run Docker containers without sudo</li>
+<li><strong>gpio</strong>: Can access GPIO pins (important for Raspberry Pi projects!)</li>
+</ul>
+<h3 id="password-management-with-passwd">Password Management with passwd</h3>
+<p>The <code>passwd</code> command manages passwords. It's simple but crucial:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Change your own password</span>
+passwd
+
+<span class="c1"># Change another user&#39;s password (requires sudo)</span>
+sudo<span class="w"> </span>passwd<span class="w"> </span>alice
+
+<span class="c1"># Force user to change password at next login</span>
+sudo<span class="w"> </span>passwd<span class="w"> </span>-e<span class="w"> </span>alice
+
+<span class="c1"># Lock an account&#39;s password (alternative to usermod -L)</span>
+sudo<span class="w"> </span>passwd<span class="w"> </span>-l<span class="w"> </span>troublemaker
+
+<span class="c1"># Unlock an account&#39;s password</span>
+sudo<span class="w"> </span>passwd<span class="w"> </span>-u<span class="w"> </span>reformed_user
+
+<span class="c1"># Check password status</span>
+sudo<span class="w"> </span>passwd<span class="w"> </span>-S<span class="w"> </span>alice
+</code></pre></div></td></tr></table></div>
+<p>The password status output looks like:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>alice P 2025-01-15 0 99999 7 -1
+</code></pre></div></td></tr></table></div>
+<p>This tells you the username, status (P=password set, L=locked, NP=no password), last change date, and various aging parameters.</p>
+<h4 id="diagram-password-and-user-database-files">Diagram: Password and User Database Files</h4>
+<details>
+<summary>Password and User Database Structure</summary>
+<p>Type: diagram</p>
+<p>Purpose: Show how user and password information is stored in Linux system files</p>
+<p>Bloom Taxonomy: Understand (L2)</p>
+<p>Learning Objective: Students will understand the relationship between /etc/passwd, /etc/shadow, and /etc/group files</p>
+<p>Components to show:
+- /etc/passwd file with sample entries showing: username:x:UID:GID:comment:home:shell
+- /etc/shadow file (password hashes, accessible only by root)
+- /etc/group file showing group memberships
+- Arrows showing relationships between files</p>
+<p>Sample data:
+- /etc/passwd line: alice:x:1001:1001:Alice Smith:/home/alice:/bin/bash
+- /etc/shadow line: alice:<span class="arithmatex">\(6\)</span>hashed...:19403:0:99999:7:::
+- /etc/group line: developers:x:1500:alice,bob,charlie</p>
+<p>Labels:
+- "x placeholder - actual hash in shadow"
+- "UID: User ID number"
+- "GID: Primary Group ID"
+- "Permissions: 644 (passwd) vs 640 (shadow)"</p>
+<p>Color scheme: Blue for passwd, orange for shadow (protected), green for group</p>
+<p>Style: Block diagram with file representations and connecting arrows</p>
+<p>Implementation: HTML/CSS diagram or p5.js visualization</p>
+</details>
+<h2 id="system-services-keeping-the-gears-turning">System Services: Keeping the Gears Turning</h2>
+<p>Services (also called daemons) are programs that run in the background, doing important work without requiring user interaction. Your web server, database, SSH daemon, and even the thing that keeps your clock synchronized—all services.</p>
+<p>Modern Linux systems use <strong>systemd</strong> to manage services. (Some old-school Linux folks grumble about systemd replacing the older init system, but it's now the standard on most distributions, so let's embrace it!)</p>
+<h3 id="understanding-systemctl">Understanding systemctl</h3>
+<p>The <code>systemctl</code> command is your main tool for managing services. It's like a universal remote control for all the background processes on your system.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check status of a service</span>
+systemctl<span class="w"> </span>status<span class="w"> </span>ssh
+
+<span class="c1"># Start a service</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>apache2
+
+<span class="c1"># Stop a service</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>apache2
+
+<span class="c1"># Restart a service (stop then start)</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+
+<span class="c1"># Reload configuration without full restart</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>apache2
+
+<span class="c1"># Enable service to start automatically at boot</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>ssh
+
+<span class="c1"># Disable automatic start at boot</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>bluetooth
+
+<span class="c1"># Check if a service is enabled</span>
+systemctl<span class="w"> </span>is-enabled<span class="w"> </span>ssh
+</code></pre></div></td></tr></table></div>
+<h3 id="checking-service-status">Checking Service Status</h3>
+<p>The <code>systemctl status</code> command gives you a wealth of information:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>$<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>ssh
+●<span class="w"> </span>ssh.service<span class="w"> </span>-<span class="w"> </span>OpenBSD<span class="w"> </span>Secure<span class="w"> </span>Shell<span class="w"> </span>server
+<span class="w">     </span>Loaded:<span class="w"> </span>loaded<span class="w"> </span><span class="o">(</span>/lib/systemd/system/ssh.service<span class="p">;</span><span class="w"> </span>enabled<span class="p">;</span><span class="w"> </span>vendor<span class="w"> </span>preset:<span class="w"> </span>enabled<span class="o">)</span>
+<span class="w">     </span>Active:<span class="w"> </span>active<span class="w"> </span><span class="o">(</span>running<span class="o">)</span><span class="w"> </span>since<span class="w"> </span>Mon<span class="w"> </span><span class="m">2025</span>-01-15<span class="w"> </span><span class="m">09</span>:23:45<span class="w"> </span>UTC<span class="p">;</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>days<span class="w"> </span>ago
+<span class="w">       </span>Docs:<span class="w"> </span>man:sshd<span class="o">(</span><span class="m">8</span><span class="o">)</span>
+<span class="w">             </span>man:sshd_config<span class="o">(</span><span class="m">5</span><span class="o">)</span>
+<span class="w">   </span>Main<span class="w"> </span>PID:<span class="w"> </span><span class="m">847</span><span class="w"> </span><span class="o">(</span>sshd<span class="o">)</span>
+<span class="w">      </span>Tasks:<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>limit:<span class="w"> </span><span class="m">4915</span><span class="o">)</span>
+<span class="w">     </span>Memory:<span class="w"> </span><span class="m">5</span>.3M
+<span class="w">        </span>CPU:<span class="w"> </span><span class="m">1</span>.234s
+<span class="w">     </span>CGroup:<span class="w"> </span>/system.slice/ssh.service
+<span class="w">             </span>└─847<span class="w"> </span>sshd:<span class="w"> </span>/usr/sbin/sshd<span class="w"> </span>-D<span class="w"> </span><span class="o">[</span>listener<span class="o">]</span><span class="w"> </span><span class="m">0</span><span class="w"> </span>of<span class="w"> </span><span class="m">10</span>-100<span class="w"> </span>startups
+</code></pre></div></td></tr></table></div>
+<p>Let's decode this:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Loaded</td>
+<td>Service file found and loaded; "enabled" means starts at boot</td>
+</tr>
+<tr>
+<td>Active</td>
+<td>Current state: active (running), inactive (stopped), failed</td>
+</tr>
+<tr>
+<td>Main PID</td>
+<td>Process ID of the main service process</td>
+</tr>
+<tr>
+<td>Tasks</td>
+<td>Number of processes/threads spawned</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>RAM currently used</td>
+</tr>
+<tr>
+<td>CGroup</td>
+<td>Control group containing the service's processes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="starting-and-stopping-services">Starting and Stopping Services</h3>
+<p>Here's a handy reference table:</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Command</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start</td>
+<td><code>sudo systemctl start service</code></td>
+<td>Service is stopped and you need it running</td>
+</tr>
+<tr>
+<td>Stop</td>
+<td><code>sudo systemctl stop service</code></td>
+<td>Need to halt a service temporarily</td>
+</tr>
+<tr>
+<td>Restart</td>
+<td><code>sudo systemctl restart service</code></td>
+<td>Apply configuration changes (causes brief downtime)</td>
+</tr>
+<tr>
+<td>Reload</td>
+<td><code>sudo systemctl reload service</code></td>
+<td>Apply config changes without restart (if supported)</td>
+</tr>
+<tr>
+<td>Enable</td>
+<td><code>sudo systemctl enable service</code></td>
+<td>Service should start automatically at boot</td>
+</tr>
+<tr>
+<td>Disable</td>
+<td><code>sudo systemctl disable service</code></td>
+<td>Prevent automatic start at boot</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Be Careful What You Stop!</p>
+<p>Stopping critical services like <code>ssh</code> while connected remotely is a great way to lock yourself out. Always have a backup way to access the system (physical access, console, etc.) before stopping network services!</p>
+</div>
+<h4 id="diagram-systemd-service-lifecycle">Diagram: Systemd Service Lifecycle</h4>
+<details>
+<summary>Systemd Service States and Transitions</summary>
+<p>Type: graph-model</p>
+<p>Purpose: Show the different states a systemd service can be in and how it transitions between them</p>
+<p>Bloom Taxonomy: Analyze (L4)</p>
+<p>Learning Objective: Students will analyze how services move between different states and understand which commands trigger each transition</p>
+<p>Node types:
+1. Inactive (gray circle)
+   - Service is not running
+   - Initial state for disabled services</p>
+<ol>
+<li>Activating (yellow circle)</li>
+<li>Service is in the process of starting</li>
+<li>
+<p>Transient state</p>
+</li>
+<li>
+<p>Active (green circle)</p>
+</li>
+<li>Service is running normally</li>
+<li>
+<p>Goal state for most services</p>
+</li>
+<li>
+<p>Deactivating (orange circle)</p>
+</li>
+<li>Service is shutting down</li>
+<li>
+<p>Transient state</p>
+</li>
+<li>
+<p>Failed (red circle)</p>
+</li>
+<li>Service attempted to start but crashed</li>
+<li>
+<p>Requires investigation</p>
+</li>
+<li>
+<p>Reloading (blue circle)</p>
+</li>
+<li>Service is reloading configuration</li>
+<li>Brief transient state</li>
+</ol>
+<p>Edge types (labeled arrows):
+- "start" from Inactive to Activating
+- "started successfully" from Activating to Active
+- "start failed" from Activating to Failed
+- "stop" from Active to Deactivating
+- "stopped" from Deactivating to Inactive
+- "reload" from Active to Reloading (loops back to Active)
+- "restart" from Active through Deactivating to Activating
+- "reset-failed" from Failed to Inactive</p>
+<p>Layout: Circular arrangement with Active in center</p>
+<p>Interactive features:
+- Hover over nodes to see description of state
+- Click edges to see the systemctl command that triggers transition
+- Highlight current state based on demo service</p>
+<p>Implementation: vis-network JavaScript library</p>
+</details>
+<h3 id="listing-all-services">Listing All Services</h3>
+<p>To see what's running on your system:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># List all active services</span>
+systemctl<span class="w"> </span>list-units<span class="w"> </span>--type<span class="o">=</span>service<span class="w"> </span>--state<span class="o">=</span>active
+
+<span class="c1"># List all services (including inactive)</span>
+systemctl<span class="w"> </span>list-units<span class="w"> </span>--type<span class="o">=</span>service<span class="w"> </span>--all
+
+<span class="c1"># List failed services (great for troubleshooting!)</span>
+systemctl<span class="w"> </span>list-units<span class="w"> </span>--type<span class="o">=</span>service<span class="w"> </span>--state<span class="o">=</span>failed
+
+<span class="c1"># List enabled services (what starts at boot)</span>
+systemctl<span class="w"> </span>list-unit-files<span class="w"> </span>--type<span class="o">=</span>service<span class="w"> </span>--state<span class="o">=</span>enabled
+</code></pre></div></td></tr></table></div>
+<h2 id="the-boot-process-from-power-button-to-login">The Boot Process: From Power Button to Login</h2>
+<p>Ever wonder what happens between pressing the power button and seeing your login screen? Understanding the boot process helps you troubleshoot when things go wrong and optimize startup time.</p>
+<h3 id="boot-sequence-overview">Boot Sequence Overview</h3>
+<p>Here's the journey your computer takes every time it starts:</p>
+<ol>
+<li><strong>BIOS/UEFI</strong>: The firmware built into your motherboard initializes hardware and looks for a bootloader</li>
+<li><strong>Bootloader (GRUB)</strong>: Loads the Linux kernel into memory</li>
+<li><strong>Kernel</strong>: The core of Linux initializes, detects hardware, mounts the root filesystem</li>
+<li><strong>systemd (PID 1)</strong>: The first user-space process, orchestrates everything else</li>
+<li><strong>Target/Services</strong>: systemd starts services based on the "target" (runlevel)</li>
+<li><strong>Login</strong>: Display manager or console login appears</li>
+</ol>
+<h4 id="diagram-linux-boot-process-timeline">Diagram: Linux Boot Process Timeline</h4>
+<details>
+<summary>Linux Boot Process Timeline</summary>
+<p>Type: timeline</p>
+<p>Purpose: Show the chronological sequence of events during Linux boot</p>
+<p>Time period: 0 seconds (power on) to ~30 seconds (login prompt)</p>
+<p>Bloom Taxonomy: Remember (L1)</p>
+<p>Learning Objective: Students will recall the sequence of events in the Linux boot process</p>
+<p>Orientation: Horizontal</p>
+<p>Events:
+- 0s: Power On - Hardware receives electricity
+- 0-2s: BIOS/UEFI - Firmware initializes CPU, RAM, basic hardware
+- 2-3s: POST (Power-On Self-Test) - Hardware verification
+- 3-4s: Bootloader (GRUB) - Loads kernel and initial ramdisk
+- 4-6s: Kernel Loading - Kernel decompresses and initializes
+- 6-8s: Hardware Detection - Kernel probes for devices
+- 8-10s: Root Mount - Root filesystem mounted
+- 10-12s: systemd Starts - PID 1 begins orchestration
+- 12-20s: Services Starting - Parallel service activation
+- 20-25s: Display Manager - Graphical login loads (if enabled)
+- 25-30s: Login Ready - System ready for user</p>
+<p>Visual style: Horizontal timeline with alternating above/below placement</p>
+<p>Color coding:
+- Purple: Firmware phase (BIOS/UEFI)
+- Blue: Bootloader phase
+- Green: Kernel phase
+- Orange: systemd phase
+- Yellow: Ready state</p>
+<p>Interactive features:
+- Hover to see detailed description
+- Click to expand with technical details</p>
+<p>Implementation: vis-timeline or custom HTML/CSS/JS timeline</p>
+</details>
+<h3 id="systemd-targets-modern-runlevels">Systemd Targets (Modern Runlevels)</h3>
+<p>Systemd uses "targets" to define system states. These are like checkpoints that group related services:</p>
+<table>
+<thead>
+<tr>
+<th>Target</th>
+<th>Purpose</th>
+<th>Old Runlevel Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>poweroff.target</td>
+<td>Shut down system</td>
+<td>0</td>
+</tr>
+<tr>
+<td>rescue.target</td>
+<td>Single-user mode, minimal services</td>
+<td>1</td>
+</tr>
+<tr>
+<td>multi-user.target</td>
+<td>Text-mode, multi-user, networking</td>
+<td>3</td>
+</tr>
+<tr>
+<td>graphical.target</td>
+<td>Full graphical desktop</td>
+<td>5</td>
+</tr>
+<tr>
+<td>reboot.target</td>
+<td>Reboot the system</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See current target</span>
+systemctl<span class="w"> </span>get-default
+
+<span class="c1"># Change default target (e.g., boot to text mode)</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>set-default<span class="w"> </span>multi-user.target
+
+<span class="c1"># Switch to a different target now</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>isolate<span class="w"> </span>rescue.target
+</code></pre></div></td></tr></table></div>
+<h3 id="shutdown-and-reboot-commands">Shutdown and Reboot Commands</h3>
+<p>The proper ways to shut down or restart your system:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Shut down immediately</span>
+sudo<span class="w"> </span>shutdown<span class="w"> </span>now
+
+<span class="c1"># Shut down in 10 minutes</span>
+sudo<span class="w"> </span>shutdown<span class="w"> </span>+10
+
+<span class="c1"># Shut down at a specific time</span>
+sudo<span class="w"> </span>shutdown<span class="w"> </span><span class="m">23</span>:00
+
+<span class="c1"># Cancel a pending shutdown</span>
+sudo<span class="w"> </span>shutdown<span class="w"> </span>-c
+
+<span class="c1"># Reboot immediately</span>
+sudo<span class="w"> </span>reboot
+
+<span class="c1"># Reboot now (alternative)</span>
+sudo<span class="w"> </span>shutdown<span class="w"> </span>-r<span class="w"> </span>now
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Why Not Just Pull the Plug?</p>
+<p>Sudden power loss can corrupt files and damage filesystems. Proper shutdown ensures all data is written to disk, services stop cleanly, and the filesystem is properly unmounted. It's like the difference between closing a book nicely vs. slamming it shut—your data will thank you!</p>
+</div>
+<h2 id="display-configuration-making-things-look-good">Display Configuration: Making Things Look Good</h2>
+<p>Whether you're setting up a Raspberry Pi for a digital sign, connecting multiple monitors for productivity, or just trying to get the right resolution, display configuration is an essential skill.</p>
+<h3 id="hdmi-output-basics">HDMI Output Basics</h3>
+<p>HDMI (High-Definition Multimedia Interface) is the most common way to connect displays. On a Raspberry Pi, you'll typically find:</p>
+<ul>
+<li><strong>Pi 4/400/5</strong>: Two micro-HDMI ports (can drive two displays)</li>
+<li><strong>Pi 500+</strong>: Two full-size HDMI ports</li>
+<li><strong>Older Pi models</strong>: One full-size HDMI port</li>
+</ul>
+<p>To check your current display setup:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># List connected displays</span>
+xrandr
+
+<span class="c1"># Show display information (if using Wayland)</span>
+wlr-randr
+
+<span class="c1"># Get detailed HDMI info on Raspberry Pi</span>
+tvservice<span class="w"> </span>-s
+</code></pre></div></td></tr></table></div>
+<h3 id="setting-display-resolution">Setting Display Resolution</h3>
+<p>Resolution affects how sharp and how much content fits on your screen:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># List available resolutions</span>
+xrandr
+
+<span class="c1"># Set a specific resolution</span>
+xrandr<span class="w"> </span>--output<span class="w"> </span>HDMI-1<span class="w"> </span>--mode<span class="w"> </span>1920x1080
+
+<span class="c1"># Set resolution and refresh rate</span>
+xrandr<span class="w"> </span>--output<span class="w"> </span>HDMI-1<span class="w"> </span>--mode<span class="w"> </span>1920x1080<span class="w"> </span>--rate<span class="w"> </span><span class="m">60</span>
+
+<span class="c1"># On Raspberry Pi, you can also edit /boot/config.txt</span>
+<span class="c1"># hdmi_mode and hdmi_group settings</span>
+</code></pre></div></td></tr></table></div>
+<p>For Raspberry Pi, the <code>/boot/config.txt</code> file is your friend:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Common settings in /boot/config.txt</span>
+
+<span class="c1"># Force HDMI output (even without display connected)</span>
+<span class="nv">hdmi_force_hotplug</span><span class="o">=</span><span class="m">1</span>
+
+<span class="c1"># Set specific resolution (group 1=CEA, 2=DMT)</span>
+<span class="nv">hdmi_group</span><span class="o">=</span><span class="m">2</span>
+<span class="nv">hdmi_mode</span><span class="o">=</span><span class="m">82</span><span class="w">   </span><span class="c1"># 1920x1080 60Hz</span>
+
+<span class="c1"># Rotate display</span>
+<span class="nv">display_rotate</span><span class="o">=</span><span class="m">0</span><span class="w">  </span><span class="c1"># Normal</span>
+<span class="nv">display_rotate</span><span class="o">=</span><span class="m">1</span><span class="w">  </span><span class="c1"># 90 degrees</span>
+<span class="nv">display_rotate</span><span class="o">=</span><span class="m">2</span><span class="w">  </span><span class="c1"># 180 degrees</span>
+<span class="nv">display_rotate</span><span class="o">=</span><span class="m">3</span><span class="w">  </span><span class="c1"># 270 degrees</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="multiple-displays-double-the-fun">Multiple Displays: Double the Fun</h3>
+<p>With two monitors, you can extend your desktop or mirror it:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Extend desktop (second monitor to the right)</span>
+xrandr<span class="w"> </span>--output<span class="w"> </span>HDMI-1<span class="w"> </span>--auto<span class="w"> </span>--output<span class="w"> </span>HDMI-2<span class="w"> </span>--auto<span class="w"> </span>--right-of<span class="w"> </span>HDMI-1
+
+<span class="c1"># Mirror displays</span>
+xrandr<span class="w"> </span>--output<span class="w"> </span>HDMI-2<span class="w"> </span>--same-as<span class="w"> </span>HDMI-1
+
+<span class="c1"># Turn off a display</span>
+xrandr<span class="w"> </span>--output<span class="w"> </span>HDMI-2<span class="w"> </span>--off
+</code></pre></div></td></tr></table></div>
+<h4 id="diagram-multiple-display-configurations">Diagram: Multiple Display Configurations</h4>
+<details>
+<summary>Display Arrangement Options</summary>
+<p>Type: diagram</p>
+<p>Purpose: Show different ways to arrange multiple monitors</p>
+<p>Bloom Taxonomy: Apply (L3)</p>
+<p>Learning Objective: Students will apply knowledge of xrandr commands to configure multiple displays in different arrangements</p>
+<p>Components to show:
+- Four arrangement options: Extended Right, Extended Left, Extended Above, Mirrored
+- Each showing two monitor rectangles with position indicators
+- xrandr command needed for each configuration</p>
+<p>Layout:
+- 2x2 grid of display arrangements
+- Each cell shows the physical arrangement and the command</p>
+<p>Arrangements:
+1. Extended Right (most common):
+   - Display 1 on left, Display 2 on right
+   - Command: xrandr --output HDMI-2 --right-of HDMI-1</p>
+<ol>
+<li>Extended Left:</li>
+<li>Display 2 on left, Display 1 on right</li>
+<li>
+<p>Command: xrandr --output HDMI-2 --left-of HDMI-1</p>
+</li>
+<li>
+<p>Extended Above (stacked):</p>
+</li>
+<li>Display 2 above Display 1</li>
+<li>
+<p>Command: xrandr --output HDMI-2 --above HDMI-1</p>
+</li>
+<li>
+<p>Mirrored:</p>
+</li>
+<li>Both displays show same content</li>
+<li>Command: xrandr --output HDMI-2 --same-as HDMI-1</li>
+</ol>
+<p>Color scheme: Blue for primary display, green for secondary</p>
+<p>Labels: Show resolution on each display mock-up</p>
+<p>Implementation: Static diagram or interactive p5.js allowing drag-and-drop arrangement</p>
+</details>
+<h2 id="terminal-multiplexers-screen-and-tmux">Terminal Multiplexers: Screen and Tmux</h2>
+<p>Ever wished you could have multiple terminal windows in one? Or keep a program running after you disconnect from SSH? Terminal multiplexers are your answer!</p>
+<h3 id="the-screen-command">The screen Command</h3>
+<p><code>screen</code> is the classic terminal multiplexer:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Start a new screen session</span>
+screen
+
+<span class="c1"># Start a named session</span>
+screen<span class="w"> </span>-S<span class="w"> </span>myproject
+
+<span class="c1"># List running sessions</span>
+screen<span class="w"> </span>-ls
+
+<span class="c1"># Reattach to a session</span>
+screen<span class="w"> </span>-r<span class="w"> </span>myproject
+
+<span class="c1"># Detach from current session: Ctrl+A, then D</span>
+<span class="c1"># Create new window: Ctrl+A, then C</span>
+<span class="c1"># Switch windows: Ctrl+A, then N (next) or P (previous)</span>
+<span class="c1"># Split horizontally: Ctrl+A, then S</span>
+<span class="c1"># Split vertically: Ctrl+A, then |</span>
+</code></pre></div></td></tr></table></div>
+<p>Key commands (all start with Ctrl+A):</p>
+<table>
+<thead>
+<tr>
+<th>Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl+A, D</td>
+<td>Detach from session</td>
+</tr>
+<tr>
+<td>Ctrl+A, C</td>
+<td>Create new window</td>
+</tr>
+<tr>
+<td>Ctrl+A, N</td>
+<td>Next window</td>
+</tr>
+<tr>
+<td>Ctrl+A, P</td>
+<td>Previous window</td>
+</tr>
+<tr>
+<td>Ctrl+A, "</td>
+<td>List windows</td>
+</tr>
+<tr>
+<td>Ctrl+A, K</td>
+<td>Kill current window</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-tmux-multiplexer">The tmux Multiplexer</h3>
+<p><code>tmux</code> is the more modern alternative with better features:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Start tmux</span>
+tmux
+
+<span class="c1"># Start a named session</span>
+tmux<span class="w"> </span>new<span class="w"> </span>-s<span class="w"> </span>myproject
+
+<span class="c1"># List sessions</span>
+tmux<span class="w"> </span>ls
+
+<span class="c1"># Attach to a session</span>
+tmux<span class="w"> </span>attach<span class="w"> </span>-t<span class="w"> </span>myproject
+
+<span class="c1"># Detach: Ctrl+B, then D</span>
+<span class="c1"># Create new window: Ctrl+B, then C</span>
+<span class="c1"># Split vertically: Ctrl+B, then %</span>
+<span class="c1"># Split horizontally: Ctrl+B, then &quot;</span>
+<span class="c1"># Switch panes: Ctrl+B, then arrow keys</span>
+</code></pre></div></td></tr></table></div>
+<p>Key commands (all start with Ctrl+B):</p>
+<table>
+<thead>
+<tr>
+<th>Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl+B, D</td>
+<td>Detach from session</td>
+</tr>
+<tr>
+<td>Ctrl+B, C</td>
+<td>Create new window</td>
+</tr>
+<tr>
+<td>Ctrl+B, %</td>
+<td>Split pane vertically</td>
+</tr>
+<tr>
+<td>Ctrl+B, "</td>
+<td>Split pane horizontally</td>
+</tr>
+<tr>
+<td>Ctrl+B, Arrow</td>
+<td>Move between panes</td>
+</tr>
+<tr>
+<td>Ctrl+B, X</td>
+<td>Kill current pane</td>
+</tr>
+<tr>
+<td>Ctrl+B, &amp;</td>
+<td>Kill current window</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Why Use Multiplexers?</p>
+<p>The killer feature is <strong>persistence</strong>. Start a long-running process in a tmux session, detach, close your laptop, go home, SSH back in, reattach—and your process is still running! It's like pausing a game and coming back later.</p>
+</div>
+<h4 id="diagram-terminal-multiplexer-concept">Diagram: Terminal Multiplexer Concept</h4>
+<details>
+<summary>Tmux Session Structure</summary>
+<p>Type: diagram</p>
+<p>Purpose: Show the hierarchical relationship between tmux sessions, windows, and panes</p>
+<p>Bloom Taxonomy: Understand (L2)</p>
+<p>Learning Objective: Students will understand how tmux organizes sessions, windows, and panes hierarchically</p>
+<p>Components to show:
+- Server (top level, runs in background)
+- Session (contains windows, named like "project1", "project2")
+- Window (like a tab, full screen within session)
+- Pane (split portions of a window)</p>
+<p>Hierarchy:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>tmux Server
+├── Session: &quot;development&quot;
+│   ├── Window 0: &quot;editor&quot; [vim]
+│   ├── Window 1: &quot;terminal&quot;
+│   │   ├── Pane 0: [top half - running tests]
+│   │   └── Pane 1: [bottom half - logs]
+│   └── Window 2: &quot;servers&quot;
+└── Session: &quot;monitoring&quot;
+    └── Window 0: &quot;htop&quot;
+</code></pre></div></td></tr></table></div></p>
+<p>Visual style: Tree/hierarchy diagram with nested rectangles</p>
+<p>Color scheme:
+- Gray: Server level
+- Blue: Session level
+- Green: Window level
+- Yellow: Pane level</p>
+<p>Labels: Show keyboard shortcuts for navigation at each level</p>
+<p>Implementation: SVG diagram or vis-network hierarchical layout</p>
+</details>
+<h2 id="audio-configuration-making-your-pi-sing">Audio Configuration: Making Your Pi Sing</h2>
+<p>Linux audio can seem complex because there are multiple layers, but once you understand the stack, it makes sense. Let's demystify it!</p>
+<h3 id="the-linux-audio-stack">The Linux Audio Stack</h3>
+<p>Linux audio typically involves these layers:</p>
+<ol>
+<li><strong>Hardware</strong>: Sound card, speakers, headphones, HDMI audio</li>
+<li><strong>ALSA (Advanced Linux Sound Architecture)</strong>: The kernel-level audio system</li>
+<li><strong>PulseAudio or PipeWire</strong>: User-space sound server that manages audio streams</li>
+<li><strong>Applications</strong>: Your music player, video player, games, etc.</li>
+</ol>
+<p>Think of it like a restaurant: Hardware is the kitchen, ALSA is the chef, PulseAudio is the waiter taking orders and delivering food, and applications are the customers.</p>
+<h3 id="alsa-basics">ALSA Basics</h3>
+<p>ALSA is the foundation of Linux audio. Here are some useful commands:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># List sound cards</span>
+aplay<span class="w"> </span>-l
+
+<span class="c1"># List playback devices</span>
+aplay<span class="w"> </span>-L
+
+<span class="c1"># Test speakers (plays a simple sound to each channel)</span>
+speaker-test<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span>-t<span class="w"> </span>wav
+
+<span class="c1"># Open ALSA mixer (adjust volumes)</span>
+alsamixer
+
+<span class="c1"># Set master volume from command line</span>
+amixer<span class="w"> </span><span class="nb">set</span><span class="w"> </span>Master<span class="w"> </span><span class="m">75</span>%
+
+<span class="c1"># Mute/unmute</span>
+amixer<span class="w"> </span><span class="nb">set</span><span class="w"> </span>Master<span class="w"> </span>mute
+amixer<span class="w"> </span><span class="nb">set</span><span class="w"> </span>Master<span class="w"> </span>unmute
+</code></pre></div></td></tr></table></div>
+<p>In <code>alsamixer</code>:</p>
+<ul>
+<li>Use arrow keys to navigate between channels</li>
+<li>Up/Down to adjust volume</li>
+<li>M to mute/unmute a channel</li>
+<li>F6 to select a different sound card</li>
+<li>Esc to exit</li>
+</ul>
+<h3 id="pulseaudio-management">PulseAudio Management</h3>
+<p>PulseAudio sits above ALSA and provides extra features like:</p>
+<ul>
+<li>Per-application volume control</li>
+<li>Easy switching between outputs</li>
+<li>Network audio streaming</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check PulseAudio status</span>
+pulseaudio<span class="w"> </span>--check
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w">  </span><span class="c1"># 0 means running</span>
+
+<span class="c1"># Start PulseAudio if not running</span>
+pulseaudio<span class="w"> </span>--start
+
+<span class="c1"># List audio sinks (outputs)</span>
+pactl<span class="w"> </span>list<span class="w"> </span>sinks<span class="w"> </span>short
+
+<span class="c1"># List audio sources (inputs)</span>
+pactl<span class="w"> </span>list<span class="w"> </span>sources<span class="w"> </span>short
+
+<span class="c1"># Set default output sink</span>
+pactl<span class="w"> </span>set-default-sink<span class="w"> </span>alsa_output.usb-audio
+
+<span class="c1"># Set volume (percentage)</span>
+pactl<span class="w"> </span>set-sink-volume<span class="w"> </span>@DEFAULT_SINK@<span class="w"> </span><span class="m">50</span>%
+
+<span class="c1"># Mute/unmute</span>
+pactl<span class="w"> </span>set-sink-mute<span class="w"> </span>@DEFAULT_SINK@<span class="w"> </span>toggle
+</code></pre></div></td></tr></table></div>
+<p>The graphical PulseAudio volume control provides an easy interface:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install if not present</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>pavucontrol
+
+<span class="c1"># Launch</span>
+pavucontrol
+</code></pre></div></td></tr></table></div>
+<h4 id="diagram-linux-audio-stack">Diagram: Linux Audio Stack</h4>
+<details>
+<summary>Linux Audio Architecture</summary>
+<p>Type: diagram</p>
+<p>Purpose: Show the layered architecture of Linux audio from hardware to applications</p>
+<p>Bloom Taxonomy: Understand (L2)</p>
+<p>Learning Objective: Students will understand how audio flows through the Linux system from applications to hardware</p>
+<p>Components to show (layered, top to bottom):
+1. Applications Layer
+   - Music player, Web browser, Games
+   - Each sends audio stream down</p>
+<ol>
+<li>Sound Server Layer (PulseAudio or PipeWire)</li>
+<li>Mixes multiple audio streams</li>
+<li>Provides per-app volume control</li>
+<li>
+<p>Handles output routing</p>
+</li>
+<li>
+<p>ALSA Layer</p>
+</li>
+<li>Kernel-level audio drivers</li>
+<li>
+<p>Hardware abstraction</p>
+</li>
+<li>
+<p>Hardware Layer</p>
+</li>
+<li>Sound card</li>
+<li>USB audio devices</li>
+<li>HDMI audio output</li>
+<li>Bluetooth audio (via separate path)</li>
+</ol>
+<p>Connections:
+- Vertical arrows showing audio data flow
+- Multiple applications → single PulseAudio instance
+- PulseAudio → ALSA → Hardware
+- Bluetooth separate path: Application → PulseAudio → BlueZ → Bluetooth hardware</p>
+<p>Labels:
+- "Audio streams" on app-to-pulse connections
+- "Mixed output" on pulse-to-alsa connection
+- "Digital/analog signals" on alsa-to-hardware</p>
+<p>Color scheme:
+- Blue: Applications
+- Green: PulseAudio/PipeWire
+- Orange: ALSA
+- Gray: Hardware</p>
+<p>Implementation: Block diagram with layered boxes and arrows</p>
+</details>
+<h3 id="configuring-audio-output">Configuring Audio Output</h3>
+<p>Switching between audio outputs (headphones, HDMI, USB speakers):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Using PulseAudio command line</span>
+<span class="c1"># First, find the sink name</span>
+pactl<span class="w"> </span>list<span class="w"> </span>sinks<span class="w"> </span>short
+
+<span class="c1"># Output might look like:</span>
+<span class="c1"># 0  alsa_output.platform-bcm2835_audio.stereo-fallback  module-alsa-card.c  s16le 2ch 44100Hz  SUSPENDED</span>
+<span class="c1"># 1  alsa_output.usb-Generic_USB_Audio-00.analog-stereo  module-alsa-card.c  s16le 2ch 48000Hz  SUSPENDED</span>
+
+<span class="c1"># Set USB audio as default</span>
+pactl<span class="w"> </span>set-default-sink<span class="w"> </span>alsa_output.usb-Generic_USB_Audio-00.analog-stereo
+
+<span class="c1"># On Raspberry Pi, you can also use raspi-config</span>
+sudo<span class="w"> </span>raspi-config
+<span class="c1"># Navigate to: System Options &gt; Audio</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="usb-audio-devices">USB Audio Devices</h3>
+<p>USB audio devices (DACs, USB speakers, microphones) are typically plug-and-play:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># When you plug in a USB audio device, check if detected</span>
+lsusb
+
+<span class="c1"># Check if ALSA sees it</span>
+aplay<span class="w"> </span>-l
+
+<span class="c1"># It should appear as a new card</span>
+<span class="c1"># Card 1: USB_Audio [Generic USB Audio], device 0: USB Audio [USB Audio]</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="bluetooth-audio">Bluetooth Audio</h3>
+<p>Bluetooth audio requires the BlueZ stack and some PulseAudio modules:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install Bluetooth audio support</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>pulseaudio-module-bluetooth
+
+<span class="c1"># Restart PulseAudio</span>
+pulseaudio<span class="w"> </span>--kill
+pulseaudio<span class="w"> </span>--start
+
+<span class="c1"># Use bluetoothctl to pair devices</span>
+bluetoothctl
+<span class="c1"># Then: power on, scan on, pair XX:XX:XX:XX:XX:XX, connect, trust</span>
+
+<span class="c1"># Once connected, it should appear as a PulseAudio sink</span>
+pactl<span class="w"> </span>list<span class="w"> </span>sinks<span class="w"> </span>short
+</code></pre></div></td></tr></table></div>
+<h3 id="sound-testing">Sound Testing</h3>
+<p>Always test your audio setup:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Simple test - play test tone</span>
+speaker-test<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span>-t<span class="w"> </span>sine<span class="w"> </span>-f<span class="w"> </span><span class="m">440</span>
+
+<span class="c1"># Play a test WAV file (if you have one)</span>
+aplay<span class="w"> </span>/usr/share/sounds/alsa/Front_Center.wav
+
+<span class="c1"># Test with a simple beep</span>
+beep<span class="w">  </span><span class="c1"># May need to install the &#39;beep&#39; package</span>
+
+<span class="c1"># Play an MP3 (needs mpg123 or similar)</span>
+mpg123<span class="w"> </span>test.mp3
+</code></pre></div></td></tr></table></div>
+<h3 id="audio-troubleshooting">Audio Troubleshooting</h3>
+<p>When audio doesn't work, here's a systematic approach:</p>
+<ol>
+<li>
+<p><strong>Check physical connections</strong>: Is it plugged in? Is the right output selected on the monitor?</p>
+</li>
+<li>
+<p><strong>Check ALSA detection</strong>:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>aplay<span class="w"> </span>-l<span class="w">  </span><span class="c1"># Should list your audio devices</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Check PulseAudio</strong>:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>pactl<span class="w"> </span>info<span class="w">  </span><span class="c1"># Should show server info</span>
+pactl<span class="w"> </span>list<span class="w"> </span>sinks<span class="w">  </span><span class="c1"># Should list outputs</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Check volume levels</strong>:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>alsamixer<span class="w">  </span><span class="c1"># Make sure nothing is muted (MM)</span>
+pavucontrol<span class="w">  </span><span class="c1"># Check per-app volumes</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Check if correct output is selected</strong>:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>pactl<span class="w"> </span>list<span class="w"> </span>sinks<span class="w"> </span>short
+pactl<span class="w"> </span>set-default-sink<span class="w"> </span>correct_sink_name
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Restart audio services</strong>:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>pulseaudio<span class="w"> </span>--kill
+pulseaudio<span class="w"> </span>--start
+<span class="c1"># Or for the whole system:</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>pulseaudio
+</code></pre></div></td></tr></table></div></p>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">The Mute Button Got Me Again!</p>
+<p>Nine times out of ten, audio problems are caused by something being muted. Always check <code>alsamixer</code> for those telltale "MM" markers that indicate muted channels!</p>
+</div>
+<h2 id="file-encryption-with-gpg">File Encryption with GPG</h2>
+<p>Sometimes you need to keep files secret. Maybe it's your passwords, sensitive documents, or your secret recipe for the world's best cookie. GPG (GNU Privacy Guard) provides powerful encryption.</p>
+<h3 id="gpg-basics">GPG Basics</h3>
+<p>GPG uses public-key cryptography:</p>
+<ul>
+<li><strong>Public key</strong>: Share this freely; others use it to encrypt messages to you</li>
+<li><strong>Private key</strong>: Keep this SECRET; only you use it to decrypt messages</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Generate a new key pair</span>
+gpg<span class="w"> </span>--full-generate-key
+<span class="c1"># Follow the prompts: choose RSA, 4096 bits, your name and email</span>
+
+<span class="c1"># List your keys</span>
+gpg<span class="w"> </span>--list-keys
+
+<span class="c1"># List private keys</span>
+gpg<span class="w"> </span>--list-secret-keys
+
+<span class="c1"># Export your public key (to share with others)</span>
+gpg<span class="w"> </span>--export<span class="w"> </span>--armor<span class="w"> </span>your@email.com<span class="w"> </span>&gt;<span class="w"> </span>mykey.pub
+
+<span class="c1"># Import someone else&#39;s public key</span>
+gpg<span class="w"> </span>--import<span class="w"> </span>theirkey.pub
+</code></pre></div></td></tr></table></div>
+<h3 id="encrypting-and-decrypting-files">Encrypting and Decrypting Files</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Encrypt a file for yourself</span>
+gpg<span class="w"> </span>--encrypt<span class="w"> </span>--recipient<span class="w"> </span>your@email.com<span class="w"> </span>secret.txt
+<span class="c1"># Creates secret.txt.gpg</span>
+
+<span class="c1"># Encrypt for someone else</span>
+gpg<span class="w"> </span>--encrypt<span class="w"> </span>--recipient<span class="w"> </span>friend@email.com<span class="w"> </span>secret.txt
+
+<span class="c1"># Decrypt a file</span>
+gpg<span class="w"> </span>--decrypt<span class="w"> </span>secret.txt.gpg<span class="w"> </span>&gt;<span class="w"> </span>secret.txt
+
+<span class="c1"># Symmetric encryption (password-based, no keys needed)</span>
+gpg<span class="w"> </span>--symmetric<span class="w"> </span>secret.txt
+<span class="c1"># Creates secret.txt.gpg, prompts for password</span>
+
+<span class="c1"># Decrypt symmetric</span>
+gpg<span class="w"> </span>--decrypt<span class="w"> </span>secret.txt.gpg<span class="w"> </span>&gt;<span class="w"> </span>secret.txt
+<span class="c1"># Prompts for password</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="signing-files">Signing Files</h3>
+<p>Digital signatures prove a file came from you and hasn't been tampered with:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Sign a file (creates signature file)</span>
+gpg<span class="w"> </span>--sign<span class="w"> </span>document.pdf
+<span class="c1"># Creates document.pdf.gpg</span>
+
+<span class="c1"># Create detached signature (separate .sig file)</span>
+gpg<span class="w"> </span>--detach-sign<span class="w"> </span>document.pdf
+<span class="c1"># Creates document.pdf.sig</span>
+
+<span class="c1"># Verify a signature</span>
+gpg<span class="w"> </span>--verify<span class="w"> </span>document.pdf.sig<span class="w"> </span>document.pdf
+</code></pre></div></td></tr></table></div>
+<h4 id="diagram-gpg-encryption-process">Diagram: GPG Encryption Process</h4>
+<details>
+<summary>GPG Public Key Encryption Flow</summary>
+<p>Type: workflow</p>
+<p>Purpose: Show how public-key encryption works for secure communication</p>
+<p>Bloom Taxonomy: Understand (L2)</p>
+<p>Learning Objective: Students will understand the asymmetric encryption process using public and private keys</p>
+<p>Visual style: Swimlane diagram with two participants (Alice and Bob)</p>
+<p>Swimlanes:
+- Alice (sender)
+- Bob (recipient)</p>
+<p>Steps:
+1. Bob: "Generate Key Pair (gpg --full-generate-key)"
+   Hover text: "Creates both public and private keys"</p>
+<ol>
+<li>
+<p>Bob: "Export Public Key (gpg --export)"
+   Hover text: "Public key can be shared freely"</p>
+</li>
+<li>
+<p>Arrow from Bob to Alice: "Share Public Key"
+   Hover text: "Sent via email, website, or key server"</p>
+</li>
+<li>
+<p>Alice: "Import Bob's Public Key (gpg --import)"
+   Hover text: "Now Alice can encrypt messages for Bob"</p>
+</li>
+<li>
+<p>Alice: "Write Secret Message"
+   Hover text: "The plaintext message Alice wants to send"</p>
+</li>
+<li>
+<p>Alice: "Encrypt with Bob's Public Key (gpg --encrypt)"
+   Hover text: "Only Bob's private key can decrypt this"</p>
+</li>
+<li>
+<p>Arrow from Alice to Bob: "Send Encrypted File"
+   Hover text: "Safe to send over insecure channel"</p>
+</li>
+<li>
+<p>Bob: "Decrypt with Private Key (gpg --decrypt)"
+   Hover text: "Only Bob has the private key to decrypt"</p>
+</li>
+<li>
+<p>Bob: "Read Secret Message"
+   Hover text: "Message successfully received"</p>
+</li>
+</ol>
+<p>Color coding:
+- Blue: Public key operations (safe to share)
+- Red: Private key operations (keep secret!)
+- Green: Plaintext data
+- Orange: Encrypted data</p>
+<p>Key insight box:
+- "Public key = Lock that anyone can close"
+- "Private key = Only key that opens that lock"</p>
+<p>Implementation: Mermaid swimlane diagram or HTML/CSS/JS workflow</p>
+</details>
+<h2 id="monitoring-resources-the-secret-to-sysadmin-success">Monitoring Resources: The Secret to Sysadmin Success</h2>
+<p>Remember what I said at the beginning about being proactive? Here's where that pays off. Setting up monitoring means you catch problems before they become emergencies.</p>
+<h3 id="essential-things-to-monitor">Essential Things to Monitor</h3>
+<p>Good sysadmins monitor:</p>
+<ul>
+<li><strong>Disk space</strong>: Running out crashes systems</li>
+<li><strong>Memory usage</strong>: Swapping kills performance</li>
+<li><strong>CPU load</strong>: High load means slow response</li>
+<li><strong>Service status</strong>: Dead services mean unhappy users</li>
+<li><strong>Network connectivity</strong>: Can't help if you can't connect</li>
+<li><strong>Logs</strong>: Errors often appear in logs before symptoms show</li>
+</ul>
+<h3 id="simple-monitoring-scripts">Simple Monitoring Scripts</h3>
+<p>Here's a simple disk space warning script:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># save as /usr/local/bin/check_disk.sh</span>
+
+<span class="nv">THRESHOLD</span><span class="o">=</span><span class="m">80</span>
+<span class="nv">PARTITION</span><span class="o">=</span><span class="s2">&quot;/&quot;</span>
+
+<span class="nv">USAGE</span><span class="o">=</span><span class="k">$(</span>df<span class="w"> </span>-h<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PARTITION</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;NR==2 {print $5}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;%&#39;</span><span class="k">)</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USAGE</span><span class="s2">&quot;</span><span class="w"> </span>-gt<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$THRESHOLD</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;WARNING: </span><span class="nv">$PARTITION</span><span class="s2"> is </span><span class="si">${</span><span class="nv">USAGE</span><span class="si">}</span><span class="s2">% full!&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>mail<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;Disk Alert&quot;</span><span class="w"> </span>admin@example.com
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<p>Schedule it with cron:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Edit crontab</span>
+crontab<span class="w"> </span>-e
+
+<span class="c1"># Add line to run every hour</span>
+<span class="m">0</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/usr/local/bin/check_disk.sh
+</code></pre></div></td></tr></table></div>
+<h3 id="quick-health-checks">Quick Health Checks</h3>
+<p>Commands every sysadmin should know:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Disk space</span>
+df<span class="w"> </span>-h
+
+<span class="c1"># Memory usage</span>
+free<span class="w"> </span>-h
+
+<span class="c1"># CPU and memory (live)</span>
+top
+htop<span class="w">  </span><span class="c1"># prettier version</span>
+
+<span class="c1"># System uptime and load</span>
+uptime
+
+<span class="c1"># Who&#39;s logged in</span>
+who
+w
+
+<span class="c1"># Recent logins</span>
+last
+
+<span class="c1"># Failed services</span>
+systemctl<span class="w"> </span>--failed
+
+<span class="c1"># Recent log messages</span>
+journalctl<span class="w"> </span>-xe
+
+<span class="c1"># Check for zombie processes</span>
+ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Z
+</code></pre></div></td></tr></table></div>
+<h4 id="diagram-system-health-dashboard-concept">Diagram: System Health Dashboard Concept</h4>
+<details>
+<summary>System Health Monitoring Dashboard</summary>
+<p>Type: microsim</p>
+<p>Purpose: Interactive dashboard showing simulated system metrics that students can explore</p>
+<p>Bloom Taxonomy: Analyze (L4)</p>
+<p>Learning Objective: Students will analyze system metrics and identify when values indicate problems</p>
+<p>Canvas layout (800x500):
+- Grid of 6 metric panels (3x2)
+- Each panel shows a gauge or graph</p>
+<p>Panels:
+1. CPU Usage (gauge 0-100%)
+   - Green: 0-60%
+   - Yellow: 60-80%
+   - Red: 80-100%
+   - Simulated fluctuation</p>
+<ol>
+<li>Memory Usage (gauge 0-100%)</li>
+<li>Green: 0-70%</li>
+<li>Yellow: 70-85%</li>
+<li>Red: 85-100%</li>
+<li>
+<p>Swap usage indicator</p>
+</li>
+<li>
+<p>Disk Space (bar chart)</p>
+</li>
+<li>Shows /, /home, /var</li>
+<li>
+<p>Color-coded by usage percentage</p>
+</li>
+<li>
+<p>Network (line graph)</p>
+</li>
+<li>Incoming/outgoing bandwidth</li>
+<li>
+<p>Rolling 60-second view</p>
+</li>
+<li>
+<p>Load Average (three numbers)</p>
+</li>
+<li>1, 5, 15 minute averages</li>
+<li>
+<p>Color based on CPU count comparison</p>
+</li>
+<li>
+<p>Service Status (icon grid)</p>
+</li>
+<li>SSH, Apache, MySQL icons</li>
+<li>Green (running), Red (stopped), Yellow (degraded)</li>
+</ol>
+<p>Interactive controls:
+- "Simulate High Load" button
+- "Simulate Disk Fill" button
+- "Simulate Service Crash" button
+- "Reset to Normal" button</p>
+<p>Behavior:
+- Metrics update in real-time (simulated)
+- Color changes based on thresholds
+- Alert animation when critical</p>
+<p>Implementation: p5.js with gauge and chart libraries</p>
+</details>
+<h2 id="putting-it-all-together-a-day-in-the-life">Putting It All Together: A Day in the Life</h2>
+<p>Let's walk through some realistic sysadmin scenarios:</p>
+<h3 id="scenario-1-new-user-setup">Scenario 1: New User Setup</h3>
+<p>A new student joins your robotics club and needs access to the Pi:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create the account</span>
+sudo<span class="w"> </span>useradd<span class="w"> </span>-m<span class="w"> </span>-s<span class="w"> </span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;Alex Rivera&quot;</span><span class="w"> </span>-G<span class="w"> </span>gpio,i2c,spi<span class="w"> </span>alex
+
+<span class="c1"># Set initial password</span>
+sudo<span class="w"> </span>passwd<span class="w"> </span>alex
+
+<span class="c1"># Verify the account</span>
+id<span class="w"> </span>alex
+ls<span class="w"> </span>-la<span class="w"> </span>/home/alex
+</code></pre></div></td></tr></table></div>
+<h3 id="scenario-2-service-wont-start">Scenario 2: Service Won't Start</h3>
+<p>The web server isn't responding:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check status</span>
+systemctl<span class="w"> </span>status<span class="w"> </span>apache2
+
+<span class="c1"># If it&#39;s failed, check the logs</span>
+journalctl<span class="w"> </span>-u<span class="w"> </span>apache2<span class="w"> </span>-n<span class="w"> </span><span class="m">50</span>
+
+<span class="c1"># Common fixes:</span>
+<span class="c1"># - Configuration error: check apache2ctl configtest</span>
+<span class="c1"># - Port in use: netstat -tlnp | grep :80</span>
+<span class="c1"># - Try restarting</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div></td></tr></table></div>
+<h3 id="scenario-3-setting-up-a-presentation-display">Scenario 3: Setting Up a Presentation Display</h3>
+<p>Pi connected to a projector, need specific resolution:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check current setup</span>
+xrandr
+
+<span class="c1"># Set to projector-friendly resolution</span>
+xrandr<span class="w"> </span>--output<span class="w"> </span>HDMI-1<span class="w"> </span>--mode<span class="w"> </span>1280x720
+
+<span class="c1"># For permanent change, edit /boot/config.txt</span>
+sudo<span class="w"> </span>nano<span class="w"> </span>/boot/config.txt
+<span class="c1"># Add: hdmi_mode=4 (720p)</span>
+<span class="c1"># Reboot</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="scenario-4-audio-for-a-demo">Scenario 4: Audio for a Demo</h3>
+<p>Need audio working for a project presentation:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Test audio first</span>
+speaker-test<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span>-t<span class="w"> </span>wav
+
+<span class="c1"># If no sound, check mixer</span>
+alsamixer
+
+<span class="c1"># Set correct output</span>
+pactl<span class="w"> </span>set-default-sink<span class="w"> </span>alsa_output.platform-bcm2835_audio.stereo-fallback
+
+<span class="c1"># Set volume</span>
+pactl<span class="w"> </span>set-sink-volume<span class="w"> </span>@DEFAULT_SINK@<span class="w"> </span><span class="m">75</span>%
+</code></pre></div></td></tr></table></div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>Congratulations! You've leveled up your Linux skills significantly. Here's what you can now do:</p>
+<ul>
+<li><strong>User Management</strong>: Create, modify, and delete user accounts; manage groups; handle passwords</li>
+<li><strong>Service Control</strong>: Start, stop, enable, and disable services with systemctl</li>
+<li><strong>Boot Understanding</strong>: Know what happens from power-on to login prompt</li>
+<li><strong>Display Configuration</strong>: Set up resolutions and multiple monitors</li>
+<li><strong>Terminal Multiplexers</strong>: Run persistent sessions with screen or tmux</li>
+<li><strong>Audio Management</strong>: Configure ALSA and PulseAudio, switch outputs, troubleshoot sound</li>
+<li><strong>Encryption</strong>: Protect files with GPG encryption and signatures</li>
+</ul>
+<p>Most importantly, you understand the sysadmin mindset: <strong>monitor proactively, document everything, and always have a backup plan</strong>.</p>
+<p>The best sysadmins aren't the ones who heroically fix emergencies at 3 AM—they're the ones whose monitoring and automation prevent those emergencies from happening in the first place!</p>
+<h2 id="practice-exercises">Practice Exercises</h2>
+<details class="question">
+<summary>Exercise 1: Create a restricted user account</summary>
+<p>Create a user called <code>guest</code> that:
+- Has a home directory
+- Uses <code>/bin/rbash</code> (restricted bash) as their shell
+- Is NOT in the sudo group
+- Expires in 30 days</p>
+<p><strong>Hint:</strong> Use <code>useradd</code> with the <code>-e</code> flag for expiration.</p>
+</details>
+<details class="question">
+<summary>Exercise 2: Service management challenge</summary>
+<p>Write a bash script that:
+- Checks if SSH is running
+- If not running, starts it
+- Logs the action to a file with timestamp</p>
+<p><strong>Hint:</strong> Use <code>systemctl is-active</code> to check status.</p>
+</details>
+<details class="question">
+<summary>Exercise 3: Display configuration</summary>
+<p>If you have access to two monitors (or can simulate with dummy outputs):
+- Set up extended desktop with Monitor 2 above Monitor 1
+- Make the arrangement persistent across reboots</p>
+<p><strong>Hint:</strong> Look into <code>~/.xprofile</code> for persistence.</p>
+</details>
+<details class="question">
+<summary>Exercise 4: GPG encryption practice</summary>
+<ul>
+<li>Generate a new GPG key pair</li>
+<li>Create a text file with "secret" content</li>
+<li>Encrypt it using symmetric encryption</li>
+<li>Delete the original file</li>
+<li>Decrypt the encrypted file</li>
+</ul>
+<p><strong>Hint:</strong> Use <code>gpg --symmetric</code> and <code>gpg --decrypt</code>.</p>
+</details>
+<hr />
+<p><em>Remember: Every expert was once a beginner. The fact that you're learning Linux system administration puts you ahead of most people. Keep experimenting, keep breaking things (in test environments!), and keep learning. Your future self will thank you!</em></p>
 
 
 
@@ -1552,13 +4540,13 @@
         
         
           
-          <a href="../24-customization/" class="md-footer__link md-footer__link--next" aria-label="Next: Terminal Customization and Fun">
+          <a href="../25-capstone/" class="md-footer__link md-footer__link--next" aria-label="Next: Capstone Projects">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Terminal Customization and Fun
+                Capstone Projects
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1596,7 +4584,7 @@
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../js/extra.css"></script>
+        <script src="../../js/extra.js"></script>
       
     
   </body>

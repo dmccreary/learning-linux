@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+        <meta name="description" content="Master Linux process management, monitoring, and job control">
       
       
         <meta name="author" content="Dan McCreary">
@@ -52,7 +52,7 @@
       
     
     
-      <link rel="stylesheet" href="../../styles/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -75,7 +75,7 @@
       
         <meta  property="og:title"  content="Process Management and Job Control - Learning Linux" >
       
-        <meta  property="og:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  property="og:description"  content="Master Linux process management, monitoring, and job control" >
       
         <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/12-processes/index.png" >
       
@@ -91,7 +91,7 @@
       
         <meta  name="twitter:title"  content="Process Management and Job Control - Learning Linux" >
       
-        <meta  name="twitter:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  name="twitter:description"  content="Master Linux process management, monitoring, and job control" >
       
         <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/12-processes/index.png" >
       
@@ -214,7 +214,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -259,7 +259,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -439,8 +439,6 @@
           
         
       
-        
-          
         
       
         
@@ -801,6 +799,444 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#whats-running-on-your-computer-right-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Running on Your Computer Right Now?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processes-programs-in-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processes: Programs in Action
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Processes: Programs in Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#process-id-every-process-has-a-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process ID: Every Process Has a Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parent-process-and-child-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parent Process and Child Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parent Process and Child Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-process-family-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Process Family Tree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-states-whats-a-process-doing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process States: What's a Process Doing?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process States: What's a Process Doing?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zombie-processes-the-walking-dead" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zombie Processes: The Walking Dead
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#foreground-and-background-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foreground and Background Processes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Foreground and Background Processes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foreground-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foreground Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background-process-and-the-ampersand-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background Process and the Ampersand Operator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-jobs-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Jobs Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-fg-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Fg Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-bg-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Bg Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-nohup-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Nohup Command
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-processes-ps-top-and-htop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Processes: ps, top, and htop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Viewing Processes: ps, top, and htop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-ps-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ps Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ps-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ps Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-top-command-a-history-lesson" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Top Command: A History Lesson
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-htop-command-top-but-better" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Htop Command: Top, But Better
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Htop Command: Top, But Better">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#htop-color-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Htop Color Codes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-vs-htop-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top vs Htop Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-processes-pgrep" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding Processes: pgrep
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#killing-processes-kill-killall-pkill" class="md-nav__link">
+    <span class="md-ellipsis">
+      Killing Processes: kill, killall, pkill
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Killing Processes: kill, killall, pkill">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-kill-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Kill Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kill-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kill Signals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-killall-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Killall Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-pkill-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Pkill Command
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-priority-nice-and-renice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Priority: nice and renice
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process Priority: nice and renice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-nice-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Nice Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-renice-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Renice Command
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-the-basics-system-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beyond the Basics: System Monitoring
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beyond the Basics: System Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpu-and-gpu-temperature-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      CPU and GPU Temperature Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-power-monitoring-the-hidden-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      USB Power Monitoring: The Hidden Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-information-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Information Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-custom-process-monitoring-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Custom Process Monitoring Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Custom Process Monitoring Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-cpu-monitor-with-emoji" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple CPU Monitor with Emoji
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-count-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Count Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-time-temperature-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Time Temperature Monitor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-processes-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top Processes Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combining-it-all-system-status-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining It All: System Status Bar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1048,7 +1484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../24-customization/" class="md-nav__link">
+      <a href="../24-customization/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,6 +1609,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1186,7 +1630,7 @@
         
   
   
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1424,6 +1868,444 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#whats-running-on-your-computer-right-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Running on Your Computer Right Now?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processes-programs-in-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processes: Programs in Action
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Processes: Programs in Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#process-id-every-process-has-a-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process ID: Every Process Has a Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parent-process-and-child-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parent Process and Child Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parent Process and Child Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-process-family-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Process Family Tree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-states-whats-a-process-doing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process States: What's a Process Doing?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process States: What's a Process Doing?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zombie-processes-the-walking-dead" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zombie Processes: The Walking Dead
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#foreground-and-background-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foreground and Background Processes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Foreground and Background Processes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foreground-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Foreground Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background-process-and-the-ampersand-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background Process and the Ampersand Operator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-jobs-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Jobs Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-fg-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Fg Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-bg-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Bg Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-nohup-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Nohup Command
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-processes-ps-top-and-htop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Processes: ps, top, and htop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Viewing Processes: ps, top, and htop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-ps-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ps Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ps-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ps Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-top-command-a-history-lesson" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Top Command: A History Lesson
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-htop-command-top-but-better" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Htop Command: Top, But Better
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Htop Command: Top, But Better">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#htop-color-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Htop Color Codes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-vs-htop-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top vs Htop Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-processes-pgrep" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding Processes: pgrep
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#killing-processes-kill-killall-pkill" class="md-nav__link">
+    <span class="md-ellipsis">
+      Killing Processes: kill, killall, pkill
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Killing Processes: kill, killall, pkill">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-kill-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Kill Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kill-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kill Signals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-killall-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Killall Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-pkill-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Pkill Command
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-priority-nice-and-renice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Priority: nice and renice
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process Priority: nice and renice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-nice-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Nice Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-renice-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Renice Command
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-the-basics-system-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beyond the Basics: System Monitoring
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beyond the Basics: System Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpu-and-gpu-temperature-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      CPU and GPU Temperature Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb-power-monitoring-the-hidden-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      USB Power Monitoring: The Hidden Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-information-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Information Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-custom-process-monitoring-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Custom Process Monitoring Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Custom Process Monitoring Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-cpu-monitor-with-emoji" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple CPU Monitor with Emoji
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-count-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Count Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-time-temperature-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Time Temperature Monitor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-processes-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top Processes Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combining-it-all-system-status-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining It All: System Status Bar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1439,7 +2321,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/learniing-linux/blob/master/docs/chapters/12-processes/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/learning-linux/blob/master/docs/chapters/12-processes/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1486,7 +2368,1353 @@
 <li><a href="../03-shell-commands/">Chapter 3: Basic Shell Commands and Help Systems</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<h2 id="whats-running-on-your-computer-right-now">What's Running on Your Computer Right Now?</h2>
+<p>Ever wonder what's happening inside your computer at this very moment? Spoiler alert: A LOT. Even when you think your computer is "doing nothing," there are dozens—sometimes hundreds—of programs running behind the scenes.</p>
+<p>In this chapter, you'll learn to peek behind the curtain and see exactly what's going on. You'll learn to monitor, control, and even terminate programs that misbehave. Think of yourself as the manager of a busy restaurant kitchen—you need to know who's cooking what, who's slacking off, and occasionally, who needs to be fired (terminated, in process-speak).</p>
+<p>Let's dive into the world of <strong>processes</strong>!</p>
+<h2 id="processes-programs-in-action">Processes: Programs in Action</h2>
+<p>A <strong>process</strong> is simply a program that's currently running. When you double-click an app or type a command, the operating system creates a process for it.</p>
+<p>Here's the key distinction:</p>
+<ul>
+<li><strong>Program</strong>: A file on disk (like <code>/usr/bin/firefox</code>)</li>
+<li><strong>Process</strong>: That program loaded into memory and executing</li>
+</ul>
+<p>You can have multiple processes from the same program. Open three terminal windows? That's three processes, all running the same terminal program.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Every running program is a process</span>
+<span class="c1"># Right now, your shell is a process!</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$$</span>
+<span class="c1"># Prints the process ID of your current shell</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="process-id-every-process-has-a-number">Process ID: Every Process Has a Number</h3>
+<p>Every process gets a unique <strong>process ID</strong> (PID)—a number that identifies it. Think of it like a social security number for programs.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See your shell&#39;s PID</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$$</span>
+<span class="c1"># 12345</span>
+
+<span class="c1"># See the PID of a command you just ran</span>
+sleep<span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$!</span>
+<span class="c1"># 12346 (PID of the sleep process)</span>
+</code></pre></div></td></tr></table></div>
+<p>PIDs are assigned sequentially, starting from 1. The process with PID 1 is special—it's <code>init</code> (or <code>systemd</code> on modern systems), the first process that starts when your computer boots.</p>
+<h3 id="parent-process-and-child-process">Parent Process and Child Process</h3>
+<p>Processes have family relationships! When a process starts another process, it becomes a <strong>parent process</strong>, and the new one is a <strong>child process</strong>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Your shell is a parent</span>
+<span class="c1"># Commands you run are children of your shell</span>
+
+<span class="c1"># See parent PID (PPID)</span>
+ps<span class="w"> </span>-o<span class="w"> </span>pid,ppid,cmd
+<span class="c1">#   PID  PPID CMD</span>
+<span class="c1"># 12345  1234 /bin/bash</span>
+<span class="c1"># 12350 12345 ps -o pid,ppid,cmd</span>
+</code></pre></div></td></tr></table></div>
+<p>The family tree goes all the way up:</p>
+<ol>
+<li><code>init/systemd</code> (PID 1) - The grandparent of all processes</li>
+<li>Your login manager</li>
+<li>Your terminal emulator</li>
+<li>Your shell (bash/zsh)</li>
+<li>Commands you run</li>
+</ol>
+<p>When a parent process dies, its children get "adopted" by init (PID 1). No orphans left behind!</p>
+<h4 id="diagram-process-family-tree">Diagram: Process Family Tree</h4>
+<details>
+<summary>Understanding Parent-Child Relationships</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Understand
+Learning Objective: Visualize how processes form a family tree with parent-child relationships.</p>
+<p>Layout: Tree structure showing process hierarchy</p>
+<p>Visual elements:
+- Root node: init/systemd (PID 1)
+- Second level: System services, login manager
+- Third level: Terminal emulator, desktop environment
+- Fourth level: Shell (bash/zsh)
+- Fifth level: User commands (ls, vim, firefox)</p>
+<p>Each node shows:
+- Process name
+- PID
+- Arrow pointing to parent</p>
+<p>Animation:
+- Show process creation (fork)
+- Show process termination
+- Show orphan adoption by init</p>
+<p>Color scheme:
+- System processes: Blue
+- User shell: Green
+- User commands: Yellow
+- Terminated processes: Red (fading)</p>
+<p>Implementation: p5.js</p>
+</details>
+<h2 id="process-states-whats-a-process-doing">Process States: What's a Process Doing?</h2>
+<p><strong>Process states</strong> describe what a process is currently doing. Not all processes are actively running—some are sleeping, waiting, or even dead!</p>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Symbol</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Running</td>
+<td>R</td>
+<td>Actively using CPU</td>
+</tr>
+<tr>
+<td>Sleeping</td>
+<td>S</td>
+<td>Waiting for something (I/O, timer)</td>
+</tr>
+<tr>
+<td>Disk Sleep</td>
+<td>D</td>
+<td>Waiting for disk I/O (uninterruptible)</td>
+</tr>
+<tr>
+<td>Stopped</td>
+<td>T</td>
+<td>Paused (by signal or debugger)</td>
+</tr>
+<tr>
+<td>Zombie</td>
+<td>Z</td>
+<td>Dead but not yet cleaned up</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See process states</span>
+ps<span class="w"> </span>aux
+<span class="c1"># USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND</span>
+<span class="c1"># root         1  0.0  0.1 169836 13460 ?        Ss   Dec01   0:11 /sbin/init</span>
+<span class="c1">#                                                ^^</span>
+<span class="c1">#                                                State: S = sleeping, s = session leader</span>
+</code></pre></div></td></tr></table></div>
+<p>Most processes spend their time sleeping, waiting for you to do something or for data to arrive. That's normal and efficient!</p>
+<h3 id="zombie-processes-the-walking-dead">Zombie Processes: The Walking Dead</h3>
+<p>A <strong>zombie process</strong> is a process that has finished running but hasn't been fully cleaned up yet. It's not using CPU or memory—it's just an entry in the process table, waiting for its parent to acknowledge its death.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Find zombie processes</span>
+ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Z
+<span class="c1"># or</span>
+ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;$8 ~ /Z/ {print}&#39;</span>
+</code></pre></div></td></tr></table></div>
+<p>Zombies happen when:</p>
+<ol>
+<li>A child process finishes</li>
+<li>The parent hasn't called <code>wait()</code> to collect the exit status</li>
+<li>The child becomes a zombie until the parent cleans up</li>
+</ol>
+<p>A few zombies are normal and temporary. Lots of zombies mean a buggy parent program that isn't cleaning up after its children!</p>
+<div class="admonition warning">
+<p class="admonition-title">Zombie Apocalypse</p>
+<p>You can't kill a zombie—it's already dead! To get rid of zombies, you need to either:</p>
+<ol>
+<li>Fix the parent program so it properly cleans up</li>
+<li>Kill the parent process (zombies get adopted by init, which cleans them up)</li>
+</ol>
+</div>
+<h2 id="foreground-and-background-processes">Foreground and Background Processes</h2>
+<p>When you run a command normally, it runs in the <strong>foreground</strong>—it takes over your terminal until it finishes.</p>
+<h3 id="foreground-process">Foreground Process</h3>
+<p>A <strong>foreground process</strong> has control of your terminal. You can't type other commands until it finishes.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># This runs in foreground - terminal is &quot;blocked&quot;</span>
+sleep<span class="w"> </span><span class="m">30</span>
+<span class="c1"># You wait 30 seconds...</span>
+
+<span class="c1"># Press Ctrl+C to interrupt it early</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="background-process-and-the-ampersand-operator">Background Process and the Ampersand Operator</h3>
+<p>A <strong>background process</strong> runs without blocking your terminal. You start one using the <strong>ampersand operator</strong> (<code>&amp;</code>):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Run in background with &amp;</span>
+sleep<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="c1"># [1] 12345</span>
+<span class="c1"># Terminal is free immediately!</span>
+
+<span class="c1"># You can run other commands while sleep runs</span>
+ls
+<span class="nb">pwd</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Sleep is still running in background&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>The <code>[1]</code> is the job number, and <code>12345</code> is the PID.</p>
+<h3 id="the-jobs-command">The Jobs Command</h3>
+<p>The <strong>jobs command</strong> shows background processes started from your current shell:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Start some background jobs</span>
+sleep<span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="p">&amp;</span>
+sleep<span class="w"> </span><span class="m">200</span><span class="w"> </span><span class="p">&amp;</span>
+vim<span class="w"> </span>somefile<span class="w"> </span><span class="p">&amp;</span>
+
+<span class="c1"># List jobs</span>
+<span class="nb">jobs</span>
+<span class="c1"># [1]   Running                 sleep 100 &amp;</span>
+<span class="c1"># [2]-  Running                 sleep 200 &amp;</span>
+<span class="c1"># [3]+  Stopped                 vim somefile</span>
+</code></pre></div></td></tr></table></div>
+<p>The <code>+</code> marks the current job, <code>-</code> marks the previous job.</p>
+<h3 id="the-fg-command">The Fg Command</h3>
+<p>The <strong>fg command</strong> brings a background job to the foreground:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Bring most recent job to foreground</span>
+<span class="nb">fg</span>
+
+<span class="c1"># Bring specific job number to foreground</span>
+<span class="nb">fg</span><span class="w"> </span>%1
+<span class="nb">fg</span><span class="w"> </span>%2
+
+<span class="c1"># Bring job by name</span>
+<span class="nb">fg</span><span class="w"> </span>%sleep
+</code></pre></div></td></tr></table></div>
+<h3 id="the-bg-command">The Bg Command</h3>
+<p>The <strong>bg command</strong> resumes a stopped job in the background:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Start a process</span>
+sleep<span class="w"> </span><span class="m">100</span>
+
+<span class="c1"># Press Ctrl+Z to stop (pause) it</span>
+<span class="c1"># [1]+  Stopped                 sleep 100</span>
+
+<span class="c1"># Resume it in background</span>
+<span class="nb">bg</span>
+<span class="c1"># [1]+ sleep 100 &amp;</span>
+</code></pre></div></td></tr></table></div>
+<p>The workflow: <code>Ctrl+Z</code> (stop) → <code>bg</code> (resume in background) is super useful when you accidentally start a long process in the foreground!</p>
+<h3 id="the-nohup-command">The Nohup Command</h3>
+<p>The <strong>nohup command</strong> (no hangup) lets a process keep running even after you log out:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Run a long script that survives logout</span>
+nohup<span class="w"> </span>./long_script.sh<span class="w"> </span><span class="p">&amp;</span>
+
+<span class="c1"># Output goes to nohup.out by default</span>
+nohup<span class="w"> </span>./script.sh<span class="w"> </span>&gt;<span class="w"> </span>output.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">&amp;</span>
+</code></pre></div></td></tr></table></div>
+<p>Without <code>nohup</code>, background processes receive a "hangup" signal when you close the terminal and typically die. With <code>nohup</code>, they ignore the hangup and keep going.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Perfect for:</span>
+<span class="c1"># - Long-running downloads</span>
+<span class="c1"># - Server processes</span>
+<span class="c1"># - Batch jobs you start before going home</span>
+nohup<span class="w"> </span>wget<span class="w"> </span>https://example.com/huge_file.zip<span class="w"> </span><span class="p">&amp;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="viewing-processes-ps-top-and-htop">Viewing Processes: ps, top, and htop</h2>
+<p>Now let's learn to spy on what's running!</p>
+<h3 id="the-ps-command">The Ps Command</h3>
+<p>The <strong>ps command</strong> (process status) shows a snapshot of current processes.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Basic: just your shell&#39;s processes</span>
+ps
+<span class="c1">#   PID TTY          TIME CMD</span>
+<span class="c1"># 12345 pts/0    00:00:00 bash</span>
+<span class="c1"># 12400 pts/0    00:00:00 ps</span>
+
+<span class="c1"># All processes for current user</span>
+ps<span class="w"> </span>u
+
+<span class="c1"># All processes on the system</span>
+ps<span class="w"> </span>aux
+
+<span class="c1"># All processes in full format</span>
+ps<span class="w"> </span>-ef
+</code></pre></div></td></tr></table></div>
+<h3 id="ps-options">Ps Options</h3>
+<p><strong>Ps options</strong> let you customize the output. There are two styles:</p>
+<p><strong>BSD style</strong> (no dash):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ps<span class="w"> </span>aux<span class="w">    </span><span class="c1"># All processes, user-oriented format</span>
+ps<span class="w"> </span>axjf<span class="w">   </span><span class="c1"># Tree view with job control info</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Unix style</strong> (with dash):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ps<span class="w"> </span>-ef<span class="w">    </span><span class="c1"># All processes, full format</span>
+ps<span class="w"> </span>-u<span class="w"> </span>username<span class="w">  </span><span class="c1"># Processes for specific user</span>
+</code></pre></div></td></tr></table></div>
+<p>Common options:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>a</code></td>
+<td>All users' processes</td>
+</tr>
+<tr>
+<td><code>u</code></td>
+<td>User-oriented format</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>Include processes without terminals</td>
+</tr>
+<tr>
+<td><code>-e</code></td>
+<td>All processes</td>
+</tr>
+<tr>
+<td><code>-f</code></td>
+<td>Full format</td>
+</tr>
+<tr>
+<td><code>-p PID</code></td>
+<td>Specific process</td>
+</tr>
+<tr>
+<td><code>--forest</code></td>
+<td>Tree view</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Find processes by name</span>
+ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>firefox
+
+<span class="c1"># Custom output columns</span>
+ps<span class="w"> </span>-eo<span class="w"> </span>pid,ppid,cmd,%mem,%cpu<span class="w"> </span>--sort<span class="o">=</span>-%cpu<span class="w"> </span><span class="p">|</span><span class="w"> </span>head
+
+<span class="c1"># Tree view (see parent-child relationships)</span>
+ps<span class="w"> </span>auxf
+<span class="c1"># or</span>
+ps<span class="w"> </span>-ejH
+</code></pre></div></td></tr></table></div>
+<h3 id="the-top-command-a-history-lesson">The Top Command: A History Lesson</h3>
+<p>The <strong>top command</strong> is a real-time process viewer that's been around since 1984. Here's a fun fact: top was created when most computers had a <strong>single CPU</strong>! Back then, showing CPU usage was straightforward—there was only one number to show.</p>
+<p>Today, your laptop probably has 4, 8, or even 16 CPU cores, but top's basic interface was designed for simpler times. It's been updated, of course, but you can still see its single-CPU heritage in the default view.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Start top</span>
+top
+</code></pre></div></td></tr></table></div>
+<p><img alt="The top command showing system processes" src="top-screen-capture.png" /></p>
+<p>Top shows:</p>
+<ul>
+<li>System summary (uptime, load, memory)</li>
+<li>Process list sorted by CPU usage (default)</li>
+<li>Updates every 3 seconds</li>
+</ul>
+<p><strong>Top keyboard commands:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>q</code></td>
+<td>Quit</td>
+</tr>
+<tr>
+<td><code>h</code></td>
+<td>Help</td>
+</tr>
+<tr>
+<td><code>k</code></td>
+<td>Kill a process (enter PID)</td>
+</tr>
+<tr>
+<td><code>r</code></td>
+<td>Renice a process</td>
+</tr>
+<tr>
+<td><code>M</code></td>
+<td>Sort by memory</td>
+</tr>
+<tr>
+<td><code>P</code></td>
+<td>Sort by CPU</td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td>Toggle individual CPU cores</td>
+</tr>
+<tr>
+<td><code>c</code></td>
+<td>Show full command</td>
+</tr>
+<tr>
+<td><code>u</code></td>
+<td>Filter by user</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Top in batch mode (for scripts)</span>
+top<span class="w"> </span>-b<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-20
+
+<span class="c1"># Show specific user&#39;s processes</span>
+top<span class="w"> </span>-u<span class="w"> </span>username
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Top's Single-CPU Heritage</p>
+<p>Press <code>1</code> in top to see individual CPU cores. On a modern 8-core machine, you'll see 8 separate CPU lines. This feature was added later as multi-core CPUs became common. The original top just showed one CPU percentage!</p>
+</div>
+<h3 id="the-htop-command-top-but-better">The Htop Command: Top, But Better</h3>
+<p>The <strong>htop command</strong> is top's cooler, younger sibling. It was written in 2004 to address top's limitations and provide a more user-friendly experience.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install htop (if not present)</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>htop<span class="w">    </span><span class="c1"># Debian/Ubuntu</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>htop<span class="w">    </span><span class="c1"># Fedora</span>
+brew<span class="w"> </span>install<span class="w"> </span>htop<span class="w">        </span><span class="c1"># macOS</span>
+
+<span class="c1"># Run htop</span>
+htop
+</code></pre></div></td></tr></table></div>
+<p><img alt="The htop command with colorful CPU bars and mouse support" src="htop-screen-capture.png" /></p>
+<p><strong>Why htop is awesome:</strong></p>
+<ol>
+<li><strong>Color-coded and visual</strong>: CPU and memory bars with colors</li>
+<li><strong>Mouse support</strong>: Click to select, scroll to navigate</li>
+<li><strong>Easier process management</strong>: F9 to kill, F7/F8 to renice</li>
+<li><strong>Tree view built-in</strong>: Press F5 for process tree</li>
+<li><strong>Horizontal and vertical scrolling</strong>: See full commands</li>
+<li><strong>Filter and search</strong>: Press F4 to filter, F3 to search</li>
+<li><strong>Multiple CPU cores displayed beautifully</strong>: Each core gets its own bar</li>
+</ol>
+<p><strong>Htop keyboard commands:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>F1</code> or <code>h</code></td>
+<td>Help</td>
+</tr>
+<tr>
+<td><code>F2</code></td>
+<td>Setup/Configure</td>
+</tr>
+<tr>
+<td><code>F3</code> or <code>/</code></td>
+<td>Search</td>
+</tr>
+<tr>
+<td><code>F4</code> or <code>\</code></td>
+<td>Filter</td>
+</tr>
+<tr>
+<td><code>F5</code></td>
+<td>Tree view</td>
+</tr>
+<tr>
+<td><code>F6</code></td>
+<td>Sort by column</td>
+</tr>
+<tr>
+<td><code>F7</code></td>
+<td>Nice - (decrease priority)</td>
+</tr>
+<tr>
+<td><code>F8</code></td>
+<td>Nice + (increase priority)</td>
+</tr>
+<tr>
+<td><code>F9</code></td>
+<td>Kill process</td>
+</tr>
+<tr>
+<td><code>F10</code> or <code>q</code></td>
+<td>Quit</td>
+</tr>
+<tr>
+<td><code>Space</code></td>
+<td>Tag process</td>
+</tr>
+<tr>
+<td><code>U</code></td>
+<td>Untag all</td>
+</tr>
+<tr>
+<td><code>u</code></td>
+<td>Filter by user</td>
+</tr>
+<tr>
+<td><code>t</code></td>
+<td>Toggle tree view</td>
+</tr>
+</tbody>
+</table>
+<h4 id="htop-color-codes">Htop Color Codes</h4>
+<p>The colored bars in htop mean things:</p>
+<p><strong>CPU bars:</strong></p>
+<ul>
+<li><strong>Blue</strong>: Low priority processes</li>
+<li><strong>Green</strong>: Normal user processes</li>
+<li><strong>Red</strong>: Kernel (system) processes</li>
+<li><strong>Cyan</strong>: Virtualization (steal time)</li>
+</ul>
+<p><strong>Memory bar:</strong></p>
+<ul>
+<li><strong>Green</strong>: Used memory</li>
+<li><strong>Blue</strong>: Buffer memory</li>
+<li><strong>Yellow/Orange</strong>: Cache memory</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Htop with tree view by default</span>
+htop<span class="w"> </span>-t
+
+<span class="c1"># Htop for specific user</span>
+htop<span class="w"> </span>-u<span class="w"> </span>username
+
+<span class="c1"># Htop with specific PID highlighted</span>
+htop<span class="w"> </span>-p<span class="w"> </span><span class="m">1234</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Customize htop</p>
+<p>Press F2 to enter htop's setup. You can:</p>
+<ul>
+<li>Choose which meters to display (CPU, memory, load, etc.)</li>
+<li>Customize colors</li>
+<li>Set default sort column</li>
+<li>Configure tree view options</li>
+</ul>
+<p>Your settings are saved to <code>~/.config/htop/htoprc</code>.</p>
+</div>
+<h3 id="top-vs-htop-comparison">Top vs Htop Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>top</th>
+<th>htop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Age</td>
+<td>1984</td>
+<td>2004</td>
+</tr>
+<tr>
+<td>Colors</td>
+<td>Limited</td>
+<td>Rich</td>
+</tr>
+<tr>
+<td>Mouse support</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Tree view</td>
+<td>Awkward</td>
+<td>Built-in (F5)</td>
+</tr>
+<tr>
+<td>Kill process</td>
+<td>Enter PID</td>
+<td>Select + F9</td>
+</tr>
+<tr>
+<td>Scroll</td>
+<td>Vertical only</td>
+<td>Both directions</td>
+</tr>
+<tr>
+<td>CPU display</td>
+<td>Text percentage</td>
+<td>Visual bars</td>
+</tr>
+<tr>
+<td>Learning curve</td>
+<td>Steeper</td>
+<td>Gentler</td>
+</tr>
+</tbody>
+</table>
+<h2 id="finding-processes-pgrep">Finding Processes: pgrep</h2>
+<p>The <strong>pgrep command</strong> finds processes by name or attributes:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Find PID of firefox</span>
+pgrep<span class="w"> </span>firefox
+<span class="c1"># 12345</span>
+<span class="c1"># 12346 (if multiple instances)</span>
+
+<span class="c1"># Show process names too</span>
+pgrep<span class="w"> </span>-l<span class="w"> </span>firefox
+<span class="c1"># 12345 firefox</span>
+<span class="c1"># 12346 firefox</span>
+
+<span class="c1"># Match full command line</span>
+pgrep<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;python script.py&quot;</span>
+
+<span class="c1"># Find by user</span>
+pgrep<span class="w"> </span>-u<span class="w"> </span>username
+
+<span class="c1"># Count matching processes</span>
+pgrep<span class="w"> </span>-c<span class="w"> </span>firefox
+<span class="c1"># 2</span>
+</code></pre></div></td></tr></table></div>
+<p>Pgrep is perfect for scripts:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check if process is running</span>
+<span class="k">if</span><span class="w"> </span>pgrep<span class="w"> </span>-x<span class="w"> </span>firefox<span class="w"> </span>&gt;<span class="w"> </span>/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Firefox is running&quot;</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Firefox is not running&quot;</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="killing-processes-kill-killall-pkill">Killing Processes: kill, killall, pkill</h2>
+<p>Sometimes you need to terminate a misbehaving process. Linux provides several ways to do this.</p>
+<h3 id="the-kill-command">The Kill Command</h3>
+<p>The <strong>kill command</strong> sends signals to processes by PID:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Send TERM signal (polite request to exit)</span>
+<span class="nb">kill</span><span class="w"> </span><span class="m">12345</span>
+
+<span class="c1"># Same as above (SIGTERM = signal 15)</span>
+<span class="nb">kill</span><span class="w"> </span>-15<span class="w"> </span><span class="m">12345</span>
+<span class="nb">kill</span><span class="w"> </span>-TERM<span class="w"> </span><span class="m">12345</span>
+
+<span class="c1"># Force kill (when TERM doesn&#39;t work)</span>
+<span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span><span class="m">12345</span>
+<span class="nb">kill</span><span class="w"> </span>-KILL<span class="w"> </span><span class="m">12345</span>
+<span class="nb">kill</span><span class="w"> </span>-SIGKILL<span class="w"> </span><span class="m">12345</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="kill-signals">Kill Signals</h3>
+<p><strong>Kill signals</strong> are different types of messages you can send to processes:</p>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Number</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SIGHUP</td>
+<td>1</td>
+<td>Hangup (reload config for daemons)</td>
+</tr>
+<tr>
+<td>SIGINT</td>
+<td>2</td>
+<td>Interrupt (like Ctrl+C)</td>
+</tr>
+<tr>
+<td>SIGQUIT</td>
+<td>3</td>
+<td>Quit with core dump</td>
+</tr>
+<tr>
+<td>SIGKILL</td>
+<td>9</td>
+<td>Force kill (can't be ignored!)</td>
+</tr>
+<tr>
+<td>SIGTERM</td>
+<td>15</td>
+<td>Terminate gracefully (default)</td>
+</tr>
+<tr>
+<td>SIGSTOP</td>
+<td>19</td>
+<td>Stop/pause process</td>
+</tr>
+<tr>
+<td>SIGCONT</td>
+<td>18</td>
+<td>Continue stopped process</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># List all signals</span>
+<span class="nb">kill</span><span class="w"> </span>-l
+
+<span class="c1"># Reload a daemon&#39;s configuration</span>
+<span class="nb">kill</span><span class="w"> </span>-HUP<span class="w"> </span><span class="k">$(</span>pgrep<span class="w"> </span>nginx<span class="k">)</span>
+
+<span class="c1"># Stop a process (pause it)</span>
+<span class="nb">kill</span><span class="w"> </span>-STOP<span class="w"> </span><span class="m">12345</span>
+
+<span class="c1"># Resume a stopped process</span>
+<span class="nb">kill</span><span class="w"> </span>-CONT<span class="w"> </span><span class="m">12345</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition warning">
+<p class="admonition-title">SIGKILL (kill -9) Is a Last Resort</p>
+<p>SIGTERM asks nicely: "Please exit and clean up."
+SIGKILL doesn't ask: "You're dead. Now."</p>
+<p>Always try SIGTERM first! SIGKILL:</p>
+<ul>
+<li>Can't be caught or ignored</li>
+<li>Doesn't let the process clean up</li>
+<li>May leave temp files, locks, or corrupted data</li>
+<li>Use only when SIGTERM doesn't work</li>
+</ul>
+</div>
+<h3 id="the-killall-command">The Killall Command</h3>
+<p>The <strong>killall command</strong> kills processes by name:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Kill all firefox processes</span>
+killall<span class="w"> </span>firefox
+
+<span class="c1"># Force kill</span>
+killall<span class="w"> </span>-9<span class="w"> </span>firefox
+
+<span class="c1"># Interactive (ask before each kill)</span>
+killall<span class="w"> </span>-i<span class="w"> </span>firefox
+
+<span class="c1"># Kill only if owned by specific user</span>
+killall<span class="w"> </span>-u<span class="w"> </span>username<span class="w"> </span>firefox
+</code></pre></div></td></tr></table></div>
+<h3 id="the-pkill-command">The Pkill Command</h3>
+<p>The <strong>pkill command</strong> is like pgrep + kill combined:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Kill by name</span>
+pkill<span class="w"> </span>firefox
+
+<span class="c1"># Kill by pattern in command line</span>
+pkill<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;python script.py&quot;</span>
+
+<span class="c1"># Kill by user</span>
+pkill<span class="w"> </span>-u<span class="w"> </span>username
+
+<span class="c1"># Send specific signal</span>
+pkill<span class="w"> </span>-9<span class="w"> </span>firefox
+pkill<span class="w"> </span>-KILL<span class="w"> </span>firefox
+</code></pre></div></td></tr></table></div>
+<p>The difference between killall and pkill:</p>
+<ul>
+<li><code>killall</code>: Exact process name match</li>
+<li><code>pkill</code>: Pattern matching (more flexible)</li>
+</ul>
+<h2 id="process-priority-nice-and-renice">Process Priority: nice and renice</h2>
+<p>Not all processes are equal! <strong>Process priority</strong> determines how much CPU time a process gets.</p>
+<h3 id="the-nice-command">The Nice Command</h3>
+<p>The <strong>nice command</strong> starts a process with a specific priority:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Nice values range from -20 (highest priority) to 19 (lowest)</span>
+<span class="c1"># Default is 0</span>
+
+<span class="c1"># Start with lower priority (be &quot;nice&quot; to other processes)</span>
+nice<span class="w"> </span>-n<span class="w"> </span><span class="m">10</span><span class="w"> </span>./cpu_intensive_script.sh
+
+<span class="c1"># Start with higher priority (requires root)</span>
+sudo<span class="w"> </span>nice<span class="w"> </span>-n<span class="w"> </span>-10<span class="w"> </span>./important_process
+
+<span class="c1"># Maximum niceness (lowest priority)</span>
+nice<span class="w"> </span>-n<span class="w"> </span><span class="m">19</span><span class="w"> </span>./background_task.sh
+</code></pre></div></td></tr></table></div>
+<p>Think of it this way:</p>
+<ul>
+<li><strong>Negative nice</strong> = Less nice to others = Higher priority</li>
+<li><strong>Positive nice</strong> = More nice to others = Lower priority</li>
+</ul>
+<h3 id="the-renice-command">The Renice Command</h3>
+<p>The <strong>renice command</strong> changes the priority of a running process:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Change priority of specific PID</span>
+renice<span class="w"> </span><span class="m">10</span><span class="w"> </span>-p<span class="w"> </span><span class="m">12345</span>
+
+<span class="c1"># Change priority for all processes of a user</span>
+renice<span class="w"> </span><span class="m">5</span><span class="w"> </span>-u<span class="w"> </span>username
+
+<span class="c1"># Increase priority (requires root)</span>
+sudo<span class="w"> </span>renice<span class="w"> </span>-10<span class="w"> </span>-p<span class="w"> </span><span class="m">12345</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Common use: Make a runaway process less impactful</span>
+<span class="c1"># Find the CPU hog</span>
+top
+<span class="c1"># Note the PID (let&#39;s say 12345)</span>
+
+<span class="c1"># Lower its priority so other things can run</span>
+renice<span class="w"> </span><span class="m">19</span><span class="w"> </span>-p<span class="w"> </span><span class="m">12345</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="beyond-the-basics-system-monitoring">Beyond the Basics: System Monitoring</h2>
+<p>Modern computers expose incredible amounts of information through various APIs. Let's explore!</p>
+<h3 id="cpu-and-gpu-temperature-monitoring">CPU and GPU Temperature Monitoring</h3>
+<p>Many computers have extensive APIs for monitoring things like CPU and GPU temperature. This is critical for:</p>
+<ul>
+<li>Preventing thermal throttling</li>
+<li>Detecting cooling problems</li>
+<li>Optimizing performance</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># CPU temperature (Linux)</span>
+<span class="c1"># Method 1: sensors (from lm-sensors package)</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>lm-sensors
+sudo<span class="w"> </span>sensors-detect<span class="w">    </span><span class="c1"># Configure once</span>
+sensors
+<span class="c1"># coretemp-isa-0000</span>
+<span class="c1"># Core 0:       +45.0°C  (high = +100.0°C, crit = +110.0°C)</span>
+<span class="c1"># Core 1:       +43.0°C  (high = +100.0°C, crit = +110.0°C)</span>
+
+<span class="c1"># Method 2: Direct from /sys</span>
+cat<span class="w"> </span>/sys/class/thermal/thermal_zone*/temp
+<span class="c1"># 45000  (divide by 1000 for Celsius)</span>
+
+<span class="c1"># GPU temperature (NVIDIA)</span>
+nvidia-smi<span class="w"> </span>--query-gpu<span class="o">=</span>temperature.gpu<span class="w"> </span>--format<span class="o">=</span>csv
+<span class="c1"># temperature.gpu</span>
+<span class="c1"># 55</span>
+
+<span class="c1"># GPU temperature (AMD)</span>
+cat<span class="w"> </span>/sys/class/drm/card0/device/hwmon/hwmon*/temp1_input
+</code></pre></div></td></tr></table></div>
+<p><strong>macOS:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Requires osx-cpu-temp or similar tool</span>
+brew<span class="w"> </span>install<span class="w"> </span>osx-cpu-temp
+osx-cpu-temp
+<span class="c1"># 54.0°C</span>
+
+<span class="c1"># Or use powermetrics (built-in)</span>
+sudo<span class="w"> </span>powermetrics<span class="w"> </span>--samplers<span class="w"> </span>smc<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>temp
+</code></pre></div></td></tr></table></div>
+<h3 id="usb-power-monitoring-the-hidden-data">USB Power Monitoring: The Hidden Data</h3>
+<p>Here's something cool that most people don't know: many USB Input/Output chips can tell the OS how much current is being used! However, operating systems often don't display this information in user-friendly ways.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Linux: USB device information</span>
+lsusb<span class="w"> </span>-v<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;MaxPower|bMaxPower&quot;</span>
+<span class="c1">#     bMaxPower              500mA</span>
+<span class="c1">#     bMaxPower              100mA</span>
+
+<span class="c1"># More detailed USB power info</span>
+cat<span class="w"> </span>/sys/bus/usb/devices/*/power/active_duration
+cat<span class="w"> </span>/sys/bus/usb/devices/*/bMaxPower
+
+<span class="c1"># On some systems with proper drivers:</span>
+cat<span class="w"> </span>/sys/class/power_supply/*/current_now
+cat<span class="w"> </span>/sys/class/power_supply/*/voltage_now
+</code></pre></div></td></tr></table></div>
+<p>Some USB hubs and docks have chips that report actual current draw in real-time, but this data often requires special tools to access. It's a goldmine of information that's mostly untapped!</p>
+<h3 id="system-information-commands">System Information Commands</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># CPU information</span>
+lscpu
+cat<span class="w"> </span>/proc/cpuinfo
+
+<span class="c1"># Memory information</span>
+free<span class="w"> </span>-h
+cat<span class="w"> </span>/proc/meminfo
+
+<span class="c1"># Disk usage</span>
+df<span class="w"> </span>-h
+iostat
+
+<span class="c1"># Network statistics</span>
+netstat<span class="w"> </span>-i
+ip<span class="w"> </span>-s<span class="w"> </span>link
+
+<span class="c1"># All hardware info</span>
+sudo<span class="w"> </span>lshw<span class="w"> </span>-short
+</code></pre></div></td></tr></table></div>
+<h2 id="creating-custom-process-monitoring-tools">Creating Custom Process Monitoring Tools</h2>
+<p>Now for the fun part! Let's build some custom monitoring tools using shell scripting. This is where your Linux skills really shine!</p>
+<h3 id="simple-cpu-monitor-with-emoji">Simple CPU Monitor with Emoji</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># cpu-mood.sh - Shows CPU mood based on usage</span>
+
+<span class="k">while</span><span class="w"> </span>true<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nv">cpu</span><span class="o">=</span><span class="k">$(</span>top<span class="w"> </span>-bn1<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;Cpu(s)&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $2}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d.<span class="w"> </span>-f1<span class="k">)</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$cpu</span><span class="s2">&quot;</span><span class="w"> </span>-lt<span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;😴 CPU is chillin&#39; at </span><span class="si">${</span><span class="nv">cpu</span><span class="si">}</span><span class="s2">%&quot;</span>
+<span class="w">    </span><span class="k">elif</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$cpu</span><span class="s2">&quot;</span><span class="w"> </span>-lt<span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;🙂 CPU is working at </span><span class="si">${</span><span class="nv">cpu</span><span class="si">}</span><span class="s2">%&quot;</span>
+<span class="w">    </span><span class="k">elif</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$cpu</span><span class="s2">&quot;</span><span class="w"> </span>-lt<span class="w"> </span><span class="m">75</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;😓 CPU is busy at </span><span class="si">${</span><span class="nv">cpu</span><span class="si">}</span><span class="s2">%&quot;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;🔥 CPU is ON FIRE at </span><span class="si">${</span><span class="nv">cpu</span><span class="si">}</span><span class="s2">%!&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
+
+<span class="w">    </span>sleep<span class="w"> </span><span class="m">2</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="process-count-dashboard">Process Count Dashboard</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># process-dashboard.sh - Fun process statistics</span>
+
+clear
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;═══════════════════════════════════════&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;       🖥️  PROCESS DASHBOARD  🖥️&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;═══════════════════════════════════════&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;📊 Total processes: </span><span class="k">$(</span>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;😴 Sleeping:        </span><span class="k">$(</span>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;$8 ~ /S/ {count++} END {print count}&#39;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;🏃 Running:         </span><span class="k">$(</span>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;$8 ~ /R/ {count++} END {print count}&#39;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;🧟 Zombies:         </span><span class="k">$(</span>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;$8 ~ /Z/ {count++} END {print count}&#39;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;👤 Your processes:  </span><span class="k">$(</span>ps<span class="w"> </span>-u<span class="w"> </span><span class="nv">$USER</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;🔝 Top CPU hog:     </span><span class="k">$(</span>ps<span class="w"> </span>aux<span class="w"> </span>--sort<span class="o">=</span>-%cpu<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;NR==2 {print $11}&#39;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;🐘 Top RAM hog:     </span><span class="k">$(</span>ps<span class="w"> </span>aux<span class="w"> </span>--sort<span class="o">=</span>-%mem<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;NR==2 {print $11}&#39;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;═══════════════════════════════════════&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="real-time-temperature-monitor">Real-Time Temperature Monitor</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># temp-watch.sh - Monitor CPU temperature with visual gauge</span>
+
+get_temp<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span>/sys/class/thermal/thermal_zone0/temp<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="k">$(($(</span>cat<span class="w"> </span>/sys/class/thermal/thermal_zone0/temp<span class="k">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">1000</span><span class="k">))</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;N/A&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
+
+<span class="k">while</span><span class="w"> </span>true<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nv">temp</span><span class="o">=</span><span class="k">$(</span>get_temp<span class="k">)</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$temp</span><span class="s2">&quot;</span><span class="w"> </span>!<span class="o">=</span><span class="w"> </span><span class="s2">&quot;N/A&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="c1"># Create a visual bar</span>
+<span class="w">        </span><span class="nv">bar</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>i&lt;temp/5<span class="p">;</span><span class="w"> </span>i++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$temp</span><span class="w"> </span>-lt<span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">                </span><span class="nv">bar</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">bar</span><span class="si">}</span><span class="s2">🟩&quot;</span>
+<span class="w">            </span><span class="k">elif</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$temp</span><span class="w"> </span>-lt<span class="w"> </span><span class="m">70</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">                </span><span class="nv">bar</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">bar</span><span class="si">}</span><span class="s2">🟨&quot;</span>
+<span class="w">            </span><span class="k">else</span>
+<span class="w">                </span><span class="nv">bar</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">bar</span><span class="si">}</span><span class="s2">🟥&quot;</span>
+<span class="w">            </span><span class="k">fi</span>
+<span class="w">        </span><span class="k">done</span>
+
+<span class="w">        </span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;\r🌡️  CPU: %d°C %s    &quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$temp</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$bar</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
+
+<span class="w">    </span>sleep<span class="w"> </span><span class="m">1</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="top-processes-table">Top Processes Table</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># top5.sh - Pretty top 5 processes display</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;┌──────────────────────────────────────────────────────────┐&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;│                    TOP 5 CPU HOGS                        │&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;├──────┬────────┬────────┬─────────────────────────────────┤&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;│ CPU% │  MEM%  │  PID   │ COMMAND                         │&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;├──────┼────────┼────────┼─────────────────────────────────┤&quot;</span>
+
+ps<span class="w"> </span>aux<span class="w"> </span>--sort<span class="o">=</span>-%cpu<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-6<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-5<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>user<span class="w"> </span>pid<span class="w"> </span>cpu<span class="w"> </span>mem<span class="w"> </span>vsz<span class="w"> </span>rss<span class="w"> </span>tty<span class="w"> </span>stat<span class="w"> </span>start<span class="w"> </span><span class="nb">time</span><span class="w"> </span>cmd<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;│ %4s │ %6s │ %6s │ %-31s │\n&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$cpu</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$mem</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$pid</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">cmd</span><span class="p">:</span><span class="nv">0</span><span class="p">:</span><span class="nv">31</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">done</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;└──────┴────────┴────────┴─────────────────────────────────┘&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="combining-it-all-system-status-bar">Combining It All: System Status Bar</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># status-bar.sh - One-line system status</span>
+
+<span class="k">while</span><span class="w"> </span>true<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="c1"># CPU usage</span>
+<span class="w">    </span><span class="nv">cpu</span><span class="o">=</span><span class="k">$(</span>top<span class="w"> </span>-bn1<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;Cpu(s)&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{printf &quot;%.0f&quot;, $2}&#39;</span><span class="k">)</span>
+
+<span class="w">    </span><span class="c1"># Memory usage</span>
+<span class="w">    </span><span class="nv">mem</span><span class="o">=</span><span class="k">$(</span>free<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;/Mem/ {printf &quot;%.0f&quot;, $3/$2 * 100}&#39;</span><span class="k">)</span>
+
+<span class="w">    </span><span class="c1"># Process count</span>
+<span class="w">    </span><span class="nv">procs</span><span class="o">=</span><span class="k">$(</span>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l<span class="k">)</span>
+
+<span class="w">    </span><span class="c1"># Load average</span>
+<span class="w">    </span><span class="nv">load</span><span class="o">=</span><span class="k">$(</span>uptime<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span>-F<span class="s1">&#39;load average:&#39;</span><span class="w"> </span><span class="s1">&#39;{print $2}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d,<span class="w"> </span>-f1<span class="k">)</span>
+
+<span class="w">    </span><span class="c1"># Temperature (if available)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span>/sys/class/thermal/thermal_zone0/temp<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nv">temp</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(($(</span>cat<span class="w"> </span>/sys/class/thermal/thermal_zone0/temp<span class="k">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">1000</span><span class="k">))</span><span class="s2">°C&quot;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="nv">temp</span><span class="o">=</span><span class="s2">&quot;N/A&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
+
+<span class="w">    </span><span class="c1"># Display</span>
+<span class="w">    </span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;\r⚡CPU:%s%% 🧠MEM:%s%% 📊PROCS:%s 📈LOAD:%s 🌡️TEMP:%s    &quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">           </span><span class="s2">&quot;</span><span class="nv">$cpu</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$mem</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$procs</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$load</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$temp</span><span class="s2">&quot;</span>
+
+<span class="w">    </span>sleep<span class="w"> </span><span class="m">2</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Make Your Monitoring Tools</p>
+<p>These scripts are starting points! You can:</p>
+<ul>
+<li>Add notifications when thresholds are exceeded</li>
+<li>Log to files for later analysis</li>
+<li>Create web dashboards with tools like Grafana</li>
+<li>Send alerts to Slack or Discord</li>
+<li>Make them look even cooler with ANSI colors</li>
+</ul>
+</div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>You're now a process management pro!</p>
+<ul>
+<li><strong>Processes</strong>: Running programs, each with a unique PID</li>
+<li><strong>Parent/Child</strong>: Processes form a family tree from init (PID 1)</li>
+<li><strong>States</strong>: Running, Sleeping, Stopped, Zombie</li>
+<li><strong>Foreground/Background</strong>: <code>&amp;</code> runs in background, <code>fg</code>/<code>bg</code> control jobs</li>
+<li><strong>Monitoring</strong>: <code>ps</code> for snapshots, <code>top</code>/<code>htop</code> for real-time</li>
+<li><strong>Signals</strong>: Different ways to communicate with processes (TERM, KILL, HUP)</li>
+<li><strong>Priority</strong>: <code>nice</code>/<code>renice</code> control CPU allocation</li>
+<li><strong>Temperature</strong>: Modern systems expose CPU/GPU temps via APIs</li>
+<li><strong>Custom tools</strong>: Shell scripts can create powerful monitoring dashboards</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">You're a Process Master!</p>
+<p>You can now see everything running on your system, control jobs like a pro, humanely terminate misbehaving processes, and even build your own monitoring tools. When something goes wrong, you'll know exactly how to investigate and fix it!</p>
+</div>
+<h2 id="whats-next">What's Next?</h2>
+<p>Now that you understand processes, it's time to automate them! The next chapter covers shell scripting—writing programs that can monitor, manage, and automate your system.</p>
+<hr />
+<details class="question">
+<summary>Quick Quiz: Process Management</summary>
+<ol>
+<li>What is a PID?</li>
+<li>How do you run a command in the background?</li>
+<li>What's the difference between SIGTERM and SIGKILL?</li>
+<li>What is a zombie process?</li>
+<li>How do you change the priority of a running process?</li>
+<li>What command shows real-time process information with colors and mouse support?</li>
+</ol>
+</details>
+<details class="note">
+<summary>Quiz Answers</summary>
+<ol>
+<li>Process ID - a unique number identifying each running process</li>
+<li>Add <code>&amp;</code> at the end of the command (e.g., <code>sleep 100 &amp;</code>)</li>
+<li>SIGTERM asks the process to exit gracefully; SIGKILL forces immediate termination</li>
+<li>A process that has finished but whose exit status hasn't been collected by its parent</li>
+<li>Use the <code>renice</code> command (e.g., <code>renice 10 -p PID</code>)</li>
+<li><code>htop</code></li>
+</ol>
+</details>
 
 
 
@@ -1588,7 +3816,7 @@
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../js/extra.css"></script>
+        <script src="../../js/extra.js"></script>
       
     
   </body>

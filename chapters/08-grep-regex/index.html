@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+        <meta name="description" content="Master pattern matching and text search with grep and regex">
       
       
         <meta name="author" content="Dan McCreary">
@@ -52,7 +52,7 @@
       
     
     
-      <link rel="stylesheet" href="../../styles/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -75,7 +75,7 @@
       
         <meta  property="og:title"  content="Text Processing with Grep and Regular Expressions - Learning Linux" >
       
-        <meta  property="og:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  property="og:description"  content="Master pattern matching and text search with grep and regex" >
       
         <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/08-grep-regex/index.png" >
       
@@ -91,7 +91,7 @@
       
         <meta  name="twitter:title"  content="Text Processing with Grep and Regular Expressions - Learning Linux" >
       
-        <meta  name="twitter:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  name="twitter:description"  content="Master pattern matching and text search with grep and regex" >
       
         <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/08-grep-regex/index.png" >
       
@@ -214,7 +214,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -259,7 +259,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -439,8 +439,6 @@
           
         
       
-        
-          
         
       
         
@@ -712,6 +710,549 @@
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-superpower-of-text-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Superpower of Text Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-grep-command-global-regular-expression-print" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Grep Command: Global Regular Expression Print
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Grep Command: Global Regular Expression Print">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-grep-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Grep Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-grep-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Grep Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grep-options-fine-tuning-your-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grep Options: Fine-Tuning Your Search
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grep Options: Fine-Tuning Your Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-grep-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Grep Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option Examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inverting-matches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inverting Matches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inverting Matches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-grep-command-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Grep Command Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regular-expressions-the-pattern-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regular Expressions: The Pattern Language
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regular Expressions: The Pattern Language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-learn-regex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Learn Regex?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-regex-simple-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Regex: Simple Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regex-metacharacters-special-pattern-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regex Metacharacters: Special Pattern Symbols
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regex Metacharacters: Special Pattern Symbols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-dot-any-single-character" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Dot (.) - Any Single Character
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-asterisk-zero-or-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Asterisk (*) - Zero or More
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-backslash-escape-character" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Backslash () - Escape Character
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-metacharacters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Metacharacters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regex-anchors-position-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regex Anchors: Position Matters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regex Anchors: Position Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-of-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start of Line (^)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-of-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      End of Line ($)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combining-anchors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining Anchors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Combining Anchors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-regex-anchors-visualized" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Regex Anchors Visualized
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regex-character-classes-sets-of-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regex Character Classes: Sets of Characters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regex Character Classes: Sets of Characters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-character-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Character Classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combining-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining Characters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#negated-character-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Negated Character Classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#posix-character-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      POSIX Character Classes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regex-quantifiers-how-many" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regex Quantifiers: How Many?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regex Quantifiers: How Many?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-quantifiers-in-bre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Quantifiers (in BRE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extended-regex-quantifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extended Regex Quantifiers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantifier-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantifier Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-regex-vs-extended-regex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Regex vs Extended Regex
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Regex vs Extended Regex">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-regex-bre-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Regex (BRE) - Default
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extended-regex-ere-grep-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extended Regex (ERE) - grep -E
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-which" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Which?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When to Use Which?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-interactive-regex-tester" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Interactive Regex Tester
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-grep-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Grep Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Grep Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-ip-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding IP Addresses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-email-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding Email Addresses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-file-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log File Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-searching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Searching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-file-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration File Parsing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-complex-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Complex Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building Complex Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-matching-phone-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Matching Phone Numbers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-matching-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Matching URLs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-matching-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Matching Dates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grep-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grep Cheat Sheet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grep Cheat Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#most-used-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Most-Used Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
     </span>
   </a>
   
@@ -1048,7 +1589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../24-customization/" class="md-nav__link">
+      <a href="../24-customization/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,6 +1714,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1186,7 +1735,7 @@
         
   
   
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1424,6 +1973,549 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#the-superpower-of-text-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Superpower of Text Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-grep-command-global-regular-expression-print" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Grep Command: Global Regular Expression Print
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Grep Command: Global Regular Expression Print">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-grep-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Grep Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-grep-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Grep Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grep-options-fine-tuning-your-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grep Options: Fine-Tuning Your Search
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grep Options: Fine-Tuning Your Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-grep-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Grep Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option Examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inverting-matches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inverting Matches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inverting Matches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-grep-command-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Grep Command Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regular-expressions-the-pattern-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regular Expressions: The Pattern Language
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regular Expressions: The Pattern Language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-learn-regex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Learn Regex?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-regex-simple-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Regex: Simple Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regex-metacharacters-special-pattern-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regex Metacharacters: Special Pattern Symbols
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regex Metacharacters: Special Pattern Symbols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-dot-any-single-character" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Dot (.) - Any Single Character
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-asterisk-zero-or-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Asterisk (*) - Zero or More
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-backslash-escape-character" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Backslash () - Escape Character
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-metacharacters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Metacharacters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regex-anchors-position-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regex Anchors: Position Matters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regex Anchors: Position Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-of-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start of Line (^)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-of-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      End of Line ($)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combining-anchors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining Anchors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Combining Anchors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-regex-anchors-visualized" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Regex Anchors Visualized
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regex-character-classes-sets-of-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regex Character Classes: Sets of Characters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regex Character Classes: Sets of Characters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-character-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Character Classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combining-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining Characters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#negated-character-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Negated Character Classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#posix-character-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      POSIX Character Classes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regex-quantifiers-how-many" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regex Quantifiers: How Many?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regex Quantifiers: How Many?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-quantifiers-in-bre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Quantifiers (in BRE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extended-regex-quantifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extended Regex Quantifiers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantifier-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantifier Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-regex-vs-extended-regex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Regex vs Extended Regex
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Regex vs Extended Regex">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-regex-bre-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Regex (BRE) - Default
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extended-regex-ere-grep-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extended Regex (ERE) - grep -E
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-which" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Which?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When to Use Which?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-interactive-regex-tester" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Interactive Regex Tester
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-grep-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Grep Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Grep Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-ip-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding IP Addresses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-email-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding Email Addresses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-file-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log File Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-searching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Searching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-file-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration File Parsing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-complex-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Complex Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building Complex Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-matching-phone-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Matching Phone Numbers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-matching-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Matching URLs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-matching-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Matching Dates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grep-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grep Cheat Sheet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grep Cheat Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#most-used-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Most-Used Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1439,7 +2531,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/learniing-linux/blob/master/docs/chapters/08-grep-regex/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/learning-linux/blob/master/docs/chapters/08-grep-regex/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1451,7 +2543,7 @@
 <h2 id="summary">Summary</h2>
 <p>This chapter introduces powerful text search techniques using grep and regular expressions. You'll learn to search for patterns in files, understand basic and extended regular expressions, and master metacharacters, anchors, character classes, and quantifiers. Regular expressions are a fundamental skill used across programming languages and tools.</p>
 <h2 id="concepts-covered">Concepts Covered</h2>
-<p>This chapter covers the following 15 concepts from the learning graph:</p>
+<p>This chapter covers the following 9 concepts from the learning graph:</p>
 <ol>
 <li>Grep Command</li>
 <li>Grep Options</li>
@@ -1469,7 +2561,1168 @@
 <li><a href="../05-file-operations/">Chapter 5: File Operations and Manipulation</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<h2 id="the-superpower-of-text-search">The Superpower of Text Search</h2>
+<p>Imagine you have a log file with 50,000 lines, and somewhere in there is an error message you need to find. Or maybe you need to find every email address in a document. Or locate all the lines in your code that contain a function call.</p>
+<p>You could scroll through manually, but that would take forever. Instead, you'll use <strong>grep</strong> and <strong>regular expressions</strong>—the ultimate text-searching duo!</p>
+<p><strong>Grep</strong> is like a metal detector for text: it scans through files and pulls out exactly the lines you're looking for. <strong>Regular expressions</strong> (regex) are the patterns you use to describe WHAT you're looking for. Together, they're like having superpowers for finding needles in haystacks!</p>
+<p>In this chapter, you'll learn:</p>
+<ul>
+<li>How to search files with grep</li>
+<li>How to write patterns that match complex text</li>
+<li>Regex building blocks: anchors, character classes, and quantifiers</li>
+<li>Real-world examples you'll use constantly</li>
+</ul>
+<p>Let's get grepping!</p>
+<h2 id="the-grep-command-global-regular-expression-print">The Grep Command: Global Regular Expression Print</h2>
+<p>The <strong>grep command</strong> searches for patterns in files and displays matching lines. The name "grep" comes from "<strong>G</strong>lobal <strong>R</strong>egular <strong>E</strong>xpression <strong>P</strong>rint"—a command from an old text editor.</p>
+<h3 id="basic-grep-usage">Basic Grep Usage</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Search for &quot;error&quot; in a file</span>
+grep<span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="w"> </span>logfile.txt
+
+<span class="c1"># Search is case-sensitive by default</span>
+grep<span class="w"> </span><span class="s2">&quot;Error&quot;</span><span class="w"> </span>logfile.txt<span class="w">      </span><span class="c1"># Different from &quot;error&quot;</span>
+
+<span class="c1"># Search multiple files</span>
+grep<span class="w"> </span><span class="s2">&quot;TODO&quot;</span><span class="w"> </span>*.py
+
+<span class="c1"># Search recursively in directories</span>
+grep<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;password&quot;</span><span class="w"> </span>/etc/
+</code></pre></div></td></tr></table></div>
+<p>When grep finds a match, it prints the entire line containing that match. If you search multiple files, it shows which file each match came from.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>grep<span class="w"> </span><span class="s2">&quot;function&quot;</span><span class="w"> </span>*.js
+<span class="c1"># app.js:function calculate() {</span>
+<span class="c1"># utils.js:function formatDate(date) {</span>
+<span class="c1"># helpers.js:function validateInput(data) {</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="understanding-grep-output">Understanding Grep Output</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Sample logfile.txt:</span>
+<span class="c1"># 2025-12-01 10:15:32 INFO Server started</span>
+<span class="c1"># 2025-12-01 10:15:45 ERROR Connection failed</span>
+<span class="c1"># 2025-12-01 10:16:02 INFO Request received</span>
+<span class="c1"># 2025-12-01 10:16:15 ERROR Timeout occurred</span>
+
+grep<span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="w"> </span>logfile.txt
+<span class="c1"># 2025-12-01 10:15:45 ERROR Connection failed</span>
+<span class="c1"># 2025-12-01 10:16:15 ERROR Timeout occurred</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Grep + Pipe = Power Combo</p>
+<p>You can pipe other commands into grep to filter their output:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>python<span class="w">       </span><span class="c1"># Find Python processes</span>
+<span class="nb">history</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>ssh<span class="w">         </span><span class="c1"># Find SSH commands you&#39;ve run</span>
+ls<span class="w"> </span>-la<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;Dec&quot;</span><span class="w">        </span><span class="c1"># Find files from December</span>
+</code></pre></div></td></tr></table></div></p>
+</div>
+<h2 id="grep-options-fine-tuning-your-search">Grep Options: Fine-Tuning Your Search</h2>
+<p>The <strong>grep options</strong> let you customize how grep searches and what it displays.</p>
+<h3 id="essential-grep-options">Essential Grep Options</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-i</code></td>
+<td>Case insensitive</td>
+<td><code>grep -i "error" file</code></td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td>Invert match (show NON-matching lines)</td>
+<td><code>grep -v "debug" file</code></td>
+</tr>
+<tr>
+<td><code>-n</code></td>
+<td>Show line numbers</td>
+<td><code>grep -n "TODO" file</code></td>
+</tr>
+<tr>
+<td><code>-c</code></td>
+<td>Count matches only</td>
+<td><code>grep -c "error" file</code></td>
+</tr>
+<tr>
+<td><code>-l</code></td>
+<td>List filenames only</td>
+<td><code>grep -l "secret" *</code></td>
+</tr>
+<tr>
+<td><code>-r</code></td>
+<td>Recursive search</td>
+<td><code>grep -r "TODO" .</code></td>
+</tr>
+<tr>
+<td><code>-w</code></td>
+<td>Match whole words only</td>
+<td><code>grep -w "is" file</code></td>
+</tr>
+<tr>
+<td><code>-A n</code></td>
+<td>Show n lines After match</td>
+<td><code>grep -A 3 "error" file</code></td>
+</tr>
+<tr>
+<td><code>-B n</code></td>
+<td>Show n lines Before match</td>
+<td><code>grep -B 2 "error" file</code></td>
+</tr>
+<tr>
+<td><code>-C n</code></td>
+<td>Show n lines of Context (before and after)</td>
+<td><code>grep -C 2 "error" file</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="option-examples">Option Examples</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Case insensitive search</span>
+grep<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;warning&quot;</span><span class="w"> </span>logfile.txt
+<span class="c1"># Matches: WARNING, Warning, warning, WaRnInG</span>
+
+<span class="c1"># Show line numbers</span>
+grep<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="w"> </span>app.log
+<span class="c1"># 45:ERROR: Connection timeout</span>
+<span class="c1"># 123:ERROR: Invalid input</span>
+<span class="c1"># 456:ERROR: File not found</span>
+
+<span class="c1"># Count occurrences</span>
+grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;GET&quot;</span><span class="w"> </span>access.log
+<span class="c1"># 1547</span>
+
+<span class="c1"># Show only filenames with matches</span>
+grep<span class="w"> </span>-l<span class="w"> </span><span class="s2">&quot;password&quot;</span><span class="w"> </span>*.conf
+<span class="c1"># database.conf</span>
+<span class="c1"># mail.conf</span>
+
+<span class="c1"># Show context around matches</span>
+grep<span class="w"> </span>-C<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="s2">&quot;Exception&quot;</span><span class="w"> </span>error.log
+<span class="c1"># 2025-12-01 Stack trace:</span>
+<span class="c1"># 2025-12-01 at line 45</span>
+<span class="c1"># 2025-12-01 Exception: NullPointerException</span>
+<span class="c1"># 2025-12-01 at module.process()</span>
+<span class="c1"># 2025-12-01 Shutting down...</span>
+
+<span class="c1"># Match whole words only</span>
+grep<span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;is&quot;</span><span class="w"> </span>document.txt
+<span class="c1"># &quot;This is a test&quot; - matches &quot;is&quot;</span>
+<span class="c1"># &quot;island&quot; - does NOT match (would without -w)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="inverting-matches">Inverting Matches</h3>
+<p>The <code>-v</code> option shows lines that DON'T match—super useful for filtering out noise:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Show all non-empty lines</span>
+grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;^</span>$<span class="s2">&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Show lines without &quot;debug&quot;</span>
+grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;debug&quot;</span><span class="w"> </span>logfile.txt
+
+<span class="c1"># Combine: remove comments AND empty lines</span>
+grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;^#&quot;</span><span class="w"> </span>config.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;^</span>$<span class="s2">&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="diagram-grep-command-flow">Diagram: Grep Command Flow</h4>
+<details>
+<summary>How Grep Processes Files</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Understand
+Learning Objective: Visualize how grep reads input, applies patterns, and produces filtered output.</p>
+<p>Layout: Horizontal flow diagram from left to right</p>
+<p>Components:
+1. Input (left):
+   - File icon or STDIN pipe
+   - Sample lines flowing in
+   - Some lines contain pattern, some don't</p>
+<ol>
+<li>Grep Engine (center):</li>
+<li>Box labeled "grep [pattern]"</li>
+<li>Pattern matcher inside</li>
+<li>
+<p>Options modifiers (flags)</p>
+</li>
+<li>
+<p>Output (right):</p>
+</li>
+<li>Matching lines highlighted in green</li>
+<li>Non-matching lines dimmed/crossed out</li>
+<li>Final output showing only matches</li>
+</ol>
+<p>Visual flow:
+- Lines enter from left
+- Pass through grep filter
+- Matching lines continue to output
+- Non-matching lines are discarded (shown fading out)</p>
+<p>Example data:
+- Input lines: "Hello world", "Error found", "All good", "Error again"
+- Pattern: "Error"
+- Output: "Error found", "Error again"</p>
+<p>With -v option:
+- Same input
+- Output: "Hello world", "All good"</p>
+<p>Color scheme:
+- Input: Blue
+- Pattern match highlight: Yellow
+- Matching output: Green
+- Discarded lines: Gray/faded</p>
+<p>Implementation: p5.js</p>
+</details>
+<h2 id="regular-expressions-the-pattern-language">Regular Expressions: The Pattern Language</h2>
+<p><strong>Regular expressions</strong> (regex or regexp) are a special language for describing text patterns. Instead of searching for exact text like "error", you can search for patterns like "any word followed by a number" or "text that looks like an email address."</p>
+<p>Think of regex as a very precise way to describe what you're looking for. It's like telling someone "find me a word that starts with 'cat' and ends with any letter"—regex lets you express exactly that!</p>
+<h3 id="why-learn-regex">Why Learn Regex?</h3>
+<p>Regex appears EVERYWHERE in computing:</p>
+<ul>
+<li><strong>Linux tools</strong>: grep, sed, awk, find</li>
+<li><strong>Programming languages</strong>: Python, JavaScript, Java, Go, Ruby</li>
+<li><strong>Text editors</strong>: VS Code, Vim, Sublime Text</li>
+<li><strong>Databases</strong>: SQL pattern matching</li>
+<li><strong>Web forms</strong>: Input validation</li>
+</ul>
+<p>Learning regex once gives you a skill you'll use in dozens of different contexts!</p>
+<h3 id="basic-regex-simple-patterns">Basic Regex: Simple Patterns</h3>
+<p><strong>Basic regex</strong> in Linux uses a specific syntax. The simplest patterns are just literal text:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Literal match</span>
+grep<span class="w"> </span><span class="s2">&quot;hello&quot;</span><span class="w"> </span>file.txt<span class="w">      </span><span class="c1"># Matches exactly &quot;hello&quot;</span>
+grep<span class="w"> </span><span class="s2">&quot;Error 404&quot;</span><span class="w"> </span>log.txt<span class="w">   </span><span class="c1"># Matches exactly &quot;Error 404&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>But the real power comes from special characters called <strong>metacharacters</strong>.</p>
+<h2 id="regex-metacharacters-special-pattern-symbols">Regex Metacharacters: Special Pattern Symbols</h2>
+<p><strong>Regex metacharacters</strong> are characters with special meanings in patterns. They're the building blocks of powerful searches.</p>
+<h3 id="the-dot-any-single-character">The Dot (.) - Any Single Character</h3>
+<p>The dot matches ANY single character (except newline):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Match &quot;cat&quot;, &quot;cut&quot;, &quot;c@t&quot;, &quot;c9t&quot;, etc.</span>
+grep<span class="w"> </span><span class="s2">&quot;c.t&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Match any 5-character word starting with &quot;h&quot; ending with &quot;o&quot;</span>
+grep<span class="w"> </span><span class="s2">&quot;h...o&quot;</span><span class="w"> </span>file.txt<span class="w">      </span><span class="c1"># Matches: hello, hippo, hydro</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="the-asterisk-zero-or-more">The Asterisk (*) - Zero or More</h3>
+<p>The asterisk means "zero or more of the previous character":</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Match &quot;color&quot; or &quot;colour&quot; (zero or one &#39;u&#39;)</span>
+grep<span class="w"> </span><span class="s2">&quot;colou*r&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Match &quot;a&quot; followed by any number of &quot;b&quot;s</span>
+grep<span class="w"> </span><span class="s2">&quot;ab*&quot;</span><span class="w"> </span>file.txt<span class="w">        </span><span class="c1"># Matches: a, ab, abb, abbb...</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="the-backslash-escape-character">The Backslash () - Escape Character</h3>
+<p>The backslash makes metacharacters literal:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Search for actual dot (not any character)</span>
+grep<span class="w"> </span><span class="s2">&quot;version 2\.0&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Search for asterisk</span>
+grep<span class="w"> </span><span class="s2">&quot;5\*3&quot;</span><span class="w"> </span>math.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="common-metacharacters">Common Metacharacters</h3>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.</code></td>
+<td>Any single character</td>
+<td><code>c.t</code> matches cat, cut, c9t</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Zero or more of previous</td>
+<td><code>ab*</code> matches a, ab, abb</td>
+</tr>
+<tr>
+<td><code>\</code></td>
+<td>Escape next character</td>
+<td><code>\.</code> matches literal dot</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>Start of line</td>
+<td><code>^Error</code> matches "Error" at line start</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>End of line</td>
+<td><code>end$</code> matches "end" at line end</td>
+</tr>
+<tr>
+<td><code>[]</code></td>
+<td>Character class</td>
+<td><code>[aeiou]</code> matches any vowel</td>
+</tr>
+<tr>
+<td><code>[^]</code></td>
+<td>Negated class</td>
+<td><code>[^0-9]</code> matches non-digit</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">BRE vs ERE</p>
+<p>Basic Regular Expressions (BRE) treat some characters differently than Extended Regular Expressions (ERE). We'll cover both!</p>
+</div>
+<h2 id="regex-anchors-position-matters">Regex Anchors: Position Matters</h2>
+<p><strong>Regex anchors</strong> don't match characters—they match POSITIONS in the text. They "anchor" your pattern to specific locations.</p>
+<h3 id="start-of-line">Start of Line (^)</h3>
+<p>The caret <code>^</code> matches the beginning of a line:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Lines that START with &quot;Error&quot;</span>
+grep<span class="w"> </span><span class="s2">&quot;^Error&quot;</span><span class="w"> </span>log.txt
+<span class="c1"># Matches: &quot;Error: file not found&quot;</span>
+<span class="c1"># Doesn&#39;t match: &quot;An Error occurred&quot;</span>
+
+<span class="c1"># Lines that START with a number</span>
+grep<span class="w"> </span><span class="s2">&quot;^[0-9]&quot;</span><span class="w"> </span>data.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="end-of-line">End of Line ($)</h3>
+<p>The dollar sign <code>$</code> matches the end of a line:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Lines that END with &quot;failed&quot;</span>
+grep<span class="w"> </span><span class="s2">&quot;failed</span>$<span class="s2">&quot;</span><span class="w"> </span>results.txt
+<span class="c1"># Matches: &quot;Test failed&quot;</span>
+<span class="c1"># Doesn&#39;t match: &quot;failed to connect&quot;</span>
+
+<span class="c1"># Lines that end with a period</span>
+grep<span class="w"> </span><span class="s2">&quot;\.</span>$<span class="s2">&quot;</span><span class="w"> </span>document.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="combining-anchors">Combining Anchors</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Lines that ARE exactly &quot;OK&quot;</span>
+grep<span class="w"> </span><span class="s2">&quot;^OK</span>$<span class="s2">&quot;</span><span class="w"> </span>status.txt
+
+<span class="c1"># Empty lines (start immediately followed by end)</span>
+grep<span class="w"> </span><span class="s2">&quot;^</span>$<span class="s2">&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Lines containing only whitespace</span>
+grep<span class="w"> </span><span class="s2">&quot;^[[:space:]]*</span>$<span class="s2">&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Lines that start with # (comments)</span>
+grep<span class="w"> </span><span class="s2">&quot;^#&quot;</span><span class="w"> </span>config.txt
+
+<span class="c1"># Lines that DON&#39;T start with # (non-comments)</span>
+grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;^#&quot;</span><span class="w"> </span>config.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="diagram-regex-anchors-visualized">Diagram: Regex Anchors Visualized</h4>
+<details>
+<summary>Understanding Anchor Positions</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Understand, Remember
+Learning Objective: Show how anchors (^ and $) match positions rather than characters.</p>
+<p>Layout: Text line with position markers</p>
+<p>Visual elements:
+- A sample line of text: "Error: Connection failed"
+- Position markers showing where ^ and $ match
+- Arrows indicating invisible anchor points</p>
+<p>Demonstration:
+1. Without anchors:
+   - Pattern "Error" highlighted wherever it appears
+   - Could be start, middle, or end</p>
+<ol>
+<li>With ^ anchor:</li>
+<li>Position marker at very start of line</li>
+<li>Pattern "^Error" only matches at beginning</li>
+<li>"Error: failed" - MATCH</li>
+<li>
+<p>"An Error" - NO MATCH</p>
+</li>
+<li>
+<p>With $ anchor:</p>
+</li>
+<li>Position marker at very end of line</li>
+<li>Pattern "failed$" only matches at end</li>
+<li>"Test failed" - MATCH</li>
+<li>
+<p>"failed again" - NO MATCH</p>
+</li>
+<li>
+<p>Both anchors:</p>
+</li>
+<li>Pattern "^exact$" matches whole line</li>
+<li>Only matches if entire line is "exact"</li>
+</ol>
+<p>Interactive features:
+- Click different patterns to see where they match
+- Highlight matching positions in text
+- Show match/no match for examples</p>
+<p>Color scheme:
+- Anchor markers: Red
+- Matching text: Green
+- Non-matching: Gray
+- Position indicators: Blue arrows</p>
+<p>Implementation: p5.js</p>
+</details>
+<h2 id="regex-character-classes-sets-of-characters">Regex Character Classes: Sets of Characters</h2>
+<p><strong>Regex character classes</strong> match ONE character from a defined set. They're written with square brackets <code>[]</code>.</p>
+<h3 id="basic-character-classes">Basic Character Classes</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Match any vowel</span>
+grep<span class="w"> </span><span class="s2">&quot;[aeiou]&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Match any digit</span>
+grep<span class="w"> </span><span class="s2">&quot;[0-9]&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Match any lowercase letter</span>
+grep<span class="w"> </span><span class="s2">&quot;[a-z]&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Match any uppercase letter</span>
+grep<span class="w"> </span><span class="s2">&quot;[A-Z]&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Match alphanumeric</span>
+grep<span class="w"> </span><span class="s2">&quot;[a-zA-Z0-9]&quot;</span><span class="w"> </span>file.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="combining-characters">Combining Characters</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Match &quot;gray&quot; or &quot;grey&quot;</span>
+grep<span class="w"> </span><span class="s2">&quot;gr[ae]y&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Match any hex digit (0-9, a-f, A-F)</span>
+grep<span class="w"> </span><span class="s2">&quot;[0-9a-fA-F]&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Match common punctuation</span>
+grep<span class="w"> </span><span class="s2">&quot;[.,;:!?]&quot;</span><span class="w"> </span>file.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="negated-character-classes">Negated Character Classes</h3>
+<p>Put <code>^</code> at the START of a class to negate it (match anything NOT in the set):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Match any NON-digit</span>
+grep<span class="w"> </span><span class="s2">&quot;[^0-9]&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Match any NON-vowel</span>
+grep<span class="w"> </span><span class="s2">&quot;[^aeiou]&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Match lines with non-ASCII characters</span>
+grep<span class="w"> </span><span class="s2">&quot;[^[:ascii:]]&quot;</span><span class="w"> </span>file.txt
+</code></pre></div></td></tr></table></div>
+<div class="admonition warning">
+<p class="admonition-title">^ Inside vs Outside Brackets</p>
+<ul>
+<li><code>^</code> OUTSIDE brackets = start of line anchor</li>
+<li><code>^</code> INSIDE brackets (first position) = negation</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>grep<span class="w"> </span><span class="s2">&quot;^a&quot;</span><span class="w">    </span><span class="c1"># Lines STARTING with &#39;a&#39;</span>
+grep<span class="w"> </span><span class="s2">&quot;[^a]&quot;</span><span class="w">  </span><span class="c1"># Characters that are NOT &#39;a&#39;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h3 id="posix-character-classes">POSIX Character Classes</h3>
+<p>Linux provides named character classes for common sets:</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Meaning</th>
+<th>Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[[:alpha:]]</code></td>
+<td>Alphabetic</td>
+<td><code>[a-zA-Z]</code></td>
+</tr>
+<tr>
+<td><code>[[:digit:]]</code></td>
+<td>Digits</td>
+<td><code>[0-9]</code></td>
+</tr>
+<tr>
+<td><code>[[:alnum:]]</code></td>
+<td>Alphanumeric</td>
+<td><code>[a-zA-Z0-9]</code></td>
+</tr>
+<tr>
+<td><code>[[:space:]]</code></td>
+<td>Whitespace</td>
+<td><code>[ \t\n\r\f\v]</code></td>
+</tr>
+<tr>
+<td><code>[[:upper:]]</code></td>
+<td>Uppercase</td>
+<td><code>[A-Z]</code></td>
+</tr>
+<tr>
+<td><code>[[:lower:]]</code></td>
+<td>Lowercase</td>
+<td><code>[a-z]</code></td>
+</tr>
+<tr>
+<td><code>[[:punct:]]</code></td>
+<td>Punctuation</td>
+<td><code>[!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_\</code>{</td>
+</tr>
+<tr>
+<td><code>[[:xdigit:]]</code></td>
+<td>Hex digits</td>
+<td><code>[0-9a-fA-F]</code></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Find lines starting with uppercase</span>
+grep<span class="w"> </span><span class="s2">&quot;^[[:upper:]]&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Find lines containing digits</span>
+grep<span class="w"> </span><span class="s2">&quot;[[:digit:]]&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Find words (sequences of alphanumeric)</span>
+grep<span class="w"> </span><span class="s2">&quot;[[:alnum:]]*&quot;</span><span class="w"> </span>file.txt
+</code></pre></div></td></tr></table></div>
+<h2 id="regex-quantifiers-how-many">Regex Quantifiers: How Many?</h2>
+<p><strong>Regex quantifiers</strong> specify HOW MANY of the previous element to match.</p>
+<h3 id="basic-quantifiers-in-bre">Basic Quantifiers (in BRE)</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># * - Zero or more</span>
+grep<span class="w"> </span><span class="s2">&quot;ab*c&quot;</span><span class="w"> </span>file.txt<span class="w">       </span><span class="c1"># ac, abc, abbc, abbbc...</span>
+
+<span class="c1"># \{n\} - Exactly n times</span>
+grep<span class="w"> </span><span class="s2">&quot;a\{3\}&quot;</span><span class="w"> </span>file.txt<span class="w">     </span><span class="c1"># Matches &quot;aaa&quot;</span>
+
+<span class="c1"># \{n,\} - At least n times</span>
+grep<span class="w"> </span><span class="s2">&quot;a\{2,\}&quot;</span><span class="w"> </span>file.txt<span class="w">    </span><span class="c1"># Matches &quot;aa&quot;, &quot;aaa&quot;, &quot;aaaa&quot;...</span>
+
+<span class="c1"># \{n,m\} - Between n and m times</span>
+grep<span class="w"> </span><span class="s2">&quot;a\{2,4\}&quot;</span><span class="w"> </span>file.txt<span class="w">   </span><span class="c1"># Matches &quot;aa&quot;, &quot;aaa&quot;, &quot;aaaa&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="extended-regex-quantifiers">Extended Regex Quantifiers</h3>
+<p>With extended regex (<code>grep -E</code> or <code>egrep</code>), you get cleaner syntax:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># ? - Zero or one (optional)</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;colou?r&quot;</span><span class="w"> </span>file.txt<span class="w">      </span><span class="c1"># color, colour</span>
+
+<span class="c1"># + - One or more</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;ab+c&quot;</span><span class="w"> </span>file.txt<span class="w">         </span><span class="c1"># abc, abbc, abbbc... (NOT ac)</span>
+
+<span class="c1"># {n} - Exactly n</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;a{3}&quot;</span><span class="w"> </span>file.txt<span class="w">         </span><span class="c1"># aaa</span>
+
+<span class="c1"># {n,} - At least n</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;a{2,}&quot;</span><span class="w"> </span>file.txt<span class="w">        </span><span class="c1"># aa, aaa, aaaa...</span>
+
+<span class="c1"># {n,m} - Between n and m</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;a{2,4}&quot;</span><span class="w"> </span>file.txt<span class="w">       </span><span class="c1"># aa, aaa, aaaa</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="quantifier-summary">Quantifier Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Quantifier</th>
+<th>BRE Syntax</th>
+<th>ERE Syntax</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zero or more</td>
+<td><code>*</code></td>
+<td><code>*</code></td>
+<td>0, 1, 2, 3...</td>
+</tr>
+<tr>
+<td>One or more</td>
+<td><code>\+</code></td>
+<td><code>+</code></td>
+<td>1, 2, 3...</td>
+</tr>
+<tr>
+<td>Zero or one</td>
+<td><code>\?</code></td>
+<td><code>?</code></td>
+<td>0 or 1</td>
+</tr>
+<tr>
+<td>Exactly n</td>
+<td><code>\{n\}</code></td>
+<td><code>{n}</code></td>
+<td>Exactly n</td>
+</tr>
+<tr>
+<td>At least n</td>
+<td><code>\{n,\}</code></td>
+<td><code>{n,}</code></td>
+<td>n or more</td>
+</tr>
+<tr>
+<td>Between n and m</td>
+<td><code>\{n,m\}</code></td>
+<td><code>{n,m}</code></td>
+<td>n to m inclusive</td>
+</tr>
+</tbody>
+</table>
+<h2 id="basic-regex-vs-extended-regex">Basic Regex vs Extended Regex</h2>
+<p>Linux grep supports two regex flavors:</p>
+<h3 id="basic-regex-bre-default">Basic Regex (BRE) - Default</h3>
+<p><strong>Basic regex</strong> is grep's default mode. Some metacharacters need backslashes:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># BRE examples</span>
+grep<span class="w"> </span><span class="s2">&quot;a\+&quot;</span><span class="w"> </span>file.txt<span class="w">           </span><span class="c1"># One or more &#39;a&#39;</span>
+grep<span class="w"> </span><span class="s2">&quot;a\?&quot;</span><span class="w"> </span>file.txt<span class="w">           </span><span class="c1"># Zero or one &#39;a&#39;</span>
+grep<span class="w"> </span><span class="s2">&quot;a\{2,3\}&quot;</span><span class="w"> </span>file.txt<span class="w">      </span><span class="c1"># 2 to 3 &#39;a&#39;s</span>
+grep<span class="w"> </span><span class="s2">&quot;\(ab\)*&quot;</span><span class="w"> </span>file.txt<span class="w">       </span><span class="c1"># Group: zero or more &quot;ab&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="extended-regex-ere-grep-e">Extended Regex (ERE) - grep -E</h3>
+<p><strong>Extended regex</strong> uses <code>grep -E</code> (or the <code>egrep</code> command). Metacharacters don't need backslashes:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># ERE examples - cleaner syntax!</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;a+&quot;</span><span class="w"> </span>file.txt<span class="w">         </span><span class="c1"># One or more &#39;a&#39;</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;a?&quot;</span><span class="w"> </span>file.txt<span class="w">         </span><span class="c1"># Zero or one &#39;a&#39;</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;a{2,3}&quot;</span><span class="w"> </span>file.txt<span class="w">     </span><span class="c1"># 2 to 3 &#39;a&#39;s</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;(ab)*&quot;</span><span class="w"> </span>file.txt<span class="w">      </span><span class="c1"># Group: zero or more &quot;ab&quot;</span>
+
+<span class="c1"># ERE also adds alternation with |</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;cat|dog&quot;</span><span class="w"> </span>file.txt<span class="w">    </span><span class="c1"># Match &quot;cat&quot; OR &quot;dog&quot;</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;error|warning|critical&quot;</span><span class="w"> </span>log.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="when-to-use-which">When to Use Which?</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Use BRE</th>
+<th>Use ERE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simple literal search</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Basic wildcards</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><code>+</code>, <code>?</code> quantifiers</td>
+<td>Awkward</td>
+<td>✓ Clean</td>
+</tr>
+<tr>
+<td>Alternation (OR)</td>
+<td>Not available</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Complex patterns</td>
+<td>Harder</td>
+<td>✓ Easier</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Just Use ERE</p>
+<p>For most work, use <code>grep -E</code>. The syntax is cleaner and more consistent with regex in other languages. The only reason to use BRE is compatibility with very old scripts.</p>
+</div>
+<h4 id="diagram-interactive-regex-tester">Diagram: Interactive Regex Tester</h4>
+<details>
+<summary>Regex Pattern Matcher MicroSim</summary>
+<p>Type: microsim</p>
+<p>Bloom Taxonomy: Apply, Analyze
+Learning Objective: Allow students to type regex patterns and test them against sample text, seeing matches highlighted in real-time.</p>
+<p>Canvas layout (responsive, ~750px max width):
+- Top section (60px): Pattern input with ERE/BRE toggle
+- Middle section (200px): Sample text area with highlighted matches
+- Bottom section (150px): Explanation of pattern and match count</p>
+<p>Visual elements:
+- Text input for regex pattern
+- Toggle button: BRE / ERE mode
+- Multi-line text area with sample text
+- Highlighted matches in yellow/green
+- Pattern breakdown explanation</p>
+<p>Sample text (editable):
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>Error: Connection refused at 10.0.0.1
+Warning: Low memory (512MB remaining)
+Info: Server started on port 8080
+Error: File not found: config.json
+Debug: Processing request #12345
+Warning: Timeout after 30 seconds
+</code></pre></div></td></tr></table></div></p>
+<p>Interactive controls:
+- Pattern input field
+- ERE/BRE mode toggle
+- Quick pattern buttons:
+  - "^Error" (lines starting with Error)
+  - "[0-9]+" (numbers)
+  - "\.json$" (ends with .json)
+  - "Error|Warning" (either word)
+- Clear and reset buttons</p>
+<p>Behavior:
+- Type pattern: matches highlight immediately
+- Invalid pattern: show error message in red
+- Display: "X matches found"
+- Show breakdown: "This pattern means..."
+- Hover over match: show which part of pattern matched</p>
+<p>Example interactions:
+- Pattern "Error" highlights both "Error" occurrences
+- Pattern "^Error" highlights only line-starting "Error"
+- Pattern "[0-9]+" highlights all number sequences</p>
+<p>Color scheme:
+- Pattern input: Blue border
+- Valid match: Green highlight
+- Invalid pattern: Red border
+- Explanation: Gray background</p>
+<p>Implementation: p5.js with JavaScript regex engine</p>
+</details>
+<h2 id="practical-grep-examples">Practical Grep Examples</h2>
+<p>Let's put it all together with real-world examples!</p>
+<h3 id="finding-ip-addresses">Finding IP Addresses</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Basic IP pattern (simplified)</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+&quot;</span><span class="w"> </span>logfile.txt
+
+<span class="c1"># More precise (each octet 0-255)</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;\b([0-9]{1,3}\.){3}[0-9]{1,3}\b&quot;</span><span class="w"> </span>logfile.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="finding-email-addresses">Finding Email Addresses</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Simple email pattern</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}&quot;</span><span class="w"> </span>contacts.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="log-file-analysis">Log File Analysis</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Find all errors from December 6th</span>
+grep<span class="w"> </span><span class="s2">&quot;2025-12-06.*ERROR&quot;</span><span class="w"> </span>app.log
+
+<span class="c1"># Find errors between 10:00 and 11:00</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;2025-12-06 10:[0-5][0-9].*ERROR&quot;</span><span class="w"> </span>app.log
+
+<span class="c1"># Count different log levels</span>
+grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="w"> </span>app.log
+grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;WARNING&quot;</span><span class="w"> </span>app.log
+grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;INFO&quot;</span><span class="w"> </span>app.log
+</code></pre></div></td></tr></table></div>
+<h3 id="code-searching">Code Searching</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Find function definitions in Python</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;^def [a-zA-Z_]+&quot;</span><span class="w"> </span>*.py
+
+<span class="c1"># Find TODO comments</span>
+grep<span class="w"> </span>-rn<span class="w"> </span><span class="s2">&quot;TODO:&quot;</span><span class="w"> </span>src/
+
+<span class="c1"># Find variable assignments</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;^[a-zA-Z_][a-zA-Z0-9_]* *=&quot;</span><span class="w"> </span>config.py
+
+<span class="c1"># Find import statements</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;^import |^from .* import&quot;</span><span class="w"> </span>*.py
+</code></pre></div></td></tr></table></div>
+<h3 id="configuration-file-parsing">Configuration File Parsing</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Find uncommented settings</span>
+grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;^#&quot;</span><span class="w"> </span>config.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;^</span>$<span class="s2">&quot;</span>
+
+<span class="c1"># Find settings with values</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;^[a-zA-Z_]+=&quot;</span><span class="w"> </span>settings.conf
+
+<span class="c1"># Find specific setting</span>
+grep<span class="w"> </span><span class="s2">&quot;^DATABASE_URL=&quot;</span><span class="w"> </span>.env
+</code></pre></div></td></tr></table></div>
+<h2 id="building-complex-patterns">Building Complex Patterns</h2>
+<p>Let's build some patterns step by step!</p>
+<h3 id="example-matching-phone-numbers">Example: Matching Phone Numbers</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Step 1: Match digits</span>
+grep<span class="w"> </span><span class="s2">&quot;[0-9]&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Step 2: Match groups of 3 digits</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;[0-9]{3}&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Step 3: Match area code in parentheses</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;\([0-9]{3}\)&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Step 4: Full phone pattern (XXX) XXX-XXXX</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;\([0-9]{3}\) [0-9]{3}-[0-9]{4}&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Step 5: Allow optional spaces/dashes</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;\(?[0-9]{3}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4}&quot;</span><span class="w"> </span>file.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="example-matching-urls">Example: Matching URLs</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Match http or https URLs</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;https?://[a-zA-Z0-9./-]+&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># More complete URL pattern</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;https?://[a-zA-Z0-9.-]+(/[a-zA-Z0-9./_-]*)?&quot;</span><span class="w"> </span>file.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="example-matching-dates">Example: Matching Dates</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Match YYYY-MM-DD format</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;[0-9]{4}-[0-9]{2}-[0-9]{2}&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Match MM/DD/YYYY format</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;[0-9]{2}/[0-9]{2}/[0-9]{4}&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Match either format</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;[0-9]{4}-[0-9]{2}-[0-9]{2}|[0-9]{2}/[0-9]{2}/[0-9]{4}&quot;</span><span class="w"> </span>file.txt
+</code></pre></div></td></tr></table></div>
+<h2 id="grep-cheat-sheet">Grep Cheat Sheet</h2>
+<h3 id="most-used-commands">Most-Used Commands</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Basic search</span>
+grep<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Case insensitive</span>
+grep<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Recursive search</span>
+grep<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>directory/
+
+<span class="c1"># Show line numbers</span>
+grep<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Extended regex</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Invert (show non-matches)</span>
+grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Count matches</span>
+grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Context (3 lines around match)</span>
+grep<span class="w"> </span>-C<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>file.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="common-patterns">Common Patterns</h3>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>^text</code></td>
+<td>Lines starting with "text"</td>
+</tr>
+<tr>
+<td><code>text$</code></td>
+<td>Lines ending with "text"</td>
+</tr>
+<tr>
+<td><code>^$</code></td>
+<td>Empty lines</td>
+</tr>
+<tr>
+<td><code>.</code></td>
+<td>Any single character</td>
+</tr>
+<tr>
+<td><code>.*</code></td>
+<td>Any characters (greedy)</td>
+</tr>
+<tr>
+<td><code>[abc]</code></td>
+<td>One of a, b, or c</td>
+</tr>
+<tr>
+<td><code>[^abc]</code></td>
+<td>Any character except a, b, c</td>
+</tr>
+<tr>
+<td><code>[0-9]</code></td>
+<td>Any digit</td>
+</tr>
+<tr>
+<td><code>[a-z]</code></td>
+<td>Any lowercase letter</td>
+</tr>
+<tr>
+<td><code>a+</code> (ERE)</td>
+<td>One or more "a"</td>
+</tr>
+<tr>
+<td><code>a*</code></td>
+<td>Zero or more "a"</td>
+</tr>
+<tr>
+<td><code>a?</code> (ERE)</td>
+<td>Zero or one "a"</td>
+</tr>
+<tr>
+<td><code>a{3}</code> (ERE)</td>
+<td>Exactly 3 "a"s</td>
+</tr>
+<tr>
+<td><code>a\|b</code> (ERE)</td>
+<td>"a" or "b"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>You've learned one of the most powerful skills in text processing!</p>
+<ul>
+<li><strong>grep</strong> searches for patterns in files and outputs matching lines</li>
+<li><strong>grep options</strong> control case sensitivity, line numbers, recursion, and more</li>
+<li><strong>Regular expressions</strong> describe patterns, not literal text</li>
+<li><strong>Metacharacters</strong> (<code>.</code>, <code>*</code>, <code>^</code>, <code>$</code>, <code>[]</code>) give patterns their power</li>
+<li><strong>Anchors</strong> (<code>^</code>, <code>$</code>) match positions, not characters</li>
+<li><strong>Character classes</strong> (<code>[abc]</code>, <code>[0-9]</code>) match sets of characters</li>
+<li><strong>Quantifiers</strong> (<code>*</code>, <code>+</code>, <code>?</code>, <code>{n,m}</code>) specify repetition</li>
+<li><strong>Extended regex</strong> (<code>grep -E</code>) has cleaner syntax for complex patterns</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">You're a Regex Wizard Now!</p>
+<p>Regular expressions take practice to master, but you now have all the tools. Start using grep daily—search your code, filter logs, find configurations. Every time you use regex, you'll get better at constructing patterns!</p>
+</div>
+<h2 id="whats-next">What's Next?</h2>
+<p>Now that you can find text, it's time to learn how to TRANSFORM it! Next chapter covers sed and awk—powerful tools for editing and processing text streams.</p>
+<hr />
+<details class="question">
+<summary>Quick Quiz: Grep and Regular Expressions</summary>
+<ol>
+<li>What command searches for "error" (case-insensitive) in log.txt?</li>
+<li>What does the pattern <code>^#</code> match?</li>
+<li>What's the difference between <code>*</code> and <code>+</code> quantifiers?</li>
+<li>What does <code>[^0-9]</code> match?</li>
+<li>How do you search for a literal dot (.) in text?</li>
+<li>What grep option shows lines that DON'T match the pattern?</li>
+</ol>
+</details>
+<details class="note">
+<summary>Quiz Answers</summary>
+<ol>
+<li><code>grep -i "error" log.txt</code></li>
+<li>Lines that start with # (comments in many config files)</li>
+<li><code>*</code> matches zero or more; <code>+</code> matches one or more (requires at least one)</li>
+<li>Any character that is NOT a digit</li>
+<li><code>grep "\." file.txt</code> - escape the dot with backslash</li>
+<li><code>grep -v "pattern" file.txt</code> - the -v flag inverts the match</li>
+</ol>
+</details>
 
 
 
@@ -1571,7 +3824,7 @@
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../js/extra.css"></script>
+        <script src="../../js/extra.js"></script>
       
     
   </body>

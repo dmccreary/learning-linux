@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+        <meta name="description" content="Master storage management, mounting file systems, and performance monitoring with benchmarking tools">
       
       
         <meta name="author" content="Dan McCreary">
@@ -52,7 +52,7 @@
       
     
     
-      <link rel="stylesheet" href="../../styles/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -75,7 +75,7 @@
       
         <meta  property="og:title"  content="Storage Devices and System Performance - Learning Linux" >
       
-        <meta  property="og:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  property="og:description"  content="Master storage management, mounting file systems, and performance monitoring with benchmarking tools" >
       
         <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/18-storage-perf/index.png" >
       
@@ -91,7 +91,7 @@
       
         <meta  name="twitter:title"  content="Storage Devices and System Performance - Learning Linux" >
       
-        <meta  name="twitter:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  name="twitter:description"  content="Master storage management, mounting file systems, and performance monitoring with benchmarking tools" >
       
         <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/18-storage-perf/index.png" >
       
@@ -214,7 +214,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -259,7 +259,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -439,8 +439,6 @@
           
         
       
-        
-          
         
       
         
@@ -927,6 +925,933 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-engine-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the Engine Room!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-devices-where-your-data-lives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storage Devices: Where Your Data Lives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Storage Devices: Where Your Data Lives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Storage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-devices-and-character-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block Devices and Character Devices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Block Devices and Character Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#block-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block Devices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#character-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Character Devices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-files-everything-is-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Device Files: Everything is a File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Device Files: Everything is a File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-device-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Device Files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-lsblk-command-list-block-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Lsblk Command: List Block Devices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Lsblk Command: List Block Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-lsblk-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding lsblk Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk-partitions-dividing-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disk Partitions: Dividing Storage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disk Partitions: Dividing Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-partition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Partition?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partition-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partition Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-fdisk-command-partition-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Fdisk Command: Partition Manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Fdisk Command: Partition Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modern-alternative-parted" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modern Alternative: parted
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-mount-command-attach-file-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Mount Command: Attach File Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Mount Command: Attach File Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mount-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mount Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-umount-command-detach-file-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Umount Command: Detach File Systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-fstab-file-automatic-mounting" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Fstab File: Automatic Mounting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Fstab File: Automatic Mounting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fstab-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fstab Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-uuids-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using UUIDs (Recommended)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-system-types-formats-for-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      File System Types: Formats for Storage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File System Types: Formats for Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-linux-file-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Linux File Systems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ext4-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ext4 File System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Ext4 File System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ext4-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ext4 Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntfs-support-windows-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTFS Support: Windows Compatibility
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usb-drives-and-flash-drives" class="md-nav__link">
+    <span class="md-ellipsis">
+      USB Drives and Flash Drives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swap-space-virtual-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swap Space: Virtual Memory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Swap Space: Virtual Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-swap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Swap
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swap-file-file-based-swap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swap File: File-Based Swap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Swap File: File-Based Swap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swap-partition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swap Partition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-df-command-disk-free-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Df Command: Disk Free Space
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Df Command: Disk Free Space">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-df-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading df Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-du-command-disk-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Du Command: Disk Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Du Command: Disk Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-space-hogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding Space Hogs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-monitoring-watch-your-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Monitoring: Watch Your Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Monitoring: Watch Your Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick System Overview
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpu-usage-processing-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      CPU Usage: Processing Power
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CPU Usage: Processing Power">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-cpu-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding CPU Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-usage-ram-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Usage: RAM Status
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory Usage: RAM Status">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Memory
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-free-command-memory-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Free Command: Memory Details
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-vmstat-command-virtual-memory-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Vmstat Command: Virtual Memory Stats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Vmstat Command: Virtual Memory Stats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-vmstat-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding vmstat Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-iostat-command-io-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Iostat Command: I/O Statistics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Iostat Command: I/O Statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-iostat-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading iostat Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-sar-command-system-activity-reporter" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Sar Command: System Activity Reporter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Sar Command: System Activity Reporter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-sar-data-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable sar Data Collection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-load-and-load-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Load and Load Average
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Load and Load Average">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-load-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Load Average
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bottleneck-analysis-finding-the-slow-part" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bottleneck Analysis: Finding the Slow Part
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bottleneck Analysis: Finding the Slow Part">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-three-main-bottlenecks" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three Main Bottlenecks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-bottleneck-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Bottleneck Detection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk-benchmarks-measuring-speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disk Benchmarks: Measuring Speed
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disk Benchmarks: Measuring Speed">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benchmarking-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benchmarking Tools
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-time-command-simple-timing" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Time Command: Simple Timing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Time Command: Simple Timing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-time-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Time Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dd-command-raw-disk-speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Dd Command: Raw Disk Speed
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Dd Command: Raw Disk Speed">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-dd-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important dd Flags
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-hdparm-command-drive-info-and-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Hdparm Command: Drive Info and Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-fio-command-flexible-io-tester" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Fio Command: Flexible I/O Tester
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Fio Command: Flexible I/O Tester">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-fio-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key fio Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ioping-command-io-latency" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ioping Command: I/O Latency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Ioping Command: I/O Latency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#output-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-bonnie-command-comprehensive-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Bonnie++ Command: Comprehensive Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-sysbench-command-multi-purpose-benchmarking" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Sysbench Command: Multi-Purpose Benchmarking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpu-benchmarks-testing-processing-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      CPU Benchmarks: Testing Processing Power
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpu-performance-graphics-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      GPU Performance: Graphics Processing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-tuning-making-it-faster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Tuning: Making It Faster
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Tuning: Making It Faster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-tuning-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Tuning Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-raspberry-pi-5-nvme-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study: Raspberry Pi 5 NVMe Performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Case Study: Raspberry Pi 5 NVMe Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-hardware-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Hardware Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benchmark-comparison-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benchmark Comparison Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-World Results
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-nvme-on-raspberry-pi-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up NVMe on Raspberry Pi 5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boot-from-nvme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boot from NVMe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-such-a-big-difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Such a Big Difference?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-storage-and-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference: Storage and Performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Reference: Storage and Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#storage-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storage Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benchmark-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benchmark Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1048,7 +1973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../24-customization/" class="md-nav__link">
+      <a href="../24-customization/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,6 +2098,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1186,7 +2119,7 @@
         
   
   
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1424,6 +2357,933 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-engine-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the Engine Room!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-devices-where-your-data-lives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storage Devices: Where Your Data Lives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Storage Devices: Where Your Data Lives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Storage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-devices-and-character-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block Devices and Character Devices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Block Devices and Character Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#block-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block Devices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#character-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Character Devices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-files-everything-is-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Device Files: Everything is a File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Device Files: Everything is a File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-device-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Device Files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-lsblk-command-list-block-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Lsblk Command: List Block Devices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Lsblk Command: List Block Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-lsblk-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding lsblk Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk-partitions-dividing-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disk Partitions: Dividing Storage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disk Partitions: Dividing Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-partition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Partition?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partition-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partition Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-fdisk-command-partition-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Fdisk Command: Partition Manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Fdisk Command: Partition Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modern-alternative-parted" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modern Alternative: parted
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-mount-command-attach-file-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Mount Command: Attach File Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Mount Command: Attach File Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mount-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mount Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-umount-command-detach-file-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Umount Command: Detach File Systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-fstab-file-automatic-mounting" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Fstab File: Automatic Mounting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Fstab File: Automatic Mounting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fstab-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fstab Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-uuids-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using UUIDs (Recommended)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-system-types-formats-for-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      File System Types: Formats for Storage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File System Types: Formats for Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-linux-file-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Linux File Systems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ext4-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ext4 File System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Ext4 File System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ext4-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ext4 Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ntfs-support-windows-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      NTFS Support: Windows Compatibility
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usb-drives-and-flash-drives" class="md-nav__link">
+    <span class="md-ellipsis">
+      USB Drives and Flash Drives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swap-space-virtual-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swap Space: Virtual Memory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Swap Space: Virtual Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-swap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Swap
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swap-file-file-based-swap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swap File: File-Based Swap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Swap File: File-Based Swap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swap-partition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swap Partition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-df-command-disk-free-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Df Command: Disk Free Space
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Df Command: Disk Free Space">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-df-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading df Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-du-command-disk-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Du Command: Disk Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Du Command: Disk Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-space-hogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding Space Hogs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-monitoring-watch-your-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Monitoring: Watch Your Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Monitoring: Watch Your Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick System Overview
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpu-usage-processing-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      CPU Usage: Processing Power
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CPU Usage: Processing Power">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-cpu-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding CPU Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-usage-ram-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Usage: RAM Status
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory Usage: RAM Status">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Memory
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-free-command-memory-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Free Command: Memory Details
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-vmstat-command-virtual-memory-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Vmstat Command: Virtual Memory Stats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Vmstat Command: Virtual Memory Stats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-vmstat-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding vmstat Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-iostat-command-io-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Iostat Command: I/O Statistics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Iostat Command: I/O Statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-iostat-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading iostat Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-sar-command-system-activity-reporter" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Sar Command: System Activity Reporter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Sar Command: System Activity Reporter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-sar-data-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable sar Data Collection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-load-and-load-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Load and Load Average
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Load and Load Average">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-load-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Load Average
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bottleneck-analysis-finding-the-slow-part" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bottleneck Analysis: Finding the Slow Part
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bottleneck Analysis: Finding the Slow Part">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-three-main-bottlenecks" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three Main Bottlenecks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-bottleneck-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Bottleneck Detection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk-benchmarks-measuring-speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disk Benchmarks: Measuring Speed
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disk Benchmarks: Measuring Speed">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benchmarking-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benchmarking Tools
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-time-command-simple-timing" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Time Command: Simple Timing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Time Command: Simple Timing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-time-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Time Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dd-command-raw-disk-speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Dd Command: Raw Disk Speed
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Dd Command: Raw Disk Speed">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-dd-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important dd Flags
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-hdparm-command-drive-info-and-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Hdparm Command: Drive Info and Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-fio-command-flexible-io-tester" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Fio Command: Flexible I/O Tester
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Fio Command: Flexible I/O Tester">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-fio-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key fio Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ioping-command-io-latency" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ioping Command: I/O Latency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Ioping Command: I/O Latency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#output-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-bonnie-command-comprehensive-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Bonnie++ Command: Comprehensive Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-sysbench-command-multi-purpose-benchmarking" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Sysbench Command: Multi-Purpose Benchmarking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpu-benchmarks-testing-processing-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      CPU Benchmarks: Testing Processing Power
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpu-performance-graphics-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      GPU Performance: Graphics Processing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-tuning-making-it-faster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Tuning: Making It Faster
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Tuning: Making It Faster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-tuning-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Tuning Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-raspberry-pi-5-nvme-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study: Raspberry Pi 5 NVMe Performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Case Study: Raspberry Pi 5 NVMe Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-hardware-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Hardware Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benchmark-comparison-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benchmark Comparison Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-World Results
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-nvme-on-raspberry-pi-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up NVMe on Raspberry Pi 5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boot-from-nvme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boot from NVMe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-such-a-big-difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Such a Big Difference?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-storage-and-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference: Storage and Performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Reference: Storage and Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#storage-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storage Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benchmark-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benchmark Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1439,7 +3299,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/learniing-linux/blob/master/docs/chapters/18-storage-perf/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/learning-linux/blob/master/docs/chapters/18-storage-perf/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1496,7 +3356,2210 @@
 <li><a href="../12-processes/">Chapter 12: Process Management and Job Control</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<h2 id="welcome-to-the-engine-room">Welcome to the Engine Room!</h2>
+<p>Ever wondered why your computer sometimes feels slow? Or why copying files to a USB stick takes forever? Or how the new NVMe drives can be 100 times faster than an old SD card?</p>
+<p>This chapter takes you into the engine room of Linux—where you'll learn how storage works, how to monitor system performance, and how to benchmark everything. You'll become the mechanic who can diagnose why a system is running slow and tune it for maximum performance!</p>
+<h2 id="storage-devices-where-your-data-lives">Storage Devices: Where Your Data Lives</h2>
+<p><strong>Storage devices</strong> are the hardware that stores your data persistently—it survives when you turn off the power. Understanding storage is crucial because it's often the biggest bottleneck in system performance.</p>
+<h3 id="types-of-storage">Types of Storage</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Speed</th>
+<th>Cost</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NVMe SSD</td>
+<td>Very Fast</td>
+<td>$$</td>
+<td>Primary OS, databases</td>
+</tr>
+<tr>
+<td>SATA SSD</td>
+<td>Fast</td>
+<td>$$</td>
+<td>General purpose</td>
+</tr>
+<tr>
+<td>HDD (Spinning)</td>
+<td>Slow</td>
+<td>$</td>
+<td>Bulk storage, backups</td>
+</tr>
+<tr>
+<td>MicroSD</td>
+<td>Slow</td>
+<td>$</td>
+<td>Embedded devices, Pi</td>
+</tr>
+<tr>
+<td>USB Flash</td>
+<td>Slow-Medium</td>
+<td>$</td>
+<td>Portable storage</td>
+</tr>
+</tbody>
+</table>
+<p>The speed differences are DRAMATIC. An NVMe drive can be 50-100x faster than a MicroSD card!</p>
+<h2 id="block-devices-and-character-devices">Block Devices and Character Devices</h2>
+<p>Linux represents hardware as files in <code>/dev</code>. There are two main types:</p>
+<h3 id="block-devices">Block Devices</h3>
+<p><strong>Block devices</strong> transfer data in blocks (chunks). These are your storage devices:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># List block devices</span>
+lsblk
+
+<span class="c1"># Output:</span>
+<span class="c1"># NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT</span>
+<span class="c1"># sda      8:0    0   500G  0 disk</span>
+<span class="c1"># ├─sda1   8:1    0   512M  0 part /boot</span>
+<span class="c1"># └─sda2   8:2    0 499.5G  0 part /</span>
+<span class="c1"># sdb      8:16   1    32G  0 disk</span>
+<span class="c1"># └─sdb1   8:17   1    32G  0 part /media/usb</span>
+
+<span class="c1"># Block devices live in /dev</span>
+ls<span class="w"> </span>/dev/sd*
+<span class="c1"># /dev/sda  /dev/sda1  /dev/sda2  /dev/sdb  /dev/sdb1</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="character-devices">Character Devices</h3>
+<p><strong>Character devices</strong> transfer data one character at a time. These include:</p>
+<ul>
+<li>Terminals (<code>/dev/tty*</code>)</li>
+<li>Serial ports (<code>/dev/ttyUSB*</code>)</li>
+<li>Random number generator (<code>/dev/random</code>)</li>
+<li>Null device (<code>/dev/null</code>)</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Character devices</span>
+ls<span class="w"> </span>-la<span class="w"> </span>/dev/tty
+ls<span class="w"> </span>-la<span class="w"> </span>/dev/null
+ls<span class="w"> </span>-la<span class="w"> </span>/dev/random
+</code></pre></div></td></tr></table></div>
+<h2 id="device-files-everything-is-a-file">Device Files: Everything is a File</h2>
+<p><strong>Device files</strong> in <code>/dev</code> represent hardware. This is the "everything is a file" philosophy in action!</p>
+<h3 id="common-device-files">Common Device Files</h3>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/dev/sda</code></td>
+<td>First SATA/SCSI disk</td>
+</tr>
+<tr>
+<td><code>/dev/nvme0n1</code></td>
+<td>First NVMe drive</td>
+</tr>
+<tr>
+<td><code>/dev/mmcblk0</code></td>
+<td>MicroSD card</td>
+</tr>
+<tr>
+<td><code>/dev/sda1</code></td>
+<td>First partition on sda</td>
+</tr>
+<tr>
+<td><code>/dev/null</code></td>
+<td>Discards all input</td>
+</tr>
+<tr>
+<td><code>/dev/zero</code></td>
+<td>Infinite stream of zeros</td>
+</tr>
+<tr>
+<td><code>/dev/random</code></td>
+<td>Random data</td>
+</tr>
+<tr>
+<td><code>/dev/tty</code></td>
+<td>Current terminal</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See device information</span>
+file<span class="w"> </span>/dev/sda
+<span class="c1"># /dev/sda: block special (8/0)</span>
+
+file<span class="w"> </span>/dev/null
+<span class="c1"># /dev/null: character special (1/3)</span>
+
+<span class="c1"># Use /dev/null to discard output</span>
+<span class="nb">command</span><span class="w"> </span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+
+<span class="c1"># Use /dev/zero to create empty files</span>
+dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/zero<span class="w"> </span><span class="nv">of</span><span class="o">=</span>empty.img<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>1M<span class="w"> </span><span class="nv">count</span><span class="o">=</span><span class="m">100</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="the-lsblk-command-list-block-devices">The Lsblk Command: List Block Devices</h2>
+<p>The <strong>lsblk command</strong> lists all block devices in a tree format, showing partitions and mount points.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Basic listing</span>
+lsblk
+
+<span class="c1"># Show more details</span>
+lsblk<span class="w"> </span>-f<span class="w">     </span><span class="c1"># File system info</span>
+lsblk<span class="w"> </span>-o<span class="w"> </span>NAME,SIZE,TYPE,MOUNTPOINT,FSTYPE,UUID
+
+<span class="c1"># Show only disks (not partitions)</span>
+lsblk<span class="w"> </span>-d
+
+<span class="c1"># Show sizes in bytes</span>
+lsblk<span class="w"> </span>-b
+
+<span class="c1"># JSON output (for scripts)</span>
+lsblk<span class="w"> </span>-J
+</code></pre></div></td></tr></table></div>
+<h3 id="understanding-lsblk-output">Understanding lsblk Output</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda           8:0    0 465.8G  0 disk
+├─sda1        8:1    0   512M  0 part /boot/efi
+├─sda2        8:2    0     1G  0 part /boot
+└─sda3        8:3    0 464.3G  0 part /
+nvme0n1     259:0    0   1T   0 disk
+└─nvme0n1p1 259:1    0   1T   0 part /data
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>NAME</strong>: Device name</li>
+<li><strong>MAJ:MIN</strong>: Major/minor device numbers</li>
+<li><strong>RM</strong>: Removable (1 = yes)</li>
+<li><strong>SIZE</strong>: Device size</li>
+<li><strong>RO</strong>: Read-only (1 = yes)</li>
+<li><strong>TYPE</strong>: disk, part, rom, etc.</li>
+<li><strong>MOUNTPOINT</strong>: Where it's mounted</li>
+</ul>
+<h2 id="disk-partitions-dividing-storage">Disk Partitions: Dividing Storage</h2>
+<p><strong>Disk partitions</strong> divide a physical disk into logical sections. Each partition can have its own file system.</p>
+<h3 id="why-partition">Why Partition?</h3>
+<ul>
+<li>Separate OS from data</li>
+<li>Multi-boot systems</li>
+<li>Different file systems for different needs</li>
+<li>Easier backups and recovery</li>
+</ul>
+<h3 id="partition-types">Partition Types</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary</td>
+<td>Main partitions (max 4 on MBR)</td>
+</tr>
+<tr>
+<td>Extended</td>
+<td>Container for logical partitions</td>
+</tr>
+<tr>
+<td>Logical</td>
+<td>Partitions inside extended</td>
+</tr>
+<tr>
+<td>GPT</td>
+<td>Modern, supports many partitions</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-fdisk-command-partition-manager">The Fdisk Command: Partition Manager</h2>
+<p>The <strong>fdisk command</strong> creates and manages partitions. Use carefully—wrong commands can destroy data!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># List all partitions (requires sudo)</span>
+sudo<span class="w"> </span>fdisk<span class="w"> </span>-l
+
+<span class="c1"># List specific disk</span>
+sudo<span class="w"> </span>fdisk<span class="w"> </span>-l<span class="w"> </span>/dev/sda
+
+<span class="c1"># Interactive partition editing</span>
+sudo<span class="w"> </span>fdisk<span class="w"> </span>/dev/sdb
+
+<span class="c1"># fdisk commands (inside interactive mode):</span>
+<span class="c1"># m - help menu</span>
+<span class="c1"># p - print partition table</span>
+<span class="c1"># n - new partition</span>
+<span class="c1"># d - delete partition</span>
+<span class="c1"># t - change partition type</span>
+<span class="c1"># w - write changes and exit</span>
+<span class="c1"># q - quit without saving</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition danger">
+<p class="admonition-title">Backup First!</p>
+<p>Fdisk can destroy all data on a disk. Always backup before partitioning, and triple-check you're working on the correct disk!</p>
+</div>
+<h3 id="modern-alternative-parted">Modern Alternative: parted</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># List partitions</span>
+sudo<span class="w"> </span>parted<span class="w"> </span>-l
+
+<span class="c1"># Interactive mode</span>
+sudo<span class="w"> </span>parted<span class="w"> </span>/dev/sdb
+
+<span class="c1"># Create GPT partition table</span>
+sudo<span class="w"> </span>parted<span class="w"> </span>/dev/sdb<span class="w"> </span>mklabel<span class="w"> </span>gpt
+
+<span class="c1"># Create partition</span>
+sudo<span class="w"> </span>parted<span class="w"> </span>/dev/sdb<span class="w"> </span>mkpart<span class="w"> </span>primary<span class="w"> </span>ext4<span class="w"> </span><span class="m">0</span>%<span class="w"> </span><span class="m">100</span>%
+</code></pre></div></td></tr></table></div>
+<h2 id="the-mount-command-attach-file-systems">The Mount Command: Attach File Systems</h2>
+<p>The <strong>mount command</strong> attaches a file system to a directory, making it accessible.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Show all mounted file systems</span>
+mount
+
+<span class="c1"># Mount a device</span>
+sudo<span class="w"> </span>mount<span class="w"> </span>/dev/sdb1<span class="w"> </span>/mnt/usb
+
+<span class="c1"># Mount with specific file system type</span>
+sudo<span class="w"> </span>mount<span class="w"> </span>-t<span class="w"> </span>ntfs<span class="w"> </span>/dev/sdb1<span class="w"> </span>/mnt/windows
+
+<span class="c1"># Mount read-only</span>
+sudo<span class="w"> </span>mount<span class="w"> </span>-ro<span class="w"> </span>/dev/sdb1<span class="w"> </span>/mnt/usb
+
+<span class="c1"># Mount with specific options</span>
+sudo<span class="w"> </span>mount<span class="w"> </span>-o<span class="w"> </span><span class="nv">uid</span><span class="o">=</span><span class="m">1000</span>,gid<span class="o">=</span><span class="m">1000</span><span class="w"> </span>/dev/sdb1<span class="w"> </span>/mnt/usb
+
+<span class="c1"># Show mounted file systems nicely</span>
+mount<span class="w"> </span><span class="p">|</span><span class="w"> </span>column<span class="w"> </span>-t
+findmnt
+</code></pre></div></td></tr></table></div>
+<h3 id="mount-options">Mount Options</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ro</code></td>
+<td>Read-only</td>
+</tr>
+<tr>
+<td><code>rw</code></td>
+<td>Read-write</td>
+</tr>
+<tr>
+<td><code>noexec</code></td>
+<td>No execution of binaries</td>
+</tr>
+<tr>
+<td><code>nosuid</code></td>
+<td>Ignore SUID bits</td>
+</tr>
+<tr>
+<td><code>uid=N</code></td>
+<td>Owner user ID</td>
+</tr>
+<tr>
+<td><code>gid=N</code></td>
+<td>Owner group ID</td>
+</tr>
+<tr>
+<td><code>umask=NNN</code></td>
+<td>Permission mask</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-umount-command-detach-file-systems">The Umount Command: Detach File Systems</h2>
+<p>The <strong>umount command</strong> safely detaches file systems before removing media.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Unmount by mount point</span>
+sudo<span class="w"> </span>umount<span class="w"> </span>/mnt/usb
+
+<span class="c1"># Unmount by device</span>
+sudo<span class="w"> </span>umount<span class="w"> </span>/dev/sdb1
+
+<span class="c1"># Force unmount (if busy)</span>
+sudo<span class="w"> </span>umount<span class="w"> </span>-f<span class="w"> </span>/mnt/usb
+
+<span class="c1"># Lazy unmount (detach, cleanup later)</span>
+sudo<span class="w"> </span>umount<span class="w"> </span>-l<span class="w"> </span>/mnt/usb
+
+<span class="c1"># Check what&#39;s using the mount</span>
+lsof<span class="w"> </span>/mnt/usb
+fuser<span class="w"> </span>-m<span class="w"> </span>/mnt/usb
+</code></pre></div></td></tr></table></div>
+<div class="admonition warning">
+<p class="admonition-title">Always Unmount!</p>
+<p>Removing a USB drive without unmounting can corrupt data. Always <code>umount</code> first!</p>
+</div>
+<h2 id="the-fstab-file-automatic-mounting">The Fstab File: Automatic Mounting</h2>
+<p>The <strong>fstab file</strong> (<code>/etc/fstab</code>) defines file systems to mount at boot time.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># View fstab</span>
+cat<span class="w"> </span>/etc/fstab
+
+<span class="c1"># Example fstab entries:</span>
+<span class="c1"># &lt;device&gt;        &lt;mount point&gt;  &lt;type&gt;  &lt;options&gt;        &lt;dump&gt; &lt;pass&gt;</span>
+<span class="nv">UUID</span><span class="o">=</span>abc123...<span class="w">    </span>/<span class="w">              </span>ext4<span class="w">    </span>defaults<span class="w">         </span><span class="m">0</span><span class="w">      </span><span class="m">1</span>
+<span class="nv">UUID</span><span class="o">=</span>def456...<span class="w">    </span>/boot<span class="w">          </span>ext4<span class="w">    </span>defaults<span class="w">         </span><span class="m">0</span><span class="w">      </span><span class="m">2</span>
+<span class="nv">UUID</span><span class="o">=</span>ghi789...<span class="w">    </span>/home<span class="w">          </span>ext4<span class="w">    </span>defaults<span class="w">         </span><span class="m">0</span><span class="w">      </span><span class="m">2</span>
+/dev/sdb1<span class="w">         </span>/mnt/data<span class="w">      </span>ntfs<span class="w">    </span><span class="nv">uid</span><span class="o">=</span><span class="m">1000</span>,gid<span class="o">=</span><span class="m">1000</span><span class="w"> </span><span class="m">0</span><span class="w">     </span><span class="m">0</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="fstab-fields">Fstab Fields</h3>
+<ol>
+<li><strong>Device</strong>: UUID, LABEL, or /dev path</li>
+<li><strong>Mount point</strong>: Where to mount</li>
+<li><strong>Type</strong>: File system type</li>
+<li><strong>Options</strong>: Mount options</li>
+<li><strong>Dump</strong>: Backup flag (0 or 1)</li>
+<li><strong>Pass</strong>: fsck order (0, 1, or 2)</li>
+</ol>
+<h3 id="using-uuids-recommended">Using UUIDs (Recommended)</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Find UUID of a device</span>
+sudo<span class="w"> </span>blkid<span class="w"> </span>/dev/sdb1
+
+<span class="c1"># Output:</span>
+<span class="c1"># /dev/sdb1: UUID=&quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot; TYPE=&quot;ext4&quot;</span>
+
+<span class="c1"># Use in fstab:</span>
+<span class="nv">UUID</span><span class="o">=</span>a1b2c3d4-e5f6-7890-abcd-ef1234567890<span class="w"> </span>/mnt/data<span class="w"> </span>ext4<span class="w"> </span>defaults<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">2</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="file-system-types-formats-for-storage">File System Types: Formats for Storage</h2>
+<p><strong>File system types</strong> determine how data is organized on storage.</p>
+<h3 id="common-linux-file-systems">Common Linux File Systems</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ext4</td>
+<td>Linux standard</td>
+<td>General purpose</td>
+</tr>
+<tr>
+<td>xfs</td>
+<td>High performance</td>
+<td>Large files, servers</td>
+</tr>
+<tr>
+<td>btrfs</td>
+<td>Modern, snapshots</td>
+<td>Advanced users</td>
+</tr>
+<tr>
+<td>f2fs</td>
+<td>Flash-optimized</td>
+<td>SSDs, SD cards</td>
+</tr>
+<tr>
+<td>ntfs</td>
+<td>Windows</td>
+<td>Sharing with Windows</td>
+</tr>
+<tr>
+<td>exfat</td>
+<td>Universal</td>
+<td>USB drives, cross-platform</td>
+</tr>
+<tr>
+<td>fat32</td>
+<td>Legacy</td>
+<td>Boot partitions, old devices</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-ext4-file-system">The Ext4 File System</h2>
+<p>The <strong>ext4 file system</strong> is the default for most Linux distributions. It's reliable, fast, and well-tested.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create ext4 file system</span>
+sudo<span class="w"> </span>mkfs.ext4<span class="w"> </span>/dev/sdb1
+
+<span class="c1"># With options</span>
+sudo<span class="w"> </span>mkfs.ext4<span class="w"> </span>-L<span class="w"> </span><span class="s2">&quot;MyData&quot;</span><span class="w"> </span>/dev/sdb1<span class="w">     </span><span class="c1"># With label</span>
+sudo<span class="w"> </span>mkfs.ext4<span class="w"> </span>-m<span class="w"> </span><span class="m">1</span><span class="w"> </span>/dev/sdb1<span class="w">            </span><span class="c1"># 1% reserved space</span>
+
+<span class="c1"># Check file system</span>
+sudo<span class="w"> </span>fsck.ext4<span class="w"> </span>/dev/sdb1
+
+<span class="c1"># Tune file system</span>
+sudo<span class="w"> </span>tune2fs<span class="w"> </span>-l<span class="w"> </span>/dev/sdb1<span class="w">                 </span><span class="c1"># List info</span>
+sudo<span class="w"> </span>tune2fs<span class="w"> </span>-L<span class="w"> </span><span class="s2">&quot;NewLabel&quot;</span><span class="w"> </span>/dev/sdb1<span class="w">     </span><span class="c1"># Change label</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="ext4-features">Ext4 Features</h3>
+<ul>
+<li>Journaling (crash recovery)</li>
+<li>Up to 16TB file size</li>
+<li>Up to 1EB volume size</li>
+<li>Extents (efficient large files)</li>
+<li>Backward compatible with ext3</li>
+</ul>
+<h2 id="ntfs-support-windows-compatibility">NTFS Support: Windows Compatibility</h2>
+<p><strong>NTFS support</strong> lets you read and write Windows drives.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install NTFS support</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ntfs-3g
+
+<span class="c1"># Mount NTFS drive</span>
+sudo<span class="w"> </span>mount<span class="w"> </span>-t<span class="w"> </span>ntfs-3g<span class="w"> </span>/dev/sdb1<span class="w"> </span>/mnt/windows
+
+<span class="c1"># Auto-mount in fstab:</span>
+/dev/sdb1<span class="w"> </span>/mnt/windows<span class="w"> </span>ntfs-3g<span class="w"> </span>defaults,uid<span class="o">=</span><span class="m">1000</span>,gid<span class="o">=</span><span class="m">1000</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="usb-drives-and-flash-drives">USB Drives and Flash Drives</h2>
+<p><strong>USB drives</strong> and <strong>flash drives</strong> are plug-and-play storage devices. Modern Linux auto-mounts them.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Watch for USB insertion</span>
+dmesg<span class="w"> </span>-w
+
+<span class="c1"># When you plug in USB, look for:</span>
+<span class="c1"># [  123.456] usb 2-1: new high-speed USB device</span>
+<span class="c1"># [  123.789] sd 2:0:0:0: [sdb] 62652416 512-byte sectors</span>
+
+<span class="c1"># Find mounted USB</span>
+lsblk
+findmnt<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>media
+
+<span class="c1"># Safely remove</span>
+sudo<span class="w"> </span>umount<span class="w"> </span>/media/username/USBDRIVE
+<span class="c1"># Wait for LED to stop blinking, then remove</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="swap-space-virtual-memory">Swap Space: Virtual Memory</h2>
+<p><strong>Swap space</strong> extends RAM using disk storage. When RAM fills up, inactive pages move to swap.</p>
+<h3 id="check-swap">Check Swap</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Show swap usage</span>
+free<span class="w"> </span>-h
+swapon<span class="w"> </span>--show
+
+<span class="c1"># Detailed swap info</span>
+cat<span class="w"> </span>/proc/swaps
+</code></pre></div></td></tr></table></div>
+<h2 id="swap-file-file-based-swap">Swap File: File-Based Swap</h2>
+<p>A <strong>swap file</strong> is a regular file used as swap space. Flexible and easy to resize!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create 4GB swap file</span>
+sudo<span class="w"> </span>fallocate<span class="w"> </span>-l<span class="w"> </span>4G<span class="w"> </span>/swapfile
+<span class="c1"># Or: sudo dd if=/dev/zero of=/swapfile bs=1G count=4</span>
+
+<span class="c1"># Set permissions</span>
+sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>/swapfile
+
+<span class="c1"># Format as swap</span>
+sudo<span class="w"> </span>mkswap<span class="w"> </span>/swapfile
+
+<span class="c1"># Enable</span>
+sudo<span class="w"> </span>swapon<span class="w"> </span>/swapfile
+
+<span class="c1"># Make permanent (add to /etc/fstab):</span>
+/swapfile<span class="w"> </span>none<span class="w"> </span>swap<span class="w"> </span>sw<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
+
+<span class="c1"># Verify</span>
+swapon<span class="w"> </span>--show
+</code></pre></div></td></tr></table></div>
+<h3 id="swap-partition">Swap Partition</h3>
+<p>A <strong>swap partition</strong> is a dedicated partition for swap. Traditional but less flexible.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create swap partition with fdisk (type 82)</span>
+<span class="c1"># Then format:</span>
+sudo<span class="w"> </span>mkswap<span class="w"> </span>/dev/sdb2
+sudo<span class="w"> </span>swapon<span class="w"> </span>/dev/sdb2
+
+<span class="c1"># Add to fstab:</span>
+<span class="nv">UUID</span><span class="o">=</span>swap-uuid-here<span class="w"> </span>none<span class="w"> </span>swap<span class="w"> </span>sw<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="the-df-command-disk-free-space">The Df Command: Disk Free Space</h2>
+<p>The <strong>df command</strong> shows disk space usage for mounted file systems.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Basic usage</span>
+df
+
+<span class="c1"># Human-readable sizes</span>
+df<span class="w"> </span>-h
+
+<span class="c1"># Show file system type</span>
+df<span class="w"> </span>-T
+
+<span class="c1"># Specific file system</span>
+df<span class="w"> </span>-h<span class="w"> </span>/home
+
+<span class="c1"># Inodes (file count limits)</span>
+df<span class="w"> </span>-i
+
+<span class="c1"># Exclude pseudo file systems</span>
+df<span class="w"> </span>-h<span class="w"> </span>-x<span class="w"> </span>tmpfs<span class="w"> </span>-x<span class="w"> </span>devtmpfs
+</code></pre></div></td></tr></table></div>
+<h3 id="reading-df-output">Reading df Output</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda2       460G  120G  317G  28% /
+/dev/sda1       511M   63M  449M  13% /boot
+/dev/nvme0n1p1  932G  400G  532G  43% /data
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Watch for Full Disks</p>
+<p>Systems can crash when disks hit 100%. Monitor with <code>df -h</code> and set up alerts for 80%+ usage.</p>
+</div>
+<h2 id="the-du-command-disk-usage">The Du Command: Disk Usage</h2>
+<p>The <strong>du command</strong> shows how much space files and directories use.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Size of current directory</span>
+du<span class="w"> </span>-sh<span class="w"> </span>.
+
+<span class="c1"># Size of each subdirectory</span>
+du<span class="w"> </span>-h<span class="w"> </span>--max-depth<span class="o">=</span><span class="m">1</span>
+
+<span class="c1"># Size sorted by largest</span>
+du<span class="w"> </span>-h<span class="w"> </span>--max-depth<span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-hr
+
+<span class="c1"># Size of specific directory</span>
+du<span class="w"> </span>-sh<span class="w"> </span>/var/log
+
+<span class="c1"># Human-readable, total at end</span>
+du<span class="w"> </span>-ch<span class="w"> </span>*.log
+
+<span class="c1"># Exclude patterns</span>
+du<span class="w"> </span>-sh<span class="w"> </span>--exclude<span class="o">=</span><span class="s1">&#39;*.log&#39;</span><span class="w"> </span>/var
+</code></pre></div></td></tr></table></div>
+<h3 id="finding-space-hogs">Finding Space Hogs</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Top 10 largest directories</span>
+du<span class="w"> </span>-h<span class="w"> </span>/home<span class="w"> </span>--max-depth<span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-hr<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-10
+
+<span class="c1"># Top 10 largest files</span>
+find<span class="w"> </span>/<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>du<span class="w"> </span>-h<span class="w"> </span><span class="o">{}</span><span class="w"> </span>+<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-hr<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-10
+
+<span class="c1"># Alternative: ncdu (interactive)</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ncdu
+ncdu<span class="w"> </span>/home
+</code></pre></div></td></tr></table></div>
+<h2 id="system-monitoring-watch-your-resources">System Monitoring: Watch Your Resources</h2>
+<p><strong>System monitoring</strong> tracks CPU, memory, disk, and network usage to identify problems.</p>
+<h3 id="quick-system-overview">Quick System Overview</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Everything at a glance</span>
+top
+htop<span class="w">        </span><span class="c1"># Better version</span>
+
+<span class="c1"># One-shot system summary</span>
+uptime<span class="w">      </span><span class="c1"># Load average</span>
+free<span class="w"> </span>-h<span class="w">     </span><span class="c1"># Memory</span>
+df<span class="w"> </span>-h<span class="w">       </span><span class="c1"># Disk</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="cpu-usage-processing-power">CPU Usage: Processing Power</h2>
+<p><strong>CPU usage</strong> shows how busy your processor is.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># CPU usage with top</span>
+top<span class="w"> </span>-bn1<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-20
+
+<span class="c1"># Per-CPU usage</span>
+mpstat<span class="w"> </span>-P<span class="w"> </span>ALL<span class="w"> </span><span class="m">1</span>
+
+<span class="c1"># CPU info</span>
+lscpu
+cat<span class="w"> </span>/proc/cpuinfo
+
+<span class="c1"># Real-time CPU monitor</span>
+htop
+</code></pre></div></td></tr></table></div>
+<h3 id="understanding-cpu-metrics">Understanding CPU Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>us</td>
+<td>User space (your programs)</td>
+</tr>
+<tr>
+<td>sy</td>
+<td>System/kernel</td>
+</tr>
+<tr>
+<td>ni</td>
+<td>Nice (low priority)</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Idle (unused)</td>
+</tr>
+<tr>
+<td>wa</td>
+<td>I/O wait (waiting for disk)</td>
+</tr>
+<tr>
+<td>hi</td>
+<td>Hardware interrupts</td>
+</tr>
+<tr>
+<td>si</td>
+<td>Software interrupts</td>
+</tr>
+<tr>
+<td>st</td>
+<td>Steal (virtualization)</td>
+</tr>
+</tbody>
+</table>
+<p>High <code>wa</code> (I/O wait) means your disk is the bottleneck!</p>
+<h2 id="memory-usage-ram-status">Memory Usage: RAM Status</h2>
+<p><strong>Memory usage</strong> shows how RAM is being used.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Memory summary</span>
+free<span class="w"> </span>-h
+
+<span class="c1"># Output:</span>
+<span class="c1">#               total        used        free      shared  buff/cache   available</span>
+<span class="c1"># Mem:           15Gi       4.2Gi       6.8Gi       523Mi       4.5Gi        10Gi</span>
+<span class="c1"># Swap:          4.0Gi          0B       4.0Gi</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="understanding-memory">Understanding Memory</h3>
+<ul>
+<li><strong>total</strong>: Physical RAM</li>
+<li><strong>used</strong>: Currently in use</li>
+<li><strong>free</strong>: Completely unused</li>
+<li><strong>buff/cache</strong>: Disk cache (available if needed)</li>
+<li><strong>available</strong>: Actually available for programs</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Free Memory Isn't Wasted</p>
+<p>Linux uses "free" RAM for disk caching. Look at "available", not "free"!</p>
+</div>
+<h2 id="the-free-command-memory-details">The Free Command: Memory Details</h2>
+<p>The <strong>free command</strong> shows memory and swap usage.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Human-readable</span>
+free<span class="w"> </span>-h
+
+<span class="c1"># In megabytes</span>
+free<span class="w"> </span>-m
+
+<span class="c1"># In gigabytes</span>
+free<span class="w"> </span>-g
+
+<span class="c1"># Wide output</span>
+free<span class="w"> </span>-w
+
+<span class="c1"># Continuous monitoring (every 2 seconds)</span>
+free<span class="w"> </span>-h<span class="w"> </span>-s<span class="w"> </span><span class="m">2</span>
+
+<span class="c1"># Total line only</span>
+free<span class="w"> </span>-h<span class="w"> </span>-t
+</code></pre></div></td></tr></table></div>
+<h2 id="the-vmstat-command-virtual-memory-stats">The Vmstat Command: Virtual Memory Stats</h2>
+<p>The <strong>vmstat command</strong> shows memory, swap, I/O, and CPU statistics.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Snapshot</span>
+vmstat
+
+<span class="c1"># Every 2 seconds, 5 times</span>
+vmstat<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">5</span>
+
+<span class="c1"># With timestamps</span>
+vmstat<span class="w"> </span>-t<span class="w"> </span><span class="m">2</span>
+
+<span class="c1"># Disk statistics</span>
+vmstat<span class="w"> </span>-d
+
+<span class="c1"># Slab info (kernel memory)</span>
+vmstat<span class="w"> </span>-m
+</code></pre></div></td></tr></table></div>
+<h3 id="understanding-vmstat-output">Understanding vmstat Output</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 1  0      0 6945780 234560 4567890    0    0    12    45  234  567 12  3 84  1  0
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r</td>
+<td>Processes waiting for CPU</td>
+</tr>
+<tr>
+<td>b</td>
+<td>Processes in uninterruptible sleep</td>
+</tr>
+<tr>
+<td>swpd</td>
+<td>Virtual memory used</td>
+</tr>
+<tr>
+<td>free</td>
+<td>Idle memory</td>
+</tr>
+<tr>
+<td>si/so</td>
+<td>Swap in/out (bad if high!)</td>
+</tr>
+<tr>
+<td>bi/bo</td>
+<td>Blocks read/written to disk</td>
+</tr>
+<tr>
+<td>us/sy/id/wa</td>
+<td>CPU percentages</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-iostat-command-io-statistics">The Iostat Command: I/O Statistics</h2>
+<p>The <strong>iostat command</strong> shows disk I/O statistics—essential for storage analysis!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install if needed</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>sysstat
+
+<span class="c1"># Basic I/O stats</span>
+iostat
+
+<span class="c1"># Human-readable, extended</span>
+iostat<span class="w"> </span>-xh
+
+<span class="c1"># Every 2 seconds</span>
+iostat<span class="w"> </span><span class="m">2</span>
+
+<span class="c1"># Specific device</span>
+iostat<span class="w"> </span>-x<span class="w"> </span>/dev/sda<span class="w"> </span><span class="m">2</span>
+
+<span class="c1"># CPU and disk stats</span>
+iostat<span class="w"> </span>-c<span class="w"> </span>-d<span class="w"> </span><span class="m">2</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="reading-iostat-output">Reading iostat Output</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Device     r/s     w/s     rkB/s     wkB/s   %util
+sda       12.34   45.67    456.78   1234.56   15.23
+nvme0n1  234.56   89.12  12345.67   4567.89    8.45
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r/s, w/s</td>
+<td>Reads/writes per second</td>
+</tr>
+<tr>
+<td>rkB/s, wkB/s</td>
+<td>KB read/written per second</td>
+</tr>
+<tr>
+<td>await</td>
+<td>Average I/O wait time (ms)</td>
+</tr>
+<tr>
+<td>%util</td>
+<td>Percentage of time device is busy</td>
+</tr>
+</tbody>
+</table>
+<p><strong>%util near 100%</strong> = disk is saturated (bottleneck!)</p>
+<h2 id="the-sar-command-system-activity-reporter">The Sar Command: System Activity Reporter</h2>
+<p>The <strong>sar command</strong> collects and reports system activity data over time. Great for historical analysis!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># CPU usage</span>
+sar<span class="w"> </span>-u<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">5</span>
+
+<span class="c1"># Memory usage</span>
+sar<span class="w"> </span>-r<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">5</span>
+
+<span class="c1"># Disk I/O</span>
+sar<span class="w"> </span>-d<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">5</span>
+
+<span class="c1"># Network</span>
+sar<span class="w"> </span>-n<span class="w"> </span>DEV<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">5</span>
+
+<span class="c1"># Historical data (if sysstat is running)</span>
+sar<span class="w"> </span>-u<span class="w">          </span><span class="c1"># Today&#39;s CPU</span>
+sar<span class="w"> </span>-u<span class="w"> </span>-f<span class="w"> </span>/var/log/sysstat/sa15<span class="w">  </span><span class="c1"># Day 15</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="enable-sar-data-collection">Enable sar Data Collection</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install sysstat</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>sysstat
+
+<span class="c1"># Enable collection</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>sysstat
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>sysstat
+
+<span class="c1"># Edit collection interval</span>
+sudo<span class="w"> </span>nano<span class="w"> </span>/etc/default/sysstat
+<span class="c1"># Set ENABLED=&quot;true&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="system-load-and-load-average">System Load and Load Average</h2>
+<p><strong>System load</strong> measures how busy the system is. <strong>Load average</strong> shows the load over 1, 5, and 15 minutes.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check load</span>
+uptime
+<span class="c1"># Output: load average: 1.23, 0.98, 0.76</span>
+
+<span class="c1"># Also in top</span>
+top
+
+<span class="c1"># Detailed</span>
+cat<span class="w"> </span>/proc/loadavg
+<span class="c1"># 1.23 0.98 0.76 2/234 12345</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="understanding-load-average">Understanding Load Average</h3>
+<ul>
+<li><strong>Load = 1.0</strong> means one CPU core is 100% busy</li>
+<li><strong>Load &lt; cores</strong> = system can handle more</li>
+<li><strong>Load &gt; cores</strong> = system is overloaded</li>
+</ul>
+<p>On a 4-core system:
+- 1.0 = 25% utilized
+- 4.0 = 100% utilized (all cores busy)
+- 8.0 = 200% load (processes waiting)</p>
+<h2 id="bottleneck-analysis-finding-the-slow-part">Bottleneck Analysis: Finding the Slow Part</h2>
+<p><strong>Bottleneck analysis</strong> identifies what's limiting your system's performance.</p>
+<h3 id="the-three-main-bottlenecks">The Three Main Bottlenecks</h3>
+<table>
+<thead>
+<tr>
+<th>Bottleneck</th>
+<th>Symptoms</th>
+<th>Check With</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>High load, low idle%</td>
+<td>top, htop, mpstat</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>Swap usage, OOM killer</td>
+<td>free, vmstat (si/so)</td>
+</tr>
+<tr>
+<td>Disk I/O</td>
+<td>High iowait, slow operations</td>
+<td>iostat (%util, await)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quick-bottleneck-detection">Quick Bottleneck Detection</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># bottleneck-check.sh - Quick system bottleneck analysis</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== System Bottleneck Check ===&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c1"># CPU Check</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;CPU Load:&quot;</span>
+uptime
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c1"># Memory Check</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Memory (look for swap usage):&quot;</span>
+free<span class="w"> </span>-h
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c1"># Disk I/O Check</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Disk I/O (look for high %util):&quot;</span>
+iostat<span class="w"> </span>-x<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-10
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c1"># Quick summary</span>
+<span class="nv">CPU_IDLE</span><span class="o">=</span><span class="k">$(</span>top<span class="w"> </span>-bn1<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;Cpu(s)&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $8}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="s1">&#39;%&#39;</span><span class="w"> </span>-f1<span class="k">)</span>
+<span class="nv">SWAP_USED</span><span class="o">=</span><span class="k">$(</span>free<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Swap<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $3}&#39;</span><span class="k">)</span>
+<span class="nv">IO_WAIT</span><span class="o">=</span><span class="k">$(</span>iostat<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-A1<span class="w"> </span><span class="s2">&quot;avg-cpu&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-1<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $4}&#39;</span><span class="k">)</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== Summary ===&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;CPU Idle: </span><span class="si">${</span><span class="nv">CPU_IDLE</span><span class="si">}</span><span class="s2">% (low = CPU bottleneck)&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Swap Used: </span><span class="si">${</span><span class="nv">SWAP_USED</span><span class="si">}</span><span class="s2"> KB (high = memory bottleneck)&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;I/O Wait: </span><span class="si">${</span><span class="nv">IO_WAIT</span><span class="si">}</span><span class="s2">% (high = disk bottleneck)&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="disk-benchmarks-measuring-speed">Disk Benchmarks: Measuring Speed</h2>
+<p><strong>Disk benchmarks</strong> measure how fast your storage actually is. This is where things get fun!</p>
+<h3 id="benchmarking-tools">Benchmarking Tools</h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+<th>Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>time</code></td>
+<td>Simple timing</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td><code>dd</code></td>
+<td>Basic throughput</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td><code>hdparm</code></td>
+<td>Read speed</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td><code>fio</code></td>
+<td>Full I/O testing</td>
+<td>Advanced</td>
+</tr>
+<tr>
+<td><code>ioping</code></td>
+<td>I/O latency</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td><code>bonnie++</code></td>
+<td>Comprehensive</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><code>sysbench</code></td>
+<td>CPU, memory, I/O</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-time-command-simple-timing">The Time Command: Simple Timing</h2>
+<p>The <strong>time command</strong> measures how long a command takes to run.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Time any command</span>
+<span class="nb">time</span><span class="w"> </span>ls<span class="w"> </span>-laR<span class="w"> </span>/home
+
+<span class="c1"># Output:</span>
+<span class="c1"># real    0m2.345s   # Wall clock time</span>
+<span class="c1"># user    0m0.234s   # CPU time in user mode</span>
+<span class="c1"># sys     0m0.123s   # CPU time in kernel mode</span>
+
+<span class="c1"># Time file copy</span>
+<span class="nb">time</span><span class="w"> </span>cp<span class="w"> </span>largefile.iso<span class="w"> </span>/mnt/backup/
+
+<span class="c1"># Time with more precision</span>
+/usr/bin/time<span class="w"> </span>-v<span class="w"> </span>cp<span class="w"> </span>largefile.iso<span class="w"> </span>/mnt/backup/
+</code></pre></div></td></tr></table></div>
+<h3 id="understanding-time-output">Understanding Time Output</h3>
+<ul>
+<li><strong>real</strong>: Actual elapsed time (includes waiting for I/O)</li>
+<li><strong>user</strong>: CPU time executing your code</li>
+<li><strong>sys</strong>: CPU time in kernel operations</li>
+</ul>
+<p>If <code>real &gt;&gt; user + sys</code>, you're waiting for I/O!</p>
+<h2 id="the-dd-command-raw-disk-speed">The Dd Command: Raw Disk Speed</h2>
+<p>The <strong>dd command</strong> can measure raw read/write speed. It's basic but universally available.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Test WRITE speed</span>
+<span class="c1"># Warning: This creates a test file!</span>
+dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/zero<span class="w"> </span><span class="nv">of</span><span class="o">=</span>testfile<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>1G<span class="w"> </span><span class="nv">count</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">oflag</span><span class="o">=</span>direct<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-1
+
+<span class="c1"># Test READ speed (after write test)</span>
+dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>testfile<span class="w"> </span><span class="nv">of</span><span class="o">=</span>/dev/null<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>1G<span class="w"> </span><span class="nv">count</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">iflag</span><span class="o">=</span>direct<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-1
+
+<span class="c1"># Clean up</span>
+rm<span class="w"> </span>testfile
+
+<span class="c1"># Test with different block sizes</span>
+dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/zero<span class="w"> </span><span class="nv">of</span><span class="o">=</span>testfile<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>4K<span class="w"> </span><span class="nv">count</span><span class="o">=</span><span class="m">100000</span><span class="w"> </span><span class="nv">oflag</span><span class="o">=</span>direct
+dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/zero<span class="w"> </span><span class="nv">of</span><span class="o">=</span>testfile<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>1M<span class="w"> </span><span class="nv">count</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span><span class="nv">oflag</span><span class="o">=</span>direct
+</code></pre></div></td></tr></table></div>
+<h3 id="important-dd-flags">Important dd Flags</h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bs=SIZE</code></td>
+<td>Block size (4K, 1M, 1G)</td>
+</tr>
+<tr>
+<td><code>count=N</code></td>
+<td>Number of blocks</td>
+</tr>
+<tr>
+<td><code>oflag=direct</code></td>
+<td>Bypass cache (real disk speed)</td>
+</tr>
+<tr>
+<td><code>iflag=direct</code></td>
+<td>Direct read (bypass cache)</td>
+</tr>
+<tr>
+<td><code>conv=fdatasync</code></td>
+<td>Ensure data is written</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">dd Can Destroy Data</p>
+<p>Be VERY careful with dd! <code>of=/dev/sda</code> will wipe your disk!</p>
+</div>
+<h2 id="the-hdparm-command-drive-info-and-testing">The Hdparm Command: Drive Info and Testing</h2>
+<p>The <strong>hdparm command</strong> reads drive information and tests read speed.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install if needed</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>hdparm
+
+<span class="c1"># Drive information</span>
+sudo<span class="w"> </span>hdparm<span class="w"> </span>-I<span class="w"> </span>/dev/sda
+
+<span class="c1"># Test cached read speed (RAM, not disk!)</span>
+sudo<span class="w"> </span>hdparm<span class="w"> </span>-T<span class="w"> </span>/dev/sda
+
+<span class="c1"># Test direct disk read speed</span>
+sudo<span class="w"> </span>hdparm<span class="w"> </span>-t<span class="w"> </span>/dev/sda
+
+<span class="c1"># Both tests together</span>
+sudo<span class="w"> </span>hdparm<span class="w"> </span>-Tt<span class="w"> </span>/dev/sda
+
+<span class="c1"># Output:</span>
+<span class="c1"># Timing cached reads:   12345 MB in  2.00 seconds = 6172 MB/sec</span>
+<span class="c1"># Timing buffered disk reads: 1234 MB in  3.00 seconds = 411 MB/sec</span>
+</code></pre></div></td></tr></table></div>
+<p>The <code>-t</code> (buffered) result is what matters for actual disk speed!</p>
+<h2 id="the-fio-command-flexible-io-tester">The Fio Command: Flexible I/O Tester</h2>
+<p>The <strong>fio command</strong> is the most powerful I/O benchmarking tool. It can simulate almost any workload.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>fio
+
+<span class="c1"># Simple sequential read test</span>
+fio<span class="w"> </span>--name<span class="o">=</span>seqread<span class="w"> </span>--rw<span class="o">=</span><span class="nb">read</span><span class="w"> </span>--bs<span class="o">=</span>1M<span class="w"> </span>--size<span class="o">=</span>1G<span class="w"> </span>--numjobs<span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--filename<span class="o">=</span>testfile<span class="w"> </span>--direct<span class="o">=</span><span class="m">1</span>
+
+<span class="c1"># Simple sequential write test</span>
+fio<span class="w"> </span>--name<span class="o">=</span>seqwrite<span class="w"> </span>--rw<span class="o">=</span>write<span class="w"> </span>--bs<span class="o">=</span>1M<span class="w"> </span>--size<span class="o">=</span>1G<span class="w"> </span>--numjobs<span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--filename<span class="o">=</span>testfile<span class="w"> </span>--direct<span class="o">=</span><span class="m">1</span>
+
+<span class="c1"># Random read test (4K blocks - like database access)</span>
+fio<span class="w"> </span>--name<span class="o">=</span>randread<span class="w"> </span>--rw<span class="o">=</span>randread<span class="w"> </span>--bs<span class="o">=</span>4k<span class="w"> </span>--size<span class="o">=</span>1G<span class="w"> </span>--numjobs<span class="o">=</span><span class="m">4</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--filename<span class="o">=</span>testfile<span class="w"> </span>--direct<span class="o">=</span><span class="m">1</span><span class="w"> </span>--runtime<span class="o">=</span><span class="m">60</span>
+
+<span class="c1"># Random write test</span>
+fio<span class="w"> </span>--name<span class="o">=</span>randwrite<span class="w"> </span>--rw<span class="o">=</span>randwrite<span class="w"> </span>--bs<span class="o">=</span>4k<span class="w"> </span>--size<span class="o">=</span>1G<span class="w"> </span>--numjobs<span class="o">=</span><span class="m">4</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--filename<span class="o">=</span>testfile<span class="w"> </span>--direct<span class="o">=</span><span class="m">1</span><span class="w"> </span>--runtime<span class="o">=</span><span class="m">60</span>
+
+<span class="c1"># Mixed read/write (70% read, 30% write)</span>
+fio<span class="w"> </span>--name<span class="o">=</span>mixed<span class="w"> </span>--rw<span class="o">=</span>randrw<span class="w"> </span>--rwmixread<span class="o">=</span><span class="m">70</span><span class="w"> </span>--bs<span class="o">=</span>4k<span class="w"> </span>--size<span class="o">=</span>1G<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--numjobs<span class="o">=</span><span class="m">4</span><span class="w"> </span>--filename<span class="o">=</span>testfile<span class="w"> </span>--direct<span class="o">=</span><span class="m">1</span><span class="w"> </span>--runtime<span class="o">=</span><span class="m">60</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="key-fio-metrics">Key fio Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IOPS</td>
+<td>I/O Operations Per Second</td>
+</tr>
+<tr>
+<td>BW</td>
+<td>Bandwidth (throughput)</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>Latency (response time)</td>
+</tr>
+<tr>
+<td>slat</td>
+<td>Submission latency</td>
+</tr>
+<tr>
+<td>clat</td>
+<td>Completion latency</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-ioping-command-io-latency">The Ioping Command: I/O Latency</h2>
+<p>The <strong>ioping command</strong> measures I/O latency—how quickly the disk responds to requests.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ioping
+
+<span class="c1"># Basic latency test</span>
+ioping<span class="w"> </span>/dev/sda
+
+<span class="c1"># Specific number of requests</span>
+ioping<span class="w"> </span>-c<span class="w"> </span><span class="m">10</span><span class="w"> </span>/dev/sda
+
+<span class="c1"># Test a directory</span>
+ioping<span class="w"> </span>-c<span class="w"> </span><span class="m">20</span><span class="w"> </span>/home
+
+<span class="c1"># Direct I/O (bypass cache)</span>
+ioping<span class="w"> </span>-D<span class="w"> </span>/dev/sda
+
+<span class="c1"># Sequential test</span>
+ioping<span class="w"> </span>-s<span class="w"> </span>1M<span class="w"> </span>-c<span class="w"> </span><span class="m">10</span><span class="w"> </span>/dev/sda
+</code></pre></div></td></tr></table></div>
+<h3 id="output-example">Output Example</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>4 KiB &lt;&lt;&lt; /dev/sda (block device 500G): request=1 time=3.2 ms
+4 KiB &lt;&lt;&lt; /dev/sda (block device 500G): request=2 time=2.8 ms
+
+--- /dev/sda ping statistics ---
+10 requests completed in 32.1 ms, 40 KiB read, 311 iops, 1.22 MiB/s
+min/avg/max/mdev = 2.1 ms / 3.2 ms / 5.4 ms / 0.8 ms
+</code></pre></div></td></tr></table></div>
+<p>Low latency = responsive disk. NVMe drives have latency under 0.1ms!</p>
+<h2 id="the-bonnie-command-comprehensive-testing">The Bonnie++ Command: Comprehensive Testing</h2>
+<p>The <strong>bonnie++ command</strong> runs a comprehensive suite of I/O tests.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>bonnie++
+
+<span class="c1"># Basic test (uses 2x RAM by default)</span>
+bonnie++<span class="w"> </span>-d<span class="w"> </span>/home/test<span class="w"> </span>-u<span class="w"> </span>username
+
+<span class="c1"># Specify size</span>
+bonnie++<span class="w"> </span>-d<span class="w"> </span>/home/test<span class="w"> </span>-s<span class="w"> </span>4G<span class="w"> </span>-u<span class="w"> </span>username
+
+<span class="c1"># Quick test</span>
+bonnie++<span class="w"> </span>-d<span class="w"> </span>/home/test<span class="w"> </span>-s<span class="w"> </span>1G<span class="w"> </span>-n<span class="w"> </span><span class="m">0</span><span class="w"> </span>-u<span class="w"> </span>username
+
+<span class="c1"># Output to CSV</span>
+bonnie++<span class="w"> </span>-d<span class="w"> </span>/home/test<span class="w"> </span>-s<span class="w"> </span>2G<span class="w"> </span>-u<span class="w"> </span>username<span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>bonnie_results.csv
+</code></pre></div></td></tr></table></div>
+<p>Bonnie++ tests:
+- Sequential read/write
+- Random seeks
+- File creation/deletion</p>
+<h2 id="the-sysbench-command-multi-purpose-benchmarking">The Sysbench Command: Multi-Purpose Benchmarking</h2>
+<p>The <strong>sysbench command</strong> benchmarks CPU, memory, and disk I/O.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>sysbench
+
+<span class="c1"># CPU benchmark</span>
+sysbench<span class="w"> </span>cpu<span class="w"> </span>run
+sysbench<span class="w"> </span>cpu<span class="w"> </span>--threads<span class="o">=</span><span class="m">4</span><span class="w"> </span>run
+
+<span class="c1"># Memory benchmark</span>
+sysbench<span class="w"> </span>memory<span class="w"> </span>run
+sysbench<span class="w"> </span>memory<span class="w"> </span>--memory-block-size<span class="o">=</span>1M<span class="w"> </span>run
+
+<span class="c1"># File I/O - Prepare test files</span>
+sysbench<span class="w"> </span>fileio<span class="w"> </span>--file-total-size<span class="o">=</span>2G<span class="w"> </span>prepare
+
+<span class="c1"># File I/O - Sequential read</span>
+sysbench<span class="w"> </span>fileio<span class="w"> </span>--file-total-size<span class="o">=</span>2G<span class="w"> </span>--file-test-mode<span class="o">=</span>seqrd<span class="w"> </span>run
+
+<span class="c1"># File I/O - Random read/write</span>
+sysbench<span class="w"> </span>fileio<span class="w"> </span>--file-total-size<span class="o">=</span>2G<span class="w"> </span>--file-test-mode<span class="o">=</span>rndrw<span class="w"> </span>run
+
+<span class="c1"># Cleanup</span>
+sysbench<span class="w"> </span>fileio<span class="w"> </span>--file-total-size<span class="o">=</span>2G<span class="w"> </span>cleanup
+</code></pre></div></td></tr></table></div>
+<h2 id="cpu-benchmarks-testing-processing-power">CPU Benchmarks: Testing Processing Power</h2>
+<p><strong>CPU benchmarks</strong> measure raw computing power.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># sysbench CPU test</span>
+sysbench<span class="w"> </span>cpu<span class="w"> </span>--threads<span class="o">=</span><span class="k">$(</span>nproc<span class="k">)</span><span class="w"> </span>run
+
+<span class="c1"># Prime number calculation (stress test)</span>
+sysbench<span class="w"> </span>cpu<span class="w"> </span>--threads<span class="o">=</span><span class="k">$(</span>nproc<span class="k">)</span><span class="w"> </span>--time<span class="o">=</span><span class="m">30</span><span class="w"> </span>run
+
+<span class="c1"># 7zip benchmark (compression/decompression)</span>
+7z<span class="w"> </span>b
+
+<span class="c1"># Stress test (check cooling!)</span>
+stress<span class="w"> </span>--cpu<span class="w"> </span><span class="k">$(</span>nproc<span class="k">)</span><span class="w"> </span>--timeout<span class="w"> </span><span class="m">60</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="gpu-performance-graphics-processing">GPU Performance: Graphics Processing</h2>
+<p><strong>GPU performance</strong> matters for graphics, machine learning, and video processing.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check GPU info</span>
+lspci<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>vga
+lspci<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>nvidia
+
+<span class="c1"># NVIDIA GPU stats</span>
+nvidia-smi
+
+<span class="c1"># AMD GPU stats</span>
+radeontop
+
+<span class="c1"># GPU benchmark (if glmark2 installed)</span>
+glmark2
+
+<span class="c1"># OpenCL info</span>
+clinfo
+</code></pre></div></td></tr></table></div>
+<h2 id="performance-tuning-making-it-faster">Performance Tuning: Making It Faster</h2>
+<p><strong>Performance tuning</strong> optimizes system settings for better performance.</p>
+<h3 id="quick-tuning-tips">Quick Tuning Tips</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Adjust swappiness (0-100, lower = less swapping)</span>
+cat<span class="w"> </span>/proc/sys/vm/swappiness
+sudo<span class="w"> </span>sysctl<span class="w"> </span>vm.swappiness<span class="o">=</span><span class="m">10</span>
+
+<span class="c1"># Make permanent</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;vm.swappiness=10&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/sysctl.conf
+
+<span class="c1"># Adjust disk scheduler (for SSDs)</span>
+cat<span class="w"> </span>/sys/block/sda/queue/scheduler
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;none&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/sys/block/sda/queue/scheduler<span class="w">  </span><span class="c1"># For NVMe</span>
+
+<span class="c1"># Increase file descriptor limits</span>
+<span class="nb">ulimit</span><span class="w"> </span>-n<span class="w"> </span><span class="m">65535</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="case-study-raspberry-pi-5-nvme-performance">Case Study: Raspberry Pi 5 NVMe Performance</h2>
+<p>Here's the exciting part! The Raspberry Pi 5 introduced PCIe support, allowing you to connect NVMe SSDs. The performance difference compared to MicroSD is INCREDIBLE!</p>
+<h3 id="the-hardware-setup">The Hardware Setup</h3>
+<table>
+<thead>
+<tr>
+<th>Storage Type</th>
+<th>Interface</th>
+<th>Theoretical Max</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MicroSD (A2)</td>
+<td>SD 3.0</td>
+<td>~100 MB/s</td>
+</tr>
+<tr>
+<td>USB 3.0 SSD</td>
+<td>USB 3.0</td>
+<td>~400 MB/s</td>
+</tr>
+<tr>
+<td>NVMe SSD</td>
+<td>PCIe 2.0 x1</td>
+<td>~450 MB/s</td>
+</tr>
+</tbody>
+</table>
+<p>The Pi 5's PCIe is limited to gen 2 x1, but that's still MUCH faster than SD!</p>
+<h3 id="benchmark-comparison-script">Benchmark Comparison Script</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># rpi5-storage-benchmark.sh - Compare storage devices on Raspberry Pi 5</span>
+<span class="c1">#</span>
+<span class="c1"># Run with: sudo ./rpi5-storage-benchmark.sh</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;========================================&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Raspberry Pi 5 Storage Benchmark&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;========================================&quot;</span>
+date
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c1"># Configuration - adjust these paths!</span>
+<span class="nv">MICROSD_PATH</span><span class="o">=</span><span class="s2">&quot;/mnt/sd&quot;</span><span class="w">        </span><span class="c1"># MicroSD mount point</span>
+<span class="nv">NVME_PATH</span><span class="o">=</span><span class="s2">&quot;/mnt/nvme&quot;</span><span class="w">         </span><span class="c1"># NVMe mount point</span>
+<span class="nv">USB_PATH</span><span class="o">=</span><span class="s2">&quot;/mnt/usb&quot;</span><span class="w">           </span><span class="c1"># USB drive mount point</span>
+<span class="nv">TEST_SIZE</span><span class="o">=</span><span class="s2">&quot;1G&quot;</span>
+
+<span class="c1"># Function to run benchmark on a path</span>
+benchmark_storage<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">name</span><span class="o">=</span><span class="nv">$1</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">path</span><span class="o">=</span><span class="nv">$2</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$path</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Path </span><span class="nv">$path</span><span class="s2"> does not exist, skipping </span><span class="nv">$name</span><span class="s2">&quot;</span>
+<span class="w">        </span><span class="k">return</span>
+<span class="w">    </span><span class="k">fi</span>
+
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== Testing: </span><span class="nv">$name</span><span class="s2"> (</span><span class="nv">$path</span><span class="s2">) ===&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="w">    </span><span class="c1"># Sequential Write</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Sequential Write (dd):&quot;</span>
+<span class="w">    </span>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/zero<span class="w"> </span><span class="nv">of</span><span class="o">=</span><span class="nv">$path</span>/testfile<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>1M<span class="w"> </span><span class="nv">count</span><span class="o">=</span><span class="m">1024</span><span class="w"> </span><span class="nv">conv</span><span class="o">=</span>fdatasync<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-1
+
+<span class="w">    </span><span class="c1"># Sequential Read</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Sequential Read (dd):&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/proc/sys/vm/drop_caches<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+<span class="w">    </span>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span><span class="nv">$path</span>/testfile<span class="w"> </span><span class="nv">of</span><span class="o">=</span>/dev/null<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>1M<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-1
+
+<span class="w">    </span><span class="c1"># I/O Latency</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;I/O Latency (ioping):&quot;</span>
+<span class="w">    </span>ioping<span class="w"> </span>-c<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="nv">$path</span><span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-1
+
+<span class="w">    </span><span class="c1"># Random 4K (fio)</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Random 4K Read (fio):&quot;</span>
+<span class="w">    </span>fio<span class="w"> </span>--name<span class="o">=</span>rand4k<span class="w"> </span>--rw<span class="o">=</span>randread<span class="w"> </span>--bs<span class="o">=</span>4k<span class="w"> </span>--size<span class="o">=</span>256M<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--numjobs<span class="o">=</span><span class="m">4</span><span class="w"> </span>--filename<span class="o">=</span><span class="nv">$path</span>/fiotest<span class="w"> </span>--direct<span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--runtime<span class="o">=</span><span class="m">30</span><span class="w"> </span>--group_reporting<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;IOPS|bw=&quot;</span>
+
+<span class="w">    </span><span class="c1"># Cleanup</span>
+<span class="w">    </span>rm<span class="w"> </span>-f<span class="w"> </span><span class="nv">$path</span>/testfile<span class="w"> </span><span class="nv">$path</span>/fiotest
+<span class="o">}</span>
+
+<span class="c1"># Check for required tools</span>
+<span class="k">for</span><span class="w"> </span>cmd<span class="w"> </span><span class="k">in</span><span class="w"> </span>dd<span class="w"> </span>ioping<span class="w"> </span>fio<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span><span class="nb">command</span><span class="w"> </span>-v<span class="w"> </span><span class="nv">$cmd</span><span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Error: </span><span class="nv">$cmd</span><span class="s2"> not installed&quot;</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Install with: sudo apt install </span><span class="nv">$cmd</span><span class="s2">&quot;</span>
+<span class="w">        </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="k">done</span>
+
+<span class="c1"># Run benchmarks</span>
+benchmark_storage<span class="w"> </span><span class="s2">&quot;MicroSD&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$MICROSD_PATH</span><span class="s2">&quot;</span>
+benchmark_storage<span class="w"> </span><span class="s2">&quot;NVMe SSD&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NVME_PATH</span><span class="s2">&quot;</span>
+benchmark_storage<span class="w"> </span><span class="s2">&quot;USB 3.0 SSD&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USB_PATH</span><span class="s2">&quot;</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;========================================&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Benchmark Complete!&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;========================================&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="real-world-results">Real-World Results</h3>
+<p>Typical results comparing storage on Raspberry Pi 5:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>MicroSD</th>
+<th>USB 3.0 SSD</th>
+<th>NVMe SSD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sequential Read</td>
+<td>45 MB/s</td>
+<td>350 MB/s</td>
+<td>450 MB/s</td>
+</tr>
+<tr>
+<td>Sequential Write</td>
+<td>30 MB/s</td>
+<td>300 MB/s</td>
+<td>400 MB/s</td>
+</tr>
+<tr>
+<td>Random 4K Read</td>
+<td>2,500 IOPS</td>
+<td>25,000 IOPS</td>
+<td>50,000 IOPS</td>
+</tr>
+<tr>
+<td>Random 4K Write</td>
+<td>1,500 IOPS</td>
+<td>20,000 IOPS</td>
+<td>45,000 IOPS</td>
+</tr>
+<tr>
+<td>I/O Latency</td>
+<td>3-10 ms</td>
+<td>0.3-0.5 ms</td>
+<td>0.1-0.2 ms</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The NVMe drive is 10-20x faster for random I/O!</strong></p>
+<p>This makes a HUGE difference for:
+- Boot time (10 seconds vs 40 seconds)
+- Database performance
+- Compilation speed
+- Application responsiveness</p>
+<h3 id="setting-up-nvme-on-raspberry-pi-5">Setting Up NVMe on Raspberry Pi 5</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check if NVMe is detected</span>
+lsblk
+sudo<span class="w"> </span>nvme<span class="w"> </span>list
+
+<span class="c1"># If you see /dev/nvme0n1, it&#39;s working!</span>
+
+<span class="c1"># Partition the NVMe</span>
+sudo<span class="w"> </span>parted<span class="w"> </span>/dev/nvme0n1<span class="w"> </span>mklabel<span class="w"> </span>gpt
+sudo<span class="w"> </span>parted<span class="w"> </span>/dev/nvme0n1<span class="w"> </span>mkpart<span class="w"> </span>primary<span class="w"> </span>ext4<span class="w"> </span><span class="m">0</span>%<span class="w"> </span><span class="m">100</span>%
+
+<span class="c1"># Format</span>
+sudo<span class="w"> </span>mkfs.ext4<span class="w"> </span>/dev/nvme0n1p1
+
+<span class="c1"># Mount</span>
+sudo<span class="w"> </span>mkdir<span class="w"> </span>/mnt/nvme
+sudo<span class="w"> </span>mount<span class="w"> </span>/dev/nvme0n1p1<span class="w"> </span>/mnt/nvme
+
+<span class="c1"># Add to fstab for permanent mount</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>blkid<span class="w"> </span>/dev/nvme0n1p1<span class="w"> </span>-o<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>^UUID<span class="k">)</span><span class="s2"> /mnt/nvme ext4 defaults,noatime 0 2&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/fstab
+</code></pre></div></td></tr></table></div>
+<h3 id="boot-from-nvme">Boot from NVMe</h3>
+<p>To boot your Pi 5 from NVMe (maximum speed!):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Clone SD card to NVMe</span>
+sudo<span class="w"> </span>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/mmcblk0<span class="w"> </span><span class="nv">of</span><span class="o">=</span>/dev/nvme0n1<span class="w"> </span><span class="nv">bs</span><span class="o">=</span>4M<span class="w"> </span><span class="nv">status</span><span class="o">=</span>progress
+
+<span class="c1"># Resize partition</span>
+sudo<span class="w"> </span>parted<span class="w"> </span>/dev/nvme0n1<span class="w"> </span>resizepart<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">100</span>%
+sudo<span class="w"> </span>resize2fs<span class="w"> </span>/dev/nvme0n1p2
+
+<span class="c1"># Update boot config</span>
+sudo<span class="w"> </span>rpi-eeprom-config<span class="w"> </span>--edit
+<span class="c1"># Add: BOOT_ORDER=0xf416</span>
+<span class="c1"># This tries NVMe first, then SD, then USB</span>
+
+<span class="c1"># Reboot and enjoy the speed!</span>
+sudo<span class="w"> </span>reboot
+</code></pre></div></td></tr></table></div>
+<h3 id="why-such-a-big-difference">Why Such a Big Difference?</h3>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>MicroSD</th>
+<th>NVMe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interface</td>
+<td>Serial (SD bus)</td>
+<td>Parallel (PCIe)</td>
+</tr>
+<tr>
+<td>Queue Depth</td>
+<td>1 command</td>
+<td>65,535 commands</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>3-10 ms</td>
+<td>0.05-0.1 ms</td>
+</tr>
+<tr>
+<td>IOPS</td>
+<td>2,000-5,000</td>
+<td>50,000-100,000</td>
+</tr>
+</tbody>
+</table>
+<p>NVMe can handle many operations simultaneously (parallelism), while SD cards process commands one at a time!</p>
+<h2 id="quick-reference-storage-and-performance">Quick Reference: Storage and Performance</h2>
+<h3 id="storage-commands">Storage Commands</h3>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>List disks</td>
+<td><code>lsblk</code></td>
+</tr>
+<tr>
+<td>Disk info</td>
+<td><code>sudo fdisk -l</code></td>
+</tr>
+<tr>
+<td>Mount device</td>
+<td><code>sudo mount /dev/sdb1 /mnt/usb</code></td>
+</tr>
+<tr>
+<td>Unmount</td>
+<td><code>sudo umount /mnt/usb</code></td>
+</tr>
+<tr>
+<td>Check space</td>
+<td><code>df -h</code></td>
+</tr>
+<tr>
+<td>Check usage</td>
+<td><code>du -sh *</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="monitoring-commands">Monitoring Commands</h3>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Memory</td>
+<td><code>free -h</code></td>
+</tr>
+<tr>
+<td>CPU + processes</td>
+<td><code>top</code> or <code>htop</code></td>
+</tr>
+<tr>
+<td>I/O stats</td>
+<td><code>iostat -x 2</code></td>
+</tr>
+<tr>
+<td>System activity</td>
+<td><code>vmstat 2</code></td>
+</tr>
+<tr>
+<td>Load average</td>
+<td><code>uptime</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="benchmark-commands">Benchmark Commands</h3>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time command</td>
+<td><code>time command</code></td>
+</tr>
+<tr>
+<td>Disk speed</td>
+<td><code>dd if=/dev/zero of=test bs=1M count=1024 oflag=direct</code></td>
+</tr>
+<tr>
+<td>Read speed</td>
+<td><code>sudo hdparm -t /dev/sda</code></td>
+</tr>
+<tr>
+<td>I/O latency</td>
+<td><code>ioping /dev/sda</code></td>
+</tr>
+<tr>
+<td>Full benchmark</td>
+<td><code>fio --name=test --rw=read --size=1G</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>You're now a storage and performance expert!</p>
+<ul>
+<li><strong>Block devices</strong>: Storage as files in /dev</li>
+<li><strong>Mount/umount</strong>: Attaching file systems</li>
+<li><strong>fstab</strong>: Automatic mounting at boot</li>
+<li><strong>df/du</strong>: Space usage monitoring</li>
+<li><strong>vmstat/iostat</strong>: System performance stats</li>
+<li><strong>Benchmarking</strong>: time, dd, hdparm, fio, ioping</li>
+<li><strong>NVMe &gt;&gt; SD</strong>: 10-100x faster for random I/O!</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Performance Detective!</p>
+<p>You can now diagnose why systems are slow, identify bottlenecks, and prove that NVMe is worth every penny on your Raspberry Pi 5!</p>
+</div>
+<h2 id="whats-next">What's Next?</h2>
+<p>Now you understand storage and performance, you're ready to explore the Raspberry Pi in depth! The next chapter covers setting up and configuring your Pi for all kinds of projects.</p>
+<hr />
+<details class="question">
+<summary>Quick Quiz: Storage and Performance</summary>
+</details>
+<ol>
+<li>What command shows disk space usage for mounted file systems?</li>
+<li>How do you mount a USB drive to /mnt/usb?</li>
+<li>What does high I/O wait (wa%) indicate?</li>
+<li>Which tool measures I/O latency?</li>
+<li>What makes NVMe faster than MicroSD?</li>
+<li>How do you safely remove a USB drive?</li>
+<li>What file configures automatic mounting at boot?</li>
+</ol>
+<details class="note">
+<summary>Quiz Answers</summary>
+</details>
+<ol>
+<li><code>df -h</code></li>
+<li><code>sudo mount /dev/sdb1 /mnt/usb</code></li>
+<li>The disk is the bottleneck - processes are waiting for I/O</li>
+<li><code>ioping</code> (also fio shows latency)</li>
+<li>PCIe interface with parallel commands, deep queue depth, and low latency</li>
+<li><code>sudo umount /mnt/usb</code> then physically remove</li>
+<li><code>/etc/fstab</code></li>
+</ol>
 
 
 
@@ -1598,7 +5661,7 @@
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../js/extra.css"></script>
+        <script src="../../js/extra.js"></script>
       
     
   </body>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIX Family Tree (1969-2025)</title>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="network"></div>
+
+        <!-- Title at top center -->
+        <div class="title">UNIX Family Tree (1969-2025)</div>
+
+        <!-- Legend in upper left -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color color-unix"></div>
+                <span><strong>Original UNIX</strong></span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-bsd"></div>
+                <span><strong>BSD Variants</strong></span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-sysv"></div>
+                <span><strong>System V (Commercial)</strong></span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-gnu"></div>
+                <span><strong>GNU/Linux</strong></span>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="unix-family-tree.js"></script>
+</body>
+</html>

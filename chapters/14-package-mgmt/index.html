@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+        <meta name="description" content="Master software installation with APT, dpkg, Snap, Flatpak, and Homebrew">
       
       
         <meta name="author" content="Dan McCreary">
@@ -52,7 +52,7 @@
       
     
     
-      <link rel="stylesheet" href="../../styles/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -75,7 +75,7 @@
       
         <meta  property="og:title"  content="Package Management - Learning Linux" >
       
-        <meta  property="og:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  property="og:description"  content="Master software installation with APT, dpkg, Snap, Flatpak, and Homebrew" >
       
         <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/14-package-mgmt/index.png" >
       
@@ -91,7 +91,7 @@
       
         <meta  name="twitter:title"  content="Package Management - Learning Linux" >
       
-        <meta  name="twitter:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  name="twitter:description"  content="Master software installation with APT, dpkg, Snap, Flatpak, and Homebrew" >
       
         <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/14-package-mgmt/index.png" >
       
@@ -214,7 +214,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -259,7 +259,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -439,8 +439,6 @@
           
         
       
-        
-          
         
       
         
@@ -843,6 +841,489 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-do-you-install-software-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Do You Install Software on Linux?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-managers-your-software-butler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Managers: Your Software Butler
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Package Managers: Your Software Butler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-package-managers-are-awesome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Package Managers Are Awesome
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-packages-what-gets-installed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Packages: What Gets Installed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-repositories-the-app-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Repositories: The App Store
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Package Repositories: The App Store">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repository-components-ubuntudebian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository Components (Ubuntu/Debian)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-apt-package-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      The APT Package Manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The APT Package Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apt-update-refresh-the-package-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apt Update: Refresh the Package List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-upgrade-install-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apt Upgrade: Install Updates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-install-add-new-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apt Install: Add New Software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-remove-uninstall-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apt Remove: Uninstall Software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-search-find-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apt Search: Find Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-show-package-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apt Show: Package Information
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-command-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      APT Command Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dpkg-command-low-level-package-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Dpkg Command: Low-Level Package Tool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Dpkg Command: Low-Level Package Tool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-dpkg-vs-apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use dpkg vs apt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-dependencies-the-web-of-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Dependencies: The Web of Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Package Dependencies: The Web of Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependency-hell-and-how-linux-avoids-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Hell (And How Linux Avoids It)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repository-sources-where-packages-come-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository Sources: Where Packages Come From
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Repository Sources: Where Packages Come From">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-repositories-safely" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Repositories Safely
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ppa-repositories-personal-package-archives" class="md-nav__link">
+    <span class="md-ellipsis">
+      PPA Repositories: Personal Package Archives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-updates-keeping-your-system-secure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Updates: Keeping Your System Secure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software Updates: Keeping Your System Secure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-updates-matter-the-security-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Updates Matter: The Security Reality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic Updates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-danger-of-untrusted-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Danger of Untrusted Sources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Danger of Untrusted Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-trust-hierarchy-for-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Trust Hierarchy for Software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-verify-downloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Verify Downloads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snap-packages-universal-linux-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snap Packages: Universal Linux Apps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Snap Packages: Universal Linux Apps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snap-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snap Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flatpak-another-universal-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flatpak: Another Universal Format
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flatpak: Another Universal Format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snap-vs-flatpak" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snap vs Flatpak
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#homebrew-the-macos-favorite-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homebrew: The macOS Favorite on Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Homebrew: The macOS Favorite on Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brew-install-and-brew-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brew Install and Brew Update
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-homebrew-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Homebrew Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-homebrew-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use Homebrew on Linux?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-right-package-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing the Right Package Manager
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-package-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Package Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices for Package Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do-these-things" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do These Things
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont-do-these-things" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't Do These Things
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting Common Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package-has-unmet-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Package has unmet dependencies"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#could-not-get-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Could not get lock"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hash-sum-mismatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Hash sum mismatch"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1048,7 +1529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../24-customization/" class="md-nav__link">
+      <a href="../24-customization/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,6 +1654,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1186,7 +1675,7 @@
         
   
   
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1424,6 +1913,489 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-do-you-install-software-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Do You Install Software on Linux?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-managers-your-software-butler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Managers: Your Software Butler
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Package Managers: Your Software Butler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-package-managers-are-awesome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Package Managers Are Awesome
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-packages-what-gets-installed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Packages: What Gets Installed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-repositories-the-app-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Repositories: The App Store
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Package Repositories: The App Store">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repository-components-ubuntudebian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository Components (Ubuntu/Debian)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-apt-package-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      The APT Package Manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The APT Package Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apt-update-refresh-the-package-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apt Update: Refresh the Package List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-upgrade-install-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apt Upgrade: Install Updates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-install-add-new-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apt Install: Add New Software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-remove-uninstall-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apt Remove: Uninstall Software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-search-find-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apt Search: Find Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-show-package-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apt Show: Package Information
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-command-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      APT Command Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dpkg-command-low-level-package-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Dpkg Command: Low-Level Package Tool
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Dpkg Command: Low-Level Package Tool">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-dpkg-vs-apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use dpkg vs apt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-dependencies-the-web-of-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Dependencies: The Web of Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Package Dependencies: The Web of Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependency-hell-and-how-linux-avoids-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Hell (And How Linux Avoids It)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repository-sources-where-packages-come-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository Sources: Where Packages Come From
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Repository Sources: Where Packages Come From">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-repositories-safely" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Repositories Safely
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ppa-repositories-personal-package-archives" class="md-nav__link">
+    <span class="md-ellipsis">
+      PPA Repositories: Personal Package Archives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-updates-keeping-your-system-secure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Updates: Keeping Your System Secure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software Updates: Keeping Your System Secure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-updates-matter-the-security-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Updates Matter: The Security Reality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic Updates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-danger-of-untrusted-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Danger of Untrusted Sources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Danger of Untrusted Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-trust-hierarchy-for-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Trust Hierarchy for Software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-verify-downloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Verify Downloads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snap-packages-universal-linux-apps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snap Packages: Universal Linux Apps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Snap Packages: Universal Linux Apps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snap-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snap Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flatpak-another-universal-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flatpak: Another Universal Format
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flatpak: Another Universal Format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snap-vs-flatpak" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snap vs Flatpak
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#homebrew-the-macos-favorite-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homebrew: The macOS Favorite on Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Homebrew: The macOS Favorite on Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brew-install-and-brew-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brew Install and Brew Update
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-homebrew-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Homebrew Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-homebrew-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use Homebrew on Linux?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-right-package-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing the Right Package Manager
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-package-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Package Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices for Package Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do-these-things" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do These Things
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont-do-these-things" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't Do These Things
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting Common Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package-has-unmet-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Package has unmet dependencies"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#could-not-get-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Could not get lock"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hash-sum-mismatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Hash sum mismatch"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1439,7 +2411,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/learniing-linux/blob/master/docs/chapters/14-package-mgmt/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/learning-linux/blob/master/docs/chapters/14-package-mgmt/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1464,6 +2436,7 @@
 <li>Apt Search</li>
 <li>Apt Show</li>
 <li>Dpkg Command</li>
+<li>Dpkg Command</li>
 <li>Snap Packages</li>
 <li>Flatpak</li>
 <li>Homebrew</li>
@@ -1481,7 +2454,1047 @@
 <li><a href="../07-permissions/">Chapter 7: File Permissions and Ownership</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<h2 id="how-do-you-install-software-on-linux">How Do You Install Software on Linux?</h2>
+<p>On Windows, you download an <code>.exe</code> file and double-click it. On macOS, you drag an app to the Applications folder. But on Linux? Linux has something MUCH better: <strong>package managers</strong>.</p>
+<p>Imagine if your phone's app store could install ANY software, automatically handle updates, and make sure everything works together. That's what package managers do. They're one of Linux's superpowers!</p>
+<p>In this chapter, you'll learn to install software like a pro—and understand why keeping your system updated isn't just convenient, it's <strong>essential for security</strong>.</p>
+<h2 id="package-managers-your-software-butler">Package Managers: Your Software Butler</h2>
+<p>A <strong>package manager</strong> is a tool that automates installing, updating, configuring, and removing software. Think of it as a butler for your software needs.</p>
+<p>Instead of:</p>
+<ol>
+<li>Finding the software website</li>
+<li>Downloading the right version</li>
+<li>Running an installer</li>
+<li>Figuring out dependencies</li>
+<li>Remembering to check for updates</li>
+</ol>
+<p>You just type:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>firefox
+</code></pre></div></td></tr></table></div>
+<p>Done. Firefox is installed, with all its dependencies, from a trusted source.</p>
+<h3 id="why-package-managers-are-awesome">Why Package Managers Are Awesome</h3>
+<ul>
+<li><strong>One command to install</strong>: No hunting for download links</li>
+<li><strong>Automatic updates</strong>: Keep everything current easily</li>
+<li><strong>Dependency resolution</strong>: Required libraries installed automatically</li>
+<li><strong>Trusted sources</strong>: Software comes from verified repositories</li>
+<li><strong>Easy removal</strong>: Clean uninstalls without leftover junk</li>
+<li><strong>Consistency</strong>: Same process for thousands of packages</li>
+</ul>
+<h2 id="software-packages-what-gets-installed">Software Packages: What Gets Installed</h2>
+<p>A <strong>software package</strong> is a bundle containing:</p>
+<ul>
+<li>The program's executable files</li>
+<li>Configuration files</li>
+<li>Documentation</li>
+<li>Metadata (name, version, dependencies)</li>
+<li>Installation scripts</li>
+</ul>
+<p>Different Linux distributions use different package formats:</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Extension</th>
+<th>Used By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DEB</td>
+<td><code>.deb</code></td>
+<td>Debian, Ubuntu, Linux Mint</td>
+</tr>
+<tr>
+<td>RPM</td>
+<td><code>.rpm</code></td>
+<td>Fedora, RHEL, CentOS, openSUSE</td>
+</tr>
+<tr>
+<td>Pacman</td>
+<td><code>.pkg.tar.zst</code></td>
+<td>Arch Linux, Manjaro</td>
+</tr>
+<tr>
+<td>Snap</td>
+<td><code>.snap</code></td>
+<td>Cross-distribution</td>
+</tr>
+<tr>
+<td>Flatpak</td>
+<td><code>.flatpak</code></td>
+<td>Cross-distribution</td>
+</tr>
+</tbody>
+</table>
+<h2 id="package-repositories-the-app-store">Package Repositories: The App Store</h2>
+<p><strong>Package repositories</strong> are servers that host software packages. When you install something, your package manager downloads it from these repositories.</p>
+<p>Think of repositories as giant libraries of software, maintained by your distribution's team. The default repositories contain thousands of packages, all tested to work together.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See where APT gets its packages</span>
+cat<span class="w"> </span>/etc/apt/sources.list
+
+<span class="c1"># Example output:</span>
+<span class="c1"># deb http://archive.ubuntu.com/ubuntu jammy main restricted</span>
+<span class="c1"># deb http://archive.ubuntu.com/ubuntu jammy universe multiverse</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="repository-components-ubuntudebian">Repository Components (Ubuntu/Debian)</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>main</code></td>
+<td>Officially supported, open source</td>
+</tr>
+<tr>
+<td><code>restricted</code></td>
+<td>Officially supported, not fully open source</td>
+</tr>
+<tr>
+<td><code>universe</code></td>
+<td>Community-maintained, open source</td>
+</tr>
+<tr>
+<td><code>multiverse</code></td>
+<td>Not free or has legal restrictions</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-apt-package-manager">The APT Package Manager</h2>
+<p>The <strong>APT package manager</strong> (Advanced Package Tool) is the primary tool for Debian-based systems like Ubuntu and Linux Mint. It's powerful, user-friendly, and what you'll use most often.</p>
+<h3 id="apt-update-refresh-the-package-list">Apt Update: Refresh the Package List</h3>
+<p><strong>Apt update</strong> downloads the latest package information from repositories. It doesn't install anything—it just updates the list of what's available.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Always run this first!</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+
+<span class="c1"># Output shows:</span>
+<span class="c1"># Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease</span>
+<span class="c1"># Get:2 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]</span>
+<span class="c1"># ...</span>
+<span class="c1"># Reading package lists... Done</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Update Before Installing</p>
+<p>Always run <code>apt update</code> before installing new software. Otherwise, you might install outdated versions or miss packages that have been added recently.</p>
+</div>
+<h3 id="apt-upgrade-install-updates">Apt Upgrade: Install Updates</h3>
+<p><strong>Apt upgrade</strong> installs available updates for all installed packages:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See what would be upgraded</span>
+apt<span class="w"> </span>list<span class="w"> </span>--upgradable
+
+<span class="c1"># Install all updates</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+
+<span class="c1"># Upgrade with smarter conflict resolution</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>full-upgrade
+</code></pre></div></td></tr></table></div>
+<p>The difference:</p>
+<ul>
+<li><code>apt upgrade</code>: Won't remove packages or install new dependencies</li>
+<li><code>apt full-upgrade</code>: May remove packages if needed for the upgrade</li>
+</ul>
+<h3 id="apt-install-add-new-software">Apt Install: Add New Software</h3>
+<p><strong>Apt install</strong> downloads and installs packages:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install a single package</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>vim
+
+<span class="c1"># Install multiple packages</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>curl<span class="w"> </span>wget
+
+<span class="c1"># Install without prompting (for scripts)</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>htop
+
+<span class="c1"># Install a specific version</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span><span class="nv">nginx</span><span class="o">=</span><span class="m">1</span>.18.0-0ubuntu1
+</code></pre></div></td></tr></table></div>
+<p>APT automatically handles <strong>package dependencies</strong>—other packages your software needs to work.</p>
+<h3 id="apt-remove-uninstall-software">Apt Remove: Uninstall Software</h3>
+<p><strong>Apt remove</strong> uninstalls packages:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Remove a package (keeps config files)</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>remove<span class="w"> </span>firefox
+
+<span class="c1"># Remove package AND config files</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>purge<span class="w"> </span>firefox
+
+<span class="c1"># Remove unused dependencies</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>autoremove
+
+<span class="c1"># The nuclear option: purge + autoremove</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>purge<span class="w"> </span>firefox<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>autoremove
+</code></pre></div></td></tr></table></div>
+<h3 id="apt-search-find-packages">Apt Search: Find Packages</h3>
+<p><strong>Apt search</strong> finds packages by name or description:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Search for packages</span>
+apt<span class="w"> </span>search<span class="w"> </span>image<span class="w"> </span>editor
+
+<span class="c1"># Search package names only</span>
+apt<span class="w"> </span>search<span class="w"> </span>--names-only<span class="w"> </span>gimp
+
+<span class="c1"># Use grep for more control</span>
+apt<span class="w"> </span>search<span class="w"> </span>editor<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>image
+</code></pre></div></td></tr></table></div>
+<h3 id="apt-show-package-information">Apt Show: Package Information</h3>
+<p><strong>Apt show</strong> displays detailed information about a package:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>apt<span class="w"> </span>show<span class="w"> </span>firefox
+
+<span class="c1"># Output includes:</span>
+<span class="c1"># Package: firefox</span>
+<span class="c1"># Version: 119.0+build1-0ubuntu0.22.04.1</span>
+<span class="c1"># Priority: optional</span>
+<span class="c1"># Section: web</span>
+<span class="c1"># Maintainer: Ubuntu Mozilla Team</span>
+<span class="c1"># Installed-Size: 232 MB</span>
+<span class="c1"># Depends: libc6 (&gt;= 2.34), libglib2.0-0...</span>
+<span class="c1"># Description: Safe and easy web browser from Mozilla</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="apt-command-summary">APT Command Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>apt update</code></td>
+<td>Refresh package lists</td>
+</tr>
+<tr>
+<td><code>apt upgrade</code></td>
+<td>Install updates</td>
+</tr>
+<tr>
+<td><code>apt install &lt;pkg&gt;</code></td>
+<td>Install package</td>
+</tr>
+<tr>
+<td><code>apt remove &lt;pkg&gt;</code></td>
+<td>Remove package</td>
+</tr>
+<tr>
+<td><code>apt purge &lt;pkg&gt;</code></td>
+<td>Remove package + config</td>
+</tr>
+<tr>
+<td><code>apt autoremove</code></td>
+<td>Remove unused dependencies</td>
+</tr>
+<tr>
+<td><code>apt search &lt;term&gt;</code></td>
+<td>Search for packages</td>
+</tr>
+<tr>
+<td><code>apt show &lt;pkg&gt;</code></td>
+<td>Show package details</td>
+</tr>
+<tr>
+<td><code>apt list --installed</code></td>
+<td>List installed packages</td>
+</tr>
+<tr>
+<td><code>apt list --upgradable</code></td>
+<td>List available updates</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-dpkg-command-low-level-package-tool">The Dpkg Command: Low-Level Package Tool</h2>
+<p>The <strong>dpkg command</strong> is the lower-level tool that APT uses behind the scenes. You'll use it for:</p>
+<ul>
+<li>Installing <code>.deb</code> files downloaded manually</li>
+<li>Troubleshooting package issues</li>
+<li>Querying installed packages</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install a .deb file</span>
+sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>package.deb
+
+<span class="c1"># If dependencies are missing, fix with:</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-f
+
+<span class="c1"># Remove a package</span>
+sudo<span class="w"> </span>dpkg<span class="w"> </span>-r<span class="w"> </span>package-name
+
+<span class="c1"># Purge (remove + config)</span>
+sudo<span class="w"> </span>dpkg<span class="w"> </span>-P<span class="w"> </span>package-name
+
+<span class="c1"># List all installed packages</span>
+dpkg<span class="w"> </span>-l
+
+<span class="c1"># Search installed packages</span>
+dpkg<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>firefox
+
+<span class="c1"># Show files installed by a package</span>
+dpkg<span class="w"> </span>-L<span class="w"> </span>firefox
+
+<span class="c1"># Find which package owns a file</span>
+dpkg<span class="w"> </span>-S<span class="w"> </span>/usr/bin/firefox
+</code></pre></div></td></tr></table></div>
+<h3 id="when-to-use-dpkg-vs-apt">When to Use dpkg vs apt</h3>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Install from repositories</td>
+<td><code>apt</code></td>
+</tr>
+<tr>
+<td>Install local <code>.deb</code> file</td>
+<td><code>dpkg -i</code> then <code>apt install -f</code></td>
+</tr>
+<tr>
+<td>Query installed packages</td>
+<td><code>dpkg -l</code></td>
+</tr>
+<tr>
+<td>Normal package management</td>
+<td><code>apt</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="package-dependencies-the-web-of-requirements">Package Dependencies: The Web of Requirements</h2>
+<p><strong>Package dependencies</strong> are other packages that a program needs to work. For example, a graphical app might depend on:</p>
+<ul>
+<li>Graphics libraries (GTK, Qt)</li>
+<li>Audio libraries (PulseAudio)</li>
+<li>System libraries (glibc)</li>
+</ul>
+<p>APT resolves dependencies automatically:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See what a package depends on</span>
+apt<span class="w"> </span>depends<span class="w"> </span>firefox
+
+<span class="c1"># See what depends on a package</span>
+apt<span class="w"> </span>rdepends<span class="w"> </span>libgtk-3-0
+
+<span class="c1"># Simulate install to see dependencies</span>
+apt<span class="w"> </span>install<span class="w"> </span>--simulate<span class="w"> </span>vim
+</code></pre></div></td></tr></table></div>
+<h3 id="dependency-hell-and-how-linux-avoids-it">Dependency Hell (And How Linux Avoids It)</h3>
+<p>"Dependency hell" is when programs need conflicting versions of libraries. Linux distributions avoid this by:</p>
+<ol>
+<li><strong>Testing packages together</strong>: Repositories are curated</li>
+<li><strong>Versioned dependencies</strong>: Packages specify version ranges</li>
+<li><strong>Shared libraries</strong>: One copy used by many programs</li>
+<li><strong>Containerized packages</strong>: Snap/Flatpak bundle dependencies</li>
+</ol>
+<h2 id="repository-sources-where-packages-come-from">Repository Sources: Where Packages Come From</h2>
+<p><strong>Repository sources</strong> are configured in <code>/etc/apt/sources.list</code> and <code>/etc/apt/sources.list.d/</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># View main sources file</span>
+cat<span class="w"> </span>/etc/apt/sources.list
+
+<span class="c1"># View additional sources</span>
+ls<span class="w"> </span>/etc/apt/sources.list.d/
+
+<span class="c1"># A typical source line:</span>
+<span class="c1"># deb http://archive.ubuntu.com/ubuntu jammy main restricted</span>
+<span class="c1">#  │         │                           │      │</span>
+<span class="c1">#  │         │                           │      └── Components</span>
+<span class="c1">#  │         │                           └── Release codename</span>
+<span class="c1">#  │         └── Repository URL</span>
+<span class="c1">#  └── Package type (deb = binary, deb-src = source)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="adding-repositories-safely">Adding Repositories Safely</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Add a repository key (for verification)</span>
+curl<span class="w"> </span>-fsSL<span class="w"> </span>https://example.com/key.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/etc/apt/keyrings/example.gpg
+
+<span class="c1"># Add the repository</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [signed-by=/etc/apt/keyrings/example.gpg] https://example.com/repo stable main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/example.list
+
+<span class="c1"># Update package lists</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div></td></tr></table></div>
+<h2 id="ppa-repositories-personal-package-archives">PPA Repositories: Personal Package Archives</h2>
+<p><strong>PPA repositories</strong> (Personal Package Archives) are community repositories hosted on Launchpad. They let developers distribute software outside the official Ubuntu repositories.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Add a PPA</span>
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:graphics-drivers/ppa
+
+<span class="c1"># Update and install</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nvidia-driver-535
+
+<span class="c1"># Remove a PPA</span>
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>--remove<span class="w"> </span>ppa:graphics-drivers/ppa
+</code></pre></div></td></tr></table></div>
+<div class="admonition warning">
+<p class="admonition-title">PPA Caution</p>
+<p>PPAs are maintained by individuals, not Ubuntu. Only add PPAs from developers you trust! A malicious PPA could compromise your system.</p>
+</div>
+<h2 id="software-updates-keeping-your-system-secure">Software Updates: Keeping Your System Secure</h2>
+<p><strong>Software updates</strong> aren't just about new features—they're critical for security!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># The update ritual (do this regularly!)</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w">          </span><span class="c1"># Refresh package lists</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w">         </span><span class="c1"># Install updates</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>autoremove<span class="w">      </span><span class="c1"># Clean up</span>
+
+<span class="c1"># Or all in one:</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>autoremove<span class="w"> </span>-y
+</code></pre></div></td></tr></table></div>
+<h3 id="why-updates-matter-the-security-reality">Why Updates Matter: The Security Reality</h3>
+<p>Here's something serious: <strong>Not running updates is one of the biggest security risks you can take.</strong></p>
+<p>Linux libraries often have security vulnerabilities discovered after release. When researchers or hackers find these bugs, patches are released quickly. But if you don't install updates, you're running software with <strong>known security holes</strong>.</p>
+<p>Real examples:</p>
+<ul>
+<li><strong>Heartbleed (2014)</strong>: OpenSSL bug that leaked private data from millions of servers</li>
+<li><strong>Shellshock (2014)</strong>: Bash vulnerability allowing remote code execution</li>
+<li><strong>Log4Shell (2021)</strong>: Java logging library bug affecting countless systems</li>
+</ul>
+<p>In each case, patches were available quickly—but systems that didn't update remained vulnerable for months or years.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check for security updates specifically (Ubuntu)</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>list<span class="w"> </span>--upgradable<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>security
+
+<span class="c1"># Install security updates only</span>
+sudo<span class="w"> </span>unattended-upgrades<span class="w"> </span>--dry-run<span class="w">  </span><span class="c1"># Preview</span>
+sudo<span class="w"> </span>unattended-upgrades<span class="w">            </span><span class="c1"># Apply</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="automatic-updates">Automatic Updates</h3>
+<p>For servers and lazy humans, enable automatic security updates:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install the tool</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>unattended-upgrades
+
+<span class="c1"># Enable automatic updates</span>
+sudo<span class="w"> </span>dpkg-reconfigure<span class="w"> </span>unattended-upgrades
+
+<span class="c1"># Configuration file:</span>
+<span class="c1"># /etc/apt/apt.conf.d/50unattended-upgrades</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="the-danger-of-untrusted-sources">The Danger of Untrusted Sources</h2>
+<p>Here's a critical security lesson: <strong>Downloading code from non-reputable sources is dangerous.</strong></p>
+<p>When you install software from:</p>
+<ul>
+<li>Random websites</li>
+<li>Unknown GitHub repositories</li>
+<li>Sketchy download links</li>
+<li>"Cracked" or pirated software</li>
+</ul>
+<p>You're risking:</p>
+<ul>
+<li><strong>Malware</strong>: Viruses, trojans, rootkits</li>
+<li><strong>Ransomware</strong>: Encrypts your files, demands payment</li>
+<li><strong>Cryptocurrency miners</strong>: Uses your CPU for someone else's profit</li>
+<li><strong>Backdoors</strong>: Permanent access for attackers</li>
+<li><strong>Data theft</strong>: Passwords, files, personal information</li>
+</ul>
+<h3 id="the-trust-hierarchy-for-software">The Trust Hierarchy for Software</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Official repositories (apt)      → Highly trusted
+Vendor repositories (Docker, VS Code) → Generally trusted
+Well-known PPAs                  → Trust with caution
+Random .deb files                → Trust after verification
+Scripts from the internet        → Read EVERY line first
+</code></pre></div></td></tr></table></div>
+<h3 id="how-to-verify-downloads">How to Verify Downloads</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check GPG signatures</span>
+gpg<span class="w"> </span>--verify<span class="w"> </span>package.sig<span class="w"> </span>package.deb
+
+<span class="c1"># Verify SHA256 checksums</span>
+sha256sum<span class="w"> </span>downloaded_file.deb
+<span class="c1"># Compare with checksum from official source</span>
+
+<span class="c1"># Check package authenticity</span>
+apt-key<span class="w"> </span>list<span class="w">                    </span><span class="c1"># Deprecated but shows keys</span>
+apt-cache<span class="w"> </span>policy<span class="w"> </span>package-name<span class="w">   </span><span class="c1"># Shows repository source</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition danger">
+<p class="admonition-title">Production Systems: A Whole Industry</p>
+<p>If you run production Linux systems, be aware that there's an <strong>entire industry</strong> dedicated to making Linux systems secure:</p>
+<ul>
+<li>Vulnerability scanning tools (Nessus, OpenVAS)</li>
+<li>Intrusion detection systems (OSSEC, Tripwire)</li>
+<li>Security-focused distributions (Kali, Tails)</li>
+<li>Compliance frameworks (CIS Benchmarks, STIG)</li>
+<li>Commercial support (Red Hat, Canonical, SUSE)</li>
+<li>Security certifications (Linux+, RHCSA, OSCP)</li>
+</ul>
+<p>Enterprise Linux security is serious business. If you're managing servers with real data, invest in learning it properly!</p>
+</div>
+<h2 id="snap-packages-universal-linux-apps">Snap Packages: Universal Linux Apps</h2>
+<p><strong>Snap packages</strong> are self-contained applications that work across different Linux distributions. They bundle all dependencies, making them portable and isolated.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install snapd (if not present)</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>snapd
+
+<span class="c1"># Find snaps</span>
+snap<span class="w"> </span>find<span class="w"> </span><span class="s2">&quot;video editor&quot;</span>
+
+<span class="c1"># Install a snap</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>vlc
+
+<span class="c1"># List installed snaps</span>
+snap<span class="w"> </span>list
+
+<span class="c1"># Update snaps</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>refresh
+
+<span class="c1"># Remove a snap</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>remove<span class="w"> </span>vlc
+
+<span class="c1"># Show snap info</span>
+snap<span class="w"> </span>info<span class="w"> </span>vlc
+</code></pre></div></td></tr></table></div>
+<h3 id="snap-characteristics">Snap Characteristics</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Isolation</td>
+<td>Runs in a sandbox</td>
+</tr>
+<tr>
+<td>Auto-updates</td>
+<td>Updates automatically in background</td>
+</tr>
+<tr>
+<td>Channels</td>
+<td>stable, candidate, beta, edge</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Larger (includes dependencies)</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>May be slower to start</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install from specific channel</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>firefox<span class="w"> </span>--channel<span class="o">=</span>latest/edge
+
+<span class="c1"># Prevent auto-updates (hold)</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>refresh<span class="w"> </span>--hold<span class="w"> </span>firefox
+
+<span class="c1"># Allow updates again</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>refresh<span class="w"> </span>--unhold<span class="w"> </span>firefox
+</code></pre></div></td></tr></table></div>
+<h2 id="flatpak-another-universal-format">Flatpak: Another Universal Format</h2>
+<p><strong>Flatpak</strong> is similar to Snap but uses a different architecture. It's popular for desktop applications and is the default on some distributions.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install Flatpak</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>flatpak
+
+<span class="c1"># Add Flathub repository (the main Flatpak repo)</span>
+flatpak<span class="w"> </span>remote-add<span class="w"> </span>--if-not-exists<span class="w"> </span>flathub<span class="w"> </span>https://flathub.org/repo/flathub.flatpakrepo
+
+<span class="c1"># Search for apps</span>
+flatpak<span class="w"> </span>search<span class="w"> </span>gimp
+
+<span class="c1"># Install an app</span>
+flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>org.gimp.GIMP
+
+<span class="c1"># Run a Flatpak app</span>
+flatpak<span class="w"> </span>run<span class="w"> </span>org.gimp.GIMP
+
+<span class="c1"># List installed</span>
+flatpak<span class="w"> </span>list
+
+<span class="c1"># Update all Flatpaks</span>
+flatpak<span class="w"> </span>update
+
+<span class="c1"># Remove an app</span>
+flatpak<span class="w"> </span>uninstall<span class="w"> </span>org.gimp.GIMP
+</code></pre></div></td></tr></table></div>
+<h3 id="snap-vs-flatpak">Snap vs Flatpak</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Snap</th>
+<th>Flatpak</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creator</td>
+<td>Canonical (Ubuntu)</td>
+<td>Red Hat/Community</td>
+</tr>
+<tr>
+<td>Backend</td>
+<td>Centralized (Snap Store)</td>
+<td>Decentralized (Flathub + others)</td>
+</tr>
+<tr>
+<td>Server apps</td>
+<td>Yes</td>
+<td>Primarily desktop</td>
+</tr>
+<tr>
+<td>CLI tools</td>
+<td>Yes</td>
+<td>Limited</td>
+</tr>
+<tr>
+<td>Sandbox</td>
+<td>Strict by default</td>
+<td>Permissive by default</td>
+</tr>
+<tr>
+<td>Auto-update</td>
+<td>Yes</td>
+<td>Yes (with daemon)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="homebrew-the-macos-favorite-on-linux">Homebrew: The macOS Favorite on Linux</h2>
+<p><strong>Homebrew</strong> started as the package manager for macOS but now works on Linux too. It's especially popular among developers.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install Homebrew</span>
+/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+
+<span class="c1"># Add to PATH (follow installer instructions)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;eval &quot;$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div></td></tr></table></div>
+<h3 id="brew-install-and-brew-update">Brew Install and Brew Update</h3>
+<p><strong>Brew install</strong> adds packages (called "formulae"):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install a package</span>
+brew<span class="w"> </span>install<span class="w"> </span>wget
+
+<span class="c1"># Install a GUI app (cask - mainly macOS)</span>
+brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>visual-studio-code
+
+<span class="c1"># Install multiple packages</span>
+brew<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>node<span class="w"> </span>python
+</code></pre></div></td></tr></table></div>
+<p><strong>Brew update</strong> refreshes Homebrew itself and package lists:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Update Homebrew and package lists</span>
+brew<span class="w"> </span>update
+
+<span class="c1"># Upgrade all installed packages</span>
+brew<span class="w"> </span>upgrade
+
+<span class="c1"># Upgrade specific package</span>
+brew<span class="w"> </span>upgrade<span class="w"> </span>wget
+
+<span class="c1"># See what&#39;s outdated</span>
+brew<span class="w"> </span>outdated
+
+<span class="c1"># Clean up old versions</span>
+brew<span class="w"> </span>cleanup
+</code></pre></div></td></tr></table></div>
+<h3 id="common-homebrew-commands">Common Homebrew Commands</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Search for packages</span>
+brew<span class="w"> </span>search<span class="w"> </span>node
+
+<span class="c1"># Show package info</span>
+brew<span class="w"> </span>info<span class="w"> </span>node
+
+<span class="c1"># List installed packages</span>
+brew<span class="w"> </span>list
+
+<span class="c1"># Uninstall a package</span>
+brew<span class="w"> </span>uninstall<span class="w"> </span>wget
+
+<span class="c1"># Check for issues</span>
+brew<span class="w"> </span>doctor
+
+<span class="c1"># See dependencies</span>
+brew<span class="w"> </span>deps<span class="w"> </span>--tree<span class="w"> </span>node
+</code></pre></div></td></tr></table></div>
+<h3 id="why-use-homebrew-on-linux">Why Use Homebrew on Linux?</h3>
+<ol>
+<li><strong>Consistent with macOS</strong>: Same commands on both systems</li>
+<li><strong>User-space installation</strong>: No sudo required</li>
+<li><strong>Bleeding edge</strong>: Often newer versions than apt</li>
+<li><strong>Developer tools</strong>: Great for programming languages and tools</li>
+</ol>
+<h2 id="choosing-the-right-package-manager">Choosing the Right Package Manager</h2>
+<table>
+<thead>
+<tr>
+<th>Need</th>
+<th>Best Choice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>System packages</td>
+<td><code>apt</code> (Debian/Ubuntu)</td>
+</tr>
+<tr>
+<td>Latest versions</td>
+<td>Homebrew or Snap</td>
+</tr>
+<tr>
+<td>Desktop apps</td>
+<td>Flatpak or Snap</td>
+</tr>
+<tr>
+<td>Sandboxed apps</td>
+<td>Snap or Flatpak</td>
+</tr>
+<tr>
+<td>Cross-platform consistency</td>
+<td>Homebrew</td>
+</tr>
+<tr>
+<td>Maximum compatibility</td>
+<td><code>apt</code> + official repos</td>
+</tr>
+</tbody>
+</table>
+<h2 id="best-practices-for-package-management">Best Practices for Package Management</h2>
+<h3 id="do-these-things">Do These Things</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># 1. Update regularly</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+
+<span class="c1"># 2. Clean up periodically</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>autoremove
+sudo<span class="w"> </span>apt<span class="w"> </span>autoclean
+
+<span class="c1"># 3. Check before major upgrades</span>
+apt<span class="w"> </span>list<span class="w"> </span>--upgradable
+
+<span class="c1"># 4. Use official repositories when possible</span>
+apt<span class="w"> </span>search<span class="w"> </span>&lt;package&gt;<span class="w">  </span><span class="c1"># Check if it&#39;s in repos first</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="dont-do-these-things">Don't Do These Things</h3>
+<ul>
+<li>❌ Install random <code>.deb</code> files from the internet</li>
+<li>❌ Add PPAs without researching them</li>
+<li>❌ Ignore updates for months</li>
+<li>❌ Mix too many third-party repositories</li>
+<li>❌ Force-remove packages with dependencies</li>
+<li>❌ Run <code>apt upgrade</code> on production without testing</li>
+</ul>
+<h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2>
+<h3 id="package-has-unmet-dependencies">"Package has unmet dependencies"</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Try fixing with:</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-f
+
+<span class="c1"># Or try:</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>--fix-broken<span class="w"> </span>install
+
+<span class="c1"># Nuclear option: remove and reinstall</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>remove<span class="w"> </span>problem-package
+sudo<span class="w"> </span>apt<span class="w"> </span>autoremove
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>problem-package
+</code></pre></div></td></tr></table></div>
+<h3 id="could-not-get-lock">"Could not get lock"</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Another apt process is running. Wait, or:</span>
+sudo<span class="w"> </span>killall<span class="w"> </span>apt<span class="w"> </span>apt-get
+
+<span class="c1"># If that doesn&#39;t work:</span>
+sudo<span class="w"> </span>rm<span class="w"> </span>/var/lib/apt/lists/lock
+sudo<span class="w"> </span>rm<span class="w"> </span>/var/lib/dpkg/lock-frontend
+sudo<span class="w"> </span>dpkg<span class="w"> </span>--configure<span class="w"> </span>-a
+</code></pre></div></td></tr></table></div>
+<h3 id="hash-sum-mismatch">"Hash sum mismatch"</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Repository data corrupted. Clean and retry:</span>
+sudo<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/apt/lists/*
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div></td></tr></table></div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>You're now a package management pro!</p>
+<ul>
+<li><strong>Package managers</strong>: Automate software installation and updates</li>
+<li><strong>APT</strong>: Primary tool for Debian/Ubuntu (<code>apt install</code>, <code>apt update</code>)</li>
+<li><strong>dpkg</strong>: Low-level tool for <code>.deb</code> files</li>
+<li><strong>Repositories</strong>: Trusted sources of software packages</li>
+<li><strong>Dependencies</strong>: Automatically resolved by package managers</li>
+<li><strong>Security updates</strong>: Critical—don't skip them!</li>
+<li><strong>Trusted sources</strong>: Only install from repositories you trust</li>
+<li><strong>Snap/Flatpak</strong>: Universal packages that work across distros</li>
+<li><strong>Homebrew</strong>: Developer-friendly, works on Linux and macOS</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">You're a Package Pro!</p>
+<p>You can now install any software, keep your system updated and secure, and troubleshoot common package issues. Your Linux system will thank you for the regular updates!</p>
+</div>
+<h2 id="whats-next">What's Next?</h2>
+<p>Now that you can manage software, it's time to connect to the world! The next chapter covers networking—from IP addresses to SSH connections.</p>
+<hr />
+<details class="question">
+<summary>Quick Quiz: Package Management</summary>
+<ol>
+<li>What command refreshes the package list without installing anything?</li>
+<li>What's the difference between <code>apt remove</code> and <code>apt purge</code>?</li>
+<li>Why is it important to keep your system updated?</li>
+<li>What is a PPA?</li>
+<li>Name two "universal" package formats that work across distributions.</li>
+<li>What command installs a local <code>.deb</code> file?</li>
+</ol>
+</details>
+<details class="note">
+<summary>Quiz Answers</summary>
+<ol>
+<li><code>apt update</code></li>
+<li><code>remove</code> keeps configuration files; <code>purge</code> removes them too</li>
+<li>Security patches fix known vulnerabilities; unpatched systems are at risk</li>
+<li>Personal Package Archive - community-maintained Ubuntu repositories</li>
+<li>Snap and Flatpak</li>
+<li><code>dpkg -i package.deb</code> (then <code>apt install -f</code> to fix dependencies)</li>
+</ol>
+</details>
 
 
 
@@ -1583,7 +3596,7 @@
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../js/extra.css"></script>
+        <script src="../../js/extra.js"></script>
       
     
   </body>

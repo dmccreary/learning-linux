@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+        <meta name="description" content="Master file compression, archive creation, and powerful search techniques with find, locate, and more">
       
       
         <meta name="author" content="Dan McCreary">
@@ -52,7 +52,7 @@
       
     
     
-      <link rel="stylesheet" href="../../styles/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -75,7 +75,7 @@
       
         <meta  property="og:title"  content="Compression, Archives, and File Search - Learning Linux" >
       
-        <meta  property="og:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  property="og:description"  content="Master file compression, archive creation, and powerful search techniques with find, locate, and more" >
       
         <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/17-compression-search/index.png" >
       
@@ -91,7 +91,7 @@
       
         <meta  name="twitter:title"  content="Compression, Archives, and File Search - Learning Linux" >
       
-        <meta  name="twitter:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  name="twitter:description"  content="Master file compression, archive creation, and powerful search techniques with find, locate, and more" >
       
         <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/17-compression-search/index.png" >
       
@@ -214,7 +214,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -259,7 +259,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -439,8 +439,6 @@
           
         
       
-        
-          
         
       
         
@@ -906,6 +904,678 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#squeeze-it-and-find-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Squeeze It and Find It!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-compression-making-things-smaller" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Compression: Making Things Smaller
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Compression: Making Things Smaller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-compress" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Compress?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-of-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Compression
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-gzip-command-fast-and-popular" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Gzip Command: Fast and Popular
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Gzip Command: Fast and Popular">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gzip-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gzip Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-gunzip-command-uncompress" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Gunzip Command: Uncompress
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-bzip2-command-better-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Bzip2 Command: Better Compression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Bzip2 Command: Better Compression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compression-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compression Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-xz-command-maximum-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Xz Command: Maximum Compression
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compression-ratios-understanding-the-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compression Ratios: Understanding the Numbers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compression Ratios: Understanding the Numbers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-compresses-well" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Compresses Well?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-archiving-bundling-files-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Archiving: Bundling Files Together
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-tar-command-the-tape-archiver" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Tar Command: The Tape Archiver
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Tar Command: The Tape Archiver">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tar-create-making-archives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tar Create: Making Archives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tar-extract-unpacking-archives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tar Extract: Unpacking Archives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tar-options-the-important-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tar Options: The Important Flags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-targz-dance-memory-trick" class="md-nav__link">
+    <span class="md-ellipsis">
+      The tar.gz Dance (Memory Trick)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archive-formats-know-your-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archive Formats: Know Your Extensions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-zip-command-cross-platform-archives" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Zip Command: Cross-Platform Archives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Zip Command: Cross-Platform Archives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zip-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zip Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-unzip-command-extract-zip-archives" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Unzip Command: Extract Zip Archives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-7zip-command-maximum-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      The 7zip Command: Maximum Power
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The 7zip Command: Maximum Power">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7zip-supports-many-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      7zip Supports Many Formats
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-find-command-the-search-swiss-army-knife" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Find Command: The Search Swiss Army Knife
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-by-name-matching-filenames" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find by Name: Matching Filenames
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-by-type-files-directories-and-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find by Type: Files, Directories, and More
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Find by Type: Files, Directories, and More">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-by-size-big-files-small-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find by Size: Big Files, Small Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Find by Size: Big Files, Small Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#size-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Size Units
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-by-time-when-was-it-modified" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find by Time: When Was It Modified?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Find by Time: When Was It Modified?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-with-exec-take-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find with Exec: Take Action
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Find with Exec: Take Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exec-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exec Syntax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exec-vs-xargs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exec vs Xargs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-locate-command-instant-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Locate Command: Instant Search
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Locate Command: Instant Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#locate-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Locate Limitations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-updatedb-command-refresh-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Updatedb Command: Refresh the Database
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#index-databases-how-locate-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      Index Databases: How Locate Works
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Index Databases: How Locate Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-what-gets-indexed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure What Gets Indexed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-which-command-find-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Which Command: Find Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-whereis-command-find-binaries-source-and-docs" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Whereis Command: Find Binaries, Source, and Docs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Whereis Command: Find Binaries, Source, and Docs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#which-vs-whereis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Which vs Whereis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-type-command-what-kind-of-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Type Command: What Kind of Command?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Type Command: What Kind of Command?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-search-patterns-wildcards-and-globs" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Search Patterns: Wildcards and Globs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Search Patterns: Wildcards and Globs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern Characters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursive-search-going-deep" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursive Search: Going Deep
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-optimization-faster-searches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Optimization: Faster Searches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search Optimization: Faster Searches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-faster-searching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips for Faster Searching
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-case-study-image-optimization-for-web-books" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-World Case Study: Image Optimization for Web Books
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Case Study: Image Optimization for Web Books">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Problem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-shell-wrapper-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Shell Wrapper Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-python-compression-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Python Compression Tool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Tool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-compression-and-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference: Compression and Search
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Reference: Compression and Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compression-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compression Cheat Sheet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Cheat Sheet
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1048,7 +1718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../24-customization/" class="md-nav__link">
+      <a href="../24-customization/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,6 +1843,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1186,7 +1864,7 @@
         
   
   
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1424,6 +2102,678 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#squeeze-it-and-find-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Squeeze It and Find It!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-compression-making-things-smaller" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Compression: Making Things Smaller
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Compression: Making Things Smaller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-compress" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Compress?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-of-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Compression
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-gzip-command-fast-and-popular" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Gzip Command: Fast and Popular
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Gzip Command: Fast and Popular">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gzip-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gzip Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-gunzip-command-uncompress" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Gunzip Command: Uncompress
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-bzip2-command-better-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Bzip2 Command: Better Compression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Bzip2 Command: Better Compression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compression-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compression Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-xz-command-maximum-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Xz Command: Maximum Compression
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compression-ratios-understanding-the-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compression Ratios: Understanding the Numbers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compression Ratios: Understanding the Numbers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-compresses-well" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Compresses Well?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-archiving-bundling-files-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Archiving: Bundling Files Together
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-tar-command-the-tape-archiver" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Tar Command: The Tape Archiver
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Tar Command: The Tape Archiver">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tar-create-making-archives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tar Create: Making Archives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tar-extract-unpacking-archives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tar Extract: Unpacking Archives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tar-options-the-important-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tar Options: The Important Flags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-targz-dance-memory-trick" class="md-nav__link">
+    <span class="md-ellipsis">
+      The tar.gz Dance (Memory Trick)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archive-formats-know-your-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archive Formats: Know Your Extensions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-zip-command-cross-platform-archives" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Zip Command: Cross-Platform Archives
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Zip Command: Cross-Platform Archives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zip-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zip Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-unzip-command-extract-zip-archives" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Unzip Command: Extract Zip Archives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-7zip-command-maximum-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      The 7zip Command: Maximum Power
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The 7zip Command: Maximum Power">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7zip-supports-many-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      7zip Supports Many Formats
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-find-command-the-search-swiss-army-knife" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Find Command: The Search Swiss Army Knife
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-by-name-matching-filenames" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find by Name: Matching Filenames
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-by-type-files-directories-and-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find by Type: Files, Directories, and More
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Find by Type: Files, Directories, and More">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-by-size-big-files-small-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find by Size: Big Files, Small Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Find by Size: Big Files, Small Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#size-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Size Units
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-by-time-when-was-it-modified" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find by Time: When Was It Modified?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Find by Time: When Was It Modified?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-with-exec-take-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find with Exec: Take Action
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Find with Exec: Take Action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exec-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exec Syntax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exec-vs-xargs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exec vs Xargs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-locate-command-instant-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Locate Command: Instant Search
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Locate Command: Instant Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#locate-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Locate Limitations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-updatedb-command-refresh-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Updatedb Command: Refresh the Database
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#index-databases-how-locate-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      Index Databases: How Locate Works
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Index Databases: How Locate Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-what-gets-indexed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure What Gets Indexed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-which-command-find-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Which Command: Find Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-whereis-command-find-binaries-source-and-docs" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Whereis Command: Find Binaries, Source, and Docs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Whereis Command: Find Binaries, Source, and Docs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#which-vs-whereis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Which vs Whereis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-type-command-what-kind-of-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Type Command: What Kind of Command?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Type Command: What Kind of Command?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-search-patterns-wildcards-and-globs" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Search Patterns: Wildcards and Globs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Search Patterns: Wildcards and Globs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern Characters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursive-search-going-deep" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursive Search: Going Deep
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-optimization-faster-searches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Optimization: Faster Searches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search Optimization: Faster Searches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-faster-searching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips for Faster Searching
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-case-study-image-optimization-for-web-books" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-World Case Study: Image Optimization for Web Books
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Case Study: Image Optimization for Web Books">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Problem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-shell-wrapper-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Shell Wrapper Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-python-compression-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Python Compression Tool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Tool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-compression-and-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference: Compression and Search
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Reference: Compression and Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compression-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compression Cheat Sheet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Cheat Sheet
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1439,7 +2789,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/learniing-linux/blob/master/docs/chapters/17-compression-search/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/learning-linux/blob/master/docs/chapters/17-compression-search/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1492,7 +2842,2146 @@
 <li><a href="../06-advanced-files/">Chapter 6: Advanced File Operations</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<h2 id="squeeze-it-and-find-it">Squeeze It and Find It!</h2>
+<p>Ever wondered how you can send a 500MB folder as a 50MB attachment? Or how to find that one config file you edited three weeks ago somewhere in your home directory? This chapter has you covered!</p>
+<p>You'll learn to compress files like a boss, create tidy archives, and search through thousands of files in seconds. These are the skills that separate casual users from command-line ninjas. Let's get squeezing and seeking!</p>
+<h2 id="file-compression-making-things-smaller">File Compression: Making Things Smaller</h2>
+<p><strong>File compression</strong> reduces the size of files by finding patterns and encoding them more efficiently. It's like finding a shorter way to say the same thing—instead of "the the the the the", you say "5x the".</p>
+<h3 id="why-compress">Why Compress?</h3>
+<ul>
+<li><strong>Save disk space</strong>: Store more in less</li>
+<li><strong>Faster transfers</strong>: Smaller files upload/download quicker</li>
+<li><strong>Reduce bandwidth</strong>: Less data to send</li>
+<li><strong>Organize backups</strong>: Combine many files into one</li>
+</ul>
+<h3 id="types-of-compression">Types of Compression</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lossless</td>
+<td>No data lost, perfect reconstruction</td>
+<td>Text, code, documents</td>
+</tr>
+<tr>
+<td>Lossy</td>
+<td>Some data lost, smaller files</td>
+<td>Images, audio, video</td>
+</tr>
+</tbody>
+</table>
+<p>Linux compression tools are typically lossless—you get back exactly what you put in!</p>
+<h2 id="the-gzip-command-fast-and-popular">The Gzip Command: Fast and Popular</h2>
+<p>The <strong>gzip command</strong> (GNU zip) is the most common compression tool on Linux. It's fast, effective, and works with a single file at a time.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Compress a file (replaces original with .gz)</span>
+gzip<span class="w"> </span>file.txt<span class="w">           </span><span class="c1"># Creates file.txt.gz, removes file.txt</span>
+
+<span class="c1"># Compress keeping original</span>
+gzip<span class="w"> </span>-k<span class="w"> </span>file.txt<span class="w">        </span><span class="c1"># Creates file.txt.gz, keeps file.txt</span>
+
+<span class="c1"># Compress with best compression (slower)</span>
+gzip<span class="w"> </span>-9<span class="w"> </span>file.txt<span class="w">        </span><span class="c1"># Maximum compression</span>
+
+<span class="c1"># Compress with fastest speed (less compression)</span>
+gzip<span class="w"> </span>-1<span class="w"> </span>file.txt<span class="w">        </span><span class="c1"># Minimum compression, maximum speed</span>
+
+<span class="c1"># Show compression stats</span>
+gzip<span class="w"> </span>-v<span class="w"> </span>file.txt<span class="w">        </span><span class="c1"># Verbose output</span>
+
+<span class="c1"># Compress all files in current directory</span>
+gzip<span class="w"> </span>*.log
+</code></pre></div></td></tr></table></div>
+<h3 id="gzip-options">Gzip Options</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-k</code></td>
+<td>Keep original file</td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td>Verbose (show compression ratio)</td>
+</tr>
+<tr>
+<td><code>-1</code> to <code>-9</code></td>
+<td>Compression level (1=fast, 9=best)</td>
+</tr>
+<tr>
+<td><code>-r</code></td>
+<td>Recursive (compress directory contents)</td>
+</tr>
+<tr>
+<td><code>-f</code></td>
+<td>Force (overwrite existing)</td>
+</tr>
+<tr>
+<td><code>-t</code></td>
+<td>Test integrity</td>
+</tr>
+<tr>
+<td><code>-l</code></td>
+<td>List compressed file info</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-gunzip-command-uncompress">The Gunzip Command: Uncompress</h2>
+<p>The <strong>gunzip command</strong> decompresses <code>.gz</code> files back to their original form.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Decompress a file</span>
+gunzip<span class="w"> </span>file.txt.gz<span class="w">      </span><span class="c1"># Creates file.txt, removes file.txt.gz</span>
+
+<span class="c1"># Keep compressed file</span>
+gunzip<span class="w"> </span>-k<span class="w"> </span>file.txt.gz<span class="w">   </span><span class="c1"># Creates file.txt, keeps file.txt.gz</span>
+
+<span class="c1"># Decompress to stdout (don&#39;t create file)</span>
+gunzip<span class="w"> </span>-c<span class="w"> </span>file.txt.gz<span class="w"> </span>&gt;<span class="w"> </span>output.txt
+
+<span class="c1"># Test without decompressing</span>
+gunzip<span class="w"> </span>-t<span class="w"> </span>file.txt.gz<span class="w">   </span><span class="c1"># Just verify integrity</span>
+
+<span class="c1"># Decompress all .gz files</span>
+gunzip<span class="w"> </span>*.gz
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Shortcut: zcat</p>
+<p>Use <code>zcat</code> to view compressed files without decompressing them:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>zcat<span class="w"> </span>file.txt.gz<span class="w">         </span><span class="c1"># View contents</span>
+zcat<span class="w"> </span>file.txt.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>less<span class="w">  </span><span class="c1"># Page through contents</span>
+zcat<span class="w"> </span>file.txt.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w">  </span><span class="c1"># Search in compressed file</span>
+</code></pre></div></td></tr></table></div></p>
+</div>
+<h2 id="the-bzip2-command-better-compression">The Bzip2 Command: Better Compression</h2>
+<p>The <strong>bzip2 command</strong> provides better compression than gzip, but it's slower. Use it when file size matters more than speed.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Compress a file</span>
+bzip2<span class="w"> </span>file.txt<span class="w">          </span><span class="c1"># Creates file.txt.bz2</span>
+
+<span class="c1"># Compress keeping original</span>
+bzip2<span class="w"> </span>-k<span class="w"> </span>file.txt
+
+<span class="c1"># Compress with best compression</span>
+bzip2<span class="w"> </span>-9<span class="w"> </span>file.txt
+
+<span class="c1"># Decompress</span>
+bunzip2<span class="w"> </span>file.txt.bz2
+
+<span class="c1"># View compressed file</span>
+bzcat<span class="w"> </span>file.txt.bz2
+
+<span class="c1"># Test integrity</span>
+bzip2<span class="w"> </span>-t<span class="w"> </span>file.txt.bz2
+</code></pre></div></td></tr></table></div>
+<h3 id="compression-comparison">Compression Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Extension</th>
+<th>Speed</th>
+<th>Compression</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gzip</td>
+<td><code>.gz</code></td>
+<td>Fast</td>
+<td>Good</td>
+<td>Daily use, logs</td>
+</tr>
+<tr>
+<td>bzip2</td>
+<td><code>.bz2</code></td>
+<td>Medium</td>
+<td>Better</td>
+<td>Archives, distribution</td>
+</tr>
+<tr>
+<td>xz</td>
+<td><code>.xz</code></td>
+<td>Slow</td>
+<td>Best</td>
+<td>Long-term storage</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-xz-command-maximum-compression">The Xz Command: Maximum Compression</h2>
+<p>The <strong>xz command</strong> provides the best compression ratios but is the slowest. It's great for archiving files you rarely access.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Compress a file</span>
+xz<span class="w"> </span>file.txt<span class="w">             </span><span class="c1"># Creates file.txt.xz</span>
+
+<span class="c1"># Keep original</span>
+xz<span class="w"> </span>-k<span class="w"> </span>file.txt
+
+<span class="c1"># Maximum compression (VERY slow)</span>
+xz<span class="w"> </span>-9<span class="w"> </span>file.txt
+
+<span class="c1"># Extreme compression (even more!)</span>
+xz<span class="w"> </span>-9e<span class="w"> </span>file.txt
+
+<span class="c1"># Decompress</span>
+unxz<span class="w"> </span>file.txt.xz
+xz<span class="w"> </span>-d<span class="w"> </span>file.txt.xz
+
+<span class="c1"># View without decompressing</span>
+xzcat<span class="w"> </span>file.txt.xz
+
+<span class="c1"># Use multiple threads (faster on multi-core)</span>
+xz<span class="w"> </span>-T<span class="w"> </span><span class="m">4</span><span class="w"> </span>file.txt<span class="w">        </span><span class="c1"># Use 4 threads</span>
+xz<span class="w"> </span>-T<span class="w"> </span><span class="m">0</span><span class="w"> </span>file.txt<span class="w">        </span><span class="c1"># Use all available cores</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Patience Required</p>
+<p>xz -9e on a large file can take a LONG time. The compression is amazing, but grab a coffee while you wait!</p>
+</div>
+<h2 id="compression-ratios-understanding-the-numbers">Compression Ratios: Understanding the Numbers</h2>
+<p><strong>Compression ratios</strong> tell you how much smaller your file got. A 50% ratio means the compressed file is half the original size.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check compression ratio</span>
+gzip<span class="w"> </span>-l<span class="w"> </span>file.txt.gz
+
+<span class="c1"># Output example:</span>
+<span class="c1">#          compressed        uncompressed  ratio uncompressed_name</span>
+<span class="c1">#                2467               10234  76.4% file.txt</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="what-compresses-well">What Compresses Well?</h3>
+<table>
+<thead>
+<tr>
+<th>Content Type</th>
+<th>Compresses Well?</th>
+<th>Typical Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text files</td>
+<td>Excellent</td>
+<td>70-90%</td>
+</tr>
+<tr>
+<td>Log files</td>
+<td>Excellent</td>
+<td>80-95%</td>
+</tr>
+<tr>
+<td>Source code</td>
+<td>Very good</td>
+<td>60-80%</td>
+</tr>
+<tr>
+<td>HTML/CSS</td>
+<td>Very good</td>
+<td>70-85%</td>
+</tr>
+<tr>
+<td>PDF files</td>
+<td>Poor</td>
+<td>5-15%</td>
+</tr>
+<tr>
+<td>Images (PNG, JPG)</td>
+<td>Very poor</td>
+<td>1-5%</td>
+</tr>
+<tr>
+<td>Compressed files</td>
+<td>None</td>
+<td>0% (might grow!)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Don't Compress Compressed Files</p>
+<p>Compressing a <code>.jpg</code> or <code>.mp3</code> won't make it smaller—it might even get bigger! These formats are already compressed.</p>
+</div>
+<h2 id="file-archiving-bundling-files-together">File Archiving: Bundling Files Together</h2>
+<p><strong>File archiving</strong> combines multiple files into a single file. This is different from compression—archiving just bundles, compression makes it smaller.</p>
+<p>The distinction matters:</p>
+<ul>
+<li><strong>tar</strong>: Creates archives (bundles files)</li>
+<li><strong>gzip/bzip2/xz</strong>: Compresses files</li>
+<li><strong>tar + gzip</strong>: Archives AND compresses (<code>.tar.gz</code>)</li>
+</ul>
+<h2 id="the-tar-command-the-tape-archiver">The Tar Command: The Tape Archiver</h2>
+<p>The <strong>tar command</strong> (tape archiver) is the standard tool for creating archives on Unix systems. Despite the name referencing ancient tape drives, it's still the go-to tool today!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create an archive</span>
+tar<span class="w"> </span>-cvf<span class="w"> </span>archive.tar<span class="w"> </span>folder/
+
+<span class="c1"># Extract an archive</span>
+tar<span class="w"> </span>-xvf<span class="w"> </span>archive.tar
+
+<span class="c1"># List contents without extracting</span>
+tar<span class="w"> </span>-tvf<span class="w"> </span>archive.tar
+</code></pre></div></td></tr></table></div>
+<h3 id="tar-create-making-archives">Tar Create: Making Archives</h3>
+<p><strong>Tar create</strong> packages files and directories into a single <code>.tar</code> file.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create archive from a directory</span>
+tar<span class="w"> </span>-cvf<span class="w"> </span>backup.tar<span class="w"> </span>my-project/
+
+<span class="c1"># Create archive from multiple items</span>
+tar<span class="w"> </span>-cvf<span class="w"> </span>archive.tar<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt<span class="w"> </span>folder/
+
+<span class="c1"># Create compressed archive (gzip)</span>
+tar<span class="w"> </span>-czvf<span class="w"> </span>backup.tar.gz<span class="w"> </span>my-project/
+
+<span class="c1"># Create compressed archive (bzip2)</span>
+tar<span class="w"> </span>-cjvf<span class="w"> </span>backup.tar.bz2<span class="w"> </span>my-project/
+
+<span class="c1"># Create compressed archive (xz)</span>
+tar<span class="w"> </span>-cJvf<span class="w"> </span>backup.tar.xz<span class="w"> </span>my-project/
+
+<span class="c1"># Exclude patterns</span>
+tar<span class="w"> </span>-czvf<span class="w"> </span>backup.tar.gz<span class="w"> </span>--exclude<span class="o">=</span><span class="s1">&#39;*.log&#39;</span><span class="w"> </span>--exclude<span class="o">=</span><span class="s1">&#39;.git&#39;</span><span class="w"> </span>my-project/
+
+<span class="c1"># Exclude from file</span>
+tar<span class="w"> </span>-czvf<span class="w"> </span>backup.tar.gz<span class="w"> </span>-X<span class="w"> </span>exclude-list.txt<span class="w"> </span>my-project/
+</code></pre></div></td></tr></table></div>
+<h3 id="tar-extract-unpacking-archives">Tar Extract: Unpacking Archives</h3>
+<p><strong>Tar extract</strong> unpacks archive contents.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Extract to current directory</span>
+tar<span class="w"> </span>-xvf<span class="w"> </span>archive.tar
+
+<span class="c1"># Extract compressed archive (auto-detects compression)</span>
+tar<span class="w"> </span>-xvf<span class="w"> </span>archive.tar.gz
+tar<span class="w"> </span>-xvf<span class="w"> </span>archive.tar.bz2
+tar<span class="w"> </span>-xvf<span class="w"> </span>archive.tar.xz
+
+<span class="c1"># Extract to specific directory</span>
+tar<span class="w"> </span>-xvf<span class="w"> </span>archive.tar<span class="w"> </span>-C<span class="w"> </span>/destination/path/
+
+<span class="c1"># Extract specific file from archive</span>
+tar<span class="w"> </span>-xvf<span class="w"> </span>archive.tar<span class="w"> </span>path/to/file.txt
+
+<span class="c1"># Extract with original permissions</span>
+tar<span class="w"> </span>-xpvf<span class="w"> </span>archive.tar
+</code></pre></div></td></tr></table></div>
+<h3 id="tar-options-the-important-flags">Tar Options: The Important Flags</h3>
+<p><strong>Tar options</strong> control how tar behaves. Here are the essential ones:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-c</code></td>
+<td>Create archive</td>
+</tr>
+<tr>
+<td><code>-x</code></td>
+<td>Extract archive</td>
+</tr>
+<tr>
+<td><code>-t</code></td>
+<td>List (table of contents)</td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td>Verbose (show files being processed)</td>
+</tr>
+<tr>
+<td><code>-f</code></td>
+<td>File (followed by filename)</td>
+</tr>
+<tr>
+<td><code>-z</code></td>
+<td>Use gzip compression</td>
+</tr>
+<tr>
+<td><code>-j</code></td>
+<td>Use bzip2 compression</td>
+</tr>
+<tr>
+<td><code>-J</code></td>
+<td>Use xz compression</td>
+</tr>
+<tr>
+<td><code>-p</code></td>
+<td>Preserve permissions</td>
+</tr>
+<tr>
+<td><code>-C</code></td>
+<td>Change to directory before operation</td>
+</tr>
+<tr>
+<td><code>--exclude</code></td>
+<td>Exclude patterns</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-targz-dance-memory-trick">The tar.gz Dance (Memory Trick)</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Remember: (c)reate/(x)tract, (z)ip, (v)erbose, (f)ile</span>
+tar<span class="w"> </span>-czvf<span class="w"> </span>archive.tar.gz<span class="w"> </span>folder/<span class="w">   </span><span class="c1"># Create</span>
+tar<span class="w"> </span>-xzvf<span class="w"> </span>archive.tar.gz<span class="w">           </span><span class="c1"># Extract</span>
+tar<span class="w"> </span>-tzvf<span class="w"> </span>archive.tar.gz<span class="w">           </span><span class="c1"># List</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="archive-formats-know-your-extensions">Archive Formats: Know Your Extensions</h2>
+<p><strong>Archive formats</strong> differ in their capabilities and compatibility:</p>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Format</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.tar</code></td>
+<td>Tar only</td>
+<td>No compression</td>
+</tr>
+<tr>
+<td><code>.tar.gz</code>, <code>.tgz</code></td>
+<td>Tar + gzip</td>
+<td>Most common on Linux</td>
+</tr>
+<tr>
+<td><code>.tar.bz2</code>, <code>.tbz2</code></td>
+<td>Tar + bzip2</td>
+<td>Better compression</td>
+</tr>
+<tr>
+<td><code>.tar.xz</code>, <code>.txz</code></td>
+<td>Tar + xz</td>
+<td>Best compression</td>
+</tr>
+<tr>
+<td><code>.zip</code></td>
+<td>Zip</td>
+<td>Cross-platform standard</td>
+</tr>
+<tr>
+<td><code>.7z</code></td>
+<td>7-Zip</td>
+<td>Excellent compression</td>
+</tr>
+<tr>
+<td><code>.rar</code></td>
+<td>RAR</td>
+<td>Windows common, proprietary</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-zip-command-cross-platform-archives">The Zip Command: Cross-Platform Archives</h2>
+<p>The <strong>zip command</strong> creates archives compatible with Windows, macOS, and Linux. It compresses and archives in one step!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create a zip archive</span>
+zip<span class="w"> </span>archive.zip<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
+
+<span class="c1"># Zip a directory (recursive)</span>
+zip<span class="w"> </span>-r<span class="w"> </span>archive.zip<span class="w"> </span>folder/
+
+<span class="c1"># Update existing zip (add/replace files)</span>
+zip<span class="w"> </span>-u<span class="w"> </span>archive.zip<span class="w"> </span>newfile.txt
+
+<span class="c1"># Set compression level</span>
+zip<span class="w"> </span>-9<span class="w"> </span>archive.zip<span class="w"> </span>file.txt<span class="w">    </span><span class="c1"># Best compression</span>
+zip<span class="w"> </span>-0<span class="w"> </span>archive.zip<span class="w"> </span>file.txt<span class="w">    </span><span class="c1"># No compression (store only)</span>
+
+<span class="c1"># Encrypt with password</span>
+zip<span class="w"> </span>-e<span class="w"> </span>archive.zip<span class="w"> </span>secret.txt
+
+<span class="c1"># Exclude patterns</span>
+zip<span class="w"> </span>-r<span class="w"> </span>archive.zip<span class="w"> </span>folder/<span class="w"> </span>-x<span class="w"> </span><span class="s2">&quot;*.log&quot;</span><span class="w"> </span>-x<span class="w"> </span><span class="s2">&quot;*.tmp&quot;</span>
+
+<span class="c1"># Split into multiple files (for large archives)</span>
+zip<span class="w"> </span>-s<span class="w"> </span>100m<span class="w"> </span>archive.zip<span class="w"> </span>folder/<span class="w">  </span><span class="c1"># 100MB chunks</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="zip-options">Zip Options</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-r</code></td>
+<td>Recursive (include subdirectories)</td>
+</tr>
+<tr>
+<td><code>-u</code></td>
+<td>Update (add new/modified files)</td>
+</tr>
+<tr>
+<td><code>-m</code></td>
+<td>Move (delete originals after zipping)</td>
+</tr>
+<tr>
+<td><code>-e</code></td>
+<td>Encrypt with password</td>
+</tr>
+<tr>
+<td><code>-0</code> to <code>-9</code></td>
+<td>Compression level</td>
+</tr>
+<tr>
+<td><code>-x</code></td>
+<td>Exclude pattern</td>
+</tr>
+<tr>
+<td><code>-s size</code></td>
+<td>Split archive</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-unzip-command-extract-zip-archives">The Unzip Command: Extract Zip Archives</h2>
+<p>The <strong>unzip command</strong> extracts <code>.zip</code> archives.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Extract to current directory</span>
+unzip<span class="w"> </span>archive.zip
+
+<span class="c1"># Extract to specific directory</span>
+unzip<span class="w"> </span>archive.zip<span class="w"> </span>-d<span class="w"> </span>/destination/
+
+<span class="c1"># List contents without extracting</span>
+unzip<span class="w"> </span>-l<span class="w"> </span>archive.zip
+
+<span class="c1"># Test archive integrity</span>
+unzip<span class="w"> </span>-t<span class="w"> </span>archive.zip
+
+<span class="c1"># Extract specific file</span>
+unzip<span class="w"> </span>archive.zip<span class="w"> </span>path/to/file.txt
+
+<span class="c1"># Extract silently (no output)</span>
+unzip<span class="w"> </span>-q<span class="w"> </span>archive.zip
+
+<span class="c1"># Overwrite without prompting</span>
+unzip<span class="w"> </span>-o<span class="w"> </span>archive.zip
+
+<span class="c1"># Never overwrite (skip existing)</span>
+unzip<span class="w"> </span>-n<span class="w"> </span>archive.zip
+</code></pre></div></td></tr></table></div>
+<h2 id="the-7zip-command-maximum-power">The 7zip Command: Maximum Power</h2>
+<p>The <strong>7zip command</strong> (<code>7z</code>) offers excellent compression and supports many formats.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install 7zip</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>p7zip-full
+
+<span class="c1"># Create archive</span>
+7z<span class="w"> </span>a<span class="w"> </span>archive.7z<span class="w"> </span>folder/
+
+<span class="c1"># Extract archive</span>
+7z<span class="w"> </span>x<span class="w"> </span>archive.7z
+
+<span class="c1"># List contents</span>
+7z<span class="w"> </span>l<span class="w"> </span>archive.7z
+
+<span class="c1"># Test integrity</span>
+7z<span class="w"> </span>t<span class="w"> </span>archive.7z
+
+<span class="c1"># Create with maximum compression</span>
+7z<span class="w"> </span>a<span class="w"> </span>-mx<span class="o">=</span><span class="m">9</span><span class="w"> </span>archive.7z<span class="w"> </span>folder/
+
+<span class="c1"># Add password</span>
+7z<span class="w"> </span>a<span class="w"> </span>-p<span class="w"> </span>archive.7z<span class="w"> </span>folder/
+
+<span class="c1"># Extract to directory</span>
+7z<span class="w"> </span>x<span class="w"> </span>archive.7z<span class="w"> </span>-o/destination/
+</code></pre></div></td></tr></table></div>
+<h3 id="7zip-supports-many-formats">7zip Supports Many Formats</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># 7zip can extract almost anything!</span>
+7z<span class="w"> </span>x<span class="w"> </span>archive.tar.gz
+7z<span class="w"> </span>x<span class="w"> </span>archive.zip
+7z<span class="w"> </span>x<span class="w"> </span>archive.rar
+7z<span class="w"> </span>x<span class="w"> </span>archive.iso
+</code></pre></div></td></tr></table></div>
+<h2 id="the-find-command-the-search-swiss-army-knife">The Find Command: The Search Swiss Army Knife</h2>
+<p>The <strong>find command</strong> is the most powerful file search tool on Linux. It searches directories recursively, matching files by name, type, size, time, permissions, and more.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Basic syntax</span>
+find<span class="w"> </span><span class="o">[</span>path<span class="o">]</span><span class="w"> </span><span class="o">[</span>expression<span class="o">]</span>
+
+<span class="c1"># Find all files named &quot;README&quot;</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;README&quot;</span>
+
+<span class="c1"># Find all .txt files</span>
+find<span class="w"> </span>/home<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.txt&quot;</span>
+
+<span class="c1"># Case-insensitive search</span>
+find<span class="w"> </span>.<span class="w"> </span>-iname<span class="w"> </span><span class="s2">&quot;readme*&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="find-by-name-matching-filenames">Find by Name: Matching Filenames</h2>
+<p><strong>Find by name</strong> searches using patterns with wildcards.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Exact name</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;config.yml&quot;</span>
+
+<span class="c1"># Wildcard patterns</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.log&quot;</span><span class="w">        </span><span class="c1"># All .log files</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;test_*&quot;</span><span class="w">       </span><span class="c1"># Files starting with test_</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*backup*&quot;</span><span class="w">     </span><span class="c1"># Files containing &quot;backup&quot;</span>
+
+<span class="c1"># Case-insensitive</span>
+find<span class="w"> </span>.<span class="w"> </span>-iname<span class="w"> </span><span class="s2">&quot;README*&quot;</span><span class="w">     </span><span class="c1"># readme, README, ReadMe, etc.</span>
+
+<span class="c1"># Exclude pattern (NOT)</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.txt&quot;</span><span class="w"> </span>!<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*test*&quot;</span><span class="w">  </span><span class="c1"># .txt files without &quot;test&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="find-by-type-files-directories-and-more">Find by Type: Files, Directories, and More</h2>
+<p><strong>Find by type</strong> filters by what kind of filesystem object you want.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Find only files</span>
+find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>f
+
+<span class="c1"># Find only directories</span>
+find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>d
+
+<span class="c1"># Find symbolic links</span>
+find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>l
+
+<span class="c1"># Combine with name</span>
+find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.py&quot;</span><span class="w">     </span><span class="c1"># Python files only</span>
+find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;build&quot;</span><span class="w">    </span><span class="c1"># Directories named &quot;build&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="type-options">Type Options</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>f</code></td>
+<td>Regular file</td>
+</tr>
+<tr>
+<td><code>d</code></td>
+<td>Directory</td>
+</tr>
+<tr>
+<td><code>l</code></td>
+<td>Symbolic link</td>
+</tr>
+<tr>
+<td><code>b</code></td>
+<td>Block device</td>
+</tr>
+<tr>
+<td><code>c</code></td>
+<td>Character device</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td>Named pipe (FIFO)</td>
+</tr>
+<tr>
+<td><code>s</code></td>
+<td>Socket</td>
+</tr>
+</tbody>
+</table>
+<h2 id="find-by-size-big-files-small-files">Find by Size: Big Files, Small Files</h2>
+<p><strong>Find by size</strong> locates files based on their size.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Files larger than 100MB</span>
+find<span class="w"> </span>.<span class="w"> </span>-size<span class="w"> </span>+100M
+
+<span class="c1"># Files smaller than 1KB</span>
+find<span class="w"> </span>.<span class="w"> </span>-size<span class="w"> </span>-1k
+
+<span class="c1"># Files exactly 1GB</span>
+find<span class="w"> </span>.<span class="w"> </span>-size<span class="w"> </span>1G
+
+<span class="c1"># Find large files in home</span>
+find<span class="w"> </span>/home<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-size<span class="w"> </span>+500M
+
+<span class="c1"># Find empty files</span>
+find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-empty
+
+<span class="c1"># Find empty directories</span>
+find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-empty
+</code></pre></div></td></tr></table></div>
+<h3 id="size-units">Size Units</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>c</code></td>
+<td>Bytes</td>
+</tr>
+<tr>
+<td><code>k</code></td>
+<td>Kilobytes</td>
+</tr>
+<tr>
+<td><code>M</code></td>
+<td>Megabytes</td>
+</tr>
+<tr>
+<td><code>G</code></td>
+<td>Gigabytes</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Finding Disk Space Hogs</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Top 10 largest files in current directory</span>
+find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>du<span class="w"> </span>-h<span class="w"> </span><span class="o">{}</span><span class="w"> </span>+<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-rh<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-10
+</code></pre></div></td></tr></table></div>
+</div>
+<h2 id="find-by-time-when-was-it-modified">Find by Time: When Was It Modified?</h2>
+<p><strong>Find by time</strong> searches based on when files were accessed, modified, or created.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Modified in last 7 days</span>
+find<span class="w"> </span>.<span class="w"> </span>-mtime<span class="w"> </span>-7
+
+<span class="c1"># Modified MORE than 30 days ago</span>
+find<span class="w"> </span>.<span class="w"> </span>-mtime<span class="w"> </span>+30
+
+<span class="c1"># Modified exactly 1 day ago</span>
+find<span class="w"> </span>.<span class="w"> </span>-mtime<span class="w"> </span><span class="m">1</span>
+
+<span class="c1"># Modified in last 60 minutes</span>
+find<span class="w"> </span>.<span class="w"> </span>-mmin<span class="w"> </span>-60
+
+<span class="c1"># Accessed in last 24 hours</span>
+find<span class="w"> </span>.<span class="w"> </span>-atime<span class="w"> </span>-1
+
+<span class="c1"># Changed (metadata) in last hour</span>
+find<span class="w"> </span>.<span class="w"> </span>-cmin<span class="w"> </span>-60
+
+<span class="c1"># Find files newer than reference file</span>
+find<span class="w"> </span>.<span class="w"> </span>-newer<span class="w"> </span>reference.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="time-options">Time Options</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Meaning</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-mtime</code></td>
+<td>Modification time</td>
+<td>Days</td>
+</tr>
+<tr>
+<td><code>-atime</code></td>
+<td>Access time</td>
+<td>Days</td>
+</tr>
+<tr>
+<td><code>-ctime</code></td>
+<td>Change time (metadata)</td>
+<td>Days</td>
+</tr>
+<tr>
+<td><code>-mmin</code></td>
+<td>Modification time</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td><code>-amin</code></td>
+<td>Access time</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td><code>-cmin</code></td>
+<td>Change time</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td><code>-newer</code></td>
+<td>Newer than file</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="find-with-exec-take-action">Find with Exec: Take Action</h2>
+<p><strong>Find with exec</strong> runs commands on each file found. This is incredibly powerful!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Delete all .tmp files</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.tmp&quot;</span><span class="w"> </span>-exec<span class="w"> </span>rm<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+
+<span class="c1"># Delete with confirmation</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.tmp&quot;</span><span class="w"> </span>-exec<span class="w"> </span>rm<span class="w"> </span>-i<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+
+<span class="c1"># Change permissions on all .sh files</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.sh&quot;</span><span class="w"> </span>-exec<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+
+<span class="c1"># Copy found files</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.log&quot;</span><span class="w"> </span>-exec<span class="w"> </span>cp<span class="w"> </span><span class="o">{}</span><span class="w"> </span>/backup/<span class="w"> </span><span class="se">\;</span>
+
+<span class="c1"># Grep in found files</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.py&quot;</span><span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span>-l<span class="w"> </span><span class="s2">&quot;TODO&quot;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+
+<span class="c1"># Print custom format</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.txt&quot;</span><span class="w"> </span>-exec<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Found: {}&quot;</span><span class="w"> </span><span class="se">\;</span>
+
+<span class="c1"># Multiple commands</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.bak&quot;</span><span class="w"> </span>-exec<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Removing: {}&quot;</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span>-exec<span class="w"> </span>rm<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="exec-syntax">Exec Syntax</h3>
+<ul>
+<li><code>{}</code> is replaced with the filename</li>
+<li><code>\;</code> ends the command (must be escaped)</li>
+<li>Use <code>+</code> instead of <code>\;</code> to batch files (faster):</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Process files in batches (much faster!)</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.txt&quot;</span><span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+</code></pre></div></td></tr></table></div>
+<h3 id="exec-vs-xargs">Exec vs Xargs</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># These are equivalent:</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.log&quot;</span><span class="w"> </span>-exec<span class="w"> </span>rm<span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.log&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>rm
+
+<span class="c1"># Xargs with safe handling of special characters</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.log&quot;</span><span class="w"> </span>-print0<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-0<span class="w"> </span>rm
+</code></pre></div></td></tr></table></div>
+<h2 id="the-locate-command-instant-search">The Locate Command: Instant Search</h2>
+<p>The <strong>locate command</strong> finds files instantly by searching a pre-built database. It's MUCH faster than find for simple name searches.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Find files by name</span>
+locate<span class="w"> </span>readme
+
+<span class="c1"># Case-insensitive search</span>
+locate<span class="w"> </span>-i<span class="w"> </span>README
+
+<span class="c1"># Show only existing files (some may have been deleted)</span>
+locate<span class="w"> </span>-e<span class="w"> </span>readme
+
+<span class="c1"># Limit results</span>
+locate<span class="w"> </span>-l<span class="w"> </span><span class="m">10</span><span class="w"> </span>readme<span class="w">    </span><span class="c1"># Only first 10 results</span>
+
+<span class="c1"># Count matches</span>
+locate<span class="w"> </span>-c<span class="w"> </span>readme<span class="w">       </span><span class="c1"># Just show count</span>
+
+<span class="c1"># Use regex</span>
+locate<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;.*\.py</span>$<span class="s2">&quot;</span><span class="w">    </span><span class="c1"># Files ending in .py</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="locate-limitations">Locate Limitations</h3>
+<ul>
+<li>Only searches by filename (not content, size, time)</li>
+<li>Database might be outdated (files added/deleted since last update)</li>
+<li>Doesn't search all directories (respects privacy settings)</li>
+</ul>
+<h2 id="the-updatedb-command-refresh-the-database">The Updatedb Command: Refresh the Database</h2>
+<p>The <strong>updatedb command</strong> rebuilds the database that locate uses.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Update the database (usually needs sudo)</span>
+sudo<span class="w"> </span>updatedb
+
+<span class="c1"># Check when database was last updated</span>
+stat<span class="w"> </span>/var/lib/mlocate/mlocate.db
+
+<span class="c1"># Configuration file</span>
+cat<span class="w"> </span>/etc/updatedb.conf
+</code></pre></div></td></tr></table></div>
+<p>The database is typically updated daily by a cron job. If you just created files and locate doesn't find them, run <code>updatedb</code> manually.</p>
+<h2 id="index-databases-how-locate-works">Index Databases: How Locate Works</h2>
+<p><strong>Index databases</strong> store file paths for quick searching. Here's how it works:</p>
+<ol>
+<li><code>updatedb</code> scans the filesystem</li>
+<li>It builds a database of all file paths</li>
+<li><code>locate</code> searches this database (not the filesystem)</li>
+<li>Database is typically at <code>/var/lib/mlocate/mlocate.db</code></li>
+</ol>
+<h3 id="configure-what-gets-indexed">Configure What Gets Indexed</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># View configuration</span>
+cat<span class="w"> </span>/etc/updatedb.conf
+
+<span class="c1"># Example contents:</span>
+<span class="c1"># PRUNE_BIND_MOUNTS = &quot;yes&quot;</span>
+<span class="c1"># PRUNENAMES = &quot;.git .bzr .hg .svn&quot;</span>
+<span class="c1"># PRUNEPATHS = &quot;/tmp /var/spool /media&quot;</span>
+<span class="c1"># PRUNEFS = &quot;NFS nfs nfs4 rpc_pipefs afs binfmt_misc&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="the-which-command-find-commands">The Which Command: Find Commands</h2>
+<p>The <strong>which command</strong> shows the full path of executable commands.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Where is python?</span>
+which<span class="w"> </span>python
+<span class="c1"># /usr/bin/python</span>
+
+<span class="c1"># Where is my custom script?</span>
+which<span class="w"> </span>my-script
+
+<span class="c1"># Show all matches</span>
+which<span class="w"> </span>-a<span class="w"> </span>python<span class="w">    </span><span class="c1"># All pythons in PATH</span>
+
+<span class="c1"># Check if command exists</span>
+which<span class="w"> </span>nonexistent
+<span class="c1"># (no output, exit code 1)</span>
+
+<span class="c1"># Use in scripts</span>
+<span class="k">if</span><span class="w"> </span>which<span class="w"> </span>docker<span class="w"> </span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Docker is installed&quot;</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Docker not found&quot;</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="the-whereis-command-find-binaries-source-and-docs">The Whereis Command: Find Binaries, Source, and Docs</h2>
+<p>The <strong>whereis command</strong> finds the binary, source, and man page for a command.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Find everything about a command</span>
+whereis<span class="w"> </span>python
+<span class="c1"># python: /usr/bin/python /usr/lib/python3.9 /usr/share/man/man1/python.1.gz</span>
+
+<span class="c1"># Find only binary</span>
+whereis<span class="w"> </span>-b<span class="w"> </span>python
+
+<span class="c1"># Find only man pages</span>
+whereis<span class="w"> </span>-m<span class="w"> </span>python
+
+<span class="c1"># Find only source</span>
+whereis<span class="w"> </span>-s<span class="w"> </span>python
+</code></pre></div></td></tr></table></div>
+<h3 id="which-vs-whereis">Which vs Whereis</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Finds</th>
+<th>Searches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>which</code></td>
+<td>Executable only</td>
+<td>PATH</td>
+</tr>
+<tr>
+<td><code>whereis</code></td>
+<td>Binary, source, man</td>
+<td>Standard locations</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-type-command-what-kind-of-command">The Type Command: What Kind of Command?</h2>
+<p>The <strong>type command</strong> tells you what kind of command something is.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check command type</span>
+<span class="nb">type</span><span class="w"> </span>ls
+<span class="c1"># ls is aliased to &#39;ls --color=auto&#39;</span>
+
+<span class="nb">type</span><span class="w"> </span><span class="nb">cd</span>
+<span class="c1"># cd is a shell builtin</span>
+
+<span class="nb">type</span><span class="w"> </span>python
+<span class="c1"># python is /usr/bin/python</span>
+
+<span class="nb">type</span><span class="w"> </span>grep
+<span class="c1"># grep is /usr/bin/grep</span>
+
+<span class="c1"># Show all types</span>
+<span class="nb">type</span><span class="w"> </span>-a<span class="w"> </span><span class="nb">echo</span>
+<span class="c1"># echo is a shell builtin</span>
+<span class="c1"># echo is /usr/bin/echo</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="command-types">Command Types</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alias</td>
+<td>Shell alias</td>
+</tr>
+<tr>
+<td>builtin</td>
+<td>Shell built-in command</td>
+</tr>
+<tr>
+<td>file</td>
+<td>External executable</td>
+</tr>
+<tr>
+<td>function</td>
+<td>Shell function</td>
+</tr>
+<tr>
+<td>keyword</td>
+<td>Shell keyword</td>
+</tr>
+</tbody>
+</table>
+<h2 id="file-search-patterns-wildcards-and-globs">File Search Patterns: Wildcards and Globs</h2>
+<p><strong>File search patterns</strong> use wildcards (globs) to match multiple files.</p>
+<h3 id="pattern-characters">Pattern Characters</h3>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*</code></td>
+<td>Zero or more characters</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>Exactly one character</td>
+</tr>
+<tr>
+<td><code>[abc]</code></td>
+<td>One of: a, b, or c</td>
+</tr>
+<tr>
+<td><code>[a-z]</code></td>
+<td>One character in range</td>
+</tr>
+<tr>
+<td><code>[!abc]</code></td>
+<td>NOT one of: a, b, or c</td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># All .txt files</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.txt&quot;</span>
+
+<span class="c1"># Files with single-digit suffix</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;file?.txt&quot;</span><span class="w">     </span><span class="c1"># file1.txt, file2.txt, ...</span>
+
+<span class="c1"># Files starting with a, b, or c</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;[abc]*&quot;</span>
+
+<span class="c1"># Files NOT starting with a vowel</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;[!aeiou]*&quot;</span>
+
+<span class="c1"># Case class (any letter)</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;[A-Za-z]*&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="recursive-search-going-deep">Recursive Search: Going Deep</h2>
+<p><strong>Recursive search</strong> descends into subdirectories. Most search tools do this by default.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Find recursively (default behavior)</span>
+find<span class="w"> </span>/home<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.log&quot;</span>
+
+<span class="c1"># Limit depth</span>
+find<span class="w"> </span>.<span class="w"> </span>-maxdepth<span class="w"> </span><span class="m">2</span><span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.txt&quot;</span><span class="w">   </span><span class="c1"># Only 2 levels deep</span>
+find<span class="w"> </span>.<span class="w"> </span>-mindepth<span class="w"> </span><span class="m">2</span><span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.txt&quot;</span><span class="w">   </span><span class="c1"># Skip top 2 levels</span>
+
+<span class="c1"># Non-recursive with ls</span>
+ls<span class="w"> </span>*.txt<span class="w">                            </span><span class="c1"># Current directory only</span>
+
+<span class="c1"># Recursive with grep</span>
+grep<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>.<span class="w">                 </span><span class="c1"># Search all files</span>
+grep<span class="w"> </span>-r<span class="w"> </span>--include<span class="o">=</span><span class="s2">&quot;*.py&quot;</span><span class="w"> </span><span class="s2">&quot;def &quot;</span><span class="w"> </span>.<span class="w">   </span><span class="c1"># Only Python files</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="search-optimization-faster-searches">Search Optimization: Faster Searches</h2>
+<p><strong>Search optimization</strong> makes your searches run faster.</p>
+<h3 id="tips-for-faster-searching">Tips for Faster Searching</h3>
+<ol>
+<li>
+<p><strong>Use locate for name searches</strong>: It's indexed!
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>locate<span class="w"> </span>filename<span class="w">   </span><span class="c1"># Instead of: find / -name &quot;filename&quot;</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Limit search depth</strong>:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-maxdepth<span class="w"> </span><span class="m">3</span><span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.txt&quot;</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Search specific directories</strong>:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>find<span class="w"> </span>/var/log<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.log&quot;</span><span class="w">  </span><span class="c1"># Not: find / -name &quot;*.log&quot;</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Use -prune to skip directories</strong>:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-path<span class="w"> </span><span class="s2">&quot;./node_modules&quot;</span><span class="w"> </span>-prune<span class="w"> </span>-o<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.js&quot;</span><span class="w"> </span>-print
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Batch with exec +</strong>:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.txt&quot;</span><span class="w"> </span>-exec<span class="w"> </span>cat<span class="w"> </span><span class="o">{}</span><span class="w"> </span>+<span class="w">  </span><span class="c1"># Faster than \;</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Use xargs with parallel</strong>:
+   <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.gz&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-P<span class="w"> </span><span class="m">4</span><span class="w"> </span>gunzip<span class="w">  </span><span class="c1"># 4 parallel processes</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+</ol>
+<h2 id="real-world-case-study-image-optimization-for-web-books">Real-World Case Study: Image Optimization for Web Books</h2>
+<p>Here's a practical example that combines everything you've learned. This workflow finds large images in a book project and compresses them to web-appropriate sizes.</p>
+<h3 id="the-problem">The Problem</h3>
+<p>When creating online books (like MkDocs sites), images from cameras or design tools are often too large. A 4MB PNG file makes your website slow and wastes bandwidth. The goal: shrink images larger than 300KB down to approximately 300KB while maintaining quality.</p>
+<h3 id="the-shell-wrapper-script">The Shell Wrapper Script</h3>
+<p>This bash script validates the environment and calls a Python compression tool. It demonstrates:</p>
+<ul>
+<li>Environment variable validation (<code>BK_HOME</code>)</li>
+<li>Dependency checking (Python, Pillow library)</li>
+<li>Color-coded output for user feedback</li>
+<li>Argument forwarding to the Python script</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># bk-resize-images - Compress large images for web optimization</span>
+<span class="c1"># Usage: bk-resize-images [path]</span>
+
+<span class="c1"># Color codes for output</span>
+<span class="nv">RED</span><span class="o">=</span><span class="s1">&#39;\033[0;31m&#39;</span>
+<span class="nv">GREEN</span><span class="o">=</span><span class="s1">&#39;\033[0;32m&#39;</span>
+<span class="nv">YELLOW</span><span class="o">=</span><span class="s1">&#39;\033[0;33m&#39;</span>
+<span class="nv">BLUE</span><span class="o">=</span><span class="s1">&#39;\033[0;34m&#39;</span>
+<span class="nv">NC</span><span class="o">=</span><span class="s1">&#39;\033[0m&#39;</span><span class="w"> </span><span class="c1"># No Color</span>
+
+<span class="c1"># Helper functions</span>
+error<span class="o">()</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">RED</span><span class="si">}</span><span class="s2">ERROR: </span><span class="nv">$1</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="p">&amp;</span><span class="m">2</span><span class="p">;</span><span class="w"> </span><span class="o">}</span>
+warning<span class="o">()</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">YELLOW</span><span class="si">}</span><span class="s2">WARNING: </span><span class="nv">$1</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="p">&amp;</span><span class="m">2</span><span class="p">;</span><span class="w"> </span><span class="o">}</span>
+info<span class="o">()</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BLUE</span><span class="si">}</span><span class="s2">INFO: </span><span class="nv">$1</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="o">}</span>
+success<span class="o">()</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">GREEN</span><span class="si">}</span><span class="s2">SUCCESS: </span><span class="nv">$1</span><span class="si">${</span><span class="nv">NC</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="o">}</span>
+
+<span class="c1"># Step 1: Validate BK_HOME environment variable</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$BK_HOME</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>error<span class="w"> </span><span class="s2">&quot;BK_HOME environment variable is not set&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Please set BK_HOME to your book project directory:&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  export BK_HOME=/path/to/your/book&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$BK_HOME</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>error<span class="w"> </span><span class="s2">&quot;BK_HOME directory does not exist: </span><span class="nv">$BK_HOME</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$BK_HOME</span><span class="s2">/src&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>error<span class="w"> </span><span class="s2">&quot;Source directory not found: </span><span class="nv">$BK_HOME</span><span class="s2">/src&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+info<span class="w"> </span><span class="s2">&quot;BK_HOME validated: </span><span class="nv">$BK_HOME</span><span class="s2">&quot;</span>
+
+<span class="c1"># Step 2: Check for Python 3</span>
+<span class="k">if</span><span class="w"> </span>!<span class="w"> </span><span class="nb">command</span><span class="w"> </span>-v<span class="w"> </span>python3<span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>error<span class="w"> </span><span class="s2">&quot;Python 3 is not installed or not in PATH&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Please install Python 3:&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  sudo apt install python3&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+info<span class="w"> </span><span class="s2">&quot;Python 3 found: </span><span class="k">$(</span>python3<span class="w"> </span>--version<span class="k">)</span><span class="s2">&quot;</span>
+
+<span class="c1"># Step 3: Check for Pillow library</span>
+<span class="k">if</span><span class="w"> </span>!<span class="w"> </span>python3<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import PIL&quot;</span><span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>error<span class="w"> </span><span class="s2">&quot;Pillow library is not installed&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Please install Pillow:&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  pip install Pillow&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+info<span class="w"> </span><span class="s2">&quot;Pillow library is available&quot;</span>
+
+<span class="c1"># Step 4: Check for the compression script</span>
+<span class="nv">COMPRESS_SCRIPT</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$BK_HOME</span><span class="s2">/src/resize-images/compress-images.py&quot;</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$COMPRESS_SCRIPT</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>error<span class="w"> </span><span class="s2">&quot;Compression script not found: </span><span class="nv">$COMPRESS_SCRIPT</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+info<span class="w"> </span><span class="s2">&quot;Compression script found&quot;</span>
+
+<span class="c1"># Step 5: Run the Python compression tool</span>
+success<span class="w"> </span><span class="s2">&quot;All checks passed. Running image compression...&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$BK_HOME</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>python3<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$COMPRESS_SCRIPT</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="the-python-compression-tool">The Python Compression Tool</h3>
+<p>The Python script does the heavy lifting. Key features:</p>
+<ul>
+<li><strong>Find large images</strong>: Scans for files over 500KB</li>
+<li><strong>Iterative compression</strong>: Resizes progressively until target size is reached</li>
+<li><strong>Format conversion</strong>: Converts JPG to PNG, preserves transparency</li>
+<li><strong>Backup creation</strong>: Saves originals with <code>.backup</code> extension</li>
+<li><strong>EXIF handling</strong>: Auto-rotates based on camera orientation</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">compress-images.py - Compress large images to approximately 300KB PNG format</span>
+
+<span class="sd">This script finds images larger than 500KB and compresses them using</span>
+<span class="sd">adaptive resizing. It tries compression first, then progressively smaller</span>
+<span class="sd">resize factors until the target size is achieved.</span>
+
+<span class="sd">Usage:</span>
+<span class="sd">    python compress-images.py /path/to/docs</span>
+<span class="sd">    python compress-images.py  # Uses ./docs if it exists</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ExifTags</span>
+
+<span class="c1"># Configuration</span>
+<span class="n">TARGET_SIZE_KB</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">FIND_THRESHOLD_KB</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">MAX_DIMENSION</span> <span class="o">=</span> <span class="mi">1600</span>
+<span class="n">IMAGE_EXTENSIONS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;.png&#39;</span><span class="p">,</span> <span class="s1">&#39;.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;.jpeg&#39;</span><span class="p">,</span> <span class="s1">&#39;.gif&#39;</span><span class="p">,</span> <span class="s1">&#39;.webp&#39;</span><span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">get_file_size_kb</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get file size in KB.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1024</span>
+
+<span class="k">def</span> <span class="nf">auto_orient_image</span><span class="p">(</span><span class="n">img</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Rotate image based on EXIF orientation data.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">orientation</span> <span class="ow">in</span> <span class="n">ExifTags</span><span class="o">.</span><span class="n">TAGS</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">ExifTags</span><span class="o">.</span><span class="n">TAGS</span><span class="p">[</span><span class="n">orientation</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Orientation&#39;</span><span class="p">:</span>
+                <span class="k">break</span>
+        <span class="n">exif</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">_getexif</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">exif</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">orientation_value</span> <span class="o">=</span> <span class="n">exif</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">orientation</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">orientation_value</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">orientation_value</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+                <span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">270</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">orientation_value</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span>
+                <span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">KeyError</span><span class="p">,</span> <span class="ne">IndexError</span><span class="p">):</span>
+        <span class="k">pass</span>
+    <span class="k">return</span> <span class="n">img</span>
+
+<span class="k">def</span> <span class="nf">compress_image</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">target_kb</span><span class="o">=</span><span class="n">TARGET_SIZE_KB</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compress an image to approximately target_kb size.</span>
+
+<span class="sd">    Strategy:</span>
+<span class="sd">    1. For very large files (&gt;1MB): Start with aggressive resizing</span>
+<span class="sd">    2. For moderately large files: Try compression first, then resize</span>
+<span class="sd">    3. Progressively reduce size until target is achieved</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">original_size</span> <span class="o">=</span> <span class="n">get_file_size_kb</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+
+    <span class="c1"># Create backup</span>
+    <span class="n">backup_path</span> <span class="o">=</span> <span class="n">filepath</span> <span class="o">+</span> <span class="s1">&#39;.backup&#39;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">backup_path</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">backup_path</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">backup_path</span><span class="p">)</span>
+        <span class="n">img</span> <span class="o">=</span> <span class="n">auto_orient_image</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+        <span class="c1"># Convert to RGBA if needed (preserves transparency)</span>
+        <span class="k">if</span> <span class="n">img</span><span class="o">.</span><span class="n">mode</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;RGBA&#39;</span><span class="p">,</span> <span class="s1">&#39;LA&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;P&#39;</span> <span class="ow">and</span> <span class="s1">&#39;transparency&#39;</span> <span class="ow">in</span> <span class="n">img</span><span class="o">.</span><span class="n">info</span><span class="p">):</span>
+            <span class="k">pass</span>  <span class="c1"># Keep transparency</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;RGB&#39;</span><span class="p">)</span>
+
+        <span class="n">original_width</span><span class="p">,</span> <span class="n">original_height</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">size</span>
+
+        <span class="c1"># Determine starting scale based on file size</span>
+        <span class="k">if</span> <span class="n">original_size</span> <span class="o">&gt;</span> <span class="mi">1024</span><span class="p">:</span>  <span class="c1"># &gt;1MB - start aggressive</span>
+            <span class="n">scale_factors</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">scale_factors</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">]</span>
+
+        <span class="c1"># Try each scale factor until target size is achieved</span>
+        <span class="k">for</span> <span class="n">scale</span> <span class="ow">in</span> <span class="n">scale_factors</span><span class="p">:</span>
+            <span class="n">new_width</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">original_width</span> <span class="o">*</span> <span class="n">scale</span><span class="p">)</span>
+            <span class="n">new_height</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">original_height</span> <span class="o">*</span> <span class="n">scale</span><span class="p">)</span>
+
+            <span class="c1"># Don&#39;t exceed max dimension</span>
+            <span class="k">if</span> <span class="n">new_width</span> <span class="o">&gt;</span> <span class="n">MAX_DIMENSION</span> <span class="ow">or</span> <span class="n">new_height</span> <span class="o">&gt;</span> <span class="n">MAX_DIMENSION</span><span class="p">:</span>
+                <span class="n">ratio</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">MAX_DIMENSION</span> <span class="o">/</span> <span class="n">new_width</span><span class="p">,</span> <span class="n">MAX_DIMENSION</span> <span class="o">/</span> <span class="n">new_height</span><span class="p">)</span>
+                <span class="n">new_width</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">new_width</span> <span class="o">*</span> <span class="n">ratio</span><span class="p">)</span>
+                <span class="n">new_height</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">new_height</span> <span class="o">*</span> <span class="n">ratio</span><span class="p">)</span>
+
+            <span class="n">resized</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">new_width</span><span class="p">,</span> <span class="n">new_height</span><span class="p">),</span> <span class="n">Image</span><span class="o">.</span><span class="n">LANCZOS</span><span class="p">)</span>
+
+            <span class="c1"># Save as PNG</span>
+            <span class="n">output_path</span> <span class="o">=</span> <span class="n">filepath</span> <span class="k">if</span> <span class="n">filepath</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.png&#39;</span><span class="p">)</span> <span class="k">else</span> \
+                         <span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span><span class="o">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s1">&#39;.png&#39;</span><span class="p">))</span>
+
+            <span class="n">resized</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="s1">&#39;PNG&#39;</span><span class="p">,</span> <span class="n">optimize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+            <span class="n">new_size</span> <span class="o">=</span> <span class="n">get_file_size_kb</span><span class="p">(</span><span class="n">output_path</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">new_size</span> <span class="o">&lt;=</span> <span class="n">target_kb</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  ✓ Compressed: </span><span class="si">{</span><span class="n">original_size</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">KB → </span><span class="si">{</span><span class="n">new_size</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">KB &quot;</span>
+                      <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">new_width</span><span class="si">}</span><span class="s2">x</span><span class="si">{</span><span class="n">new_height</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="n">original_size</span> <span class="o">-</span> <span class="n">new_size</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  ⚠ Could not reach target size (got </span><span class="si">{</span><span class="n">new_size</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">KB)&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">0</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  ✗ Error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="c1"># Restore from backup</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">backup_path</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">backup_path</span><span class="p">,</span> <span class="n">filepath</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">find_large_images</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">threshold_kb</span><span class="o">=</span><span class="n">FIND_THRESHOLD_KB</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Find all images larger than threshold_kb.&quot;&quot;&quot;</span>
+    <span class="n">large_images</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
+        <span class="c1"># Skip hidden directories</span>
+        <span class="n">dirs</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dirs</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">d</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)]</span>
+
+        <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+            <span class="n">ext</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">suffix</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">ext</span> <span class="ow">in</span> <span class="n">IMAGE_EXTENSIONS</span><span class="p">:</span>
+                <span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+                <span class="n">size_kb</span> <span class="o">=</span> <span class="n">get_file_size_kb</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">size_kb</span> <span class="o">&gt;</span> <span class="n">threshold_kb</span><span class="p">:</span>
+                    <span class="n">large_images</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">filepath</span><span class="p">,</span> <span class="n">size_kb</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">large_images</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># Largest first</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Main entry point.&quot;&quot;&quot;</span>
+    <span class="c1"># Determine search directory</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">search_dir</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;docs&#39;</span><span class="p">):</span>
+        <span class="n">search_dir</span> <span class="o">=</span> <span class="s1">&#39;docs&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Usage: python compress-images.py /path/to/docs&quot;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">search_dir</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: Directory not found: </span><span class="si">{</span><span class="n">search_dir</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Searching for images &gt; </span><span class="si">{</span><span class="n">FIND_THRESHOLD_KB</span><span class="si">}</span><span class="s2">KB in: </span><span class="si">{</span><span class="n">search_dir</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+    <span class="n">large_images</span> <span class="o">=</span> <span class="n">find_large_images</span><span class="p">(</span><span class="n">search_dir</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">large_images</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No large images found. All images are already optimized!&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">large_images</span><span class="p">)</span><span class="si">}</span><span class="s2"> large images:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">filepath</span><span class="p">,</span> <span class="n">size</span> <span class="ow">in</span> <span class="n">large_images</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">size</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">KB - </span><span class="si">{</span><span class="n">filepath</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+    <span class="c1"># Compress each image</span>
+    <span class="n">success_count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">fail_count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">total_saved</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Compressing images...&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">filepath</span><span class="p">,</span> <span class="n">size</span> <span class="ow">in</span> <span class="n">large_images</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Processing: </span><span class="si">{</span><span class="n">filepath</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">success</span><span class="p">,</span> <span class="n">saved</span> <span class="o">=</span> <span class="n">compress_image</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">success</span><span class="p">:</span>
+            <span class="n">success_count</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">total_saved</span> <span class="o">+=</span> <span class="n">saved</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">fail_count</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="c1"># Summary</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SUMMARY&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Processed: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">large_images</span><span class="p">)</span><span class="si">}</span><span class="s2"> images&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Success:   </span><span class="si">{</span><span class="n">success_count</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Failed:    </span><span class="si">{</span><span class="n">fail_count</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Saved:     </span><span class="si">{</span><span class="n">total_saved</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> KB (</span><span class="si">{</span><span class="n">total_saved</span><span class="o">/</span><span class="mi">1024</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> MB)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Note: Original files saved with .backup extension&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Note: Check for .jpg → .png conversions that need markdown updates&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="using-the-tool">Using the Tool</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Set up environment</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">BK_HOME</span><span class="o">=</span>/path/to/your/book
+
+<span class="c1"># Run the tool</span>
+bk-resize-images
+
+<span class="c1"># Or specify a different directory</span>
+bk-resize-images<span class="w"> </span>/path/to/images
+</code></pre></div></td></tr></table></div>
+<h3 id="how-it-works">How It Works</h3>
+<ol>
+<li><strong>Find</strong>: Uses <code>os.walk()</code> to recursively find images over 500KB</li>
+<li><strong>Sort</strong>: Processes largest files first</li>
+<li><strong>Iterate</strong>: Tries progressively smaller scale factors (0.9, 0.8, 0.7...)</li>
+<li><strong>Check</strong>: After each resize, checks if file is under 300KB</li>
+<li><strong>Stop</strong>: When target is achieved, moves to next image</li>
+<li><strong>Report</strong>: Provides summary of savings</li>
+</ol>
+<p>This is the power of combining shell scripts with Python—the shell handles environment validation and user feedback, while Python handles the complex image processing!</p>
+<h2 id="quick-reference-compression-and-search">Quick Reference: Compression and Search</h2>
+<h3 id="compression-cheat-sheet">Compression Cheat Sheet</h3>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compress with gzip</td>
+<td><code>gzip file.txt</code></td>
+</tr>
+<tr>
+<td>Decompress gzip</td>
+<td><code>gunzip file.txt.gz</code></td>
+</tr>
+<tr>
+<td>Create tar.gz</td>
+<td><code>tar -czvf archive.tar.gz folder/</code></td>
+</tr>
+<tr>
+<td>Extract tar.gz</td>
+<td><code>tar -xzvf archive.tar.gz</code></td>
+</tr>
+<tr>
+<td>Create zip</td>
+<td><code>zip -r archive.zip folder/</code></td>
+</tr>
+<tr>
+<td>Extract zip</td>
+<td><code>unzip archive.zip</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="search-cheat-sheet">Search Cheat Sheet</h3>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Find by name</td>
+<td><code>find . -name "*.txt"</code></td>
+</tr>
+<tr>
+<td>Find large files</td>
+<td><code>find . -size +100M</code></td>
+</tr>
+<tr>
+<td>Find recent files</td>
+<td><code>find . -mtime -7</code></td>
+</tr>
+<tr>
+<td>Find and delete</td>
+<td><code>find . -name "*.tmp" -delete</code></td>
+</tr>
+<tr>
+<td>Fast name search</td>
+<td><code>locate filename</code></td>
+</tr>
+<tr>
+<td>Find command</td>
+<td><code>which python</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>You're now a compression and search master!</p>
+<ul>
+<li><strong>gzip/bzip2/xz</strong>: Compress single files (speed vs. size trade-off)</li>
+<li><strong>tar</strong>: Creates archives; combine with compression for <code>.tar.gz</code></li>
+<li><strong>zip</strong>: Cross-platform archives with built-in compression</li>
+<li><strong>find</strong>: The Swiss Army knife of file searching</li>
+<li><strong>locate</strong>: Lightning-fast name searches using a database</li>
+<li><strong>which/whereis/type</strong>: Find commands and their locations</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Compress and Find Like a Pro!</p>
+<p>You can now save disk space, create organized archives, and find any file on your system in seconds. These skills will save you hours of hunting and gigabytes of storage!</p>
+</div>
+<h2 id="whats-next">What's Next?</h2>
+<p>Congratulations on completing this chapter! You now have the tools to manage files efficiently, find anything on your system, and optimize storage. Keep practicing these commands—they become second nature with use!</p>
+<hr />
+<details class="question">
+<summary>Quick Quiz: Compression and Search</summary>
+</details>
+<ol>
+<li>What's the difference between gzip and tar?</li>
+<li>How would you create a compressed archive of a folder?</li>
+<li>What command finds all .log files modified in the last week?</li>
+<li>Why is locate faster than find?</li>
+<li>How do you run a command on every file that find discovers?</li>
+<li>What does the <code>-9</code> option do for compression tools?</li>
+<li>How would you find the largest files on your system?</li>
+</ol>
+<details class="note">
+<summary>Quiz Answers</summary>
+</details>
+<ol>
+<li>gzip compresses a single file; tar bundles multiple files into one archive (no compression by itself)</li>
+<li><code>tar -czvf archive.tar.gz folder/</code></li>
+<li><code>find . -name "*.log" -mtime -7</code></li>
+<li>locate searches a pre-built database instead of scanning the filesystem</li>
+<li>Use <code>-exec</code>: <code>find . -name "*.txt" -exec command {} \;</code></li>
+<li>Maximum compression (slowest but smallest files)</li>
+<li><code>find / -type f -exec du -h {} + 2&gt;/dev/null | sort -rh | head -20</code></li>
+</ol>
 
 
 
@@ -1594,7 +5083,7 @@
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../js/extra.css"></script>
+        <script src="../../js/extra.js"></script>
       
     
   </body>

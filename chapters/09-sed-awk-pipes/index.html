@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+        <meta name="description" content="Master stream editing, field processing, and command pipelines">
       
       
         <meta name="author" content="Dan McCreary">
@@ -52,7 +52,7 @@
       
     
     
-      <link rel="stylesheet" href="../../styles/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -75,7 +75,7 @@
       
         <meta  property="og:title"  content="Advanced Text Processing - Sed, Awk, and Pipes - Learning Linux" >
       
-        <meta  property="og:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  property="og:description"  content="Master stream editing, field processing, and command pipelines" >
       
         <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/09-sed-awk-pipes/index.png" >
       
@@ -91,7 +91,7 @@
       
         <meta  name="twitter:title"  content="Advanced Text Processing - Sed, Awk, and Pipes - Learning Linux" >
       
-        <meta  name="twitter:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  name="twitter:description"  content="Master stream editing, field processing, and command pipelines" >
       
         <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/09-sed-awk-pipes/index.png" >
       
@@ -214,7 +214,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -259,7 +259,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -439,8 +439,6 @@
           
         
       
-        
-          
         
       
         
@@ -733,6 +731,528 @@
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-unix-philosophy-small-tools-big-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      The UNIX Philosophy: Small Tools, Big Power
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-streams-the-rivers-of-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Streams: The Rivers of Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Text Streams: The Rivers of Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-input-stdin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Input (stdin)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-output-stdout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Output (stdout)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-error-stderr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Error (stderr)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-separate-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Separate Streams?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why Separate Streams?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-text-streams-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Text Streams Visualization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redirection-controlling-where-data-goes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirection: Controlling Where Data Goes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Redirection: Controlling Where Data Goes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#output-redirection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Redirection (&gt;)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#append-redirection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Append Redirection (&gt;&gt;)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-redirection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input Redirection (&lt;)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-redirection-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Redirection (2&gt;)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combining-redirections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining Redirections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redirection-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirection Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pipe-operator-connecting-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Pipe Operator: Connecting Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Pipe Operator: Connecting Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-commands-building-data-processing-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Commands: Building Data Processing Chains
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-pipeline-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real Pipeline Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real Pipeline Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-pipeline-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Pipeline Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-tee-command-output-to-file-and-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Tee Command: Output to File AND Screen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-tr-command-translate-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Tr Command: Translate Characters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Tr Command: Translate Characters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tr-character-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tr Character Classes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rev-command-reverse-lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Rev Command: Reverse Lines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-fold-command-wrap-long-lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Fold Command: Wrap Long Lines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-xargs-command-build-commands-from-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Xargs Command: Build Commands from Input
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Xargs Command: Build Commands from Input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#safe-xargs-with-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safe Xargs with -0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xargs-with-custom-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xargs with Custom Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-sed-command-stream-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Sed Command: Stream Editor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Sed Command: Stream Editor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sed-substitution-find-and-replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sed Substitution: Find and Replace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sed-substitution-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sed Substitution Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-sed-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      More Sed Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sed-address-ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sed Address Ranges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-sed-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Sed Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-awk-command-pattern-scanning-and-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Awk Command: Pattern Scanning and Processing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Awk Command: Pattern Scanning and Processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#awk-fields-column-based-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Awk Fields: Column-Based Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-field-separator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Field Separator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awk-patterns-conditional-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Awk Patterns: Conditional Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awk-built-in-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Awk Built-in Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awk-begin-and-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      Awk BEGIN and END
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-awk-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Awk Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Awk Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-awk-field-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Awk Field Processing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-text-processing-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: Text Processing Workflows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together: Text Processing Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow-1-log-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow 1: Log Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-2-csv-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow 2: CSV Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-3-text-cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow 3: Text Cleanup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-4-system-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow 4: System Information
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sed-and-awk-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sed and Awk Cheat Sheet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sed and Awk Cheat Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sed-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sed Quick Reference
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awk-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Awk Quick Reference
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
     </span>
   </a>
   
@@ -1048,7 +1568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../24-customization/" class="md-nav__link">
+      <a href="../24-customization/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,6 +1693,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1186,7 +1714,7 @@
         
   
   
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1424,6 +1952,528 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#the-unix-philosophy-small-tools-big-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      The UNIX Philosophy: Small Tools, Big Power
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-streams-the-rivers-of-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Streams: The Rivers of Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Text Streams: The Rivers of Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-input-stdin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Input (stdin)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-output-stdout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Output (stdout)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-error-stderr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Error (stderr)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-separate-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Separate Streams?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why Separate Streams?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-text-streams-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Text Streams Visualization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redirection-controlling-where-data-goes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirection: Controlling Where Data Goes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Redirection: Controlling Where Data Goes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#output-redirection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Redirection (&gt;)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#append-redirection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Append Redirection (&gt;&gt;)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-redirection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input Redirection (&lt;)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-redirection-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Redirection (2&gt;)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combining-redirections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining Redirections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redirection-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirection Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pipe-operator-connecting-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Pipe Operator: Connecting Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Pipe Operator: Connecting Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-commands-building-data-processing-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Commands: Building Data Processing Chains
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-pipeline-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real Pipeline Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real Pipeline Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-pipeline-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Pipeline Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-tee-command-output-to-file-and-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Tee Command: Output to File AND Screen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-tr-command-translate-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Tr Command: Translate Characters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Tr Command: Translate Characters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tr-character-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tr Character Classes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rev-command-reverse-lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Rev Command: Reverse Lines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-fold-command-wrap-long-lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Fold Command: Wrap Long Lines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-xargs-command-build-commands-from-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Xargs Command: Build Commands from Input
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Xargs Command: Build Commands from Input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#safe-xargs-with-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safe Xargs with -0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xargs-with-custom-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xargs with Custom Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-sed-command-stream-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Sed Command: Stream Editor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Sed Command: Stream Editor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sed-substitution-find-and-replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sed Substitution: Find and Replace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sed-substitution-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sed Substitution Patterns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-sed-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      More Sed Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sed-address-ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sed Address Ranges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-sed-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Sed Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-awk-command-pattern-scanning-and-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Awk Command: Pattern Scanning and Processing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Awk Command: Pattern Scanning and Processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#awk-fields-column-based-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Awk Fields: Column-Based Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-field-separator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Field Separator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awk-patterns-conditional-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Awk Patterns: Conditional Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awk-built-in-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Awk Built-in Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awk-begin-and-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      Awk BEGIN and END
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-awk-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Awk Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Awk Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-awk-field-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Awk Field Processing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-text-processing-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: Text Processing Workflows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together: Text Processing Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow-1-log-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow 1: Log Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-2-csv-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow 2: CSV Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-3-text-cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow 3: Text Cleanup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-4-system-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow 4: System Information
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sed-and-awk-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sed and Awk Cheat Sheet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sed and Awk Cheat Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sed-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sed Quick Reference
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awk-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Awk Quick Reference
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1439,7 +2489,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/learniing-linux/blob/master/docs/chapters/09-sed-awk-pipes/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/learning-linux/blob/master/docs/chapters/09-sed-awk-pipes/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1451,7 +2501,7 @@
 <h2 id="summary">Summary</h2>
 <p>This chapter covers advanced text processing with sed for stream editing and awk for field-based processing. You'll also master the UNIX philosophy in action: connecting commands with pipes, understanding text streams (stdin, stdout, stderr), and using redirection operators. These skills enable you to build powerful data processing pipelines.</p>
 <h2 id="concepts-covered">Concepts Covered</h2>
-<p>This chapter covers the following 15 concepts from the learning graph:</p>
+<p>This chapter covers the following 21 concepts from the learning graph:</p>
 <ol>
 <li>Sed Command</li>
 <li>Sed Substitution</li>
@@ -1482,7 +2532,1219 @@
 <li><a href="../08-grep-regex/">Chapter 8: Text Processing with Grep and Regular Expressions</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<h2 id="the-unix-philosophy-small-tools-big-power">The UNIX Philosophy: Small Tools, Big Power</h2>
+<p>Here's a secret that made UNIX (and Linux) legendary: instead of building giant programs that try to do everything, UNIX developers created small, focused tools that each do ONE thing really well. Then they invented a way to connect these tools together—like LEGO bricks—to build whatever you need!</p>
+<p>This chapter teaches you:</p>
+<ul>
+<li><strong>Streams</strong>: How data flows between programs</li>
+<li><strong>Redirection</strong>: Sending output to files instead of the screen</li>
+<li><strong>Pipes</strong>: Connecting commands together</li>
+<li><strong>Sed</strong>: A stream editor for transforming text</li>
+<li><strong>Awk</strong>: A powerful language for processing structured data</li>
+</ul>
+<p>By the end, you'll be building <strong>pipeline commands</strong> that process text like a pro. These skills are what separate Linux beginners from power users!</p>
+<h2 id="text-streams-the-rivers-of-data">Text Streams: The Rivers of Data</h2>
+<p>In Linux, data flows through programs like water through pipes. These flows are called <strong>text streams</strong>, and every program has three of them by default.</p>
+<h3 id="standard-input-stdin">Standard Input (stdin)</h3>
+<p><strong>Standard input</strong> (stdin) is where a program reads its input. By default, this is your keyboard—when you type, you're sending data to stdin.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># cat with no arguments reads from stdin (your keyboard)</span>
+cat
+<span class="c1"># Type something, press Enter</span>
+<span class="c1"># Press Ctrl+D to end input</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="standard-output-stdout">Standard Output (stdout)</h3>
+<p><strong>Standard output</strong> (stdout) is where a program writes its normal output. By default, this goes to your terminal screen.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># ls writes its output to stdout</span>
+ls<span class="w"> </span>-la
+<span class="c1"># Output appears on your screen</span>
+
+<span class="c1"># echo writes to stdout</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, World!&quot;</span>
+<span class="c1"># Hello, World!</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="standard-error-stderr">Standard Error (stderr)</h3>
+<p><strong>Standard error</strong> (stderr) is where programs write error messages. It's separate from stdout so you can handle errors differently from regular output.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># This command produces an error</span>
+ls<span class="w"> </span>/nonexistent/directory
+<span class="c1"># ls: cannot access &#39;/nonexistent/directory&#39;: No such file or directory</span>
+<span class="c1"># ↑ This goes to stderr, not stdout</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="why-separate-streams">Why Separate Streams?</h3>
+<p>Having separate streams is brilliant:</p>
+<ul>
+<li>You can save normal output to a file while still seeing errors on screen</li>
+<li>You can discard errors while keeping the good output</li>
+<li>You can log errors to a separate file</li>
+<li>Pipes only connect stdout, so errors still show up for debugging</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Stream</th>
+<th>Number</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stdin</td>
+<td>0</td>
+<td>Keyboard</td>
+<td>Input to program</td>
+</tr>
+<tr>
+<td>stdout</td>
+<td>1</td>
+<td>Screen</td>
+<td>Normal output</td>
+</tr>
+<tr>
+<td>stderr</td>
+<td>2</td>
+<td>Screen</td>
+<td>Error messages</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-text-streams-visualization">Diagram: Text Streams Visualization</h4>
+<details>
+<summary>Understanding stdin, stdout, and stderr</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Understand
+Learning Objective: Visualize how the three standard streams connect programs to input/output devices and how they can be redirected.</p>
+<p>Layout: Central program box with three streams flowing in/out</p>
+<p>Visual elements:
+- Central box: "Program" (e.g., grep)
+- Left side: stdin (stream 0) flowing IN
+  - Default source: keyboard icon
+  - Can be redirected from: file icon
+- Right top: stdout (stream 1) flowing OUT
+  - Default destination: terminal/screen icon
+  - Can be redirected to: file icon
+- Right bottom: stderr (stream 2) flowing OUT
+  - Default destination: terminal/screen icon
+  - Can be redirected to: different file icon</p>
+<p>Stream labels:
+- stdin (0): Blue arrow, "Input"
+- stdout (1): Green arrow, "Output"
+- stderr (2): Red arrow, "Errors"</p>
+<p>Animation:
+- Show data packets flowing through streams
+- Demonstrate redirection by arrows changing targets
+- Show pipe connecting stdout to another program's stdin</p>
+<p>Interactive features:
+- Click to toggle between default and redirected states
+- Hover over streams for explanation</p>
+<p>Color scheme:
+- stdin: Blue
+- stdout: Green
+- stderr: Red
+- Program box: Gray
+- Files: Yellow/orange</p>
+<p>Implementation: p5.js</p>
+</details>
+<h2 id="redirection-controlling-where-data-goes">Redirection: Controlling Where Data Goes</h2>
+<p><strong>Redirection</strong> lets you change where stdin comes from and where stdout/stderr go to. Instead of keyboard input and screen output, you can use files!</p>
+<h3 id="output-redirection">Output Redirection (&gt;)</h3>
+<p><strong>Output redirection</strong> sends stdout to a file instead of the screen. The <code>&gt;</code> operator creates a new file (or overwrites an existing one):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Save ls output to a file</span>
+ls<span class="w"> </span>-la<span class="w"> </span>&gt;<span class="w"> </span>filelist.txt
+
+<span class="c1"># Now the output is in the file, not on screen</span>
+cat<span class="w"> </span>filelist.txt
+
+<span class="c1"># Warning: &gt; overwrites existing files!</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;New content&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>myfile.txt<span class="w">    </span><span class="c1"># Overwrites myfile.txt!</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="append-redirection">Append Redirection (&gt;&gt;)</h3>
+<p><strong>Append redirection</strong> adds to the end of a file instead of overwriting:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Add a line to a file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;First line&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>log.txt
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Second line&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>log.txt
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Third line&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>log.txt
+
+cat<span class="w"> </span>log.txt
+<span class="c1"># First line</span>
+<span class="c1"># Second line</span>
+<span class="c1"># Third line</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="input-redirection">Input Redirection (&lt;)</h3>
+<p><strong>Input redirection</strong> makes a program read from a file instead of the keyboard:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Instead of typing a message, read from file</span>
+mail<span class="w"> </span>user@example.com<span class="w"> </span>&lt;<span class="w"> </span>message.txt
+
+<span class="c1"># Sort reads from file</span>
+sort<span class="w"> </span>&lt;<span class="w"> </span>names.txt
+
+<span class="c1"># This is equivalent to:</span>
+sort<span class="w"> </span>names.txt
+<span class="c1"># But input redirection is more explicit</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="error-redirection-2">Error Redirection (2&gt;)</h3>
+<p><strong>Error redirection</strong> sends stderr to a file. Remember, stderr is stream number 2:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Save errors to a file</span>
+ls<span class="w"> </span>/nonexistent<span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>errors.txt
+
+<span class="c1"># Normal output still goes to screen</span>
+ls<span class="w"> </span>/home<span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>errors.txt
+<span class="c1"># ↑ Shows /home contents on screen, errors go to file</span>
+
+<span class="c1"># Append errors</span>
+ls<span class="w"> </span>/fake1<span class="w"> </span><span class="m">2</span>&gt;&gt;<span class="w"> </span>all_errors.txt
+ls<span class="w"> </span>/fake2<span class="w"> </span><span class="m">2</span>&gt;&gt;<span class="w"> </span>all_errors.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="combining-redirections">Combining Redirections</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Save stdout and stderr to DIFFERENT files</span>
+<span class="nb">command</span><span class="w"> </span>&gt;<span class="w"> </span>output.txt<span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>errors.txt
+
+<span class="c1"># Save both to the SAME file</span>
+<span class="nb">command</span><span class="w"> </span>&gt;<span class="w"> </span>all.txt<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<span class="c1"># The 2&gt;&amp;1 means &quot;send stderr where stdout is going&quot;</span>
+
+<span class="c1"># Modern syntax (bash 4+):</span>
+<span class="nb">command</span><span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>all.txt
+
+<span class="c1"># Discard output entirely (send to /dev/null)</span>
+<span class="nb">command</span><span class="w"> </span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<span class="c1"># Or:</span>
+<span class="nb">command</span><span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">The Black Hole: /dev/null</p>
+<p><code>/dev/null</code> is a special file that discards everything written to it. It's like a black hole for data! Use it when you want to run a command but don't care about its output:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Run quietly</span>
+noisy_command<span class="w"> </span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></div></td></tr></table></div></p>
+</div>
+<h3 id="redirection-summary">Redirection Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&gt;</code></td>
+<td>Output redirect</td>
+<td>Write stdout to file (overwrite)</td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td>Append redirect</td>
+<td>Write stdout to file (append)</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>Input redirect</td>
+<td>Read stdin from file</td>
+</tr>
+<tr>
+<td><code>2&gt;</code></td>
+<td>Error redirect</td>
+<td>Write stderr to file (overwrite)</td>
+</tr>
+<tr>
+<td><code>2&gt;&gt;</code></td>
+<td>Error append</td>
+<td>Write stderr to file (append)</td>
+</tr>
+<tr>
+<td><code>&amp;&gt;</code></td>
+<td>All redirect</td>
+<td>Write stdout AND stderr to file</td>
+</tr>
+<tr>
+<td><code>2&gt;&amp;1</code></td>
+<td>Stderr to stdout</td>
+<td>Send stderr where stdout goes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-pipe-operator-connecting-commands">The Pipe Operator: Connecting Commands</h2>
+<p>The <strong>pipe operator</strong> (<code>|</code>) is where the magic happens! It connects the stdout of one command to the stdin of another, creating a <strong>pipeline</strong>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Output of ls becomes input to grep</span>
+ls<span class="w"> </span>-la<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;.txt&quot;</span>
+
+<span class="c1"># Output of cat becomes input to sort</span>
+cat<span class="w"> </span>names.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort
+
+<span class="c1"># Chain multiple commands</span>
+cat<span class="w"> </span>data.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-10
+</code></pre></div></td></tr></table></div>
+<p>Think of it like actual plumbing: the output "flows" from one command into the next!</p>
+<h3 id="pipeline-commands-building-data-processing-chains">Pipeline Commands: Building Data Processing Chains</h3>
+<p><strong>Pipeline commands</strong> let you combine simple tools to do complex tasks:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Count lines containing &quot;error&quot; in a log file</span>
+cat<span class="w"> </span>/var/log/syslog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+
+<span class="c1"># Find the 10 largest files</span>
+ls<span class="w"> </span>-la<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-k5<span class="w"> </span>-n<span class="w"> </span>-r<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-10
+
+<span class="c1"># Find unique users who logged in</span>
+last<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq
+
+<span class="c1"># Process a CSV: extract column 2, sort, count occurrences</span>
+cat<span class="w"> </span>data.csv<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="s1">&#39;,&#39;</span><span class="w"> </span>-f2<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-rn
+</code></pre></div></td></tr></table></div>
+<h3 id="real-pipeline-examples">Real Pipeline Examples</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Find most common words in a file</span>
+cat<span class="w"> </span>book.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="s1">&#39;\n&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;[:punct:]&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39;[:upper:]&#39;</span><span class="w"> </span><span class="s1">&#39;[:lower:]&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-rn<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-20
+
+<span class="c1"># Find running processes using most memory</span>
+ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-k4<span class="w"> </span>-rn<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-10
+
+<span class="c1"># Find all TODO comments in code</span>
+grep<span class="w"> </span>-rn<span class="w"> </span><span class="s2">&quot;TODO&quot;</span><span class="w"> </span>src/<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d:<span class="w"> </span>-f1<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-rn
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Pipelines Don't Include stderr</p>
+<p>By default, pipes only pass stdout. Error messages still go to your screen, which is usually what you want for debugging. To pipe stderr too, use <code>2&gt;&amp;1 |</code> or <code>|&amp;</code> (bash).</p>
+</div>
+<h4 id="diagram-pipeline-flow">Diagram: Pipeline Flow</h4>
+<details>
+<summary>Understanding Command Pipelines</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Understand, Apply
+Learning Objective: Visualize how data flows through a pipeline of commands, with each command's output becoming the next command's input.</p>
+<p>Layout: Horizontal chain of connected command boxes</p>
+<p>Example pipeline: <code>cat file.txt | grep "error" | sort | uniq -c</code></p>
+<p>Visual elements:
+1. Source (file icon): file.txt
+2. Command boxes connected by pipe symbols:
+   - cat: Reads file, outputs all lines
+   - grep "error": Filters to error lines only
+   - sort: Alphabetizes lines
+   - uniq -c: Counts unique lines
+3. Final output (screen icon): Results</p>
+<p>Between each stage, show:
+- Pipe symbol (|)
+- Data preview (sample lines at that stage)
+- Line count (how many lines at each stage)</p>
+<p>Example data flow:
+- cat output: 1000 lines (all content)
+- grep output: 23 lines (only errors)
+- sort output: 23 lines (alphabetized)
+- uniq -c output: 5 lines (unique errors with counts)</p>
+<p>Animation:
+- Data "packets" flowing left to right
+- Each command box lights up as it processes
+- Output appears on right side</p>
+<p>Interactive features:
+- Click each command to see its effect
+- Show intermediate output at each stage
+- Toggle different example pipelines</p>
+<p>Color scheme:
+- Commands: Blue boxes
+- Data flow: Green arrows
+- Pipe symbols: Gray
+- Filtered data: Yellow highlight</p>
+<p>Implementation: p5.js</p>
+</details>
+<h2 id="the-tee-command-output-to-file-and-screen">The Tee Command: Output to File AND Screen</h2>
+<p>The <strong>tee command</strong> is like a plumbing T-junction: it sends output to BOTH a file AND stdout (so the pipeline can continue):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Save intermediate results while continuing pipeline</span>
+cat<span class="w"> </span>data.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>sorted.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>&gt;<span class="w"> </span>final.txt
+<span class="c1"># sorted.txt has sorted data</span>
+<span class="c1"># final.txt has sorted unique data</span>
+
+<span class="c1"># Watch output while saving to file</span>
+./long_process<span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>output.log
+<span class="c1"># You see output on screen AND it&#39;s saved to file</span>
+
+<span class="c1"># Append instead of overwrite</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;new line&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>logfile.txt
+</code></pre></div></td></tr></table></div>
+<p>Use tee when you want to:</p>
+<ul>
+<li>Debug a pipeline by saving intermediate results</li>
+<li>Watch progress while logging</li>
+<li>Send output to multiple destinations</li>
+</ul>
+<h2 id="the-tr-command-translate-characters">The Tr Command: Translate Characters</h2>
+<p>The <strong>tr command</strong> (translate) transforms characters—replacing, deleting, or squeezing them:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Replace characters (lowercase to uppercase)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;hello&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39;a-z&#39;</span><span class="w"> </span><span class="s1">&#39;A-Z&#39;</span>
+<span class="c1"># HELLO</span>
+
+<span class="c1"># Replace spaces with newlines</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;one two three&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="s1">&#39;\n&#39;</span>
+<span class="c1"># one</span>
+<span class="c1"># two</span>
+<span class="c1"># three</span>
+
+<span class="c1"># Delete characters</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;hello123world&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;0-9&#39;</span>
+<span class="c1"># helloworld</span>
+
+<span class="c1"># Squeeze repeated characters</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;hellooooo    world&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span>-s<span class="w"> </span><span class="s1">&#39;o &#39;</span>
+<span class="c1"># hello world</span>
+
+<span class="c1"># Replace multiple characters</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;hello&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39;aeiou&#39;</span><span class="w"> </span><span class="s1">&#39;12345&#39;</span>
+<span class="c1"># h2ll4</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="tr-character-classes">Tr Character Classes</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Replace all lowercase with uppercase</span>
+tr<span class="w"> </span><span class="s1">&#39;[:lower:]&#39;</span><span class="w"> </span><span class="s1">&#39;[:upper:]&#39;</span><span class="w"> </span>&lt;<span class="w"> </span>file.txt
+
+<span class="c1"># Delete non-printable characters</span>
+tr<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;[:cntrl:]&#39;</span><span class="w"> </span>&lt;<span class="w"> </span>file.txt
+
+<span class="c1"># Replace digits with X</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Phone: 555-1234&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39;[:digit:]&#39;</span><span class="w"> </span><span class="s1">&#39;X&#39;</span>
+<span class="c1"># Phone: XXX-XXXX</span>
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[:lower:]</code></td>
+<td>Lowercase letters</td>
+</tr>
+<tr>
+<td><code>[:upper:]</code></td>
+<td>Uppercase letters</td>
+</tr>
+<tr>
+<td><code>[:digit:]</code></td>
+<td>Digits 0-9</td>
+</tr>
+<tr>
+<td><code>[:alpha:]</code></td>
+<td>All letters</td>
+</tr>
+<tr>
+<td><code>[:alnum:]</code></td>
+<td>Letters and digits</td>
+</tr>
+<tr>
+<td><code>[:space:]</code></td>
+<td>Whitespace</td>
+</tr>
+<tr>
+<td><code>[:punct:]</code></td>
+<td>Punctuation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-rev-command-reverse-lines">The Rev Command: Reverse Lines</h2>
+<p>The <strong>rev command</strong> reverses each line character by character:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;hello&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>rev
+<span class="c1"># olleh</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Linux is fun&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>rev
+<span class="c1"># nuf si xuniL</span>
+
+<span class="c1"># Reverse a file line by line</span>
+rev<span class="w"> </span>&lt;<span class="w"> </span>original.txt<span class="w"> </span>&gt;<span class="w"> </span>reversed.txt
+</code></pre></div></td></tr></table></div>
+<p>While it seems simple, rev can be useful in pipelines:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Get the last field when you don&#39;t know how many fields there are</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;/path/to/some/file.txt&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>rev<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="s1">&#39;/&#39;</span><span class="w"> </span>-f1<span class="w"> </span><span class="p">|</span><span class="w"> </span>rev
+<span class="c1"># file.txt</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="the-fold-command-wrap-long-lines">The Fold Command: Wrap Long Lines</h2>
+<p>The <strong>fold command</strong> wraps long lines at a specified width:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Wrap at 40 characters</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;This is a very long line that should be wrapped at forty characters&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>fold<span class="w"> </span>-w<span class="w"> </span><span class="m">40</span>
+<span class="c1"># This is a very long line that should be</span>
+<span class="c1"># wrapped at forty characters</span>
+
+<span class="c1"># Wrap at word boundaries (don&#39;t break words)</span>
+fold<span class="w"> </span>-w<span class="w"> </span><span class="m">40</span><span class="w"> </span>-s<span class="w"> </span>&lt;<span class="w"> </span>long_text.txt
+
+<span class="c1"># Process a file</span>
+fold<span class="w"> </span>-w<span class="w"> </span><span class="m">80</span><span class="w"> </span>document.txt<span class="w"> </span>&gt;<span class="w"> </span>wrapped.txt
+</code></pre></div></td></tr></table></div>
+<p>Useful for:</p>
+<ul>
+<li>Formatting text for display</li>
+<li>Preparing text for printing</li>
+<li>Making files easier to read in terminals</li>
+</ul>
+<h2 id="the-xargs-command-build-commands-from-input">The Xargs Command: Build Commands from Input</h2>
+<p>The <strong>xargs command</strong> takes input and turns it into arguments for another command. It's incredibly powerful for batch operations!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Delete all .tmp files found by find</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.tmp&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>rm
+
+<span class="c1"># Without xargs, you&#39;d need:</span>
+rm<span class="w"> </span><span class="k">$(</span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.tmp&quot;</span><span class="k">)</span><span class="w">  </span><span class="c1"># Can break with many files!</span>
+
+<span class="c1"># Echo arguments to see what xargs does</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;one two three&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Items:&quot;</span>
+<span class="c1"># Items: one two three</span>
+
+<span class="c1"># Process one item at a time (-n 1)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;one two three&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Item:&quot;</span>
+<span class="c1"># Item: one</span>
+<span class="c1"># Item: two</span>
+<span class="c1"># Item: three</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="safe-xargs-with-0">Safe Xargs with -0</h3>
+<p>When filenames contain spaces or special characters, use <code>-print0</code> with find and <code>-0</code> with xargs:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Safe deletion even with weird filenames</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.bak&quot;</span><span class="w"> </span>-print0<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-0<span class="w"> </span>rm
+
+<span class="c1"># Process files with spaces in names</span>
+find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.txt&quot;</span><span class="w"> </span>-print0<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-0<span class="w"> </span>wc<span class="w"> </span>-l
+</code></pre></div></td></tr></table></div>
+<h3 id="xargs-with-custom-commands">Xargs with Custom Commands</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Download multiple URLs</span>
+cat<span class="w"> </span>urls.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w"> </span>curl<span class="w"> </span>-O
+
+<span class="c1"># Run command for each line</span>
+cat<span class="w"> </span>servers.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-I<span class="w"> </span><span class="o">{}</span><span class="w"> </span>ssh<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="s2">&quot;uptime&quot;</span>
+<span class="c1"># {} is replaced with each line</span>
+
+<span class="c1"># Parallel execution (-P)</span>
+cat<span class="w"> </span>files.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-P<span class="w"> </span><span class="m">4</span><span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w"> </span>process_file
+<span class="c1"># Runs 4 processes in parallel</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="the-sed-command-stream-editor">The Sed Command: Stream Editor</h2>
+<p>The <strong>sed command</strong> (stream editor) transforms text as it flows through. It's like find-and-replace on steroids!</p>
+<h3 id="sed-substitution-find-and-replace">Sed Substitution: Find and Replace</h3>
+<p><strong>Sed substitution</strong> is the most common sed operation. The basic syntax is <code>s/pattern/replacement/</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Replace first occurrence on each line</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;hello world&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/world/Linux/&#39;</span>
+<span class="c1"># hello Linux</span>
+
+<span class="c1"># Replace ALL occurrences (g flag)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;one one one&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/one/two/g&#39;</span>
+<span class="c1"># two two two</span>
+
+<span class="c1"># Case insensitive (i flag)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello HELLO hello&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/hello/hi/gi&#39;</span>
+<span class="c1"># hi hi hi</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="sed-substitution-patterns">Sed Substitution Patterns</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Replace in a file (output to stdout)</span>
+sed<span class="w"> </span><span class="s1">&#39;s/old/new/g&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Edit file IN PLACE (-i flag)</span>
+sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/old/new/g&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Create backup before editing</span>
+sed<span class="w"> </span>-i.bak<span class="w"> </span><span class="s1">&#39;s/old/new/g&#39;</span><span class="w"> </span>file.txt
+<span class="c1"># Creates file.txt.bak with original</span>
+
+<span class="c1"># Use different delimiter (useful when pattern contains /)</span>
+sed<span class="w"> </span><span class="s1">&#39;s|/usr/local|/opt|g&#39;</span><span class="w"> </span>paths.txt
+sed<span class="w"> </span><span class="s1">&#39;s#http://#https://#g&#39;</span><span class="w"> </span>urls.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="more-sed-operations">More Sed Operations</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Delete lines matching pattern</span>
+sed<span class="w"> </span><span class="s1">&#39;/pattern/d&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Delete empty lines</span>
+sed<span class="w"> </span><span class="s1">&#39;/^$/d&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Delete lines 5-10</span>
+sed<span class="w"> </span><span class="s1">&#39;5,10d&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Print only matching lines (like grep)</span>
+sed<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;/pattern/p&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Multiple operations</span>
+sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/old/new/&#39;</span><span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/foo/bar/&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Or use semicolons</span>
+sed<span class="w"> </span><span class="s1">&#39;s/old/new/; s/foo/bar/&#39;</span><span class="w"> </span>file.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="sed-address-ranges">Sed Address Ranges</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Apply only to line 5</span>
+sed<span class="w"> </span><span class="s1">&#39;5s/old/new/&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Apply to lines 1-10</span>
+sed<span class="w"> </span><span class="s1">&#39;1,10s/old/new/&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Apply from line 5 to end</span>
+sed<span class="w"> </span><span class="s1">&#39;5,$s/old/new/&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Apply only to lines matching pattern</span>
+sed<span class="w"> </span><span class="s1">&#39;/error/s/old/new/&#39;</span><span class="w"> </span>file.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="practical-sed-examples">Practical Sed Examples</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Remove leading whitespace</span>
+sed<span class="w"> </span><span class="s1">&#39;s/^[[:space:]]*//&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Remove trailing whitespace</span>
+sed<span class="w"> </span><span class="s1">&#39;s/[[:space:]]*$//&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Remove both (trim)</span>
+sed<span class="w"> </span><span class="s1">&#39;s/^[[:space:]]*//; s/[[:space:]]*$//&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Add prefix to each line</span>
+sed<span class="w"> </span><span class="s1">&#39;s/^/PREFIX: /&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Add suffix to each line</span>
+sed<span class="w"> </span><span class="s1">&#39;s/$/ :SUFFIX/&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Replace entire line if it matches</span>
+sed<span class="w"> </span><span class="s1">&#39;/error/c\This line had an error&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Insert line before match</span>
+sed<span class="w"> </span><span class="s1">&#39;/pattern/i\New line before&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Insert line after match</span>
+sed<span class="w"> </span><span class="s1">&#39;/pattern/a\New line after&#39;</span><span class="w"> </span>file.txt
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Test Before Editing In-Place</p>
+<p>Always test your sed command WITHOUT <code>-i</code> first to see the output. Once you're sure it's correct, add <code>-i</code> to modify the file:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sed<span class="w"> </span><span class="s1">&#39;s/old/new/g&#39;</span><span class="w"> </span>file.txt<span class="w">          </span><span class="c1"># Preview changes</span>
+sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/old/new/g&#39;</span><span class="w"> </span>file.txt<span class="w">       </span><span class="c1"># Apply changes</span>
+</code></pre></div></td></tr></table></div></p>
+</div>
+<h2 id="the-awk-command-pattern-scanning-and-processing">The Awk Command: Pattern Scanning and Processing</h2>
+<p>The <strong>awk command</strong> is actually a complete programming language designed for text processing! It's especially powerful for working with structured data (like CSV files or log files).</p>
+<h3 id="awk-fields-column-based-processing">Awk Fields: Column-Based Processing</h3>
+<p><strong>Awk fields</strong> are columns of text, separated by whitespace (by default). Awk automatically splits each line into fields:</p>
+<ul>
+<li><code>$0</code> = entire line</li>
+<li><code>$1</code> = first field</li>
+<li><code>$2</code> = second field</li>
+<li>And so on...</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Sample: ps aux output</span>
+<span class="c1"># USER       PID  %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND</span>
+<span class="c1"># root         1  0.0  0.1 169836 13460 ?        Ss   Dec01   0:11 /sbin/init</span>
+
+<span class="c1"># Print first field (username)</span>
+ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span>
+
+<span class="c1"># Print first and third fields</span>
+ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $1, $3}&#39;</span>
+
+<span class="c1"># Print specific columns</span>
+cat<span class="w"> </span>data.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $2, $4}&#39;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="custom-field-separator">Custom Field Separator</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Use comma as separator (for CSV)</span>
+awk<span class="w"> </span>-F<span class="s1">&#39;,&#39;</span><span class="w"> </span><span class="s1">&#39;{print $1, $3}&#39;</span><span class="w"> </span>data.csv
+
+<span class="c1"># Use colon (for /etc/passwd)</span>
+awk<span class="w"> </span>-F<span class="s1">&#39;:&#39;</span><span class="w"> </span><span class="s1">&#39;{print $1, $6}&#39;</span><span class="w"> </span>/etc/passwd
+<span class="c1"># Prints username and home directory</span>
+
+<span class="c1"># Use tab</span>
+awk<span class="w"> </span>-F<span class="s1">&#39;\t&#39;</span><span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="w"> </span>file.tsv
+</code></pre></div></td></tr></table></div>
+<h3 id="awk-patterns-conditional-processing">Awk Patterns: Conditional Processing</h3>
+<p><strong>Awk patterns</strong> let you process only lines that match a condition:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Only lines where field 1 is &quot;root&quot;</span>
+awk<span class="w"> </span><span class="s1">&#39;$1 == &quot;root&quot; {print $0}&#39;</span><span class="w"> </span>/etc/passwd
+
+<span class="c1"># Only lines where field 3 is greater than 100</span>
+awk<span class="w"> </span><span class="s1">&#39;$3 &gt; 100 {print $1, $3}&#39;</span><span class="w"> </span>data.txt
+
+<span class="c1"># Pattern matching (regex)</span>
+awk<span class="w"> </span><span class="s1">&#39;/error/ {print $0}&#39;</span><span class="w"> </span>log.txt
+
+<span class="c1"># Combine pattern with action</span>
+awk<span class="w"> </span><span class="s1">&#39;/error/ {print &quot;Found:&quot;, $0}&#39;</span><span class="w"> </span>log.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="awk-built-in-variables">Awk Built-in Variables</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NR</code></td>
+<td>Number of Records (current line number)</td>
+</tr>
+<tr>
+<td><code>NF</code></td>
+<td>Number of Fields in current line</td>
+</tr>
+<tr>
+<td><code>$0</code></td>
+<td>Entire current line</td>
+</tr>
+<tr>
+<td><code>$1</code>, <code>$2</code>...</td>
+<td>Individual fields</td>
+</tr>
+<tr>
+<td><code>FS</code></td>
+<td>Field Separator</td>
+</tr>
+<tr>
+<td><code>RS</code></td>
+<td>Record Separator</td>
+</tr>
+<tr>
+<td><code>OFS</code></td>
+<td>Output Field Separator</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Print line numbers</span>
+awk<span class="w"> </span><span class="s1">&#39;{print NR, $0}&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Print last field of each line</span>
+awk<span class="w"> </span><span class="s1">&#39;{print $NF}&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Print number of fields per line</span>
+awk<span class="w"> </span><span class="s1">&#39;{print NF, &quot;fields:&quot;, $0}&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Print lines with more than 5 fields</span>
+awk<span class="w"> </span><span class="s1">&#39;NF &gt; 5&#39;</span><span class="w"> </span>file.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="awk-begin-and-end">Awk BEGIN and END</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Print header and footer</span>
+awk<span class="w"> </span><span class="s1">&#39;BEGIN {print &quot;=== START ===&quot;} {print $0} END {print &quot;=== END ===&quot;}&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Calculate sum</span>
+awk<span class="w"> </span><span class="s1">&#39;{sum += $1} END {print &quot;Total:&quot;, sum}&#39;</span><span class="w"> </span>numbers.txt
+
+<span class="c1"># Calculate average</span>
+awk<span class="w"> </span><span class="s1">&#39;{sum += $1; count++} END {print &quot;Average:&quot;, sum/count}&#39;</span><span class="w"> </span>numbers.txt
+
+<span class="c1"># Count lines matching pattern</span>
+awk<span class="w"> </span><span class="s1">&#39;/error/ {count++} END {print count, &quot;errors&quot;}&#39;</span><span class="w"> </span>log.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="practical-awk-examples">Practical Awk Examples</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Sum a column (column 3)</span>
+awk<span class="w"> </span><span class="s1">&#39;{sum += $3} END {print sum}&#39;</span><span class="w"> </span>data.txt
+
+<span class="c1"># Find maximum value</span>
+awk<span class="w"> </span><span class="s1">&#39;BEGIN {max = 0} $3 &gt; max {max = $3} END {print max}&#39;</span><span class="w"> </span>data.txt
+
+<span class="c1"># Print lines longer than 80 characters</span>
+awk<span class="w"> </span><span class="s1">&#39;length($0) &gt; 80&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Format output nicely</span>
+awk<span class="w"> </span><span class="s1">&#39;{printf &quot;%-15s %10d\n&quot;, $1, $2}&#39;</span><span class="w"> </span>data.txt
+
+<span class="c1"># Swap first two fields</span>
+awk<span class="w"> </span><span class="s1">&#39;{temp = $1; $1 = $2; $2 = temp; print}&#39;</span><span class="w"> </span>data.txt
+
+<span class="c1"># Remove duplicate lines (like uniq but doesn&#39;t need sorted input)</span>
+awk<span class="w"> </span><span class="s1">&#39;!seen[$0]++&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Convert CSV to TSV</span>
+awk<span class="w"> </span>-F<span class="s1">&#39;,&#39;</span><span class="w"> </span><span class="s1">&#39;{OFS=&quot;\t&quot;; $1=$1; print}&#39;</span><span class="w"> </span>data.csv
+</code></pre></div></td></tr></table></div>
+<h4 id="diagram-awk-field-processing">Diagram: Awk Field Processing</h4>
+<details>
+<summary>Understanding Awk Fields</summary>
+<p>Type: microsim</p>
+<p>Bloom Taxonomy: Apply, Analyze
+Learning Objective: Allow students to visualize how awk splits lines into fields and select specific columns.</p>
+<p>Canvas layout (responsive, ~750px max width):
+- Top section (80px): Input line with field separators marked
+- Middle section (200px): Field boxes showing $1, $2, $3, etc.
+- Bottom section (100px): Output based on selected fields</p>
+<p>Visual elements:
+- Input line: "john:x:1000:1000:John Doe:/home/john:/bin/bash"
+- Field separator dropdown: (space, :, ,, tab)
+- Field boxes highlighting each parsed field
+- Output preview</p>
+<p>Interactive controls:
+- Dropdown: Select field separator
+- Checkboxes: Select which fields to output ($1, $2, etc.)
+- Text input: Custom awk command
+- Sample input selector: (passwd file, CSV data, ps output)</p>
+<p>Sample data options:
+1. /etc/passwd format: john:x:1000:1000:John Doe:/home/john:/bin/bash
+2. CSV format: Alice,Engineering,75000,Seattle
+3. ps aux format: root 1 0.0 0.1 169836 13460 ? Ss Dec01 0:11 /sbin/init</p>
+<p>Behavior:
+- Changing separator re-parses the line
+- Selected fields appear in output
+- Show NF value
+- Show generated awk command</p>
+<p>Color scheme:
+- $1: Red
+- $2: Orange
+- $3: Yellow
+- $4: Green
+- $5: Blue
+- $6: Purple
+- Field separator: Gray highlighted</p>
+<p>Implementation: p5.js</p>
+</details>
+<h2 id="putting-it-all-together-text-processing-workflows">Putting It All Together: Text Processing Workflows</h2>
+<p>Let's combine everything to solve real problems!</p>
+<h3 id="workflow-1-log-analysis">Workflow 1: Log Analysis</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Find error patterns and count occurrences</span>
+cat<span class="w"> </span>/var/log/syslog<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>grep<span class="w"> </span>-i<span class="w"> </span>error<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>awk<span class="w"> </span><span class="s1">&#39;{print $5}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-rn<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-10
+</code></pre></div></td></tr></table></div>
+<h3 id="workflow-2-csv-processing">Workflow 2: CSV Processing</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Process CSV: extract columns, filter, summarize</span>
+cat<span class="w"> </span>sales.csv<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>awk<span class="w"> </span>-F<span class="s1">&#39;,&#39;</span><span class="w"> </span><span class="s1">&#39;NR &gt; 1 {print $2, $4}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>grep<span class="w"> </span><span class="s2">&quot;Electronics&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>awk<span class="w"> </span><span class="s1">&#39;{sum += $2} END {print &quot;Electronics total:&quot;, sum}&#39;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="workflow-3-text-cleanup">Workflow 3: Text Cleanup</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Clean up messy text file</span>
+cat<span class="w"> </span>messy.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>tr<span class="w"> </span>-s<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>sed<span class="w"> </span><span class="s1">&#39;s/^[[:space:]]*//&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>sed<span class="w"> </span><span class="s1">&#39;s/[[:space:]]*$//&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>sed<span class="w"> </span><span class="s1">&#39;/^$/d&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>clean.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="workflow-4-system-information">Workflow 4: System Information</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Find top 10 largest files</span>
+find<span class="w"> </span>/home<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>ls<span class="w"> </span>-s<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>sort<span class="w"> </span>-rn<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>head<span class="w"> </span>-10
+
+<span class="c1"># Find users with most processes</span>
+ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>awk<span class="w"> </span><span class="s1">&#39;NR &gt; 1 {print $1}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-rn
+</code></pre></div></td></tr></table></div>
+<h2 id="sed-and-awk-cheat-sheet">Sed and Awk Cheat Sheet</h2>
+<h3 id="sed-quick-reference">Sed Quick Reference</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Substitution</span>
+sed<span class="w"> </span><span class="s1">&#39;s/old/new/&#39;</span><span class="w">          </span><span class="c1"># First occurrence</span>
+sed<span class="w"> </span><span class="s1">&#39;s/old/new/g&#39;</span><span class="w">         </span><span class="c1"># All occurrences</span>
+sed<span class="w"> </span><span class="s1">&#39;s/old/new/gi&#39;</span><span class="w">        </span><span class="c1"># All, case insensitive</span>
+
+<span class="c1"># Line operations</span>
+sed<span class="w"> </span><span class="s1">&#39;5d&#39;</span><span class="w">                  </span><span class="c1"># Delete line 5</span>
+sed<span class="w"> </span><span class="s1">&#39;/pattern/d&#39;</span><span class="w">          </span><span class="c1"># Delete matching lines</span>
+sed<span class="w"> </span><span class="s1">&#39;/^$/d&#39;</span><span class="w">               </span><span class="c1"># Delete empty lines</span>
+sed<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;/pattern/p&#39;</span><span class="w">       </span><span class="c1"># Print matching lines</span>
+
+<span class="c1"># In-place editing</span>
+sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/old/new/g&#39;</span><span class="w"> </span>file
+sed<span class="w"> </span>-i.bak<span class="w"> </span><span class="s1">&#39;s/old/new/g&#39;</span><span class="w"> </span>file<span class="w">  </span><span class="c1"># With backup</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="awk-quick-reference">Awk Quick Reference</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Print fields</span>
+awk<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="w">          </span><span class="c1"># First field</span>
+awk<span class="w"> </span><span class="s1">&#39;{print $1, $3}&#39;</span><span class="w">      </span><span class="c1"># Fields 1 and 3</span>
+awk<span class="w"> </span><span class="s1">&#39;{print $NF}&#39;</span><span class="w">         </span><span class="c1"># Last field</span>
+
+<span class="c1"># Field separator</span>
+awk<span class="w"> </span>-F<span class="s1">&#39;:&#39;</span><span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="w">    </span><span class="c1"># Colon separated</span>
+awk<span class="w"> </span>-F<span class="s1">&#39;,&#39;</span><span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="w">    </span><span class="c1"># Comma separated</span>
+
+<span class="c1"># Patterns</span>
+awk<span class="w"> </span><span class="s1">&#39;/error/&#39;</span><span class="w">             </span><span class="c1"># Lines matching &quot;error&quot;</span>
+awk<span class="w"> </span><span class="s1">&#39;$3 &gt; 100&#39;</span><span class="w">            </span><span class="c1"># Field 3 greater than 100</span>
+awk<span class="w"> </span><span class="s1">&#39;NR &gt; 1&#39;</span><span class="w">              </span><span class="c1"># Skip first line (header)</span>
+
+<span class="c1"># Math</span>
+awk<span class="w"> </span><span class="s1">&#39;{sum += $1} END {print sum}&#39;</span><span class="w">    </span><span class="c1"># Sum column</span>
+awk<span class="w"> </span><span class="s1">&#39;END {print NR}&#39;</span><span class="w">                 </span><span class="c1"># Count lines</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>You've learned the power of UNIX text processing!</p>
+<ul>
+<li><strong>Text streams</strong>: stdin, stdout, stderr—the three channels of data flow</li>
+<li><strong>Redirection</strong>: <code>&gt;</code>, <code>&gt;&gt;</code>, <code>&lt;</code>, <code>2&gt;</code> control where data goes</li>
+<li><strong>Pipes</strong>: <code>|</code> connects commands into powerful pipelines</li>
+<li><strong>Sed</strong>: Stream editor for find/replace and text transformation</li>
+<li><strong>Awk</strong>: Field-based processing with pattern matching</li>
+<li><strong>Tr</strong>: Character translation and deletion</li>
+<li><strong>Xargs</strong>: Convert input to command arguments</li>
+<li><strong>Tee</strong>: Split output to file and screen</li>
+<li><strong>Rev/Fold</strong>: Reverse and wrap text</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">You're a Text Processing Master!</p>
+<p>These tools embody the UNIX philosophy: small, focused programs combined to do big things. Practice building pipelines, and you'll find elegant solutions to problems that would take dozens of lines of code in other languages!</p>
+</div>
+<h2 id="whats-next">What's Next?</h2>
+<p>Now that you can process text like a pro, it's time to learn about <strong>text editors</strong>! Next chapter covers nano and vim—the editors you'll use to write scripts, edit configs, and work on code.</p>
+<hr />
+<details class="question">
+<summary>Quick Quiz: Sed, Awk, and Pipes</summary>
+<ol>
+<li>What does <code>&gt;</code> do differently than <code>&gt;&gt;</code>?</li>
+<li>What stream number is stderr?</li>
+<li>How do you print the third field in awk?</li>
+<li>What does <code>sed 's/old/new/g'</code> do?</li>
+<li>What does the <code>tee</code> command do?</li>
+<li>How do you make sed edit a file in place?</li>
+</ol>
+</details>
+<details class="note">
+<summary>Quiz Answers</summary>
+<ol>
+<li><code>&gt;</code> overwrites the file; <code>&gt;&gt;</code> appends to the file</li>
+<li>stderr is stream 2</li>
+<li><code>awk '{print $3}'</code> prints the third field</li>
+<li>Replaces ALL occurrences of "old" with "new" on each line (g = global)</li>
+<li>tee sends output to BOTH a file AND stdout (continues the pipeline)</li>
+<li><code>sed -i 's/old/new/g' file</code> - the -i flag edits in place</li>
+</ol>
+</details>
 
 
 
@@ -1584,7 +3846,7 @@
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../js/extra.css"></script>
+        <script src="../../js/extra.js"></script>
       
     
   </body>

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+        <meta name="description" content="Master terminal-based text editing with beginner-friendly Nano and powerful Vim">
       
       
         <meta name="author" content="Dan McCreary">
@@ -52,7 +52,7 @@
       
     
     
-      <link rel="stylesheet" href="../../styles/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -75,7 +75,7 @@
       
         <meta  property="og:title"  content="Text Editors - Nano and Vim - Learning Linux" >
       
-        <meta  property="og:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  property="og:description"  content="Master terminal-based text editing with beginner-friendly Nano and powerful Vim" >
       
         <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/10-text-editors/index.png" >
       
@@ -91,7 +91,7 @@
       
         <meta  name="twitter:title"  content="Text Editors - Nano and Vim - Learning Linux" >
       
-        <meta  name="twitter:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  name="twitter:description"  content="Master terminal-based text editing with beginner-friendly Nano and powerful Vim" >
       
         <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/10-text-editors/index.png" >
       
@@ -214,7 +214,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -259,7 +259,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -439,8 +439,6 @@
           
         
       
-        
-          
         
       
         
@@ -759,6 +757,495 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-edit-in-the-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Edit in the Terminal?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-nano-editor-your-gentle-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Nano Editor: Your Gentle Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Nano Editor: Your Gentle Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opening-files-with-nano" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opening Files with Nano
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nano-shortcuts-the-bottom-bar-is-your-friend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nano Shortcuts: The Bottom Bar Is Your Friend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-nano-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Nano Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nano-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nano Navigation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nano-search-and-replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nano Search and Replace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-nano" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Nano
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-vi-editor-the-grandfather" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Vi Editor: The Grandfather
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-vim-editor-vi-improved" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Vim Editor: Vi Improved
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Vim Editor: Vi Improved">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-vim-learning-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Vim Learning Curve
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Vim Learning Curve">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-the-vim-learning-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: The Vim Learning Curve
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim-modes-the-key-to-understanding-vim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim Modes: The Key to Understanding Vim
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vim Modes: The Key to Understanding Vim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-three-main-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three Main Modes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vim-insert-mode-time-to-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim Insert Mode: Time to Type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vim-command-mode-the-control-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim Command Mode: The Control Center
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vim Command Mode: The Control Center">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vim-navigation-moving-like-a-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim Navigation: Moving Like a Pro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram-vim-navigation-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Vim Navigation Keys
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vim-visual-mode-selecting-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim Visual Mode: Selecting Text
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#essential-editing-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Editing Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim-save-and-quit-the-famous-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim Save and Quit: The Famous Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim-search-replace-find-and-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim Search Replace: Find and Transform
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vim Search Replace: Find and Transform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#searching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Searching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-and-replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search and Replace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vimrc-configuration-make-vim-your-own" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vimrc Configuration: Make Vim Your Own
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vimrc Configuration: Make Vim Your Own">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vimrc-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vimrc Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-great-editor-war-vi-vs-emacs" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Great Editor War: Vi vs Emacs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Great Editor War: Vi vs Emacs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-combatants" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Combatants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-arguments-all-in-good-fun" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Arguments (All In Good Fun)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-flame-wars" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Flame Wars
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-verdict-vi-won-sort-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Verdict: Vi Won (Sort Of)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#but-emacs-is-still-amazing" class="md-nav__link">
+    <span class="md-ellipsis">
+      But Emacs Is Still Amazing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modern-peace-treaty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modern Peace Treaty
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editor-selection-choosing-your-weapon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editor Selection: Choosing Your Weapon
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Editor Selection: Choosing Your Weapon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choose-nano-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choose Nano If...
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choose-vim-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choose Vim If...
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-middle-path-vim-with-training-wheels" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Middle Path: Vim with Training Wheels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparison Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microsim-interactive-vim-mode-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroSim: Interactive Vim Mode Practice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim-commands-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim Commands Cheat Sheet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vim Commands Cheat Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mode-switching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mode Switching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#savequit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Save/Quit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1048,7 +1535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../24-customization/" class="md-nav__link">
+      <a href="../24-customization/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,6 +1660,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1186,7 +1681,7 @@
         
   
   
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1424,6 +1919,495 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-edit-in-the-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Edit in the Terminal?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-nano-editor-your-gentle-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Nano Editor: Your Gentle Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Nano Editor: Your Gentle Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opening-files-with-nano" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opening Files with Nano
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nano-shortcuts-the-bottom-bar-is-your-friend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nano Shortcuts: The Bottom Bar Is Your Friend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-nano-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Nano Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nano-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nano Navigation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nano-search-and-replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nano Search and Replace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-nano" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Nano
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-vi-editor-the-grandfather" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Vi Editor: The Grandfather
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-vim-editor-vi-improved" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Vim Editor: Vi Improved
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Vim Editor: Vi Improved">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-vim-learning-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Vim Learning Curve
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Vim Learning Curve">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-the-vim-learning-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: The Vim Learning Curve
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim-modes-the-key-to-understanding-vim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim Modes: The Key to Understanding Vim
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vim Modes: The Key to Understanding Vim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-three-main-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three Main Modes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vim-insert-mode-time-to-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim Insert Mode: Time to Type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vim-command-mode-the-control-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim Command Mode: The Control Center
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vim Command Mode: The Control Center">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vim-navigation-moving-like-a-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim Navigation: Moving Like a Pro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram-vim-navigation-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Vim Navigation Keys
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vim-visual-mode-selecting-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim Visual Mode: Selecting Text
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#essential-editing-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Editing Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim-save-and-quit-the-famous-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim Save and Quit: The Famous Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim-search-replace-find-and-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim Search Replace: Find and Transform
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vim Search Replace: Find and Transform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#searching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Searching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-and-replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search and Replace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vimrc-configuration-make-vim-your-own" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vimrc Configuration: Make Vim Your Own
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vimrc Configuration: Make Vim Your Own">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vimrc-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vimrc Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-great-editor-war-vi-vs-emacs" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Great Editor War: Vi vs Emacs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Great Editor War: Vi vs Emacs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-combatants" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Combatants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-arguments-all-in-good-fun" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Arguments (All In Good Fun)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-flame-wars" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Flame Wars
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-verdict-vi-won-sort-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Verdict: Vi Won (Sort Of)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#but-emacs-is-still-amazing" class="md-nav__link">
+    <span class="md-ellipsis">
+      But Emacs Is Still Amazing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modern-peace-treaty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modern Peace Treaty
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editor-selection-choosing-your-weapon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editor Selection: Choosing Your Weapon
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Editor Selection: Choosing Your Weapon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choose-nano-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choose Nano If...
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choose-vim-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choose Vim If...
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-middle-path-vim-with-training-wheels" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Middle Path: Vim with Training Wheels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparison Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microsim-interactive-vim-mode-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroSim: Interactive Vim Mode Practice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim-commands-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim Commands Cheat Sheet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vim Commands Cheat Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mode-switching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mode Switching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#savequit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Save/Quit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1439,7 +2423,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/learniing-linux/blob/master/docs/chapters/10-text-editors/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/learning-linux/blob/master/docs/chapters/10-text-editors/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1476,7 +2460,1221 @@
 <li><a href="../05-file-operations/">Chapter 5: File Operations and Manipulation</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<h2 id="why-edit-in-the-terminal">Why Edit in the Terminal?</h2>
+<p>"Wait, can't I just use VS Code or Notepad?" Great question! You absolutely can—but here's the thing: sometimes you're logged into a remote server with no graphical interface. Sometimes you need to quickly edit a config file while troubleshooting. Sometimes you just want to feel like a hacker from the movies (no judgment!).</p>
+<p><strong>Text editors</strong> that run in the terminal are essential tools for any Linux user. They work everywhere, even on minimal systems, and once you master them, you'll find yourself editing files faster than you ever thought possible.</p>
+<p>We'll cover two editors:</p>
+<ul>
+<li><strong>Nano</strong>: The friendly one. Perfect for beginners.</li>
+<li><strong>Vim</strong>: The powerful one. Legendary among developers.</li>
+</ul>
+<p>By the end of this chapter, you'll never be stuck unable to edit a file again!</p>
+<h2 id="the-nano-editor-your-gentle-introduction">The Nano Editor: Your Gentle Introduction</h2>
+<p>The <strong>Nano editor</strong> is like the training wheels of terminal text editors—and I mean that in the best way! It shows you exactly what keys to press right on the screen, so you're never lost.</p>
+<h3 id="opening-files-with-nano">Opening Files with Nano</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Open an existing file</span>
+nano<span class="w"> </span>myfile.txt
+
+<span class="c1"># Create a new file (just open a name that doesn&#39;t exist)</span>
+nano<span class="w"> </span>newfile.txt
+
+<span class="c1"># Open file at a specific line number</span>
+nano<span class="w"> </span>+25<span class="w"> </span>myfile.txt
+
+<span class="c1"># Open in read-only mode</span>
+nano<span class="w"> </span>-v<span class="w"> </span>myfile.txt
+</code></pre></div></td></tr></table></div>
+<p>When nano opens, you'll see:</p>
+<ul>
+<li>Your file content in the main area</li>
+<li>A title bar at the top (filename, modified status)</li>
+<li>A help bar at the bottom with <strong>Nano shortcuts</strong></li>
+</ul>
+<h3 id="nano-shortcuts-the-bottom-bar-is-your-friend">Nano Shortcuts: The Bottom Bar Is Your Friend</h3>
+<p>See those <code>^G Get Help</code> and <code>^X Exit</code> at the bottom? The <code>^</code> symbol means <strong>Ctrl</strong>. So <code>^X</code> means press <code>Ctrl+X</code>.</p>
+<p>Here are the essential <strong>Nano commands</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl+X</code></td>
+<td>Exit nano</td>
+</tr>
+<tr>
+<td><code>Ctrl+O</code></td>
+<td>Write Out (save file)</td>
+</tr>
+<tr>
+<td><code>Ctrl+S</code></td>
+<td>Save (same as Write Out)</td>
+</tr>
+<tr>
+<td><code>Ctrl+G</code></td>
+<td>Get Help</td>
+</tr>
+<tr>
+<td><code>Ctrl+K</code></td>
+<td>Cut current line</td>
+</tr>
+<tr>
+<td><code>Ctrl+U</code></td>
+<td>Uncut (paste)</td>
+</tr>
+<tr>
+<td><code>Ctrl+W</code></td>
+<td>Where Is (search)</td>
+</tr>
+<tr>
+<td><code>Ctrl+\</code></td>
+<td>Search and Replace</td>
+</tr>
+<tr>
+<td><code>Ctrl+C</code></td>
+<td>Show cursor position</td>
+</tr>
+<tr>
+<td><code>Ctrl+_</code></td>
+<td>Go to line number</td>
+</tr>
+</tbody>
+</table>
+<h3 id="basic-nano-workflow">Basic Nano Workflow</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># 1. Open a file</span>
+nano<span class="w"> </span>notes.txt
+
+<span class="c1"># 2. Type your content (just start typing!)</span>
+<span class="c1"># Hello, this is my file.</span>
+<span class="c1"># Nano is easy!</span>
+
+<span class="c1"># 3. Save the file: Ctrl+O, then Enter to confirm filename</span>
+
+<span class="c1"># 4. Exit: Ctrl+X</span>
+</code></pre></div></td></tr></table></div>
+<p>If you try to exit without saving, nano politely asks: "Save modified buffer?" Press <code>Y</code> for yes, <code>N</code> for no, or <code>Ctrl+C</code> to cancel.</p>
+<h3 id="nano-navigation">Nano Navigation</h3>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl+A</code></td>
+<td>Go to beginning of line</td>
+</tr>
+<tr>
+<td><code>Ctrl+E</code></td>
+<td>Go to end of line</td>
+</tr>
+<tr>
+<td><code>Ctrl+Y</code></td>
+<td>Page up</td>
+</tr>
+<tr>
+<td><code>Ctrl+V</code></td>
+<td>Page down</td>
+</tr>
+<tr>
+<td><code>Ctrl+_</code></td>
+<td>Go to specific line</td>
+</tr>
+<tr>
+<td><code>Alt+\</code></td>
+<td>Go to beginning of file</td>
+</tr>
+<tr>
+<td><code>Alt+/</code></td>
+<td>Go to end of file</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nano-search-and-replace">Nano Search and Replace</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Search: Ctrl+W</span>
+<span class="c1"># Type your search term, press Enter</span>
+<span class="c1"># Press Ctrl+W again to find next match</span>
+
+<span class="c1"># Search and Replace: Ctrl+\</span>
+<span class="c1"># Enter search term, press Enter</span>
+<span class="c1"># Enter replacement, press Enter</span>
+<span class="c1"># Y = replace this one, N = skip, A = replace all</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Nano Config Files</p>
+<p>Nano can be customized through <code>~/.nanorc</code>. You can enable syntax highlighting, line numbers, auto-indentation, and more:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># ~/.nanorc</span>
+<span class="nb">set</span><span class="w"> </span>linenumbers
+<span class="nb">set</span><span class="w"> </span>autoindent
+<span class="nb">set</span><span class="w"> </span>tabsize<span class="w"> </span><span class="m">4</span>
+include<span class="w"> </span>/usr/share/nano/*.nanorc<span class="w">  </span><span class="c1"># Syntax highlighting</span>
+</code></pre></div></td></tr></table></div></p>
+</div>
+<h3 id="when-to-use-nano">When to Use Nano</h3>
+<p>Nano is perfect for:</p>
+<ul>
+<li>Quick edits to config files</li>
+<li>Beginners learning terminal editing</li>
+<li>Situations where you need something "just works"</li>
+<li>When you don't want to remember complex commands</li>
+</ul>
+<p>But once you get comfortable with the terminal, you might want something more powerful...</p>
+<h2 id="the-vi-editor-the-grandfather">The Vi Editor: The Grandfather</h2>
+<p>The <strong>Vi editor</strong> is the ancestor of Vim. Created in 1976, it's been around longer than most programming languages! Vi (pronounced "vee-eye") is available on virtually every Unix and Linux system.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Open vi</span>
+vi<span class="w"> </span>myfile.txt
+</code></pre></div></td></tr></table></div>
+<p>Vi is minimal and can feel strange at first because it's a <strong>modal editor</strong>—more on that soon. Most modern systems install Vim instead of pure vi, but it's good to know vi exists as a fallback.</p>
+<h2 id="the-vim-editor-vi-improved">The Vim Editor: Vi Improved</h2>
+<p>The <strong>Vim editor</strong> (Vi IMproved) takes vi and supercharges it. Vim has been called "the programmer's editor" and for good reason—once mastered, it makes you incredibly productive.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Open vim</span>
+vim<span class="w"> </span>myfile.txt
+
+<span class="c1"># Open multiple files</span>
+vim<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
+
+<span class="c1"># Open in read-only mode</span>
+vim<span class="w"> </span>-R<span class="w"> </span>myfile.txt
+
+<span class="c1"># Open at specific line</span>
+vim<span class="w"> </span>+50<span class="w"> </span>myfile.txt
+
+<span class="c1"># Open and run a command</span>
+vim<span class="w"> </span>+/search_term<span class="w"> </span>myfile.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="the-vim-learning-curve">The Vim Learning Curve</h3>
+<p>Here's the honest truth: Vim has a reputation for being hard to learn. There's even a famous joke:</p>
+<blockquote>
+<p>"How do you generate a random string? Put a first-year CS student in front of Vim and tell them to exit."</p>
+</blockquote>
+<p>But here's the secret: Vim isn't hard, it's just <em>different</em>. Once you understand <strong>Vim modes</strong>, everything clicks.</p>
+<h4 id="diagram-the-vim-learning-curve">Diagram: The Vim Learning Curve</h4>
+<details>
+<summary>Why Vim's Learning Curve is Worth It</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Understand
+Learning Objective: Visualize how the initial time investment in learning Vim pays off with dramatically increased productivity.</p>
+<p>Layout: Graph showing productivity over time</p>
+<p>Visual elements:
+- X-axis: Time (days/weeks)
+- Y-axis: Productivity
+- Line 1 (blue): "Simple editor" - starts high, stays flat
+- Line 2 (green): "Vim" - starts low, dips lower, then climbs dramatically upward
+- Intersection point: "The breakthrough"
+- Area between lines after intersection: "Your productivity gains"</p>
+<p>Key annotations:
+- Day 1: "Why can't I exit?!"
+- Week 1: "Okay, this is starting to make sense"
+- Week 2: "Wait, I can do THAT?"
+- Month 1: "I never want to go back"
+- Month 3: "I edit faster than I think"</p>
+<p>Color scheme:
+- Simple editor line: Blue
+- Vim learning curve: Green
+- Frustration zone: Red shaded area
+- Productivity zone: Green shaded area</p>
+<p>Implementation: p5.js</p>
+</details>
+<h2 id="vim-modes-the-key-to-understanding-vim">Vim Modes: The Key to Understanding Vim</h2>
+<p>Unlike most editors where you just start typing, Vim uses <strong>Vim modes</strong>. Think of modes like different "states" the editor can be in. Each mode has a different purpose.</p>
+<h3 id="the-three-main-modes">The Three Main Modes</h3>
+<ol>
+<li><strong>Normal Mode</strong> (Command Mode): For navigation and commands</li>
+<li><strong>Insert Mode</strong>: For typing text</li>
+<li><strong>Visual Mode</strong>: For selecting text</li>
+</ol>
+<p>When you open Vim, you're in <strong>Normal Mode</strong> (also called <strong>Vim Command Mode</strong>). This is where beginners get confused—they try to type and weird things happen!</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Purpose</th>
+<th>How to Enter</th>
+<th>How to Exit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal</td>
+<td>Navigate, commands</td>
+<td><code>Esc</code> from any mode</td>
+<td>(default mode)</td>
+</tr>
+<tr>
+<td>Insert</td>
+<td>Type text</td>
+<td><code>i</code>, <code>a</code>, <code>o</code>, etc.</td>
+<td><code>Esc</code></td>
+</tr>
+<tr>
+<td>Visual</td>
+<td>Select text</td>
+<td><code>v</code>, <code>V</code>, <code>Ctrl+v</code></td>
+<td><code>Esc</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">The Golden Rule</p>
+<p>When in doubt, press <code>Esc</code>. It always returns you to Normal mode!</p>
+</div>
+<h3 id="vim-insert-mode-time-to-type">Vim Insert Mode: Time to Type</h3>
+<p><strong>Vim Insert Mode</strong> is where you actually type text, like a normal editor. There are several ways to enter Insert mode:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>i</code></td>
+<td>Insert before cursor</td>
+</tr>
+<tr>
+<td><code>I</code></td>
+<td>Insert at beginning of line</td>
+</tr>
+<tr>
+<td><code>a</code></td>
+<td>Append after cursor</td>
+</tr>
+<tr>
+<td><code>A</code></td>
+<td>Append at end of line</td>
+</tr>
+<tr>
+<td><code>o</code></td>
+<td>Open new line below</td>
+</tr>
+<tr>
+<td><code>O</code></td>
+<td>Open new line above</td>
+</tr>
+<tr>
+<td><code>s</code></td>
+<td>Substitute character (delete char, enter insert)</td>
+</tr>
+<tr>
+<td><code>S</code></td>
+<td>Substitute line (delete line, enter insert)</td>
+</tr>
+</tbody>
+</table>
+<p>When you're in Insert mode, you'll see <code>-- INSERT --</code> at the bottom of the screen.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Example workflow:</span>
+<span class="c1"># 1. Open file: vim test.txt</span>
+<span class="c1"># 2. Press &#39;i&#39; to enter Insert mode</span>
+<span class="c1"># 3. Type: Hello, World!</span>
+<span class="c1"># 4. Press Esc to return to Normal mode</span>
+<span class="c1"># 5. Type :wq to save and quit</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="vim-command-mode-the-control-center">Vim Command Mode: The Control Center</h3>
+<p><strong>Vim Command Mode</strong> (Normal Mode) is where you navigate and execute commands. Here's why it's powerful: you can edit text without moving your hands from the home row!</p>
+<h4 id="vim-navigation-moving-like-a-pro">Vim Navigation: Moving Like a Pro</h4>
+<p>Forget the arrow keys! <strong>Vim navigation</strong> uses letter keys:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Movement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>h</code></td>
+<td>Left</td>
+</tr>
+<tr>
+<td><code>j</code></td>
+<td>Down</td>
+</tr>
+<tr>
+<td><code>k</code></td>
+<td>Up</td>
+</tr>
+<tr>
+<td><code>l</code></td>
+<td>Right</td>
+</tr>
+</tbody>
+</table>
+<p>"But why h, j, k, l?" On old terminals, these keys literally had arrows on them. Now it's a tradition—and it keeps your hands on the home row.</p>
+<p>More navigation commands:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Movement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>w</code></td>
+<td>Next word</td>
+</tr>
+<tr>
+<td><code>b</code></td>
+<td>Back a word</td>
+</tr>
+<tr>
+<td><code>e</code></td>
+<td>End of word</td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td>Beginning of line</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>End of line</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>First non-blank character</td>
+</tr>
+<tr>
+<td><code>gg</code></td>
+<td>Go to first line</td>
+</tr>
+<tr>
+<td><code>G</code></td>
+<td>Go to last line</td>
+</tr>
+<tr>
+<td><code>5G</code></td>
+<td>Go to line 5</td>
+</tr>
+<tr>
+<td><code>Ctrl+f</code></td>
+<td>Page forward</td>
+</tr>
+<tr>
+<td><code>Ctrl+b</code></td>
+<td>Page backward</td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>Jump to matching bracket</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-vim-navigation-keys">Diagram: Vim Navigation Keys</h4>
+<details>
+<summary>Understanding hjkl Navigation</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Remember, Apply
+Learning Objective: Visualize the hjkl key positions and their movement directions to build muscle memory.</p>
+<p>Layout: Keyboard-style display with arrow indicators</p>
+<p>Visual elements:
+- Four keys arranged like on keyboard: h j k l
+- Arrows showing direction of movement:
+  - h: Left arrow
+  - j: Down arrow
+  - k: Up arrow
+  - l: Right arrow
+- Hand position overlay showing fingers on home row
+- Animation: cursor moving on sample text as keys are "pressed"</p>
+<p>Key teaching points:
+- j looks like a down arrow (hook goes down)
+- k is for "kick up"
+- h is leftmost, l is rightmost
+- Fingers stay on home row</p>
+<p>Interactive features:
+- Click/press keys to see cursor move
+- Sample text area showing movement
+- Speed challenge mode</p>
+<p>Color scheme:
+- Keys: Gray with white letters
+- Active key: Blue highlight
+- Direction arrows: Green
+- Cursor: Orange</p>
+<p>Implementation: p5.js</p>
+</details>
+<h3 id="vim-visual-mode-selecting-text">Vim Visual Mode: Selecting Text</h3>
+<p><strong>Vim Visual Mode</strong> lets you select text for copying, deleting, or changing:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>v</code></td>
+<td>Character-wise visual</td>
+</tr>
+<tr>
+<td><code>V</code></td>
+<td>Line-wise visual</td>
+</tr>
+<tr>
+<td><code>Ctrl+v</code></td>
+<td>Block visual (columns!)</td>
+</tr>
+</tbody>
+</table>
+<p>Once in visual mode:</p>
+<ul>
+<li>Use navigation keys to extend selection</li>
+<li><code>y</code> to yank (copy)</li>
+<li><code>d</code> to delete</li>
+<li><code>c</code> to change (delete and enter Insert)</li>
+<li><code>&gt;</code> to indent</li>
+<li><code>&lt;</code> to unindent</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Select and delete three lines:</span>
+<span class="c1"># 1. Press V to start visual line mode</span>
+<span class="c1"># 2. Press jj to select two more lines down</span>
+<span class="c1"># 3. Press d to delete</span>
+</code></pre></div></td></tr></table></div>
+<p>Block visual mode (<code>Ctrl+v</code>) is magical—you can select and edit columns of text!</p>
+<h3 id="essential-editing-commands">Essential Editing Commands</h3>
+<p>In Normal mode, you have powerful editing commands:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x</code></td>
+<td>Delete character under cursor</td>
+</tr>
+<tr>
+<td><code>dd</code></td>
+<td>Delete entire line</td>
+</tr>
+<tr>
+<td><code>dw</code></td>
+<td>Delete word</td>
+</tr>
+<tr>
+<td><code>d$</code></td>
+<td>Delete to end of line</td>
+</tr>
+<tr>
+<td><code>yy</code></td>
+<td>Yank (copy) line</td>
+</tr>
+<tr>
+<td><code>yw</code></td>
+<td>Yank word</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td>Paste after cursor</td>
+</tr>
+<tr>
+<td><code>P</code></td>
+<td>Paste before cursor</td>
+</tr>
+<tr>
+<td><code>u</code></td>
+<td>Undo</td>
+</tr>
+<tr>
+<td><code>Ctrl+r</code></td>
+<td>Redo</td>
+</tr>
+<tr>
+<td><code>.</code></td>
+<td>Repeat last command</td>
+</tr>
+</tbody>
+</table>
+<p>The commands are <strong>composable</strong>! You can combine numbers and motions:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Delete 5 lines</span>
+5dd
+
+<span class="c1"># Yank 3 words</span>
+3yw
+
+<span class="c1"># Delete until end of line</span>
+d$
+
+<span class="c1"># Change inner word (delete word, enter insert mode)</span>
+ciw
+
+<span class="c1"># Delete everything inside parentheses</span>
+di<span class="o">(</span>
+
+<span class="c1"># Change everything inside quotes</span>
+ci<span class="s2">&quot;</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">The Vim Grammar</p>
+<p>Vim commands follow a grammar: <code>[count][operator][motion]</code></p>
+<ul>
+<li><code>d</code> = delete, <code>y</code> = yank, <code>c</code> = change</li>
+<li><code>w</code> = word, <code>$</code> = end of line, <code>gg</code> = file start</li>
+<li><code>3dw</code> = delete 3 words</li>
+<li><code>d5j</code> = delete 5 lines down</li>
+</ul>
+</div>
+<h2 id="vim-save-and-quit-the-famous-commands">Vim Save and Quit: The Famous Commands</h2>
+<p><strong>Vim save and quit</strong> commands all start with <code>:</code> (colon), which opens the command line at the bottom:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:w</code></td>
+<td>Write (save) file</td>
+</tr>
+<tr>
+<td><code>:q</code></td>
+<td>Quit (fails if unsaved changes)</td>
+</tr>
+<tr>
+<td><code>:wq</code></td>
+<td>Write and quit</td>
+</tr>
+<tr>
+<td><code>:x</code></td>
+<td>Write and quit (same as :wq)</td>
+</tr>
+<tr>
+<td><code>ZZ</code></td>
+<td>Write and quit (Normal mode)</td>
+</tr>
+<tr>
+<td><code>:q!</code></td>
+<td>Quit without saving (force)</td>
+</tr>
+<tr>
+<td><code>:wq!</code></td>
+<td>Write and quit (force)</td>
+</tr>
+<tr>
+<td><code>:w filename</code></td>
+<td>Save as new filename</td>
+</tr>
+<tr>
+<td><code>:e filename</code></td>
+<td>Edit a different file</td>
+</tr>
+</tbody>
+</table>
+<p>So when people joke about not being able to exit Vim:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># To exit Vim:</span>
+<span class="c1"># 1. Press Esc (make sure you&#39;re in Normal mode)</span>
+<span class="c1"># 2. Type :q and press Enter</span>
+<span class="c1"># If you have unsaved changes: :q! to abandon them, :wq to save them</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="vim-search-replace-find-and-transform">Vim Search Replace: Find and Transform</h2>
+<p><strong>Vim search replace</strong> is powerful and uses regular expressions!</p>
+<h3 id="searching">Searching</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/pattern</code></td>
+<td>Search forward</td>
+</tr>
+<tr>
+<td><code>?pattern</code></td>
+<td>Search backward</td>
+</tr>
+<tr>
+<td><code>n</code></td>
+<td>Next match</td>
+</tr>
+<tr>
+<td><code>N</code></td>
+<td>Previous match</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Search word under cursor (forward)</td>
+</tr>
+<tr>
+<td><code>#</code></td>
+<td>Search word under cursor (backward)</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Search for &quot;error&quot;</span>
+/error
+<span class="c1"># Press n for next, N for previous</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="search-and-replace">Search and Replace</h3>
+<p>The substitute command syntax: <code>:[range]s/old/new/[flags]</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Replace first occurrence on current line</span>
+:s/old/new/
+
+<span class="c1"># Replace all occurrences on current line</span>
+:s/old/new/g
+
+<span class="c1"># Replace all in entire file</span>
+:%s/old/new/g
+
+<span class="c1"># Replace with confirmation</span>
+:%s/old/new/gc
+
+<span class="c1"># Replace in lines 5-10</span>
+:5,10s/old/new/g
+
+<span class="c1"># Case insensitive</span>
+:%s/old/new/gi
+
+<span class="c1"># Replace in visual selection (select first, then :)</span>
+:<span class="s1">&#39;&lt;,&#39;</span>&gt;s/old/new/g
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">The % Symbol</p>
+<p>In Vim, <code>%</code> means "the entire file." So <code>:%s/old/new/g</code> means "substitute in the entire file."</p>
+</div>
+<h2 id="vimrc-configuration-make-vim-your-own">Vimrc Configuration: Make Vim Your Own</h2>
+<p>The <strong>vimrc configuration</strong> file (<code>~/.vimrc</code>) lets you customize Vim to your liking. Here's a sensible starter configuration:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c">&quot; ~/.vimrc - Vim configuration file</span>
+<span class="c">&quot; Comments start with double quotes</span>
+
+<span class="c">&quot; === Display Settings ===</span>
+<span class="k">set</span> <span class="k">number</span>              <span class="c">&quot; Show line numbers</span>
+<span class="k">set</span> <span class="nb">relativenumber</span>      <span class="c">&quot; Relative line numbers</span>
+<span class="k">set</span> <span class="nb">ruler</span>               <span class="c">&quot; Show cursor position</span>
+<span class="k">set</span> <span class="nb">showcmd</span>             <span class="c">&quot; Show partial commands</span>
+<span class="k">set</span> <span class="nb">showmode</span>            <span class="c">&quot; Show current mode</span>
+<span class="k">set</span> <span class="nb">cursorline</span>          <span class="c">&quot; Highlight current line</span>
+
+<span class="c">&quot; === Indentation ===</span>
+<span class="k">set</span> <span class="nb">tabstop</span><span class="p">=</span><span class="m">4</span>           <span class="c">&quot; Tab width</span>
+<span class="k">set</span> <span class="nb">shiftwidth</span><span class="p">=</span><span class="m">4</span>        <span class="c">&quot; Indent width</span>
+<span class="k">set</span> <span class="nb">expandtab</span>           <span class="c">&quot; Use spaces instead of tabs</span>
+<span class="k">set</span> <span class="nb">autoindent</span>          <span class="c">&quot; Auto-indent new lines</span>
+<span class="k">set</span> <span class="nb">smartindent</span>         <span class="c">&quot; Smart indentation</span>
+
+<span class="c">&quot; === Search ===</span>
+<span class="k">set</span> <span class="nb">hlsearch</span>            <span class="c">&quot; Highlight search matches</span>
+<span class="k">set</span> <span class="nb">incsearch</span>           <span class="c">&quot; Incremental search</span>
+<span class="k">set</span> <span class="nb">ignorecase</span>          <span class="c">&quot; Case insensitive search</span>
+<span class="k">set</span> <span class="nb">smartcase</span>           <span class="c">&quot; Case sensitive if uppercase used</span>
+
+<span class="c">&quot; === Editing ===</span>
+<span class="k">set</span> <span class="nb">backspace</span><span class="p">=</span>indent<span class="p">,</span><span class="nb">eol</span><span class="p">,</span><span class="k">start</span>  <span class="c">&quot; Sensible backspace</span>
+<span class="k">set</span> <span class="nb">clipboard</span><span class="p">=</span>unnamedplus       <span class="c">&quot; Use system clipboard</span>
+<span class="nb">syntax</span> <span class="k">on</span>               <span class="c">&quot; Syntax highlighting</span>
+
+<span class="c">&quot; === Usability ===</span>
+<span class="k">set</span> <span class="nb">mouse</span><span class="p">=</span><span class="k">a</span>             <span class="c">&quot; Enable mouse support</span>
+<span class="k">set</span> <span class="nb">wildmenu</span>            <span class="c">&quot; Command-line completion</span>
+<span class="k">set</span> <span class="nb">laststatus</span><span class="p">=</span><span class="m">2</span>        <span class="c">&quot; Always show status line</span>
+<span class="k">set</span> <span class="nb">scrolloff</span><span class="p">=</span><span class="m">5</span>         <span class="c">&quot; Keep 5 lines above/below cursor</span>
+
+<span class="c">&quot; === Custom Mappings ===</span>
+<span class="c">&quot; Use jk to exit insert mode (faster than reaching for Esc)</span>
+<span class="nb">inoremap</span> jk <span class="p">&lt;</span>Esc<span class="p">&gt;</span>
+
+<span class="c">&quot; Save with Ctrl+s</span>
+<span class="nb">nnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span>s<span class="p">&gt;</span> :<span class="k">w</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="nb">inoremap</span> <span class="p">&lt;</span>C<span class="p">-</span>s<span class="p">&gt;</span> <span class="p">&lt;</span>Esc<span class="p">&gt;</span>:<span class="k">w</span><span class="p">&lt;</span>CR<span class="p">&gt;</span><span class="k">a</span>
+
+<span class="c">&quot; Clear search highlighting with Escape</span>
+<span class="nb">nnoremap</span> <span class="p">&lt;</span>Esc<span class="p">&gt;</span> :<span class="k">nohlsearch</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p>To use this configuration:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create or edit your vimrc</span>
+vim<span class="w"> </span>~/.vimrc
+
+<span class="c1"># Paste the configuration</span>
+<span class="c1"># Save and quit: :wq</span>
+
+<span class="c1"># Vim will use these settings automatically next time</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="vimrc-tips">Vimrc Tips</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c">&quot; Split navigation made easier</span>
+<span class="nb">nnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">h</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">w</span><span class="p">&gt;</span><span class="k">h</span>
+<span class="nb">nnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">j</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">w</span><span class="p">&gt;</span><span class="k">j</span>
+<span class="nb">nnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">k</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">w</span><span class="p">&gt;</span><span class="k">k</span>
+<span class="nb">nnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">l</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">w</span><span class="p">&gt;</span><span class="k">l</span>
+
+<span class="c">&quot; Quickly edit vimrc</span>
+<span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span>ev :<span class="k">vsplit</span> $MYVIMRC<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">sv</span> :source $MYVIMRC<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+
+<span class="c">&quot; The leader key (default is \, many change to space)</span>
+<span class="k">let</span> mapleader <span class="p">=</span> <span class="s2">&quot; &quot;</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Learn Vimtutor First</p>
+<p>Vim comes with a built-in tutorial! Just type <code>vimtutor</code> in your terminal. It takes about 30 minutes and teaches all the basics interactively.</p>
+</div>
+<h2 id="the-great-editor-war-vi-vs-emacs">The Great Editor War: Vi vs Emacs</h2>
+<p>Ah, the Editor War. If you haven't heard of it, buckle up—this is one of the longest-running, nerdiest feuds in computing history. It makes Marvel vs DC look like a polite disagreement about tea preferences.</p>
+<h3 id="the-combatants">The Combatants</h3>
+<p>In the red corner: <strong>Vi</strong> (and later Vim), the modal editor we just learned about. Lightweight, fast, and available on every Unix system since the dawn of time.</p>
+<p>In the blue corner: <strong>Emacs</strong>, created by Richard Stallman (yes, THE Richard Stallman who started the Free Software movement). Emacs is... well, it's not just an editor. It's been described as:</p>
+<ul>
+<li>"A great operating system, lacking only a decent editor"</li>
+<li>"An editor that happens to contain a Lisp interpreter, mail client, news reader, web browser, calendar, psychiatrist (really!), and several games"</li>
+<li>"Eight Megabytes And Constantly Swapping" (a joke from when 8MB was a LOT of memory)</li>
+</ul>
+<h3 id="the-arguments-all-in-good-fun">The Arguments (All In Good Fun)</h3>
+<p><strong>Vi users said:</strong></p>
+<ul>
+<li>"My editor loads before you can blink!"</li>
+<li>"I can edit files over a 300 baud modem connection!"</li>
+<li>"Real programmers don't need a kitchen sink in their editor!"</li>
+<li>"Emacs users have Emacs pinky from all those Ctrl combinations!"</li>
+</ul>
+<p><strong>Emacs users said:</strong></p>
+<ul>
+<li>"I never have to leave my editor—ever. For anything."</li>
+<li>"Vi users are afraid of Lisp!"</li>
+<li>"Modal editing is like having to shift gears in a car. In 2024."</li>
+<li>"My editor can read email, browse the web, AND make coffee!" (That last one might be an exaggeration. Might.)</li>
+</ul>
+<h3 id="the-flame-wars">The Flame Wars</h3>
+<p>The Editor War produced some legendary internet flame wars in the 1980s and 1990s. Newsgroups burned with passionate debates. Friendships were tested. Marriages... were probably fine, actually, but the internet drama was REAL.</p>
+<p>There was even a mock religious war, with vi users forming the "Cult of vi" and Emacs users practicing the "Church of Emacs" (complete with St. IGNUcius, Stallman's alter ego, blessing computers).</p>
+<h3 id="the-verdict-vi-won-sort-of">The Verdict: Vi Won (Sort Of)</h3>
+<p>Here's the thing: <strong>Vi won the war</strong>, but not by defeating Emacs—by outlasting the debate. Here's why:</p>
+<ol>
+<li>
+<p><strong>Vi/Vim is everywhere</strong>: Every Linux system, every Mac, every BSD, every server you'll ever SSH into has vi. It's the cockroach of text editors (and I mean that lovingly).</p>
+</li>
+<li>
+<p><strong>The keybindings spread</strong>: Vim keybindings are now available in:</p>
+</li>
+<li>VS Code (Vim extension)</li>
+<li>JetBrains IDEs (IdeaVim)</li>
+<li>Sublime Text</li>
+<li>Atom (RIP)</li>
+<li>Web browsers (Vimium)</li>
+<li>
+<p>Even Emacs! (Evil mode—yes, really)</p>
+</li>
+<li>
+<p><strong>Modern AI tools use Vim</strong>: Tools like <strong>Claude Code</strong> let you jump straight into Vim with a single <code>Ctrl+G</code> command. When AI assistants default to Vim, you know which side history chose.</p>
+</li>
+<li>
+<p><strong>Muscle memory</strong>: Once you learn hjkl navigation, you want it everywhere. It's like learning to touch type—you can't go back.</p>
+</li>
+</ol>
+<h3 id="but-emacs-is-still-amazing">But Emacs Is Still Amazing</h3>
+<p>Let's be fair: Emacs is still beloved by many developers, especially in the Lisp, Clojure, and functional programming communities. Org-mode (Emacs's organizational system) is genuinely incredible. And Emacs users are some of the most passionate, dedicated programmers you'll ever meet.</p>
+<p>The real winner of the Editor War? <strong>Everyone who had fun arguing about it.</strong></p>
+<div class="admonition note">
+<p class="admonition-title">The True Lesson</p>
+<p>The Editor War taught us something important: programmers are REALLY passionate about their tools. And that's okay! Use what makes you productive. Just be prepared to defend your choice at parties. (Kidding. Mostly.)</p>
+</div>
+<h3 id="modern-peace-treaty">Modern Peace Treaty</h3>
+<p>These days, most developers just... use both? Or neither! VS Code has largely taken over as the "default" editor for many new programmers. But here's the secret: VS Code's Vim extension is one of its most popular extensions.</p>
+<p>So whether you're a vi purist, an Emacs evangelist, or a VS Code convert with Vim keybindings, we're all just trying to edit text efficiently. And now you know the history of why your senior developer gets a twinkle in their eye when someone mentions "the one true editor."</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code># The final word on the Editor War:
+$ vim                    # The victor
+$ emacs                  # The noble opponent
+$ nano                   # The pacifist who avoided the whole thing
+$ code --install-extension vscodevim.vim   # The compromise
+$ claude-code &amp;&amp; Ctrl+G  # The future
+</code></pre></div></td></tr></table></div>
+<h2 id="editor-selection-choosing-your-weapon">Editor Selection: Choosing Your Weapon</h2>
+<p>So, which editor should YOU use? Here's the honest <strong>editor selection</strong> guide:</p>
+<h3 id="choose-nano-if">Choose Nano If...</h3>
+<ul>
+<li>You're just starting with Linux</li>
+<li>You need to make quick edits occasionally</li>
+<li>You want something that "just works"</li>
+<li>You don't edit files in the terminal frequently</li>
+</ul>
+<h3 id="choose-vim-if">Choose Vim If...</h3>
+<ul>
+<li>You edit files in the terminal frequently</li>
+<li>You write code or edit config files daily</li>
+<li>You want to become extremely productive</li>
+<li>You enjoy mastering powerful tools</li>
+<li>You work on remote servers often</li>
+</ul>
+<h3 id="the-middle-path-vim-with-training-wheels">The Middle Path: Vim with Training Wheels</h3>
+<p>You don't have to go all-in immediately! Many editors support "Vim mode":</p>
+<ul>
+<li>VS Code has a Vim extension</li>
+<li>JetBrains IDEs have IdeaVim</li>
+<li>Even web browsers have Vim-like navigation (Vimium)</li>
+</ul>
+<p>This lets you learn Vim keybindings while keeping your familiar editor.</p>
+<h3 id="comparison-table">Comparison Table</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Nano</th>
+<th>Vim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Learning curve</td>
+<td>Gentle</td>
+<td>Steep (then rewarding)</td>
+</tr>
+<tr>
+<td>On-screen help</td>
+<td>Yes</td>
+<td>No (but :help is excellent)</td>
+</tr>
+<tr>
+<td>Modes</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Extensibility</td>
+<td>Limited</td>
+<td>Extensive</td>
+</tr>
+<tr>
+<td>Speed once learned</td>
+<td>Good</td>
+<td>Excellent</td>
+</tr>
+<tr>
+<td>Available everywhere</td>
+<td>Usually</td>
+<td>Almost always</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Quick edits</td>
+<td>Daily use</td>
+</tr>
+</tbody>
+</table>
+<h4 id="microsim-interactive-vim-mode-practice">MicroSim: Interactive Vim Mode Practice</h4>
+<details>
+<summary>Practice Vim Modes</summary>
+<p>Type: microsim</p>
+<p>Bloom Taxonomy: Apply, Analyze
+Learning Objective: Allow students to practice switching between Vim modes and see how input is interpreted differently in each mode.</p>
+<p>Canvas layout (responsive, ~750px max width):
+- Top section (60px): Current mode indicator (NORMAL, INSERT, VISUAL)
+- Middle section (300px): Text editing area with cursor
+- Bottom section (120px): Key input display and mode explanation</p>
+<p>Visual elements:
+- Mode indicator: Large, color-coded badge
+  - Normal: Blue background
+  - Insert: Green background
+  - Visual: Purple background
+- Text area: Monospace font, with visible cursor
+- Keystroke display: Shows what keys were pressed
+- Action log: Shows what each keystroke did</p>
+<p>Interactive controls:
+- Full keyboard input capture
+- Text area responds to Vim commands
+- Mode switches with i, v, Esc</p>
+<p>Behavior:
+- Start in Normal mode
+- Press i: Enter Insert mode, text input works
+- Press Esc: Return to Normal mode
+- Press v: Enter Visual mode, movement selects
+- hjkl: Move cursor in Normal/Visual
+- dd: Delete line in Normal
+- yy: Yank line in Normal
+- p: Paste in Normal</p>
+<p>Sample starting text:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Hello, World!
+This is a Vim practice area.
+Try pressing i to insert text.
+Press Esc to return to Normal mode.
+Use hjkl to navigate.
+</code></pre></div></td></tr></table></div></p>
+<p>Challenge modes:
+1. "Type your name" - switch to Insert, type, switch back
+2. "Delete a line" - use dd
+3. "Copy and paste" - use yy and p
+4. "Select and delete" - use V, j, d</p>
+<p>Color scheme:
+- Normal mode: Blue (#4a9eff)
+- Insert mode: Green (#4ade80)
+- Visual mode: Purple (#a78bfa)
+- Text: White on dark background
+- Cursor: Orange blink</p>
+<p>Implementation: p5.js</p>
+</details>
+<h2 id="vim-commands-cheat-sheet">Vim Commands Cheat Sheet</h2>
+<h3 id="mode-switching">Mode Switching</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>i     Enter Insert mode (before cursor)
+a     Enter Insert mode (after cursor)
+o     Open line below, enter Insert mode
+O     Open line above, enter Insert mode
+v     Enter Visual mode
+V     Enter Visual Line mode
+Esc   Return to Normal mode
+</code></pre></div></td></tr></table></div>
+<h3 id="navigation">Navigation</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>h/j/k/l   Left/Down/Up/Right
+w/b       Next/Previous word
+0/$       Start/End of line
+gg/G      Start/End of file
+Ctrl+f/b  Page forward/back
+</code></pre></div></td></tr></table></div>
+<h3 id="editing">Editing</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>x     Delete character
+dd    Delete line
+yy    Yank (copy) line
+p     Paste after
+P     Paste before
+u     Undo
+Ctrl+r  Redo
+.     Repeat last command
+</code></pre></div></td></tr></table></div>
+<h3 id="savequit">Save/Quit</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>:w    Save
+:q    Quit
+:wq   Save and quit
+:q!   Quit without saving
+ZZ    Save and quit
+</code></pre></div></td></tr></table></div>
+<h3 id="search">Search</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>/pattern   Search forward
+?pattern   Search backward
+n/N        Next/Previous match
+:%s/a/b/g  Replace all a with b
+</code></pre></div></td></tr></table></div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>You've learned the essential terminal text editors!</p>
+<ul>
+<li><strong>Nano</strong>: Beginner-friendly with on-screen shortcuts</li>
+<li><strong>Vim</strong>: Modal editor that's incredibly powerful once mastered</li>
+<li><strong>Vim Modes</strong>: Normal (commands), Insert (typing), Visual (selecting)</li>
+<li><strong>Navigation</strong>: hjkl keys keep hands on home row</li>
+<li><strong>Commands</strong>: Composable grammar (count + operator + motion)</li>
+<li><strong>Configuration</strong>: ~/.vimrc customizes your Vim experience</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">You're an Editor Wizard Now!</p>
+<p>Whether you stick with Nano for simple edits or dive deep into Vim mastery, you now have the skills to edit any file on any Linux system. No more being stuck unable to edit a config file on a remote server!</p>
+</div>
+<h2 id="whats-next">What's Next?</h2>
+<p>Now that you can edit files like a pro, it's time to start writing your own programs—shell scripts! The next chapter introduces Bash scripting, where you'll automate tasks and combine everything you've learned.</p>
+<hr />
+<details class="question">
+<summary>Quick Quiz: Nano and Vim</summary>
+<ol>
+<li>What key do you press to save and exit in Nano?</li>
+<li>What does pressing <code>Esc</code> do in Vim?</li>
+<li>How do you enter Insert mode in Vim?</li>
+<li>What command searches and replaces all occurrences in a file?</li>
+<li>What file contains your Vim configuration?</li>
+<li>What does <code>dd</code> do in Vim's Normal mode?</li>
+</ol>
+</details>
+<details class="note">
+<summary>Quiz Answers</summary>
+<ol>
+<li><code>Ctrl+X</code> (then Y to confirm save)</li>
+<li>Returns you to Normal mode from any other mode</li>
+<li>Press <code>i</code> (or <code>a</code>, <code>o</code>, <code>I</code>, <code>A</code>, <code>O</code>)</li>
+<li><code>:%s/old/new/g</code></li>
+<li><code>~/.vimrc</code></li>
+<li>Deletes the entire current line</li>
+</ol>
+</details>
 
 
 
@@ -1578,7 +3776,7 @@
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../js/extra.css"></script>
+        <script src="../../js/extra.js"></script>
       
     
   </body>

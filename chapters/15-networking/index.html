@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+        <meta name="description" content="Master IP addresses, DNS, network interfaces, and diagnostic tools like ping, traceroute, and curl">
       
       
         <meta name="author" content="Dan McCreary">
@@ -52,7 +52,7 @@
       
     
     
-      <link rel="stylesheet" href="../../styles/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -75,7 +75,7 @@
       
         <meta  property="og:title"  content="Networking Fundamentals - Learning Linux" >
       
-        <meta  property="og:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  property="og:description"  content="Master IP addresses, DNS, network interfaces, and diagnostic tools like ping, traceroute, and curl" >
       
         <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/15-networking/index.png" >
       
@@ -91,7 +91,7 @@
       
         <meta  name="twitter:title"  content="Networking Fundamentals - Learning Linux" >
       
-        <meta  name="twitter:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  name="twitter:description"  content="Master IP addresses, DNS, network interfaces, and diagnostic tools like ping, traceroute, and curl" >
       
         <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/15-networking/index.png" >
       
@@ -214,7 +214,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -259,7 +259,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -439,8 +439,6 @@
           
         
       
-        
-          
         
       
         
@@ -864,6 +862,468 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-network-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the Network Layer!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-basics-how-computers-talk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Basics: How Computers Talk
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Basics: How Computers Talk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-postal-analogy" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Postal Analogy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-address-your-computers-phone-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      IP Address: Your Computer's Phone Number
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IP Address: Your Computer's Phone Number">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ipv4-the-classic" class="md-nav__link">
+    <span class="md-ellipsis">
+      IPv4 (The Classic)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipv6-the-future" class="md-nav__link">
+    <span class="md-ellipsis">
+      IPv6 (The Future)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-ip-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special IP Addresses
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mac-address-the-hardware-fingerprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      MAC Address: The Hardware Fingerprint
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MAC Address: The Hardware Fingerprint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ip-vs-mac-whats-the-difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      IP vs MAC: What's the Difference?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-the-internets-phone-book" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS: The Internet's Phone Book
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DNS: The Internet's Phone Book">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-dns-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How DNS Works
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hostname-resolution-local-name-lookups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hostname Resolution: Local Name Lookups
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-interfaces-your-network-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Interfaces: Your Network Connections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ifconfig-command-the-classic-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ifconfig Command: The Classic Tool
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ip-command-the-modern-way" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ip Command: The Modern Way
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Ip Command: The Modern Way">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-interfaces-with-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Interfaces with ip
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ping-command-are-you-there" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ping Command: Are You There?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Ping Command: Are You There?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-ping-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Ping Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-traceroute-command-map-the-journey" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Traceroute Command: Map the Journey
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Traceroute Command: Map the Journey">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-traceroute-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Traceroute Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-netstat-command-network-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Netstat Command: Network Statistics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Netstat Command: Network Statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-netstat-combinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common netstat Combinations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ss-command-socket-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ss Command: Socket Statistics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Ss Command: Socket Statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparing-netstat-and-ss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparing netstat and ss
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-ports-the-apartment-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Ports: The Apartment Numbers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Ports: The Apartment Numbers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-ports-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Ports to Know
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-curl-command-transfer-data-from-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Curl Command: Transfer Data from URLs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Curl Command: Transfer Data from URLs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#curl-for-api-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Curl for API Testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-wget-command-download-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Wget Command: Download Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Wget Command: Download Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#curl-vs-wget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Curl vs Wget
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wifi-configuration-wireless-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      WiFi Configuration: Wireless Networking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WiFi Configuration: Wireless Networking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-networkmanager-most-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using NetworkManager (Most Distributions)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-wpa_supplicant-lower-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using wpa_supplicant (Lower Level)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      WiFi Troubleshooting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-troubleshooting-debug-like-a-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Troubleshooting: Debug Like a Pro
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Troubleshooting: Debug Like a Pro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-troubleshooting-ladder" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Troubleshooting Ladder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-network-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step Network Debugging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-debug-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Debug Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-wait-for-network-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      The "Wait for Network" Script
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-network-commands-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: Network Commands Cheat Sheet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1048,7 +1508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../24-customization/" class="md-nav__link">
+      <a href="../24-customization/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,6 +1633,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1186,7 +1654,7 @@
         
   
   
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1424,6 +1892,468 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-network-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the Network Layer!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-basics-how-computers-talk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Basics: How Computers Talk
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Basics: How Computers Talk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-postal-analogy" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Postal Analogy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-address-your-computers-phone-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      IP Address: Your Computer's Phone Number
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IP Address: Your Computer's Phone Number">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ipv4-the-classic" class="md-nav__link">
+    <span class="md-ellipsis">
+      IPv4 (The Classic)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipv6-the-future" class="md-nav__link">
+    <span class="md-ellipsis">
+      IPv6 (The Future)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-ip-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special IP Addresses
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mac-address-the-hardware-fingerprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      MAC Address: The Hardware Fingerprint
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MAC Address: The Hardware Fingerprint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ip-vs-mac-whats-the-difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      IP vs MAC: What's the Difference?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-the-internets-phone-book" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS: The Internet's Phone Book
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DNS: The Internet's Phone Book">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-dns-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How DNS Works
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hostname-resolution-local-name-lookups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hostname Resolution: Local Name Lookups
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-interfaces-your-network-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Interfaces: Your Network Connections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ifconfig-command-the-classic-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ifconfig Command: The Classic Tool
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ip-command-the-modern-way" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ip Command: The Modern Way
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Ip Command: The Modern Way">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-interfaces-with-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Interfaces with ip
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ping-command-are-you-there" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ping Command: Are You There?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Ping Command: Are You There?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-ping-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Ping Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-traceroute-command-map-the-journey" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Traceroute Command: Map the Journey
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Traceroute Command: Map the Journey">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-traceroute-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Traceroute Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-netstat-command-network-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Netstat Command: Network Statistics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Netstat Command: Network Statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-netstat-combinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common netstat Combinations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ss-command-socket-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ss Command: Socket Statistics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Ss Command: Socket Statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparing-netstat-and-ss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparing netstat and ss
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-ports-the-apartment-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Ports: The Apartment Numbers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Ports: The Apartment Numbers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-ports-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Ports to Know
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-curl-command-transfer-data-from-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Curl Command: Transfer Data from URLs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Curl Command: Transfer Data from URLs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#curl-for-api-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Curl for API Testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-wget-command-download-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Wget Command: Download Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Wget Command: Download Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#curl-vs-wget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Curl vs Wget
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wifi-configuration-wireless-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      WiFi Configuration: Wireless Networking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WiFi Configuration: Wireless Networking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-networkmanager-most-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using NetworkManager (Most Distributions)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-wpa_supplicant-lower-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using wpa_supplicant (Lower Level)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      WiFi Troubleshooting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-troubleshooting-debug-like-a-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Troubleshooting: Debug Like a Pro
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Troubleshooting: Debug Like a Pro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-troubleshooting-ladder" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Troubleshooting Ladder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-network-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step Network Debugging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-debug-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Debug Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-wait-for-network-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      The "Wait for Network" Script
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-network-commands-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: Network Commands Cheat Sheet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1439,7 +2369,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/learniing-linux/blob/master/docs/chapters/15-networking/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/learning-linux/blob/master/docs/chapters/15-networking/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1451,7 +2381,7 @@
 <h2 id="summary">Summary</h2>
 <p>This chapter introduces essential networking concepts and commands. You'll learn about IP addresses, DNS, and network interfaces, then master diagnostic tools like ping, traceroute, netstat, and ss. You'll also learn to transfer files with curl and wget. These networking fundamentals are crucial for troubleshooting connectivity issues and working with remote systems.</p>
 <h2 id="concepts-covered">Concepts Covered</h2>
-<p>This chapter covers the following 25 concepts from the learning graph:</p>
+<p>This chapter covers the following 17 concepts from the learning graph:</p>
 <ol>
 <li>Network Basics</li>
 <li>IP Address</li>
@@ -1478,7 +2408,1541 @@
 <li><a href="../03-shell-commands/">Chapter 3: Basic Shell Commands and Help Systems</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<h2 id="welcome-to-the-network-layer">Welcome to the Network Layer!</h2>
+<p>Every time you open a website, send a message, or stream a video, your computer is having thousands of tiny conversations with other computers around the world. Understanding networking is like learning to read the mail system of the internet—and trust me, it's WAY more interesting than actual mail!</p>
+<p>In this chapter, you'll learn how data travels across networks, how to diagnose problems when things go wrong, and how to become the person everyone calls when "the internet is broken." (Spoiler: it's usually DNS. It's ALWAYS DNS.)</p>
+<h2 id="network-basics-how-computers-talk">Network Basics: How Computers Talk</h2>
+<p>At its core, <strong>network basics</strong> boil down to this: computers need a way to find each other and send messages back and forth. Think of it like a massive postal system, but instead of addresses like "123 Main Street," we use numbers.</p>
+<p>Networks are organized in layers, with each layer handling a specific job. This is formalized in the <strong>OSI Model</strong> (Open Systems Interconnection)—a seven-layer cake of networking goodness.</p>
+<details>
+<summary>MicroSim: OSI Seven-Layer Network Stack</summary>
+<p><strong>Description:</strong> Interactive diagram showing the OSI seven-layer networking stack with hover-based explanations.</p>
+<p><strong>Layout:</strong>
+- Left side: Vertical stack of 7 colored layers (Application at top, Physical at bottom)
+- Right side: Info box that updates when user hovers over each layer
+- Each layer should have: name, number, brief description, example protocols, and a real-world analogy</p>
+<p><strong>Layers (top to bottom):</strong>
+1. Application (Layer 7) - HTTP, FTP, SMTP - "The app you're using"
+2. Presentation (Layer 6) - SSL/TLS, JPEG, ASCII - "Data formatting and encryption"
+3. Session (Layer 5) - NetBIOS, RPC - "Managing connections"
+4. Transport (Layer 4) - TCP, UDP - "Reliable delivery vs speed"
+5. Network (Layer 3) - IP, ICMP - "Routing between networks"
+6. Data Link (Layer 2) - Ethernet, WiFi - "Local network communication"
+7. Physical (Layer 1) - Cables, Radio waves - "Actual electrical signals"</p>
+<p><strong>Interactivity:</strong>
+- Hover over any layer to see detailed explanation in info box
+- Info box shows: Layer name, protocols, analogy (e.g., "Like the envelope for your letter")
+- Optional: Click to "freeze" info box content
+- Visual indication of which layer is currently selected</p>
+<p><strong>Colors:</strong> Use distinct, professional colors for each layer (rainbow gradient works well)</p>
+<p><strong>Skill:</strong> Use microsim-p5 to implement this visualization</p>
+</details>
+<h3 id="the-postal-analogy">The Postal Analogy</h3>
+<p>When you send a letter:</p>
+<ol>
+<li>You write the message (Application layer)</li>
+<li>Put it in an envelope with an address (Network layer)</li>
+<li>The mail carrier picks it up (Data Link layer)</li>
+<li>Trucks and planes move it physically (Physical layer)</li>
+</ol>
+<p>Networks work the same way, just MUCH faster and with more acronyms!</p>
+<h2 id="ip-address-your-computers-phone-number">IP Address: Your Computer's Phone Number</h2>
+<p>An <strong>IP address</strong> is a unique number that identifies your computer on a network. Without it, other computers wouldn't know where to send data back to you.</p>
+<p>There are two versions:</p>
+<h3 id="ipv4-the-classic">IPv4 (The Classic)</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>192.168.1.100
+</code></pre></div></td></tr></table></div>
+<p>Four numbers from 0-255, separated by dots. That's 4 billion possible addresses, which seemed like a lot in the 1980s. (Narrator: It was not enough.)</p>
+<h3 id="ipv6-the-future">IPv6 (The Future)</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>2001:0db8:85a3:0000:0000:8a2e:0370:7334
+</code></pre></div></td></tr></table></div>
+<p>Eight groups of hexadecimal numbers. That's 340 undecillion addresses—enough for every grain of sand on Earth to have billions of IP addresses. We're set for a while.</p>
+<h3 id="special-ip-addresses">Special IP Addresses</h3>
+<table>
+<thead>
+<tr>
+<th>Address</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>127.0.0.1</code></td>
+<td>Localhost (your own computer)</td>
+</tr>
+<tr>
+<td><code>192.168.x.x</code></td>
+<td>Private network (home/office)</td>
+</tr>
+<tr>
+<td><code>10.x.x.x</code></td>
+<td>Private network (larger organizations)</td>
+</tr>
+<tr>
+<td><code>0.0.0.0</code></td>
+<td>"Any" address (used in configurations)</td>
+</tr>
+<tr>
+<td><code>255.255.255.255</code></td>
+<td>Broadcast to everyone on network</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Find your IP address</span>
+ip<span class="w"> </span>addr<span class="w"> </span>show
+hostname<span class="w"> </span>-I
+
+<span class="c1"># Your public IP (what the internet sees)</span>
+curl<span class="w"> </span>ifconfig.me
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Public vs Private IP</p>
+<p>Your home network uses private IPs (like 192.168.1.x). Your router has ONE public IP that the whole internet sees. This is called NAT (Network Address Translation)—it's how millions of devices share limited IPv4 addresses.</p>
+</div>
+<h2 id="mac-address-the-hardware-fingerprint">MAC Address: The Hardware Fingerprint</h2>
+<p>A <strong>MAC address</strong> (Media Access Control) is a unique identifier burned into your network card at the factory. It's like a serial number that never changes.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>00:1A:2B:3C:4D:5E
+</code></pre></div></td></tr></table></div>
+<p>Six pairs of hexadecimal digits. Every network device in the world has a unique one!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># View your MAC addresses</span>
+ip<span class="w"> </span>link<span class="w"> </span>show
+<span class="c1"># or</span>
+cat<span class="w"> </span>/sys/class/net/*/address
+</code></pre></div></td></tr></table></div>
+<h3 id="ip-vs-mac-whats-the-difference">IP vs MAC: What's the Difference?</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>IP Address</th>
+<th>MAC Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Assigned by</td>
+<td>Network/DHCP</td>
+<td>Manufacturer</td>
+</tr>
+<tr>
+<td>Can change?</td>
+<td>Yes (dynamic)</td>
+<td>No (permanent)</td>
+</tr>
+<tr>
+<td>Scope</td>
+<td>Global routing</td>
+<td>Local network only</td>
+</tr>
+<tr>
+<td>Format</td>
+<td>Numbers (IPv4/IPv6)</td>
+<td>Hexadecimal pairs</td>
+</tr>
+</tbody>
+</table>
+<p>Think of it this way: your MAC address is like your name (permanent), while your IP address is like your current phone number (can change when you move).</p>
+<h2 id="dns-the-internets-phone-book">DNS: The Internet's Phone Book</h2>
+<p><strong>DNS</strong> (Domain Name System) translates human-readable names into IP addresses. Because nobody wants to memorize <code>142.250.80.46</code> when they can just type <code>google.com</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Look up a domain&#39;s IP address</span>
+nslookup<span class="w"> </span>google.com
+dig<span class="w"> </span>google.com
+host<span class="w"> </span>google.com
+
+<span class="c1"># See your DNS servers</span>
+cat<span class="w"> </span>/etc/resolv.conf
+
+<span class="c1"># Flush DNS cache (if using systemd-resolved)</span>
+sudo<span class="w"> </span>systemd-resolve<span class="w"> </span>--flush-caches
+</code></pre></div></td></tr></table></div>
+<h3 id="how-dns-works">How DNS Works</h3>
+<ol>
+<li>You type <code>example.com</code> in your browser</li>
+<li>Your computer asks your router's DNS server</li>
+<li>That server asks a root DNS server</li>
+<li>The root server points to the <code>.com</code> servers</li>
+<li>The <code>.com</code> server points to <code>example.com</code>'s DNS</li>
+<li>Finally, you get the IP address!</li>
+</ol>
+<p>All this happens in milliseconds. DNS is basically magic.</p>
+<details>
+<summary>MicroSim: DNS Resolution Journey</summary>
+<p><strong>Description:</strong> Animated visualization showing a DNS query traveling through the DNS hierarchy.</p>
+<p><strong>Elements:</strong>
+- User's computer (left side)
+- Local DNS resolver
+- Root DNS server (labeled with ".")
+- TLD server (labeled ".com", ".org", etc.)
+- Authoritative DNS server
+- Final response traveling back</p>
+<p><strong>Animation:</strong>
+- Packet (small envelope icon) travels from computer to resolver
+- Resolver checks cache (show "Cache Miss" or "Cache Hit")
+- If miss: packet travels through hierarchy
+- Each server responds with "Ask this server instead" until final answer
+- Response travels back through chain
+- Total time counter showing milliseconds</p>
+<p><strong>Interactivity:</strong>
+- Slider to control animation speed
+- Dropdown to select different domains to resolve
+- Toggle to show/hide cache at each level
+- "Break" button to simulate a DNS failure</p>
+<p><strong>Skill:</strong> Use microsim-p5 to implement this visualization</p>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">When the Internet is 'Down'</p>
+<p>90% of "the internet is broken" problems are actually DNS issues. If you can ping an IP address but not a domain name, DNS is your culprit!</p>
+</div>
+<h2 id="hostname-resolution-local-name-lookups">Hostname Resolution: Local Name Lookups</h2>
+<p><strong>Hostname resolution</strong> is the process of turning a name into an IP address. DNS is part of this, but there's also a local file:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># The hosts file - local DNS override</span>
+cat<span class="w"> </span>/etc/hosts
+
+<span class="c1"># Example contents:</span>
+<span class="c1"># 127.0.0.1   localhost</span>
+<span class="c1"># 192.168.1.50   myserver</span>
+<span class="c1"># 192.168.1.51   printer</span>
+</code></pre></div></td></tr></table></div>
+<p>The <code>/etc/hosts</code> file is checked BEFORE DNS. This is useful for:</p>
+<ul>
+<li>Blocking websites (point them to 127.0.0.1)</li>
+<li>Testing local servers with friendly names</li>
+<li>Overriding DNS for development</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Add a local hostname (requires sudo)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;192.168.1.100 mypi&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/hosts
+
+<span class="c1"># Now you can use:</span>
+ping<span class="w"> </span>mypi
+ssh<span class="w"> </span>mypi
+</code></pre></div></td></tr></table></div>
+<h2 id="network-interfaces-your-network-connections">Network Interfaces: Your Network Connections</h2>
+<p><strong>Network interfaces</strong> are the connection points between your computer and networks. Each physical or virtual network connection gets its own interface.</p>
+<p>Common interface names:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>eth0</code>, <code>enp0s3</code></td>
+<td>Wired Ethernet</td>
+</tr>
+<tr>
+<td><code>wlan0</code>, <code>wlp2s0</code></td>
+<td>Wireless WiFi</td>
+</tr>
+<tr>
+<td><code>lo</code></td>
+<td>Loopback (localhost)</td>
+</tr>
+<tr>
+<td><code>docker0</code></td>
+<td>Docker bridge</td>
+</tr>
+<tr>
+<td><code>virbr0</code></td>
+<td>Virtual machine bridge</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># List all interfaces</span>
+ip<span class="w"> </span>link<span class="w"> </span>show
+ls<span class="w"> </span>/sys/class/net/
+
+<span class="c1"># Show interface details</span>
+ip<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>eth0
+</code></pre></div></td></tr></table></div>
+<p>The weird names like <code>enp0s3</code> are "predictable network interface names"—they describe the hardware location so the name doesn't change if you add more network cards.</p>
+<h2 id="the-ifconfig-command-the-classic-tool">The Ifconfig Command: The Classic Tool</h2>
+<p>The <strong>ifconfig command</strong> was the original tool for viewing and configuring network interfaces. It's been around since the 1980s!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># View all interfaces</span>
+ifconfig
+
+<span class="c1"># View specific interface</span>
+ifconfig<span class="w"> </span>eth0
+
+<span class="c1"># Note: ifconfig is deprecated on modern systems</span>
+<span class="c1"># Use &#39;ip&#39; instead, but ifconfig still works!</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Deprecated but Not Dead</p>
+<p><code>ifconfig</code> is from the <code>net-tools</code> package and is considered deprecated. Modern Linux uses <code>ip</code> from <code>iproute2</code>. However, you'll still see <code>ifconfig</code> in tutorials and older scripts everywhere.</p>
+</div>
+<h2 id="the-ip-command-the-modern-way">The Ip Command: The Modern Way</h2>
+<p>The <strong>ip command</strong> is the modern replacement for ifconfig, route, and other network tools. One command to rule them all!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Show all addresses</span>
+ip<span class="w"> </span>addr<span class="w"> </span>show
+ip<span class="w"> </span>a<span class="w">              </span><span class="c1"># Short version</span>
+
+<span class="c1"># Show specific interface</span>
+ip<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>eth0
+
+<span class="c1"># Show only IPv4</span>
+ip<span class="w"> </span>-4<span class="w"> </span>addr<span class="w"> </span>show
+
+<span class="c1"># Show link layer info (MAC addresses)</span>
+ip<span class="w"> </span>link<span class="w"> </span>show
+
+<span class="c1"># Show routing table</span>
+ip<span class="w"> </span>route<span class="w"> </span>show
+ip<span class="w"> </span>r<span class="w">              </span><span class="c1"># Short version</span>
+
+<span class="c1"># Show neighbors (ARP cache)</span>
+ip<span class="w"> </span>neigh<span class="w"> </span>show
+</code></pre></div></td></tr></table></div>
+<h3 id="configuring-interfaces-with-ip">Configuring Interfaces with ip</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Bring interface up/down</span>
+sudo<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>eth0<span class="w"> </span>up
+sudo<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>eth0<span class="w"> </span>down
+
+<span class="c1"># Add an IP address</span>
+sudo<span class="w"> </span>ip<span class="w"> </span>addr<span class="w"> </span>add<span class="w"> </span><span class="m">192</span>.168.1.100/24<span class="w"> </span>dev<span class="w"> </span>eth0
+
+<span class="c1"># Remove an IP address</span>
+sudo<span class="w"> </span>ip<span class="w"> </span>addr<span class="w"> </span>del<span class="w"> </span><span class="m">192</span>.168.1.100/24<span class="w"> </span>dev<span class="w"> </span>eth0
+
+<span class="c1"># Add a route</span>
+sudo<span class="w"> </span>ip<span class="w"> </span>route<span class="w"> </span>add<span class="w"> </span><span class="m">10</span>.0.0.0/8<span class="w"> </span>via<span class="w"> </span><span class="m">192</span>.168.1.1
+</code></pre></div></td></tr></table></div>
+<h2 id="the-ping-command-are-you-there">The Ping Command: Are You There?</h2>
+<p>The <strong>ping command</strong> sends a small packet to another computer and waits for a response. It's the "Hello? Can you hear me?" of networking.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Basic ping</span>
+ping<span class="w"> </span>google.com
+
+<span class="c1"># Ping with count limit</span>
+ping<span class="w"> </span>-c<span class="w"> </span><span class="m">4</span><span class="w"> </span>google.com
+
+<span class="c1"># Ping with interval (seconds between pings)</span>
+ping<span class="w"> </span>-i<span class="w"> </span><span class="m">0</span>.5<span class="w"> </span>google.com
+
+<span class="c1"># Ping with specific packet size</span>
+ping<span class="w"> </span>-s<span class="w"> </span><span class="m">1000</span><span class="w"> </span>google.com
+
+<span class="c1"># Ping local network broadcast</span>
+ping<span class="w"> </span>-b<span class="w"> </span><span class="m">192</span>.168.1.255
+</code></pre></div></td></tr></table></div>
+<h3 id="reading-ping-output">Reading Ping Output</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>PING google.com (142.250.80.46) 56(84) bytes of data.
+64 bytes from lga25s71-in-f14.1e100.net: icmp_seq=1 ttl=117 time=12.3 ms
+64 bytes from lga25s71-in-f14.1e100.net: icmp_seq=2 ttl=117 time=11.8 ms
+64 bytes from lga25s71-in-f14.1e100.net: icmp_seq=3 ttl=117 time=12.1 ms
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>64 bytes</code></td>
+<td>Response packet size</td>
+</tr>
+<tr>
+<td><code>icmp_seq</code></td>
+<td>Sequence number (should increment)</td>
+</tr>
+<tr>
+<td><code>ttl</code></td>
+<td>Time To Live (hops remaining)</td>
+</tr>
+<tr>
+<td><code>time</code></td>
+<td>Round-trip time in milliseconds</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Ping Troubleshooting</p>
+<ul>
+<li><strong>No response</strong>: Host is down, blocking ICMP, or network issue</li>
+<li><strong>High time</strong>: Network congestion or long physical distance</li>
+<li><strong>Packet loss</strong>: Unreliable network or overloaded server</li>
+<li><strong>TTL decreasing</strong>: Normal for different hosts; very low TTL might indicate routing loops</li>
+</ul>
+</div>
+<details>
+<summary>MicroSim: Ping Packet Journey</summary>
+<p><strong>Description:</strong> Visual simulation of ICMP ping packets traveling through a network.</p>
+<p><strong>Layout:</strong>
+- Source computer (left)
+- Multiple network hops (routers/switches in middle)
+- Destination server (right)
+- Path visualization connecting all nodes</p>
+<p><strong>Animation:</strong>
+- Packet (small colored dot) travels from source
+- Passes through each hop, with hop count decreasing (TTL)
+- Arrives at destination
+- Response packet travels back (different color)
+- Timer shows round-trip time</p>
+<p><strong>Interactivity:</strong>
+- Select destination: Local (fast), Same city (medium), International (slow)
+- Simulate packet loss checkbox
+- Simulate high latency checkbox
+- "Break" a hop to show how failures appear
+- Counter for packets sent/received/lost</p>
+<p><strong>Failure Modes:</strong>
+- Timeout (packet disappears at broken hop)
+- Packet loss (random packets vanish)
+- High latency (packets slow down visibly)</p>
+<p><strong>Skill:</strong> Use microsim-p5 to implement this visualization</p>
+</details>
+<h2 id="the-traceroute-command-map-the-journey">The Traceroute Command: Map the Journey</h2>
+<p>The <strong>traceroute command</strong> shows every hop (router) between you and a destination. It's like GPS tracking for your network packets!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Basic traceroute</span>
+traceroute<span class="w"> </span>google.com
+
+<span class="c1"># Use ICMP instead of UDP (may work better through firewalls)</span>
+traceroute<span class="w"> </span>-I<span class="w"> </span>google.com
+
+<span class="c1"># Faster with no DNS lookups</span>
+traceroute<span class="w"> </span>-n<span class="w"> </span>google.com
+
+<span class="c1"># Limit hops</span>
+traceroute<span class="w"> </span>-m<span class="w"> </span><span class="m">15</span><span class="w"> </span>google.com
+</code></pre></div></td></tr></table></div>
+<h3 id="reading-traceroute-output">Reading Traceroute Output</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>traceroute to google.com (142.250.80.46), 30 hops max
+ 1  router.local (192.168.1.1)  1.234 ms  1.123 ms  1.456 ms
+ 2  96.120.104.177  12.345 ms  11.234 ms  12.567 ms
+ 3  * * *
+ 4  68.86.143.93  15.678 ms  14.890 ms  15.123 ms
+</code></pre></div></td></tr></table></div>
+<p>Each line is a hop:
+- <strong>Number</strong>: Hop count from you
+- <strong>Name/IP</strong>: Router at that hop
+- <strong>Three times</strong>: Three probe results</p>
+<p>The <code>* * *</code> means that hop didn't respond (many routers hide from traceroute for security).</p>
+<details>
+<summary>MicroSim: Network Traceroute Visualization</summary>
+<p><strong>Description:</strong> Interactive map showing packet route through multiple network hops.</p>
+<p><strong>Layout:</strong>
+- World/network map background
+- Nodes representing routers/hops
+- Animated packets traveling between nodes
+- Timing information displayed at each hop</p>
+<p><strong>Elements:</strong>
+- Source node (your computer)
+- Multiple intermediate hops (routers)
+- Destination node (target server)
+- Path lines connecting nodes
+- Latency labels on each segment</p>
+<p><strong>Animation:</strong>
+- TTL-limited packets sent (stop at each hop)
+- Each hop sends back "time exceeded" message
+- Build up the complete path progressively
+- Show timing for each segment</p>
+<p><strong>Interactivity:</strong>
+- Select different destination types (local/regional/international)
+- Click on any hop to see detailed info
+- Simulate a "dead" hop to show how traceroute reveals failures
+- Toggle between geographic view and logical network view</p>
+<p><strong>Skill:</strong> Use microsim-p5 to implement this visualization</p>
+</details>
+<h2 id="the-netstat-command-network-statistics">The Netstat Command: Network Statistics</h2>
+<p>The <strong>netstat command</strong> displays network connections, routing tables, and interface statistics. It's your network's status dashboard!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Show all connections</span>
+netstat<span class="w"> </span>-a
+
+<span class="c1"># Show only listening ports</span>
+netstat<span class="w"> </span>-l
+
+<span class="c1"># Show TCP connections</span>
+netstat<span class="w"> </span>-t
+
+<span class="c1"># Show UDP connections</span>
+netstat<span class="w"> </span>-u
+
+<span class="c1"># Show with process names (requires sudo)</span>
+sudo<span class="w"> </span>netstat<span class="w"> </span>-tulnp
+
+<span class="c1"># Show routing table</span>
+netstat<span class="w"> </span>-r
+
+<span class="c1"># Show statistics</span>
+netstat<span class="w"> </span>-s
+</code></pre></div></td></tr></table></div>
+<h3 id="common-netstat-combinations">Common netstat Combinations</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Shows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>netstat -tulnp</code></td>
+<td>TCP/UDP listening ports with processes</td>
+</tr>
+<tr>
+<td><code>netstat -an</code></td>
+<td>All connections, numeric (no DNS)</td>
+</tr>
+<tr>
+<td><code>netstat -r</code></td>
+<td>Routing table</td>
+</tr>
+<tr>
+<td><code>netstat -i</code></td>
+<td>Interface statistics</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">netstat is Deprecated</p>
+<p>Like <code>ifconfig</code>, <code>netstat</code> is from <code>net-tools</code> and is deprecated. Use <code>ss</code> instead—it's faster and more powerful!</p>
+</div>
+<h2 id="the-ss-command-socket-statistics">The Ss Command: Socket Statistics</h2>
+<p>The <strong>ss command</strong> is the modern replacement for netstat. It's faster and provides more information.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Show all sockets</span>
+ss<span class="w"> </span>-a
+
+<span class="c1"># Show listening sockets</span>
+ss<span class="w"> </span>-l
+
+<span class="c1"># Show TCP sockets</span>
+ss<span class="w"> </span>-t
+
+<span class="c1"># Show UDP sockets</span>
+ss<span class="w"> </span>-u
+
+<span class="c1"># Show with process names</span>
+ss<span class="w"> </span>-p
+
+<span class="c1"># Show numeric (no DNS resolution)</span>
+ss<span class="w"> </span>-n
+
+<span class="c1"># The most useful combo: listening TCP ports with processes</span>
+sudo<span class="w"> </span>ss<span class="w"> </span>-tulnp
+
+<span class="c1"># Filter by port</span>
+ss<span class="w"> </span>-t<span class="w"> </span>dst<span class="w"> </span>:443
+ss<span class="w"> </span>-t<span class="w"> </span>src<span class="w"> </span>:22
+
+<span class="c1"># Filter by state</span>
+ss<span class="w"> </span>-t<span class="w"> </span>state<span class="w"> </span>established
+ss<span class="w"> </span>-t<span class="w"> </span>state<span class="w"> </span>listening
+</code></pre></div></td></tr></table></div>
+<h3 id="comparing-netstat-and-ss">Comparing netstat and ss</h3>
+<table>
+<thead>
+<tr>
+<th>netstat</th>
+<th>ss</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>netstat -tulnp</code></td>
+<td><code>ss -tulnp</code></td>
+<td>Listening ports</td>
+</tr>
+<tr>
+<td><code>netstat -an</code></td>
+<td><code>ss -an</code></td>
+<td>All connections</td>
+</tr>
+<tr>
+<td><code>netstat -r</code></td>
+<td><code>ip route</code></td>
+<td>Routing table</td>
+</tr>
+</tbody>
+</table>
+<h2 id="network-ports-the-apartment-numbers">Network Ports: The Apartment Numbers</h2>
+<p><strong>Network ports</strong> are like apartment numbers in a building. The IP address gets you to the building (computer), and the port number gets you to the specific service.</p>
+<p>Ports range from 0-65535:</p>
+<table>
+<thead>
+<tr>
+<th>Range</th>
+<th>Type</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0-1023</td>
+<td>Well-known (privileged)</td>
+<td>22 (SSH), 80 (HTTP), 443 (HTTPS)</td>
+</tr>
+<tr>
+<td>1024-49151</td>
+<td>Registered</td>
+<td>3306 (MySQL), 5432 (PostgreSQL)</td>
+</tr>
+<tr>
+<td>49152-65535</td>
+<td>Dynamic/Private</td>
+<td>Temporary connections</td>
+</tr>
+</tbody>
+</table>
+<h3 id="common-ports-to-know">Common Ports to Know</h3>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Service</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20, 21</td>
+<td>FTP</td>
+<td>File Transfer Protocol</td>
+</tr>
+<tr>
+<td>22</td>
+<td>SSH</td>
+<td>Secure Shell</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Telnet</td>
+<td>Insecure remote access (don't use!)</td>
+</tr>
+<tr>
+<td>25</td>
+<td>SMTP</td>
+<td>Email sending</td>
+</tr>
+<tr>
+<td>53</td>
+<td>DNS</td>
+<td>Domain name resolution</td>
+</tr>
+<tr>
+<td>80</td>
+<td>HTTP</td>
+<td>Unencrypted web</td>
+</tr>
+<tr>
+<td>443</td>
+<td>HTTPS</td>
+<td>Encrypted web</td>
+</tr>
+<tr>
+<td>3389</td>
+<td>RDP</td>
+<td>Windows Remote Desktop</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See what&#39;s using a specific port</span>
+sudo<span class="w"> </span>ss<span class="w"> </span>-tulnp<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>:80
+sudo<span class="w"> </span>lsof<span class="w"> </span>-i<span class="w"> </span>:80
+
+<span class="c1"># Check if a port is open on a remote host</span>
+nc<span class="w"> </span>-zv<span class="w"> </span>example.com<span class="w"> </span><span class="m">80</span>
+</code></pre></div></td></tr></table></div>
+<details>
+<summary>MicroSim: Network Ports and Firewalls</summary>
+<p><strong>Description:</strong> Visual simulation of how ports and firewalls control network traffic.</p>
+<p><strong>Layout:</strong>
+- Client computer (left)
+- Firewall wall in the middle with numbered "doors" (ports)
+- Server with multiple services (right)</p>
+<p><strong>Elements:</strong>
+- Port doors: Some open (green), some closed (red), some filtered (yellow)
+- Service icons behind doors: Web server (80/443), SSH (22), Database (3306)
+- Packet animations trying to enter through ports</p>
+<p><strong>Animation:</strong>
+- Packets approach firewall
+- Open ports: Packet passes through
+- Closed ports: Packet bounces back with "Connection Refused"
+- Filtered ports: Packet disappears (dropped silently)
+- Response packets return through same port</p>
+<p><strong>Interactivity:</strong>
+- Click ports to open/close them
+- Toggle firewall on/off
+- Send test packets to different ports
+- Show SYN/ACK/RST responses</p>
+<p><strong>Skill:</strong> Use microsim-p5 to implement this visualization</p>
+</details>
+<h2 id="the-curl-command-transfer-data-from-urls">The Curl Command: Transfer Data from URLs</h2>
+<p>The <strong>curl command</strong> transfers data from or to a server. It's incredibly powerful for testing APIs, downloading files, and debugging web issues.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Basic GET request</span>
+curl<span class="w"> </span>https://example.com
+
+<span class="c1"># Save output to file</span>
+curl<span class="w"> </span>-o<span class="w"> </span>page.html<span class="w"> </span>https://example.com
+curl<span class="w"> </span>-O<span class="w"> </span>https://example.com/file.zip<span class="w">  </span><span class="c1"># Keep original filename</span>
+
+<span class="c1"># Follow redirects</span>
+curl<span class="w"> </span>-L<span class="w"> </span>https://example.com
+
+<span class="c1"># Show headers only</span>
+curl<span class="w"> </span>-I<span class="w"> </span>https://example.com
+
+<span class="c1"># Show headers AND content</span>
+curl<span class="w"> </span>-i<span class="w"> </span>https://example.com
+
+<span class="c1"># Verbose mode (see the whole conversation)</span>
+curl<span class="w"> </span>-v<span class="w"> </span>https://example.com
+
+<span class="c1"># POST data</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;name=value&quot;</span><span class="w"> </span>https://api.example.com
+
+<span class="c1"># POST JSON</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;key&quot;:&quot;value&quot;}&#39;</span><span class="w"> </span>https://api.example.com
+
+<span class="c1"># With authentication</span>
+curl<span class="w"> </span>-u<span class="w"> </span>username:password<span class="w"> </span>https://api.example.com
+
+<span class="c1"># Download with progress bar</span>
+curl<span class="w"> </span>-#<span class="w"> </span>-O<span class="w"> </span>https://example.com/largefile.zip
+</code></pre></div></td></tr></table></div>
+<h3 id="curl-for-api-testing">Curl for API Testing</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># GET request with headers</span>
+curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer token123&quot;</span><span class="w"> </span>https://api.example.com/data
+
+<span class="c1"># PUT request</span>
+curl<span class="w"> </span>-X<span class="w"> </span>PUT<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;status&quot;:&quot;updated&quot;}&#39;</span><span class="w"> </span>https://api.example.com/item/1
+
+<span class="c1"># DELETE request</span>
+curl<span class="w"> </span>-X<span class="w"> </span>DELETE<span class="w"> </span>https://api.example.com/item/1
+
+<span class="c1"># See timing information</span>
+curl<span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;@curl-format.txt&quot;</span><span class="w"> </span>-o<span class="w"> </span>/dev/null<span class="w"> </span>-s<span class="w"> </span>https://example.com
+</code></pre></div></td></tr></table></div>
+<h2 id="the-wget-command-download-files">The Wget Command: Download Files</h2>
+<p>The <strong>wget command</strong> is specialized for downloading files. It's simpler than curl but better for recursive downloads and continuing interrupted transfers.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Basic download</span>
+wget<span class="w"> </span>https://example.com/file.zip
+
+<span class="c1"># Save with different name</span>
+wget<span class="w"> </span>-O<span class="w"> </span>myfile.zip<span class="w"> </span>https://example.com/file.zip
+
+<span class="c1"># Continue interrupted download</span>
+wget<span class="w"> </span>-c<span class="w"> </span>https://example.com/largefile.zip
+
+<span class="c1"># Download in background</span>
+wget<span class="w"> </span>-b<span class="w"> </span>https://example.com/file.zip
+
+<span class="c1"># Download entire website (mirror)</span>
+wget<span class="w"> </span>-m<span class="w"> </span>-p<span class="w"> </span>-k<span class="w"> </span>https://example.com
+
+<span class="c1"># Limit download speed</span>
+wget<span class="w"> </span>--limit-rate<span class="o">=</span>1m<span class="w"> </span>https://example.com/file.zip
+
+<span class="c1"># Download multiple files from list</span>
+wget<span class="w"> </span>-i<span class="w"> </span>urls.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="curl-vs-wget">Curl vs Wget</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>curl</th>
+<th>wget</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Protocols</td>
+<td>Many (HTTP, FTP, SFTP, SCP, etc.)</td>
+<td>HTTP, HTTPS, FTP</td>
+</tr>
+<tr>
+<td>Recursive download</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Resume downloads</td>
+<td>Manual</td>
+<td>Automatic with -c</td>
+</tr>
+<tr>
+<td>API testing</td>
+<td>Excellent</td>
+<td>Basic</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>stdout by default</td>
+<td>File by default</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wifi-configuration-wireless-networking">WiFi Configuration: Wireless Networking</h2>
+<p><strong>WiFi configuration</strong> on Linux can be done through various tools depending on your distribution.</p>
+<h3 id="using-networkmanager-most-distributions">Using NetworkManager (Most Distributions)</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># List available networks</span>
+nmcli<span class="w"> </span>device<span class="w"> </span>wifi<span class="w"> </span>list
+
+<span class="c1"># Connect to a network</span>
+nmcli<span class="w"> </span>device<span class="w"> </span>wifi<span class="w"> </span>connect<span class="w"> </span><span class="s2">&quot;NetworkName&quot;</span><span class="w"> </span>password<span class="w"> </span><span class="s2">&quot;password123&quot;</span>
+
+<span class="c1"># Show saved connections</span>
+nmcli<span class="w"> </span>connection<span class="w"> </span>show
+
+<span class="c1"># Disconnect</span>
+nmcli<span class="w"> </span>device<span class="w"> </span>disconnect<span class="w"> </span>wlan0
+
+<span class="c1"># Show WiFi status</span>
+nmcli<span class="w"> </span>device<span class="w"> </span>status
+</code></pre></div></td></tr></table></div>
+<h3 id="using-wpa_supplicant-lower-level">Using wpa_supplicant (Lower Level)</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Scan for networks</span>
+sudo<span class="w"> </span>iwlist<span class="w"> </span>wlan0<span class="w"> </span>scan<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>ESSID
+
+<span class="c1"># Check wireless interface</span>
+iwconfig<span class="w"> </span>wlan0
+
+<span class="c1"># Show signal strength</span>
+watch<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="s2">&quot;iwconfig wlan0 | grep Signal&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="wifi-troubleshooting">WiFi Troubleshooting</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check if WiFi interface exists</span>
+ip<span class="w"> </span>link<span class="w"> </span>show<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>wlan
+
+<span class="c1"># Check driver loaded</span>
+lsmod<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>wireless
+
+<span class="c1"># Restart NetworkManager</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>NetworkManager
+
+<span class="c1"># View connection logs</span>
+journalctl<span class="w"> </span>-u<span class="w"> </span>NetworkManager<span class="w"> </span>-f
+</code></pre></div></td></tr></table></div>
+<h2 id="network-troubleshooting-debug-like-a-pro">Network Troubleshooting: Debug Like a Pro</h2>
+<p><strong>Network troubleshooting</strong> is a systematic process. When "the internet is broken," here's how to figure out what's actually wrong.</p>
+<h3 id="the-troubleshooting-ladder">The Troubleshooting Ladder</h3>
+<p>Work from bottom to top:</p>
+<ol>
+<li><strong>Physical</strong>: Is the cable plugged in? Is WiFi enabled?</li>
+<li><strong>Link</strong>: Do you have a connection to the router?</li>
+<li><strong>IP</strong>: Do you have an IP address?</li>
+<li><strong>Gateway</strong>: Can you reach your router?</li>
+<li><strong>Internet</strong>: Can you reach external IPs?</li>
+<li><strong>DNS</strong>: Can you resolve domain names?</li>
+<li><strong>Application</strong>: Does the specific service work?</li>
+</ol>
+<h3 id="step-by-step-network-debugging">Step-by-Step Network Debugging</h3>
+<p>Here's a complete example of debugging an internet outage:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># network-debug.sh - Systematic network troubleshooting</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== Network Troubleshooting ===&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c1"># Step 1: Check if network interfaces exist</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Step 1: Checking network interfaces...&quot;</span>
+ip<span class="w"> </span>link<span class="w"> </span>show<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;eth|wlan|enp|wlp&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-5
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c1"># Step 2: Check for IP address</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Step 2: Checking IP addresses...&quot;</span>
+ip<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;inet &quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;PROBLEM: No IP address assigned!&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Try: sudo dhclient eth0&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c1"># Step 3: Check default gateway</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Step 3: Checking default gateway...&quot;</span>
+<span class="nv">GATEWAY</span><span class="o">=</span><span class="k">$(</span>ip<span class="w"> </span>route<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>default<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $3}&#39;</span><span class="k">)</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GATEWAY</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;PROBLEM: No default gateway!&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Gateway: </span><span class="nv">$GATEWAY</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c1"># Step 4: Ping the gateway</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Step 4: Pinging gateway...&quot;</span>
+ping<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nv">$GATEWAY</span><span class="w"> </span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;PROBLEM: Cannot reach gateway!&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Check: Physical connection, WiFi signal&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Gateway is reachable&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c1"># Step 5: Ping external IP (Google DNS)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Step 5: Pinging external IP (8.8.8.8)...&quot;</span>
+ping<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">8</span>.8.8.8<span class="w"> </span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;PROBLEM: Cannot reach internet!&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Check: Router configuration, ISP status&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Internet is reachable&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c1"># Step 6: Test DNS resolution</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Step 6: Testing DNS resolution...&quot;</span>
+nslookup<span class="w"> </span>google.com<span class="w"> </span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;PROBLEM: DNS is not working!&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Try: Change DNS servers in /etc/resolv.conf&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;     nameserver 8.8.8.8&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;     nameserver 1.1.1.1&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;DNS is working&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c1"># Step 7: Test HTTP connection</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Step 7: Testing HTTP connection...&quot;</span>
+curl<span class="w"> </span>-s<span class="w"> </span>--connect-timeout<span class="w"> </span><span class="m">5</span><span class="w"> </span>https://google.com<span class="w"> </span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;PROBLEM: HTTP connections failing!&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Check: Firewall, proxy settings&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;HTTP is working&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== All tests passed! Network is working. ===&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="quick-debug-commands">Quick Debug Commands</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check everything quickly</span>
+ip<span class="w"> </span>a<span class="w">                              </span><span class="c1"># Your IP addresses</span>
+ip<span class="w"> </span>r<span class="w">                              </span><span class="c1"># Your routes</span>
+cat<span class="w"> </span>/etc/resolv.conf<span class="w">              </span><span class="c1"># Your DNS servers</span>
+ping<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">8</span>.8.8.8<span class="w">                 </span><span class="c1"># Can reach internet?</span>
+ping<span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span>google.com<span class="w">              </span><span class="c1"># DNS working?</span>
+curl<span class="w"> </span>-I<span class="w"> </span>https://google.com<span class="w">        </span><span class="c1"># HTTP working?</span>
+</code></pre></div></td></tr></table></div>
+<details>
+<summary>MicroSim: Network Troubleshooting Simulator</summary>
+<p><strong>Description:</strong> Interactive simulation where students diagnose network problems.</p>
+<p><strong>Layout:</strong>
+- Network diagram: Computer → Switch → Router → Firewall → Internet → DNS → Website
+- Control panel to "break" different components
+- Terminal panel showing command outputs
+- Status indicators for each component</p>
+<p><strong>Scenarios:</strong>
+1. Cable unplugged (no link light)
+2. No DHCP (no IP address)
+3. Wrong gateway (can't reach internet)
+4. DNS failure (can ping IP but not domains)
+5. Firewall blocking (connection refused/timeout)
+6. Website down (everything else works)</p>
+<p><strong>Interactivity:</strong>
+- Click components to "break" them
+- Type commands in terminal (ping, traceroute, etc.)
+- See realistic output based on what's broken
+- Hints available for each scenario
+- Score/timer for gamification</p>
+<p><strong>Learning Goals:</strong>
+- Understand the troubleshooting ladder
+- Learn to isolate problems systematically
+- Practice reading command output</p>
+<p><strong>Skill:</strong> Use microsim-p5 to implement this visualization</p>
+</details>
+<h3 id="the-wait-for-network-script">The "Wait for Network" Script</h3>
+<p>Here's a script that beeps when your network comes back up—perfect for when you're waiting for your ISP to fix an outage:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># wait-for-network.sh - Beep when network comes back up</span>
+<span class="c1">#</span>
+<span class="c1"># Usage: ./wait-for-network.sh [host] [interval]</span>
+<span class="c1">#   host: IP or domain to ping (default: 8.8.8.8)</span>
+<span class="c1">#   interval: seconds between checks (default: 5)</span>
+
+<span class="nv">HOST</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="nv">8</span><span class="p">.8.8.8</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nv">INTERVAL</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">2</span><span class="k">:-</span><span class="nv">5</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Waiting for network connection to </span><span class="nv">$HOST</span><span class="s2">...&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Checking every </span><span class="nv">$INTERVAL</span><span class="s2"> seconds. Press Ctrl+C to stop.&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+
+<span class="c1"># Counter for attempts</span>
+<span class="nv">ATTEMPTS</span><span class="o">=</span><span class="m">0</span>
+
+<span class="k">while</span><span class="w"> </span>true<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nv">ATTEMPTS</span><span class="o">=</span><span class="k">$((</span><span class="nv">ATTEMPTS</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span>
+
+<span class="w">    </span><span class="c1"># Try to ping</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span><span class="w"> </span>-W<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$HOST</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;==========================================&quot;</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;NETWORK IS BACK UP!&quot;</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Successfully reached </span><span class="nv">$HOST</span><span class="s2">&quot;</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;After </span><span class="nv">$ATTEMPTS</span><span class="s2"> attempts&quot;</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;==========================================&quot;</span>
+
+<span class="w">        </span><span class="c1"># Beep! (multiple methods for compatibility)</span>
+<span class="w">        </span><span class="c1"># Method 1: Terminal bell</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;\a&quot;</span>
+
+<span class="w">        </span><span class="c1"># Method 2: Speaker beep (if available)</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nb">command</span><span class="w"> </span>-v<span class="w"> </span>beep<span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span>beep<span class="w"> </span>-f<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-l<span class="w"> </span><span class="m">500</span><span class="w"> </span>-r<span class="w"> </span><span class="m">3</span>
+<span class="w">        </span><span class="k">fi</span>
+
+<span class="w">        </span><span class="c1"># Method 3: PulseAudio beep</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nb">command</span><span class="w"> </span>-v<span class="w"> </span>paplay<span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span>paplay<span class="w"> </span>/usr/share/sounds/freedesktop/stereo/complete.oga<span class="w"> </span><span class="m">2</span>&gt;/dev/null
+<span class="w">        </span><span class="k">fi</span>
+
+<span class="w">        </span><span class="c1"># Method 4: macOS specific</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$OSTYPE</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;darwin&quot;</span>*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span>afplay<span class="w"> </span>/System/Library/Sounds/Glass.aiff
+<span class="w">            </span>say<span class="w"> </span><span class="s2">&quot;Network is back up&quot;</span>
+<span class="w">        </span><span class="k">fi</span>
+
+<span class="w">        </span><span class="c1"># Exit successfully</span>
+<span class="w">        </span><span class="nb">exit</span><span class="w"> </span><span class="m">0</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="c1"># Still down, show progress</span>
+<span class="w">        </span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;\rAttempt </span><span class="nv">$ATTEMPTS</span><span class="s2">: Network still down... &quot;</span>
+<span class="w">    </span><span class="k">fi</span>
+
+<span class="w">    </span>sleep<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$INTERVAL</span><span class="s2">&quot;</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<p>Make it executable and run:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>wait-for-network.sh
+
+<span class="c1"># Wait for Google DNS</span>
+./wait-for-network.sh
+
+<span class="c1"># Wait for specific host</span>
+./wait-for-network.sh<span class="w"> </span>example.com
+
+<span class="c1"># Check every 2 seconds</span>
+./wait-for-network.sh<span class="w"> </span><span class="m">8</span>.8.8.8<span class="w"> </span><span class="m">2</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition success">
+<p class="admonition-title">Pro Tip: Background It</p>
+<p>Run the script in the background while you do other things:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./wait-for-network.sh<span class="w"> </span><span class="p">&amp;</span>
+</code></pre></div></td></tr></table></div>
+You'll hear the beep when the network returns!</p>
+</div>
+<details>
+<summary>MicroSim: Packet Journey Through the Internet</summary>
+<p><strong>Description:</strong> Comprehensive animated visualization showing how data travels across the internet.</p>
+<p><strong>Layout:</strong>
+- Full network diagram with multiple paths
+- Your computer → Local network → ISP → Internet backbone → Destination
+- Multiple potential routes shown
+- Firewalls, routers, DNS servers all visible</p>
+<p><strong>Journey Steps:</strong>
+1. Application creates data
+2. Data broken into packets
+3. Packets get IP headers
+4. ARP resolves gateway MAC
+5. Packets sent to gateway
+6. Router forwards based on routing table
+7. Packets traverse multiple hops
+8. NAT translation occurs
+9. Packets reach destination
+10. Response travels back</p>
+<p><strong>Interactivity:</strong>
+- Follow a single packet (highlight its journey)
+- Speed control (slow-mo to understand, fast to see volume)
+- Click any node to see its routing table
+- Inject failures at any point
+- Toggle encryption visualization (HTTPS wrapping)
+- Show/hide different protocol layers</p>
+<p><strong>Failure Simulations:</strong>
+- DNS server unreachable
+- Router failure (show alternate routing)
+- Firewall blocks connection
+- Packet loss (some packets disappear)
+- High latency (packets slow down)</p>
+<p><strong>Skill:</strong> Use microsim-p5 to implement this visualization</p>
+</details>
+<h2 id="putting-it-all-together-network-commands-cheat-sheet">Putting It All Together: Network Commands Cheat Sheet</h2>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show IP addresses</td>
+<td><code>ip addr show</code></td>
+</tr>
+<tr>
+<td>Show routing table</td>
+<td><code>ip route show</code></td>
+</tr>
+<tr>
+<td>Test connectivity</td>
+<td><code>ping -c 4 host</code></td>
+</tr>
+<tr>
+<td>Trace route to host</td>
+<td><code>traceroute host</code></td>
+</tr>
+<tr>
+<td>Show listening ports</td>
+<td><code>ss -tulnp</code></td>
+</tr>
+<tr>
+<td>Look up DNS</td>
+<td><code>nslookup domain</code></td>
+</tr>
+<tr>
+<td>Download file</td>
+<td><code>wget URL</code> or <code>curl -O URL</code></td>
+</tr>
+<tr>
+<td>Test HTTP response</td>
+<td><code>curl -I URL</code></td>
+</tr>
+<tr>
+<td>Show WiFi networks</td>
+<td><code>nmcli device wifi list</code></td>
+</tr>
+<tr>
+<td>Connect to WiFi</td>
+<td><code>nmcli device wifi connect "SSID" password "pass"</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>Congratulations, network ninja! You now understand:</p>
+<ul>
+<li><strong>IP addresses</strong>: Your computer's identity on the network</li>
+<li><strong>MAC addresses</strong>: Hardware-level identifiers</li>
+<li><strong>DNS</strong>: The phone book that maps names to IPs</li>
+<li><strong>Interfaces</strong>: Your connection points to networks</li>
+<li><strong>Ping</strong>: Testing if a host is reachable</li>
+<li><strong>Traceroute</strong>: Mapping the path to a destination</li>
+<li><strong>Ports</strong>: Service addresses on a computer</li>
+<li><strong>curl/wget</strong>: Transferring data from the internet</li>
+<li><strong>Troubleshooting</strong>: Systematic approach to finding problems</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">You're Network-Savvy Now!</p>
+<p>The next time someone says "the internet is broken," you'll be the one who figures out it's actually DNS. (It's always DNS.)</p>
+</div>
+<h2 id="whats-next">What's Next?</h2>
+<p>Now that you understand networking, it's time to connect SECURELY! The next chapter covers SSH—the secure way to access remote systems.</p>
+<hr />
+<details class="question">
+<summary>Quick Quiz: Networking Fundamentals</summary>
+</details>
+<ol>
+<li>What's the difference between an IP address and a MAC address?</li>
+<li>What command shows your computer's IP address?</li>
+<li>What does DNS do?</li>
+<li>How would you test if a remote server is reachable?</li>
+<li>What's the difference between <code>ping</code> and <code>traceroute</code>?</li>
+<li>Which port does HTTPS use?</li>
+<li>If you can ping 8.8.8.8 but not google.com, what's likely broken?</li>
+</ol>
+<details class="note">
+<summary>Quiz Answers</summary>
+</details>
+<ol>
+<li>IP is assigned by network and can change; MAC is hardware-burned and permanent</li>
+<li><code>ip addr show</code> (or <code>hostname -I</code> for just the IP)</li>
+<li>Translates domain names (like google.com) into IP addresses</li>
+<li><code>ping hostname</code> or <code>ping ip-address</code></li>
+<li><code>ping</code> tests if a host is reachable; <code>traceroute</code> shows every hop along the path</li>
+<li>Port 443</li>
+<li>DNS is broken (you can reach the internet but can't resolve names)</li>
+</ol>
 
 
 
@@ -1580,7 +4044,7 @@
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../js/extra.css"></script>
+        <script src="../../js/extra.js"></script>
       
     
   </body>

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+        <meta name="description" content="Master Linux's permission system for security and collaboration">
       
       
         <meta name="author" content="Dan McCreary">
@@ -52,7 +52,7 @@
       
     
     
-      <link rel="stylesheet" href="../../styles/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -75,7 +75,7 @@
       
         <meta  property="og:title"  content="File Permissions and Ownership - Learning Linux" >
       
-        <meta  property="og:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  property="og:description"  content="Master Linux's permission system for security and collaboration" >
       
         <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/07-permissions/index.png" >
       
@@ -91,7 +91,7 @@
       
         <meta  name="twitter:title"  content="File Permissions and Ownership - Learning Linux" >
       
-        <meta  name="twitter:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  name="twitter:description"  content="Master Linux's permission system for security and collaboration" >
       
         <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/07-permissions/index.png" >
       
@@ -214,7 +214,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -259,7 +259,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -439,8 +439,6 @@
           
         
       
-        
-          
         
       
         
@@ -691,6 +689,492 @@
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-bouncer-at-the-file-club-understanding-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Bouncer at the File Club: Understanding Permissions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#users-and-groups-whos-who-in-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Users and Groups: Who's Who in Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Users and Groups: Who's Who in Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Accounts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-root-user-the-all-powerful-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Root User: The All-Powerful Admin
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-permission-trio-read-write-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Permission Trio: Read, Write, Execute
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Permission Trio: Read, Write, Execute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-permission-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      Read Permission (r)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-permission-w" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write Permission (w)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute-permission-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execute Permission (x)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-categories-owner-group-others" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three Categories: Owner, Group, Others
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Three Categories: Owner, Group, Others">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#owner-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Owner Permissions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group Permissions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Permissions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-permission-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Permission Notation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reading Permission Notation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-permission-bits-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Permission Bits Breakdown
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numeric-permissions-the-octal-way" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numeric Permissions: The Octal Way
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Numeric Permissions: The Octal Way">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-permission-calculator-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Permission Calculator MicroSim
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-permissions-the-chmod-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing Permissions: The Chmod Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changing Permissions: The Chmod Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbolic-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symbolic Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numeric-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numeric Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursive-permission-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursive Permission Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-ownership-chown-and-chgrp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing Ownership: Chown and Chgrp
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changing Ownership: Chown and Chgrp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-chown-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Chown Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-chgrp-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Chgrp Command
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-permissions-umask" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Permissions: Umask
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Default Permissions: Umask">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-umask" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Umask
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-umask" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Umask
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-power-of-sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Power of Sudo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Power of Sudo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-sudo-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Sudo Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-sudo-instead-of-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Sudo Instead of Root?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-su-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Su Command
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-permissions-the-extra-bits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Permissions: The Extra Bits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special Permissions: The Extra Bits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-setuid-bit" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Setuid Bit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-setgid-bit" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Setgid Bit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-sticky-bit" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Sticky Bit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-permission-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Permission Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special Permission Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-special-permissions-visualized" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Special Permissions Visualized
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-permission-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Permission Scenarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Permission Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-setting-up-a-shared-project-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 1: Setting Up a Shared Project Directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-protecting-ssh-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 2: Protecting SSH Keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-web-server-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 3: Web Server Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-script-that-needs-to-be-executable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 4: Script That Needs to Be Executable
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permission-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permission Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permission-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permission Cheat Sheet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
     </span>
   </a>
   
@@ -1048,7 +1532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../24-customization/" class="md-nav__link">
+      <a href="../24-customization/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,6 +1657,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1186,7 +1678,7 @@
         
   
   
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1424,6 +1916,492 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#the-bouncer-at-the-file-club-understanding-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Bouncer at the File Club: Understanding Permissions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#users-and-groups-whos-who-in-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Users and Groups: Who's Who in Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Users and Groups: Who's Who in Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Accounts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-root-user-the-all-powerful-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Root User: The All-Powerful Admin
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-permission-trio-read-write-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Permission Trio: Read, Write, Execute
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Permission Trio: Read, Write, Execute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-permission-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      Read Permission (r)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-permission-w" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write Permission (w)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute-permission-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execute Permission (x)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-categories-owner-group-others" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three Categories: Owner, Group, Others
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Three Categories: Owner, Group, Others">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#owner-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Owner Permissions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group Permissions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Permissions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-permission-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Permission Notation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reading Permission Notation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-permission-bits-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Permission Bits Breakdown
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numeric-permissions-the-octal-way" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numeric Permissions: The Octal Way
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Numeric Permissions: The Octal Way">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-permission-calculator-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Permission Calculator MicroSim
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-permissions-the-chmod-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing Permissions: The Chmod Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changing Permissions: The Chmod Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbolic-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symbolic Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numeric-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numeric Mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursive-permission-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursive Permission Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-ownership-chown-and-chgrp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing Ownership: Chown and Chgrp
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changing Ownership: Chown and Chgrp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-chown-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Chown Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-chgrp-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Chgrp Command
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-permissions-umask" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Permissions: Umask
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Default Permissions: Umask">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-umask" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Umask
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-umask" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Umask
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-power-of-sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Power of Sudo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Power of Sudo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-sudo-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Sudo Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-sudo-instead-of-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Sudo Instead of Root?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-su-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Su Command
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-permissions-the-extra-bits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Permissions: The Extra Bits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special Permissions: The Extra Bits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-setuid-bit" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Setuid Bit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-setgid-bit" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Setgid Bit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-sticky-bit" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Sticky Bit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-permission-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Permission Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special Permission Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-special-permissions-visualized" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Special Permissions Visualized
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-permission-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Permission Scenarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Permission Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-setting-up-a-shared-project-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 1: Setting Up a Shared Project Directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-protecting-ssh-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 2: Protecting SSH Keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-web-server-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 3: Web Server Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-script-that-needs-to-be-executable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 4: Script That Needs to Be Executable
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permission-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permission Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permission-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permission Cheat Sheet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1439,7 +2417,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/learniing-linux/blob/master/docs/chapters/07-permissions/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/learning-linux/blob/master/docs/chapters/07-permissions/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1486,7 +2464,1366 @@
 <li><a href="../05-file-operations/">Chapter 5: File Operations and Manipulation</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<h2 id="the-bouncer-at-the-file-club-understanding-permissions">The Bouncer at the File Club: Understanding Permissions</h2>
+<p>Imagine every file in Linux has a bouncer standing guard. Before anyone can read, modify, or run that file, the bouncer checks their ID and decides: "Are you allowed to do that?" This bouncer is the <strong>file permissions</strong> system, and it's one of the most important security features in Linux.</p>
+<p>In Windows, you might be used to files being pretty open—most files can be read by anyone, and viruses can spread easily. Linux takes a different approach: <strong>everything is locked down by default</strong>, and you have to explicitly grant access. This is why Linux servers run most of the internet—they're much harder to hack!</p>
+<p>In this chapter, you'll learn:</p>
+<ul>
+<li>Who can access files (users, groups, everyone)</li>
+<li>What they can do (read, write, execute)</li>
+<li>How to change these settings</li>
+<li>The all-powerful root user and how to use sudo safely</li>
+</ul>
+<p>Let's become the master of the bouncers!</p>
+<h2 id="users-and-groups-whos-who-in-linux">Users and Groups: Who's Who in Linux</h2>
+<p>Before we dive into permissions, we need to understand who Linux is protecting files FROM and FOR.</p>
+<h3 id="user-accounts">User Accounts</h3>
+<p>Every person (and many programs) that uses a Linux system has a <strong>user account</strong>. Your user account has:</p>
+<ul>
+<li>A <strong>username</strong> (like <code>dan</code> or <code>alice</code>)</li>
+<li>A <strong>user ID (UID)</strong> - a number that uniquely identifies you</li>
+<li>A <strong>home directory</strong> (usually <code>/home/username</code>)</li>
+<li>A <strong>default shell</strong> (the command interpreter you use)</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See your username</span>
+whoami
+<span class="c1"># dan</span>
+
+<span class="c1"># See your user ID and group memberships</span>
+id
+<span class="c1"># uid=1000(dan) gid=1000(dan) groups=1000(dan),27(sudo),100(users)</span>
+
+<span class="c1"># See all users on the system</span>
+cat<span class="w"> </span>/etc/passwd
+</code></pre></div></td></tr></table></div>
+<p>The <code>/etc/passwd</code> file contains information about all users. Each line looks like:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>dan:x:1000:1000:Dan McCreary:/home/dan:/bin/bash
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dan</code></td>
+<td>Username</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>Password (stored elsewhere)</td>
+</tr>
+<tr>
+<td><code>1000</code></td>
+<td>User ID (UID)</td>
+</tr>
+<tr>
+<td><code>1000</code></td>
+<td>Primary Group ID (GID)</td>
+</tr>
+<tr>
+<td><code>Dan McCreary</code></td>
+<td>Full name/description</td>
+</tr>
+<tr>
+<td><code>/home/dan</code></td>
+<td>Home directory</td>
+</tr>
+<tr>
+<td><code>/bin/bash</code></td>
+<td>Default shell</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user-groups">User Groups</h3>
+<p>A <strong>user group</strong> is a collection of users. Groups make it easy to give the same permissions to multiple people. For example:</p>
+<ul>
+<li><code>developers</code> group - all programmers on a team</li>
+<li><code>sudo</code> group - users who can run admin commands</li>
+<li><code>www-data</code> group - users who can modify web server files</li>
+</ul>
+<p>Every user has:</p>
+<ul>
+<li><strong>Primary group</strong> - your main group (usually same name as your username)</li>
+<li><strong>Secondary groups</strong> - additional groups you belong to</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See your groups</span>
+groups
+<span class="c1"># dan sudo users docker</span>
+
+<span class="c1"># See groups for a specific user</span>
+groups<span class="w"> </span>alice
+<span class="c1"># alice : alice developers sudo</span>
+</code></pre></div></td></tr></table></div>
+<p>The <strong>primary group</strong> is assigned to files you create by default. <strong>Secondary groups</strong> give you additional access to shared resources.</p>
+<h3 id="the-root-user-the-all-powerful-admin">The Root User: The All-Powerful Admin</h3>
+<p>The <strong>root user</strong> (also called "superuser") is the administrator account with UID 0. Root can:</p>
+<ul>
+<li>Read, write, and delete ANY file</li>
+<li>Change ANY permission</li>
+<li>Install software system-wide</li>
+<li>Manage users and groups</li>
+<li>Basically do ANYTHING</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Root&#39;s home directory is /root (not /home/root)</span>
+<span class="c1"># Root&#39;s UID is always 0</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition danger">
+<p class="admonition-title">With Great Power...</p>
+<p>The root account can destroy your entire system with a single command. That's why you should NEVER log in as root for everyday work. Instead, use <code>sudo</code> for specific commands that need admin privileges. We'll cover that soon!</p>
+</div>
+<h2 id="the-permission-trio-read-write-execute">The Permission Trio: Read, Write, Execute</h2>
+<p>Every file and directory in Linux has three types of permissions:</p>
+<h3 id="read-permission-r">Read Permission (r)</h3>
+<p><strong>Read permission</strong> allows you to view the contents of a file or list the contents of a directory.</p>
+<ul>
+<li>For files: You can <code>cat</code>, <code>less</code>, <code>head</code>, or otherwise view the file</li>
+<li>For directories: You can <code>ls</code> the directory to see what's inside</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># If you have read permission:</span>
+cat<span class="w"> </span>secret.txt<span class="w">       </span><span class="c1"># Works!</span>
+less<span class="w"> </span>document.pdf<span class="w">    </span><span class="c1"># Works!</span>
+
+<span class="c1"># Without read permission:</span>
+cat<span class="w"> </span>secret.txt
+<span class="c1"># cat: secret.txt: Permission denied</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="write-permission-w">Write Permission (w)</h3>
+<p><strong>Write permission</strong> allows you to modify a file or add/remove files in a directory.</p>
+<ul>
+<li>For files: You can edit, append to, or truncate the file</li>
+<li>For directories: You can create, delete, or rename files inside</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># If you have write permission:</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;new content&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>file.txt<span class="w">    </span><span class="c1"># Works!</span>
+rm<span class="w"> </span>file.txt<span class="w">                       </span><span class="c1"># Works!</span>
+
+<span class="c1"># Without write permission:</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;data&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>file.txt
+<span class="c1"># bash: file.txt: Permission denied</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="execute-permission-x">Execute Permission (x)</h3>
+<p><strong>Execute permission</strong> allows you to run a file as a program or enter a directory.</p>
+<ul>
+<li>For files: You can run the file as a script or program</li>
+<li>For directories: You can <code>cd</code> into the directory</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># If you have execute permission on a script:</span>
+./myscript.sh<span class="w">        </span><span class="c1"># Works!</span>
+
+<span class="c1"># Without execute permission:</span>
+./myscript.sh
+<span class="c1"># bash: ./myscript.sh: Permission denied</span>
+
+<span class="c1"># For directories, you need execute to enter them:</span>
+<span class="nb">cd</span><span class="w"> </span>/some/directory<span class="w">   </span><span class="c1"># Needs execute permission on directory</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Directory Permissions Are Tricky!</p>
+<p>For directories, permissions work a bit differently:
+- <strong>Read (r)</strong>: Can list files (<code>ls</code>)
+- <strong>Write (w)</strong>: Can create/delete files inside
+- <strong>Execute (x)</strong>: Can enter the directory (<code>cd</code>) and access files</p>
+<p>You typically need BOTH read AND execute to usefully browse a directory. Execute alone lets you access files if you know their names, but you can't list them!</p>
+</div>
+<h2 id="the-three-categories-owner-group-others">The Three Categories: Owner, Group, Others</h2>
+<p>Linux assigns permissions to three categories of users:</p>
+<h3 id="owner-permissions">Owner Permissions</h3>
+<p>The <strong>owner</strong> (also called "user") is the person who created the file. <strong>Owner permissions</strong> define what the file's owner can do.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>-l<span class="w"> </span>myfile.txt
+<span class="c1"># -rw-r--r-- 1 dan developers 1024 Dec 6 10:00 myfile.txt</span>
+<span class="c1">#              ^^^</span>
+<span class="c1">#              Owner is &quot;dan&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="group-permissions">Group Permissions</h3>
+<p><strong>Group permissions</strong> apply to all members of the file's group. Anyone in the <code>developers</code> group (in the example above) gets these permissions.</p>
+<h3 id="other-permissions">Other Permissions</h3>
+<p><strong>Other permissions</strong> (sometimes called "world" permissions) apply to EVERYONE ELSE—any user who isn't the owner and isn't in the file's group.</p>
+<p>Think of it like a party:</p>
+<ul>
+<li><strong>Owner</strong>: You (the host)</li>
+<li><strong>Group</strong>: Your friends on the guest list</li>
+<li><strong>Others</strong>: Random strangers off the street</li>
+</ul>
+<p>You probably want to give yourself full access, your friends some access, and strangers very limited access!</p>
+<h2 id="reading-permission-notation">Reading Permission Notation</h2>
+<p>When you run <code>ls -l</code>, you see permissions displayed in a specific format called <strong>permission notation</strong>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>ls<span class="w"> </span>-l
+<span class="c1"># -rwxr-xr-- 1 dan developers 4096 Dec 6 10:00 script.sh</span>
+</code></pre></div></td></tr></table></div>
+<p>Let's decode <code>-rwxr-xr--</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Position</th>
+<th>Characters</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>-</code></td>
+<td>File type (- = file, d = directory, l = link)</td>
+</tr>
+<tr>
+<td>2-4</td>
+<td><code>rwx</code></td>
+<td>Owner permissions (read, write, execute)</td>
+</tr>
+<tr>
+<td>5-7</td>
+<td><code>r-x</code></td>
+<td>Group permissions (read, no write, execute)</td>
+</tr>
+<tr>
+<td>8-10</td>
+<td><code>r--</code></td>
+<td>Other permissions (read only)</td>
+</tr>
+</tbody>
+</table>
+<p>The permission string is always 10 characters:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>-rwxr-xr--
+│├─┤├─┤├─┤
+│ │  │  └── Others: r-- (read only)
+│ │  └── Group: r-x (read and execute)
+│ └── Owner: rwx (read, write, execute)
+└── File type: - (regular file)
+</code></pre></div></td></tr></table></div>
+<p><strong>Quick reference:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Letter</th>
+<th>Permission</th>
+<th>Numeric Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>r</code></td>
+<td>Read</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>w</code></td>
+<td>Write</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>Execute</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>No permission</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-permission-bits-breakdown">Diagram: Permission Bits Breakdown</h4>
+<details>
+<summary>Understanding Permission Notation</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Understand, Remember
+Learning Objective: Help students visualize how the 10-character permission string breaks down into file type and three permission groups.</p>
+<p>Layout: Horizontal breakdown of permission string with labels</p>
+<p>Visual elements:
+- Large permission string: "-rwxr-xr--"
+- Brackets grouping characters
+- Labels for each section
+- Color coding for each category</p>
+<p>Breakdown:
+- Position 1: File type
+  - "-" = regular file
+  - "d" = directory
+  - "l" = symbolic link</p>
+<ul>
+<li>Positions 2-4: Owner permissions (green)</li>
+<li>r = read (4)</li>
+<li>w = write (2)</li>
+<li>
+<p>x = execute (1)</p>
+</li>
+<li>
+<p>Positions 5-7: Group permissions (blue)</p>
+</li>
+<li>r = read (4)</li>
+<li>
+<ul>
+<li>= no permission (0)</li>
+</ul>
+</li>
+<li>
+<p>x = execute (1)</p>
+</li>
+<li>
+<p>Positions 8-10: Other permissions (orange)</p>
+</li>
+<li>r = read (4)</li>
+<li>
+<ul>
+<li>= no permission (0)</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>= no permission (0)</li>
+</ul>
+</li>
+</ul>
+<p>Interactive features:
+- Hover over each character to see explanation
+- Show numeric value calculation below each group
+- Toggle between different example permission strings</p>
+<p>Color scheme:
+- Owner: Green
+- Group: Blue
+- Others: Orange
+- File type: Gray</p>
+<p>Implementation: p5.js or HTML/CSS</p>
+</details>
+<h2 id="numeric-permissions-the-octal-way">Numeric Permissions: The Octal Way</h2>
+<p>While <code>rwx</code> notation is human-readable, there's also a numeric system using <strong>numeric permissions</strong> (also called octal permissions). Each permission has a value:</p>
+<ul>
+<li><strong>r</strong> (read) = 4</li>
+<li><strong>w</strong> (write) = 2</li>
+<li><strong>x</strong> (execute) = 1</li>
+</ul>
+<p>Add them up for each category:</p>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Calculation</th>
+<th>Numeric</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rwx</code></td>
+<td>4+2+1</td>
+<td>7</td>
+</tr>
+<tr>
+<td><code>rw-</code></td>
+<td>4+2+0</td>
+<td>6</td>
+</tr>
+<tr>
+<td><code>r-x</code></td>
+<td>4+0+1</td>
+<td>5</td>
+</tr>
+<tr>
+<td><code>r--</code></td>
+<td>4+0+0</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>-wx</code></td>
+<td>0+2+1</td>
+<td>3</td>
+</tr>
+<tr>
+<td><code>-w-</code></td>
+<td>0+2+0</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>--x</code></td>
+<td>0+0+1</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>---</code></td>
+<td>0+0+0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>So the permission <code>-rwxr-xr--</code> becomes:</p>
+<ul>
+<li>Owner: rwx = 7</li>
+<li>Group: r-x = 5</li>
+<li>Others: r-- = 4</li>
+<li><strong>Combined: 754</strong></li>
+</ul>
+<p>Common permission numbers:</p>
+<table>
+<thead>
+<tr>
+<th>Numeric</th>
+<th>Symbolic</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>755</code></td>
+<td><code>rwxr-xr-x</code></td>
+<td>Executable programs, directories</td>
+</tr>
+<tr>
+<td><code>644</code></td>
+<td><code>rw-r--r--</code></td>
+<td>Regular files (documents, configs)</td>
+</tr>
+<tr>
+<td><code>700</code></td>
+<td><code>rwx------</code></td>
+<td>Private directories</td>
+</tr>
+<tr>
+<td><code>600</code></td>
+<td><code>rw-------</code></td>
+<td>Private files (SSH keys)</td>
+</tr>
+<tr>
+<td><code>777</code></td>
+<td><code>rwxrwxrwx</code></td>
+<td>Everyone can do everything (AVOID!)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Never Use 777</p>
+<p>Setting permissions to <code>777</code> means anyone can read, write, and execute the file. This is almost never what you want and is a major security risk. If something tells you to "just chmod 777 it," find a better solution!</p>
+</div>
+<h4 id="diagram-permission-calculator-microsim">Diagram: Permission Calculator MicroSim</h4>
+<details>
+<summary>Interactive Permission Calculator</summary>
+<p>Type: microsim</p>
+<p>Bloom Taxonomy: Apply, Analyze
+Learning Objective: Allow students to interactively build permission strings by clicking checkboxes and see both symbolic and numeric representations update in real-time.</p>
+<p>Canvas layout (responsive, ~700px max width):
+- Top section: Three columns for Owner, Group, Others
+- Middle section: Resulting permission string and numeric value
+- Bottom section: Common presets and explanations</p>
+<p>Visual elements:
+- 9 checkboxes arranged in 3x3 grid (rwx for each category)
+- Labels: Owner (green), Group (blue), Others (orange)
+- Display: "-rwxrwxrwx" updating as checkboxes change
+- Display: "777" numeric value updating
+- Preset buttons for common permissions</p>
+<p>Interactive controls:
+- 9 checkboxes (r, w, x for each of owner, group, others)
+- Preset buttons: "755 (Program)", "644 (File)", "700 (Private)", "600 (Secret)"
+- Text input to enter numeric permission and see checkboxes update</p>
+<p>Behavior:
+- Click checkbox: Toggle permission on/off
+- Permission string updates immediately
+- Numeric value calculates automatically
+- Click preset: Sets all checkboxes to that permission
+- Enter number: Checkboxes update to match</p>
+<p>Example scenarios:
+- Default starts at 644 (-rw-r--r--)
+- Student clicks execute for owner → becomes 744
+- Student enters "700" → only owner checkboxes checked</p>
+<p>Color scheme:
+- Owner column: Green header
+- Group column: Blue header
+- Others column: Orange header
+- Enabled permission: Filled checkbox
+- Disabled permission: Empty checkbox</p>
+<p>Implementation: p5.js</p>
+</details>
+<h2 id="changing-permissions-the-chmod-command">Changing Permissions: The Chmod Command</h2>
+<p>The <strong>chmod command</strong> (change mode) modifies file permissions. You can use either symbolic or numeric notation.</p>
+<h3 id="symbolic-mode">Symbolic Mode</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Add execute permission for owner</span>
+chmod<span class="w"> </span>u+x<span class="w"> </span>script.sh
+
+<span class="c1"># Remove write permission from group</span>
+chmod<span class="w"> </span>g-w<span class="w"> </span>file.txt
+
+<span class="c1"># Set read permission for others</span>
+chmod<span class="w"> </span><span class="nv">o</span><span class="o">=</span>r<span class="w"> </span>file.txt
+
+<span class="c1"># Add execute for everyone</span>
+chmod<span class="w"> </span>a+x<span class="w"> </span>program
+
+<span class="c1"># Combine multiple changes</span>
+chmod<span class="w"> </span>u+x,g-w,o-r<span class="w"> </span>file.txt
+</code></pre></div></td></tr></table></div>
+<p><strong>Symbolic mode letters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Letter</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>u</code></td>
+<td>User (owner)</td>
+</tr>
+<tr>
+<td><code>g</code></td>
+<td>Group</td>
+</tr>
+<tr>
+<td><code>o</code></td>
+<td>Others</td>
+</tr>
+<tr>
+<td><code>a</code></td>
+<td>All (u+g+o)</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>Add permission</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>Remove permission</td>
+</tr>
+<tr>
+<td><code>=</code></td>
+<td>Set exactly</td>
+</tr>
+</tbody>
+</table>
+<h3 id="numeric-mode">Numeric Mode</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Set to rwxr-xr-x (755)</span>
+chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>script.sh
+
+<span class="c1"># Set to rw-r--r-- (644)</span>
+chmod<span class="w"> </span><span class="m">644</span><span class="w"> </span>document.txt
+
+<span class="c1"># Set to rwx------ (700)</span>
+chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>private/
+
+<span class="c1"># Set to rw------- (600)</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/id_rsa
+</code></pre></div></td></tr></table></div>
+<h3 id="recursive-permission-changes">Recursive Permission Changes</h3>
+<p>Use <code>-R</code> to change permissions on a directory and everything inside:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Make all files in project readable by group</span>
+chmod<span class="w"> </span>-R<span class="w"> </span>g+r<span class="w"> </span>project/
+
+<span class="c1"># Set directory permissions (be careful!)</span>
+chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>website/
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Directories Need Execute</p>
+<p>Remember: directories need execute permission to be entered. A common pattern is:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Files: 644, Directories: 755</span>
+find<span class="w"> </span>/path<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>chmod<span class="w"> </span><span class="m">644</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+find<span class="w"> </span>/path<span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-exec<span class="w"> </span>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+</code></pre></div></td></tr></table></div></p>
+</div>
+<h2 id="changing-ownership-chown-and-chgrp">Changing Ownership: Chown and Chgrp</h2>
+<h3 id="the-chown-command">The Chown Command</h3>
+<p>The <strong>chown command</strong> (change owner) changes who owns a file:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Change owner</span>
+sudo<span class="w"> </span>chown<span class="w"> </span>alice<span class="w"> </span>file.txt
+
+<span class="c1"># Change owner and group</span>
+sudo<span class="w"> </span>chown<span class="w"> </span>alice:developers<span class="w"> </span>file.txt
+
+<span class="c1"># Change only group (note the colon)</span>
+sudo<span class="w"> </span>chown<span class="w"> </span>:developers<span class="w"> </span>file.txt
+
+<span class="c1"># Recursive change</span>
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>alice:developers<span class="w"> </span>project/
+</code></pre></div></td></tr></table></div>
+<p>You usually need <code>sudo</code> to change ownership because you can only "give away" files if you're root.</p>
+<h3 id="the-chgrp-command">The Chgrp Command</h3>
+<p>The <strong>chgrp command</strong> (change group) specifically changes the group ownership:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Change group</span>
+chgrp<span class="w"> </span>developers<span class="w"> </span>file.txt
+
+<span class="c1"># Recursive change</span>
+chgrp<span class="w"> </span>-R<span class="w"> </span>developers<span class="w"> </span>project/
+</code></pre></div></td></tr></table></div>
+<p>You can use <code>chgrp</code> without sudo IF you're a member of the target group.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check what groups you&#39;re in</span>
+groups
+<span class="c1"># dan sudo developers docker</span>
+
+<span class="c1"># This works (you&#39;re in developers)</span>
+chgrp<span class="w"> </span>developers<span class="w"> </span>myfile.txt
+
+<span class="c1"># This fails (you&#39;re not in accounting)</span>
+chgrp<span class="w"> </span>accounting<span class="w"> </span>myfile.txt
+<span class="c1"># chgrp: changing group of &#39;myfile.txt&#39;: Operation not permitted</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="default-permissions-umask">Default Permissions: Umask</h2>
+<p>When you create a new file or directory, what permissions does it get? That's controlled by the <strong>umask command</strong>.</p>
+<h3 id="understanding-umask">Understanding Umask</h3>
+<p>The <strong>default permissions</strong> for new files would be 666 (rw-rw-rw-) and for directories 777 (rwxrwxrwx). But umask SUBTRACTS from these defaults.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See current umask</span>
+<span class="nb">umask</span>
+<span class="c1"># 0022</span>
+
+<span class="c1"># What this means:</span>
+<span class="c1"># Files: 666 - 022 = 644 (rw-r--r--)</span>
+<span class="c1"># Directories: 777 - 022 = 755 (rwxr-xr-x)</span>
+</code></pre></div></td></tr></table></div>
+<p>The umask value removes permissions:</p>
+<table>
+<thead>
+<tr>
+<th>Umask</th>
+<th>File Result</th>
+<th>Directory Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>022</code></td>
+<td>644 (rw-r--r--)</td>
+<td>755 (rwxr-xr-x)</td>
+</tr>
+<tr>
+<td><code>027</code></td>
+<td>640 (rw-r-----)</td>
+<td>750 (rwxr-x---)</td>
+</tr>
+<tr>
+<td><code>077</code></td>
+<td>600 (rw-------)</td>
+<td>700 (rwx------)</td>
+</tr>
+<tr>
+<td><code>000</code></td>
+<td>666 (rw-rw-rw-)</td>
+<td>777 (rwxrwxrwx)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="setting-umask">Setting Umask</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Set umask for current session</span>
+<span class="nb">umask</span><span class="w"> </span><span class="m">027</span>
+
+<span class="c1"># Make it permanent (add to ~/.bashrc)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;umask 027&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+
+<span class="c1"># See umask in symbolic form</span>
+<span class="nb">umask</span><span class="w"> </span>-S
+<span class="c1"># u=rwx,g=rx,o=</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Security Best Practice</p>
+<p>A umask of <code>027</code> is good for shared systems—it means new files are readable by your group but not by random other users. For maximum privacy, use <code>077</code>.</p>
+</div>
+<h2 id="the-power-of-sudo">The Power of Sudo</h2>
+<h3 id="the-sudo-command">The Sudo Command</h3>
+<p>The <strong>sudo command</strong> (superuser do) lets you run a single command as root without logging in as root:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Run a command as root</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+
+<span class="c1"># Edit a protected file</span>
+sudo<span class="w"> </span>nano<span class="w"> </span>/etc/hosts
+
+<span class="c1"># See who can use sudo</span>
+sudo<span class="w"> </span>cat<span class="w"> </span>/etc/sudoers
+</code></pre></div></td></tr></table></div>
+<p>When you run <code>sudo</code>, you're asked for YOUR password (not root's). After entering it, you get a few minutes where you won't be asked again.</p>
+<h3 id="why-sudo-instead-of-root">Why Sudo Instead of Root?</h3>
+<ol>
+<li><strong>Accountability</strong>: sudo logs WHO ran WHAT command</li>
+<li><strong>Precision</strong>: Only specific commands get root power</li>
+<li><strong>Safety</strong>: Less chance of accidentally destroying things</li>
+<li><strong>No root password needed</strong>: Users use their own passwords</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See sudo history</span>
+sudo<span class="w"> </span>cat<span class="w"> </span>/var/log/auth.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>sudo
+</code></pre></div></td></tr></table></div>
+<h3 id="the-su-command">The Su Command</h3>
+<p>The <strong>su command</strong> (switch user) lets you become another user entirely:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Become root (need root password)</span>
+su
+<span class="c1"># Enter root password...</span>
+
+<span class="c1"># Become root with your password (if in sudo group)</span>
+sudo<span class="w"> </span>su
+
+<span class="c1"># Become another user</span>
+su<span class="w"> </span>alice
+<span class="c1"># Enter alice&#39;s password...</span>
+
+<span class="c1"># Become another user with login environment</span>
+su<span class="w"> </span>-<span class="w"> </span>alice
+
+<span class="c1"># Run single command as another user</span>
+su<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;whoami&quot;</span><span class="w"> </span>alice
+</code></pre></div></td></tr></table></div>
+<p>The difference between <code>su</code> and <code>sudo</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>sudo</th>
+<th>su</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Runs</td>
+<td>Single command</td>
+<td>Opens shell session</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>Your password</td>
+<td>Target user's password</td>
+</tr>
+<tr>
+<td>Logging</td>
+<td>Detailed</td>
+<td>Basic</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>One-off admin tasks</td>
+<td>Extended work as another user</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Exit Root Sessions!</p>
+<p>If you use <code>su</code> to become root, don't forget to <code>exit</code> when done! Running as root longer than necessary increases risk of mistakes.</p>
+</div>
+<h2 id="special-permissions-the-extra-bits">Special Permissions: The Extra Bits</h2>
+<p>Beyond the basic rwx permissions, Linux has three <strong>special permissions</strong> that provide additional functionality.</p>
+<h3 id="the-setuid-bit">The Setuid Bit</h3>
+<p>The <strong>setuid bit</strong> (set user ID) makes a program run with the permissions of its OWNER, not the user running it.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See setuid in action</span>
+ls<span class="w"> </span>-l<span class="w"> </span>/usr/bin/passwd
+<span class="c1"># -rwsr-xr-x 1 root root 68208 Dec  5 10:00 /usr/bin/passwd</span>
+<span class="c1">#    ^</span>
+<span class="c1">#    The &#39;s&#39; means setuid is set</span>
+</code></pre></div></td></tr></table></div>
+<p>Why does <code>/usr/bin/passwd</code> need setuid? Because:</p>
+<ol>
+<li>Regular users can change their own password</li>
+<li>But passwords are stored in <code>/etc/shadow</code> which only root can write</li>
+<li>setuid lets <code>passwd</code> run as root temporarily to update the file</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Set setuid (be VERY careful!)</span>
+chmod<span class="w"> </span>u+s<span class="w"> </span>program
+chmod<span class="w"> </span><span class="m">4755</span><span class="w"> </span>program<span class="w">  </span><span class="c1"># 4 = setuid</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="the-setgid-bit">The Setgid Bit</h3>
+<p>The <strong>setgid bit</strong> (set group ID) has two uses:</p>
+<p>For files: Program runs with file's GROUP permissions:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Set setgid on file</span>
+chmod<span class="w"> </span>g+s<span class="w"> </span>program
+chmod<span class="w"> </span><span class="m">2755</span><span class="w"> </span>program<span class="w">  </span><span class="c1"># 2 = setgid</span>
+</code></pre></div></td></tr></table></div>
+<p>For directories: New files inherit the directory's group (great for shared folders!):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Set setgid on directory</span>
+chmod<span class="w"> </span>g+s<span class="w"> </span>shared_folder/
+
+<span class="c1"># Now any file created in shared_folder/</span>
+<span class="c1"># will belong to shared_folder&#39;s group, not creator&#39;s primary group</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="the-sticky-bit">The Sticky Bit</h3>
+<p>The <strong>sticky bit</strong> on a directory means only the file's owner (or root) can delete files, even if others have write permission. This is essential for shared directories like <code>/tmp</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See sticky bit</span>
+ls<span class="w"> </span>-ld<span class="w"> </span>/tmp
+<span class="c1"># drwxrwxrwt 15 root root 4096 Dec  6 10:00 /tmp</span>
+<span class="c1">#          ^</span>
+<span class="c1">#          The &#39;t&#39; means sticky bit is set</span>
+
+<span class="c1"># Set sticky bit</span>
+chmod<span class="w"> </span>+t<span class="w"> </span>shared_directory/
+chmod<span class="w"> </span><span class="m">1755</span><span class="w"> </span>shared_directory/<span class="w">  </span><span class="c1"># 1 = sticky</span>
+</code></pre></div></td></tr></table></div>
+<p>Without sticky bit: Anyone with write permission to <code>/tmp</code> could delete anyone else's temporary files. With sticky bit: You can only delete YOUR files, even though everyone can write to the directory.</p>
+<h3 id="special-permission-summary">Special Permission Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Bit</th>
+<th>Numeric</th>
+<th>On Files</th>
+<th>On Directories</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Setuid</td>
+<td>4xxx</td>
+<td>Run as file owner</td>
+<td>(no effect)</td>
+</tr>
+<tr>
+<td>Setgid</td>
+<td>2xxx</td>
+<td>Run as file group</td>
+<td>New files inherit directory's group</td>
+</tr>
+<tr>
+<td>Sticky</td>
+<td>1xxx</td>
+<td>(legacy)</td>
+<td>Only owner can delete files</td>
+</tr>
+</tbody>
+</table>
+<p>The special bits appear in the execute position:</p>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rws</code></td>
+<td>setuid + execute</td>
+</tr>
+<tr>
+<td><code>rwS</code></td>
+<td>setuid without execute</td>
+</tr>
+<tr>
+<td><code>rwx</code> with <code>s</code> in group</td>
+<td>setgid</td>
+</tr>
+<tr>
+<td><code>rwt</code></td>
+<td>sticky + execute</td>
+</tr>
+<tr>
+<td><code>rwT</code></td>
+<td>sticky without execute</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-special-permissions-visualized">Diagram: Special Permissions Visualized</h4>
+<details>
+<summary>Understanding Special Permission Bits</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Understand, Analyze
+Learning Objective: Illustrate when and why special permissions (setuid, setgid, sticky) are used with real-world examples.</p>
+<p>Layout: Three panels showing each special permission</p>
+<p>Panel 1 - Setuid (red):
+- Icon: User with crown
+- Example: /usr/bin/passwd command
+- Flow diagram showing:
+  - User "dan" runs passwd
+  - Program runs as "root" (owner)
+  - Can write to /etc/shadow
+  - Security: Only trusted programs should have this!</p>
+<p>Panel 2 - Setgid on Directory (blue):
+- Icon: Folder with group badge
+- Example: /shared/projects directory
+- Flow diagram showing:
+  - Directory owned by group "developers"
+  - User creates file
+  - File automatically belongs to "developers" group
+  - Benefit: Team collaboration without manual chgrp</p>
+<p>Panel 3 - Sticky Bit (green):
+- Icon: Folder with lock
+- Example: /tmp directory
+- Flow diagram showing:
+  - All users can write to /tmp
+  - User A creates file
+  - User B tries to delete → DENIED
+  - Only owner or root can delete</p>
+<p>Visual elements:
+- Permission strings showing s/S/t/T
+- Numeric representation (4755, 2775, 1777)
+- Arrow flows for each scenario</p>
+<p>Interactive features:
+- Click each panel for detailed walkthrough
+- Show before/after permissions
+- Quiz: "Which permission prevents others from deleting your /tmp files?"</p>
+<p>Color scheme:
+- Setuid: Red/orange (danger, power)
+- Setgid: Blue (teamwork)
+- Sticky: Green (protection)</p>
+<p>Implementation: p5.js or HTML/CSS</p>
+</details>
+<h2 id="practical-permission-scenarios">Practical Permission Scenarios</h2>
+<p>Let's apply everything we've learned to real situations!</p>
+<h3 id="scenario-1-setting-up-a-shared-project-directory">Scenario 1: Setting Up a Shared Project Directory</h3>
+<p>Your team needs a shared folder where everyone can collaborate:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create the directory</span>
+sudo<span class="w"> </span>mkdir<span class="w"> </span>/projects/webapp
+
+<span class="c1"># Create a group for the team</span>
+sudo<span class="w"> </span>groupadd<span class="w"> </span>webteam
+
+<span class="c1"># Add users to the group</span>
+sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>webteam<span class="w"> </span>alice
+sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>webteam<span class="w"> </span>bob
+sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>webteam<span class="w"> </span>dan
+
+<span class="c1"># Set ownership</span>
+sudo<span class="w"> </span>chown<span class="w"> </span>root:webteam<span class="w"> </span>/projects/webapp
+
+<span class="c1"># Set permissions with setgid</span>
+sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">2775</span><span class="w"> </span>/projects/webapp
+<span class="c1"># 2 = setgid (new files inherit group)</span>
+<span class="c1"># 775 = rwxrwxr-x</span>
+
+<span class="c1"># Now any file created inherits webteam group!</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="scenario-2-protecting-ssh-keys">Scenario 2: Protecting SSH Keys</h3>
+<p>SSH private keys should be VERY restricted:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Set correct permissions for SSH directory</span>
+chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>~/.ssh
+
+<span class="c1"># Set correct permissions for private key</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/id_rsa
+
+<span class="c1"># Set correct permissions for public key</span>
+chmod<span class="w"> </span><span class="m">644</span><span class="w"> </span>~/.ssh/id_rsa.pub
+
+<span class="c1"># Set correct permissions for authorized_keys</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/authorized_keys
+</code></pre></div></td></tr></table></div>
+<p>SSH will actually REFUSE to use keys with incorrect permissions!</p>
+<h3 id="scenario-3-web-server-files">Scenario 3: Web Server Files</h3>
+<p>A web server needs to read files but shouldn't be able to modify them:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Typical web directory setup</span>
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/html
+sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/var/www/html
+sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">644</span><span class="w"> </span>/var/www/html/*.html
+
+<span class="c1"># Directories need execute for traversal</span>
+find<span class="w"> </span>/var/www/html<span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-exec<span class="w"> </span>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+
+<span class="c1"># Files just need read</span>
+find<span class="w"> </span>/var/www/html<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>chmod<span class="w"> </span><span class="m">644</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="scenario-4-script-that-needs-to-be-executable">Scenario 4: Script That Needs to Be Executable</h3>
+<p>You wrote a script and want to run it:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check current permissions</span>
+ls<span class="w"> </span>-l<span class="w"> </span>myscript.sh
+<span class="c1"># -rw-r--r-- 1 dan dan 256 Dec 6 10:00 myscript.sh</span>
+
+<span class="c1"># Add execute permission for yourself</span>
+chmod<span class="w"> </span>u+x<span class="w"> </span>myscript.sh
+
+<span class="c1"># Or for everyone</span>
+chmod<span class="w"> </span>+x<span class="w"> </span>myscript.sh
+
+<span class="c1"># Or set common script permissions</span>
+chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>myscript.sh
+
+<span class="c1"># Now you can run it</span>
+./myscript.sh
+</code></pre></div></td></tr></table></div>
+<h2 id="permission-troubleshooting">Permission Troubleshooting</h2>
+<p>When permissions go wrong, here's how to debug:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check your user and groups</span>
+id
+
+<span class="c1"># Check file permissions and ownership</span>
+ls<span class="w"> </span>-la<span class="w"> </span>file.txt
+
+<span class="c1"># Check directory permissions (you might not be able to enter!)</span>
+ls<span class="w"> </span>-la<span class="w"> </span>/path/to/directory
+
+<span class="c1"># Check if you have permission to a path (all directories in path)</span>
+namei<span class="w"> </span>-l<span class="w"> </span>/path/to/deeply/nested/file
+
+<span class="c1"># See effective permissions for a user on a file</span>
+sudo<span class="w"> </span>-u<span class="w"> </span>alice<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-r<span class="w"> </span>file.txt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Can read&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Cannot read&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Common permission problems:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Likely Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Permission denied" on file</td>
+<td>Missing r or x permission</td>
+<td><code>chmod +r</code> or <code>chmod +x</code></td>
+</tr>
+<tr>
+<td>"Permission denied" on script</td>
+<td>Missing execute permission</td>
+<td><code>chmod +x script.sh</code></td>
+</tr>
+<tr>
+<td>"Cannot cd to directory"</td>
+<td>Missing execute on directory</td>
+<td><code>chmod +x directory/</code></td>
+</tr>
+<tr>
+<td>"Cannot create file"</td>
+<td>Missing write on directory</td>
+<td><code>chmod +w directory/</code></td>
+</tr>
+<tr>
+<td>"Operation not permitted"</td>
+<td>Need root/sudo</td>
+<td><code>sudo command</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="permission-cheat-sheet">Permission Cheat Sheet</h2>
+<p><strong>Quick reference for common tasks:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Make file executable</td>
+<td><code>chmod +x file</code></td>
+</tr>
+<tr>
+<td>Make file private</td>
+<td><code>chmod 600 file</code></td>
+</tr>
+<tr>
+<td>Make directory private</td>
+<td><code>chmod 700 dir/</code></td>
+</tr>
+<tr>
+<td>Share directory with group</td>
+<td><code>chmod 775 dir/</code></td>
+</tr>
+<tr>
+<td>Standard file permissions</td>
+<td><code>chmod 644 file</code></td>
+</tr>
+<tr>
+<td>Standard directory permissions</td>
+<td><code>chmod 755 dir/</code></td>
+</tr>
+<tr>
+<td>Change owner</td>
+<td><code>sudo chown user file</code></td>
+</tr>
+<tr>
+<td>Change group</td>
+<td><code>chgrp group file</code></td>
+</tr>
+<tr>
+<td>Change both</td>
+<td><code>sudo chown user:group file</code></td>
+</tr>
+<tr>
+<td>Recursive change</td>
+<td>Add <code>-R</code> flag</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Permission numbers to remember:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Meaning</th>
+<th>Use For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>755</td>
+<td>rwxr-xr-x</td>
+<td>Programs, scripts, directories</td>
+</tr>
+<tr>
+<td>644</td>
+<td>rw-r--r--</td>
+<td>Regular files, documents</td>
+</tr>
+<tr>
+<td>700</td>
+<td>rwx------</td>
+<td>Private directories</td>
+</tr>
+<tr>
+<td>600</td>
+<td>rw-------</td>
+<td>Private files (SSH keys)</td>
+</tr>
+<tr>
+<td>775</td>
+<td>rwxrwxr-x</td>
+<td>Shared directories</td>
+</tr>
+<tr>
+<td>664</td>
+<td>rw-rw-r--</td>
+<td>Shared files</td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>You've mastered Linux permissions! Here's what you now know:</p>
+<ul>
+<li><strong>Three permission types</strong>: read (r), write (w), execute (x)</li>
+<li><strong>Three categories</strong>: owner, group, others</li>
+<li><strong>Permission notation</strong>: <code>-rwxr-xr-x</code> = 755</li>
+<li><strong>chmod</strong>: Change permissions (symbolic or numeric)</li>
+<li><strong>chown/chgrp</strong>: Change ownership</li>
+<li><strong>umask</strong>: Controls default permissions for new files</li>
+<li><strong>sudo</strong>: Run commands as root safely</li>
+<li><strong>Special permissions</strong>: setuid, setgid, sticky bit</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">You're Now a Permission Pro!</p>
+<p>Understanding permissions is crucial for Linux security and collaboration. You can now control exactly who can access your files and what they can do with them. This knowledge is essential for system administration, web development, and any serious Linux work!</p>
+</div>
+<h2 id="whats-next">What's Next?</h2>
+<p>Now that you understand who can access files and what they can do, it's time to learn about <strong>finding things in those files</strong>! Next chapter covers grep and regular expressions—powerful tools for searching through text.</p>
+<hr />
+<details class="question">
+<summary>Quick Quiz: File Permissions and Ownership</summary>
+<ol>
+<li>What permission do you need to enter a directory?</li>
+<li>What does permission 755 mean?</li>
+<li>What's the difference between sudo and su?</li>
+<li>What does the setgid bit do on a directory?</li>
+<li>How do you make a file only readable by its owner?</li>
+<li>What does umask 027 do?</li>
+</ol>
+</details>
+<details class="note">
+<summary>Quiz Answers</summary>
+<ol>
+<li>Execute (x) permission is needed to enter (cd into) a directory</li>
+<li>755 = rwxr-xr-x (owner: full access, group/others: read and execute)</li>
+<li>sudo runs a single command as root; su opens a shell session as another user</li>
+<li>On a directory, setgid makes new files inherit the directory's group</li>
+<li><code>chmod 600 file</code> or <code>chmod u=rw,go= file</code></li>
+<li>Sets default permissions so new files are 640 (rw-r-----) and directories are 750 (rwxr-x---)</li>
+</ol>
+</details>
 
 
 
@@ -1588,7 +3925,7 @@
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../js/extra.css"></script>
+        <script src="../../js/extra.js"></script>
       
     
   </body>

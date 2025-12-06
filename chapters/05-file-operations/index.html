@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+        <meta name="description" content="Master creating, copying, moving, and deleting files in Linux">
       
       
         <meta name="author" content="Dan McCreary">
@@ -52,7 +52,7 @@
       
     
     
-      <link rel="stylesheet" href="../../styles/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -75,7 +75,7 @@
       
         <meta  property="og:title"  content="File Operations and Manipulation - Learning Linux" >
       
-        <meta  property="og:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  property="og:description"  content="Master creating, copying, moving, and deleting files in Linux" >
       
         <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/05-file-operations/index.png" >
       
@@ -91,7 +91,7 @@
       
         <meta  name="twitter:title"  content="File Operations and Manipulation - Learning Linux" >
       
-        <meta  name="twitter:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  name="twitter:description"  content="Master creating, copying, moving, and deleting files in Linux" >
       
         <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/05-file-operations/index.png" >
       
@@ -214,7 +214,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -259,7 +259,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -439,8 +439,6 @@
           
         
       
-        
-          
         
       
         
@@ -649,6 +647,504 @@
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-tourist-to-resident-lets-make-some-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Tourist to Resident: Let's Make Some Files!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-files-the-touch-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Files: The Touch Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Files: The Touch Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-multiple-files-at-once" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Multiple Files at Once
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#touch-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Touch Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-directories-the-mkdir-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Directories: The Mkdir Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Directories: The Mkdir Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-nested-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Nested Directories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-directories-the-rmdir-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing Directories: The Rmdir Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Removing Directories: The Rmdir Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-file-and-directory-creation-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: File and Directory Creation Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copying-files-the-cp-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copying Files: The Cp Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Copying Files: The Cp Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copy-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copy Scenarios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#essential-cp-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Cp Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preserving-file-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preserving File Attributes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moving-and-renaming-the-mv-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving and Renaming: The Mv Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Moving and Renaming: The Mv Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-rename-trick" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Rename Trick
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mv-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mv Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mv Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-cp-vs-mv-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Cp vs Mv Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-files-the-rm-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting Files: The Rm Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deleting Files: The Rm Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm-options-your-safety-net" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rm Options (Your Safety Net)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-recursive-the-big-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rm Recursive: The Big One
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-deletion-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safe Deletion Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-character-makes-a-big-difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      One Character Makes a Big Difference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-file-contents-cat-head-tail-and-friends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing File Contents: Cat, Head, Tail, and Friends
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Viewing File Contents: Cat, Head, Tail, and Friends">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-cat-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Cat Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-head-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Head Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-tail-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Tail Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#head-tail-combo-getting-lines-from-the-middle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Head + Tail Combo: Getting Lines from the Middle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Head + Tail Combo: Getting Lines from the Middle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-head-and-tail-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Head and Tail Visualization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-less-command-more-is-less" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Less Command (More is Less!)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-more-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The More Command
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-processing-tools-wc-sort-uniq-cut-paste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Processing Tools: Wc, Sort, Uniq, Cut, Paste
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Text Processing Tools: Wc, Sort, Uniq, Cut, Paste">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-wc-command-word-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Wc Command (Word Count)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-sort-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Sort Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-uniq-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Uniq Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-cut-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Cut Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-paste-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Paste Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Paste Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-text-processing-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Text Processing Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-files-the-diff-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparing Files: The Diff Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparing Files: The Diff Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diff-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diff Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diff Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-diff-command-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Diff Command Visualization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-file-operations-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: File Operations Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together: File Operations Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-organizing-downloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario: Organizing Downloads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-quick-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario: Quick Backup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-log-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario: Log Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-operations-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Operations Cheat Sheet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
     </span>
   </a>
   
@@ -1048,7 +1544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../24-customization/" class="md-nav__link">
+      <a href="../24-customization/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,6 +1669,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1186,7 +1690,7 @@
         
   
   
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1424,6 +1928,504 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#from-tourist-to-resident-lets-make-some-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Tourist to Resident: Let's Make Some Files!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-files-the-touch-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Files: The Touch Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Files: The Touch Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-multiple-files-at-once" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Multiple Files at Once
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#touch-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Touch Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-directories-the-mkdir-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Directories: The Mkdir Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Directories: The Mkdir Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-nested-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Nested Directories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-directories-the-rmdir-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing Directories: The Rmdir Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Removing Directories: The Rmdir Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-file-and-directory-creation-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: File and Directory Creation Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copying-files-the-cp-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copying Files: The Cp Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Copying Files: The Cp Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copy-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copy Scenarios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#essential-cp-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Cp Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preserving-file-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preserving File Attributes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moving-and-renaming-the-mv-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving and Renaming: The Mv Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Moving and Renaming: The Mv Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-rename-trick" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Rename Trick
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mv-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mv Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mv Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-cp-vs-mv-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Cp vs Mv Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-files-the-rm-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting Files: The Rm Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deleting Files: The Rm Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm-options-your-safety-net" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rm Options (Your Safety Net)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rm-recursive-the-big-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rm Recursive: The Big One
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-deletion-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safe Deletion Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-character-makes-a-big-difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      One Character Makes a Big Difference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-file-contents-cat-head-tail-and-friends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing File Contents: Cat, Head, Tail, and Friends
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Viewing File Contents: Cat, Head, Tail, and Friends">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-cat-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Cat Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-head-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Head Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-tail-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Tail Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#head-tail-combo-getting-lines-from-the-middle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Head + Tail Combo: Getting Lines from the Middle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Head + Tail Combo: Getting Lines from the Middle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-head-and-tail-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Head and Tail Visualization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-less-command-more-is-less" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Less Command (More is Less!)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-more-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The More Command
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-processing-tools-wc-sort-uniq-cut-paste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Processing Tools: Wc, Sort, Uniq, Cut, Paste
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Text Processing Tools: Wc, Sort, Uniq, Cut, Paste">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-wc-command-word-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Wc Command (Word Count)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-sort-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Sort Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-uniq-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Uniq Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-cut-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Cut Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-paste-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Paste Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Paste Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-text-processing-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Text Processing Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-files-the-diff-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparing Files: The Diff Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparing Files: The Diff Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diff-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diff Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diff Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-diff-command-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Diff Command Visualization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-file-operations-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: File Operations Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together: File Operations Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-organizing-downloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario: Organizing Downloads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-quick-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario: Quick Backup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-log-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario: Log Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-operations-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Operations Cheat Sheet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1439,7 +2441,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/learniing-linux/blob/master/docs/chapters/05-file-operations/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/learning-linux/blob/master/docs/chapters/05-file-operations/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1451,7 +2453,7 @@
 <h2 id="summary">Summary</h2>
 <p>This chapter teaches you how to create, copy, move, and delete files and directories. You'll learn essential commands like touch, mkdir, cp, mv, and rm, as well as how to view file contents using cat, head, tail, and less. These are the everyday operations you'll perform constantly when working with Linux.</p>
 <h2 id="concepts-covered">Concepts Covered</h2>
-<p>This chapter covers the following 20 concepts from the learning graph:</p>
+<p>This chapter covers the following 18 concepts from the learning graph:</p>
 <ol>
 <li>Touch Command</li>
 <li>Mkdir Command</li>
@@ -1478,7 +2480,1542 @@
 <li><a href="../04-file-system/">Chapter 4: File System Fundamentals</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<h2 id="from-tourist-to-resident-lets-make-some-files">From Tourist to Resident: Let's Make Some Files!</h2>
+<p>In the last chapter, you learned to navigate the Linux file system like a tourist exploring a new city. You could look around, read the street signs, and find your way home. But tourists just <em>look</em> at things—now it's time to become a <strong>resident</strong> and actually DO stuff!</p>
+<p>This chapter is where things get real. You're going to learn to:</p>
+<ul>
+<li>Create files and directories out of thin air</li>
+<li>Copy files faster than you can say "Control-C Control-V"</li>
+<li>Move and rename files like a shell ninja</li>
+<li>Delete files (carefully... we'll talk about that)</li>
+<li>Peek inside files to see what's cooking</li>
+</ul>
+<p>These are the bread-and-butter commands you'll use every single day in Linux. Master these, and you'll be amazed at how much faster you can work compared to clicking around in a graphical file manager.</p>
+<div class="admonition warning">
+<p class="admonition-title">With Great Power Comes Great Responsibility</p>
+<p>Some of these commands can delete files permanently—no Recycle Bin, no "Are you sure?" confirmation, no undo. We'll teach you safe practices, but always double-check before hitting Enter on any destructive command!</p>
+</div>
+<h2 id="creating-files-the-touch-command">Creating Files: The Touch Command</h2>
+<p>Let's start with creating files. The <strong>touch command</strong> is your go-to tool for creating empty files:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>touch<span class="w"> </span>myfile.txt
+</code></pre></div></td></tr></table></div>
+<p>That's it! You've just created an empty file called <code>myfile.txt</code>. No wizard required, no dialog boxes, no "Save As"—just instant file creation.</p>
+<p>"But wait," you might ask, "why is it called <code>touch</code>?" Great question! The command actually has two purposes:</p>
+<ol>
+<li><strong>Create</strong> a new empty file if it doesn't exist</li>
+<li><strong>Update</strong> the timestamp of an existing file (like "touching" it to show activity)</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create a new file</span>
+touch<span class="w"> </span>newfile.txt
+
+<span class="c1"># Check its timestamp</span>
+ls<span class="w"> </span>-l<span class="w"> </span>newfile.txt
+<span class="c1"># -rw-r--r-- 1 dan dan 0 Dec  6 15:30 newfile.txt</span>
+
+<span class="c1"># Wait a minute, then touch it again</span>
+touch<span class="w"> </span>newfile.txt
+
+<span class="c1"># Check timestamp - it&#39;s updated!</span>
+ls<span class="w"> </span>-l<span class="w"> </span>newfile.txt
+<span class="c1"># -rw-r--r-- 1 dan dan 0 Dec  6 15:31 newfile.txt</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="creating-multiple-files-at-once">Creating Multiple Files at Once</h3>
+<p>Why create files one at a time when you can batch them?</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create multiple files</span>
+touch<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt<span class="w"> </span>file3.txt
+
+<span class="c1"># Create files with a pattern using brace expansion</span>
+touch<span class="w"> </span>report_<span class="o">{</span>jan,feb,mar,apr<span class="o">}</span>.txt
+<span class="c1"># Creates: report_jan.txt, report_feb.txt, report_mar.txt, report_apr.txt</span>
+
+<span class="c1"># Create numbered files</span>
+touch<span class="w"> </span>chapter_<span class="o">{</span><span class="m">1</span>..10<span class="o">}</span>.md
+<span class="c1"># Creates: chapter_1.md through chapter_10.md</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Brace Expansion: Your Secret Weapon</p>
+<p>The curly brace syntax <code>{a,b,c}</code> and <code>{1..10}</code> is called <strong>brace expansion</strong>. It's not just for <code>touch</code>—you can use it with almost any command. It's like a superpower for your terminal!</p>
+</div>
+<h3 id="touch-options">Touch Options</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create file only if it doesn&#39;t exist (no timestamp update)</span>
+touch<span class="w"> </span>-c<span class="w"> </span>newfile.txt
+
+<span class="c1"># Set a specific timestamp</span>
+touch<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;2025-01-01 12:00:00&quot;</span><span class="w"> </span>oldfile.txt
+
+<span class="c1"># Copy timestamp from another file</span>
+touch<span class="w"> </span>-r<span class="w"> </span>reference.txt<span class="w"> </span>target.txt
+</code></pre></div></td></tr></table></div>
+<h2 id="creating-directories-the-mkdir-command">Creating Directories: The Mkdir Command</h2>
+<p>Files need homes, and that's where the <strong>mkdir command</strong> (Make Directory) comes in:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>Documents
+</code></pre></div></td></tr></table></div>
+<p>Boom! You've created a directory called <code>Documents</code>. But here's where it gets fun...</p>
+<h3 id="creating-nested-directories">Creating Nested Directories</h3>
+<p>What if you want to create <code>/home/dan/projects/website/css/themes</code>? You could do this:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>projects
+<span class="nb">cd</span><span class="w"> </span>projects
+mkdir<span class="w"> </span>website
+<span class="nb">cd</span><span class="w"> </span>website
+mkdir<span class="w"> </span>css
+<span class="nb">cd</span><span class="w"> </span>css
+mkdir<span class="w"> </span>themes
+<span class="c1"># Exhausting!</span>
+</code></pre></div></td></tr></table></div>
+<p>Or you could use the <code>-p</code> flag (for "parent"):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>projects/website/css/themes
+</code></pre></div></td></tr></table></div>
+<p>The <code>-p</code> flag creates all the parent directories as needed. It's like building the whole staircase at once instead of one step at a time. <strong>This is one of the most useful flags in all of Linux.</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create a whole project structure at once</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>myproject/<span class="o">{</span>src,tests,docs,config<span class="o">}</span>
+
+<span class="c1"># This creates:</span>
+<span class="c1"># myproject/</span>
+<span class="c1"># ├── src/</span>
+<span class="c1"># ├── tests/</span>
+<span class="c1"># ├── docs/</span>
+<span class="c1"># └── config/</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Combine with Brace Expansion</p>
+<p>Mix <code>mkdir -p</code> with brace expansion for maximum efficiency:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>project/<span class="o">{</span>frontend/<span class="o">{</span>css,js,images<span class="o">}</span>,backend/<span class="o">{</span>routes,models,views<span class="o">}}</span>
+</code></pre></div></td></tr></table></div>
+This creates a complete project skeleton in one command!</p>
+</div>
+<h2 id="removing-directories-the-rmdir-command">Removing Directories: The Rmdir Command</h2>
+<p>The <strong>rmdir command</strong> (Remove Directory) deletes directories... but there's a catch. It only removes <strong>empty</strong> directories:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>test_dir
+rmdir<span class="w"> </span>test_dir<span class="w">    </span><span class="c1"># Works! Directory is empty</span>
+
+mkdir<span class="w"> </span>another_dir
+touch<span class="w"> </span>another_dir/file.txt
+rmdir<span class="w"> </span>another_dir
+<span class="c1"># rmdir: failed to remove &#39;another_dir&#39;: Directory not empty</span>
+</code></pre></div></td></tr></table></div>
+<p>This is actually a safety feature. <code>rmdir</code> won't accidentally delete a directory full of important files. If you want to remove a directory that has stuff in it, you'll need <code>rm -r</code> (which we'll cover soon, with lots of warnings).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Remove multiple empty directories</span>
+rmdir<span class="w"> </span>dir1<span class="w"> </span>dir2<span class="w"> </span>dir3
+
+<span class="c1"># Remove directory and empty parent directories</span>
+rmdir<span class="w"> </span>-p<span class="w"> </span>projects/old/empty/dir
+<span class="c1"># Removes dir, then empty, then old if all are empty</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="diagram-file-and-directory-creation-commands">Diagram: File and Directory Creation Commands</h4>
+<details>
+<summary>Creating Files and Directories Workflow</summary>
+<p>Type: diagram</p>
+<p>Use the microsim-py skill to create a side-by-side two panel simulation of directories and files being created in a projects directory. </p>
+<p>Bloom Taxonomy: Understand, Apply</p>
+<p>Learning Objective: Visualize the relationship between mkdir, touch, echo and cat, and their options for creating file system structures.</p>
+<p>Layout: two panels side by side.  The left side shows commands.  The right side is a upside down tree drawing (root at the top) of a file system.  The <code>/usr/home/dan</code> node is at the top.</p>
+<p>Components to show:
+- file system - just home directory labeled HOME
+- Sequential steps showing touch and mkdir creating structure
+- Visual representation of brace expansion creating multiple items
+- Tree view showing final result
+- dark circle around the node for current directory</p>
+<p>Layout: Three-panel sequential diagram</p>
+<p>Step 1 - Initial State:
+- Empty HOME on the right
+- Shell Command 1: pwd 
+returns /usr/home/dan </p>
+<p>Step 2 - Commands Executed:
+- mkdir projects
+- cd projects
+The projects node appears under the HOME directory</p>
+<p>Step 2 - Touch Command
+- touch creates empty files (shown as small document icons)
+- touch today.txt
+- Right tree shows 'today.txt' in projects</p>
+<ul>
+<li>mkdir creates directories (shown as folder icons)</li>
+<li>mkdir -p creates nested paths (shown with dotted parent folders materializing)</li>
+<li>Brace expansion shows one command creating multiple items</li>
+</ul>
+<p>Panel 3 - Final Result:
+- Complete tree structure showing all created items
+- Files vs directories visually distinguished</p>
+<p>Color coding:
+- touch commands: Blue
+- mkdir commands: Green
+- New files: Light blue
+- New directories: Light green</p>
+<p>Animation:
+- Show commands executing one by one
+- Items appear with subtle pop animation
+- Tree view updates in real-time</p>
+<p>Implementation: p5.js with step-by-step animation</p>
+</details>
+<h2 id="copying-files-the-cp-command">Copying Files: The Cp Command</h2>
+<p>Now we're getting to the action! The <strong>cp command</strong> (Copy) duplicates files and directories:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Basic syntax: cp source destination</span>
+cp<span class="w"> </span>original.txt<span class="w"> </span>copy.txt
+</code></pre></div></td></tr></table></div>
+<p>Think of <code>cp</code> as a photocopier for your files. The original stays put, and a duplicate appears wherever you specify.</p>
+<h3 id="copy-scenarios">Copy Scenarios</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Copy a file to another directory</span>
+cp<span class="w"> </span>report.txt<span class="w"> </span>~/Documents/
+
+<span class="c1"># Copy and rename in one step</span>
+cp<span class="w"> </span>report.txt<span class="w"> </span>~/Documents/quarterly_report.txt
+
+<span class="c1"># Copy a file to current directory (from somewhere else)</span>
+cp<span class="w"> </span>/etc/hostname<span class="w"> </span>.
+
+<span class="c1"># Copy multiple files to a directory</span>
+cp<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt<span class="w"> </span>file3.txt<span class="w"> </span>~/backup/
+</code></pre></div></td></tr></table></div>
+<h3 id="essential-cp-options">Essential Cp Options</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># -i: Interactive (ask before overwriting)</span>
+cp<span class="w"> </span>-i<span class="w"> </span>important.txt<span class="w"> </span>backup.txt
+<span class="c1"># cp: overwrite &#39;backup.txt&#39;? y</span>
+
+<span class="c1"># -v: Verbose (show what&#39;s happening)</span>
+cp<span class="w"> </span>-v<span class="w"> </span>*.txt<span class="w"> </span>~/backup/
+<span class="c1"># &#39;notes.txt&#39; -&gt; &#39;/home/dan/backup/notes.txt&#39;</span>
+<span class="c1"># &#39;todo.txt&#39; -&gt; &#39;/home/dan/backup/todo.txt&#39;</span>
+
+<span class="c1"># -r: Recursive (copy directories and their contents)</span>
+cp<span class="w"> </span>-r<span class="w"> </span>myproject/<span class="w"> </span>myproject_backup/
+
+<span class="c1"># -u: Update (only copy if source is newer)</span>
+cp<span class="w"> </span>-u<span class="w"> </span>*.txt<span class="w"> </span>~/backup/
+
+<span class="c1"># Combine options</span>
+cp<span class="w"> </span>-riv<span class="w"> </span>source_dir/<span class="w"> </span>destination_dir/
+</code></pre></div></td></tr></table></div>
+<div class="admonition warning">
+<p class="admonition-title">Trailing Slashes Matter!</p>
+<p>Be careful with directory copies:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>cp<span class="w"> </span>-r<span class="w"> </span>dir1<span class="w"> </span>dir2<span class="w">      </span><span class="c1"># If dir2 exists: creates dir2/dir1</span>
+cp<span class="w"> </span>-r<span class="w"> </span>dir1/<span class="w"> </span>dir2<span class="w">     </span><span class="c1"># Same behavior</span>
+cp<span class="w"> </span>-r<span class="w"> </span>dir1/*<span class="w"> </span>dir2/<span class="w">   </span><span class="c1"># Copies CONTENTS of dir1 into dir2</span>
+</code></pre></div></td></tr></table></div>
+When in doubt, use <code>-v</code> to see exactly what's happening!</p>
+</div>
+<h3 id="preserving-file-attributes">Preserving File Attributes</h3>
+<p>When you copy a file, some metadata (like ownership and timestamps) may change. To preserve everything:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># -p: Preserve mode, ownership, and timestamps</span>
+cp<span class="w"> </span>-p<span class="w"> </span>config.txt<span class="w"> </span>config_backup.txt
+
+<span class="c1"># -a: Archive mode (preserves everything, recursive)</span>
+cp<span class="w"> </span>-a<span class="w"> </span>myproject/<span class="w"> </span>backup/
+<span class="c1"># Equivalent to cp -dR --preserve=all</span>
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Meaning</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-i</code></td>
+<td>Interactive</td>
+<td>When you might overwrite files</td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td>Verbose</td>
+<td>When you want to see what's happening</td>
+</tr>
+<tr>
+<td><code>-r</code></td>
+<td>Recursive</td>
+<td>When copying directories</td>
+</tr>
+<tr>
+<td><code>-p</code></td>
+<td>Preserve</td>
+<td>When timestamps/permissions matter</td>
+</tr>
+<tr>
+<td><code>-a</code></td>
+<td>Archive</td>
+<td>For backups (preserves everything)</td>
+</tr>
+<tr>
+<td><code>-u</code></td>
+<td>Update</td>
+<td>For incremental backups</td>
+</tr>
+</tbody>
+</table>
+<h2 id="moving-and-renaming-the-mv-command">Moving and Renaming: The Mv Command</h2>
+<p>The <strong>mv command</strong> (Move) is a two-for-one deal. It both moves files AND renames them:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Rename a file</span>
+mv<span class="w"> </span>oldname.txt<span class="w"> </span>newname.txt
+
+<span class="c1"># Move a file to another directory</span>
+mv<span class="w"> </span>file.txt<span class="w"> </span>~/Documents/
+
+<span class="c1"># Move and rename simultaneously</span>
+mv<span class="w"> </span>report.txt<span class="w"> </span>~/Documents/final_report.txt
+
+<span class="c1"># Move multiple files</span>
+mv<span class="w"> </span>*.txt<span class="w"> </span>~/Documents/
+</code></pre></div></td></tr></table></div>
+<p>Here's the thing about <code>mv</code> that's different from <code>cp</code>: <strong>the original is gone</strong>. It's not a copy; it's a true move. If you <code>mv</code> a file to a new location, it no longer exists in the old location.</p>
+<h3 id="the-rename-trick">The Rename Trick</h3>
+<p>Since <code>mv oldname newname</code> renames files, this is how you rename things in Linux. There's no separate "rename" command for individual files:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Rename a file</span>
+mv<span class="w"> </span>chapter1.txt<span class="w"> </span>chapter01.txt
+
+<span class="c1"># Rename a directory</span>
+mv<span class="w"> </span>old_project_name<span class="w"> </span>new_project_name
+</code></pre></div></td></tr></table></div>
+<h3 id="mv-options">Mv Options</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># -i: Interactive (ask before overwriting)</span>
+mv<span class="w"> </span>-i<span class="w"> </span>file.txt<span class="w"> </span>~/Documents/
+<span class="c1"># mv: overwrite &#39;/home/dan/Documents/file.txt&#39;? y</span>
+
+<span class="c1"># -v: Verbose (show what&#39;s happening)</span>
+mv<span class="w"> </span>-v<span class="w"> </span>*.txt<span class="w"> </span>~/Documents/
+<span class="c1"># &#39;notes.txt&#39; -&gt; &#39;/home/dan/Documents/notes.txt&#39;</span>
+
+<span class="c1"># -n: No clobber (never overwrite)</span>
+mv<span class="w"> </span>-n<span class="w"> </span>file.txt<span class="w"> </span>~/Documents/
+
+<span class="c1"># -u: Update (only move if source is newer)</span>
+mv<span class="w"> </span>-u<span class="w"> </span>*.txt<span class="w"> </span>~/Documents/
+
+<span class="c1"># -t: Target directory (useful with find/xargs)</span>
+mv<span class="w"> </span>-t<span class="w"> </span>~/Documents/<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Mv vs Cp: When to Use Which</p>
+<ul>
+<li>Use <strong>cp</strong> when you want the original to stay where it is</li>
+<li>Use <strong>mv</strong> when you want to relocate or rename</li>
+<li>Rule of thumb: If you're "organizing," you probably want <code>mv</code>. If you're "backing up," you want <code>cp</code>.</li>
+</ul>
+</div>
+<h4 id="diagram-cp-vs-mv-comparison">Diagram: Cp vs Mv Comparison</h4>
+<details>
+<summary>Copy vs Move Operations</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Understand
+Learning Objective: Clearly illustrate the difference between copy (duplicates) and move (relocates) operations.</p>
+<p>Layout: Side-by-side comparison with before/after states</p>
+<p>Left Panel - CP (Copy):
+Before:
+- Source directory with file.txt
+- Empty destination directory</p>
+<p>After:
+- Source directory STILL HAS file.txt
+- Destination directory has file.txt copy
+- Arrow showing duplication action
+- File appears in TWO places</p>
+<p>Right Panel - MV (Move):
+Before:
+- Source directory with file.txt
+- Empty destination directory</p>
+<p>After:
+- Source directory is EMPTY (file gone!)
+- Destination directory has file.txt
+- Arrow showing relocation action
+- File appears in ONE place only</p>
+<p>Visual elements:
+- File icons with clear labels
+- Directory boxes with names
+- Arrows showing data flow
+- Checkmarks/X marks showing presence/absence</p>
+<p>Color coding:
+- CP operations: Blue theme
+- MV operations: Orange theme
+- Original file: Solid color
+- Copy: Dashed border or faded color</p>
+<p>Interactive features:
+- Click "Execute" to animate the operation
+- Toggle between cp and mv to see difference
+- Reset button to try again</p>
+<p>Implementation: p5.js</p>
+</details>
+<h2 id="deleting-files-the-rm-command">Deleting Files: The Rm Command</h2>
+<p>And now, the moment of truth. The <strong>rm command</strong> (Remove) deletes files:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rm<span class="w"> </span>unwanted_file.txt
+</code></pre></div></td></tr></table></div>
+<p>Gone. Just like that. No confirmation, no Recycle Bin, no undo.</p>
+<p>Let me say that again because it's <strong>really important</strong>:</p>
+<div class="admonition danger">
+<p class="admonition-title">There is No Undo</p>
+<p>When you <code>rm</code> a file in Linux, it is GONE. It doesn't go to a Trash folder. It doesn't ask "Are you sure?" by default. The file is deleted immediately and permanently. Always double-check before hitting Enter!</p>
+</div>
+<h3 id="rm-options-your-safety-net">Rm Options (Your Safety Net)</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># -i: Interactive (ask before each deletion)</span>
+rm<span class="w"> </span>-i<span class="w"> </span>*.txt
+<span class="c1"># rm: remove regular file &#39;notes.txt&#39;? y</span>
+<span class="c1"># rm: remove regular file &#39;todo.txt&#39;? n</span>
+
+<span class="c1"># -v: Verbose (show what&#39;s being deleted)</span>
+rm<span class="w"> </span>-v<span class="w"> </span>old_files/*
+<span class="c1"># removed &#39;old_files/junk1.txt&#39;</span>
+<span class="c1"># removed &#39;old_files/junk2.txt&#39;</span>
+
+<span class="c1"># -f: Force (never prompt, ignore nonexistent files)</span>
+rm<span class="w"> </span>-f<span class="w"> </span>maybe_exists.txt
+
+<span class="c1"># Combine for safety</span>
+rm<span class="w"> </span>-iv<span class="w"> </span>file.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="rm-recursive-the-big-one">Rm Recursive: The Big One</h3>
+<p>The <strong>rm recursive</strong> flag (<code>-r</code> or <code>-R</code>) allows you to delete directories and everything inside them:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Delete a directory and ALL its contents</span>
+rm<span class="w"> </span>-r<span class="w"> </span>old_project/
+</code></pre></div></td></tr></table></div>
+<p>This is powerful and dangerous. One wrong command, and you could delete thousands of files. Here are some safety practices:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># ALWAYS use -i for important deletions</span>
+rm<span class="w"> </span>-ri<span class="w"> </span>project_backup/
+
+<span class="c1"># ALWAYS use -v to see what&#39;s happening</span>
+rm<span class="w"> </span>-rv<span class="w"> </span>temp_files/
+
+<span class="c1"># Double-check with ls first</span>
+ls<span class="w"> </span>old_project/<span class="w">  </span><span class="c1"># Look at what you&#39;re about to delete</span>
+rm<span class="w"> </span>-r<span class="w"> </span>old_project/
+
+<span class="c1"># Use safer alternatives when possible</span>
+trash<span class="w"> </span>old_project/<span class="w">  </span><span class="c1"># If you have trash-cli installed</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition danger">
+<p class="admonition-title">The Most Dangerous Command in Linux</p>
+<p>You may have heard horror stories about:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>rm<span class="w"> </span>-rf<span class="w"> </span>/<span class="w">        </span><span class="c1"># NEVER EVER RUN THIS</span>
+rm<span class="w"> </span>-rf<span class="w"> </span>~<span class="w">        </span><span class="c1"># DELETES YOUR ENTIRE HOME DIRECTORY</span>
+rm<span class="w"> </span>-rf<span class="w"> </span>*<span class="w">        </span><span class="c1"># DELETES EVERYTHING IN CURRENT DIRECTORY</span>
+</code></pre></div></td></tr></table></div>
+These commands can destroy your system or all your files in seconds. Modern Linux prevents <code>rm -rf /</code> but the others will work. Always know what directory you're in (<code>pwd</code>) before using <code>rm -r</code>!</p>
+</div>
+<h3 id="safe-deletion-practices">Safe Deletion Practices</h3>
+<ol>
+<li><strong>Always know where you are</strong>: Run <code>pwd</code> before <code>rm -r</code></li>
+<li><strong>Use <code>-i</code> for important stuff</strong>: <code>rm -ri directory/</code></li>
+<li><strong>Preview first</strong>: <code>ls directory/</code> before deleting</li>
+<li><strong>Consider trash-cli</strong>: Install <code>trash-cli</code> for a command-line trash can</li>
+<li><strong>Make backups</strong>: Before major deletions, copy important files</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install trash-cli (safer alternative)</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>trash-cli<span class="w">   </span><span class="c1"># Debian/Ubuntu</span>
+brew<span class="w"> </span>install<span class="w"> </span>trash-cli<span class="w">       </span><span class="c1"># macOS</span>
+
+<span class="c1"># Use it instead of rm</span>
+trash<span class="w"> </span>file.txt<span class="w">              </span><span class="c1"># Moves to trash</span>
+trash-empty<span class="w">                 </span><span class="c1"># Empty the trash</span>
+trash-list<span class="w">                  </span><span class="c1"># See what&#39;s in trash</span>
+trash-restore<span class="w">               </span><span class="c1"># Recover files</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="one-character-makes-a-big-difference">One Character Makes a Big Difference</h2>
+<p>Early in my career I was working as the "Superuser" on a UNIX system.
+I wanted to delete a big directory of files generated by an overnight
+logic simulation that tools many megabytes (really big back in 1984).
+I wanted to type:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rm<span class="w"> </span>-rf<span class="w"> </span>./BIGDIR
+</code></pre></div></td></tr></table></div>
+<p>Unfortunately, what I actually types was the following:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>rm<span class="w"> </span>-rf<span class="w"> </span>.<span class="w"> </span>/BIGDIR
+</code></pre></div></td></tr></table></div>
+<p>Did you notice that extra space?  A dot is the current directory.</p>
+<p>In this case the "." was the root file systems.  UNIX deleted EVERYTHING!
+Luckily, I was very careful about running backups on magnetic tape every night.
+Although it took me two hours to restore the file system impacting all my
+users, I will say I have never repeated that mistake again.  Sometimes
+painful public embarrassment is the best teacher!</p>
+<h2 id="viewing-file-contents-cat-head-tail-and-friends">Viewing File Contents: Cat, Head, Tail, and Friends</h2>
+<p>Now that you can create, copy, move, and delete files, let's learn to look inside them!</p>
+<h3 id="the-cat-command">The Cat Command</h3>
+<p>The <strong>cat command</strong> (concatenate) displays file contents. It's one of the most-used commands in Linux:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cat<span class="w"> </span>myfile.txt
+</code></pre></div></td></tr></table></div>
+<p>The whole file spills out onto your screen. Simple!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Display a file</span>
+cat<span class="w"> </span>notes.txt
+
+<span class="c1"># Display multiple files (concatenated)</span>
+cat<span class="w"> </span>part1.txt<span class="w"> </span>part2.txt<span class="w"> </span>part3.txt
+
+<span class="c1"># Display with line numbers</span>
+cat<span class="w"> </span>-n<span class="w"> </span>script.py
+
+<span class="c1"># Show non-printing characters</span>
+cat<span class="w"> </span>-A<span class="w"> </span>mystery_file.txt
+
+<span class="c1"># Create a file with cat (Ctrl+D to finish)</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>newfile.txt
+This<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>content.
+More<span class="w"> </span>content<span class="w"> </span>here.
+^D
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Cat's Origin Story</p>
+<p><code>cat</code> is short for "concatenate" because its original purpose was to join (concatenate) files together:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cat<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt<span class="w"> </span>&gt;<span class="w"> </span>combined.txt
+</code></pre></div></td></tr></table></div>
+Using it to display single files is almost an afterthought, but it's now the most common use!</p>
+</div>
+<h3 id="the-head-command">The Head Command</h3>
+<p>What if you just want to peek at the beginning of a file? The <strong>head command</strong> shows you the first lines:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Show first 10 lines (default)</span>
+head<span class="w"> </span>largefile.txt
+
+<span class="c1"># Show first N lines</span>
+head<span class="w"> </span>-n<span class="w"> </span><span class="m">5</span><span class="w"> </span>largefile.txt
+head<span class="w"> </span>-5<span class="w"> </span>largefile.txt<span class="w">       </span><span class="c1"># Shorthand</span>
+
+<span class="c1"># Show first N bytes</span>
+head<span class="w"> </span>-c<span class="w"> </span><span class="m">100</span><span class="w"> </span>largefile.txt
+</code></pre></div></td></tr></table></div>
+<p><code>head</code> is perfect for:</p>
+<ul>
+<li>Quickly checking what a file contains</li>
+<li>Looking at CSV headers</li>
+<li>Previewing log files</li>
+<li>Checking if a file is what you think it is</li>
+</ul>
+<h3 id="the-tail-command">The Tail Command</h3>
+<p>The opposite of head! The <strong>tail command</strong> shows the last lines of a file:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Show last 10 lines (default)</span>
+tail<span class="w"> </span>logfile.txt
+
+<span class="c1"># Show last N lines</span>
+tail<span class="w"> </span>-n<span class="w"> </span><span class="m">20</span><span class="w"> </span>logfile.txt
+tail<span class="w"> </span>-20<span class="w"> </span>logfile.txt<span class="w">        </span><span class="c1"># Shorthand</span>
+
+<span class="c1"># Show everything from line N onwards</span>
+tail<span class="w"> </span>-n<span class="w"> </span>+100<span class="w"> </span>largefile.txt<span class="w">  </span><span class="c1"># From line 100 to end</span>
+</code></pre></div></td></tr></table></div>
+<p>But here's where tail gets REALLY cool:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># -f: Follow mode (watch file in real-time)</span>
+tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog
+</code></pre></div></td></tr></table></div>
+<p>The <code>-f</code> flag makes tail "follow" the file. As new lines are added, they appear on your screen. This is <strong>incredibly useful</strong> for watching log files while debugging. Press <code>Ctrl+C</code> to stop following.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Watch multiple files</span>
+tail<span class="w"> </span>-f<span class="w"> </span>log1.txt<span class="w"> </span>log2.txt
+
+<span class="c1"># Follow and show last 50 lines</span>
+tail<span class="w"> </span>-50f<span class="w"> </span>application.log
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Tail -f is Your Debugging Best Friend</p>
+<p>When something's not working right, open a terminal and run:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog
+</code></pre></div></td></tr></table></div>
+Then try the broken thing in another window. Watch the logs for error messages!</p>
+</div>
+<h3 id="head-tail-combo-getting-lines-from-the-middle">Head + Tail Combo: Getting Lines from the Middle</h3>
+<p>What if you want lines 50-60 from a file? Combine head and tail with pipes!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Get lines 50-60</span>
+head<span class="w"> </span>-60<span class="w"> </span>file.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-11
+
+<span class="c1"># Or using tail -n +N</span>
+tail<span class="w"> </span>-n<span class="w"> </span>+50<span class="w"> </span>file.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-11
+</code></pre></div></td></tr></table></div>
+<h4 id="diagram-head-and-tail-visualization">Diagram: Head and Tail Visualization</h4>
+<details>
+<summary>Head and Tail Command Visualization</summary>
+<p>Type: microsim</p>
+<p>Bloom Taxonomy: Understand, Apply
+Learning Objective: Visualize how head and tail extract portions of files, and understand the -f follow mode.</p>
+<p>Canvas layout (responsive, ~700px max):
+- File visualization area (400px): Shows a "file" with numbered lines
+- Control panel (remaining): Command input and options</p>
+<p>Visual elements:
+- A tall "document" showing 30+ lines numbered
+- Highlighted region showing selected lines
+- Visual representation of command being run
+- Output preview showing selected lines</p>
+<p>Simulated file:
+- Line 1: "First line of the file"
+- Line 2: "Second line here"
+- ... (numbered lines with sample text)
+- Line 30: "This is the last line"</p>
+<p>Interactive controls:
+- Radio buttons: head / tail / both
+- Slider: Number of lines (1-30)
+- Input: Custom number with -n flag
+- Checkbox: -f mode demonstration (for tail)
+- Button: "Run Command"</p>
+<p>Behavior:
+- Select head: highlight from top
+- Select tail: highlight from bottom
+- Adjust slider: change highlighted range
+- Show the actual command being generated
+- Display "output" showing extracted lines
+- For -f mode: animate new lines appearing at bottom</p>
+<p>Example scenarios:
+- head -5: Highlights lines 1-5
+- tail -10: Highlights lines 21-30
+- head -20 | tail -5: Highlights lines 16-20</p>
+<p>Color scheme:
+- File background: Light gray
+- Selected lines: Yellow highlight
+- Line numbers: Blue
+- Unselected lines: Faded</p>
+<p>Implementation: p5.js</p>
+</details>
+<h3 id="the-less-command-more-is-less">The Less Command (More is Less!)</h3>
+<p>For large files, <code>cat</code> dumps everything at once—not helpful for a 10,000-line file! The <strong>less command</strong> is an interactive file viewer:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>less<span class="w"> </span>largefile.txt
+</code></pre></div></td></tr></table></div>
+<p>Now you can scroll through the file like a civilized person!</p>
+<p><strong>Less navigation:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Space</code> / <code>f</code></td>
+<td>Forward one page</td>
+</tr>
+<tr>
+<td><code>b</code></td>
+<td>Back one page</td>
+</tr>
+<tr>
+<td><code>Enter</code> / <code>j</code></td>
+<td>Forward one line</td>
+</tr>
+<tr>
+<td><code>k</code></td>
+<td>Back one line</td>
+</tr>
+<tr>
+<td><code>g</code></td>
+<td>Go to beginning</td>
+</tr>
+<tr>
+<td><code>G</code></td>
+<td>Go to end</td>
+</tr>
+<tr>
+<td><code>/pattern</code></td>
+<td>Search forward</td>
+</tr>
+<tr>
+<td><code>?pattern</code></td>
+<td>Search backward</td>
+</tr>
+<tr>
+<td><code>n</code></td>
+<td>Next search match</td>
+</tr>
+<tr>
+<td><code>N</code></td>
+<td>Previous search match</td>
+</tr>
+<tr>
+<td><code>q</code></td>
+<td>Quit</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Open with line numbers</span>
+less<span class="w"> </span>-N<span class="w"> </span>file.txt
+
+<span class="c1"># Open and search for pattern</span>
+less<span class="w"> </span>+/error<span class="w"> </span>logfile.txt
+
+<span class="c1"># Follow mode (like tail -f)</span>
+less<span class="w"> </span>+F<span class="w"> </span>logfile.txt
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Less Has More Features</p>
+<p><code>less</code> can do so much more than <code>more</code>! You can:
+- Search forward AND backward
+- Mark positions and return to them
+- Edit the file (press <code>v</code>)
+- See line numbers
+- Handle binary files safely</p>
+</div>
+<h3 id="the-more-command">The More Command</h3>
+<p>The <strong>more command</strong> is the older, simpler cousin of <code>less</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>more<span class="w"> </span>largefile.txt
+</code></pre></div></td></tr></table></div>
+<p>It only scrolls forward (not backward), which is why the saying goes: <strong>"less is more"</strong> (because <code>less</code> does more than <code>more</code>!).</p>
+<p><code>more</code> still exists for compatibility, but most people use <code>less</code> because... well... it's more useful. Get it? 😄</p>
+<h2 id="text-processing-tools-wc-sort-uniq-cut-paste">Text Processing Tools: Wc, Sort, Uniq, Cut, Paste</h2>
+<p>Now let's level up with some powerful text processing commands. These tools are like data superpowers!</p>
+<h3 id="the-wc-command-word-count">The Wc Command (Word Count)</h3>
+<p>The <strong>wc command</strong> counts lines, words, and characters:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>wc<span class="w"> </span>myfile.txt
+<span class="c1"># 42  156  890 myfile.txt</span>
+<span class="c1"># │    │    │</span>
+<span class="c1"># │    │    └── bytes (characters)</span>
+<span class="c1"># │    └── words</span>
+<span class="c1"># └── lines</span>
+</code></pre></div></td></tr></table></div>
+<p>Get specific counts:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Count lines only</span>
+wc<span class="w"> </span>-l<span class="w"> </span>myfile.txt
+
+<span class="c1"># Count words only</span>
+wc<span class="w"> </span>-w<span class="w"> </span>myfile.txt
+
+<span class="c1"># Count characters only</span>
+wc<span class="w"> </span>-c<span class="w"> </span>myfile.txt
+
+<span class="c1"># Count multiple files</span>
+wc<span class="w"> </span>*.txt
+</code></pre></div></td></tr></table></div>
+<p><code>wc</code> is incredibly useful in pipelines:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># How many files in this directory?</span>
+ls<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+
+<span class="c1"># How many lines of code?</span>
+cat<span class="w"> </span>*.py<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+
+<span class="c1"># How many users?</span>
+cat<span class="w"> </span>/etc/passwd<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+</code></pre></div></td></tr></table></div>
+<h3 id="the-sort-command">The Sort Command</h3>
+<p>The <strong>sort command</strong> sorts lines alphabetically (or numerically):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Basic alphabetical sort</span>
+sort<span class="w"> </span>names.txt
+
+<span class="c1"># Reverse order</span>
+sort<span class="w"> </span>-r<span class="w"> </span>names.txt
+
+<span class="c1"># Numeric sort</span>
+sort<span class="w"> </span>-n<span class="w"> </span>numbers.txt
+
+<span class="c1"># Sort by column (tab-delimited)</span>
+sort<span class="w"> </span>-k<span class="w"> </span><span class="m">2</span><span class="w"> </span>data.txt<span class="w">      </span><span class="c1"># Sort by 2nd column</span>
+
+<span class="c1"># Ignore case</span>
+sort<span class="w"> </span>-f<span class="w"> </span>names.txt
+
+<span class="c1"># Remove duplicates while sorting</span>
+sort<span class="w"> </span>-u<span class="w"> </span>names.txt
+</code></pre></div></td></tr></table></div>
+<p>Real-world examples:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Sort files by size (using ls)</span>
+ls<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-k<span class="w"> </span><span class="m">5</span><span class="w"> </span>-n
+
+<span class="c1"># Find biggest files</span>
+ls<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-k<span class="w"> </span><span class="m">5</span><span class="w"> </span>-n<span class="w"> </span>-r<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-10
+
+<span class="c1"># Sort IP addresses</span>
+sort<span class="w"> </span>-t.<span class="w"> </span>-k1,1n<span class="w"> </span>-k2,2n<span class="w"> </span>-k3,3n<span class="w"> </span>-k4,4n<span class="w"> </span>ips.txt
+</code></pre></div></td></tr></table></div>
+<h3 id="the-uniq-command">The Uniq Command</h3>
+<p>The <strong>uniq command</strong> filters out ADJACENT duplicate lines:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Remove adjacent duplicates</span>
+uniq<span class="w"> </span>sorted_file.txt
+
+<span class="c1"># Count occurrences</span>
+uniq<span class="w"> </span>-c<span class="w"> </span>sorted_file.txt
+
+<span class="c1"># Show only duplicates</span>
+uniq<span class="w"> </span>-d<span class="w"> </span>sorted_file.txt
+
+<span class="c1"># Show only unique lines (no duplicates)</span>
+uniq<span class="w"> </span>-u<span class="w"> </span>sorted_file.txt
+</code></pre></div></td></tr></table></div>
+<p><strong>Important:</strong> <code>uniq</code> only removes ADJACENT duplicates. For non-adjacent duplicates, sort first:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># This won&#39;t work as expected:</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;apple\norange\napple&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq
+<span class="c1"># apple</span>
+<span class="c1"># orange</span>
+<span class="c1"># apple  ← Still here!</span>
+
+<span class="c1"># This works:</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;apple\norange\napple&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq
+<span class="c1"># apple</span>
+<span class="c1"># orange</span>
+</code></pre></div></td></tr></table></div>
+<p>Classic combo for finding duplicate counts:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Find most common words</span>
+cat<span class="w"> </span>book.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="s1">&#39;\n&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-rn<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-10
+</code></pre></div></td></tr></table></div>
+<h3 id="the-cut-command">The Cut Command</h3>
+<p>The <strong>cut command</strong> extracts columns or fields from text:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Cut characters 1-10</span>
+cut<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span>-10<span class="w"> </span>file.txt
+
+<span class="c1"># Cut fields (default delimiter: tab)</span>
+cut<span class="w"> </span>-f<span class="w"> </span><span class="m">1</span>,3<span class="w"> </span>data.tsv<span class="w">     </span><span class="c1"># Fields 1 and 3</span>
+
+<span class="c1"># Cut with custom delimiter</span>
+cut<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">2</span><span class="w"> </span>data.csv<span class="w">      </span><span class="c1"># 2nd field, comma-separated</span>
+cut<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;:&#39;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">1</span><span class="w"> </span>/etc/passwd<span class="w">   </span><span class="c1"># Usernames from passwd</span>
+</code></pre></div></td></tr></table></div>
+<p>Real examples:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Get usernames from /etc/passwd</span>
+cut<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;:&#39;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">1</span><span class="w"> </span>/etc/passwd
+
+<span class="c1"># Get home directories</span>
+cut<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;:&#39;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">1</span>,6<span class="w"> </span>/etc/passwd
+
+<span class="c1"># Get 2nd column from CSV</span>
+cut<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">2</span><span class="w"> </span>sales.csv
+</code></pre></div></td></tr></table></div>
+<h3 id="the-paste-command">The Paste Command</h3>
+<p>The <strong>paste command</strong> is the opposite of cut—it joins files line by line:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Join two files side by side</span>
+paste<span class="w"> </span>names.txt<span class="w"> </span>scores.txt
+
+<span class="c1"># Join with custom delimiter</span>
+paste<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="w"> </span>names.txt<span class="w"> </span>scores.txt
+
+<span class="c1"># Join all lines into one (serial)</span>
+paste<span class="w"> </span>-s<span class="w"> </span>file.txt
+
+<span class="c1"># Create CSV from multiple files</span>
+paste<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="w"> </span>col1.txt<span class="w"> </span>col2.txt<span class="w"> </span>col3.txt<span class="w"> </span>&gt;<span class="w"> </span>data.csv
+</code></pre></div></td></tr></table></div>
+<p>Example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># file1.txt:       file2.txt:</span>
+<span class="c1"># Alice            90</span>
+<span class="c1"># Bob              85</span>
+<span class="c1"># Charlie          92</span>
+
+paste<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
+<span class="c1"># Alice   90</span>
+<span class="c1"># Bob     85</span>
+<span class="c1"># Charlie 92</span>
+
+paste<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
+<span class="c1"># Alice,90</span>
+<span class="c1"># Bob,85</span>
+<span class="c1"># Charlie,92</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="diagram-text-processing-pipeline">Diagram: Text Processing Pipeline</h4>
+<details>
+<summary>Text Processing Tools Pipeline</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Apply, Analyze
+Learning Objective: Show how text processing tools (sort, uniq, cut, wc) can be combined in pipelines to transform data.</p>
+<p>Layout: Horizontal data flow diagram showing transformation stages</p>
+<p>Scenario: Processing a log file to find top error types</p>
+<p>Input data (leftmost):
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>ERROR: File not found
+WARNING: Low memory
+ERROR: Connection refused
+ERROR: File not found
+INFO: Request completed
+ERROR: Connection refused
+ERROR: File not found
+</code></pre></div></td></tr></table></div></p>
+<p>Pipeline stages (left to right):
+1. grep "ERROR" → filters to only ERROR lines
+2. cut -d ':' -f 2 → extracts error message
+3. sort → alphabetizes messages
+4. uniq -c → counts occurrences
+5. sort -rn → sorts by count descending
+6. head -3 → top 3 errors</p>
+<p>Visual elements:
+- Data boxes showing content at each stage
+- Arrows with command labels
+- Color coding for each command type</p>
+<p>Output (rightmost):
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>3 File not found
+2 Connection refused
+</code></pre></div></td></tr></table></div></p>
+<p>Interactive features:
+- Click each stage to see intermediate output
+- Highlight matching data at each step
+- Toggle different example datasets</p>
+<p>Color coding:
+- grep: Red
+- cut: Orange
+- sort: Blue
+- uniq: Green
+- head: Purple</p>
+<p>Implementation: HTML/CSS/JavaScript or p5.js</p>
+</details>
+<h2 id="comparing-files-the-diff-command">Comparing Files: The Diff Command</h2>
+<p>The <strong>diff command</strong> compares two files and shows their differences:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>diff<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
+</code></pre></div></td></tr></table></div>
+<p>Understanding diff output:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>3c3
+&lt; old line in file1
+---
+&gt; new line in file2
+
+5d4
+&lt; deleted line
+
+7a8
+&gt; added line
+</code></pre></div></td></tr></table></div>
+<p>The codes mean:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>c</code></td>
+<td>Changed</td>
+</tr>
+<tr>
+<td><code>d</code></td>
+<td>Deleted</td>
+</tr>
+<tr>
+<td><code>a</code></td>
+<td>Added</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>Line from first file</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>Line from second file</td>
+</tr>
+</tbody>
+</table>
+<h3 id="diff-options">Diff Options</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Side-by-side comparison</span>
+diff<span class="w"> </span>-y<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
+
+<span class="c1"># Show only whether files differ</span>
+diff<span class="w"> </span>-q<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
+
+<span class="c1"># Unified format (like git diff)</span>
+diff<span class="w"> </span>-u<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
+
+<span class="c1"># Ignore whitespace</span>
+diff<span class="w"> </span>-w<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
+
+<span class="c1"># Ignore case</span>
+diff<span class="w"> </span>-i<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
+
+<span class="c1"># Recursive directory comparison</span>
+diff<span class="w"> </span>-r<span class="w"> </span>dir1/<span class="w"> </span>dir2/
+</code></pre></div></td></tr></table></div>
+<p>The unified format (<code>-u</code>) is especially readable:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gd">--- file1.txt   2025-12-06 10:00:00</span>
+<span class="gi">+++ file2.txt   2025-12-06 10:30:00</span>
+<span class="gu">@@ -1,4 +1,4 @@</span>
+<span class="w"> </span>Line 1
+<span class="gd">-Old line 2</span>
+<span class="gi">+New line 2</span>
+<span class="w"> </span>Line 3
+<span class="w"> </span>Line 4
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Diff + Git</p>
+<p>When you use Git for version control, <code>git diff</code> uses a similar format. Learning to read diff output is essential for any developer!</p>
+</div>
+<h4 id="diagram-diff-command-visualization">Diagram: Diff Command Visualization</h4>
+<details>
+<summary>Interactive Diff Comparison Tool</summary>
+<p>Type: microsim</p>
+<p>Bloom Taxonomy: Understand, Analyze
+Learning Objective: Help students understand diff output by showing side-by-side files with changes highlighted and corresponding diff codes.</p>
+<p>Canvas layout (responsive, ~800px max):
+- Left panel (300px): File 1 content
+- Right panel (300px): File 2 content
+- Bottom panel (200px): Diff output with explanations</p>
+<p>Visual elements:
+- Two "text editor" style panels with line numbers
+- Color-coded highlighting for changes
+- Diff output with hover explanations
+- Legend explaining diff codes</p>
+<p>Sample files to compare:
+File 1:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Apple
+Banana
+Cherry
+Date
+Elderberry
+</code></pre></div></td></tr></table></div></p>
+<p>File 2:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>Apple
+Blueberry
+Cherry
+Fig
+Elderberry
+Grape
+</code></pre></div></td></tr></table></div></p>
+<p>Highlighting:
+- Changed lines: Yellow background (Banana→Blueberry, Date→Fig)
+- Deleted lines: Red strikethrough
+- Added lines: Green background (Grape)
+- Unchanged: White background</p>
+<p>Interactive features:
+- Edit either file and see diff update live
+- Click on diff output to highlight corresponding lines
+- Toggle between normal and unified (-u) format
+- Switch between different example file pairs</p>
+<p>Color coding:
+- Unchanged: White
+- Changed: Yellow
+- Deleted: Light red with strikethrough
+- Added: Light green</p>
+<p>Implementation: p5.js or HTML/CSS/JavaScript</p>
+</details>
+<h2 id="putting-it-all-together-file-operations-workflow">Putting It All Together: File Operations Workflow</h2>
+<p>Let's practice combining everything you've learned. Here's a real-world scenario:</p>
+<h3 id="scenario-organizing-downloads">Scenario: Organizing Downloads</h3>
+<p>Your Downloads folder is a mess. Let's clean it up!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># First, see what&#39;s there</span>
+<span class="nb">cd</span><span class="w"> </span>~/Downloads
+ls<span class="w"> </span>-la
+
+<span class="c1"># Create organized folders</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>organized/<span class="o">{</span>documents,images,archives,code,other<span class="o">}</span>
+
+<span class="c1"># Move files by type</span>
+mv<span class="w"> </span>*.pdf<span class="w"> </span>*.doc<span class="w"> </span>*.docx<span class="w"> </span>*.txt<span class="w"> </span>organized/documents/<span class="w"> </span><span class="m">2</span>&gt;/dev/null
+mv<span class="w"> </span>*.jpg<span class="w"> </span>*.jpeg<span class="w"> </span>*.png<span class="w"> </span>*.gif<span class="w"> </span>organized/images/<span class="w"> </span><span class="m">2</span>&gt;/dev/null
+mv<span class="w"> </span>*.zip<span class="w"> </span>*.tar<span class="w"> </span>*.gz<span class="w"> </span>*.7z<span class="w"> </span>organized/archives/<span class="w"> </span><span class="m">2</span>&gt;/dev/null
+mv<span class="w"> </span>*.py<span class="w"> </span>*.js<span class="w"> </span>*.html<span class="w"> </span>*.css<span class="w"> </span>organized/code/<span class="w"> </span><span class="m">2</span>&gt;/dev/null
+
+<span class="c1"># Move everything else to other</span>
+mv<span class="w"> </span>*<span class="w"> </span>organized/other/<span class="w"> </span><span class="m">2</span>&gt;/dev/null
+
+<span class="c1"># Check our work</span>
+tree<span class="w"> </span>organized/
+</code></pre></div></td></tr></table></div>
+<h3 id="scenario-quick-backup">Scenario: Quick Backup</h3>
+<p>Before making changes, create a quick backup:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Backup a single file</span>
+cp<span class="w"> </span>important.txt<span class="w"> </span>important.txt.bak
+
+<span class="c1"># Backup with date</span>
+cp<span class="w"> </span>config.conf<span class="w"> </span>config.conf.<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d<span class="k">)</span>
+
+<span class="c1"># Backup entire directory</span>
+cp<span class="w"> </span>-a<span class="w"> </span>myproject/<span class="w"> </span>myproject_backup_<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d<span class="k">)</span>/
+</code></pre></div></td></tr></table></div>
+<h3 id="scenario-log-analysis">Scenario: Log Analysis</h3>
+<p>Find the most common errors in a log file:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Get error lines, extract message, count, sort by frequency</span>
+grep<span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="w"> </span>application.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;:&#39;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-rn<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-10
+</code></pre></div></td></tr></table></div>
+<h2 id="file-operations-cheat-sheet">File Operations Cheat Sheet</h2>
+<p>Here's your quick reference card:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>touch</code></td>
+<td>Create empty file</td>
+<td><code>touch newfile.txt</code></td>
+</tr>
+<tr>
+<td><code>mkdir</code></td>
+<td>Create directory</td>
+<td><code>mkdir -p path/to/dir</code></td>
+</tr>
+<tr>
+<td><code>rmdir</code></td>
+<td>Remove empty directory</td>
+<td><code>rmdir emptydir</code></td>
+</tr>
+<tr>
+<td><code>cp</code></td>
+<td>Copy files/dirs</td>
+<td><code>cp -r src/ dest/</code></td>
+</tr>
+<tr>
+<td><code>mv</code></td>
+<td>Move/rename</td>
+<td><code>mv old.txt new.txt</code></td>
+</tr>
+<tr>
+<td><code>rm</code></td>
+<td>Delete files</td>
+<td><code>rm -ri directory/</code></td>
+</tr>
+<tr>
+<td><code>cat</code></td>
+<td>Display file</td>
+<td><code>cat file.txt</code></td>
+</tr>
+<tr>
+<td><code>head</code></td>
+<td>Show beginning</td>
+<td><code>head -20 file.txt</code></td>
+</tr>
+<tr>
+<td><code>tail</code></td>
+<td>Show end</td>
+<td><code>tail -f log.txt</code></td>
+</tr>
+<tr>
+<td><code>less</code></td>
+<td>Page through file</td>
+<td><code>less bigfile.txt</code></td>
+</tr>
+<tr>
+<td><code>more</code></td>
+<td>Page (forward only)</td>
+<td><code>more bigfile.txt</code></td>
+</tr>
+<tr>
+<td><code>wc</code></td>
+<td>Count lines/words</td>
+<td><code>wc -l file.txt</code></td>
+</tr>
+<tr>
+<td><code>sort</code></td>
+<td>Sort lines</td>
+<td><code>sort -n numbers.txt</code></td>
+</tr>
+<tr>
+<td><code>uniq</code></td>
+<td>Remove duplicates</td>
+<td><code>sort \| uniq -c</code></td>
+</tr>
+<tr>
+<td><code>cut</code></td>
+<td>Extract columns</td>
+<td><code>cut -d ',' -f 2</code></td>
+</tr>
+<tr>
+<td><code>paste</code></td>
+<td>Merge files</td>
+<td><code>paste a.txt b.txt</code></td>
+</tr>
+<tr>
+<td><code>diff</code></td>
+<td>Compare files</td>
+<td><code>diff -u old new</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>You've mastered the essential file operations! Here's what you now know:</p>
+<ul>
+<li><strong>touch</strong> creates empty files (or updates timestamps)</li>
+<li><strong>mkdir -p</strong> creates directories (including parents)</li>
+<li><strong>cp -r</strong> copies files and directories</li>
+<li><strong>mv</strong> moves OR renames files</li>
+<li><strong>rm -r</strong> deletes directories (<strong>BE CAREFUL!</strong>)</li>
+<li><strong>cat</strong> displays files, <strong>head</strong> shows beginnings, <strong>tail</strong> shows ends</li>
+<li><strong>less</strong> is your interactive file viewer (better than more!)</li>
+<li><strong>tail -f</strong> follows log files in real-time</li>
+<li><strong>wc</strong> counts, <strong>sort</strong> sorts, <strong>uniq</strong> de-duplicates</li>
+<li><strong>cut</strong> extracts columns, <strong>paste</strong> combines files</li>
+<li><strong>diff</strong> compares files</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">You're a File Operations Pro!</p>
+<p>You can now create, organize, view, and manage files entirely from the command line. These skills will serve you every single day as you work with Linux. Practice these commands until they become second nature!</p>
+</div>
+<h2 id="whats-next">What's Next?</h2>
+<p>Now that you can manipulate files, it's time to learn about <strong>permissions and ownership</strong>. Who can read your files? Who can modify them? Who can run programs? That's coming up next!</p>
+<p>But first, let's make sure all this knowledge sticks with some practice...</p>
+<hr />
+<details class="question">
+<summary>Quick Quiz: File Operations</summary>
+<ol>
+<li>What command creates an empty file?</li>
+<li>How do you create nested directories in one command?</li>
+<li>What's the difference between <code>cp</code> and <code>mv</code>?</li>
+<li>What does <code>rm -r</code> do, and why is it dangerous?</li>
+<li>How do you watch a log file update in real-time?</li>
+<li>What does <code>sort | uniq</code> do that <code>uniq</code> alone doesn't?</li>
+</ol>
+</details>
+<details class="note">
+<summary>Quiz Answers</summary>
+<ol>
+<li><code>touch filename</code> creates an empty file</li>
+<li><code>mkdir -p path/to/nested/dir</code> creates all parent directories</li>
+<li><code>cp</code> duplicates (original stays), <code>mv</code> relocates (original gone)</li>
+<li><code>rm -r</code> deletes directories recursively—dangerous because it permanently deletes everything with no undo</li>
+<li><code>tail -f logfile.txt</code> follows the file and shows new lines as they're added</li>
+<li><code>sort | uniq</code> removes ALL duplicates; <code>uniq</code> alone only removes ADJACENT duplicates</li>
+</ol>
+</details>
 
 
 
@@ -1580,7 +4117,7 @@
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../js/extra.css"></script>
+        <script src="../../js/extra.js"></script>
       
     
   </body>

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+        <meta name="description" content="Customize your shell environment with dotfiles, environment variables, aliases, and functions">
       
       
         <meta name="author" content="Dan McCreary">
@@ -52,7 +52,7 @@
       
     
     
-      <link rel="stylesheet" href="../../styles/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -75,7 +75,7 @@
       
         <meta  property="og:title"  content="Shell Configuration and Environment - Learning Linux" >
       
-        <meta  property="og:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  property="og:description"  content="Customize your shell environment with dotfiles, environment variables, aliases, and functions" >
       
         <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/11-shell-config/index.png" >
       
@@ -91,7 +91,7 @@
       
         <meta  name="twitter:title"  content="Shell Configuration and Environment - Learning Linux" >
       
-        <meta  name="twitter:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  name="twitter:description"  content="Customize your shell environment with dotfiles, environment variables, aliases, and functions" >
       
         <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/11-shell-config/index.png" >
       
@@ -214,7 +214,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -259,7 +259,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -439,8 +439,6 @@
           
         
       
-        
-          
         
       
         
@@ -780,6 +778,456 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#your-prompt-tells-your-story" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Prompt Tells Your Story
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-configuration-making-the-shell-your-own" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell Configuration: Making the Shell Your Own
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dotfiles-your-shells-settings-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Dotfiles: Your Shell's Settings Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Dotfiles: Your Shell's Settings Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-bashrc-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Bashrc File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-bash-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Bash Profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-zshrc-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Zshrc File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-profile-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Profile File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-files-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Files Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables-the-shells-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Variables: The Shell's Memory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment Variables: The Shell's Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-path-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      The PATH Variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-home-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      The HOME Variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-user-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      The USER Variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-shell-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      The SHELL Variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-useful-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Useful Environment Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-export-command-sharing-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Export Command: Sharing Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-source-command-reload-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Source Command: Reload Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aliases-shortcuts-for-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aliases: Shortcuts for Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aliases: Shortcuts for Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Aliases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-and-removing-aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing and Removing Aliases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing Aliases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-functions-aliases-on-steroids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell Functions: Aliases on Steroids
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shell Functions: Aliases on Steroids">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#more-useful-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      More Useful Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alias-vs-function-when-to-use-which" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alias vs Function: When to Use Which
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-startup-order-what-loads-when" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell Startup Order: What Loads When
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shell Startup Order: What Loads When">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bash-startup-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bash Startup Order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zsh-startup-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zsh Startup Order
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zsh Startup Order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-shell-configuration-loading-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Shell Configuration Loading Order
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-advice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Advice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-your-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customizing Your Prompt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Customizing Your Prompt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompt-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bash-prompt-escape-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bash Prompt Escape Sequences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Colors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-emoji-to-your-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Emoji to Your Prompt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding Emoji to Your Prompt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-emoji-based-on-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Emoji Based on Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emoji-ideas-for-your-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emoji Ideas for Your Prompt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zsh-prompt-with-emoji" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zsh Prompt with Emoji
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creative-and-professional-finding-the-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creative AND Professional: Finding the Balance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creative AND Professional: Finding the Balance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-a-great-professional-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Makes a Great Professional Prompt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screenshot-ready-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshot-Ready Prompts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-explain-this-screenshot-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      The "Explain This Screenshot" Test
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsim-prompt-customizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroSim: Prompt Customizer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-a-complete-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: A Complete Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1048,7 +1496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../24-customization/" class="md-nav__link">
+      <a href="../24-customization/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,6 +1621,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1186,7 +1642,7 @@
         
   
   
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1424,6 +1880,456 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#your-prompt-tells-your-story" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Prompt Tells Your Story
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-configuration-making-the-shell-your-own" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell Configuration: Making the Shell Your Own
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dotfiles-your-shells-settings-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Dotfiles: Your Shell's Settings Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Dotfiles: Your Shell's Settings Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-bashrc-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Bashrc File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-bash-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Bash Profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-zshrc-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Zshrc File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-profile-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Profile File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-files-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Files Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables-the-shells-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Variables: The Shell's Memory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment Variables: The Shell's Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-path-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      The PATH Variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-home-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      The HOME Variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-user-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      The USER Variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-shell-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      The SHELL Variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-useful-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Useful Environment Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-export-command-sharing-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Export Command: Sharing Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-source-command-reload-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Source Command: Reload Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aliases-shortcuts-for-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aliases: Shortcuts for Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aliases: Shortcuts for Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Aliases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-and-removing-aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing and Removing Aliases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removing-aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing Aliases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-functions-aliases-on-steroids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell Functions: Aliases on Steroids
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shell Functions: Aliases on Steroids">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#more-useful-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      More Useful Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alias-vs-function-when-to-use-which" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alias vs Function: When to Use Which
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-startup-order-what-loads-when" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell Startup Order: What Loads When
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shell Startup Order: What Loads When">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bash-startup-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bash Startup Order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zsh-startup-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zsh Startup Order
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zsh Startup Order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-shell-configuration-loading-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Shell Configuration Loading Order
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-advice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Advice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-your-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customizing Your Prompt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Customizing Your Prompt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompt-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bash-prompt-escape-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bash Prompt Escape Sequences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Colors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-emoji-to-your-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Emoji to Your Prompt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding Emoji to Your Prompt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-emoji-based-on-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Emoji Based on Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emoji-ideas-for-your-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emoji Ideas for Your Prompt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zsh-prompt-with-emoji" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zsh Prompt with Emoji
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creative-and-professional-finding-the-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creative AND Professional: Finding the Balance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creative AND Professional: Finding the Balance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-a-great-professional-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Makes a Great Professional Prompt?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screenshot-ready-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshot-Ready Prompts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-explain-this-screenshot-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      The "Explain This Screenshot" Test
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsim-prompt-customizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroSim: Prompt Customizer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-a-complete-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: A Complete Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1439,7 +2345,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/learniing-linux/blob/master/docs/chapters/11-shell-config/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/learning-linux/blob/master/docs/chapters/11-shell-config/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1451,7 +2357,7 @@
 <h2 id="summary">Summary</h2>
 <p>This chapter teaches you to customize your shell environment for productivity. You'll learn about dotfiles (.bashrc, .zshrc), environment variables like PATH and HOME, creating aliases and shell functions, and understanding how shells load configuration files at startup. A well-configured shell can dramatically improve your daily workflow.</p>
 <h2 id="concepts-covered">Concepts Covered</h2>
-<p>This chapter covers the following 20 concepts from the learning graph:</p>
+<p>This chapter covers the following 17 concepts from the learning graph:</p>
 <ol>
 <li>Shell Configuration</li>
 <li>Bashrc File</li>
@@ -1479,7 +2385,1385 @@
 <li><a href="../10-text-editors/">Chapter 10: Text Editors: Nano and Vim</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<h2 id="your-prompt-tells-your-story">Your Prompt Tells Your Story</h2>
+<p>I help a lot of students learning AI. When they share their screen, I can quickly tell how good their UNIX chops are just by looking at their prompts.</p>
+<p>If their prompts are the default prompts—long prompts with the full computer name like <code>FredsMacBookPro.hsd1.mn.comcast.net</code>—I know they might be rookies. That prompt is long and not full of useful information. It's like wearing a name tag that says "Hi, I'm new here!"</p>
+<p>But when I see someone with a clean, customized prompt? Maybe with their current git branch showing? Or fun emoji? I know they've taken the time to make their shell their own. They've got skills.</p>
+<p>This chapter is about joining that second group. We're going to transform your boring default terminal into a personalized command center that screams "I know what I'm doing!"</p>
+<h2 id="shell-configuration-making-the-shell-your-own">Shell Configuration: Making the Shell Your Own</h2>
+<p><strong>Shell configuration</strong> is the art of customizing how your shell looks and behaves. Every time you open a terminal, your shell reads special configuration files (called "dotfiles" because they start with a dot) that tell it:</p>
+<ul>
+<li>What your prompt should look like</li>
+<li>What shortcuts (aliases) you've created</li>
+<li>What environment variables to set</li>
+<li>What custom functions to load</li>
+</ul>
+<p>Think of it like decorating your room—except your room is the terminal, and the decorations make you more productive!</p>
+<h2 id="the-dotfiles-your-shells-settings-files">The Dotfiles: Your Shell's Settings Files</h2>
+<p>Different shells use different configuration files. Let's break down the important ones.</p>
+<h3 id="the-bashrc-file">The Bashrc File</h3>
+<p>The <strong>bashrc file</strong> (<code>~/.bashrc</code>) is the main configuration file for Bash. It runs every time you open a new terminal window (for interactive, non-login shells).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># View your bashrc</span>
+cat<span class="w"> </span>~/.bashrc
+
+<span class="c1"># Edit your bashrc</span>
+nano<span class="w"> </span>~/.bashrc
+<span class="c1"># or</span>
+vim<span class="w"> </span>~/.bashrc
+</code></pre></div></td></tr></table></div>
+<p>What goes in <code>.bashrc</code>:</p>
+<ul>
+<li>Aliases</li>
+<li>Shell functions</li>
+<li>Prompt customization (PS1)</li>
+<li>Shell options</li>
+<li>Custom PATH additions</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Example ~/.bashrc content</span>
+<span class="c1"># Set a custom prompt</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;\u@\h:\w\$ &#39;</span>
+
+<span class="c1"># Add color to ls</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls --color=auto&#39;</span>
+
+<span class="c1"># Custom aliases</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -la&#39;</span>
+<span class="nb">alias</span><span class="w"> </span>..<span class="o">=</span><span class="s1">&#39;cd ..&#39;</span>
+
+<span class="c1"># Add a directory to PATH</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="the-bash-profile">The Bash Profile</h3>
+<p>The <strong>bash profile</strong> (<code>~/.bash_profile</code> or <code>~/.profile</code>) runs once when you log in (for login shells). It's typically used for:</p>
+<ul>
+<li>Setting environment variables</li>
+<li>Running commands that should only happen once per session</li>
+<li>Starting programs at login</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Example ~/.bash_profile</span>
+<span class="c1"># Set environment variables</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">EDITOR</span><span class="o">=</span>vim
+<span class="nb">export</span><span class="w"> </span><span class="nv">VISUAL</span><span class="o">=</span>vim
+
+<span class="c1"># Load .bashrc if it exists (common pattern)</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span>~/.bashrc<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">source</span><span class="w"> </span>~/.bashrc
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">The Login vs Non-Login Shell Confusion</p>
+<p>This trips up everyone! Here's the simple version:</p>
+<ul>
+<li><strong>Login shell</strong>: When you first log in (SSH, console login). Reads <code>.bash_profile</code></li>
+<li><strong>Non-login shell</strong>: When you open a new terminal window. Reads <code>.bashrc</code></li>
+</ul>
+<p>The common fix? Put everything in <code>.bashrc</code> and have <code>.bash_profile</code> source it!</p>
+</div>
+<h3 id="the-zshrc-file">The Zshrc File</h3>
+<p>The <strong>zshrc file</strong> (<code>~/.zshrc</code>) is the equivalent of <code>.bashrc</code> but for Zsh (the default shell on modern macOS). If you're using Zsh, this is your main config file.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Example ~/.zshrc</span>
+<span class="c1"># Enable colors</span>
+autoload<span class="w"> </span>-U<span class="w"> </span>colors<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>colors
+
+<span class="c1"># Set prompt</span>
+<span class="nv">PROMPT</span><span class="o">=</span><span class="s1">&#39;%F{green}%n@%m%f:%F{blue}%~%f$ &#39;</span>
+
+<span class="c1"># Aliases work the same as bash</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -la&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">grep</span><span class="o">=</span><span class="s1">&#39;grep --color=auto&#39;</span>
+
+<span class="c1"># Zsh-specific: better tab completion</span>
+autoload<span class="w"> </span>-Uz<span class="w"> </span>compinit<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>compinit
+</code></pre></div></td></tr></table></div>
+<p>Zsh has some advantages over Bash:</p>
+<ul>
+<li>Better tab completion out of the box</li>
+<li>More customization options</li>
+<li>Frameworks like Oh My Zsh make it even better</li>
+<li>Cooler prompt themes</li>
+</ul>
+<h3 id="the-profile-file">The Profile File</h3>
+<p>The <strong>profile file</strong> (<code>~/.profile</code>) is a more generic login configuration file that works across different shells. It's read by Bash (if no <code>.bash_profile</code> exists), Sh, and some other shells.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># ~/.profile - Generic shell profile</span>
+<span class="c1"># This file is read by login shells</span>
+
+<span class="c1"># Set default editor</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">EDITOR</span><span class="o">=</span>vim
+
+<span class="c1"># Add local bin to PATH</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/bin&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="configuration-files-summary">Configuration Files Summary</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Shell</th>
+<th>When Loaded</th>
+<th>Use For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>~/.bashrc</code></td>
+<td>Bash</td>
+<td>Every new terminal</td>
+<td>Aliases, functions, prompt</td>
+</tr>
+<tr>
+<td><code>~/.bash_profile</code></td>
+<td>Bash</td>
+<td>Login only</td>
+<td>Environment vars, one-time setup</td>
+</tr>
+<tr>
+<td><code>~/.zshrc</code></td>
+<td>Zsh</td>
+<td>Every new terminal</td>
+<td>All Zsh configuration</td>
+</tr>
+<tr>
+<td><code>~/.profile</code></td>
+<td>Various</td>
+<td>Login only</td>
+<td>Cross-shell environment vars</td>
+</tr>
+</tbody>
+</table>
+<h2 id="environment-variables-the-shells-memory">Environment Variables: The Shell's Memory</h2>
+<p><strong>Environment variables</strong> are named values that the shell (and programs) can access. They're like global variables for your entire session.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># View all environment variables</span>
+env
+
+<span class="c1"># View a specific variable</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$HOME</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$USER</span>
+
+<span class="c1"># Set a variable (only for current session)</span>
+<span class="nv">MY_VAR</span><span class="o">=</span><span class="s2">&quot;Hello&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$MY_VAR</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="the-path-variable">The PATH Variable</h3>
+<p>The <strong>PATH variable</strong> is THE most important environment variable. It tells the shell where to look for executable programs.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># View your PATH</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span>
+<span class="c1"># /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</span>
+
+<span class="c1"># PATH is a colon-separated list of directories</span>
+<span class="c1"># When you type &quot;ls&quot;, the shell searches these directories in order</span>
+</code></pre></div></td></tr></table></div>
+<p>To add a directory to PATH:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Add a directory to the beginning (searched first)</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+
+<span class="c1"># Add a directory to the end (searched last)</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$PATH</span><span class="s2">:/opt/myprogram/bin&quot;</span>
+
+<span class="c1"># Make it permanent by adding to ~/.bashrc or ~/.zshrc</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=&quot;$HOME/bin:$PATH&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+</code></pre></div></td></tr></table></div>
+<div class="admonition warning">
+<p class="admonition-title">Don't Break Your PATH!</p>
+<p>Always include <code>$PATH</code> when modifying PATH. If you do <code>export PATH="/my/dir"</code> without <code>$PATH</code>, you'll lose access to basic commands like <code>ls</code>! If this happens, you can fix it by typing the full path: <code>/bin/ls</code> or opening a new terminal.</p>
+</div>
+<h3 id="the-home-variable">The HOME Variable</h3>
+<p>The <strong>HOME variable</strong> contains the path to your home directory. It's set automatically when you log in.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$HOME</span>
+<span class="c1"># /home/username (Linux) or /Users/username (macOS)</span>
+
+<span class="c1"># The tilde ~ is a shortcut for $HOME</span>
+<span class="nb">cd</span><span class="w"> </span>~
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$HOME</span>
+<span class="c1"># Both do the same thing!</span>
+
+<span class="c1"># Using HOME in scripts</span>
+<span class="nv">CONFIG_FILE</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.config/myapp/settings.conf&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="the-user-variable">The USER Variable</h3>
+<p>The <strong>USER variable</strong> contains your username.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$USER</span>
+<span class="c1"># username</span>
+
+<span class="c1"># Useful in scripts</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, </span><span class="nv">$USER</span><span class="s2">!&quot;</span>
+
+<span class="c1"># Or in paths</span>
+<span class="nv">DOWNLOADS</span><span class="o">=</span><span class="s2">&quot;/home/</span><span class="nv">$USER</span><span class="s2">/Downloads&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="the-shell-variable">The SHELL Variable</h3>
+<p>The <strong>SHELL variable</strong> tells you which shell is your default login shell.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$SHELL</span>
+<span class="c1"># /bin/bash or /bin/zsh or /usr/bin/fish</span>
+
+<span class="c1"># Note: This shows your DEFAULT shell, not necessarily the current shell</span>
+<span class="c1"># To see the current shell:</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$0</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="other-useful-environment-variables">Other Useful Environment Variables</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$PWD</code></td>
+<td>Current directory</td>
+<td><code>/home/user/projects</code></td>
+</tr>
+<tr>
+<td><code>$OLDPWD</code></td>
+<td>Previous directory</td>
+<td><code>/home/user</code></td>
+</tr>
+<tr>
+<td><code>$EDITOR</code></td>
+<td>Default text editor</td>
+<td><code>vim</code></td>
+</tr>
+<tr>
+<td><code>$LANG</code></td>
+<td>Language/locale</td>
+<td><code>en_US.UTF-8</code></td>
+</tr>
+<tr>
+<td><code>$TERM</code></td>
+<td>Terminal type</td>
+<td><code>xterm-256color</code></td>
+</tr>
+<tr>
+<td><code>$PS1</code></td>
+<td>Primary prompt</td>
+<td><code>\u@\h:\w\$</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-export-command-sharing-variables">The Export Command: Sharing Variables</h2>
+<p>The <strong>export command</strong> makes a variable available to child processes (programs you run from the shell).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Without export - variable is local to this shell</span>
+<span class="nv">MY_VAR</span><span class="o">=</span><span class="s2">&quot;Hello&quot;</span>
+bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;echo $MY_VAR&#39;</span><span class="w">  </span><span class="c1"># Prints nothing!</span>
+
+<span class="c1"># With export - variable is available to child processes</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">MY_VAR</span><span class="o">=</span><span class="s2">&quot;Hello&quot;</span>
+bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;echo $MY_VAR&#39;</span><span class="w">  </span><span class="c1"># Prints &quot;Hello&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>When to use export:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Environment variables that programs need - USE EXPORT</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">EDITOR</span><span class="o">=</span>vim
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="s2">&quot;/usr/lib/jvm/java-11&quot;</span>
+
+<span class="c1"># Variables only for shell scripts - NO EXPORT NEEDED</span>
+<span class="nv">count</span><span class="o">=</span><span class="m">0</span>
+<span class="nv">filename</span><span class="o">=</span><span class="s2">&quot;data.txt&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="the-source-command-reload-configuration">The Source Command: Reload Configuration</h2>
+<p>The <strong>source command</strong> (or its shorthand <code>.</code>) reads and executes a file in the current shell. This is how you apply changes to your configuration without opening a new terminal!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># After editing ~/.bashrc, apply changes:</span>
+<span class="nb">source</span><span class="w"> </span>~/.bashrc
+<span class="c1"># or</span>
+.<span class="w"> </span>~/.bashrc
+
+<span class="c1"># Both do the same thing!</span>
+</code></pre></div></td></tr></table></div>
+<p>Why does this matter?</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># You add an alias to ~/.bashrc</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;alias projects=&#39;cd ~/projects&#39;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+
+<span class="c1"># The alias doesn&#39;t work yet!</span>
+projects
+<span class="c1"># bash: projects: command not found</span>
+
+<span class="c1"># Source the file to load the new alias</span>
+<span class="nb">source</span><span class="w"> </span>~/.bashrc
+
+<span class="c1"># Now it works!</span>
+projects
+<span class="c1"># Changed to ~/projects</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Source vs Execute</p>
+<ul>
+<li><code>source script.sh</code> - Runs in the CURRENT shell (changes persist)</li>
+<li><code>./script.sh</code> - Runs in a NEW shell (changes don't affect current shell)</li>
+</ul>
+<p>That's why you <code>source ~/.bashrc</code> instead of running it!</p>
+</div>
+<h2 id="aliases-shortcuts-for-commands">Aliases: Shortcuts for Commands</h2>
+<p>The <strong>alias command</strong> creates shortcuts for longer commands. This is one of the most useful customizations you can make!</p>
+<h3 id="creating-aliases">Creating Aliases</h3>
+<p><strong>Creating aliases</strong> is simple:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Syntax: alias name=&#39;command&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -la&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">la</span><span class="o">=</span><span class="s1">&#39;ls -A&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">l</span><span class="o">=</span><span class="s1">&#39;ls -CF&#39;</span>
+
+<span class="c1"># Now ll, la, and l are shortcuts!</span>
+ll
+<span class="c1"># Same as: ls -la</span>
+</code></pre></div></td></tr></table></div>
+<p>Popular alias ideas:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Navigation</span>
+<span class="nb">alias</span><span class="w"> </span>..<span class="o">=</span><span class="s1">&#39;cd ..&#39;</span>
+<span class="nb">alias</span><span class="w"> </span>...<span class="o">=</span><span class="s1">&#39;cd ../..&#39;</span>
+<span class="nb">alias</span><span class="w"> </span>....<span class="o">=</span><span class="s1">&#39;cd ../../..&#39;</span>
+<span class="nb">alias</span><span class="w"> </span>~<span class="o">=</span><span class="s1">&#39;cd ~&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">projects</span><span class="o">=</span><span class="s1">&#39;cd ~/projects&#39;</span>
+
+<span class="c1"># Safety nets (ask before overwriting)</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">rm</span><span class="o">=</span><span class="s1">&#39;rm -i&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">cp</span><span class="o">=</span><span class="s1">&#39;cp -i&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">mv</span><span class="o">=</span><span class="s1">&#39;mv -i&#39;</span>
+
+<span class="c1"># Colorful output</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls --color=auto&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">grep</span><span class="o">=</span><span class="s1">&#39;grep --color=auto&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">diff</span><span class="o">=</span><span class="s1">&#39;diff --color=auto&#39;</span>
+
+<span class="c1"># Git shortcuts</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">gs</span><span class="o">=</span><span class="s1">&#39;git status&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">ga</span><span class="o">=</span><span class="s1">&#39;git add&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">gc</span><span class="o">=</span><span class="s1">&#39;git commit&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">gp</span><span class="o">=</span><span class="s1">&#39;git push&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">gl</span><span class="o">=</span><span class="s1">&#39;git log --oneline&#39;</span>
+
+<span class="c1"># Quick edits</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">bashrc</span><span class="o">=</span><span class="s1">&#39;$EDITOR ~/.bashrc&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">zshrc</span><span class="o">=</span><span class="s1">&#39;$EDITOR ~/.zshrc&#39;</span>
+
+<span class="c1"># System</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">update</span><span class="o">=</span><span class="s1">&#39;sudo apt update &amp;&amp; sudo apt upgrade&#39;</span><span class="w">  </span><span class="c1"># Debian/Ubuntu</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">ports</span><span class="o">=</span><span class="s1">&#39;netstat -tulanp&#39;</span>
+
+<span class="c1"># Fun</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">please</span><span class="o">=</span><span class="s1">&#39;sudo&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">fucking</span><span class="o">=</span><span class="s1">&#39;sudo&#39;</span><span class="w">  </span><span class="c1"># When you&#39;re frustrated</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="viewing-and-removing-aliases">Viewing and Removing Aliases</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># View all aliases</span>
+<span class="nb">alias</span>
+
+<span class="c1"># View a specific alias</span>
+<span class="nb">alias</span><span class="w"> </span>ll
+
+<span class="c1"># Remove an alias for current session</span>
+<span class="nb">unalias</span><span class="w"> </span>ll
+
+<span class="c1"># To permanently remove, delete it from ~/.bashrc or ~/.zshrc</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="removing-aliases">Removing Aliases</h3>
+<p><strong>Removing aliases</strong> is done with <code>unalias</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Remove a single alias</span>
+<span class="nb">unalias</span><span class="w"> </span>ll
+
+<span class="c1"># Remove all aliases</span>
+<span class="nb">unalias</span><span class="w"> </span>-a
+
+<span class="c1"># Temporarily bypass an alias (use the original command)</span>
+<span class="se">\l</span>s<span class="w">        </span><span class="c1"># Runs real ls, not aliased version</span>
+<span class="nb">command</span><span class="w"> </span>ls<span class="w"> </span><span class="c1"># Also runs real ls</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Alias Best Practices</p>
+<ol>
+<li>Don't override important commands dangerously (like <code>alias rm='rm -rf'</code>)</li>
+<li>Use the alias to ADD safety (like <code>alias rm='rm -i'</code>)</li>
+<li>Keep aliases in a separate file (<code>~/.bash_aliases</code>) for organization</li>
+<li>Document complex aliases with comments</li>
+</ol>
+</div>
+<h2 id="shell-functions-aliases-on-steroids">Shell Functions: Aliases on Steroids</h2>
+<p><strong>Shell functions</strong> are like aliases but WAY more powerful. They can accept arguments, have multiple commands, and include logic!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Basic function</span>
+greet<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, </span><span class="nv">$1</span><span class="s2">!&quot;</span>
+<span class="o">}</span>
+greet<span class="w"> </span>World
+<span class="c1"># Hello, World!</span>
+
+<span class="c1"># Function with multiple commands</span>
+mkcd<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="o">}</span>
+mkcd<span class="w"> </span>new_project
+<span class="c1"># Creates directory AND changes into it!</span>
+
+<span class="c1"># Function with logic</span>
+extract<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">in</span>
+<span class="w">            </span>*.tar.bz2<span class="o">)</span><span class="w">   </span>tar<span class="w"> </span>xjf<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w">   </span><span class="p">;;</span>
+<span class="w">            </span>*.tar.gz<span class="o">)</span><span class="w">    </span>tar<span class="w"> </span>xzf<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w">   </span><span class="p">;;</span>
+<span class="w">            </span>*.tar<span class="o">)</span><span class="w">       </span>tar<span class="w"> </span>xf<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w">    </span><span class="p">;;</span>
+<span class="w">            </span>*.zip<span class="o">)</span><span class="w">       </span>unzip<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w">     </span><span class="p">;;</span>
+<span class="w">            </span>*.gz<span class="o">)</span><span class="w">        </span>gunzip<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w">    </span><span class="p">;;</span>
+<span class="w">            </span>*.rar<span class="o">)</span><span class="w">       </span>unrar<span class="w"> </span>x<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w">   </span><span class="p">;;</span>
+<span class="w">            </span>*<span class="o">)</span><span class="w">           </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Unknown format: </span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">;;</span>
+<span class="w">        </span><span class="k">esac</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;File not found: </span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
+<span class="c1"># Now: extract file.tar.gz  (auto-detects format!)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="more-useful-functions">More Useful Functions</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Quick backup</span>
+backup<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>cp<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">.backup.</span><span class="k">$(</span>date<span class="w"> </span>+%Y%m%d<span class="k">)</span><span class="s2">&quot;</span>
+<span class="o">}</span>
+<span class="c1"># backup important.txt → important.txt.backup.20241206</span>
+
+<span class="c1"># Find and replace in files</span>
+replace<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>grep<span class="w"> </span>-rl<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span>.<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s/</span><span class="nv">$1</span><span class="s2">/</span><span class="nv">$2</span><span class="s2">/g&quot;</span>
+<span class="o">}</span>
+<span class="c1"># replace oldtext newtext</span>
+
+<span class="c1"># Create and enter a temp directory</span>
+tmpd<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>mktemp<span class="w"> </span>-d<span class="k">)</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">pwd</span>
+<span class="o">}</span>
+
+<span class="c1"># Weather in terminal</span>
+weather<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>curl<span class="w"> </span><span class="s2">&quot;wttr.in/</span><span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="o">}</span>
+<span class="c1"># weather Paris</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="alias-vs-function-when-to-use-which">Alias vs Function: When to Use Which</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Alias</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arguments</td>
+<td>No (sort of)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Multiple commands</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Logic (if/case)</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Simple shortcuts</td>
+<td>Perfect</td>
+<td>Overkill</td>
+</tr>
+<tr>
+<td>Complex operations</td>
+<td>Can't do</td>
+<td>Perfect</td>
+</tr>
+</tbody>
+</table>
+<p>Rule of thumb: If you just need a shortcut, use an alias. If you need arguments or logic, use a function.</p>
+<h2 id="shell-startup-order-what-loads-when">Shell Startup Order: What Loads When</h2>
+<p>Understanding <strong>shell startup order</strong> helps you know where to put your configurations.</p>
+<h3 id="bash-startup-order">Bash Startup Order</h3>
+<p>For a <strong>login shell</strong> (SSH, first terminal after login):</p>
+<ol>
+<li><code>/etc/profile</code> (system-wide)</li>
+<li>First found of: <code>~/.bash_profile</code>, <code>~/.bash_login</code>, or <code>~/.profile</code></li>
+</ol>
+<p>For a <strong>non-login interactive shell</strong> (new terminal window):</p>
+<ol>
+<li><code>/etc/bash.bashrc</code> (system-wide, if exists)</li>
+<li><code>~/.bashrc</code></li>
+</ol>
+<h3 id="zsh-startup-order">Zsh Startup Order</h3>
+<ol>
+<li><code>/etc/zshenv</code> then <code>~/.zshenv</code> (always)</li>
+<li><code>/etc/zprofile</code> then <code>~/.zprofile</code> (login shells)</li>
+<li><code>/etc/zshrc</code> then <code>~/.zshrc</code> (interactive shells)</li>
+<li><code>/etc/zlogin</code> then <code>~/.zlogin</code> (login shells)</li>
+</ol>
+<h4 id="diagram-shell-configuration-loading-order">Diagram: Shell Configuration Loading Order</h4>
+<details>
+<summary>When Do Config Files Load?</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Understand
+Learning Objective: Visualize the order in which shell configuration files are loaded for different types of shells.</p>
+<p>Layout: Flowchart with two paths (login vs non-login)</p>
+<p>Visual elements:
+- Start node: "Shell starts"
+- Decision diamond: "Login shell?"
+- Two parallel paths showing file loading order
+- File boxes with names and purposes</p>
+<p>Login shell path:
+1. /etc/profile (system-wide environment)
+2. ~/.bash_profile OR ~/.bash_login OR ~/.profile
+3. (Often sources ~/.bashrc)</p>
+<p>Non-login shell path:
+1. /etc/bash.bashrc (if exists)
+2. ~/.bashrc</p>
+<p>Each box shows:
+- Filename
+- What it's typically used for
+- Whether it's system-wide or user-specific</p>
+<p>Color scheme:
+- System files: Blue
+- User files: Green
+- Decision points: Yellow
+- Flow arrows: Gray</p>
+<p>Implementation: p5.js</p>
+</details>
+<h3 id="practical-advice">Practical Advice</h3>
+<p>Most people do this:</p>
+<ol>
+<li>Put EVERYTHING in <code>~/.bashrc</code> (or <code>~/.zshrc</code>)</li>
+<li>Have <code>~/.bash_profile</code> just source <code>~/.bashrc</code></li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># ~/.bash_profile - Keep it simple!</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span>~/.bashrc<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">source</span><span class="w"> </span>~/.bashrc
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<p>This way, your configuration works the same whether it's a login shell or not!</p>
+<h2 id="customizing-your-prompt">Customizing Your Prompt</h2>
+<p>Your prompt is the text that appears before your cursor. The default is often boring and too long. Let's fix that!</p>
+<h3 id="prompt-variables">Prompt Variables</h3>
+<p>In Bash, the prompt is controlled by <code>PS1</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># View current prompt</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$PS1</span>
+
+<span class="c1"># Simple prompt (just $)</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;$ &#39;</span>
+
+<span class="c1"># Username and current directory</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;\u:\w$ &#39;</span>
+<span class="c1"># dan:~/projects$</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="bash-prompt-escape-sequences">Bash Prompt Escape Sequences</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\u</code></td>
+<td>Username</td>
+</tr>
+<tr>
+<td><code>\h</code></td>
+<td>Hostname (short)</td>
+</tr>
+<tr>
+<td><code>\H</code></td>
+<td>Hostname (full)</td>
+</tr>
+<tr>
+<td><code>\w</code></td>
+<td>Current directory (full path)</td>
+</tr>
+<tr>
+<td><code>\W</code></td>
+<td>Current directory (basename only)</td>
+</tr>
+<tr>
+<td><code>\d</code></td>
+<td>Date</td>
+</tr>
+<tr>
+<td><code>\t</code></td>
+<td>Time (24-hour)</td>
+</tr>
+<tr>
+<td><code>\T</code></td>
+<td>Time (12-hour)</td>
+</tr>
+<tr>
+<td><code>\n</code></td>
+<td>Newline</td>
+</tr>
+<tr>
+<td><code>\$</code></td>
+<td>$ for normal user, # for root</td>
+</tr>
+</tbody>
+</table>
+<h3 id="adding-colors">Adding Colors</h3>
+<p>Colors make your prompt POP!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Color codes (wrap in \[ \] to not break line length)</span>
+<span class="c1"># Format: \[\e[COLORm\]text\[\e[0m\]</span>
+
+<span class="c1"># Red username, blue directory</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;\[\e[31m\]\u\[\e[0m\]:\[\e[34m\]\w\[\e[0m\]\$ &#39;</span>
+
+<span class="c1"># Green user@host, yellow directory</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;\[\e[32m\]\u@\h\[\e[0m\]:\[\e[33m\]\w\[\e[0m\]\$ &#39;</span>
+</code></pre></div></td></tr></table></div>
+<p>Common color codes:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30</td>
+<td>Black</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Red</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Green</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Yellow</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Blue</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Magenta</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Cyan</td>
+</tr>
+<tr>
+<td>37</td>
+<td>White</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Bold</td>
+</tr>
+<tr>
+<td>0</td>
+<td>Reset</td>
+</tr>
+</tbody>
+</table>
+<h2 id="adding-emoji-to-your-prompt">Adding Emoji to Your Prompt</h2>
+<p>Here's where the fun really begins! Adding emoji to your prompt is a great way to personalize your terminal and show off your customization skills.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Simple emoji prompt</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;🚀 \w $ &#39;</span>
+<span class="c1"># 🚀 ~/projects $</span>
+
+<span class="c1"># Emoji with colors</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;🐧 \[\e[32m\]\u\[\e[0m\]:\[\e[34m\]\w\[\e[0m\] $ &#39;</span>
+<span class="c1"># 🐧 dan:~/projects $</span>
+
+<span class="c1"># Different emoji for different moods</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;☕ \W $ &#39;</span><span class="w">    </span><span class="c1"># Coffee time coding</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;🔥 \W $ &#39;</span><span class="w">    </span><span class="c1"># On fire!</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;🎯 \W $ &#39;</span><span class="w">    </span><span class="c1"># Focused mode</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;💻 \W $ &#39;</span><span class="w">    </span><span class="c1"># Classic coder</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;🦊 \W $ &#39;</span><span class="w">    </span><span class="c1"># Firefox fan</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;🐍 \W $ &#39;</span><span class="w">    </span><span class="c1"># Python developer</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;⚡ \W $ &#39;</span><span class="w">    </span><span class="c1"># Speed demon</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="dynamic-emoji-based-on-status">Dynamic Emoji Based on Status</h3>
+<p>Want to get fancy? Show different emoji based on the last command's success or failure:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Green checkmark for success, red X for failure</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;$(if [ $? -eq 0 ]; then echo &quot;✅&quot;; else echo &quot;❌&quot;; fi) \w $ &#39;</span>
+
+<span class="c1"># Happy/sad face based on exit status</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;$(if [ $? -eq 0 ]; then echo &quot;😊&quot;; else echo &quot;😢&quot;; fi) \w $ &#39;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="emoji-ideas-for-your-prompt">Emoji Ideas for Your Prompt</h3>
+<table>
+<thead>
+<tr>
+<th>Emoji</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🚀</td>
+<td>Ready to launch</td>
+</tr>
+<tr>
+<td>💻</td>
+<td>Coding mode</td>
+</tr>
+<tr>
+<td>🐧</td>
+<td>Linux pride</td>
+</tr>
+<tr>
+<td>🍎</td>
+<td>macOS user</td>
+</tr>
+<tr>
+<td>☕</td>
+<td>Caffeine-powered</td>
+</tr>
+<tr>
+<td>🔥</td>
+<td>On fire</td>
+</tr>
+<tr>
+<td>⚡</td>
+<td>Fast and furious</td>
+</tr>
+<tr>
+<td>🎯</td>
+<td>Focused</td>
+</tr>
+<tr>
+<td>🌙</td>
+<td>Late night coding</td>
+</tr>
+<tr>
+<td>🌈</td>
+<td>After the storm</td>
+</tr>
+<tr>
+<td>🦄</td>
+<td>Magical code</td>
+</tr>
+<tr>
+<td>🐛</td>
+<td>Debugging</td>
+</tr>
+<tr>
+<td>✅/❌</td>
+<td>Last command status</td>
+</tr>
+</tbody>
+</table>
+<h3 id="zsh-prompt-with-emoji">Zsh Prompt with Emoji</h3>
+<p>Zsh makes it even easier:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># In ~/.zshrc</span>
+<span class="nv">PROMPT</span><span class="o">=</span><span class="s1">&#39;🚀 %F{green}%n%f:%F{blue}%~%f $ &#39;</span>
+
+<span class="c1"># With git branch (if using Oh My Zsh)</span>
+<span class="nv">PROMPT</span><span class="o">=</span><span class="s1">&#39;🐙 %F{cyan}%~%f $(git_prompt_info) $ &#39;</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Emoji Compatibility</p>
+<p>Make sure your terminal supports Unicode/emoji. Most modern terminals do (iTerm2, Windows Terminal, GNOME Terminal, etc.). If emoji appear as boxes, try a different terminal or font (Nerd Fonts are great!).</p>
+</div>
+<h3 id="creative-and-professional-finding-the-balance">Creative AND Professional: Finding the Balance</h3>
+<p>Here's something to keep in mind: your terminal screenshots will be shared. With coworkers. In Slack. In documentation. In presentations. Maybe even in job interviews when you're showing off a project.</p>
+<p>So while a prompt with 🔥💯🚀✨ might be fun on your personal laptop, consider what message it sends in a professional context. The sweet spot? <strong>Creative enough to show personality, informative enough to be useful.</strong></p>
+<h4 id="what-makes-a-great-professional-prompt">What Makes a Great Professional Prompt?</h4>
+<p>A well-designed prompt should answer these questions at a glance:</p>
+<ol>
+<li><strong>Who am I?</strong> (username—especially important on shared servers)</li>
+<li><strong>Where am I?</strong> (current directory)</li>
+<li><strong>What's the context?</strong> (git branch, virtual environment, etc.)</li>
+<li><strong>Did something go wrong?</strong> (exit status indicator)</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Good: Informative with a touch of personality</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;🐧 \[\e[32m\]\u\[\e[0m\]:\[\e[34m\]\W\[\e[0m\] $(git branch 2&gt;/dev/null | grep &quot;*&quot; | cut -d&quot; &quot; -f2) $ &#39;</span>
+<span class="c1"># 🐧 dan:project main $</span>
+
+<span class="c1"># Also good: Clean and professional</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;\[\e[36m\]\u@\h\[\e[0m\]:\[\e[33m\]\w\[\e[0m\]\$ &#39;</span>
+<span class="c1"># dan@server:~/projects$</span>
+
+<span class="c1"># Maybe reconsider: Fun but not informative</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;🔥💯 $ &#39;</span>
+<span class="c1"># 🔥💯 $  (Where am I? What branch? Who knows!)</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="screenshot-ready-prompts">Screenshot-Ready Prompts</h4>
+<p>When you share your screen or take screenshots:</p>
+<ul>
+<li><strong>Short paths are readable</strong>: Use <code>\W</code> (current dir only) instead of <code>\w</code> (full path) to avoid super long prompts</li>
+<li><strong>One emoji is enough</strong>: A single 🚀 or 🐧 adds personality without looking silly</li>
+<li><strong>Git branch is gold</strong>: Showing your branch tells the story of what you're working on</li>
+<li><strong>Colors help scanning</strong>: They make screenshots easier to read at a glance</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Screenshot-friendly: Shows who, where, and what branch</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;🚀 \[\e[32m\]\u\[\e[0m\]:\[\e[34m\]\W\[\e[0m\] \[\e[35m\]$(git branch 2&gt;/dev/null | grep -o &quot;[^ ]*$&quot;)\[\e[0m\] $ &#39;</span>
+<span class="c1"># 🚀 dan:myproject feature-auth $</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="the-explain-this-screenshot-test">The "Explain This Screenshot" Test</h4>
+<p>Before finalizing your prompt, imagine sending a screenshot to a coworker and ask:</p>
+<ul>
+<li>Can they tell what directory you're in?</li>
+<li>Can they tell what git branch you're on?</li>
+<li>Does it look professional enough for documentation?</li>
+<li>Does it still show a bit of your personality?</li>
+</ul>
+<p>If the answer is yes to all four, you've nailed it!</p>
+<div class="admonition note">
+<p class="admonition-title">Your Prompt Is Your Brand</p>
+<p>Think of your prompt like your email signature or your GitHub profile. It's a small thing, but it says something about you. A thoughtful, informative prompt says "I care about my craft." A completely default prompt says "I haven't customized anything." And a prompt that's ALL emoji says... well, maybe save that one for your personal machine.</p>
+</div>
+<h4 id="microsim-prompt-customizer">MicroSim: Prompt Customizer</h4>
+<details>
+<summary>Build Your Own Prompt</summary>
+<p>Type: microsim</p>
+<p>Bloom Taxonomy: Apply, Create
+Learning Objective: Allow students to interactively build and preview custom shell prompts with colors and emoji.</p>
+<p>Canvas layout (responsive, ~750px max width):
+- Top section (150px): Live prompt preview with sample commands
+- Middle section (250px): Component selector and options
+- Bottom section (100px): Generated PS1 code to copy</p>
+<p>Visual elements:
+- Preview terminal: Dark background with realistic prompt display
+- Component checkboxes: username, hostname, directory, time, git branch
+- Color pickers: for each component
+- Emoji selector: grid of common prompt emoji
+- Code output: copyable PS1 string</p>
+<p>Interactive controls:
+- Checkboxes to include/exclude components
+- Color dropdowns for each component
+- Emoji picker (click to add to prompt)
+- Order drag-and-drop</p>
+<p>Behavior:
+- Real-time preview updates as options change
+- Shows both Bash (PS1) and Zsh (PROMPT) syntax
+- Copy button for the generated code
+- Reset button to start over</p>
+<p>Sample prompts to try:
+1. Minimal: "$ "
+2. Classic: "\u@\h:\w$ "
+3. Colorful: colored username, directory
+4. Fun: emoji + short path
+5. Pro: emoji + git branch + colors</p>
+<p>Color options:
+- Red, Green, Yellow, Blue, Magenta, Cyan, White
+- Bold variants</p>
+<p>Implementation: p5.js</p>
+</details>
+<h2 id="putting-it-all-together-a-complete-configuration">Putting It All Together: A Complete Configuration</h2>
+<p>Here's a practical, well-commented <code>.bashrc</code> you can use as a starting point:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># ~/.bashrc - Bash configuration file</span>
+<span class="c1"># Reload with: source ~/.bashrc</span>
+
+<span class="c1"># ============================================</span>
+<span class="c1"># ENVIRONMENT VARIABLES</span>
+<span class="c1"># ============================================</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">EDITOR</span><span class="o">=</span>vim
+<span class="nb">export</span><span class="w"> </span><span class="nv">VISUAL</span><span class="o">=</span>vim
+<span class="nb">export</span><span class="w"> </span><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+
+<span class="c1"># Add local bin to PATH</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/bin:</span><span class="nv">$HOME</span><span class="s2">/.local/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+
+<span class="c1"># ============================================</span>
+<span class="c1"># PROMPT</span>
+<span class="c1"># ============================================</span>
+<span class="c1"># Emoji prompt with colors!</span>
+<span class="c1"># Green username, blue directory, rocket emoji</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;🚀 \[\e[32m\]\u\[\e[0m\]:\[\e[34m\]\W\[\e[0m\] $ &#39;</span>
+
+<span class="c1"># ============================================</span>
+<span class="c1"># ALIASES</span>
+<span class="c1"># ============================================</span>
+<span class="c1"># Navigation</span>
+<span class="nb">alias</span><span class="w"> </span>..<span class="o">=</span><span class="s1">&#39;cd ..&#39;</span>
+<span class="nb">alias</span><span class="w"> </span>...<span class="o">=</span><span class="s1">&#39;cd ../..&#39;</span>
+<span class="nb">alias</span><span class="w"> </span>~<span class="o">=</span><span class="s1">&#39;cd ~&#39;</span>
+
+<span class="c1"># List files</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls --color=auto&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -la&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">la</span><span class="o">=</span><span class="s1">&#39;ls -A&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">l</span><span class="o">=</span><span class="s1">&#39;ls -CF&#39;</span>
+
+<span class="c1"># Safety</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">rm</span><span class="o">=</span><span class="s1">&#39;rm -i&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">cp</span><span class="o">=</span><span class="s1">&#39;cp -i&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">mv</span><span class="o">=</span><span class="s1">&#39;mv -i&#39;</span>
+
+<span class="c1"># Git</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">gs</span><span class="o">=</span><span class="s1">&#39;git status&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">ga</span><span class="o">=</span><span class="s1">&#39;git add&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">gc</span><span class="o">=</span><span class="s1">&#39;git commit&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">gp</span><span class="o">=</span><span class="s1">&#39;git push&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">gl</span><span class="o">=</span><span class="s1">&#39;git log --oneline -10&#39;</span>
+
+<span class="c1"># Quick edits</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">bashrc</span><span class="o">=</span><span class="s1">&#39;$EDITOR ~/.bashrc&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">reload</span><span class="o">=</span><span class="s1">&#39;source ~/.bashrc&#39;</span>
+
+<span class="c1"># ============================================</span>
+<span class="c1"># FUNCTIONS</span>
+<span class="c1"># ============================================</span>
+<span class="c1"># Make directory and cd into it</span>
+mkcd<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># Quick backup</span>
+backup<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>cp<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">.backup.</span><span class="k">$(</span>date<span class="w"> </span>+%Y%m%d_%H%M%S<span class="k">)</span><span class="s2">&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># Extract any archive</span>
+extract<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">in</span>
+<span class="w">            </span>*.tar.bz2<span class="o">)</span><span class="w">   </span>tar<span class="w"> </span>xjf<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w">   </span><span class="p">;;</span>
+<span class="w">            </span>*.tar.gz<span class="o">)</span><span class="w">    </span>tar<span class="w"> </span>xzf<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w">   </span><span class="p">;;</span>
+<span class="w">            </span>*.tar<span class="o">)</span><span class="w">       </span>tar<span class="w"> </span>xf<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w">    </span><span class="p">;;</span>
+<span class="w">            </span>*.zip<span class="o">)</span><span class="w">       </span>unzip<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w">     </span><span class="p">;;</span>
+<span class="w">            </span>*.gz<span class="o">)</span><span class="w">        </span>gunzip<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w">    </span><span class="p">;;</span>
+<span class="w">            </span>*<span class="o">)</span><span class="w">           </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Unknown: </span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">;;</span>
+<span class="w">        </span><span class="k">esac</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Not found: </span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
+
+<span class="c1"># ============================================</span>
+<span class="c1"># SHELL OPTIONS</span>
+<span class="c1"># ============================================</span>
+<span class="c1"># Append to history instead of overwriting</span>
+<span class="nb">shopt</span><span class="w"> </span>-s<span class="w"> </span>histappend
+
+<span class="c1"># Better history</span>
+<span class="nv">HISTSIZE</span><span class="o">=</span><span class="m">10000</span>
+<span class="nv">HISTFILESIZE</span><span class="o">=</span><span class="m">20000</span>
+<span class="nv">HISTCONTROL</span><span class="o">=</span>ignoreboth<span class="w">  </span><span class="c1"># Ignore duplicates and spaces</span>
+
+<span class="c1"># Check window size after each command</span>
+<span class="nb">shopt</span><span class="w"> </span>-s<span class="w"> </span>checkwinsize
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;🎉 Bashrc loaded! Ready to rock!&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>You've learned to make the shell truly yours!</p>
+<ul>
+<li><strong>Dotfiles</strong>: Configuration files like <code>.bashrc</code>, <code>.zshrc</code>, <code>.profile</code></li>
+<li><strong>Environment variables</strong>: PATH, HOME, USER, and custom variables</li>
+<li><strong>Export</strong>: Make variables available to child processes</li>
+<li><strong>Source</strong>: Reload configuration files without restarting</li>
+<li><strong>Aliases</strong>: Shortcuts for common commands</li>
+<li><strong>Functions</strong>: Powerful multi-command shortcuts with arguments</li>
+<li><strong>Prompt customization</strong>: Colors, emoji, and useful information</li>
+<li><strong>Startup order</strong>: Know which file loads when</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">You're a Configuration Wizard!</p>
+<p>Your terminal is no longer generic—it's YOURS. When you share your screen, people will see that rocket emoji and know: this person has skills. Welcome to the club!</p>
+</div>
+<h2 id="whats-next">What's Next?</h2>
+<p>Now that your shell is customized and comfortable, it's time to write your own shell scripts! The next chapter dives into Bash scripting—automating tasks, writing loops, and building your own command-line tools.</p>
+<hr />
+<details class="question">
+<summary>Quick Quiz: Shell Configuration</summary>
+<ol>
+<li>What file is the main configuration file for Bash?</li>
+<li>What does the PATH variable contain?</li>
+<li>How do you apply changes to <code>.bashrc</code> without opening a new terminal?</li>
+<li>What's the difference between an alias and a function?</li>
+<li>What command makes a variable available to child processes?</li>
+<li>What does PS1 control?</li>
+</ol>
+</details>
+<details class="note">
+<summary>Quiz Answers</summary>
+<ol>
+<li><code>~/.bashrc</code></li>
+<li>A colon-separated list of directories where the shell looks for executables</li>
+<li><code>source ~/.bashrc</code> (or <code>. ~/.bashrc</code>)</li>
+<li>Aliases are simple text substitutions; functions can accept arguments and contain logic</li>
+<li><code>export</code></li>
+<li>The primary shell prompt (what appears before your cursor)</li>
+</ol>
+</details>
 
 
 
@@ -1581,7 +3865,7 @@
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../js/extra.css"></script>
+        <script src="../../js/extra.js"></script>
       
     
   </body>

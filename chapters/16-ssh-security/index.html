@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+        <meta name="description" content="Master secure remote access with SSH, key-based authentication, file transfers, and firewall configuration">
       
       
         <meta name="author" content="Dan McCreary">
@@ -52,7 +52,7 @@
       
     
     
-      <link rel="stylesheet" href="../../styles/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -75,7 +75,7 @@
       
         <meta  property="og:title"  content="SSH and Remote Access - Learning Linux" >
       
-        <meta  property="og:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  property="og:description"  content="Master secure remote access with SSH, key-based authentication, file transfers, and firewall configuration" >
       
         <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/16-ssh-security/index.png" >
       
@@ -91,7 +91,7 @@
       
         <meta  name="twitter:title"  content="SSH and Remote Access - Learning Linux" >
       
-        <meta  name="twitter:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  name="twitter:description"  content="Master secure remote access with SSH, key-based authentication, file transfers, and firewall configuration" >
       
         <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/16-ssh-security/index.png" >
       
@@ -214,7 +214,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -259,7 +259,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -439,8 +439,6 @@
           
         
       
-        
-          
         
       
         
@@ -885,6 +883,876 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-secret-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the Secret Tunnel!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ssh-protocol-secure-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      The SSH Protocol: Secure Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The SSH Protocol: Secure Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-ssh-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      What SSH Does
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-ssh-works-simplified" class="md-nav__link">
+    <span class="md-ellipsis">
+      How SSH Works (Simplified)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ssh-command-connect-to-remote-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      The SSH Command: Connect to Remote Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The SSH Command: Connect to Remote Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-ssh-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic SSH Connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-connection-the-fingerprint-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      First Connection: The Fingerprint Warning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-remote-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Remote Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-options-youll-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH Options You'll Use
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-keys-passwords-are-so-yesterday" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH Keys: Passwords Are So Yesterday
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH Keys: Passwords Are So Yesterday">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-key-authentication-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Key Authentication Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-ssh-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating SSH Keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-your-public-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Your Public Key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Security Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-based-auth-why-its-better" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key-Based Auth: Why It's Better
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-config-your-connection-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH Config: Your Connection Shortcuts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH Config: Your Connection Shortcuts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-ssh-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating SSH Config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-config-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful Config Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-scp-command-secure-copy" class="md-nav__link">
+    <span class="md-ellipsis">
+      The SCP Command: Secure Copy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The SCP Command: Secure Copy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scp-between-two-remote-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      SCP Between Two Remote Servers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-scp-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common SCP Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rsync-command-smart-synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Rsync Command: Smart Synchronization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Rsync Command: Smart Synchronization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-trailing-slash-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Trailing Slash Matters!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rsync-vs-scp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rsync vs SCP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secure-file-transfer-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secure File Transfer: Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Secure File Transfer: Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-good-encrypted" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Good (Encrypted)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-bad-avoid-these" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Bad (Avoid These)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-sftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using SFTP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firewall-basics-your-digital-fortress" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firewall Basics: Your Digital Fortress
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Firewall Basics: Your Digital Fortress">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-firewalls-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Firewalls Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firewall-types-in-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firewall Types in Linux
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ufw-firewall-uncomplicated-firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      The UFW Firewall: Uncomplicated Firewall
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The UFW Firewall: Uncomplicated Firewall">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ufw-default-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      UFW Default Policies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rate-limiting-with-ufw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rate Limiting with UFW
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firewall-rules-building-your-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firewall Rules: Building Your Policy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Firewall Rules: Building Your Policy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-server-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Server Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-order-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rule Order Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#port-security-minimizing-attack-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Port Security: Minimizing Attack Surface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Port Security: Minimizing Attack Surface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-open-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking Open Ports
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-security-the-big-picture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux Security: The Big Picture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux Security: The Big Picture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-security-onion-layers-of-defense" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Security Onion (Layers of Defense)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-security-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Security Checklist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-authentication-who-are-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Authentication: Who Are You?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Authentication: Who Are You?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-factor-authentication-for-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two-Factor Authentication for SSH
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#password-security-if-you-must-use-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password Security: If You Must Use Them
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Password Security: If You Must Use Them">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strong-password-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strong Password Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password Policies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password-aging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password Aging
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-security-hardening-your-ssh-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH Security: Hardening Your SSH Server
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH Security: Hardening Your SSH Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-ssh-hardening" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential SSH Hardening
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fail2ban-automatic-banning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fail2Ban: Automatic Banning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-updates-stay-patched" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Updates: Stay Patched!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Updates: Stay Patched!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-fast-should-you-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Fast Should You Update?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerability-scanning-know-your-weaknesses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vulnerability Scanning: Know Your Weaknesses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vulnerability Scanning: Know Your Weaknesses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-scanning-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Scanning Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-scanners-look-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Scanners Look For
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regular-scanning-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regular Scanning Schedule
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-files-your-security-diary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log Files: Your Security Diary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Log Files: Your Security Diary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-log-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Log Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-analysis-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log Analysis Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audit-logs-detailed-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit Logs: Detailed Tracking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Audit Logs: Detailed Tracking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#persistent-audit-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Persistent Audit Rules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-best-practices-the-golden-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Best Practices: The Golden Rules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Best Practices: The Golden Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-top-10-security-habits" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Top 10 Security Habits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-security-mindset" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Security Mindset
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realvnc-remote-desktop-for-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      RealVNC: Remote Desktop for Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RealVNC: Remote Desktop for Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-vnc" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is VNC?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-realvnc-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing RealVNC Server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-realvnc-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing RealVNC Viewer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-for-remote-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up for Remote Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting Up for Remote Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-direct-connection-same-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1: Direct Connection (Same Network)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-realvnc-cloud-connect-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 2: RealVNC Cloud Connect (Internet)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-vnc-for-tech-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using VNC for Tech Support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vnc-security-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      VNC Security Tips
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternative-x11-forwarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternative: X11 Forwarding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-securing-a-new-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: Securing a New Server
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1048,7 +1916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../24-customization/" class="md-nav__link">
+      <a href="../24-customization/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,6 +2041,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1186,7 +2062,7 @@
         
   
   
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1424,6 +2300,876 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-secret-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the Secret Tunnel!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ssh-protocol-secure-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      The SSH Protocol: Secure Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The SSH Protocol: Secure Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-ssh-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      What SSH Does
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-ssh-works-simplified" class="md-nav__link">
+    <span class="md-ellipsis">
+      How SSH Works (Simplified)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ssh-command-connect-to-remote-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      The SSH Command: Connect to Remote Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The SSH Command: Connect to Remote Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-ssh-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic SSH Connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-connection-the-fingerprint-warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      First Connection: The Fingerprint Warning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-remote-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Remote Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-options-youll-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH Options You'll Use
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-keys-passwords-are-so-yesterday" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH Keys: Passwords Are So Yesterday
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH Keys: Passwords Are So Yesterday">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-key-authentication-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Key Authentication Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-ssh-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating SSH Keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-your-public-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Your Public Key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Security Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-based-auth-why-its-better" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key-Based Auth: Why It's Better
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-config-your-connection-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH Config: Your Connection Shortcuts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH Config: Your Connection Shortcuts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-ssh-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating SSH Config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-config-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful Config Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-scp-command-secure-copy" class="md-nav__link">
+    <span class="md-ellipsis">
+      The SCP Command: Secure Copy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The SCP Command: Secure Copy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scp-between-two-remote-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      SCP Between Two Remote Servers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-scp-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common SCP Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rsync-command-smart-synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Rsync Command: Smart Synchronization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Rsync Command: Smart Synchronization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-trailing-slash-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Trailing Slash Matters!
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rsync-vs-scp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rsync vs SCP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secure-file-transfer-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secure File Transfer: Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Secure File Transfer: Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-good-encrypted" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Good (Encrypted)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-bad-avoid-these" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Bad (Avoid These)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-sftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using SFTP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firewall-basics-your-digital-fortress" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firewall Basics: Your Digital Fortress
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Firewall Basics: Your Digital Fortress">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-firewalls-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Firewalls Do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firewall-types-in-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firewall Types in Linux
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ufw-firewall-uncomplicated-firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      The UFW Firewall: Uncomplicated Firewall
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The UFW Firewall: Uncomplicated Firewall">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ufw-default-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      UFW Default Policies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rate-limiting-with-ufw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rate Limiting with UFW
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firewall-rules-building-your-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firewall Rules: Building Your Policy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Firewall Rules: Building Your Policy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-server-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Server Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-order-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rule Order Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#port-security-minimizing-attack-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Port Security: Minimizing Attack Surface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Port Security: Minimizing Attack Surface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-open-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking Open Ports
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-security-the-big-picture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux Security: The Big Picture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux Security: The Big Picture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-security-onion-layers-of-defense" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Security Onion (Layers of Defense)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-security-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Security Checklist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-authentication-who-are-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Authentication: Who Are You?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Authentication: Who Are You?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-factor-authentication-for-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two-Factor Authentication for SSH
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#password-security-if-you-must-use-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password Security: If You Must Use Them
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Password Security: If You Must Use Them">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strong-password-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strong Password Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password Policies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password-aging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password Aging
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-security-hardening-your-ssh-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH Security: Hardening Your SSH Server
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH Security: Hardening Your SSH Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-ssh-hardening" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential SSH Hardening
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fail2ban-automatic-banning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fail2Ban: Automatic Banning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-updates-stay-patched" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Updates: Stay Patched!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Updates: Stay Patched!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-fast-should-you-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Fast Should You Update?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vulnerability-scanning-know-your-weaknesses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vulnerability Scanning: Know Your Weaknesses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vulnerability Scanning: Know Your Weaknesses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-scanning-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Scanning Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-scanners-look-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Scanners Look For
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regular-scanning-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regular Scanning Schedule
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-files-your-security-diary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log Files: Your Security Diary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Log Files: Your Security Diary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-log-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Log Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-analysis-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log Analysis Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audit-logs-detailed-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit Logs: Detailed Tracking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Audit Logs: Detailed Tracking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#persistent-audit-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Persistent Audit Rules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-best-practices-the-golden-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Best Practices: The Golden Rules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Best Practices: The Golden Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-top-10-security-habits" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Top 10 Security Habits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-security-mindset" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Security Mindset
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realvnc-remote-desktop-for-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      RealVNC: Remote Desktop for Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RealVNC: Remote Desktop for Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-vnc" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is VNC?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-realvnc-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing RealVNC Server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-realvnc-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing RealVNC Viewer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-for-remote-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up for Remote Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting Up for Remote Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-direct-connection-same-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1: Direct Connection (Same Network)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-realvnc-cloud-connect-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 2: RealVNC Cloud Connect (Internet)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-vnc-for-tech-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using VNC for Tech Support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vnc-security-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      VNC Security Tips
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternative-x11-forwarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternative: X11 Forwarding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-securing-a-new-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: Securing a New Server
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1439,7 +3185,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/learniing-linux/blob/master/docs/chapters/16-ssh-security/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/learning-linux/blob/master/docs/chapters/16-ssh-security/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1451,7 +3197,7 @@
 <h2 id="summary">Summary</h2>
 <p>This chapter covers secure remote access to Linux systems using SSH. You'll learn about the SSH protocol, key-based authentication (far more secure than passwords), configuring SSH clients, and transferring files with SCP and rsync. You'll also learn firewall basics with UFW and understand network security principles.</p>
 <h2 id="concepts-covered">Concepts Covered</h2>
-<p>This chapter covers the following 15 concepts from the learning graph:</p>
+<p>This chapter covers the following 21 concepts from the learning graph:</p>
 <ol>
 <li>SSH Protocol</li>
 <li>SSH Command</li>
@@ -1482,7 +3228,1563 @@
 <li><a href="../15-networking/">Chapter 15: Networking Fundamentals</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<h2 id="welcome-to-the-secret-tunnel">Welcome to the Secret Tunnel!</h2>
+<p>Imagine being able to control a computer on the other side of the world, as if you were sitting right in front of it. That's what SSH gives you—a secure, encrypted tunnel through the wild internet, letting you work remotely without anyone eavesdropping on your commands.</p>
+<p>In this chapter, you'll learn to connect to remote systems like a pro, transfer files securely, and lock down your systems so the bad guys stay out. Security isn't just for paranoid people—it's for SMART people. And you're about to get very smart!</p>
+<h2 id="the-ssh-protocol-secure-shell">The SSH Protocol: Secure Shell</h2>
+<p>The <strong>SSH protocol</strong> (Secure Shell) is the standard way to securely access remote Linux systems. It encrypts everything—your commands, your passwords, your files—so nobody can snoop on your connection.</p>
+<p>SSH replaced older, insecure protocols like Telnet (which sent passwords in plain text—yikes!) and has been the gold standard since 1995.</p>
+<h3 id="what-ssh-does">What SSH Does</h3>
+<ul>
+<li><strong>Encrypted remote terminal</strong>: Run commands on remote computers</li>
+<li><strong>Secure file transfer</strong>: Copy files safely between systems</li>
+<li><strong>Port forwarding</strong>: Tunnel other connections through SSH</li>
+<li><strong>Key-based authentication</strong>: Login without passwords (more secure!)</li>
+</ul>
+<h3 id="how-ssh-works-simplified">How SSH Works (Simplified)</h3>
+<ol>
+<li>Client connects to server on port 22</li>
+<li>Server and client agree on encryption method</li>
+<li>Client authenticates (password or key)</li>
+<li>Encrypted session begins</li>
+<li>Everything you type is encrypted before sending</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Your Computer  ←──[Encrypted Tunnel]──→  Remote Server
+     │                                        │
+   Client                                   Server
+ (ssh command)                          (sshd daemon)
+</code></pre></div></td></tr></table></div>
+<h2 id="the-ssh-command-connect-to-remote-systems">The SSH Command: Connect to Remote Systems</h2>
+<p>The <strong>ssh command</strong> is your gateway to remote servers. It's simple to use but incredibly powerful.</p>
+<h3 id="basic-ssh-connection">Basic SSH Connection</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Connect with username</span>
+ssh<span class="w"> </span>username@hostname
+
+<span class="c1"># Connect with IP address</span>
+ssh<span class="w"> </span>dan@192.168.1.100
+
+<span class="c1"># Connect to different port</span>
+ssh<span class="w"> </span>-p<span class="w"> </span><span class="m">2222</span><span class="w"> </span>username@hostname
+
+<span class="c1"># Connect with verbose output (for debugging)</span>
+ssh<span class="w"> </span>-v<span class="w"> </span>username@hostname
+</code></pre></div></td></tr></table></div>
+<h3 id="first-connection-the-fingerprint-warning">First Connection: The Fingerprint Warning</h3>
+<p>The first time you connect to a server, you'll see something like:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>The authenticity of host &#39;server.example.com (192.168.1.100)&#39; can&#39;t be established.
+ED25519 key fingerprint is SHA256:xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXx.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+</code></pre></div></td></tr></table></div>
+<p>This is SSH protecting you from "man-in-the-middle" attacks. The fingerprint is the server's identity. Type <code>yes</code> if you trust the server—SSH will remember it for next time.</p>
+<div class="admonition warning">
+<p class="admonition-title">Fingerprint Changes = Red Flag!</p>
+<p>If you've connected before and suddenly see a different fingerprint, STOP! Someone might be intercepting your connection. Verify with the server administrator before proceeding.</p>
+</div>
+<h3 id="running-remote-commands">Running Remote Commands</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Run a single command without staying connected</span>
+ssh<span class="w"> </span>user@server<span class="w"> </span><span class="s2">&quot;hostname&quot;</span>
+ssh<span class="w"> </span>user@server<span class="w"> </span><span class="s2">&quot;uptime&quot;</span>
+ssh<span class="w"> </span>user@server<span class="w"> </span><span class="s2">&quot;df -h&quot;</span>
+
+<span class="c1"># Run multiple commands</span>
+ssh<span class="w"> </span>user@server<span class="w"> </span><span class="s2">&quot;cd /var/log &amp;&amp; tail -20 syslog&quot;</span>
+
+<span class="c1"># Run a local script on remote server</span>
+ssh<span class="w"> </span>user@server<span class="w"> </span><span class="s1">&#39;bash -s&#39;</span><span class="w"> </span>&lt;<span class="w"> </span>local-script.sh
+</code></pre></div></td></tr></table></div>
+<h3 id="ssh-options-youll-use">SSH Options You'll Use</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-p port</code></td>
+<td>Connect to different port</td>
+</tr>
+<tr>
+<td><code>-i keyfile</code></td>
+<td>Use specific private key</td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td>Verbose (debugging)</td>
+</tr>
+<tr>
+<td><code>-X</code></td>
+<td>Forward X11 graphics</td>
+</tr>
+<tr>
+<td><code>-L local:host:remote</code></td>
+<td>Local port forwarding</td>
+</tr>
+<tr>
+<td><code>-R remote:host:local</code></td>
+<td>Remote port forwarding</td>
+</tr>
+<tr>
+<td><code>-N</code></td>
+<td>No command (just tunnel)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ssh-keys-passwords-are-so-yesterday">SSH Keys: Passwords Are So Yesterday</h2>
+<p><strong>SSH keys</strong> are the secure alternative to passwords. Instead of typing a password every time, you use cryptographic key pairs. It's more secure AND more convenient—the best of both worlds!</p>
+<h3 id="how-key-authentication-works">How Key Authentication Works</h3>
+<ol>
+<li>You generate a key pair: <strong>private key</strong> (secret!) and <strong>public key</strong> (shareable)</li>
+<li>You put your public key on the remote server</li>
+<li>When you connect, SSH does cryptographic magic to prove you have the private key</li>
+<li>If it matches, you're in—no password needed!</li>
+</ol>
+<h3 id="generating-ssh-keys">Generating SSH Keys</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Generate a key pair (Ed25519 - modern and secure)</span>
+ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
+
+<span class="c1"># Or RSA (widely compatible)</span>
+ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-b<span class="w"> </span><span class="m">4096</span><span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>You'll be asked:
+- <strong>Where to save</strong>: Press Enter for default (<code>~/.ssh/id_ed25519</code>)
+- <strong>Passphrase</strong>: Optional but HIGHLY recommended (protects your key if stolen)</p>
+<p>This creates two files:
+- <code>~/.ssh/id_ed25519</code> - Your <strong>private key</strong> (NEVER share this!)
+- <code>~/.ssh/id_ed25519.pub</code> - Your <strong>public key</strong> (safe to share)</p>
+<h3 id="installing-your-public-key">Installing Your Public Key</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># The easy way (if ssh-copy-id is available)</span>
+ssh-copy-id<span class="w"> </span>username@remote-server
+
+<span class="c1"># The manual way</span>
+cat<span class="w"> </span>~/.ssh/id_ed25519.pub<span class="w"> </span><span class="p">|</span><span class="w"> </span>ssh<span class="w"> </span>user@server<span class="w"> </span><span class="s2">&quot;mkdir -p ~/.ssh &amp;&amp; cat &gt;&gt; ~/.ssh/authorized_keys&quot;</span>
+
+<span class="c1"># Or copy and paste manually</span>
+cat<span class="w"> </span>~/.ssh/id_ed25519.pub
+<span class="c1"># Then paste into ~/.ssh/authorized_keys on the server</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="key-security-best-practices">Key Security Best Practices</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Set correct permissions (SSH is strict about this!)</span>
+chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>~/.ssh
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/id_ed25519
+chmod<span class="w"> </span><span class="m">644</span><span class="w"> </span>~/.ssh/id_ed25519.pub
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/authorized_keys
+</code></pre></div></td></tr></table></div>
+<div class="admonition danger">
+<p class="admonition-title">Protect Your Private Key!</p>
+<p>Your private key is like your house key. If someone gets it (and knows your passphrase if you have one), they can access all servers where you've installed the public key. NEVER:</p>
+<ul>
+<li>Email your private key</li>
+<li>Put it in a Git repository</li>
+<li>Store it on shared systems</li>
+<li>Share it with anyone</li>
+</ul>
+</div>
+<h2 id="key-based-auth-why-its-better">Key-Based Auth: Why It's Better</h2>
+<p><strong>Key-based authentication</strong> is superior to passwords for several reasons:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Password</th>
+<th>SSH Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Can be guessed</td>
+<td>Yes</td>
+<td>Practically impossible</td>
+</tr>
+<tr>
+<td>Can be brute-forced</td>
+<td>Yes (slowly)</td>
+<td>No (too long)</td>
+</tr>
+<tr>
+<td>Can be phished</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Reused across sites</td>
+<td>Often</td>
+<td>Never (unique per key)</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>8-20 characters</td>
+<td>4096+ bits</td>
+</tr>
+<tr>
+<td>Convenience</td>
+<td>Type every time</td>
+<td>Automatic</td>
+</tr>
+</tbody>
+</table>
+<p>Once you set up SSH keys, you can (and should!) disable password authentication entirely:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># On the server, edit /etc/ssh/sshd_config:</span>
+PasswordAuthentication<span class="w"> </span>no
+PubkeyAuthentication<span class="w"> </span>yes
+
+<span class="c1"># Then restart SSH</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>sshd
+</code></pre></div></td></tr></table></div>
+<h2 id="ssh-config-your-connection-shortcuts">SSH Config: Your Connection Shortcuts</h2>
+<p>The <strong>SSH config</strong> file (<code>~/.ssh/config</code>) lets you create shortcuts for servers you connect to frequently. Instead of typing long commands, you define aliases!</p>
+<h3 id="creating-ssh-config">Creating SSH Config</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create or edit ~/.ssh/config</span>
+nano<span class="w"> </span>~/.ssh/config
+</code></pre></div></td></tr></table></div>
+<h3 id="example-configuration">Example Configuration</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code># Default settings for all hosts
+Host *
+    AddKeysToAgent yes
+    IdentitiesOnly yes
+
+# Work server
+Host work
+    HostName server.company.com
+    User jsmith
+    Port 22
+    IdentityFile ~/.ssh/id_work
+
+# Raspberry Pi at home
+Host pi
+    HostName 192.168.1.50
+    User pi
+    IdentityFile ~/.ssh/id_ed25519
+
+# Jump through bastion to reach internal server
+Host internal
+    HostName 10.0.0.100
+    User admin
+    ProxyJump bastion.company.com
+
+# AWS server with custom settings
+Host aws-prod
+    HostName ec2-12-34-56-78.compute-1.amazonaws.com
+    User ubuntu
+    IdentityFile ~/.ssh/aws-key.pem
+    ServerAliveInterval 60
+</code></pre></div></td></tr></table></div>
+<p>Now you can just type:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>ssh<span class="w"> </span>work<span class="w">      </span><span class="c1"># Instead of: ssh -i ~/.ssh/id_work jsmith@server.company.com</span>
+ssh<span class="w"> </span>pi<span class="w">        </span><span class="c1"># Instead of: ssh pi@192.168.1.50</span>
+ssh<span class="w"> </span>internal<span class="w">  </span><span class="c1"># Automatically jumps through bastion!</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="useful-config-options">Useful Config Options</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>HostName</code></td>
+<td>Real hostname or IP</td>
+</tr>
+<tr>
+<td><code>User</code></td>
+<td>Default username</td>
+</tr>
+<tr>
+<td><code>Port</code></td>
+<td>SSH port</td>
+</tr>
+<tr>
+<td><code>IdentityFile</code></td>
+<td>Which private key to use</td>
+</tr>
+<tr>
+<td><code>ProxyJump</code></td>
+<td>Jump through another host</td>
+</tr>
+<tr>
+<td><code>ServerAliveInterval</code></td>
+<td>Keep connection alive</td>
+</tr>
+<tr>
+<td><code>ForwardAgent</code></td>
+<td>Allow key forwarding</td>
+</tr>
+<tr>
+<td><code>LocalForward</code></td>
+<td>Set up port forwarding</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-scp-command-secure-copy">The SCP Command: Secure Copy</h2>
+<p>The <strong>scp command</strong> (secure copy) transfers files over SSH. It's like <code>cp</code>, but works across networks securely.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Copy file TO remote server</span>
+scp<span class="w"> </span>file.txt<span class="w"> </span>user@server:/path/to/destination/
+
+<span class="c1"># Copy file FROM remote server</span>
+scp<span class="w"> </span>user@server:/path/to/file.txt<span class="w"> </span>./local-copy.txt
+
+<span class="c1"># Copy entire directory (recursive)</span>
+scp<span class="w"> </span>-r<span class="w"> </span>my-folder/<span class="w"> </span>user@server:/home/user/
+
+<span class="c1"># Copy with specific port</span>
+scp<span class="w"> </span>-P<span class="w"> </span><span class="m">2222</span><span class="w"> </span>file.txt<span class="w"> </span>user@server:/path/
+
+<span class="c1"># Preserve timestamps and permissions</span>
+scp<span class="w"> </span>-p<span class="w"> </span>file.txt<span class="w"> </span>user@server:/path/
+
+<span class="c1"># Show progress</span>
+scp<span class="w"> </span>-v<span class="w"> </span>file.txt<span class="w"> </span>user@server:/path/
+</code></pre></div></td></tr></table></div>
+<h3 id="scp-between-two-remote-servers">SCP Between Two Remote Servers</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Copy directly between two remote hosts</span>
+scp<span class="w"> </span>user1@server1:/path/file.txt<span class="w"> </span>user2@server2:/path/
+</code></pre></div></td></tr></table></div>
+<h3 id="common-scp-options">Common SCP Options</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-r</code></td>
+<td>Recursive (directories)</td>
+</tr>
+<tr>
+<td><code>-P port</code></td>
+<td>Specify port (capital P!)</td>
+</tr>
+<tr>
+<td><code>-p</code></td>
+<td>Preserve modification times</td>
+</tr>
+<tr>
+<td><code>-C</code></td>
+<td>Compress during transfer</td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td>Verbose output</td>
+</tr>
+<tr>
+<td><code>-i key</code></td>
+<td>Use specific identity file</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-rsync-command-smart-synchronization">The Rsync Command: Smart Synchronization</h2>
+<p>The <strong>rsync command</strong> is the power tool for file synchronization. Unlike SCP, it only transfers what's changed—making it MUCH faster for large directories or repeated transfers.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Basic sync (local to remote)</span>
+rsync<span class="w"> </span>-av<span class="w"> </span>/local/folder/<span class="w"> </span>user@server:/remote/folder/
+
+<span class="c1"># Sync from remote to local</span>
+rsync<span class="w"> </span>-av<span class="w"> </span>user@server:/remote/folder/<span class="w"> </span>/local/folder/
+
+<span class="c1"># Delete files on destination that don&#39;t exist on source</span>
+rsync<span class="w"> </span>-av<span class="w"> </span>--delete<span class="w"> </span>/source/<span class="w"> </span>user@server:/destination/
+
+<span class="c1"># Dry run (show what would happen without doing it)</span>
+rsync<span class="w"> </span>-av<span class="w"> </span>--dry-run<span class="w"> </span>/source/<span class="w"> </span>user@server:/destination/
+
+<span class="c1"># Show progress</span>
+rsync<span class="w"> </span>-av<span class="w"> </span>--progress<span class="w"> </span>/source/<span class="w"> </span>user@server:/destination/
+
+<span class="c1"># Exclude patterns</span>
+rsync<span class="w"> </span>-av<span class="w"> </span>--exclude<span class="o">=</span><span class="s1">&#39;*.log&#39;</span><span class="w"> </span>--exclude<span class="o">=</span><span class="s1">&#39;.git&#39;</span><span class="w"> </span>/source/<span class="w"> </span>user@server:/dest/
+
+<span class="c1"># Compress during transfer</span>
+rsync<span class="w"> </span>-avz<span class="w"> </span>/source/<span class="w"> </span>user@server:/destination/
+</code></pre></div></td></tr></table></div>
+<h3 id="the-trailing-slash-matters">The Trailing Slash Matters!</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># WITH trailing slash: copy contents of folder</span>
+rsync<span class="w"> </span>-av<span class="w"> </span>/source/<span class="w"> </span>/dest/<span class="w">     </span><span class="c1"># Files appear directly in /dest/</span>
+
+<span class="c1"># WITHOUT trailing slash: copy the folder itself</span>
+rsync<span class="w"> </span>-av<span class="w"> </span>/source<span class="w"> </span>/dest/<span class="w">      </span><span class="c1"># Creates /dest/source/ with files inside</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Rsync is Idempotent</p>
+<p>You can run the same rsync command repeatedly—it only transfers changes. This makes it perfect for backups and keeping servers in sync!</p>
+</div>
+<h3 id="rsync-vs-scp">Rsync vs SCP</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>SCP</th>
+<th>Rsync</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Speed (first copy)</td>
+<td>Similar</td>
+<td>Similar</td>
+</tr>
+<tr>
+<td>Speed (updates)</td>
+<td>Copies everything</td>
+<td>Only changes</td>
+</tr>
+<tr>
+<td>Resume interrupted</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Exclude patterns</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Delete removed files</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Compression</td>
+<td>Basic</td>
+<td>Better</td>
+</tr>
+<tr>
+<td>Bandwidth limiting</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="secure-file-transfer-best-practices">Secure File Transfer: Best Practices</h2>
+<p><strong>Secure file transfer</strong> is crucial when moving sensitive data. Here are the secure options:</p>
+<h3 id="the-good-encrypted">The Good (Encrypted)</h3>
+<ul>
+<li><strong>SCP</strong>: Simple, secure, good for quick copies</li>
+<li><strong>SFTP</strong>: Interactive file browser over SSH</li>
+<li><strong>Rsync over SSH</strong>: Best for syncing large amounts</li>
+<li><strong>HTTPS uploads</strong>: Encrypted web transfers</li>
+</ul>
+<h3 id="the-bad-avoid-these">The Bad (Avoid These)</h3>
+<ul>
+<li><strong>FTP</strong>: Passwords sent in plain text!</li>
+<li><strong>HTTP uploads</strong>: Anyone can see the data</li>
+<li><strong>Telnet file transfers</strong>: Everything exposed</li>
+</ul>
+<h3 id="using-sftp">Using SFTP</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Start interactive SFTP session</span>
+sftp<span class="w"> </span>user@server
+
+<span class="c1"># SFTP commands (similar to regular shell)</span>
+sftp&gt;<span class="w"> </span>ls<span class="w">              </span><span class="c1"># List remote files</span>
+sftp&gt;<span class="w"> </span>lls<span class="w">             </span><span class="c1"># List local files</span>
+sftp&gt;<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/path<span class="w">        </span><span class="c1"># Change remote directory</span>
+sftp&gt;<span class="w"> </span>lcd<span class="w"> </span>/path<span class="w">       </span><span class="c1"># Change local directory</span>
+sftp&gt;<span class="w"> </span>get<span class="w"> </span>file.txt<span class="w">    </span><span class="c1"># Download file</span>
+sftp&gt;<span class="w"> </span>put<span class="w"> </span>file.txt<span class="w">    </span><span class="c1"># Upload file</span>
+sftp&gt;<span class="w"> </span>quit
+</code></pre></div></td></tr></table></div>
+<h2 id="firewall-basics-your-digital-fortress">Firewall Basics: Your Digital Fortress</h2>
+<p><strong>Firewall basics</strong> are essential for any Linux administrator. A firewall controls what network traffic can enter and leave your system—think of it as a security guard checking IDs at the door.</p>
+<h3 id="what-firewalls-do">What Firewalls Do</h3>
+<ul>
+<li><strong>Block unwanted incoming connections</strong> (hackers, port scanners)</li>
+<li><strong>Allow legitimate traffic</strong> (SSH, web servers)</li>
+<li><strong>Control outgoing connections</strong> (optional but useful)</li>
+<li><strong>Log suspicious activity</strong> (for investigation)</li>
+</ul>
+<h3 id="firewall-types-in-linux">Firewall Types in Linux</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>iptables</code></td>
+<td>Low-level, powerful, complex</td>
+</tr>
+<tr>
+<td><code>nftables</code></td>
+<td>Modern replacement for iptables</td>
+</tr>
+<tr>
+<td><code>ufw</code></td>
+<td>User-friendly frontend</td>
+</tr>
+<tr>
+<td><code>firewalld</code></td>
+<td>Zone-based, used by RHEL/Fedora</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-ufw-firewall-uncomplicated-firewall">The UFW Firewall: Uncomplicated Firewall</h2>
+<p>The <strong>UFW firewall</strong> (Uncomplicated Firewall) is exactly what the name says—a simple way to manage firewall rules on Ubuntu and Debian systems.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check status</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>status
+sudo<span class="w"> </span>ufw<span class="w"> </span>status<span class="w"> </span>verbose
+sudo<span class="w"> </span>ufw<span class="w"> </span>status<span class="w"> </span>numbered<span class="w">  </span><span class="c1"># Show rule numbers</span>
+
+<span class="c1"># Enable/Disable firewall</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span><span class="nb">enable</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>disable
+
+<span class="c1"># Allow incoming on port</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">22</span><span class="w">        </span><span class="c1"># SSH</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">80</span><span class="w">        </span><span class="c1"># HTTP</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">443</span><span class="w">       </span><span class="c1"># HTTPS</span>
+
+<span class="c1"># Allow by service name</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>ssh
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>http
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>https
+
+<span class="c1"># Allow from specific IP</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>from<span class="w"> </span><span class="m">192</span>.168.1.100
+
+<span class="c1"># Allow from subnet</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>from<span class="w"> </span><span class="m">192</span>.168.1.0/24
+
+<span class="c1"># Allow from IP to specific port</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>from<span class="w"> </span><span class="m">192</span>.168.1.100<span class="w"> </span>to<span class="w"> </span>any<span class="w"> </span>port<span class="w"> </span><span class="m">22</span>
+
+<span class="c1"># Deny incoming on port</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>deny<span class="w"> </span><span class="m">23</span><span class="w">         </span><span class="c1"># Block Telnet</span>
+
+<span class="c1"># Delete a rule</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>delete<span class="w"> </span>allow<span class="w"> </span><span class="m">80</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>delete<span class="w"> </span><span class="m">3</span><span class="w">        </span><span class="c1"># Delete rule number 3</span>
+
+<span class="c1"># Reset to defaults</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>reset
+</code></pre></div></td></tr></table></div>
+<h3 id="ufw-default-policies">UFW Default Policies</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Set default policies</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>default<span class="w"> </span>deny<span class="w"> </span>incoming<span class="w">    </span><span class="c1"># Block all incoming by default</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>default<span class="w"> </span>allow<span class="w"> </span>outgoing<span class="w">   </span><span class="c1"># Allow all outgoing by default</span>
+
+<span class="c1"># This is the recommended starting point!</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="rate-limiting-with-ufw">Rate Limiting with UFW</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Limit connections (protects against brute force)</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>limit<span class="w"> </span>ssh
+
+<span class="c1"># This allows only 6 connections per 30 seconds from same IP</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="firewall-rules-building-your-policy">Firewall Rules: Building Your Policy</h2>
+<p><strong>Firewall rules</strong> determine what traffic is allowed. Rules are processed in order, and the first match wins.</p>
+<h3 id="example-server-configuration">Example Server Configuration</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Start fresh</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>reset
+
+<span class="c1"># Set defaults</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>default<span class="w"> </span>deny<span class="w"> </span>incoming
+sudo<span class="w"> </span>ufw<span class="w"> </span>default<span class="w"> </span>allow<span class="w"> </span>outgoing
+
+<span class="c1"># Allow SSH (with rate limiting)</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>limit<span class="w"> </span>ssh
+
+<span class="c1"># Allow web traffic</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>http
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>https
+
+<span class="c1"># Allow from local network only</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>from<span class="w"> </span><span class="m">192</span>.168.1.0/24<span class="w"> </span>to<span class="w"> </span>any<span class="w"> </span>port<span class="w"> </span><span class="m">3306</span><span class="w">  </span><span class="c1"># MySQL</span>
+
+<span class="c1"># Enable and check</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span><span class="nb">enable</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>status<span class="w"> </span>verbose
+</code></pre></div></td></tr></table></div>
+<h3 id="rule-order-example">Rule Order Example</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Rules are processed in order!</span>
+<span class="c1"># This blocks SSH from evil IP, but allows from everyone else</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>deny<span class="w"> </span>from<span class="w"> </span><span class="m">203</span>.0.113.50<span class="w"> </span>to<span class="w"> </span>any<span class="w"> </span>port<span class="w"> </span><span class="m">22</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>ssh
+</code></pre></div></td></tr></table></div>
+<h2 id="port-security-minimizing-attack-surface">Port Security: Minimizing Attack Surface</h2>
+<p><strong>Port security</strong> means only opening the ports you actually need. Every open port is a potential entry point for attackers.</p>
+<h3 id="checking-open-ports">Checking Open Ports</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See what&#39;s listening</span>
+sudo<span class="w"> </span>ss<span class="w"> </span>-tulnp
+sudo<span class="w"> </span>netstat<span class="w"> </span>-tulnp
+
+<span class="c1"># Scan your own system</span>
+nmap<span class="w"> </span>localhost
+nmap<span class="w"> </span>-sV<span class="w"> </span>localhost<span class="w">  </span><span class="c1"># With service detection</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="best-practices">Best Practices</h3>
+<ol>
+<li><strong>Default deny</strong>: Block everything, then allow specific ports</li>
+<li><strong>Principle of least privilege</strong>: Only open what's necessary</li>
+<li><strong>Use non-standard ports</strong>: Move SSH from 22 to something obscure</li>
+<li><strong>Rate limiting</strong>: Slow down brute force attacks</li>
+<li><strong>Geoblocking</strong>: Block countries you never connect from (advanced)</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Change SSH port in /etc/ssh/sshd_config</span>
+Port<span class="w"> </span><span class="m">2222</span>
+
+<span class="c1"># Remember to allow the new port before changing!</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">2222</span>/tcp
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>sshd
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Security Through Obscurity?</p>
+<p>Changing the SSH port isn't TRUE security—a determined attacker will find it. But it stops 99% of automated bots that only try port 22. Use it AS WELL AS other security measures, not instead of them!</p>
+</div>
+<h2 id="linux-security-the-big-picture">Linux Security: The Big Picture</h2>
+<p><strong>Linux security</strong> is a layered approach—no single measure is enough, but together they create strong protection.</p>
+<h3 id="the-security-onion-layers-of-defense">The Security Onion (Layers of Defense)</h3>
+<ol>
+<li><strong>Physical security</strong>: Lock the server room</li>
+<li><strong>Network security</strong>: Firewalls, VPNs</li>
+<li><strong>Host security</strong>: Updates, minimal services</li>
+<li><strong>Application security</strong>: Secure configurations</li>
+<li><strong>Data security</strong>: Encryption, backups</li>
+<li><strong>User security</strong>: Strong passwords, limited privileges</li>
+<li><strong>Monitoring</strong>: Logs, alerts, auditing</li>
+</ol>
+<h3 id="quick-security-checklist">Quick Security Checklist</h3>
+<ul>
+<li>[ ] Firewall enabled with minimal ports open</li>
+<li>[ ] SSH key authentication (passwords disabled)</li>
+<li>[ ] Regular system updates</li>
+<li>[ ] Non-root user accounts</li>
+<li>[ ] Sudo for administrative tasks</li>
+<li>[ ] Log monitoring configured</li>
+<li>[ ] Unnecessary services disabled</li>
+<li>[ ] File permissions properly set</li>
+</ul>
+<h2 id="user-authentication-who-are-you">User Authentication: Who Are You?</h2>
+<p><strong>User authentication</strong> verifies that users are who they claim to be. Linux supports multiple authentication methods:</p>
+<h3 id="authentication-methods">Authentication Methods</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Security</th>
+<th>Convenience</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Password</td>
+<td>Medium</td>
+<td>High</td>
+</tr>
+<tr>
+<td>SSH Keys</td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Two-Factor (2FA)</td>
+<td>Very High</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Smart Cards</td>
+<td>Very High</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Biometrics</td>
+<td>High</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<h3 id="two-factor-authentication-for-ssh">Two-Factor Authentication for SSH</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install Google Authenticator</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libpam-google-authenticator
+
+<span class="c1"># Configure for your user</span>
+google-authenticator
+
+<span class="c1"># Edit /etc/pam.d/sshd and add:</span>
+auth<span class="w"> </span>required<span class="w"> </span>pam_google_authenticator.so
+
+<span class="c1"># Edit /etc/ssh/sshd_config:</span>
+ChallengeResponseAuthentication<span class="w"> </span>yes
+
+<span class="c1"># Restart SSH</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>sshd
+</code></pre></div></td></tr></table></div>
+<p>Now you need both your key/password AND a code from your phone!</p>
+<h2 id="password-security-if-you-must-use-them">Password Security: If You Must Use Them</h2>
+<p><strong>Password security</strong> matters even if you prefer SSH keys—you still need passwords for sudo and local logins.</p>
+<h3 id="strong-password-rules">Strong Password Rules</h3>
+<ul>
+<li><strong>Length</strong>: Minimum 12 characters (longer is better)</li>
+<li><strong>Complexity</strong>: Mix of upper, lower, numbers, symbols</li>
+<li><strong>Uniqueness</strong>: Different password for every system</li>
+<li><strong>No patterns</strong>: Avoid <code>password123</code>, <code>qwerty</code>, birthdays</li>
+</ul>
+<h3 id="password-policies">Password Policies</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install password quality checking</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libpam-pwquality
+
+<span class="c1"># Edit /etc/security/pwquality.conf:</span>
+<span class="nv">minlen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span>
+<span class="nv">dcredit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-1<span class="w">    </span><span class="c1"># Require at least 1 digit</span>
+<span class="nv">ucredit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-1<span class="w">    </span><span class="c1"># Require at least 1 uppercase</span>
+<span class="nv">lcredit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-1<span class="w">    </span><span class="c1"># Require at least 1 lowercase</span>
+<span class="nv">ocredit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-1<span class="w">    </span><span class="c1"># Require at least 1 special character</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="password-aging">Password Aging</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Set password expiration</span>
+sudo<span class="w"> </span>chage<span class="w"> </span>-M<span class="w"> </span><span class="m">90</span><span class="w"> </span>username<span class="w">    </span><span class="c1"># Expire after 90 days</span>
+sudo<span class="w"> </span>chage<span class="w"> </span>-m<span class="w"> </span><span class="m">7</span><span class="w"> </span>username<span class="w">     </span><span class="c1"># Minimum 7 days before change</span>
+
+<span class="c1"># Check password status</span>
+sudo<span class="w"> </span>chage<span class="w"> </span>-l<span class="w"> </span>username
+</code></pre></div></td></tr></table></div>
+<h2 id="ssh-security-hardening-your-ssh-server">SSH Security: Hardening Your SSH Server</h2>
+<p><strong>SSH security</strong> involves configuring the SSH daemon to be as secure as possible.</p>
+<h3 id="essential-ssh-hardening">Essential SSH Hardening</h3>
+<p>Edit <code>/etc/ssh/sshd_config</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Disable root login</span>
+PermitRootLogin<span class="w"> </span>no
+
+<span class="c1"># Disable password authentication (use keys only)</span>
+PasswordAuthentication<span class="w"> </span>no
+PubkeyAuthentication<span class="w"> </span>yes
+
+<span class="c1"># Use only SSH protocol 2</span>
+Protocol<span class="w"> </span><span class="m">2</span>
+
+<span class="c1"># Limit login attempts</span>
+MaxAuthTries<span class="w"> </span><span class="m">3</span>
+
+<span class="c1"># Limit concurrent sessions</span>
+MaxSessions<span class="w"> </span><span class="m">3</span>
+
+<span class="c1"># Idle timeout (seconds)</span>
+ClientAliveInterval<span class="w"> </span><span class="m">300</span>
+ClientAliveCountMax<span class="w"> </span><span class="m">2</span>
+
+<span class="c1"># Allow only specific users</span>
+AllowUsers<span class="w"> </span>alice<span class="w"> </span>bob<span class="w"> </span>charlie
+
+<span class="c1"># Or allow by group</span>
+AllowGroups<span class="w"> </span>ssh-users
+
+<span class="c1"># Disable empty passwords</span>
+PermitEmptyPasswords<span class="w"> </span>no
+
+<span class="c1"># Disable X11 forwarding (if not needed)</span>
+X11Forwarding<span class="w"> </span>no
+</code></pre></div></td></tr></table></div>
+<p>After changes:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Test configuration</span>
+sudo<span class="w"> </span>sshd<span class="w"> </span>-t
+
+<span class="c1"># Restart SSH</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>sshd
+</code></pre></div></td></tr></table></div>
+<div class="admonition danger">
+<p class="admonition-title">Don't Lock Yourself Out!</p>
+<p>Before disabling password authentication, make sure your SSH key works! Keep a second terminal connected while testing.</p>
+</div>
+<h3 id="fail2ban-automatic-banning">Fail2Ban: Automatic Banning</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install fail2ban</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>fail2ban
+
+<span class="c1"># Configure /etc/fail2ban/jail.local:</span>
+<span class="o">[</span>sshd<span class="o">]</span>
+<span class="nv">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span>
+<span class="nv">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ssh
+<span class="nv">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>sshd
+<span class="nv">logpath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/var/log/auth.log
+<span class="nv">maxretry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span>
+<span class="nv">bantime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3600</span><span class="w">    </span><span class="c1"># 1 hour</span>
+
+<span class="c1"># Start and enable</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>fail2ban
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>fail2ban
+
+<span class="c1"># Check banned IPs</span>
+sudo<span class="w"> </span>fail2ban-client<span class="w"> </span>status<span class="w"> </span>sshd
+</code></pre></div></td></tr></table></div>
+<p>Fail2ban watches your logs and automatically blocks IPs that fail too many login attempts!</p>
+<h2 id="security-updates-stay-patched">Security Updates: Stay Patched!</h2>
+<p><strong>Security updates</strong> are your first line of defense against known vulnerabilities. Hackers actively scan for unpatched systems.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Check for updates (Debian/Ubuntu)</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+apt<span class="w"> </span>list<span class="w"> </span>--upgradable
+
+<span class="c1"># Install security updates only</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>--only-upgrade
+
+<span class="c1"># Automatic security updates</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>unattended-upgrades
+sudo<span class="w"> </span>dpkg-reconfigure<span class="w"> </span>unattended-upgrades
+</code></pre></div></td></tr></table></div>
+<h3 id="how-fast-should-you-update">How Fast Should You Update?</h3>
+<table>
+<thead>
+<tr>
+<th>Update Type</th>
+<th>Urgency</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Critical security</td>
+<td>ASAP</td>
+<td>Same day</td>
+</tr>
+<tr>
+<td>Security patches</td>
+<td>High</td>
+<td>Within a week</td>
+</tr>
+<tr>
+<td>Regular updates</td>
+<td>Normal</td>
+<td>Regular schedule</td>
+</tr>
+<tr>
+<td>Major upgrades</td>
+<td>Plan carefully</td>
+<td>Test first</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p class="admonition-title">Set It and Forget It</p>
+<p>Enable automatic security updates on all servers. The risk of an unpatched vulnerability is almost always greater than the risk of an update breaking something.</p>
+</div>
+<h2 id="vulnerability-scanning-know-your-weaknesses">Vulnerability Scanning: Know Your Weaknesses</h2>
+<p><strong>Vulnerability scanning</strong> helps you find security holes before attackers do.</p>
+<h3 id="basic-scanning-tools">Basic Scanning Tools</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Scan for open ports</span>
+nmap<span class="w"> </span>-sV<span class="w"> </span>your-server-ip
+
+<span class="c1"># Check for common vulnerabilities</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>lynis
+sudo<span class="w"> </span>lynis<span class="w"> </span>audit<span class="w"> </span>system
+
+<span class="c1"># Check for rootkits</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>rkhunter
+sudo<span class="w"> </span>rkhunter<span class="w"> </span>--check
+</code></pre></div></td></tr></table></div>
+<h3 id="what-scanners-look-for">What Scanners Look For</h3>
+<ul>
+<li>Open ports that shouldn't be</li>
+<li>Outdated software with known vulnerabilities</li>
+<li>Misconfigured services</li>
+<li>Weak file permissions</li>
+<li>Rootkits and malware</li>
+<li>Password policy issues</li>
+</ul>
+<h3 id="regular-scanning-schedule">Regular Scanning Schedule</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Add to cron for weekly scans</span>
+<span class="m">0</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span><span class="m">0</span><span class="w"> </span>/usr/bin/lynis<span class="w"> </span>audit<span class="w"> </span>system<span class="w"> </span>--cronjob<span class="w"> </span>&gt;<span class="w"> </span>/var/log/lynis-weekly.log
+</code></pre></div></td></tr></table></div>
+<h2 id="log-files-your-security-diary">Log Files: Your Security Diary</h2>
+<p><strong>Log files</strong> record everything that happens on your system. When something goes wrong (or someone breaks in), logs tell the story.</p>
+<h3 id="important-log-files">Important Log Files</h3>
+<table>
+<thead>
+<tr>
+<th>Log</th>
+<th>Location</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auth log</td>
+<td><code>/var/log/auth.log</code></td>
+<td>Login attempts, sudo usage</td>
+</tr>
+<tr>
+<td>Syslog</td>
+<td><code>/var/log/syslog</code></td>
+<td>System events</td>
+</tr>
+<tr>
+<td>Kernel</td>
+<td><code>/var/log/kern.log</code></td>
+<td>Kernel messages</td>
+</tr>
+<tr>
+<td>SSH</td>
+<td><code>/var/log/auth.log</code></td>
+<td>SSH connections</td>
+</tr>
+<tr>
+<td>Firewall</td>
+<td><code>/var/log/ufw.log</code></td>
+<td>UFW firewall events</td>
+</tr>
+<tr>
+<td>Fail2ban</td>
+<td><code>/var/log/fail2ban.log</code></td>
+<td>Banned IPs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reading-logs">Reading Logs</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># View recent auth events</span>
+sudo<span class="w"> </span>tail<span class="w"> </span>-50<span class="w"> </span>/var/log/auth.log
+
+<span class="c1"># Search for failed logins</span>
+sudo<span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;Failed password&quot;</span><span class="w"> </span>/var/log/auth.log
+
+<span class="c1"># Watch logs in real-time</span>
+sudo<span class="w"> </span>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/auth.log
+
+<span class="c1"># Use journalctl (systemd)</span>
+sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>sshd<span class="w"> </span>--since<span class="w"> </span><span class="s2">&quot;1 hour ago&quot;</span>
+sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>sshd<span class="w"> </span>-f<span class="w">  </span><span class="c1"># Follow in real-time</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="log-analysis-examples">Log Analysis Examples</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Count failed SSH attempts by IP</span>
+sudo<span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;Failed password&quot;</span><span class="w"> </span>/var/log/auth.log<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>grep<span class="w"> </span>-oE<span class="w"> </span><span class="s1">&#39;[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-rn<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-10
+
+<span class="c1"># Find successful SSH logins</span>
+sudo<span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;Accepted&quot;</span><span class="w"> </span>/var/log/auth.log
+
+<span class="c1"># See who used sudo</span>
+sudo<span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;sudo:&quot;</span><span class="w"> </span>/var/log/auth.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-20
+</code></pre></div></td></tr></table></div>
+<h2 id="audit-logs-detailed-tracking">Audit Logs: Detailed Tracking</h2>
+<p><strong>Audit logs</strong> provide even more detailed tracking using the Linux audit system (<code>auditd</code>).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install audit daemon</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>auditd<span class="w"> </span>audispd-plugins
+
+<span class="c1"># Start and enable</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>auditd
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>auditd
+
+<span class="c1"># Add audit rules</span>
+sudo<span class="w"> </span>auditctl<span class="w"> </span>-w<span class="w"> </span>/etc/passwd<span class="w"> </span>-p<span class="w"> </span>wa<span class="w"> </span>-k<span class="w"> </span>passwd_changes
+sudo<span class="w"> </span>auditctl<span class="w"> </span>-w<span class="w"> </span>/etc/shadow<span class="w"> </span>-p<span class="w"> </span>wa<span class="w"> </span>-k<span class="w"> </span>shadow_changes
+sudo<span class="w"> </span>auditctl<span class="w"> </span>-w<span class="w"> </span>/home<span class="w"> </span>-p<span class="w"> </span>wa<span class="w"> </span>-k<span class="w"> </span>home_changes
+
+<span class="c1"># Search audit logs</span>
+sudo<span class="w"> </span>ausearch<span class="w"> </span>-k<span class="w"> </span>passwd_changes
+sudo<span class="w"> </span>ausearch<span class="w"> </span>-ts<span class="w"> </span>today<span class="w"> </span>-k<span class="w"> </span>passwd_changes
+
+<span class="c1"># Generate reports</span>
+sudo<span class="w"> </span>aureport<span class="w"> </span>--auth
+sudo<span class="w"> </span>aureport<span class="w"> </span>--login
+sudo<span class="w"> </span>aureport<span class="w"> </span>--failed
+</code></pre></div></td></tr></table></div>
+<h3 id="persistent-audit-rules">Persistent Audit Rules</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Add rules to /etc/audit/rules.d/audit.rules:</span>
+-w<span class="w"> </span>/etc/passwd<span class="w"> </span>-p<span class="w"> </span>wa<span class="w"> </span>-k<span class="w"> </span>passwd_changes
+-w<span class="w"> </span>/etc/shadow<span class="w"> </span>-p<span class="w"> </span>wa<span class="w"> </span>-k<span class="w"> </span>shadow_changes
+-w<span class="w"> </span>/etc/sudoers<span class="w"> </span>-p<span class="w"> </span>wa<span class="w"> </span>-k<span class="w"> </span>sudoers_changes
+-w<span class="w"> </span>/var/log/auth.log<span class="w"> </span>-p<span class="w"> </span>wa<span class="w"> </span>-k<span class="w"> </span>auth_log
+
+<span class="c1"># Reload rules</span>
+sudo<span class="w"> </span>augenrules<span class="w"> </span>--load
+</code></pre></div></td></tr></table></div>
+<h2 id="security-best-practices-the-golden-rules">Security Best Practices: The Golden Rules</h2>
+<p><strong>Security best practices</strong> are the habits that keep systems safe:</p>
+<h3 id="the-top-10-security-habits">The Top 10 Security Habits</h3>
+<ol>
+<li><strong>Update regularly</strong>: Patch early, patch often</li>
+<li><strong>Use SSH keys</strong>: Disable password authentication</li>
+<li><strong>Firewall everything</strong>: Default deny, explicit allow</li>
+<li><strong>Principle of least privilege</strong>: Minimal permissions</li>
+<li><strong>Monitor logs</strong>: Know what's happening</li>
+<li><strong>Strong passwords</strong>: Where you must use them</li>
+<li><strong>Disable unused services</strong>: Smaller attack surface</li>
+<li><strong>Use sudo, not root</strong>: Accountability and safety</li>
+<li><strong>Backup regularly</strong>: You will need them someday</li>
+<li><strong>Test your security</strong>: Scan and audit yourself</li>
+</ol>
+<h3 id="the-security-mindset">The Security Mindset</h3>
+<blockquote>
+<p>"The only truly secure system is one that is powered off, cast in a block of concrete, and sealed in a lead-lined room with armed guards." — Gene Spafford</p>
+</blockquote>
+<p>You can't achieve perfect security, but you CAN:</p>
+<ul>
+<li>Make attacks difficult</li>
+<li>Detect attacks quickly</li>
+<li>Recover from attacks smoothly</li>
+</ul>
+<h2 id="realvnc-remote-desktop-for-support">RealVNC: Remote Desktop for Support</h2>
+<p>Sometimes SSH isn't enough—you need to see the actual desktop to help someone with a technical issue. <strong>RealVNC</strong> lets you share and control remote Linux desktops, perfect for remote technical support.</p>
+<h3 id="what-is-vnc">What is VNC?</h3>
+<p>VNC (Virtual Network Computing) is a protocol for sharing graphical desktops remotely. Unlike SSH (which is text-only), VNC shows you the entire screen—windows, menus, everything!</p>
+<h3 id="installing-realvnc-server">Installing RealVNC Server</h3>
+<p>On the remote Linux system you want to control:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Download from RealVNC website or use package manager</span>
+<span class="c1"># For Raspberry Pi OS, it&#39;s pre-installed!</span>
+
+<span class="c1"># On Ubuntu/Debian, download the .deb from realvnc.com:</span>
+sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>VNC-Server-*.deb
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-f<span class="w">  </span><span class="c1"># Fix any dependencies</span>
+
+<span class="c1"># Enable and start the service</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>vncserver-x11-serviced
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>vncserver-x11-serviced
+</code></pre></div></td></tr></table></div>
+<h3 id="installing-realvnc-viewer">Installing RealVNC Viewer</h3>
+<p>On your computer (the one you're using for support):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Download RealVNC Viewer from realvnc.com</span>
+<span class="c1"># Available for Linux, Windows, macOS, and mobile!</span>
+
+<span class="c1"># On Linux:</span>
+sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>VNC-Viewer-*.deb
+</code></pre></div></td></tr></table></div>
+<h3 id="setting-up-for-remote-support">Setting Up for Remote Support</h3>
+<h4 id="method-1-direct-connection-same-network">Method 1: Direct Connection (Same Network)</h4>
+<ol>
+<li>On the remote system, find its IP address: <code>hostname -I</code></li>
+<li>On your computer, open VNC Viewer</li>
+<li>Enter the IP address</li>
+<li>Enter the remote user's password when prompted</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Make sure the VNC port is open</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">5900</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="method-2-realvnc-cloud-connect-internet">Method 2: RealVNC Cloud Connect (Internet)</h4>
+<p>For helping someone over the internet (no network configuration needed):</p>
+<ol>
+<li>Create a free RealVNC account at realvnc.com</li>
+<li>Sign in to VNC Server on the remote system</li>
+<li>Sign in to VNC Viewer on your computer</li>
+<li>The remote system appears in your team—just click to connect!</li>
+</ol>
+<p>This is MUCH easier than configuring port forwarding!</p>
+<h3 id="using-vnc-for-tech-support">Using VNC for Tech Support</h3>
+<p>Here's a typical remote support workflow:</p>
+<ol>
+<li><strong>User reports problem</strong>: "My program won't open!"</li>
+<li><strong>Connect via VNC</strong>: See exactly what they see</li>
+<li><strong>Investigate</strong>: Watch their screen, check settings</li>
+<li><strong>Fix or demonstrate</strong>: Show them how to fix it</li>
+<li><strong>Disconnect</strong>: They're back on their own</li>
+</ol>
+<h3 id="vnc-security-tips">VNC Security Tips</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Use strong passwords</span>
+vncpasswd<span class="w">  </span><span class="c1"># Set VNC-specific password</span>
+
+<span class="c1"># Always use encryption (RealVNC does this by default)</span>
+
+<span class="c1"># Limit who can connect</span>
+<span class="c1"># In VNC Server settings, use Authentication options</span>
+
+<span class="c1"># Don&#39;t leave VNC running when not needed</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>vncserver-x11-serviced
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">VNC vs SSH for Support</p>
+<p>Use <strong>SSH</strong> when you can fix things from the command line.
+Use <strong>VNC</strong> when you need to see the graphical interface—like helping someone configure desktop applications, debug GUI issues, or train them visually.</p>
+</div>
+<h3 id="alternative-x11-forwarding">Alternative: X11 Forwarding</h3>
+<p>For running single graphical applications remotely (not the whole desktop):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Connect with X11 forwarding</span>
+ssh<span class="w"> </span>-X<span class="w"> </span>user@remote-server
+
+<span class="c1"># Run a graphical program</span>
+firefox<span class="w"> </span><span class="p">&amp;</span><span class="w">     </span><span class="c1"># Opens Firefox on YOUR display</span>
+gedit<span class="w"> </span>file<span class="w"> </span><span class="p">&amp;</span><span class="w">  </span><span class="c1"># Opens Gedit on YOUR display</span>
+</code></pre></div></td></tr></table></div>
+<p>This is lighter than VNC for single applications, but requires X11 on your local system.</p>
+<h2 id="putting-it-all-together-securing-a-new-server">Putting It All Together: Securing a New Server</h2>
+<p>Here's a checklist for securing a fresh Linux server:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># secure-server.sh - Initial server security setup</span>
+
+<span class="c1"># 1. Update everything</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
+
+<span class="c1"># 2. Create non-root user (if needed)</span>
+sudo<span class="w"> </span>adduser<span class="w"> </span>myuser
+sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>sudo<span class="w"> </span>myuser
+
+<span class="c1"># 3. Set up SSH keys (on your LOCAL machine)</span>
+<span class="c1"># ssh-keygen -t ed25519</span>
+<span class="c1"># ssh-copy-id myuser@server</span>
+
+<span class="c1"># 4. Harden SSH</span>
+sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/#PermitRootLogin yes/PermitRootLogin no/&#39;</span><span class="w"> </span>/etc/ssh/sshd_config
+sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/#PasswordAuthentication yes/PasswordAuthentication no/&#39;</span><span class="w"> </span>/etc/ssh/sshd_config
+
+<span class="c1"># 5. Configure firewall</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>default<span class="w"> </span>deny<span class="w"> </span>incoming
+sudo<span class="w"> </span>ufw<span class="w"> </span>default<span class="w"> </span>allow<span class="w"> </span>outgoing
+sudo<span class="w"> </span>ufw<span class="w"> </span>limit<span class="w"> </span>ssh
+sudo<span class="w"> </span>ufw<span class="w"> </span><span class="nb">enable</span>
+
+<span class="c1"># 6. Install fail2ban</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>fail2ban
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>fail2ban
+
+<span class="c1"># 7. Enable automatic updates</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>unattended-upgrades
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;Unattended-Upgrade::Automatic-Reboot &quot;true&quot;;&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/apt/apt.conf.d/50unattended-upgrades
+
+<span class="c1"># 8. Restart SSH</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>sshd
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Basic security configured! Test SSH access before disconnecting!&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>You're now a security-conscious Linux user!</p>
+<ul>
+<li><strong>SSH</strong>: The secure way to access remote systems</li>
+<li><strong>SSH keys</strong>: Far more secure than passwords</li>
+<li><strong>SCP/Rsync</strong>: Secure file transfer methods</li>
+<li><strong>Firewalls</strong>: Control what traffic enters your system</li>
+<li><strong>UFW</strong>: The user-friendly firewall tool</li>
+<li><strong>Security updates</strong>: Your first line of defense</li>
+<li><strong>Logs</strong>: Your security diary for investigations</li>
+<li><strong>VNC</strong>: Remote desktop for graphical support</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Security is a Journey!</p>
+<p>You won't implement everything at once, and that's okay. Start with the basics (keys, firewall, updates) and add more security measures over time. Every layer helps!</p>
+</div>
+<h2 id="whats-next">What's Next?</h2>
+<p>Congratulations—you've completed the core Linux curriculum! The next chapters cover advanced topics like container orchestration and system administration for those who want to go even deeper.</p>
+<hr />
+<details class="question">
+<summary>Quick Quiz: SSH and Security</summary>
+</details>
+<ol>
+<li>Why are SSH keys more secure than passwords?</li>
+<li>What command copies a file to a remote server over SSH?</li>
+<li>What UFW command blocks all incoming traffic except SSH?</li>
+<li>What file do you edit to configure SSH key aliases?</li>
+<li>Where do you look to see failed login attempts?</li>
+<li>What tool automatically bans IPs with too many failed logins?</li>
+<li>What's the difference between SCP and Rsync?</li>
+</ol>
+<details class="note">
+<summary>Quiz Answers</summary>
+</details>
+<ol>
+<li>Keys can't be guessed or brute-forced (they're 4096+ bits), can't be phished, and don't need to be typed</li>
+<li><code>scp file.txt user@server:/path/</code> or <code>rsync -av file.txt user@server:/path/</code></li>
+<li><code>sudo ufw default deny incoming</code> then <code>sudo ufw allow ssh</code></li>
+<li><code>~/.ssh/config</code></li>
+<li><code>/var/log/auth.log</code> or <code>journalctl -u sshd</code></li>
+<li>Fail2ban</li>
+<li>SCP copies everything; Rsync only copies what changed (and can resume interrupted transfers)</li>
+</ol>
 
 
 
@@ -1584,7 +4886,7 @@
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../js/extra.css"></script>
+        <script src="../../js/extra.js"></script>
       
     
   </body>

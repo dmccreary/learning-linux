@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+        <meta name="description" content="Master symbolic links, hard links, wildcards, and file globbing patterns">
       
       
         <meta name="author" content="Dan McCreary">
@@ -52,7 +52,7 @@
       
     
     
-      <link rel="stylesheet" href="../../styles/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -75,7 +75,7 @@
       
         <meta  property="og:title"  content="Advanced File Operations - Learning Linux" >
       
-        <meta  property="og:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  property="og:description"  content="Master symbolic links, hard links, wildcards, and file globbing patterns" >
       
         <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/06-advanced-files/index.png" >
       
@@ -91,7 +91,7 @@
       
         <meta  name="twitter:title"  content="Advanced File Operations - Learning Linux" >
       
-        <meta  name="twitter:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+        <meta  name="twitter:description"  content="Master symbolic links, hard links, wildcards, and file globbing patterns" >
       
         <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/06-advanced-files/index.png" >
       
@@ -214,7 +214,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -259,7 +259,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/learniing-linux" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -439,8 +439,6 @@
           
         
       
-        
-          
         
       
         
@@ -670,6 +668,291 @@
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#level-up-advanced-file-wizardry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level Up: Advanced File Wizardry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-links-shortcuts-on-steroids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Links: Shortcuts on Steroids
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Links: Shortcuts on Steroids">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbolic-links-the-friendly-shortcut" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symbolic Links: The Friendly Shortcut
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-when-links-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Happens When Links Break?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hard-links-two-names-one-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hard Links: Two Names, One File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hard Links: Two Names, One File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-hard-links-vs-symbolic-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Hard Links vs Symbolic Links
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-ln-command-creating-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ln Command: Creating Links
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcards-and-file-globbing-pattern-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wildcards and File Globbing: Pattern Power!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcards and File Globbing: Pattern Power!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-file-globbing" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is File Globbing?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-asterisk-wildcard-match-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Asterisk Wildcard: Match Everything
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-question-mark-wildcard-single-character" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Question Mark Wildcard: Single Character
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bracket-expressions-character-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bracket Expressions: Character Classes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bracket Expressions: Character Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-wildcard-pattern-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Wildcard Pattern Matching
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brace-expansion-generate-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brace Expansion: Generate Sequences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tilde-expansion-home-sweet-home" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tilde Expansion: Home Sweet Home
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-attributes-and-timestamps-the-hidden-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Attributes and Timestamps: The Hidden Metadata
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Attributes and Timestamps: The Hidden Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-timestamps-when-things-happened" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Timestamps: When Things Happened
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-and-modifying-timestamps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing and Modifying Timestamps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-attributes-extended-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Attributes: Extended Properties
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Attributes: Extended Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-file-metadata-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: File Metadata Overview
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-advanced-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: Advanced Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together: Advanced Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-organize-music-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario: Organize Music Library
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-development-project-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario: Development Project Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-log-file-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario: Log File Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wildcard Cheat Sheet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
     </span>
   </a>
   
@@ -1048,7 +1331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../24-customization/" class="md-nav__link">
+      <a href="../24-customization/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,6 +1456,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -1186,7 +1477,7 @@
         
   
   
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1424,6 +1715,291 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#level-up-advanced-file-wizardry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level Up: Advanced File Wizardry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-links-shortcuts-on-steroids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Links: Shortcuts on Steroids
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Links: Shortcuts on Steroids">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbolic-links-the-friendly-shortcut" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symbolic Links: The Friendly Shortcut
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-when-links-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Happens When Links Break?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hard-links-two-names-one-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hard Links: Two Names, One File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hard Links: Two Names, One File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-hard-links-vs-symbolic-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Hard Links vs Symbolic Links
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-ln-command-creating-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ln Command: Creating Links
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcards-and-file-globbing-pattern-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wildcards and File Globbing: Pattern Power!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcards and File Globbing: Pattern Power!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-file-globbing" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is File Globbing?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-asterisk-wildcard-match-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Asterisk Wildcard: Match Everything
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-question-mark-wildcard-single-character" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Question Mark Wildcard: Single Character
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bracket-expressions-character-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bracket Expressions: Character Classes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bracket Expressions: Character Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-wildcard-pattern-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Wildcard Pattern Matching
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brace-expansion-generate-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brace Expansion: Generate Sequences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tilde-expansion-home-sweet-home" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tilde Expansion: Home Sweet Home
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-attributes-and-timestamps-the-hidden-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Attributes and Timestamps: The Hidden Metadata
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Attributes and Timestamps: The Hidden Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-timestamps-when-things-happened" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Timestamps: When Things Happened
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-and-modifying-timestamps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing and Modifying Timestamps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-attributes-extended-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Attributes: Extended Properties
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Attributes: Extended Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-file-metadata-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: File Metadata Overview
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-advanced-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: Advanced Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together: Advanced Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-organize-music-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario: Organize Music Library
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-development-project-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario: Development Project Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-log-file-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario: Log File Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wildcard Cheat Sheet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1439,7 +2015,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/learniing-linux/blob/master/docs/chapters/06-advanced-files/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/learning-linux/blob/master/docs/chapters/06-advanced-files/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1451,7 +2027,7 @@
 <h2 id="summary">Summary</h2>
 <p>This chapter covers advanced file manipulation techniques including symbolic and hard links, wildcards and file globbing patterns, and file attributes. You'll learn how to work with multiple files efficiently using pattern matching, understand the difference between symbolic and hard links, and explore file metadata like timestamps and attributes.</p>
 <h2 id="concepts-covered">Concepts Covered</h2>
-<p>This chapter covers the following 20 concepts from the learning graph:</p>
+<p>This chapter covers the following 12 concepts from the learning graph:</p>
 <ol>
 <li>Symbolic Links</li>
 <li>Hard Links</li>
@@ -1473,7 +2049,1061 @@
 <li><a href="../05-file-operations/">Chapter 5: File Operations and Manipulation</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<h2 id="level-up-advanced-file-wizardry">Level Up: Advanced File Wizardry</h2>
+<p>You've learned to walk around the Linux file system and do basic file operations. Now it's time to learn some advanced tricks that will make you look like a command-line wizard! In this chapter, we're diving into:</p>
+<ul>
+<li><strong>Links</strong> - Creating shortcuts and aliases to files (way cooler than desktop shortcuts!)</li>
+<li><strong>Wildcards and Globbing</strong> - Matching multiple files with patterns (like search superpowers)</li>
+<li><strong>File Attributes and Timestamps</strong> - The hidden metadata that files carry around</li>
+</ul>
+<p>These are the techniques that separate casual Linux users from power users. Master these, and you'll be able to do in seconds what would take others minutes of clicking around. Let's get started!</p>
+<h2 id="understanding-links-shortcuts-on-steroids">Understanding Links: Shortcuts on Steroids</h2>
+<p>In the graphical world, you're probably familiar with shortcuts—those little arrow-icons that point to actual files. Linux has something similar but WAY more powerful: <strong>links</strong>.</p>
+<p>There are two types of links in Linux:</p>
+<ul>
+<li><strong>Symbolic links</strong> (symlinks) - Like shortcuts, but better</li>
+<li><strong>Hard links</strong> - A mind-bending concept where two names point to the same actual data</li>
+</ul>
+<p>Let's explore both!</p>
+<h3 id="symbolic-links-the-friendly-shortcut">Symbolic Links: The Friendly Shortcut</h3>
+<p>A <strong>symbolic link</strong> (also called a "symlink" or "soft link") is a special file that points to another file or directory. It's like a signpost saying "the real file is over there."</p>
+<p>Think of it like a redirect URL on the web. When you visit a shortened URL, it redirects you to the actual page. A symlink works the same way—when you access it, Linux automatically follows the link to the real file.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create a symbolic link</span>
+ln<span class="w"> </span>-s<span class="w"> </span>/path/to/original<span class="w"> </span>/path/to/link
+
+<span class="c1"># Example: Create a shortcut to your project</span>
+ln<span class="w"> </span>-s<span class="w"> </span>~/Documents/super-long-project-name<span class="w"> </span>~/project
+</code></pre></div></td></tr></table></div>
+<p>Now instead of typing <code>cd ~/Documents/super-long-project-name</code>, you can just type <code>cd ~/project</code>. Nice!</p>
+<p><strong>Common uses for symbolic links:</strong></p>
+<ul>
+<li>Creating shortcuts to deeply nested directories</li>
+<li>Linking configuration files to a central location</li>
+<li>Pointing to the "current" version of software</li>
+<li>Sharing files between locations without copying</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See that it&#39;s a link with ls -l</span>
+ls<span class="w"> </span>-l<span class="w"> </span>~/project
+<span class="c1"># lrwxrwxrwx 1 dan dan 35 Dec  6 16:00 project -&gt; /home/dan/Documents/super-long-project-name</span>
+
+<span class="c1"># The &#39;l&#39; at the start means it&#39;s a link</span>
+<span class="c1"># The -&gt; shows where it points</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Symlinks Are Everywhere!</p>
+<p>Linux uses symlinks extensively in the system. For example, <code>/bin</code> is often a symlink to <code>/usr/bin</code> on modern systems. Run <code>ls -la /</code> and look for the <code>-&gt;</code> arrows!</p>
+</div>
+<h3 id="what-happens-when-links-break">What Happens When Links Break?</h3>
+<p>If you delete the original file, the symlink becomes "broken" or "dangling." It still exists, but it points to nothing:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create a file and a link to it</span>
+touch<span class="w"> </span>original.txt
+ln<span class="w"> </span>-s<span class="w"> </span>original.txt<span class="w"> </span>link.txt
+
+<span class="c1"># Delete the original</span>
+rm<span class="w"> </span>original.txt
+
+<span class="c1"># The link is now broken!</span>
+ls<span class="w"> </span>-l<span class="w"> </span>link.txt
+<span class="c1"># lrwxrwxrwx 1 dan dan 12 Dec  6 16:05 link.txt -&gt; original.txt</span>
+
+cat<span class="w"> </span>link.txt
+<span class="c1"># cat: link.txt: No such file or directory</span>
+</code></pre></div></td></tr></table></div>
+<p>The link is shown in red (on most terminals) to indicate it's broken. It's like having a URL that leads to a 404 page.</p>
+<h3 id="hard-links-two-names-one-file">Hard Links: Two Names, One File</h3>
+<p>Now here's where things get interesting. A <strong>hard link</strong> is NOT a pointer to a file—it IS the file. Or more precisely, it's another name for the same data on disk.</p>
+<p>To understand hard links, you need to know a little secret about how Linux stores files:</p>
+<ol>
+<li>The actual file data lives on disk in a structure called an <strong>inode</strong></li>
+<li>What we call a "filename" is just a label pointing to that inode</li>
+<li>A hard link creates another label pointing to the SAME inode</li>
+</ol>
+<p>It's like having two different contact names in your phone that both call the same person. Neither one is the "real" name—they're both equally valid.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create a hard link</span>
+ln<span class="w"> </span>original.txt<span class="w"> </span>hardlink.txt
+
+<span class="c1"># Check they have the same inode number</span>
+ls<span class="w"> </span>-li<span class="w"> </span>original.txt<span class="w"> </span>hardlink.txt
+<span class="c1"># 1234567 -rw-r--r-- 2 dan dan 100 Dec  6 16:10 hardlink.txt</span>
+<span class="c1"># 1234567 -rw-r--r-- 2 dan dan 100 Dec  6 16:10 original.txt</span>
+<span class="c1">#    ^                ^</span>
+<span class="c1">#    Same inode!      Link count is 2</span>
+</code></pre></div></td></tr></table></div>
+<p>Notice two things:</p>
+<ul>
+<li>Both files have the same <strong>inode number</strong> (1234567 in this example)</li>
+<li>The link count shows "2" - meaning two names point to this data</li>
+</ul>
+<p><strong>The cool part:</strong> If you delete "original.txt", the data doesn't disappear! It still exists because "hardlink.txt" is pointing to it. The data is only truly deleted when ALL hard links are removed.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Symbolic Link</th>
+<th>Hard Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Points to</td>
+<td>Path/filename</td>
+<td>Inode (actual data)</td>
+</tr>
+<tr>
+<td>Can link to directories</td>
+<td>Yes</td>
+<td>No (usually)</td>
+</tr>
+<tr>
+<td>Can cross filesystems</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Broken if original deleted</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Shows as link in <code>ls -l</code></td>
+<td>Yes (l prefix)</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-hard-links-vs-symbolic-links">Diagram: Hard Links vs Symbolic Links</h4>
+<details>
+<summary>Understanding Links Visualization</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Understand
+Learning Objective: Visualize the fundamental difference between how symbolic links and hard links reference file data, helping students understand why hard links survive deletion of the "original" file.</p>
+<p>Layout: Two side-by-side panels comparing the two link types</p>
+<p>Left Panel - Symbolic Link:
+- Box labeled "symlink.txt" with arrow pointing right
+- Arrow labeled "points to path" going to
+- Box labeled "original.txt"
+- Arrow from original.txt going down to
+- Cylinder labeled "Inode 12345 (actual data on disk)"
+- Show what happens when original.txt is deleted (broken arrow, red X)</p>
+<p>Right Panel - Hard Link:
+- Box labeled "original.txt" with arrow pointing down
+- Box labeled "hardlink.txt" with arrow pointing down
+- Both arrows converge on the same cylinder "Inode 12345 (actual data on disk)"
+- Show link count = 2 on the inode
+- Show what happens when original.txt is deleted (hardlink.txt still works, link count = 1)</p>
+<p>Color coding:
+- Filenames: Blue boxes
+- Inode/data: Orange cylinder
+- Symlink arrow: Dashed green line
+- Hard link arrows: Solid blue lines
+- Broken link: Red dashed line with X</p>
+<p>Interactive features:
+- Click "Delete original.txt" button to see what happens to each type
+- Hover over components for explanations</p>
+<p>Implementation: p5.js</p>
+</details>
+<h3 id="the-ln-command-creating-links">The Ln Command: Creating Links</h3>
+<p>The <strong>ln command</strong> creates both types of links:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create a HARD link (default)</span>
+ln<span class="w"> </span>original.txt<span class="w"> </span>hardlink.txt
+
+<span class="c1"># Create a SYMBOLIC link (-s flag)</span>
+ln<span class="w"> </span>-s<span class="w"> </span>original.txt<span class="w"> </span>symlink.txt
+
+<span class="c1"># Create a symbolic link to a directory</span>
+ln<span class="w"> </span>-s<span class="w"> </span>/var/log<span class="w"> </span>~/logs
+
+<span class="c1"># Force overwrite existing link (-f flag)</span>
+ln<span class="w"> </span>-sf<span class="w"> </span>/new/target<span class="w"> </span>existing_link
+
+<span class="c1"># Verbose mode (-v flag)</span>
+ln<span class="w"> </span>-sv<span class="w"> </span>source.txt<span class="w"> </span>link.txt
+<span class="c1"># &#39;link.txt&#39; -&gt; &#39;source.txt&#39;</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Ln command options:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-s</code></td>
+<td>Create symbolic (soft) link</td>
+</tr>
+<tr>
+<td><code>-f</code></td>
+<td>Force - overwrite existing destination</td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td>Verbose - show what's being done</td>
+</tr>
+<tr>
+<td><code>-i</code></td>
+<td>Interactive - ask before overwriting</td>
+</tr>
+<tr>
+<td><code>-n</code></td>
+<td>Don't follow existing symlinks</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Hard Link Limitations</p>
+<p>Hard links have restrictions:</p>
+<ul>
+<li>Can't link to directories (prevents infinite loops)</li>
+<li>Can't cross filesystem boundaries (different partitions)</li>
+<li>Only work within the same filesystem</li>
+</ul>
+<p>When in doubt, use symbolic links (<code>ln -s</code>).</p>
+</div>
+<h2 id="wildcards-and-file-globbing-pattern-power">Wildcards and File Globbing: Pattern Power!</h2>
+<p>Now let's learn something that will 10x your productivity: <strong>wildcards</strong>! Instead of typing out every filename, you can use patterns to match multiple files at once.</p>
+<p>This pattern-matching feature is called <strong>file globbing</strong> (yes, that's the real name—it sounds like something from a fantasy game, but it's actually incredibly useful).</p>
+<h3 id="what-is-file-globbing">What is File Globbing?</h3>
+<p><strong>File globbing</strong> is when the shell expands wildcard patterns into a list of matching filenames BEFORE running your command. It happens automatically!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># You type:</span>
+ls<span class="w"> </span>*.txt
+
+<span class="c1"># The shell expands it to:</span>
+ls<span class="w"> </span>notes.txt<span class="w"> </span>report.txt<span class="w"> </span>todo.txt
+
+<span class="c1"># Then runs the command with those files</span>
+</code></pre></div></td></tr></table></div>
+<p>This expansion happens for any command, not just <code>ls</code>. That's the magic—<strong>wildcards</strong> work everywhere!</p>
+<h3 id="the-asterisk-wildcard-match-everything">The Asterisk Wildcard: Match Everything</h3>
+<p>The <strong>asterisk wildcard</strong> (<code>*</code>) matches zero or more characters. It's the most commonly used wildcard.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Match all .txt files</span>
+ls<span class="w"> </span>*.txt
+
+<span class="c1"># Match all files starting with &quot;report&quot;</span>
+ls<span class="w"> </span>report*
+
+<span class="c1"># Match all files containing &quot;2024&quot;</span>
+ls<span class="w"> </span>*2024*
+
+<span class="c1"># Match all files (except hidden)</span>
+ls<span class="w"> </span>*
+
+<span class="c1"># Copy all Python files to backup</span>
+cp<span class="w"> </span>*.py<span class="w"> </span>backup/
+
+<span class="c1"># Delete all temporary files</span>
+rm<span class="w"> </span>*.tmp
+</code></pre></div></td></tr></table></div>
+<p>The asterisk is like saying "I don't care what's here, match anything."</p>
+<p><strong>Pattern examples:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Matches</th>
+<th>Doesn't Match</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*.txt</code></td>
+<td><code>notes.txt</code>, <code>a.txt</code>, <code>.txt</code></td>
+<td><code>notes.txt.bak</code></td>
+</tr>
+<tr>
+<td><code>report*</code></td>
+<td><code>report</code>, <code>report.pdf</code>, <code>reports</code></td>
+<td><code>myreport</code></td>
+</tr>
+<tr>
+<td><code>*log*</code></td>
+<td><code>log</code>, <code>mylog.txt</code>, <code>log_backup</code></td>
+<td>(none in this pattern)</td>
+</tr>
+<tr>
+<td><code>*.tar.gz</code></td>
+<td><code>backup.tar.gz</code></td>
+<td><code>backup.tar</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-question-mark-wildcard-single-character">The Question Mark Wildcard: Single Character</h3>
+<p>The <strong>question mark wildcard</strong> (<code>?</code>) matches exactly ONE character. Use it when you know the length but not the exact characters.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Match any single character</span>
+ls<span class="w"> </span>file?.txt
+<span class="c1"># Matches: file1.txt, file2.txt, fileA.txt</span>
+<span class="c1"># Doesn&#39;t match: file10.txt, file.txt</span>
+
+<span class="c1"># Match two unknown characters</span>
+ls<span class="w"> </span>report??.pdf
+<span class="c1"># Matches: report01.pdf, reportAB.pdf</span>
+<span class="c1"># Doesn&#39;t match: report1.pdf, report001.pdf</span>
+
+<span class="c1"># Combine with asterisk</span>
+ls<span class="w"> </span>???.*
+<span class="c1"># Matches any 3-character filename with any extension</span>
+</code></pre></div></td></tr></table></div>
+<p>Think of <code>?</code> as "exactly one mystery character."</p>
+<h3 id="bracket-expressions-character-classes">Bracket Expressions: Character Classes</h3>
+<p><strong>Bracket expressions</strong> let you specify a SET of characters that can match in a position. Put the options inside square brackets <code>[]</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Match specific characters</span>
+ls<span class="w"> </span>file<span class="o">[</span><span class="m">123</span><span class="o">]</span>.txt
+<span class="c1"># Matches: file1.txt, file2.txt, file3.txt</span>
+<span class="c1"># Doesn&#39;t match: file4.txt, file12.txt</span>
+
+<span class="c1"># Match a range of characters</span>
+ls<span class="w"> </span>file<span class="o">[</span><span class="m">1</span>-9<span class="o">]</span>.txt
+<span class="c1"># Matches: file1.txt through file9.txt</span>
+
+ls<span class="w"> </span>file<span class="o">[</span>a-z<span class="o">]</span>.txt
+<span class="c1"># Matches: filea.txt through filez.txt</span>
+
+<span class="c1"># Match uppercase or lowercase</span>
+ls<span class="w"> </span><span class="o">[</span>Rr<span class="o">]</span>eport.txt
+<span class="c1"># Matches: Report.txt, report.txt</span>
+
+<span class="c1"># Combine ranges</span>
+ls<span class="w"> </span>file<span class="o">[</span><span class="m">0</span>-9a-f<span class="o">]</span>.txt
+<span class="c1"># Matches: file0.txt through file9.txt, filea.txt through filef.txt</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Special bracket patterns:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Negate with ^ or ! (match anything EXCEPT these)</span>
+ls<span class="w"> </span>file<span class="o">[</span>^0-9<span class="o">]</span>.txt
+<span class="c1"># Matches: filea.txt, fileX.txt</span>
+<span class="c1"># Doesn&#39;t match: file1.txt, file9.txt</span>
+
+<span class="c1"># Character classes</span>
+ls<span class="w"> </span><span class="o">[[</span>:digit:<span class="o">]]</span>*.txt<span class="w">    </span><span class="c1"># Files starting with a digit</span>
+ls<span class="w"> </span><span class="o">[[</span>:alpha:<span class="o">]]</span>*.txt<span class="w">    </span><span class="c1"># Files starting with a letter</span>
+ls<span class="w"> </span><span class="o">[[</span>:upper:<span class="o">]]</span>*.txt<span class="w">    </span><span class="c1"># Files starting with uppercase</span>
+ls<span class="w"> </span><span class="o">[[</span>:lower:<span class="o">]]</span>*.txt<span class="w">    </span><span class="c1"># Files starting with lowercase</span>
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[[:digit:]]</code></td>
+<td>0-9</td>
+</tr>
+<tr>
+<td><code>[[:alpha:]]</code></td>
+<td>a-z, A-Z</td>
+</tr>
+<tr>
+<td><code>[[:alnum:]]</code></td>
+<td>a-z, A-Z, 0-9</td>
+</tr>
+<tr>
+<td><code>[[:upper:]]</code></td>
+<td>A-Z</td>
+</tr>
+<tr>
+<td><code>[[:lower:]]</code></td>
+<td>a-z</td>
+</tr>
+<tr>
+<td><code>[[:space:]]</code></td>
+<td>Whitespace characters</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-wildcard-pattern-matching">Diagram: Wildcard Pattern Matching</h4>
+<details>
+<summary>Interactive Wildcard Matcher</summary>
+<p>Type: microsim</p>
+<p>Bloom Taxonomy: Apply, Analyze
+Learning Objective: Allow students to experiment with wildcard patterns and see which files match in real-time, building intuition for pattern construction.</p>
+<p>Canvas layout (responsive, ~750px max width):
+- Top section (100px): Pattern input field
+- Middle section (300px): File list showing matches/non-matches
+- Bottom section (100px): Explanation of why each file matches or doesn't</p>
+<p>Visual elements:
+- Text input for entering wildcard pattern
+- List of sample filenames
+- Matched files highlighted in green
+- Non-matched files in gray
+- Real-time pattern explanation</p>
+<p>Sample file list:
+- report.txt
+- report1.txt
+- report2.txt
+- report10.txt
+- Report.txt
+- myreport.txt
+- data.csv
+- data_2024.csv
+- backup.tar.gz
+- notes.md
+- .hidden</p>
+<p>Interactive controls:
+- Text input: Enter pattern (e.g., "report<em>.txt")
+- Quick pattern buttons: "</em>.txt", "report?", "[A-Z]<em>", "</em>[0-9]*"
+- Reset button</p>
+<p>Behavior:
+- As user types pattern, matching files highlight immediately
+- Show count: "5 of 11 files match"
+- Below each file, show why it matched or didn't
+- Handle special cases (hidden files, no matches)</p>
+<p>Example interactions:
+- Pattern "<em>.txt" → highlights report.txt, report1.txt, report2.txt, report10.txt, Report.txt, myreport.txt
+- Pattern "report?.txt" → highlights report1.txt, report2.txt only
+- Pattern "[Rr]eport</em>" → highlights report.txt, report1.txt, report2.txt, report10.txt, Report.txt</p>
+<p>Color scheme:
+- Matched: Green background
+- Not matched: Gray text
+- Pattern input: Blue border</p>
+<p>Implementation: p5.js</p>
+</details>
+<h3 id="brace-expansion-generate-sequences">Brace Expansion: Generate Sequences</h3>
+<p><strong>Brace expansion</strong> is slightly different from globbing—it generates a list of strings, whether or not matching files exist. It's done by the shell BEFORE checking for files.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create multiple files at once</span>
+touch<span class="w"> </span>file<span class="o">{</span><span class="m">1</span>,2,3<span class="o">}</span>.txt
+<span class="c1"># Creates: file1.txt, file2.txt, file3.txt</span>
+
+<span class="c1"># Create numbered sequences</span>
+touch<span class="w"> </span>chapter<span class="o">{</span><span class="m">01</span>..10<span class="o">}</span>.md
+<span class="c1"># Creates: chapter01.md through chapter10.md</span>
+
+<span class="c1"># Create letter sequences</span>
+touch<span class="w"> </span>backup_<span class="o">{</span>a..e<span class="o">}</span>.tar
+<span class="c1"># Creates: backup_a.tar through backup_e.tar</span>
+
+<span class="c1"># Combine multiple braces</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>project/<span class="o">{</span>src,tests,docs<span class="o">}</span>/<span class="o">{</span>main,utils<span class="o">}</span>
+<span class="c1"># Creates a whole directory tree!</span>
+
+<span class="c1"># Use with other text</span>
+<span class="nb">echo</span><span class="w"> </span><span class="o">{</span>un,re,dis<span class="o">}</span>happy
+<span class="c1"># Output: unhappy rehappy dishappy</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Brace expansion vs wildcards:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Brace Expansion</th>
+<th>Wildcards (Globbing)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expands before</td>
+<td>File check</td>
+<td>File check</td>
+</tr>
+<tr>
+<td>Creates new names</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Requires existing files</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Syntax</td>
+<td><code>{a,b,c}</code> or <code>{1..10}</code></td>
+<td><code>*</code>, <code>?</code>, <code>[]</code></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Brace expansion: ALWAYS expands</span>
+<span class="nb">echo</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>,2,3<span class="o">}</span>.txt
+<span class="c1"># Output: 1.txt 2.txt 3.txt (even if files don&#39;t exist)</span>
+
+<span class="c1"># Glob: Only matches existing files</span>
+<span class="nb">echo</span><span class="w"> </span>*.txt
+<span class="c1"># Output: (list of actual .txt files, or &quot;*.txt&quot; if none exist)</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Brace Expansion Power Move</p>
+<p>Use brace expansion to create project structures instantly:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>myapp/<span class="o">{</span>src/<span class="o">{</span>components,utils,styles<span class="o">}</span>,tests,docs,config<span class="o">}</span>
+</code></pre></div></td></tr></table></div>
+This creates a complete directory tree in one command!</p>
+</div>
+<h3 id="tilde-expansion-home-sweet-home">Tilde Expansion: Home Sweet Home</h3>
+<p><strong>Tilde expansion</strong> is so common you might not even think of it as expansion. The tilde (<code>~</code>) expands to your home directory.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Go to your home directory</span>
+<span class="nb">cd</span><span class="w"> </span>~
+
+<span class="c1"># Go to your Documents</span>
+<span class="nb">cd</span><span class="w"> </span>~/Documents
+
+<span class="c1"># Copy to home directory</span>
+cp<span class="w"> </span>file.txt<span class="w"> </span>~
+
+<span class="c1"># Reference another user&#39;s home (if you have permission)</span>
+ls<span class="w"> </span>~alice<span class="w">      </span><span class="c1"># /home/alice</span>
+ls<span class="w"> </span>~root<span class="w">       </span><span class="c1"># /root</span>
+
+<span class="c1"># In scripts, $HOME is more reliable</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$HOME</span><span class="w">     </span><span class="c1"># /home/dan</span>
+<span class="nb">echo</span><span class="w"> </span>~<span class="w">         </span><span class="c1"># /home/dan</span>
+</code></pre></div></td></tr></table></div>
+<p>The tilde is expanded by the shell before the command runs, turning <code>~</code> into <code>/home/username</code>.</p>
+<h2 id="file-attributes-and-timestamps-the-hidden-metadata">File Attributes and Timestamps: The Hidden Metadata</h2>
+<p>Every file carries around invisible information about itself—metadata that tells you (and the system) important details. Let's explore this hidden world!</p>
+<h3 id="file-timestamps-when-things-happened">File Timestamps: When Things Happened</h3>
+<p>Every file in Linux has THREE <strong>file timestamps</strong>:</p>
+<ol>
+<li><strong>atime</strong> (Access time): Last time the file was READ</li>
+<li><strong>mtime</strong> (Modification time): Last time the file CONTENT was changed</li>
+<li><strong>ctime</strong> (Change time): Last time the file METADATA changed (permissions, owner, etc.)</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See timestamps with stat command</span>
+stat<span class="w"> </span>myfile.txt
+
+<span class="c1"># Output shows:</span>
+<span class="c1"># Access: 2025-12-06 14:30:00.000000000 -0600</span>
+<span class="c1"># Modify: 2025-12-05 10:15:00.000000000 -0600</span>
+<span class="c1"># Change: 2025-12-05 10:15:00.000000000 -0600</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>When each timestamp updates:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Timestamp</th>
+<th>Updated when...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>atime</td>
+<td>File is read (cat, less, executed)</td>
+</tr>
+<tr>
+<td>mtime</td>
+<td>File contents are modified</td>
+</tr>
+<tr>
+<td>ctime</td>
+<td>Anything changes (content, permissions, name, links)</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Reading updates atime</span>
+cat<span class="w"> </span>myfile.txt
+
+<span class="c1"># Editing updates mtime (and ctime)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;new content&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>myfile.txt
+
+<span class="c1"># Changing permissions updates ctime only</span>
+chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>myfile.txt
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">atime and Performance</p>
+<p>Updating atime on every read can slow down the system. Many modern Linux systems mount filesystems with <code>noatime</code> or <code>relatime</code> options to reduce disk writes. Don't be surprised if atime doesn't update as expected!</p>
+</div>
+<h3 id="viewing-and-modifying-timestamps">Viewing and Modifying Timestamps</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See detailed timestamps</span>
+stat<span class="w"> </span>filename
+
+<span class="c1"># List files sorted by modification time (newest first)</span>
+ls<span class="w"> </span>-lt
+
+<span class="c1"># List files sorted by access time</span>
+ls<span class="w"> </span>-ltu
+
+<span class="c1"># See the full timestamp</span>
+ls<span class="w"> </span>-l<span class="w"> </span>--full-time<span class="w"> </span>filename
+
+<span class="c1"># Modify timestamps with touch</span>
+touch<span class="w"> </span>filename<span class="w">                    </span><span class="c1"># Update all timestamps to now</span>
+touch<span class="w"> </span>-a<span class="w"> </span>filename<span class="w">                 </span><span class="c1"># Update only atime</span>
+touch<span class="w"> </span>-m<span class="w"> </span>filename<span class="w">                 </span><span class="c1"># Update only mtime</span>
+touch<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;2024-01-15&quot;</span><span class="w"> </span>filename<span class="w">    </span><span class="c1"># Set specific date</span>
+touch<span class="w"> </span>-r<span class="w"> </span>reference.txt<span class="w"> </span>target.txt<span class="w"> </span><span class="c1"># Copy timestamps from another file</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="file-attributes-extended-properties">File Attributes: Extended Properties</h3>
+<p>Beyond the basic permissions, files can have special <strong>file attributes</strong> that control how they behave. These are managed with <code>lsattr</code> (list attributes) and <code>chattr</code> (change attributes).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># List file attributes</span>
+lsattr<span class="w"> </span>filename
+<span class="c1"># ----i--------e-- filename</span>
+
+<span class="c1"># Common attributes:</span>
+<span class="c1"># i - Immutable (cannot be modified, deleted, or renamed)</span>
+<span class="c1"># a - Append only (can only add to file, not modify)</span>
+<span class="c1"># e - Extent format (how file is stored on disk)</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Setting immutable attribute (requires root):</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Make a file immutable (cannot be changed or deleted)</span>
+sudo<span class="w"> </span>chattr<span class="w"> </span>+i<span class="w"> </span>important.txt
+
+<span class="c1"># Try to delete it</span>
+rm<span class="w"> </span>important.txt
+<span class="c1"># rm: cannot remove &#39;important.txt&#39;: Operation not permitted</span>
+
+<span class="c1"># Even root can&#39;t delete it without removing the attribute!</span>
+sudo<span class="w"> </span>rm<span class="w"> </span>important.txt
+<span class="c1"># rm: cannot remove &#39;important.txt&#39;: Operation not permitted</span>
+
+<span class="c1"># Remove immutable attribute</span>
+sudo<span class="w"> </span>chattr<span class="w"> </span>-i<span class="w"> </span>important.txt
+</code></pre></div></td></tr></table></div>
+<p><strong>Useful attributes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>i</code></td>
+<td>Immutable - can't be modified, deleted, renamed, or linked</td>
+</tr>
+<tr>
+<td><code>a</code></td>
+<td>Append only - can only add data, not modify existing</td>
+</tr>
+<tr>
+<td><code>A</code></td>
+<td>No atime updates - don't update access time</td>
+</tr>
+<tr>
+<td><code>c</code></td>
+<td>Compressed - automatically compress file</td>
+</tr>
+<tr>
+<td><code>s</code></td>
+<td>Secure delete - overwrite data when deleted</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Attribute Limitations</p>
+<p>File attributes don't work on all filesystems. They work on ext4 (the most common Linux filesystem) but may not work on FAT32, NTFS, or network filesystems.</p>
+</div>
+<h4 id="diagram-file-metadata-overview">Diagram: File Metadata Overview</h4>
+<details>
+<summary>File Metadata and Timestamps</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Remember, Understand
+Learning Objective: Show students all the metadata associated with a file, including timestamps, permissions, ownership, and attributes.</p>
+<p>Layout: Central file icon with metadata branching out</p>
+<p>Visual elements:
+- Central icon representing a file "document.txt"
+- Branching sections for each metadata category
+- Clear labels and example values</p>
+<p>Metadata sections:
+1. Timestamps (clock icon)
+   - Access time: 2025-12-06 14:30:00
+   - Modify time: 2025-12-05 10:15:00
+   - Change time: 2025-12-05 10:15:00</p>
+<ol>
+<li>Ownership (person icon)</li>
+<li>User: dan (UID 1000)</li>
+<li>
+<p>Group: developers (GID 100)</p>
+</li>
+<li>
+<p>Permissions (lock icon)</p>
+</li>
+<li>Mode: -rw-r--r-- (644)</li>
+<li>Owner: read, write</li>
+<li>Group: read</li>
+<li>
+<p>Others: read</p>
+</li>
+<li>
+<p>Size/Storage (disk icon)</p>
+</li>
+<li>Size: 4,096 bytes</li>
+<li>Blocks: 8</li>
+<li>
+<p>Inode: 1234567</p>
+</li>
+<li>
+<p>Attributes (shield icon)</p>
+</li>
+<li>Immutable: No</li>
+<li>Append-only: No</li>
+</ol>
+<p>Color coding:
+- Timestamps: Blue
+- Ownership: Green
+- Permissions: Orange
+- Size/Storage: Purple
+- Attributes: Red</p>
+<p>Interactive features:
+- Hover over each section for detailed explanation
+- Click to see the command that retrieves this info</p>
+<p>Implementation: p5.js or HTML/CSS</p>
+</details>
+<h2 id="putting-it-all-together-advanced-operations">Putting It All Together: Advanced Operations</h2>
+<p>Let's combine everything we've learned into some real-world scenarios!</p>
+<h3 id="scenario-organize-music-library">Scenario: Organize Music Library</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create symlinks for favorite albums</span>
+mkdir<span class="w"> </span>~/favorites
+ln<span class="w"> </span>-s<span class="w"> </span>~/Music/Artist1/BestAlbum<span class="w"> </span>~/favorites/artist1
+ln<span class="w"> </span>-s<span class="w"> </span>~/Music/Artist2/TopHits<span class="w"> </span>~/favorites/artist2
+
+<span class="c1"># Find all MP3 files and count them</span>
+ls<span class="w"> </span>~/Music/**/*.mp3<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+
+<span class="c1"># Copy all 2024 files to backup</span>
+cp<span class="w"> </span>~/Music/*2024*<span class="w"> </span>~/backup/
+
+<span class="c1"># Find files modified in the last 7 days</span>
+find<span class="w"> </span>~/Music<span class="w"> </span>-mtime<span class="w"> </span>-7<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.mp3&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="scenario-development-project-setup">Scenario: Development Project Setup</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create project structure with brace expansion</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>project/<span class="o">{</span>src/<span class="o">{</span>components,utils,hooks<span class="o">}</span>,tests,docs,config<span class="o">}</span>
+
+<span class="c1"># Create multiple config files</span>
+touch<span class="w"> </span>project/config/<span class="o">{</span>dev,prod,test<span class="o">}</span>.json
+
+<span class="c1"># Link global config to project</span>
+ln<span class="w"> </span>-s<span class="w"> </span>~/.config/prettier<span class="w"> </span>~/.prettierrc
+
+<span class="c1"># Find all JavaScript files</span>
+ls<span class="w"> </span>project/**/*.js
+
+<span class="c1"># Find all test files (ending in .test.js)</span>
+ls<span class="w"> </span>project/**/*.test.js
+</code></pre></div></td></tr></table></div>
+<h3 id="scenario-log-file-management">Scenario: Log File Management</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># View all log files from December</span>
+ls<span class="w"> </span>/var/log/*dec*
+
+<span class="c1"># Find large log files (using stat and sort)</span>
+ls<span class="w"> </span>-lS<span class="w"> </span>/var/log/*.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-5
+
+<span class="c1"># Create dated backup with brace expansion</span>
+cp<span class="w"> </span>/var/log/app.log<span class="w"> </span>/var/log/app.log.<span class="o">{</span><span class="k">$(</span>date<span class="w"> </span>+%Y%m%d<span class="k">)</span><span class="o">}</span>
+
+<span class="c1"># Make config file immutable</span>
+sudo<span class="w"> </span>chattr<span class="w"> </span>+i<span class="w"> </span>/etc/important.conf
+</code></pre></div></td></tr></table></div>
+<h2 id="wildcard-cheat-sheet">Wildcard Cheat Sheet</h2>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Matches</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*</code></td>
+<td>Zero or more characters</td>
+<td><code>*.txt</code> → all .txt files</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>Exactly one character</td>
+<td><code>file?.txt</code> → file1.txt, fileA.txt</td>
+</tr>
+<tr>
+<td><code>[abc]</code></td>
+<td>One of the listed characters</td>
+<td><code>file[123].txt</code> → file1.txt, file2.txt, file3.txt</td>
+</tr>
+<tr>
+<td><code>[a-z]</code></td>
+<td>One character in range</td>
+<td><code>file[a-z].txt</code> → filea.txt through filez.txt</td>
+</tr>
+<tr>
+<td><code>[^abc]</code></td>
+<td>NOT one of these characters</td>
+<td><code>file[^0-9].txt</code> → not file1.txt</td>
+</tr>
+<tr>
+<td><code>{a,b,c}</code></td>
+<td>Generate each option</td>
+<td><code>{un,re}do</code> → undo, redo</td>
+</tr>
+<tr>
+<td><code>{1..5}</code></td>
+<td>Generate sequence</td>
+<td><code>file{1..5}</code> → file1 through file5</td>
+</tr>
+<tr>
+<td><code>~</code></td>
+<td>Home directory</td>
+<td><code>~/docs</code> → /home/user/docs</td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>You've leveled up your Linux skills with these advanced file operations!</p>
+<ul>
+<li><strong>Symbolic links</strong> (<code>ln -s</code>) create shortcuts that point to files/directories</li>
+<li><strong>Hard links</strong> (<code>ln</code>) create additional names for the same file data</li>
+<li><strong>Wildcards</strong> (<code>*</code>, <code>?</code>, <code>[]</code>) match patterns in filenames</li>
+<li><strong>Brace expansion</strong> (<code>{}</code>) generates lists of strings</li>
+<li><strong>Tilde expansion</strong> (<code>~</code>) represents your home directory</li>
+<li><strong>File timestamps</strong> track access, modification, and change times</li>
+<li><strong>File attributes</strong> provide additional control (like immutability)</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">You're Becoming a Power User!</p>
+<p>These tools separate beginners from experts. You can now manipulate files with patterns, create efficient shortcuts, and understand the hidden metadata that files carry. Practice using wildcards in your daily work—they become second nature surprisingly quickly!</p>
+</div>
+<h2 id="whats-next">What's Next?</h2>
+<p>Now that you understand advanced file operations, it's time to learn about <strong>permissions and ownership</strong>—who can read, write, and execute your files! This is crucial for both security and collaboration.</p>
+<hr />
+<details class="question">
+<summary>Quick Quiz: Advanced File Operations</summary>
+<ol>
+<li>What's the difference between a symbolic link and a hard link?</li>
+<li>What command creates a symbolic link?</li>
+<li>What does the pattern <code>*.txt</code> match?</li>
+<li>What does <code>file[0-9].txt</code> match?</li>
+<li>How does brace expansion <code>{a,b,c}</code> differ from bracket expression <code>[abc]</code>?</li>
+<li>What are the three file timestamps in Linux?</li>
+</ol>
+</details>
+<details class="note">
+<summary>Quiz Answers</summary>
+<ol>
+<li>A symbolic link points to a path/filename and breaks if the target is deleted. A hard link points to the inode (data) and survives if the "original" is deleted.</li>
+<li><code>ln -s target linkname</code> creates a symbolic link</li>
+<li>All files ending in .txt</li>
+<li>Files like file0.txt, file1.txt through file9.txt (exactly one digit)</li>
+<li>Brace expansion generates all combinations whether files exist or not. Bracket expressions only match existing files with that character in that position.</li>
+<li>atime (access), mtime (modification), ctime (change/metadata)</li>
+</ol>
+</details>
 
 
 
@@ -1575,7 +3205,7 @@
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../js/extra.css"></script>
+        <script src="../../js/extra.js"></script>
       
     
   </body>

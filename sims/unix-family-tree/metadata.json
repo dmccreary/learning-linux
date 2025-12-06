@@ -1,0 +1,38 @@
+{
+    "title": "UNIX Family Tree (1969-2025)",
+    "description": "Interactive inheritance network diagram showing how UNIX evolved into BSD, System V, and GNU/Linux branches over time",
+    "creator": "Learning Linux Course",
+    "subject": "Operating Systems History",
+    "type": "InteractiveResource",
+    "format": "text/html",
+    "language": "en",
+    "created": "2025-12-06",
+    "modified": "2025-12-06",
+    "audience": "Students learning Linux and operating systems",
+    "educationLevel": "Undergraduate",
+    "learningObjectives": [
+        "Visualize how UNIX evolved into different branches over time",
+        "Identify BSD and System V as major UNIX derivatives",
+        "Understand how Linux emerged as a separate but compatible system",
+        "Recognize the relationship between GNU tools and the Linux kernel"
+    ],
+    "bloomsTaxonomy": ["Remember", "Understand"],
+    "interactivity": "medium",
+    "keywords": [
+        "UNIX",
+        "Linux",
+        "BSD",
+        "System V",
+        "GNU",
+        "operating systems",
+        "history",
+        "family tree",
+        "inheritance"
+    ],
+    "technicalRequirements": {
+        "browser": "Modern browser with JavaScript enabled",
+        "libraries": ["vis-network"]
+    },
+    "rights": "Creative Commons Attribution 4.0",
+    "version": "1.0.0"
+}

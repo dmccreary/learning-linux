@@ -1,0 +1,2722 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Automate tasks with cron and monitoring, customize your terminal with colors, and discover classic Linux easter eggs">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/learning-linux/chapters/24-automation/">
+      
+      
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Automation and Some Fun - Learning Linux</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-1PH8WBWH86"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-1PH8WBWH86",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-1PH8WBWH86",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Automation and Some Fun - Learning Linux" >
+      
+        <meta  property="og:description"  content="Automate tasks with cron and monitoring, customize your terminal with colors, and discover classic Linux easter eggs" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/24-automation/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/learning-linux/chapters/24-automation/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Automation and Some Fun - Learning Linux" >
+      
+        <meta  name="twitter:description"  content="Automate tasks with cron and monitoring, customize your terminal with colors, and discover classic Linux easter eggs" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/chapters/24-automation/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#automation-and-some-fun" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Learning Linux" class="md-header__button md-logo" aria-label="Learning Linux" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Learning Linux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Automation and Some Fun
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Learning Linux" class="md-nav__button md-logo" aria-label="Learning Linux" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Learning Linux
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../supplementary-content/low-cost-raspberry-pd/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Supplementary Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Sample Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary of Terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-fun-side-of-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the Fun Side of Linux!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-automation-let-linux-do-the-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1: Automation - Let Linux Do the Work
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Automation - Let Linux Do the Work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automating-tasks-with-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automating Tasks with Cron
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automating Tasks with Cron">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-and-editing-your-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing and Editing Your Crontab
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cron-time-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cron Time Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-cron-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Cron Examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram-cron-scheduling-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Cron Scheduling Visualization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring Tasks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring Tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-cron-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking Cron Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-monitoring-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Monitoring Script
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging Tasks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging Tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redirecting-output-to-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirecting Output to Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-logger-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the logger Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-professional-log-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Professional Log Entries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-mining-finding-patterns-in-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event Mining: Finding Patterns in Logs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Event Mining: Finding Patterns in Logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-log-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Log Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-journalctl-for-systemd-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using journalctl for Systemd Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram-log-analysis-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Log Analysis Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-automated-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Automated Alerts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-making-your-terminal-beautiful-and-weird" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Making Your Terminal Beautiful (and Weird)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Making Your Terminal Beautiful (and Weird)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terminal-customization-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal Customization Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-ansi-color-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding ANSI Color Codes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding ANSI Color Codes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color-codes-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Codes Quick Reference
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram-ansi-color-code-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: ANSI Color Code Chart
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminal-colors-in-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal Colors in Practice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customizing-ps1-your-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customizing PS1 (Your Prompt)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Customizing PS1 (Your Prompt)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ps1-special-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      PS1 Special Characters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ps1-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      PS1 Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neofetch-system-info-in-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neofetch: System Info in Style
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Neofetch: System Info in Style">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#neofetch-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neofetch Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cowsay-because-why-not" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cowsay: Because Why Not?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cowsay: Because Why Not?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#different-cowsay-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Different Cowsay Characters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cowsay-fortune-magic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cowsay + Fortune = Magic
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figlet-big-ascii-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Figlet: Big ASCII Text
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Figlet: Big ASCII Text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#figlet-fonts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Figlet Fonts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combining-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining Tools
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-infamous-sl-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Infamous sl Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-linux-easter-eggs" class="md-nav__link">
+    <span class="md-ellipsis">
+      More Linux Easter Eggs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="More Linux Easter Eggs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apt-moo" class="md-nav__link">
+    <span class="md-ellipsis">
+      apt moo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yes-command-kind-of-useless-entirely-fun" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yes Command (Kind of Useless, Entirely Fun)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rev-reverse-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rev (Reverse Text)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#factor-prime-factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Factor (Prime Factorization)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram-linux-easter-eggs-gallery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Linux Easter Eggs Gallery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-your-own-welcome-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Your Own Welcome Script
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice Exercises
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/learning-linux/blob/master/docs/chapters/24-automation/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="automation-and-some-fun">Automation and Some Fun</h1>
+<h2 id="summary">Summary</h2>
+<p>This chapter explores ways we can use Linux to Automate our world.</p>
+<p>Note that some of this content on PS1 has been covered in previous sections.</p>
+<p>Learn to customize your terminal with colorful prompts using PS1 and ANSI color codes, display system information with neofetch, and discover classic Linux easter eggs like cowsay, figlet, and the infamous sl command. A personalized terminal makes daily work more enjoyable.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following concepts from the learning graph:</p>
+<ol>
+<li>Automating Tasks</li>
+<li>Monitoring Tasks</li>
+<li>Logging Tasks</li>
+<li>Event Mining</li>
+<li>Terminal Customization</li>
+<li>Terminal Colors</li>
+<li>ANSI Color Codes</li>
+<li>Neofetch</li>
+<li>Cowsay</li>
+<li>Figlet</li>
+<li>Sl Command</li>
+<li>Linux Easter Eggs</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../02-terminal-basics/">Chapter 2: Getting Started with the Terminal</a></li>
+<li><a href="../11-shell-config/">Chapter 11: Shell Configuration and Environment</a></li>
+<li><a href="../14-package-mgmt/">Chapter 14: Package Management</a></li>
+</ul>
+<hr />
+<h2 id="welcome-to-the-fun-side-of-linux">Welcome to the Fun Side of Linux!</h2>
+<p>You've spent a lot of time learning serious Linux skills—file management, permissions, networking, scripting. Now it's time to put those skills to work automatically AND add some personality to your terminal. Because what's the point of mastering Linux if you can't make it look cool and do your work for you while you sleep?</p>
+<p>This chapter is split into two parts. First, we'll explore automation—making Linux do repetitive tasks without your constant supervision. Then we'll dive into the fun stuff: making your terminal look amazing and discovering some of the quirky easter eggs that Linux developers have hidden over the years.</p>
+<p>Let's automate the boring stuff and beautify the rest!</p>
+<h2 id="part-1-automation-let-linux-do-the-work">Part 1: Automation - Let Linux Do the Work</h2>
+<p>The true power of Linux isn't just doing things—it's doing things <em>automatically</em>. A good sysadmin is a lazy sysadmin (in the best way!). Why manually check disk space every day when a script can do it and alert you only when there's a problem?</p>
+<h3 id="automating-tasks-with-cron">Automating Tasks with Cron</h3>
+<p>Cron is the Linux scheduling system that runs tasks automatically at specified times. The name comes from "chronos" (Greek for time), and it's been helping Linux users automate tasks since the 1970s.</p>
+<p>Every Linux system has a cron daemon running in the background, constantly checking if any scheduled tasks need to run. You control it through a "crontab" (cron table)—a file that lists your scheduled tasks.</p>
+<h4 id="viewing-and-editing-your-crontab">Viewing and Editing Your Crontab</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># View your current crontab</span>
+crontab<span class="w"> </span>-l
+
+<span class="c1"># Edit your crontab</span>
+crontab<span class="w"> </span>-e
+
+<span class="c1"># Remove your crontab (careful!)</span>
+crontab<span class="w"> </span>-r
+</code></pre></div></td></tr></table></div>
+<h4 id="cron-time-format">Cron Time Format</h4>
+<p>Cron uses a specific format for scheduling. Each line in your crontab has five time fields followed by the command:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>* * * * * command_to_run
+│ │ │ │ │
+│ │ │ │ └─ Day of week (0-7, 0 and 7 = Sunday)
+│ │ │ └─── Month (1-12)
+│ │ └───── Day of month (1-31)
+│ └─────── Hour (0-23)
+└───────── Minute (0-59)
+</code></pre></div></td></tr></table></div>
+<p>Here are some examples to make it click:</p>
+<table>
+<thead>
+<tr>
+<th>Schedule</th>
+<th>Cron Expression</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Every minute</td>
+<td><code>* * * * *</code></td>
+<td>Runs constantly (usually not what you want!)</td>
+</tr>
+<tr>
+<td>Every hour</td>
+<td><code>0 * * * *</code></td>
+<td>At minute 0 of every hour</td>
+</tr>
+<tr>
+<td>Every day at 3 AM</td>
+<td><code>0 3 * * *</code></td>
+<td>Perfect for maintenance tasks</td>
+</tr>
+<tr>
+<td>Every Monday at 9 AM</td>
+<td><code>0 9 * * 1</code></td>
+<td>Weekly reports</td>
+</tr>
+<tr>
+<td>First of month at midnight</td>
+<td><code>0 0 1 * *</code></td>
+<td>Monthly tasks</td>
+</tr>
+<tr>
+<td>Every 15 minutes</td>
+<td><code>*/15 * * * *</code></td>
+<td>The <code>/</code> means "every"</td>
+</tr>
+<tr>
+<td>Weekdays at 8 AM</td>
+<td><code>0 8 * * 1-5</code></td>
+<td>The <code>-</code> defines a range</td>
+</tr>
+</tbody>
+</table>
+<h4 id="practical-cron-examples">Practical Cron Examples</h4>
+<p>Here are some real-world automation examples:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Backup home directory every night at 2 AM</span>
+<span class="m">0</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>tar<span class="w"> </span>-czf<span class="w"> </span>/backup/home_<span class="k">$(</span>date<span class="w"> </span>+<span class="se">\%</span>Y<span class="se">\%</span>m<span class="se">\%</span>d<span class="k">)</span>.tar.gz<span class="w"> </span>/home/pi
+
+<span class="c1"># Clear temp files every Sunday at 4 AM</span>
+<span class="m">0</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span><span class="m">0</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>/tmp/*
+
+<span class="c1"># Check disk space every hour, email if &gt; 90%</span>
+<span class="m">0</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/home/pi/scripts/check_disk.sh
+
+<span class="c1"># Update system packages weekly (Sunday at 3 AM)</span>
+<span class="m">0</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span><span class="m">0</span><span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
+
+<span class="c1"># Run a Python script every 5 minutes</span>
+*/5<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/usr/bin/python3<span class="w"> </span>/home/pi/scripts/sensor_check.py
+</code></pre></div></td></tr></table></div>
+<div class="admonition warning">
+<p class="admonition-title">Percent Signs in Cron</p>
+<p>In crontab, the <code>%</code> character has special meaning (it creates a newline). If you need a literal <code>%</code>, escape it with a backslash: <code>\%</code>. This is why <code>$(date +\%Y\%m\%d)</code> needs backslashes.</p>
+</div>
+<h4 id="diagram-cron-scheduling-visualization">Diagram: Cron Scheduling Visualization</h4>
+<details>
+<summary>Cron Time Field Visualization</summary>
+<p>Type: microsim</p>
+<p>Purpose: Interactive tool to help students understand and build cron expressions</p>
+<p>Bloom Taxonomy: Apply (L3)</p>
+<p>Learning Objective: Students will construct valid cron expressions by manipulating time fields</p>
+<p>Canvas layout (800x500):
+- Top section: Five dropdowns/input fields for cron time fields
+- Middle section: Human-readable interpretation of the schedule
+- Bottom section: Preview of next 5 scheduled run times</p>
+<p>Visual elements:
+- Five columns representing minute, hour, day, month, day-of-week
+- Each column shows current value with up/down arrows
+- Color coding: green for valid, red for invalid entries
+- Clock face showing when task will run
+- Calendar preview showing dates for monthly patterns</p>
+<p>Interactive controls:
+- Dropdown or spinner for each time field
+- Quick preset buttons: "Daily at midnight", "Every hour", "Weekly", "Every 5 minutes"
+- Text input for direct cron expression entry
+- "Copy to clipboard" button</p>
+<p>Default parameters:
+- Expression: 0 * * * * (every hour)
+- Shows next 5 runs based on current time</p>
+<p>Behavior:
+- Real-time update of human-readable text as fields change
+- Highlight invalid combinations (e.g., day 31 in February)
+- Show warning for very frequent schedules
+- Calculate and display next run times</p>
+<p>Implementation: p5.js with date/time calculation library</p>
+</details>
+<h3 id="monitoring-tasks">Monitoring Tasks</h3>
+<p>Setting up automation is only half the battle—you also need to know if your tasks are actually running! Monitoring ensures your automated systems are working correctly.</p>
+<h4 id="checking-cron-logs">Checking Cron Logs</h4>
+<p>Cron logs its activities to the system log. Here's how to see what's been happening:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># View cron logs (Debian/Ubuntu/Raspberry Pi OS)</span>
+grep<span class="w"> </span>CRON<span class="w"> </span>/var/log/syslog
+
+<span class="c1"># Recent cron activity</span>
+grep<span class="w"> </span>CRON<span class="w"> </span>/var/log/syslog<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-20
+
+<span class="c1"># Watch cron logs in real-time</span>
+tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>CRON
+
+<span class="c1"># On some systems, cron has its own log</span>
+cat<span class="w"> </span>/var/log/cron.log
+</code></pre></div></td></tr></table></div>
+<h4 id="creating-a-monitoring-script">Creating a Monitoring Script</h4>
+<p>Let's create a simple monitoring script that checks if your important services are running:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># save as /home/pi/scripts/service_monitor.sh</span>
+
+<span class="nv">SERVICES</span><span class="o">=</span><span class="s2">&quot;ssh nginx cron&quot;</span>
+<span class="nv">LOG_FILE</span><span class="o">=</span><span class="s2">&quot;/var/log/service_monitor.log&quot;</span>
+
+<span class="k">for</span><span class="w"> </span>service<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$SERVICES</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>systemctl<span class="w"> </span>is-active<span class="w"> </span>--quiet<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$service</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>date<span class="k">)</span><span class="s2">: </span><span class="nv">$service</span><span class="s2"> is running&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$LOG_FILE</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>date<span class="k">)</span><span class="s2">: WARNING - </span><span class="nv">$service</span><span class="s2"> is NOT running!&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$LOG_FILE</span><span class="s2">&quot;</span>
+<span class="w">        </span><span class="c1"># Could add email alert here</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<p>Then schedule it to run every 10 minutes:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>*/10<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/home/pi/scripts/service_monitor.sh
+</code></pre></div></td></tr></table></div>
+<h3 id="logging-tasks">Logging Tasks</h3>
+<p>Good logging is essential for debugging automation issues. When something goes wrong at 3 AM, logs are your best friend for figuring out what happened.</p>
+<h4 id="redirecting-output-to-logs">Redirecting Output to Logs</h4>
+<p>Every cron job should log its output:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Log stdout to a file</span>
+<span class="m">0</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/home/pi/scripts/backup.sh<span class="w"> </span>&gt;&gt;<span class="w"> </span>/var/log/backup.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+
+<span class="c1"># The 2&gt;&amp;1 redirects errors (stderr) to the same file as stdout</span>
+<span class="c1"># This captures EVERYTHING your script outputs</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="using-the-logger-command">Using the logger Command</h4>
+<p>The <code>logger</code> command writes messages to the system log (syslog), which is the proper place for system messages:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Basic logging</span>
+logger<span class="w"> </span><span class="s2">&quot;Backup script started&quot;</span>
+
+<span class="c1"># With priority/severity</span>
+logger<span class="w"> </span>-p<span class="w"> </span>user.info<span class="w"> </span><span class="s2">&quot;Backup completed successfully&quot;</span>
+logger<span class="w"> </span>-p<span class="w"> </span>user.error<span class="w"> </span><span class="s2">&quot;Backup FAILED!&quot;</span>
+
+<span class="c1"># With a tag for easy filtering</span>
+logger<span class="w"> </span>-t<span class="w"> </span>backup<span class="w"> </span><span class="s2">&quot;Starting nightly backup&quot;</span>
+
+<span class="c1"># Then search with:</span>
+grep<span class="w"> </span>backup<span class="w"> </span>/var/log/syslog
+</code></pre></div></td></tr></table></div>
+<h4 id="creating-professional-log-entries">Creating Professional Log Entries</h4>
+<p>Here's a pattern for logging in your scripts:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># Professional logging example</span>
+
+<span class="nv">SCRIPT_NAME</span><span class="o">=</span><span class="s2">&quot;backup_script&quot;</span>
+<span class="nv">LOG_TAG</span><span class="o">=</span><span class="s2">&quot;[</span><span class="nv">$SCRIPT_NAME</span><span class="s2">]&quot;</span>
+
+log_info<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logger<span class="w"> </span>-t<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SCRIPT_NAME</span><span class="s2">&quot;</span><span class="w"> </span>-p<span class="w"> </span>user.info<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>date<span class="w"> </span><span class="s1">&#39;+%Y-%m-%d %H:%M:%S&#39;</span><span class="k">)</span><span class="s2"> INFO: </span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="o">}</span>
+
+log_error<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logger<span class="w"> </span>-t<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SCRIPT_NAME</span><span class="s2">&quot;</span><span class="w"> </span>-p<span class="w"> </span>user.error<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>date<span class="w"> </span><span class="s1">&#39;+%Y-%m-%d %H:%M:%S&#39;</span><span class="k">)</span><span class="s2"> ERROR: </span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="p">&amp;</span><span class="m">2</span>
+<span class="o">}</span>
+
+<span class="c1"># Usage in script:</span>
+log_info<span class="w"> </span><span class="s2">&quot;Starting backup process&quot;</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>log_info<span class="w"> </span><span class="s2">&quot;Backup completed successfully&quot;</span>
+<span class="k">else</span>
+<span class="w">    </span>log_error<span class="w"> </span><span class="s2">&quot;Backup failed with exit code </span><span class="nv">$?</span><span class="s2">&quot;</span>
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="event-mining-finding-patterns-in-logs">Event Mining: Finding Patterns in Logs</h3>
+<p>Event mining is the art of analyzing logs to find patterns, problems, and insights. With all those log files accumulating, how do you find what matters?</p>
+<h4 id="basic-log-analysis">Basic Log Analysis</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Count occurrences of specific errors</span>
+grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="w"> </span>/var/log/syslog
+
+<span class="c1"># Find unique IP addresses in web logs</span>
+awk<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="w"> </span>/var/log/nginx/access.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-rn<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-10
+
+<span class="c1"># Find failed SSH login attempts</span>
+grep<span class="w"> </span><span class="s2">&quot;Failed password&quot;</span><span class="w"> </span>/var/log/auth.log
+
+<span class="c1"># Count events by hour</span>
+awk<span class="w"> </span><span class="s1">&#39;{print $3}&#39;</span><span class="w"> </span>/var/log/syslog<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d:<span class="w"> </span>-f1<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c
+</code></pre></div></td></tr></table></div>
+<h4 id="using-journalctl-for-systemd-logs">Using journalctl for Systemd Logs</h4>
+<p>Modern Linux systems use systemd and <code>journalctl</code> for centralized logging:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># View all logs (most recent)</span>
+journalctl<span class="w"> </span>-e
+
+<span class="c1"># Logs from the current boot</span>
+journalctl<span class="w"> </span>-b
+
+<span class="c1"># Logs from a specific service</span>
+journalctl<span class="w"> </span>-u<span class="w"> </span>nginx
+
+<span class="c1"># Logs from the last hour</span>
+journalctl<span class="w"> </span>--since<span class="w"> </span><span class="s2">&quot;1 hour ago&quot;</span>
+
+<span class="c1"># Follow logs in real-time (like tail -f)</span>
+journalctl<span class="w"> </span>-f
+
+<span class="c1"># Show only errors and above</span>
+journalctl<span class="w"> </span>-p<span class="w"> </span>err
+
+<span class="c1"># JSON output for scripting</span>
+journalctl<span class="w"> </span>-o<span class="w"> </span>json-pretty<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-50
+</code></pre></div></td></tr></table></div>
+<h4 id="diagram-log-analysis-workflow">Diagram: Log Analysis Workflow</h4>
+<details>
+<summary>Log Analysis and Event Mining Workflow</summary>
+<p>Type: workflow</p>
+<p>Purpose: Show the process of analyzing logs to find actionable insights</p>
+<p>Bloom Taxonomy: Analyze (L4)</p>
+<p>Learning Objective: Students will analyze the log analysis workflow and understand how to extract meaningful patterns</p>
+<p>Visual style: Flowchart with decision points</p>
+<p>Steps:
+1. Start: "Logs Generated"
+   Hover text: "Applications, services, and system generate log entries"</p>
+<ol>
+<li>
+<p>Process: "Collect Logs"
+   Hover text: "Centralize logs using syslog, journald, or log aggregators"</p>
+</li>
+<li>
+<p>Process: "Filter by Severity"
+   Hover text: "Focus on errors, warnings first: journalctl -p warning"</p>
+</li>
+<li>
+<p>Decision: "Known Pattern?"
+   Hover text: "Does this match a known issue or expected behavior?"</p>
+</li>
+</ol>
+<p>5a. Process: "Auto-Alert" (if known critical)
+    Hover text: "Send notification for known critical patterns"</p>
+<p>5b. Process: "Investigate" (if unknown)
+    Hover text: "Use grep, awk, and analysis tools to understand"</p>
+<ol>
+<li>
+<p>Process: "Extract Patterns"
+   Hover text: "Use awk, sort, uniq to find common occurrences"</p>
+</li>
+<li>
+<p>Process: "Correlate Events"
+   Hover text: "Match timestamps across different log sources"</p>
+</li>
+<li>
+<p>Process: "Document Findings"
+   Hover text: "Record what you learned for future reference"</p>
+</li>
+<li>
+<p>Decision: "Action Needed?"
+   Hover text: "Does this require intervention?"</p>
+</li>
+</ol>
+<p>10a. Process: "Create Fix/Alert" (if yes)
+     Hover text: "Implement solution or create monitoring rule"</p>
+<p>10b. End: "Archive for Reference" (if no)
+     Hover text: "Keep for historical analysis"</p>
+<p>Color coding:
+- Blue: Data collection steps
+- Yellow: Decision points
+- Green: Analysis steps
+- Orange: Action steps</p>
+<p>Implementation: Mermaid flowchart or HTML/CSS/JS workflow</p>
+</details>
+<h4 id="creating-automated-alerts">Creating Automated Alerts</h4>
+<p>Here's a script that monitors logs and sends alerts when it finds problems:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># save as /home/pi/scripts/log_watcher.sh</span>
+
+<span class="nv">ALERT_PATTERNS</span><span class="o">=(</span>
+<span class="w">    </span><span class="s2">&quot;Out of memory&quot;</span>
+<span class="w">    </span><span class="s2">&quot;disk full&quot;</span>
+<span class="w">    </span><span class="s2">&quot;Connection refused&quot;</span>
+<span class="w">    </span><span class="s2">&quot;Permission denied&quot;</span>
+<span class="o">)</span>
+
+<span class="nv">LOG_FILE</span><span class="o">=</span><span class="s2">&quot;/var/log/syslog&quot;</span>
+<span class="nv">ALERT_LOG</span><span class="o">=</span><span class="s2">&quot;/var/log/alerts.log&quot;</span>
+
+<span class="k">for</span><span class="w"> </span>pattern<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ALERT_PATTERNS</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nv">count</span><span class="o">=</span><span class="k">$(</span>grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$pattern</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$LOG_FILE</span><span class="s2">&quot;</span><span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="k">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$count</span><span class="s2">&quot;</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>date<span class="k">)</span><span class="s2">: ALERT - Found </span><span class="nv">$count</span><span class="s2"> instances of &#39;</span><span class="nv">$pattern</span><span class="s2">&#39;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ALERT_LOG</span><span class="s2">&quot;</span>
+<span class="w">        </span><span class="c1"># Could send email or notification here</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="k">done</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="part-2-making-your-terminal-beautiful-and-weird">Part 2: Making Your Terminal Beautiful (and Weird)</h2>
+<p>Now for the fun part! Let's transform your boring terminal into something that reflects your personality. This isn't just about looking cool—a well-customized terminal can also be more informative and easier to use.</p>
+<h3 id="terminal-customization-basics">Terminal Customization Basics</h3>
+<p>Your terminal's appearance is controlled by several factors:</p>
+<ul>
+<li><strong>PS1</strong>: The prompt string (what appears before your cursor)</li>
+<li><strong>Colors</strong>: ANSI escape codes for text and background colors</li>
+<li><strong>Terminal emulator settings</strong>: Font, window size, transparency</li>
+<li><strong>Shell configuration</strong>: ~/.bashrc or ~/.zshrc files</li>
+</ul>
+<h3 id="understanding-ansi-color-codes">Understanding ANSI Color Codes</h3>
+<p>ANSI escape codes are special character sequences that control terminal appearance. They might look like magic (or gibberish), but they follow a predictable pattern.</p>
+<p>The basic format is:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>\e[CODEm or \033[CODEm
+</code></pre></div></td></tr></table></div>
+<p>Where:</p>
+<ul>
+<li><code>\e</code> or <code>\033</code> = The escape character</li>
+<li><code>[</code> = Start of the control sequence</li>
+<li><code>CODE</code> = One or more numbers (separated by <code>;</code>)</li>
+<li><code>m</code> = End of the control sequence</li>
+</ul>
+<h4 id="color-codes-quick-reference">Color Codes Quick Reference</h4>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Effect</th>
+<th>Code</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Reset all</td>
+<td>1</td>
+<td>Bold</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Black text</td>
+<td>40</td>
+<td>Black background</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Red text</td>
+<td>41</td>
+<td>Red background</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Green text</td>
+<td>42</td>
+<td>Green background</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Yellow text</td>
+<td>43</td>
+<td>Yellow background</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Blue text</td>
+<td>44</td>
+<td>Blue background</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Magenta text</td>
+<td>45</td>
+<td>Magenta background</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Cyan text</td>
+<td>46</td>
+<td>Cyan background</td>
+</tr>
+<tr>
+<td>37</td>
+<td>White text</td>
+<td>47</td>
+<td>White background</td>
+</tr>
+</tbody>
+</table>
+<p>You can combine codes with semicolons:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Bold red text</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;\e[1;31mBold Red\e[0m&quot;</span>
+
+<span class="c1"># Green text on white background</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;\e[32;47mGreen on White\e[0m&quot;</span>
+
+<span class="c1"># Bold blue text, then reset</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;\e[1;34mBold Blue\e[0m Normal&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>Always end with <code>\e[0m</code> to reset colors, or everything after will be affected!</p>
+<h4 id="diagram-ansi-color-code-chart">Diagram: ANSI Color Code Chart</h4>
+<details>
+<summary>ANSI Color Code Interactive Reference</summary>
+<p>Type: microsim</p>
+<p>Purpose: Interactive color picker showing ANSI codes and live preview</p>
+<p>Bloom Taxonomy: Apply (L3)</p>
+<p>Learning Objective: Students will apply ANSI color codes to create custom terminal colors</p>
+<p>Canvas layout (800x500):
+- Left side (400px): Color palette grid
+- Right side (400px): Preview area and code output</p>
+<p>Visual elements:
+- 8x2 grid for standard colors (text and background)
+- 8x2 grid for bright/bold variants
+- Large preview box showing sample text
+- Code output area with copyable text</p>
+<p>Color grid:
+- Row 1: Standard foreground colors (30-37)
+- Row 2: Standard background colors (40-47)
+- Row 3: Bright foreground colors (90-97)
+- Row 4: Bright background colors (100-107)</p>
+<p>Interactive controls:
+- Click color to select foreground
+- Shift+click to select background
+- Checkbox: Bold
+- Checkbox: Underline
+- Checkbox: Italic
+- Text input: Sample text to display
+- Button: "Copy Code"</p>
+<p>Preview area:
+- Shows sample text with selected styling
+- Updates in real-time
+- Dark background option toggle</p>
+<p>Output formats:
+- Echo command: echo -e "\e[1;31mText\e[0m"
+- PS1 format: [\e[1;31m]Text[\e[0m]
+- Bash variable: RED='\e[31m'</p>
+<p>Default:
+- No selection (white text, no background)
+- Sample text: "Hello, Linux!"</p>
+<p>Implementation: p5.js with clipboard API</p>
+</details>
+<h3 id="terminal-colors-in-practice">Terminal Colors in Practice</h3>
+<p>Let's put those color codes to use:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Add these to your ~/.bashrc for easy access</span>
+
+<span class="c1"># Color definitions</span>
+<span class="nv">RED</span><span class="o">=</span><span class="s1">&#39;\e[31m&#39;</span>
+<span class="nv">GREEN</span><span class="o">=</span><span class="s1">&#39;\e[32m&#39;</span>
+<span class="nv">YELLOW</span><span class="o">=</span><span class="s1">&#39;\e[33m&#39;</span>
+<span class="nv">BLUE</span><span class="o">=</span><span class="s1">&#39;\e[34m&#39;</span>
+<span class="nv">MAGENTA</span><span class="o">=</span><span class="s1">&#39;\e[35m&#39;</span>
+<span class="nv">CYAN</span><span class="o">=</span><span class="s1">&#39;\e[36m&#39;</span>
+<span class="nv">BOLD</span><span class="o">=</span><span class="s1">&#39;\e[1m&#39;</span>
+<span class="nv">RESET</span><span class="o">=</span><span class="s1">&#39;\e[0m&#39;</span>
+
+<span class="c1"># Colorful aliases</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls --color=auto&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">grep</span><span class="o">=</span><span class="s1">&#39;grep --color=auto&#39;</span>
+
+<span class="c1"># Custom colorful messages</span>
+success<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">GREEN</span><span class="si">}</span><span class="s2">✓ </span><span class="nv">$1</span><span class="si">${</span><span class="nv">RESET</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="o">}</span>
+
+error<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">RED</span><span class="si">}</span><span class="s2">✗ </span><span class="nv">$1</span><span class="si">${</span><span class="nv">RESET</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="o">}</span>
+
+warning<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">YELLOW</span><span class="si">}</span><span class="s2">⚠ </span><span class="nv">$1</span><span class="si">${</span><span class="nv">RESET</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># Usage:</span>
+<span class="c1"># success &quot;Operation completed!&quot;</span>
+<span class="c1"># error &quot;Something went wrong&quot;</span>
+<span class="c1"># warning &quot;Proceed with caution&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="customizing-ps1-your-prompt">Customizing PS1 (Your Prompt)</h3>
+<p>The PS1 variable defines what your prompt looks like. By default, it's probably something boring like <code>user@hostname:~$</code>. Let's make it awesome!</p>
+<h4 id="ps1-special-characters">PS1 Special Characters</h4>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\u</code></td>
+<td>Username</td>
+</tr>
+<tr>
+<td><code>\h</code></td>
+<td>Hostname (short)</td>
+</tr>
+<tr>
+<td><code>\H</code></td>
+<td>Hostname (full)</td>
+</tr>
+<tr>
+<td><code>\w</code></td>
+<td>Current directory (full path)</td>
+</tr>
+<tr>
+<td><code>\W</code></td>
+<td>Current directory (basename only)</td>
+</tr>
+<tr>
+<td><code>\d</code></td>
+<td>Date</td>
+</tr>
+<tr>
+<td><code>\t</code></td>
+<td>Time (24-hour)</td>
+</tr>
+<tr>
+<td><code>\T</code></td>
+<td>Time (12-hour)</td>
+</tr>
+<tr>
+<td><code>\n</code></td>
+<td>Newline</td>
+</tr>
+<tr>
+<td><code>\$</code></td>
+<td><code>$</code> for regular user, <code>#</code> for root</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ps1-examples">PS1 Examples</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Simple colored prompt</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;\[\e[32m\]\u@\h\[\e[0m\]:\[\e[34m\]\w\[\e[0m\]\$ &#39;</span>
+
+<span class="c1"># With time</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;[\t] \[\e[32m\]\u\[\e[0m\]:\[\e[34m\]\W\[\e[0m\]\$ &#39;</span>
+
+<span class="c1"># Two-line prompt with full path</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;\[\e[36m\]┌──(\[\e[1;32m\]\u@\h\[\e[36m\])-[\[\e[1;34m\]\w\[\e[36m\]]\n\[\e[36m\]└─\[\e[1;32m\]\$\[\e[0m\] &#39;</span>
+
+<span class="c1"># Emoji prompt (if your terminal supports Unicode)</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;🐧 \[\e[32m\]\u\[\e[0m\] in \[\e[34m\]\W\[\e[0m\] \$ &#39;</span>
+
+<span class="c1"># Git-aware prompt (shows branch name)</span>
+parse_git_branch<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>git<span class="w"> </span>branch<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;/^[^*]/d&#39;</span><span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/* \(.*\)/ (\1)/&#39;</span>
+<span class="o">}</span>
+<span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;\[\e[32m\]\u\[\e[0m\]:\[\e[34m\]\W\[\e[33m\]$(parse_git_branch)\[\e[0m\]\$ &#39;</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Testing PS1 Changes</p>
+<p>Before adding a PS1 to your ~/.bashrc, test it by typing <code>PS1='your_prompt_here'</code> directly in the terminal. If something goes wrong, just close the terminal and open a new one!</p>
+</div>
+<h3 id="neofetch-system-info-in-style">Neofetch: System Info in Style</h3>
+<p>Neofetch displays system information alongside ASCII art of your distro's logo. It's perfect for screenshots and showing off your setup!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install neofetch</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>neofetch
+
+<span class="c1"># Run it</span>
+neofetch
+</code></pre></div></td></tr></table></div>
+<p>You'll see something beautiful like:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>       _,met$$$$$gg.          pi@raspberrypi
+    ,g$$$$$$$$$$$$$$$P.       ---------------
+  ,g$$P&quot;     &quot;&quot;&quot;Y$$.&quot;.        OS: Raspbian GNU/Linux 11 armv7l
+ ,$$P&#39;              `$$$.     Host: Raspberry Pi 4 Model B Rev 1.4
+&#39;,$$P       ,ggs.     `$$b:   Kernel: 6.1.21-v7l+
+`d$$&#39;     ,$P&quot;&#39;   .    $$$    Uptime: 3 days, 14 hours
+ $$P      d$&#39;     ,    $$P    Packages: 1423 (dpkg)
+ $$:      $$.   -    ,d$$&#39;    Shell: bash 5.1.4
+ $$;      Y$b._   _,d$P&#39;      Resolution: 1920x1080
+ Y$$.    `.`&quot;Y$$$$P&quot;&#39;         Terminal: /dev/pts/0
+ `$$b      &quot;-.__              CPU: BCM2711 (4) @ 1.800GHz
+  `Y$$                        Memory: 412MiB / 3791MiB
+   `Y$$.
+     `$$b.
+       `Y$$b.
+          `&quot;Y$b._
+              `&quot;&quot;&quot;
+</code></pre></div></td></tr></table></div>
+<h4 id="neofetch-configuration">Neofetch Configuration</h4>
+<p>Neofetch is highly customizable. The config file is at <code>~/.config/neofetch/config.conf</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Create config directory if it doesn&#39;t exist</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>~/.config/neofetch
+
+<span class="c1"># Copy default config</span>
+neofetch<span class="w"> </span>--print_config<span class="w"> </span>&gt;<span class="w"> </span>~/.config/neofetch/config.conf
+
+<span class="c1"># Edit to customize</span>
+nano<span class="w"> </span>~/.config/neofetch/config.conf
+</code></pre></div></td></tr></table></div>
+<p>Popular customizations:</p>
+<ul>
+<li>Change the ASCII art to a different distro or custom image</li>
+<li>Add/remove information fields</li>
+<li>Change colors</li>
+<li>Add custom ASCII art</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Run with a different ASCII logo</span>
+neofetch<span class="w"> </span>--ascii_distro<span class="w"> </span>ubuntu
+
+<span class="c1"># Use a custom image (requires w3m or kitty terminal)</span>
+neofetch<span class="w"> </span>--source<span class="w"> </span>/path/to/image.png
+
+<span class="c1"># Add to ~/.bashrc to run on terminal open</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;neofetch&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+</code></pre></div></td></tr></table></div>
+<h3 id="cowsay-because-why-not">Cowsay: Because Why Not?</h3>
+<p>Cowsay makes a cow (or other creature) say whatever you want. It's completely useless and absolutely delightful.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install cowsay</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>cowsay
+
+<span class="c1"># Basic usage</span>
+cowsay<span class="w"> </span><span class="s2">&quot;Hello, Linux!&quot;</span>
+
+<span class="c1"># Output:</span>
+<span class="w"> </span>_______________
+&lt;<span class="w"> </span>Hello,<span class="w"> </span>Linux!<span class="w"> </span>&gt;
+<span class="w"> </span>---------------
+<span class="w">        </span><span class="se">\ </span><span class="w">  </span>^__^
+<span class="w">         </span><span class="se">\ </span><span class="w"> </span><span class="o">(</span>oo<span class="o">)</span><span class="se">\_</span>______
+<span class="w">            </span><span class="o">(</span>__<span class="o">)</span><span class="se">\ </span><span class="w">      </span><span class="o">)</span><span class="se">\/\</span>
+<span class="w">                </span><span class="o">||</span>----w<span class="w"> </span><span class="p">|</span>
+<span class="w">                </span><span class="o">||</span><span class="w">     </span><span class="o">||</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="different-cowsay-characters">Different Cowsay Characters</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># See all available characters</span>
+cowsay<span class="w"> </span>-l
+
+<span class="c1"># Use different characters</span>
+cowsay<span class="w"> </span>-f<span class="w"> </span>tux<span class="w"> </span><span class="s2">&quot;Linux is awesome!&quot;</span><span class="w">      </span><span class="c1"># Tux the penguin!</span>
+cowsay<span class="w"> </span>-f<span class="w"> </span>dragon<span class="w"> </span><span class="s2">&quot;Fear me!&quot;</span><span class="w">            </span><span class="c1"># A dragon</span>
+cowsay<span class="w"> </span>-f<span class="w"> </span>bunny<span class="w"> </span><span class="s2">&quot;Hop hop!&quot;</span><span class="w">             </span><span class="c1"># A bunny</span>
+cowsay<span class="w"> </span>-f<span class="w"> </span>ghostbusters<span class="w"> </span><span class="s2">&quot;Who ya gonna call?&quot;</span>
+
+<span class="c1"># Cowthink (thought bubble instead of speech)</span>
+cowthink<span class="w"> </span><span class="s2">&quot;Hmm, interesting...&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="cowsay-fortune-magic">Cowsay + Fortune = Magic</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install fortune</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>fortune-mod
+
+<span class="c1"># Combine them for random wisdom from animals</span>
+fortune<span class="w"> </span><span class="p">|</span><span class="w"> </span>cowsay
+
+<span class="c1"># Add to ~/.bashrc for daily wisdom</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;fortune | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n 1)&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+</code></pre></div></td></tr></table></div>
+<h3 id="figlet-big-ascii-text">Figlet: Big ASCII Text</h3>
+<p>Figlet creates large ASCII art text banners. Great for scripts, welcome messages, or just fun.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install figlet</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>figlet
+
+<span class="c1"># Basic usage</span>
+figlet<span class="w"> </span><span class="s2">&quot;Hello&quot;</span>
+
+<span class="c1"># Output:</span>
+<span class="w"> </span>_<span class="w">   </span>_<span class="w">      </span>_<span class="w"> </span>_
+<span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>___<span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>___
+<span class="p">|</span><span class="w"> </span><span class="p">|</span>_<span class="p">|</span><span class="w"> </span><span class="p">|</span>/<span class="w"> </span>_<span class="w"> </span><span class="se">\ </span><span class="p">|</span><span class="w"> </span><span class="p">|</span>/<span class="w"> </span>_<span class="w"> </span><span class="se">\</span>
+<span class="p">|</span><span class="w">  </span>_<span class="w">  </span><span class="p">|</span><span class="w">  </span>__/<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="o">(</span>_<span class="o">)</span><span class="w"> </span><span class="p">|</span>
+<span class="p">|</span>_<span class="p">|</span><span class="w"> </span><span class="p">|</span>_<span class="p">|</span><span class="se">\_</span>__<span class="p">|</span>_<span class="p">|</span>_<span class="p">|</span><span class="se">\_</span>__/
+</code></pre></div></td></tr></table></div>
+<h4 id="figlet-fonts">Figlet Fonts</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># List available fonts</span>
+ls<span class="w"> </span>/usr/share/figlet/
+
+<span class="c1"># Use different fonts</span>
+figlet<span class="w"> </span>-f<span class="w"> </span>slant<span class="w"> </span><span class="s2">&quot;Linux&quot;</span>
+figlet<span class="w"> </span>-f<span class="w"> </span>banner<span class="w"> </span><span class="s2">&quot;Cool&quot;</span>
+figlet<span class="w"> </span>-f<span class="w"> </span>small<span class="w"> </span><span class="s2">&quot;Compact&quot;</span>
+figlet<span class="w"> </span>-f<span class="w"> </span>big<span class="w"> </span><span class="s2">&quot;BIG&quot;</span>
+
+<span class="c1"># Install more fonts</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>figlet-fonts
+
+<span class="c1"># Center the text</span>
+figlet<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;Centered&quot;</span>
+
+<span class="c1"># Set width</span>
+figlet<span class="w"> </span>-w<span class="w"> </span><span class="m">60</span><span class="w"> </span><span class="s2">&quot;Wrapped Text&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="combining-tools">Combining Tools</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Colorful figlet</span>
+figlet<span class="w"> </span><span class="s2">&quot;Linux&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>lolcat<span class="w">    </span><span class="c1"># Requires: sudo apt install lolcat</span>
+
+<span class="c1"># System welcome banner</span>
+<span class="c1">#!/bin/bash</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;\e[34m&quot;</span>
+figlet<span class="w"> </span>-f<span class="w"> </span>slant<span class="w"> </span><span class="s2">&quot;Welcome&quot;</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;\e[32m&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Today is </span><span class="k">$(</span>date<span class="w"> </span><span class="s1">&#39;+%A, %B %d, %Y&#39;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Uptime: </span><span class="k">$(</span>uptime<span class="w"> </span>-p<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;\e[0m&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="the-infamous-sl-command">The Infamous sl Command</h3>
+<p>Here's a Linux easter egg with a lesson: the <code>sl</code> command. Most people have accidentally typed <code>sl</code> when they meant <code>ls</code>. Instead of an error, this package rewards (punishes?) you with a steam locomotive chugging across your terminal!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Install sl</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>sl
+
+<span class="c1"># &quot;Accidentally&quot; type it</span>
+sl
+
+<span class="c1"># Watch in horror as a train slowly crosses your screen</span>
+<span class="c1"># You can&#39;t stop it! (Well, Ctrl+C works, but where&#39;s the fun?)</span>
+
+<span class="c1"># Options:</span>
+sl<span class="w"> </span>-l<span class="w">    </span><span class="c1"># Little train</span>
+sl<span class="w"> </span>-a<span class="w">    </span><span class="c1"># An accident occurs (people scream for help)</span>
+sl<span class="w"> </span>-F<span class="w">    </span><span class="c1"># Flying train</span>
+sl<span class="w"> </span>-e<span class="w">    </span><span class="c1"># Allow Ctrl+C to stop it (for the impatient)</span>
+</code></pre></div></td></tr></table></div>
+<p>The creator made <code>sl</code> because he kept mistyping <code>ls</code> and wanted to train himself to be more careful. The punishment of waiting for a train to cross your screen is surprisingly effective!</p>
+<h3 id="more-linux-easter-eggs">More Linux Easter Eggs</h3>
+<p>The Linux and UNIX world is full of fun surprises hidden by developers with a sense of humor:</p>
+<h4 id="apt-moo">apt moo</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>apt<span class="w"> </span>moo
+<span class="c1"># Have you mooed today?</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="yes-command-kind-of-useless-entirely-fun">Yes Command (Kind of Useless, Entirely Fun)</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Prints &quot;y&quot; forever (useful for scripts, amusing otherwise)</span>
+yes
+
+<span class="c1"># Custom message</span>
+yes<span class="w"> </span><span class="s2">&quot;Linux is awesome&quot;</span>
+
+<span class="c1"># Useful: Auto-confirm installations</span>
+yes<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>package
+</code></pre></div></td></tr></table></div>
+<h4 id="rev-reverse-text">Rev (Reverse Text)</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello World&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>rev
+<span class="c1"># dlroW olleH</span>
+
+<span class="c1"># Reverse a file</span>
+rev<span class="w"> </span>filename.txt
+</code></pre></div></td></tr></table></div>
+<h4 id="factor-prime-factorization">Factor (Prime Factorization)</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>factor<span class="w"> </span><span class="m">42</span>
+<span class="c1"># 42: 2 3 7</span>
+
+factor<span class="w"> </span><span class="m">1234567890</span>
+<span class="c1"># 1234567890: 2 3 3 5 3607 3803</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="diagram-linux-easter-eggs-gallery">Diagram: Linux Easter Eggs Gallery</h4>
+<details>
+<summary>Linux Easter Eggs Interactive Gallery</summary>
+<p>Type: infographic</p>
+<p>Purpose: Showcase various Linux easter eggs and fun commands with live examples</p>
+<p>Bloom Taxonomy: Remember (L1)</p>
+<p>Learning Objective: Students will recall various Linux easter eggs and fun commands</p>
+<p>Layout: Gallery grid with clickable cards</p>
+<p>Cards (each shows command and preview):</p>
+<ol>
+<li><strong>sl</strong> - Steam Locomotive</li>
+<li>Preview: ASCII train animation</li>
+<li>Command: sl</li>
+<li>
+<p>Fun fact: Created to punish typos</p>
+</li>
+<li>
+<p><strong>cowsay</strong> - Talking Cow</p>
+</li>
+<li>Preview: Cow with speech bubble</li>
+<li>Command: cowsay "message"</li>
+<li>
+<p>Variations: -f tux, -f dragon</p>
+</li>
+<li>
+<p><strong>figlet</strong> - ASCII Banners</p>
+</li>
+<li>Preview: Large text example</li>
+<li>Command: figlet "text"</li>
+<li>
+<p>Fonts: slant, banner, small</p>
+</li>
+<li>
+<p><strong>fortune</strong> - Random Quotes</p>
+</li>
+<li>Preview: Sample fortune</li>
+<li>Command: fortune</li>
+<li>
+<p>Combine: fortune | cowsay</p>
+</li>
+<li>
+<p><strong>cmatrix</strong> - Matrix Effect</p>
+</li>
+<li>Preview: Green falling characters</li>
+<li>Command: cmatrix</li>
+<li>
+<p>Install: sudo apt install cmatrix</p>
+</li>
+<li>
+<p><strong>lolcat</strong> - Rainbow Text</p>
+</li>
+<li>Preview: Colorful gradient text</li>
+<li>Command: echo "text" | lolcat</li>
+<li>
+<p>Animate: lolcat -a</p>
+</li>
+<li>
+<p><strong>asciiquarium</strong> - Fish Tank</p>
+</li>
+<li>Preview: ASCII fish swimming</li>
+<li>Command: asciiquarium</li>
+<li>
+<p>Install: separate package</p>
+</li>
+<li>
+<p><strong>apt moo</strong> - Hidden Cow</p>
+</li>
+<li>Preview: Super cow powers</li>
+<li>Command: apt moo</li>
+<li>Easter egg!</li>
+</ol>
+<p>Interactive features:
+- Click card to see live terminal output
+- Copy command button
+- Install instructions for each</p>
+<p>Color scheme: Dark terminal theme with syntax highlighting</p>
+<p>Implementation: HTML/CSS grid with animated previews</p>
+</details>
+<h3 id="creating-your-own-welcome-script">Creating Your Own Welcome Script</h3>
+<p>Let's combine everything we've learned to create an awesome terminal welcome script:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># save as ~/.welcome.sh</span>
+
+<span class="c1"># Colors</span>
+<span class="nv">RED</span><span class="o">=</span><span class="s1">&#39;\e[31m&#39;</span>
+<span class="nv">GREEN</span><span class="o">=</span><span class="s1">&#39;\e[32m&#39;</span>
+<span class="nv">YELLOW</span><span class="o">=</span><span class="s1">&#39;\e[33m&#39;</span>
+<span class="nv">BLUE</span><span class="o">=</span><span class="s1">&#39;\e[34m&#39;</span>
+<span class="nv">CYAN</span><span class="o">=</span><span class="s1">&#39;\e[36m&#39;</span>
+<span class="nv">RESET</span><span class="o">=</span><span class="s1">&#39;\e[0m&#39;</span>
+
+clear
+
+<span class="c1"># Header</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CYAN</span><span class="si">}</span><span class="s2">&quot;</span>
+figlet<span class="w"> </span>-f<span class="w"> </span>slant<span class="w"> </span><span class="s2">&quot;Welcome!&quot;</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">RESET</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="c1"># System info</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">GREEN</span><span class="si">}</span><span class="s2">═══════════════════════════════════════════</span><span class="si">${</span><span class="nv">RESET</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">YELLOW</span><span class="si">}</span><span class="s2">User:</span><span class="si">${</span><span class="nv">RESET</span><span class="si">}</span><span class="s2"> </span><span class="k">$(</span>whoami<span class="k">)</span><span class="s2">@</span><span class="k">$(</span>hostname<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">YELLOW</span><span class="si">}</span><span class="s2">Date:</span><span class="si">${</span><span class="nv">RESET</span><span class="si">}</span><span class="s2"> </span><span class="k">$(</span>date<span class="w"> </span><span class="s1">&#39;+%A, %B %d, %Y&#39;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">YELLOW</span><span class="si">}</span><span class="s2">Time:</span><span class="si">${</span><span class="nv">RESET</span><span class="si">}</span><span class="s2"> </span><span class="k">$(</span>date<span class="w"> </span><span class="s1">&#39;+%H:%M:%S&#39;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">YELLOW</span><span class="si">}</span><span class="s2">Uptime:</span><span class="si">${</span><span class="nv">RESET</span><span class="si">}</span><span class="s2"> </span><span class="k">$(</span>uptime<span class="w"> </span>-p<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">YELLOW</span><span class="si">}</span><span class="s2">Memory:</span><span class="si">${</span><span class="nv">RESET</span><span class="si">}</span><span class="s2"> </span><span class="k">$(</span>free<span class="w"> </span>-h<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;/^Mem:/ {print $3 &quot;/&quot; $2}&#39;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">YELLOW</span><span class="si">}</span><span class="s2">Disk:</span><span class="si">${</span><span class="nv">RESET</span><span class="si">}</span><span class="s2"> </span><span class="k">$(</span>df<span class="w"> </span>-h<span class="w"> </span>/<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;NR==2 {print $3 &quot;/&quot; $2 &quot; (&quot; $5 &quot; used)&quot;}&#39;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">GREEN</span><span class="si">}</span><span class="s2">═══════════════════════════════════════════</span><span class="si">${</span><span class="nv">RESET</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="c1"># Random quote</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+fortune<span class="w"> </span><span class="p">|</span><span class="w"> </span>cowsay<span class="w"> </span>-f<span class="w"> </span>tux
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>Add to your ~/.bashrc:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Run welcome script</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span>~/.welcome.sh<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>bash<span class="w"> </span>~/.welcome.sh
+<span class="k">fi</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>You've learned how to make Linux work for you AND look good doing it! Here's what you can now do:</p>
+<p><strong>Automation:</strong></p>
+<ul>
+<li>Schedule tasks with cron using the five-field time format</li>
+<li>Monitor scheduled tasks and check cron logs</li>
+<li>Create professional logging in your scripts</li>
+<li>Mine logs for patterns and create automated alerts</li>
+</ul>
+<p><strong>Terminal Fun:</strong></p>
+<ul>
+<li>Use ANSI color codes to add color to terminal output</li>
+<li>Customize your prompt (PS1) with colors and information</li>
+<li>Display system info beautifully with neofetch</li>
+<li>Make animals talk with cowsay</li>
+<li>Create ASCII banners with figlet</li>
+<li>Appreciate the humor of Linux easter eggs like sl</li>
+</ul>
+<p><strong>The Bigger Picture:</strong></p>
+<ul>
+<li>Automation saves time and reduces human error</li>
+<li>Good logging makes debugging much easier</li>
+<li>A personalized terminal makes daily work more enjoyable</li>
+<li>The Linux community has a great sense of humor!</li>
+</ul>
+<h2 id="practice-exercises">Practice Exercises</h2>
+<details class="question">
+<summary>Exercise 1: Create a Backup Cron Job</summary>
+<p>Set up a cron job that:
+- Runs every day at 2:30 AM
+- Creates a compressed backup of your home directory
+- Logs the start and end time to /var/log/backup.log
+- Only keeps backups from the last 7 days</p>
+<p><strong>Hint</strong>: You'll need to combine cron, tar, find (for cleanup), and logging.</p>
+</details>
+<details class="question">
+<summary>Exercise 2: Build a Custom PS1</summary>
+<p>Create a PS1 prompt that includes:
+- Your username in green
+- The current time in cyan
+- The current directory in blue
+- The git branch (if in a git repo) in yellow
+- A $ on a new line</p>
+<p><strong>Hint</strong>: Use the PS1 special characters and the parse_git_branch function from the chapter.</p>
+</details>
+<details class="question">
+<summary>Exercise 3: Log Analysis Script</summary>
+<p>Write a script that analyzes /var/log/syslog and produces a report showing:
+- Total number of log entries
+- Breakdown by log level (error, warning, info)
+- Top 5 most frequent processes writing logs
+- Any entries containing "fail" or "error"</p>
+<p><strong>Hint</strong>: Use grep, awk, sort, and uniq.</p>
+</details>
+<details class="question">
+<summary>Exercise 4: Ultimate Welcome Script</summary>
+<p>Create a welcome script that:
+- Shows a colorful figlet banner with your name
+- Displays system stats (CPU temp if on Pi, memory, disk)
+- Shows the weather for your location (use curl wttr.in)
+- Ends with a random fortune from a talking Tux</p>
+<p><strong>Hint</strong>: Combine everything from this chapter!</p>
+</details>
+<hr />
+<p><em>Remember: A great Linux user doesn't just know the commands—they make the system work for them. Automate the boring stuff, beautify the rest, and never forget that a steam locomotive might be just one typo away!</em> 🚂</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>
