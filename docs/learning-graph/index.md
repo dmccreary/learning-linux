@@ -2,6 +2,8 @@
 
 The Learning Graph is the foundational data structure for the Learning Linux intelligent textbook. It maps the relationships between 550 concepts, showing how knowledge builds from foundational ideas to advanced applications.
 
+[Run the Learning Graph Viewer Fullscreen](../sims/graph-viewer/main.html){ .md-button .md-button--primary }
+
 ## What is a Learning Graph?
 
 A learning graph is a directed acyclic graph (DAG) where:

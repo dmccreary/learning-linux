@@ -1,17 +1,24 @@
-# Welcome to MkDocs
+---
+title: Learning Linux
+description: An intelligent textbook for high-school students on learning the linux operating system.
+image: /img/cover.png
+og:image: /img/cover.png
+twitter:image: /img/cover.png
+hide:
+    toc
+---
+<style>
+.md-content__inner h1 {display: none !important;}
+</style>
+# Welcome to Learning Linux
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+![Cover Image](./img/cover.png)
 
-## Commands
+Welcome to the Learning Linux [intelligent textbook](glossary.md#intelligent-textbook).
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+Please contact me on [LinkedIn](https://www.linkedin.com/in/danmccreary/)
 
-## Project layout
+Thanks! - Dan
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+
+

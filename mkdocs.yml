@@ -5,19 +5,28 @@ site_author: Dan McCreary
 nav:
   - Home: index.md
   - Course Description: course-description.md
+
+  
+   
+  - Supplementary Content:
+    - Low Cost Raspberry Pi: supplementary-content/low-cost-raspberry-pd.md
+    - Raspberry Pi 500+: supplementary-content/raspberry-pi-500-plus-impact.md
+    - Claude Code Skills: supplementary-content/claude-code-skills.md
+    - Intelligent Textbooks: supplementary-content/intelligent-textbook.md
+
+  - MicroSims:
+    - Learning Graph Viewer: sims/graph-viewer/index.md
+  
   - Learning Graph:
     - Introduction: learning-graph/index.md
     - Concept List: learning-graph/concept-list.md
     - Concept Taxonomy: learning-graph/concept-taxonomy.md
     - Quality Metrics: learning-graph/quality-metrics.md
     - Taxonomy Distribution: learning-graph/taxonomy-distribution.md
-  - MicroSims:
-    - Learning Graph Viewer: sims/graph-viewer/index.md
-  - Supplementary Content:
-    - Low Cost Raspberry Pi: supplementary-content/low-cost-raspberry-pd.md
-    - Raspberry Pi 500+: supplementary-content/raspberry-pi-500-plus-impact.md
-    - Claude Code Skills: supplementary-content/claude-code-skills.md
-    - Intelligent Textbooks: supplementary-content/intelligent-textbook.md
+
+  - Sample Prompts:
+    - List of Prompts: prompts/index.md
+    - Bloom Taxonomy: prompts/bloom-taxonomy.md
 
 theme:
   name: material
