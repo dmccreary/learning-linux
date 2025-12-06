@@ -67,7 +67,19 @@ theme:
     - scheme: default
       primary: indigo
       accent: indigo
-
+  include_sidebar: true
+  features:
+    - content.code.copy
+    - navigation.expand
+    - navigation.path
+    - navigation.prune
+    - navigation.indexes
+    - toc.follow
+    - navigation.top
+    # this adds the prev and next icons in the footer
+    - navigation.footer
+    - content.action.edit
+    
 markdown_extensions:
   - md_in_html
   - attr_list
