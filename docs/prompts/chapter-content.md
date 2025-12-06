@@ -163,3 +163,30 @@ Use the chapter-content-generator skill to write chapter 14 @docs/chapters/13-pa
     Use the following code sample:  https://github.com/dmccreary/claude-skills/blob/main/scripts/bk-resize-images
     Here is the python code that this script calls: https://github.com/dmccreary/claude-skills/blob/main/src/resize-images/compress-images.py
     Note that to reach the goal, the tool has to rerun the compression until the right size is created.
+
+    ## 18 Storage and Performance
+
+    Use the chapter-content-generator skill to write chapter 18 @docs/chapters/18-storage-perf/index.md
+    Maintain a fun informal tone as though you are having a conversation with a high-school student that is curious about Linux.
+    Feel free to and puns and jokes to break up the text.
+    Make the text compelling and encouraging people to take the journey to become a master of Linux.
+    Log your progress on this session to logs/ch-18.md
+    Do not add spaces or tabs at the start of lines inside the <details> elements.
+
+    Describe how different tools time time, dd, hdparm, fio, ioping, bonnie++, and sysbench.
+    Create a case study about how the new nVME interfaces on the Raspberry Pi 5 can show a huge
+    jump in performance with these tools
+
+    Describe how you would used these tools to compare MicroSD read/write vs. nVME drives vs. spinning disk drivers on a new Raspberry Pi 5.
+
+    ## 19 Raspberry Pi
+
+  Use the chapter-content-generator skill to write chapter 19 @docs/chapters/19-raspberry-pi/index.md
+    Maintain a fun informal tone as though you are having a conversation with a high-school student that is curious about Linux.
+    Feel free to and puns and jokes to break up the text.
+    Make the text compelling and encouraging people to take the journey to become a master of Linux.
+    Log your progress on this session to logs/ch-19.md
+    Do not add spaces or tabs at the start of lines inside the <details> elements.
+    The tone should be enthusiastic and fun.  You can use your linux knowledge to 
+    do many creative fun DIY projects at school or around your home.
+    Please go into detail about how the Pi 5 has an entirely new chip dedicated to moving data around without bothering the CPU.  This chip has made the old anemic Pi 4 pale in comparison.  Note that a $300 Raspberry Pi 500+ with 16GB RAM is a replacement for even powerful desktop system.  Note that a great I/O chip makes even old CPUs look great!
