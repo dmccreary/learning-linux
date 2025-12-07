@@ -60,14 +60,17 @@ This chapter builds on concepts from:
 ## The "BOF" Story
 
 Early in my career I managed a small group of about 14 engineers.  Our team
-shared a file systems that was always running out of space and causing problems.
+shared a file system that was always running out of space and causing problems.
 We were spending a large part of our team meetings trying to manage the disk space.
-One day I got tiered of all the drama and sat down and wrote a program that
+One day I got tired of all the drama and sat down and wrote a program that
 created a Big-old-file scorecard.  It didn't just find the largest files or
 the oldest files.  It created a weighted score that combined these two
 numbers.  Our meetings were much more productive and we could then
 automate the process of automatically deleting big old files on
 a regular basis.
+
+What I learned is that teams that manage resources need great tools to
+find specific files and then do tasks like compress, archive or delete old files.
 
 ## Find It and Squeeze It!
 
