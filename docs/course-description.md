@@ -37,7 +37,7 @@ targeting high-school students that would empower them with the knowledge they n
 
 ## Why this Course is Different
 
-If you do a Google Search, you can find hundreds of books on UNIX and Linux going back to the 1980s.
+If you do a internet search, you can find hundreds of books on UNIX and Linux going back to the 1980s.
 But many of them are static printed books that are not designed for our TikTok obsessed youth that
 have the attention span of a gnat.  They need fun, engaging and **interactive** systems that can
 keep their attention and intelligent textbook interaction points that allow instructors to monitor their progress.
