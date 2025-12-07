@@ -183,17 +183,21 @@ Think about it like LEGO bricks versus a pre-built toy. With LEGO, you can combi
 Here's a real example: Let's say you want to find all the large files on your computer and sort them by size. In UNIX/Linux, you can chain together **small modular tools**:
 
 ```bash
-find /home -type f -size +100M | xargs ls -lh | sort -k5 -h
+find . -name "*.md" | xargs ls -l | sort -k5 -n
 ```
 
 This command:
 - `find` – locates files bigger than 100MB
-- `xargs ls -lh` – lists them with human-readable sizes
-- `sort -k5 -h` – sorts by the size column
+- `xargs ls -l` – lists the files with the long form that includes sizes
+- `sort -k5 -n` – sorts by the size column (-k5 is key column 5) using numeric sort (-n)
 
 Three simple tools, piped together, solving a complex problem. Beautiful!
 
 #### Diagram: UNIX Philosophy in Action
+
+<iframe src="../../sims/unix-pipe-diagram/main.html" height="372px" width="100%" scrolling="no"></iframe>
+
+[Run the UNIX Pipe Diagram MicroSim Fullscreen](../../sims/unix-pipe-diagram/main.html){ .md-button .md-button--primary }
 
 <details markdown="1">
     <summary>UNIX Philosophy in Action - Pipe Example</summary>
