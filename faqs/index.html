@@ -1,0 +1,2589 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/learning-linux/faqs/">
+      
+      
+        <link rel="prev" href="../glossary/">
+      
+      
+        <link rel="next" href="../license/">
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>FAQs - Learning Linux</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-1PH8WBWH86"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-1PH8WBWH86",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-1PH8WBWH86",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="FAQs - Learning Linux" >
+      
+        <meta  property="og:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/faqs.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/learning-linux/faqs/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="FAQs - Learning Linux" >
+      
+        <meta  name="twitter:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/faqs.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#learning-linux-faq" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Learning Linux" class="md-header__button md-logo" aria-label="Learning Linux" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Learning Linux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FAQs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Learning Linux" class="md-nav__button md-logo" aria-label="Learning Linux" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    Learning Linux
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../supplementary-content/low-cost-raspberry-pd/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Supplementary Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Sample Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary of Terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    FAQs
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    FAQs
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-this-course-about" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is this course about?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-is-this-course-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who is this course for?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-do-i-need-to-get-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      What do I need to get started?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-long-will-this-course-take" class="md-nav__link">
+    <span class="md-ellipsis">
+      How long will this course take?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-this-course-different-from-other-linux-tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      What makes this course different from other Linux tutorials?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-i-need-a-raspberry-pi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I need a Raspberry Pi?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-the-difference-between-linux-and-unix" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's the difference between Linux and UNIX?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-use-this-course-on-a-mac" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I use this course on a Mac?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-if-i-break-something" class="md-nav__link">
+    <span class="md-ellipsis">
+      What if I break something?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-get-help-when-im-stuck" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I get help when I'm stuck?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-operating-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an operating system?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a shell?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the terminal?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-bash-and-zsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between bash and zsh?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a file system?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-root-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the root directory?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-my-home-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is my home directory?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-file-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are file permissions?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-chmod" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is chmod?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is sudo?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a process?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-piping" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is piping?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-stdin-stdout-and-stderr" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is stdin, stdout, and stderr?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-environment-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an environment variable?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is PATH?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-detail-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Detail Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Detail Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-does-ls-la-show" class="md-nav__link">
+    <span class="md-ellipsis">
+      What does ls -la show?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-rm-and-rmdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between rm and rmdir?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-grep-and-how-do-i-use-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is grep and how do I use it?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-regular-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are regular expressions?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-apt-and-brew" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between apt and brew?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is SSH?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-shell-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a shell script?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is cron?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-systemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is systemd?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-nano-and-vim" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between nano and vim?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-gpio" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is GPIO?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Docker?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-tar-gzip-and-zip" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are tar, gzip, and zip?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Challenges
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Challenges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-do-i-get-permission-denied" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do I get "permission denied"?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-i-get-command-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do I get "command not found"?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-stop-a-running-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I stop a running command?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-delete-a-file-that-starts-with-a-dash" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I delete a file that starts with a dash?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-wont-my-script-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why won't my script run?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-find-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I find a file?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-see-whats-using-disk-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I see what's using disk space?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-my-process-using-100-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is my process using 100% CPU?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-safely-shutdown-my-raspberry-pi" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I safely shutdown my Raspberry Pi?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#should-i-always-use-sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Should I always use sudo?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-should-i-organize-my-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      How should I organize my files?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-the-best-way-to-backup-my-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's the best way to backup my files?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-write-clean-shell-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I write clean shell scripts?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-secure-my-linux-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I secure my Linux system?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-should-i-use-absolute-vs-relative-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      When should I use absolute vs relative paths?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-keep-my-system-clean" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I keep my system clean?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Topics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-containers-and-virtual-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between containers and virtual machines?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Kubernetes?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-infrastructure-as-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Infrastructure as Code?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is DevOps?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-c-and-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between C and Rust?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-does-linux-run-on-mars" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does Linux run on Mars?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-linux-certifications-should-i-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Linux certifications should I get?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-can-i-build-with-a-raspberry-pi" class="md-nav__link">
+    <span class="md-ellipsis">
+      What can I build with a Raspberry Pi?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-this-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      About This Course
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="About This Course">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#who-created-this-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who created this course?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-contribute-to-this-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I contribute to this course?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-can-i-find-additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where can I find additional resources?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-is-this-course-updated" class="md-nav__link">
+    <span class="md-ellipsis">
+      How is this course updated?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-this-course-about" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is this course about?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-is-this-course-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who is this course for?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-do-i-need-to-get-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      What do I need to get started?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-long-will-this-course-take" class="md-nav__link">
+    <span class="md-ellipsis">
+      How long will this course take?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-this-course-different-from-other-linux-tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      What makes this course different from other Linux tutorials?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-i-need-a-raspberry-pi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do I need a Raspberry Pi?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-the-difference-between-linux-and-unix" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's the difference between Linux and UNIX?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-use-this-course-on-a-mac" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I use this course on a Mac?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-if-i-break-something" class="md-nav__link">
+    <span class="md-ellipsis">
+      What if I break something?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-get-help-when-im-stuck" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I get help when I'm stuck?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-operating-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an operating system?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a shell?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the terminal?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-bash-and-zsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between bash and zsh?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a file system?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-root-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the root directory?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-my-home-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is my home directory?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-file-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are file permissions?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-chmod" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is chmod?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is sudo?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a process?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-piping" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is piping?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-stdin-stdout-and-stderr" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is stdin, stdout, and stderr?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-environment-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an environment variable?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is PATH?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-detail-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Detail Questions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Detail Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-does-ls-la-show" class="md-nav__link">
+    <span class="md-ellipsis">
+      What does ls -la show?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-rm-and-rmdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between rm and rmdir?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-grep-and-how-do-i-use-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is grep and how do I use it?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-regular-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are regular expressions?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-apt-and-brew" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between apt and brew?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is SSH?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-shell-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a shell script?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is cron?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-systemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is systemd?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-nano-and-vim" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between nano and vim?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-gpio" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is GPIO?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Docker?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-tar-gzip-and-zip" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are tar, gzip, and zip?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Challenges
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Challenges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-do-i-get-permission-denied" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do I get "permission denied"?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-i-get-command-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do I get "command not found"?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-stop-a-running-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I stop a running command?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-delete-a-file-that-starts-with-a-dash" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I delete a file that starts with a dash?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-wont-my-script-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why won't my script run?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-find-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I find a file?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-see-whats-using-disk-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I see what's using disk space?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-my-process-using-100-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is my process using 100% CPU?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-safely-shutdown-my-raspberry-pi" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I safely shutdown my Raspberry Pi?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#should-i-always-use-sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Should I always use sudo?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-should-i-organize-my-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      How should I organize my files?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-the-best-way-to-backup-my-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's the best way to backup my files?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-write-clean-shell-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I write clean shell scripts?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-secure-my-linux-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I secure my Linux system?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-should-i-use-absolute-vs-relative-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      When should I use absolute vs relative paths?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-keep-my-system-clean" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I keep my system clean?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Topics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-containers-and-virtual-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between containers and virtual machines?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Kubernetes?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-infrastructure-as-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Infrastructure as Code?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is DevOps?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-c-and-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the difference between C and Rust?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-does-linux-run-on-mars" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does Linux run on Mars?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-linux-certifications-should-i-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Linux certifications should I get?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-can-i-build-with-a-raspberry-pi" class="md-nav__link">
+    <span class="md-ellipsis">
+      What can I build with a Raspberry Pi?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-this-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      About This Course
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="About This Course">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#who-created-this-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who created this course?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-contribute-to-this-course" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I contribute to this course?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-can-i-find-additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where can I find additional resources?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-is-this-course-updated" class="md-nav__link">
+    <span class="md-ellipsis">
+      How is this course updated?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/learning-linux/blob/master/docs/faqs.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="learning-linux-faq">Learning Linux FAQ</h1>
+<p>Welcome to the Frequently Asked Questions for the Learning Linux course! This FAQ is organized by category to help you quickly find answers to common questions.</p>
+<hr />
+<h2 id="getting-started-questions">Getting Started Questions</h2>
+<h3 id="what-is-this-course-about">What is this course about?</h3>
+<p>This course teaches high school students how to use Linux, the operating system that powers most of the internet, smartphones, supercomputers, and even the Mars Ingenuity helicopter. You'll learn command-line skills, shell scripting, file management, networking, and how to work with Raspberry Pi hardware. By the end, you'll have practical skills valued in system administration, DevOps, and cloud computing careers. See the <a href="../course-description/">Course Description</a> for full details.</p>
+<h3 id="who-is-this-course-for">Who is this course for?</h3>
+<p>This course is designed for high school students (grades 10-12) who are curious about how computers really work. No prior Linux experience is required! You should have basic typing skills and access to a Linux terminal through Mac Terminal, Windows Subsystem for Linux (WSL), Chromebook developer mode, or a Raspberry Pi. See <a href="../course-description/#prerequisites">Prerequisites</a>.</p>
+<h3 id="what-do-i-need-to-get-started">What do I need to get started?</h3>
+<p>You need access to a Linux terminal. Options include:
+- <strong>Mac</strong>: Open Terminal (built-in)
+- <strong>Windows</strong>: Install WSL (Windows Subsystem for Linux)
+- <strong>Chromebook</strong>: Enable developer mode
+- <strong>Raspberry Pi</strong>: The recommended hands-on option ($35-100)</p>
+<p>Strong typing skills including copy/paste are essential. See <a href="../chapters/02-terminal-basics/">Chapter 2: Getting Started with the Terminal</a>.</p>
+<h3 id="how-long-will-this-course-take">How long will this course take?</h3>
+<p>This is a 15-week semester-long course. Each chapter is designed to be completed in approximately one week, with hands-on exercises and practice projects. The pace is flexible—some students move faster, while others take more time on challenging concepts.</p>
+<h3 id="what-makes-this-course-different-from-other-linux-tutorials">What makes this course different from other Linux tutorials?</h3>
+<p>Most Linux books are dry, technical manuals designed for IT professionals. This course uses humor, real-world examples, interactive MicroSims, and hands-on Raspberry Pi projects to make learning Linux actually fun. It's designed for the TikTok generation—engaging, interactive, and never boring!</p>
+<h3 id="do-i-need-a-raspberry-pi">Do I need a Raspberry Pi?</h3>
+<p>A Raspberry Pi is highly recommended but not strictly required. Many exercises work on any Linux terminal (Mac, WSL, Chromebook). However, chapters on GPIO, hardware projects, and IoT specifically require a Raspberry Pi. The Pi 4, Pi 5, or new Pi 500 are excellent choices. See <a href="../chapters/19-raspberry-pi/">Chapter 19: Introduction to Raspberry Pi</a>.</p>
+<h3 id="whats-the-difference-between-linux-and-unix">What's the difference between Linux and UNIX?</h3>
+<p>UNIX was created at Bell Labs in 1969 by Ken Thompson and Dennis Ritchie. Linux is a UNIX-like operating system created by Linus Torvalds in 1991 that's free and open source. Linux follows UNIX philosophy and is compatible with UNIX commands, but it's technically a separate implementation. See <a href="../chapters/01-unix-history/">Chapter 1: UNIX History</a>.</p>
+<h3 id="can-i-use-this-course-on-a-mac">Can I use this course on a Mac?</h3>
+<p>macOS is based on BSD UNIX, so most commands work identically. Open Terminal and you're ready to go! A few Linux-specific features (like apt package manager) differ, but the core skills transfer perfectly.</p>
+<h3 id="what-if-i-break-something">What if I break something?</h3>
+<p>That's the beauty of learning on a Raspberry Pi—if you break it, just reflash the SD card and start over! On other systems, most commands can be undone, and we teach safety practices throughout. Linux is designed to be explored. Make backups and don't be afraid to experiment.</p>
+<h3 id="how-do-i-get-help-when-im-stuck">How do I get help when I'm stuck?</h3>
+<p>Linux has excellent built-in help:
+- <code>man command</code> shows the manual page
+- <code>command --help</code> shows quick usage
+- <code>apropos keyword</code> searches for related commands</p>
+<p>See <a href="../chapters/03-shell-commands/">Chapter 3: Shell Commands and Navigation</a> for more help resources.</p>
+<hr />
+<h2 id="core-concepts">Core Concepts</h2>
+<h3 id="what-is-an-operating-system">What is an operating system?</h3>
+<p>An <strong>operating system (OS)</strong> is software that manages computer hardware and provides services for programs. It handles memory allocation, file storage, process scheduling, and hardware communication. Without an OS, your computer would just be an expensive paperweight. Linux, Windows, and macOS are all operating systems. See <a href="../chapters/01-unix-history/#what-even-is-an-operating-system">Chapter 1</a>.</p>
+<h3 id="what-is-a-shell">What is a shell?</h3>
+<p>A <strong>shell</strong> is a command-line interpreter that processes your typed commands and communicates with the operating system. Bash (Bourne Again Shell) and Zsh are the most popular shells. The shell is your direct connection to the power of Linux—much faster than clicking through menus once you learn the commands. See <a href="../chapters/03-shell-commands/">Chapter 3: Shell Commands</a>.</p>
+<h3 id="what-is-the-terminal">What is the terminal?</h3>
+<p>The <strong>terminal</strong> (or terminal emulator) is the application that provides a text-based interface to the shell. It's where you type commands and see output. On Mac, it's Terminal.app; on Linux, it might be GNOME Terminal or Konsole. The terminal is just the window—the shell is what interprets your commands. See <a href="../chapters/02-terminal-basics/">Chapter 2</a>.</p>
+<h3 id="what-is-the-difference-between-bash-and-zsh">What is the difference between bash and zsh?</h3>
+<p>Both <strong>bash</strong> and <strong>zsh</strong> are shells that interpret your commands. Bash is the traditional default on most Linux systems. Zsh (the default on modern macOS) offers enhanced features like better tab completion, spelling correction, and themes. Most commands work identically in both. See <a href="../glossary/#bash-shell">Glossary: Bash Shell</a>.</p>
+<h3 id="what-is-a-file-system">What is a file system?</h3>
+<p>The <strong>file system</strong> is how Linux organizes and stores files on disk. Unlike Windows (C:\, D:), Linux uses a single tree structure starting from the root <code>/</code>. Everything—files, devices, even running processes—appears as part of this hierarchy. Understanding the file system is essential for navigating Linux. See <a href="../chapters/04-file-system/">Chapter 4: File System Fundamentals</a>.</p>
+<h3 id="what-is-the-root-directory">What is the root directory?</h3>
+<p>The <strong>root directory</strong> <code>/</code> is the top of the Linux file system hierarchy. All other directories branch from it. Don't confuse this with the root user (superuser) or the /root directory (root user's home). The root directory is like the trunk of a tree from which all branches grow. See <a href="../chapters/04-file-system/">Chapter 4</a>.</p>
+<h3 id="what-is-my-home-directory">What is my home directory?</h3>
+<p>Your <strong>home directory</strong> is your personal space at <code>/home/username</code> (or <code>/Users/username</code> on Mac). It contains your files, configurations, and settings. The shortcut <code>~</code> (tilde) represents your home directory, so <code>cd ~</code> takes you home from anywhere. See <a href="../chapters/04-file-system/">Chapter 4</a>.</p>
+<h3 id="what-are-file-permissions">What are file permissions?</h3>
+<p><strong>File permissions</strong> control who can read, write, or execute files. Every file has three permission sets: owner, group, and others. Each set can have read (r), write (w), and execute (x) permissions. This security model is why Linux servers are so secure. See <a href="../chapters/07-permissions/">Chapter 7: File Permissions</a>.</p>
+<h3 id="what-is-chmod">What is chmod?</h3>
+<p>The <strong>chmod</strong> (change mode) command modifies file permissions. You can use symbolic mode (<code>chmod u+x file</code>) or numeric mode (<code>chmod 755 file</code>). Understanding chmod is essential for running scripts and securing files. See <a href="../chapters/07-permissions/">Chapter 7</a>.</p>
+<h3 id="what-is-sudo">What is sudo?</h3>
+<p><strong>Sudo</strong> (superuser do) lets you run commands with administrator privileges. Instead of logging in as root (dangerous!), you prefix commands with sudo to temporarily gain elevated access. For example, <code>sudo apt update</code> updates packages with admin rights. See <a href="../chapters/07-permissions/">Chapter 7</a>.</p>
+<h3 id="what-is-a-process">What is a process?</h3>
+<p>A <strong>process</strong> is a running instance of a program. Every command you run creates a process with a unique Process ID (PID). Linux can run thousands of processes simultaneously. Use <code>ps</code> to list processes and <code>kill</code> to stop them. See <a href="../chapters/12-processes/">Chapter 12: Process Management</a>.</p>
+<h3 id="what-is-piping">What is piping?</h3>
+<p><strong>Piping</strong> uses the <code>|</code> symbol to send output from one command as input to another. For example, <code>ls -l | grep ".txt"</code> lists files and filters for .txt files. Pipes embody the UNIX philosophy of small tools working together. See <a href="../chapters/09-sed-awk-pipes/">Chapter 9: Pipes and Filters</a>.</p>
+<h3 id="what-is-stdin-stdout-and-stderr">What is stdin, stdout, and stderr?</h3>
+<p>These are the three standard streams in Linux:
+- <strong>stdin (0)</strong>: Standard input (keyboard by default)
+- <strong>stdout (1)</strong>: Standard output (terminal by default)
+- <strong>stderr (2)</strong>: Standard error (terminal by default)</p>
+<p>You can redirect these using <code>&lt;</code>, <code>&gt;</code>, and <code>2&gt;</code>. See <a href="../chapters/09-sed-awk-pipes/">Chapter 9</a>.</p>
+<h3 id="what-is-an-environment-variable">What is an environment variable?</h3>
+<p><strong>Environment variables</strong> are named values available to programs. Common examples include PATH (where to find commands), HOME (your home directory), and USER (your username). View them with <code>echo $VARIABLE</code> or <code>printenv</code>. See <a href="../chapters/11-shell-config/">Chapter 11: Shell Configuration</a>.</p>
+<h3 id="what-is-path">What is PATH?</h3>
+<p><strong>PATH</strong> is an environment variable listing directories where the shell looks for executable commands. When you type <code>python</code>, the shell searches each PATH directory until it finds the program. Incorrect PATH settings cause "command not found" errors. See <a href="../chapters/11-shell-config/">Chapter 11</a>.</p>
+<hr />
+<h2 id="technical-detail-questions">Technical Detail Questions</h2>
+<h3 id="what-does-ls-la-show">What does ls -la show?</h3>
+<p>The command <code>ls -la</code> lists all files (including hidden ones starting with <code>.</code>) in long format showing permissions, owner, group, size, date, and filename. The <code>-l</code> flag means long format; <code>-a</code> means all files. See <a href="../chapters/04-file-system/">Chapter 4</a>.</p>
+<h3 id="what-is-the-difference-between-rm-and-rmdir">What is the difference between rm and rmdir?</h3>
+<p><code>rm</code> removes files (<code>rm file.txt</code>) or directories with contents (<code>rm -r folder/</code>). <code>rmdir</code> only removes empty directories. Use <code>rm -r</code> carefully—it recursively deletes everything inside! See <a href="../chapters/05-file-operations/">Chapter 5: File Operations</a>.</p>
+<h3 id="what-is-grep-and-how-do-i-use-it">What is grep and how do I use it?</h3>
+<p><strong>grep</strong> (Global Regular Expression Print) searches for patterns in files or output. Basic usage: <code>grep "pattern" file.txt</code>. Common options: <code>-i</code> (ignore case), <code>-r</code> (recursive), <code>-n</code> (show line numbers). Grep is essential for finding information in logs and code. See <a href="../chapters/08-grep-regex/">Chapter 8: grep and Regular Expressions</a>.</p>
+<h3 id="what-are-regular-expressions">What are regular expressions?</h3>
+<p><strong>Regular expressions (regex)</strong> are patterns for matching text. Special characters like <code>.</code> (any character), <code>*</code> (zero or more), and <code>^</code> (start of line) create powerful search patterns. Example: <code>grep "^error" log.txt</code> finds lines starting with "error". See <a href="../chapters/08-grep-regex/">Chapter 8</a>.</p>
+<h3 id="what-is-the-difference-between-apt-and-brew">What is the difference between apt and brew?</h3>
+<p><strong>apt</strong> (Advanced Package Tool) is the package manager for Debian/Ubuntu Linux. <strong>brew</strong> (Homebrew) is a popular package manager for macOS. Both install software from repositories: <code>apt install package</code> or <code>brew install package</code>. See <a href="../chapters/14-package-mgmt/">Chapter 14: Package Management</a>.</p>
+<h3 id="what-is-ssh">What is SSH?</h3>
+<p><strong>SSH</strong> (Secure Shell) provides encrypted remote access to other computers. Use <code>ssh user@hostname</code> to connect. SSH is essential for managing remote servers, Raspberry Pis on your network, and cloud instances. See <a href="../chapters/16-ssh-security/">Chapter 16: SSH and Security</a>.</p>
+<h3 id="what-is-a-shell-script">What is a shell script?</h3>
+<p>A <strong>shell script</strong> is a text file containing commands that execute sequentially. Start with a shebang (<code>#!/bin/bash</code>), make it executable (<code>chmod +x script.sh</code>), then run it (<code>./script.sh</code>). Scripts automate repetitive tasks. See <a href="../chapters/13-scripting/">Chapter 13: Shell Scripting</a>.</p>
+<h3 id="what-is-cron">What is cron?</h3>
+<p><strong>Cron</strong> is a time-based job scheduler that runs commands automatically at specified intervals. Edit your crontab with <code>crontab -e</code>. Example: <code>0 2 * * * /home/user/backup.sh</code> runs a backup daily at 2 AM. See <a href="../chapters/24-automation/">Chapter 24: Automation</a>.</p>
+<h3 id="what-is-systemd">What is systemd?</h3>
+<p><strong>Systemd</strong> is the init system and service manager for modern Linux. It starts the system, manages services, and handles system state. Commands like <code>systemctl start nginx</code> and <code>systemctl enable nginx</code> control services. See <a href="../chapters/23-sys-admin/">Chapter 23: System Administration</a>.</p>
+<h3 id="what-is-the-difference-between-nano-and-vim">What is the difference between nano and vim?</h3>
+<p><strong>Nano</strong> is a simple, beginner-friendly text editor with on-screen shortcut hints. <strong>Vim</strong> is a powerful, modal editor with a steeper learning curve but greater efficiency for experienced users. Start with nano; graduate to vim when ready. See <a href="../chapters/10-text-editors/">Chapter 10: Text Editors</a>.</p>
+<h3 id="what-is-gpio">What is GPIO?</h3>
+<p><strong>GPIO</strong> (General Purpose Input/Output) refers to the 40-pin header on Raspberry Pi boards. These pins can be programmed to read sensors (input) or control LEDs, motors, and other devices (output). GPIO makes the Pi perfect for hardware projects. See <a href="../chapters/20-gpio-iot/">Chapter 20: GPIO and IoT</a>.</p>
+<h3 id="what-is-docker">What is Docker?</h3>
+<p><strong>Docker</strong> is a containerization platform that packages applications with their dependencies into isolated containers. Unlike virtual machines, containers share the host OS kernel, making them lightweight and fast. Docker is widely used in DevOps and cloud deployment. See <a href="../chapters/21-cloud-containers/">Chapter 21: Cloud and Containers</a>.</p>
+<h3 id="what-are-tar-gzip-and-zip">What are tar, gzip, and zip?</h3>
+<p>These are compression and archiving tools:
+- <strong>tar</strong>: Archives multiple files into one (doesn't compress by default)
+- <strong>gzip</strong>: Compresses single files (.gz extension)
+- <strong>tar.gz</strong>: Combined archiving and compression
+- <strong>zip</strong>: Windows-compatible compression format</p>
+<p>See <a href="../chapters/17-compression-search/">Chapter 17: Compression and Search</a>.</p>
+<hr />
+<h2 id="common-challenges">Common Challenges</h2>
+<h3 id="why-do-i-get-permission-denied">Why do I get "permission denied"?</h3>
+<p>This error occurs when you lack the necessary permissions. Solutions:
+1. Check permissions with <code>ls -l</code>
+2. Use <code>sudo</code> for system files
+3. Use <code>chmod</code> to add execute permission for scripts
+4. Ensure you own the file (<code>chown</code>)</p>
+<p>See <a href="../chapters/07-permissions/">Chapter 7: Permissions</a>.</p>
+<h3 id="why-do-i-get-command-not-found">Why do I get "command not found"?</h3>
+<p>This error means the command isn't in your PATH. Fixes:
+1. Check spelling (Linux is case-sensitive!)
+2. Install the package (<code>apt install package</code>)
+3. Use the full path (<code>/usr/bin/command</code>)
+4. Check PATH with <code>echo $PATH</code></p>
+<p>See <a href="../chapters/11-shell-config/">Chapter 11</a>.</p>
+<h3 id="how-do-i-stop-a-running-command">How do I stop a running command?</h3>
+<ul>
+<li><strong>Ctrl+C</strong>: Interrupt and stop the command</li>
+<li><strong>Ctrl+Z</strong>: Suspend the command (use <code>fg</code> to resume, <code>bg</code> for background)</li>
+<li><strong>Ctrl+D</strong>: Send end-of-file (exits shells and programs waiting for input)</li>
+</ul>
+<p>See <a href="../chapters/12-processes/">Chapter 12: Process Management</a>.</p>
+<h3 id="how-do-i-delete-a-file-that-starts-with-a-dash">How do I delete a file that starts with a dash?</h3>
+<p>Files starting with <code>-</code> are interpreted as options. Solutions:
+- Use <code>./</code>: <code>rm ./-file</code>
+- Use <code>--</code>: <code>rm -- -file</code></p>
+<p>Example: <code>rm -- -myfile.txt</code> deletes a file named <code>-myfile.txt</code>.</p>
+<h3 id="why-wont-my-script-run">Why won't my script run?</h3>
+<p>Common issues:
+1. <strong>No execute permission</strong>: Fix with <code>chmod +x script.sh</code>
+2. <strong>Wrong shebang</strong>: First line should be <code>#!/bin/bash</code>
+3. <strong>Wrong path</strong>: Use <code>./script.sh</code> not just <code>script.sh</code>
+4. <strong>Windows line endings</strong>: Fix with <code>dos2unix script.sh</code></p>
+<p>See <a href="../chapters/13-scripting/">Chapter 13: Shell Scripting</a>.</p>
+<h3 id="how-do-i-find-a-file">How do I find a file?</h3>
+<p>Multiple approaches:
+- <strong>find</strong>: Powerful search by name, size, time: <code>find /home -name "*.txt"</code>
+- <strong>locate</strong>: Fast database search: <code>locate filename</code>
+- <strong>which</strong>: Find commands: <code>which python</code>
+- <strong>whereis</strong>: Find binaries, sources, manuals: <code>whereis bash</code></p>
+<p>See <a href="../chapters/17-compression-search/">Chapter 17: Compression and Search</a>.</p>
+<h3 id="how-do-i-see-whats-using-disk-space">How do I see what's using disk space?</h3>
+<ul>
+<li><code>df -h</code>: Show disk usage for all mounted filesystems</li>
+<li><code>du -sh *</code>: Show size of items in current directory</li>
+<li><code>du -h --max-depth=1 /</code>: Show size of top-level directories</li>
+<li><code>ncdu</code>: Interactive disk usage analyzer (install first)</li>
+</ul>
+<p>See <a href="../chapters/18-storage-perf/">Chapter 18: Storage and Performance</a>.</p>
+<h3 id="why-is-my-process-using-100-cpu">Why is my process using 100% CPU?</h3>
+<p>Use <code>top</code> or <code>htop</code> to identify the process, then:
+- Wait for it to finish (some tasks are legitimately intensive)
+- Use <code>nice</code> or <code>renice</code> to lower priority
+- Kill with <code>kill PID</code> or <code>kill -9 PID</code> (force kill)</p>
+<p>See <a href="../chapters/12-processes/">Chapter 12: Process Management</a>.</p>
+<h3 id="how-do-i-safely-shutdown-my-raspberry-pi">How do I safely shutdown my Raspberry Pi?</h3>
+<p>Never just unplug the power! Use:
+- <code>sudo shutdown now</code> - Immediate shutdown
+- <code>sudo shutdown -h +5</code> - Shutdown in 5 minutes
+- <code>sudo reboot</code> - Restart</p>
+<p>Improper shutdown can corrupt the SD card. See <a href="../chapters/19-raspberry-pi/">Chapter 19</a>.</p>
+<hr />
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="should-i-always-use-sudo">Should I always use sudo?</h3>
+<p>No! Only use sudo when necessary for system administration. Running everything as sudo is dangerous—you could accidentally delete system files. The principle of least privilege: use only the permissions you need. See <a href="../chapters/07-permissions/">Chapter 7</a>.</p>
+<h3 id="how-should-i-organize-my-files">How should I organize my files?</h3>
+<p>Follow the XDG Base Directory standard:
+- <code>~/Documents</code>: Your documents
+- <code>~/Downloads</code>: Downloaded files
+- <code>~/Projects</code>: Your coding projects
+- <code>~/.config</code>: Application configurations</p>
+<p>Create meaningful subdirectories and use clear naming conventions. See <a href="../chapters/04-file-system/">Chapter 4</a>.</p>
+<h3 id="whats-the-best-way-to-backup-my-files">What's the best way to backup my files?</h3>
+<p>Multiple approaches:
+- <strong>rsync</strong>: Efficient incremental backups: <code>rsync -av source/ dest/</code>
+- <strong>tar</strong>: Create compressed archives: <code>tar -czf backup.tar.gz folder/</code>
+- <strong>Git</strong>: Version control for code projects
+- <strong>Automated scripts</strong>: Use cron to schedule backups</p>
+<p>Follow the 3-2-1 rule: 3 copies, 2 different media, 1 offsite. See <a href="../chapters/17-compression-search/">Chapter 17</a>.</p>
+<h3 id="how-do-i-write-clean-shell-scripts">How do I write clean shell scripts?</h3>
+<p>Best practices:
+1. Start with <code>#!/bin/bash</code> shebang
+2. Add comments explaining what the script does
+3. Use meaningful variable names
+4. Quote variables: <code>"$var"</code> not <code>$var</code>
+5. Check command success with exit codes
+6. Use <code>set -e</code> to exit on errors</p>
+<p>See <a href="../chapters/13-scripting/">Chapter 13: Shell Scripting</a>.</p>
+<h3 id="how-do-i-secure-my-linux-system">How do I secure my Linux system?</h3>
+<p>Essential security practices:
+1. Keep system updated: <code>sudo apt update &amp;&amp; sudo apt upgrade</code>
+2. Use strong passwords
+3. Disable root login over SSH
+4. Use SSH keys instead of passwords
+5. Configure firewall (ufw or iptables)
+6. Review running services</p>
+<p>See <a href="../chapters/16-ssh-security/">Chapter 16: SSH and Security</a>.</p>
+<h3 id="when-should-i-use-absolute-vs-relative-paths">When should I use absolute vs relative paths?</h3>
+<ul>
+<li><strong>Absolute paths</strong> (<code>/home/user/file</code>): Use in scripts, cron jobs, and configurations where reliability is essential</li>
+<li><strong>Relative paths</strong> (<code>./file</code> or <code>../folder/file</code>): Use for convenience when working interactively</li>
+</ul>
+<p>Scripts should generally use absolute paths to avoid surprises. See <a href="../chapters/04-file-system/">Chapter 4</a>.</p>
+<h3 id="how-do-i-keep-my-system-clean">How do I keep my system clean?</h3>
+<p>Regular maintenance:
+- <code>apt autoremove</code>: Remove unused packages
+- <code>apt clean</code>: Clear package cache
+- <code>journalctl --vacuum-size=100M</code>: Limit log size
+- Remove old files from ~/Downloads
+- Use <code>du</code> to find space hogs</p>
+<p>See <a href="../chapters/14-package-mgmt/">Chapter 14: Package Management</a>.</p>
+<hr />
+<h2 id="advanced-topics">Advanced Topics</h2>
+<h3 id="what-is-the-difference-between-containers-and-virtual-machines">What is the difference between containers and virtual machines?</h3>
+<p><strong>Virtual machines</strong> run a complete operating system with its own kernel on virtualized hardware—heavy but fully isolated. <strong>Containers</strong> share the host kernel and package only the application with dependencies—lightweight and fast. Docker uses containers; VirtualBox uses VMs. See <a href="../chapters/21-cloud-containers/">Chapter 21</a>.</p>
+<h3 id="what-is-kubernetes">What is Kubernetes?</h3>
+<p><strong>Kubernetes</strong> (K8s) is a container orchestration platform that automates deployment, scaling, and management of containerized applications. It's the industry standard for running containers in production at scale. See <a href="../chapters/21-cloud-containers/">Chapter 21</a>.</p>
+<h3 id="what-is-infrastructure-as-code">What is Infrastructure as Code?</h3>
+<p><strong>Infrastructure as Code (IaC)</strong> means managing servers, networks, and cloud resources through configuration files rather than manual setup. Tools like Terraform and Ansible let you version control your infrastructure and recreate it reliably. See <a href="../chapters/21-cloud-containers/">Chapter 21</a>.</p>
+<h3 id="what-is-devops">What is DevOps?</h3>
+<p><strong>DevOps</strong> combines software development (Dev) and IT operations (Ops) practices to shorten the development lifecycle and deliver software continuously. DevOps engineers use Linux, containers, CI/CD pipelines, and automation tools. It's one of the hottest career paths. See <a href="../chapters/26-careers/">Chapter 26: Careers</a>.</p>
+<h3 id="what-is-the-difference-between-c-and-rust">What is the difference between C and Rust?</h3>
+<p><strong>C</strong> is the original systems programming language that UNIX and Linux are written in—fast but prone to memory errors. <strong>Rust</strong> is a modern alternative offering memory safety without garbage collection. The Linux kernel is gradually adopting Rust for new code. See <a href="../chapters/26-careers/">Chapter 26</a>.</p>
+<h3 id="how-does-linux-run-on-mars">How does Linux run on Mars?</h3>
+<p>NASA's Ingenuity helicopter runs Linux! It uses a radiation-hardened processor running a real-time Linux variant. The Mars 2020 mission chose Linux for its reliability, open-source nature, and extensive testing. Space agencies worldwide trust Linux for critical missions. See <a href="../chapters/26-careers/">Chapter 26</a>.</p>
+<h3 id="what-linux-certifications-should-i-get">What Linux certifications should I get?</h3>
+<p>Popular certifications:
+- <strong>Entry</strong>: CompTIA Linux+, LFCA (Linux Foundation Certified Associate)
+- <strong>Intermediate</strong>: LFCS (Linux Foundation Certified System Administrator), RHCSA
+- <strong>Advanced</strong>: LFCE, RHCE</p>
+<p>Start with hands-on experience, then consider certifications to validate your skills. See <a href="../chapters/26-careers/">Chapter 26</a>.</p>
+<h3 id="what-can-i-build-with-a-raspberry-pi">What can I build with a Raspberry Pi?</h3>
+<p>Endless possibilities:
+- <strong>Web server</strong>: Host websites with Nginx or Apache
+- <strong>Media center</strong>: Stream movies with Plex or Jellyfin
+- <strong>Ad blocker</strong>: Network-wide blocking with Pi-hole
+- <strong>Retro gaming</strong>: Emulate classic consoles with RetroPie
+- <strong>VPN server</strong>: Secure connections with WireGuard
+- <strong>IoT hub</strong>: Control smart home devices
+- <strong>Minecraft server</strong>: Host games for friends</p>
+<p>See <a href="../chapters/25-capstone/">Chapter 25: Capstone Projects</a>.</p>
+<hr />
+<h2 id="about-this-course">About This Course</h2>
+<h3 id="who-created-this-course">Who created this course?</h3>
+<p>This course was developed by Dan McCreary using Claude Code and the intelligent textbook methodology. It combines decades of Linux experience with AI-assisted content generation to create an engaging, comprehensive learning resource.</p>
+<h3 id="can-i-contribute-to-this-course">Can I contribute to this course?</h3>
+<p>Yes! This course is open source. You can:
+- Report issues on GitHub
+- Suggest improvements
+- Contribute examples or exercises
+- Help translate content</p>
+<h3 id="where-can-i-find-additional-resources">Where can I find additional resources?</h3>
+<ul>
+<li><a href="../glossary/">Glossary of Terms</a>: 540 Linux terms defined</li>
+<li><a href="../learning-graph/">Learning Graph</a>: Visual concept map</li>
+<li>Online communities: r/linux, Stack Overflow, Linux forums</li>
+<li>Official documentation: man pages, project wikis</li>
+</ul>
+<h3 id="how-is-this-course-updated">How is this course updated?</h3>
+<p>The course is regularly updated to reflect new Linux developments, community feedback, and new Raspberry Pi hardware. Check the repository for the latest version.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../glossary/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Glossary of Terms">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Glossary of Terms
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../license/" class="md-footer__link md-footer__link--next" aria-label="Next: License">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                License
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../js/extra.js"></script>
+      
+    
+  </body>
+</html>
