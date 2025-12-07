@@ -13,32 +13,84 @@ nav:
 
   - Chapters:
     - Overview: chapters/index.md
-    - 1. Introduction to Operating Systems and UNIX History: chapters/01-unix-history/index.md
-    - 2. Getting Started with the Terminal: chapters/02-terminal-basics/index.md
-    - 3. Basic Shell Commands and Help Systems: chapters/03-shell-commands/index.md
-    - 4. File System Fundamentals: chapters/04-file-system/index.md
-    - 5. File Operations and Manipulation: chapters/05-file-operations/index.md
-    - 6. Advanced File Operations: chapters/06-advanced-files/index.md
-    - 7. File Permissions and Ownership: chapters/07-permissions/index.md
-    - 8. Text Processing with Grep and Regular Expressions: chapters/08-grep-regex/index.md
-    - 9. Advanced Text Processing - Sed, Awk, and Pipes: chapters/09-sed-awk-pipes/index.md
-    - 10. Text Editors - Nano and Vim: chapters/10-text-editors/index.md
-    - 11. Shell Configuration and Environment: chapters/11-shell-config/index.md
-    - 12. Process Management and Job Control: chapters/12-processes/index.md
-    - 13. Shell Scripting and Automation: chapters/13-scripting/index.md
-    - 14. Package Management: chapters/14-package-mgmt/index.md
-    - 15. Networking Fundamentals: chapters/15-networking/index.md
-    - 16. SSH and Remote Access: chapters/16-ssh-security/index.md
-    - 17. Compression, Archives, and File Search: chapters/17-compression-search/index.md
-    - 18. Storage Devices and System Performance: chapters/18-storage-perf/index.md
-    - 19. Introduction to Raspberry Pi: chapters/19-raspberry-pi/index.md
-    - 20. GPIO Programming and Hardware Projects: chapters/20-gpio-iot/index.md
-    - 21. Cloud Computing and Containers: chapters/21-cloud-containers/index.md
-    - 22. Development Tools and Version Control: chapters/22-dev-tools/index.md
-    - 23. System Administration Essentials: chapters/23-sys-admin/index.md
-    - 24. Automation and Fun: chapters/24-automation/index.md
-    - 25. Capstone Projects: chapters/25-capstone/index.md
-    - 26. Linux Careers and the Future: chapters/26-careers/index.md
+    - Chapter 1 - UNIX History:
+      - Content: chapters/01-unix-history/index.md
+      - Quiz: chapters/01-unix-history/quiz.md
+    - Chapter 2 - Terminal Basics:
+      - Content: chapters/02-terminal-basics/index.md
+      - Quiz: chapters/02-terminal-basics/quiz.md
+    - Chapter 3 - Shell Commands:
+      - Content: chapters/03-shell-commands/index.md
+      - Quiz: chapters/03-shell-commands/quiz.md
+    - Chapter 4 - File System:
+      - Content: chapters/04-file-system/index.md
+      - Quiz: chapters/04-file-system/quiz.md
+    - Chapter 5 - File Operations:
+      - Content: chapters/05-file-operations/index.md
+      - Quiz: chapters/05-file-operations/quiz.md
+    - Chapter 6 - Advanced Files:
+      - Content: chapters/06-advanced-files/index.md
+      - Quiz: chapters/06-advanced-files/quiz.md
+    - Chapter 7 - Permissions:
+      - Content: chapters/07-permissions/index.md
+      - Quiz: chapters/07-permissions/quiz.md
+    - Chapter 8 - Grep and Regex:
+      - Content: chapters/08-grep-regex/index.md
+      - Quiz: chapters/08-grep-regex/quiz.md
+    - Chapter 9 - Sed, Awk, Pipes:
+      - Content: chapters/09-sed-awk-pipes/index.md
+      - Quiz: chapters/09-sed-awk-pipes/quiz.md
+    - Chapter 10 - Text Editors:
+      - Content: chapters/10-text-editors/index.md
+      - Quiz: chapters/10-text-editors/quiz.md
+    - Chapter 11 - Shell Config:
+      - Content: chapters/11-shell-config/index.md
+      - Quiz: chapters/11-shell-config/quiz.md
+    - Chapter 12 - Processes:
+      - Content: chapters/12-processes/index.md
+      - Quiz: chapters/12-processes/quiz.md
+    - Chapter 13 - Scripting:
+      - Content: chapters/13-scripting/index.md
+      - Quiz: chapters/13-scripting/quiz.md
+    - Chapter 14 - Package Management:
+      - Content: chapters/14-package-mgmt/index.md
+      - Quiz: chapters/14-package-mgmt/quiz.md
+    - Chapter 15 - Networking:
+      - Content: chapters/15-networking/index.md
+      - Quiz: chapters/15-networking/quiz.md
+    - Chapter 16 - SSH and Security:
+      - Content: chapters/16-ssh-security/index.md
+      - Quiz: chapters/16-ssh-security/quiz.md
+    - Chapter 17 - Compression:
+      - Content: chapters/17-compression-search/index.md
+      - Quiz: chapters/17-compression-search/quiz.md
+    - Chapter 18 - Storage and Performance:
+      - Content: chapters/18-storage-perf/index.md
+      - Quiz: chapters/18-storage-perf/quiz.md
+    - Chapter 19 - Raspberry Pi:
+      - Content: chapters/19-raspberry-pi/index.md
+      - Quiz: chapters/19-raspberry-pi/quiz.md
+    - Chapter 20 - GPIO and IoT:
+      - Content: chapters/20-gpio-iot/index.md
+      - Quiz: chapters/20-gpio-iot/quiz.md
+    - Chapter 21 - Cloud and Containers:
+      - Content: chapters/21-cloud-containers/index.md
+      - Quiz: chapters/21-cloud-containers/quiz.md
+    - Chapter 22 - Dev Tools:
+      - Content: chapters/22-dev-tools/index.md
+      - Quiz: chapters/22-dev-tools/quiz.md
+    - Chapter 23 - Sys Admin:
+      - Content: chapters/23-sys-admin/index.md
+      - Quiz: chapters/23-sys-admin/quiz.md
+    - Chapter 24 - Automation:
+      - Content: chapters/24-automation/index.md
+      - Quiz: chapters/24-automation/quiz.md
+    - Chapter 25 - Capstone:
+      - Content: chapters/25-capstone/index.md
+      - Quiz: chapters/25-capstone/quiz.md
+    - Chapter 26 - Careers:
+      - Content: chapters/26-careers/index.md
+      - Quiz: chapters/26-careers/quiz.md
   
   - Supplementary Content:
     - Low Cost Raspberry Pi: supplementary-content/low-cost-raspberry-pd.md
@@ -57,6 +109,7 @@ nav:
     - Concept Taxonomy: learning-graph/concept-taxonomy.md
     - Quality Metrics: learning-graph/quality-metrics.md
     - Taxonomy Distribution: learning-graph/taxonomy-distribution.md
+    - Quiz Generation Report: learning-graph/quiz-generation-report.md
     - FAQ Quality Report: learning-graph/faq-quality-report.md
     - Glossary Quality Report: learning-graph/glossary-quality-report.md
 

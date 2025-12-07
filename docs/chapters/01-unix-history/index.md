@@ -614,3 +614,45 @@ The journey to becoming a Linux master starts with understanding its roots. You'
     3. GNU's Not Unix
     4. 1991
     5. Ubuntu, Raspberry Pi OS, Linux Mint (any of these!)
+
+## References
+
+1. [History of Unix - Wikipedia](https://en.wikipedia.org/wiki/History_of_Unix) - Comprehensive overview of UNIX development from 1969 to present, covering the key innovations at Bell Labs and subsequent evolution.
+
+2. [Ken Thompson - Wikipedia](https://en.wikipedia.org/wiki/Ken_Thompson) - Biography of UNIX co-creator Ken Thompson, including his work on the B programming language and later contributions to Go.
+
+3. [Dennis M. Ritchie | Biography & Facts | Britannica](https://www.britannica.com/biography/Dennis-M-Ritchie) - Encyclopedia article covering Dennis Ritchie's life and his creation of the C programming language.
+
+4. [Kenneth Thompson & Dennis Ritchie Develop UNIX | History of Information](https://www.historyofinformation.com/detail.php?id=872) - Detailed historical account of UNIX development at Bell Labs in 1969.
+
+5. [A Computing Legend Speaks - Computer History Museum](https://computerhistory.org/blog/a-computing-legend-speaks/) - Interview and insights from Ken Thompson about the early days of computing and UNIX development.
+
+6. [Dennis Ritchie | National Inventors Hall of Fame](https://www.invent.org/inductees/dennis-ritchie) - Recognition of Ritchie's contributions to computing and his induction into the National Inventors Hall of Fame.
+
+7. [Unix | EBSCO Research Starters](https://www.ebsco.com/research-starters/computer-science/unix) - Academic overview of UNIX history, design philosophy, and impact on modern computing.
+
+8. [The Linux Command Line for Beginners | Ubuntu](https://ubuntu.com/tutorials/command-line-for-beginners) - Official Ubuntu tutorial explaining the relationship between UNIX history and modern Linux command line.
+
+9. [Linux Tutorial for Beginners | Ryan's Tutorials](https://ryanstutorials.net/linuxtutorial/) - Comprehensive beginner tutorial covering Linux fundamentals with historical context.
+
+10. [The Bash Guide | Bash Academy](https://guide.bash.academy/) - Introduction to the Bourne Again Shell, connecting GNU project history to practical shell usage.
+
+11. [Filesystem Hierarchy Standard - Wikipedia](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard) - Explanation of how UNIX file system organization continues in modern Linux distributions.
+
+12. [The Linux man-pages project | kernel.org](https://www.kernel.org/doc/man-pages/) - Official Linux kernel documentation project, demonstrating the continuation of UNIX documentation traditions.
+
+13. [GNU Project - Free Software Foundation](https://www.gnu.org/gnu/thegnuproject.html) - Richard Stallman's account of starting the GNU Project and the free software movement.
+
+14. [Linux Foundation](https://www.linuxfoundation.org/) - Official organization supporting Linux development, providing governance and resources for the Linux ecosystem.
+
+15. [The Cathedral and the Bazaar by Eric S. Raymond](http://www.catb.org/~esr/writings/cathedral-bazaar/) - Famous essay on open source development that helped define the Linux community's development model.
+
+16. [What is Linux? | Red Hat](https://www.redhat.com/en/topics/linux/what-is-linux) - Clear explanation of what Linux is and how it evolved from UNIX traditions.
+
+17. [BSD Unix History | FreeBSD](https://www.freebsd.org/doc/en_US.ISO8859-1/articles/explaining-bsd/history.html) - History of BSD UNIX development at UC Berkeley and its modern descendants.
+
+18. [POSIX - Wikipedia](https://en.wikipedia.org/wiki/POSIX) - Explanation of the Portable Operating System Interface standards that ensure UNIX compatibility.
+
+19. [Introduction to Linux | Linux Journey](https://linuxjourney.com/) - Free, beginner-friendly online course covering Linux fundamentals with historical context.
+
+20. [The Art of Unix Programming by Eric S. Raymond](http://www.catb.org/~esr/writings/taoup/html/) - Classic book explaining UNIX philosophy and design principles that continue to influence software development.
