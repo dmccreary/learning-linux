@@ -1,0 +1,187 @@
+{
+  "title": "Linux Timeline - From Hobby to World Domination",
+  "events": [
+    {
+      "start_date": {
+        "year": "1991",
+        "month": "8",
+        "day": "25",
+        "display_date": "August 25, 1991"
+      },
+      "text": {
+        "headline": "Linus Posts First Announcement",
+        "text": "Linus Torvalds, a 21-year-old Finnish computer science student, posts a humble message to the comp.os.minix newsgroup: 'I'm doing a (free) operating system (just a hobby, won't be big and professional like gnu).' This announcement marks the birth of what would become the most widely-deployed operating system in history."
+      },
+      "group": "Community",
+      "notes": "The original post is preserved in internet archives and is considered one of the most significant announcements in computing history."
+    },
+    {
+      "start_date": {
+        "year": "1992",
+        "month": "1",
+        "day": "1",
+        "display_date": "1992"
+      },
+      "text": {
+        "headline": "Linux Adopts GPL License",
+        "text": "Linux adopts the GNU General Public License (GPL), ensuring it will remain free and open source forever. This licensing decision was crucial for Linux's success, as it guaranteed that improvements would be shared with the community and prevented any single entity from taking control."
+      },
+      "group": "Technical",
+      "notes": "The GPL license, created by Richard Stallman, requires that derivative works also be open source, creating a 'copyleft' protection."
+    },
+    {
+      "start_date": {
+        "year": "1993",
+        "month": "1",
+        "day": "1",
+        "display_date": "1993"
+      },
+      "text": {
+        "headline": "First Distributions Appear",
+        "text": "Over 100 developers are now contributing to Linux. The first major distributions appear: Slackware (July) and Debian (August). These distributions package the Linux kernel with GNU tools and other software, making Linux accessible to more users. Ian Murdock founds Debian, which will become the foundation for Ubuntu and many other popular distributions."
+      },
+      "group": "Community",
+      "notes": "Slackware is the oldest distribution still maintained today. Debian's community-driven development model became a template for open source governance."
+    },
+    {
+      "start_date": {
+        "year": "1994",
+        "month": "3",
+        "day": "14",
+        "display_date": "March 14, 1994"
+      },
+      "text": {
+        "headline": "Linux 1.0 Released",
+        "text": "After three years of development, Linux 1.0 is officially released with 176,250 lines of code. This milestone marks Linux as production-ready software. The release includes networking support, making it suitable for server applications that would later drive its widespread adoption."
+      },
+      "group": "Technical",
+      "notes": "Linux 1.0 supported only the Intel 386 architecture. Today, Linux runs on everything from wristwatches to supercomputers."
+    },
+    {
+      "start_date": {
+        "year": "1996",
+        "month": "1",
+        "day": "1",
+        "display_date": "1996"
+      },
+      "text": {
+        "headline": "Tux the Penguin Becomes Mascot",
+        "text": "Tux, the friendly penguin, is adopted as the official Linux mascot. Created by Larry Ewing using GIMP, Tux was chosen after Linus Torvalds mentioned he was once bitten by a penguin at a zoo and had developed 'penguinitis.' The cuddly mascot helped humanize Linux and became an iconic symbol of open source software."
+      },
+      "group": "Community",
+      "notes": "Linus joked that after being bitten by a penguin, he 'just sat there fascinated' and felt a 'strangle attraction' to them."
+    },
+    {
+      "start_date": {
+        "year": "1998",
+        "month": "1",
+        "day": "1",
+        "display_date": "1998"
+      },
+      "text": {
+        "headline": "Major Companies Announce Linux Support",
+        "text": "IBM, Oracle, and other major technology companies announce support for Linux, marking its transition from hobbyist project to enterprise-grade software. IBM would eventually invest over $1 billion in Linux development. This corporate backing provided resources, credibility, and drove Linux adoption in businesses worldwide."
+      },
+      "group": "Commercial",
+      "notes": "IBM's investment in Linux was considered revolutionary at the time, as the company had previously focused on proprietary software and hardware."
+    },
+    {
+      "start_date": {
+        "year": "2000",
+        "month": "1",
+        "day": "1",
+        "display_date": "2000"
+      },
+      "text": {
+        "headline": "Red Hat Becomes $1B Company",
+        "text": "Red Hat becomes the first open source company to reach a $1 billion market capitalization. This proved that businesses could succeed by selling services and support around free software. Red Hat's business model became a template for countless open source companies that followed."
+      },
+      "group": "Commercial",
+      "notes": "Red Hat was later acquired by IBM in 2019 for $34 billion, the largest software acquisition in history at the time."
+    },
+    {
+      "start_date": {
+        "year": "2004",
+        "month": "10",
+        "day": "20",
+        "display_date": "October 20, 2004"
+      },
+      "text": {
+        "headline": "Ubuntu Launches",
+        "text": "Ubuntu 4.10 'Warty Warthog' is released with the tagline 'Linux for human beings.' Founded by Mark Shuttleworth and Canonical, Ubuntu focuses on usability and regular releases. It quickly becomes the most popular desktop Linux distribution and introduces millions of new users to Linux."
+      },
+      "group": "Commercial",
+      "notes": "Ubuntu is based on Debian and the name comes from a South African philosophy meaning 'humanity towards others.'"
+    },
+    {
+      "start_date": {
+        "year": "2008",
+        "month": "9",
+        "day": "23",
+        "display_date": "September 23, 2008"
+      },
+      "text": {
+        "headline": "Android Launches",
+        "text": "Google releases Android, a mobile operating system built on the Linux kernel. The HTC Dream (T-Mobile G1) becomes the first Android smartphone. Android would go on to become the world's most popular mobile operating system, putting Linux in billions of pockets worldwide."
+      },
+      "group": "Mobile/Modern",
+      "notes": "Android now runs on over 3 billion active devices, making it the most widely-used operating system in history."
+    },
+    {
+      "start_date": {
+        "year": "2012",
+        "month": "1",
+        "day": "1",
+        "display_date": "2012"
+      },
+      "text": {
+        "headline": "Linux Dominates Cloud Computing",
+        "text": "Linux becomes the dominant operating system for cloud computing. Amazon Web Services, Google Cloud, and Microsoft Azure all run primarily on Linux. Over 90% of public cloud workloads now run on Linux, cementing its role as the backbone of modern internet infrastructure."
+      },
+      "group": "Mobile/Modern",
+      "notes": "Even Microsoft Azure, created by the company that once called Linux 'a cancer,' now runs more Linux than Windows virtual machines."
+    },
+    {
+      "start_date": {
+        "year": "2015",
+        "month": "1",
+        "day": "1",
+        "display_date": "2015"
+      },
+      "text": {
+        "headline": "Microsoft Says 'We Love Linux'",
+        "text": "In a dramatic reversal, Microsoft CEO Satya Nadella declares 'Microsoft loves Linux.' The company begins contributing to Linux, releases tools for Linux, and eventually ships Windows Subsystem for Linux (WSL), allowing Linux to run inside Windows. This marks the end of decades of hostility."
+      },
+      "group": "Commercial",
+      "notes": "Microsoft's former CEO Steve Ballmer once called Linux 'a cancer.' The company is now one of the largest contributors to open source software."
+    },
+    {
+      "start_date": {
+        "year": "2020",
+        "month": "1",
+        "day": "1",
+        "display_date": "2020"
+      },
+      "text": {
+        "headline": "All Top 500 Supercomputers Run Linux",
+        "text": "For the first time, all 500 of the world's most powerful supercomputers run Linux. From scientific research to weather prediction to AI development, the most demanding computing tasks on Earth rely on Linux. This represents the ultimate validation of Linux's performance, reliability, and scalability."
+      },
+      "group": "Technical",
+      "notes": "The TOP500 list has tracked supercomputers since 1993. Linux first appeared on the list in 1998 and steadily grew to complete dominance."
+    },
+    {
+      "start_date": {
+        "year": "2025",
+        "month": "1",
+        "day": "1",
+        "display_date": "2025"
+      },
+      "text": {
+        "headline": "Linux Is Everywhere",
+        "text": "Linux powers the world's infrastructure: 96% of top web servers, all top supercomputers, most smartphones (via Android), smart TVs, cars, IoT devices, space stations, and more. What started as a student's hobby project has become the foundation of modern computing."
+      },
+      "group": "Mobile/Modern",
+      "notes": "The Linux kernel now has over 30 million lines of code and contributions from thousands of developers worldwide."
+    }
+  ]
+}

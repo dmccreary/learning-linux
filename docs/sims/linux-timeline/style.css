@@ -1,0 +1,245 @@
+/* Linux Timeline - From Hobby to World Domination */
+/* vis-timeline based interactive timeline */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: aliceblue;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* Category Filter Controls */
+.filter-controls {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.filter-controls span {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    margin: 3px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.filter-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.filter-btn.all { background: #34495e; }
+.filter-btn.community { background: #27ae60; }
+.filter-btn.technical { background: #3498db; }
+.filter-btn.commercial { background: #e67e22; }
+.filter-btn.modern { background: #9b59b6; }
+
+/* Timeline Container */
+#timeline {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* Instructions */
+.instructions {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* Info Panel */
+.info-panel {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Legend */
+.legend h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.legend-color.community { background: #27ae60; }
+.legend-color.technical { background: #3498db; }
+.legend-color.commercial { background: #e67e22; }
+.legend-color.modern { background: #9b59b6; }
+
+.legend-label {
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+/* Event Details Panel */
+.event-details h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.event-details .placeholder {
+    color: #95a5a6;
+    font-style: italic;
+}
+
+.event-details .event-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.event-details .event-date {
+    color: #7f8c8d;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.event-details .event-description {
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.event-details .event-context {
+    background: #f8f9fa;
+    padding: 10px;
+    border-left: 3px solid #3498db;
+    font-size: 0.9rem;
+    color: #5d6d7e;
+    font-style: italic;
+}
+
+/* vis-timeline Customization */
+.vis-timeline {
+    border: none !important;
+}
+
+.vis-item {
+    border-radius: 4px !important;
+    border: none !important;
+    font-size: 12px !important;
+}
+
+.vis-item.vis-selected {
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5) !important;
+}
+
+.vis-item .vis-item-content {
+    padding: 5px 10px !important;
+    color: white !important;
+    font-weight: 500 !important;
+}
+
+/* Tooltip Styling - Critical for text wrapping */
+.vis-tooltip {
+    background: #2c3e50 !important;
+    color: white !important;
+    padding: 10px 15px !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    max-width: 300px !important;
+    line-height: 1.4 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    box-sizing: border-box !important;
+    border: none !important;
+}
+
+.vis-tooltip div {
+    max-width: 280px !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+}
+
+/* Timeline axis */
+.vis-time-axis .vis-text {
+    color: #2c3e50 !important;
+    font-size: 12px !important;
+}
+
+.vis-time-axis .vis-grid.vis-minor {
+    border-color: #ecf0f1 !important;
+}
+
+.vis-time-axis .vis-grid.vis-major {
+    border-color: #bdc3c7 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .info-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Timeline - From Hobby to World Domination</title>
+
+    <!-- vis-timeline CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis-timeline/7.7.3/vis-timeline-graph2d.min.css" rel="stylesheet">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Linux Timeline - From Hobby to World Domination</h1>
+        <p class="subtitle">1991 - 2025: From a student's hobby project to powering the world</p>
+
+        <!-- Category Filter Controls -->
+        <div class="filter-controls">
+            <span>Filter by:</span>
+            <button class="filter-btn all" onclick="filterCategory('all')">All Events</button>
+            <button class="filter-btn community" onclick="filterCategory('Community')">Community</button>
+            <button class="filter-btn technical" onclick="filterCategory('Technical')">Technical</button>
+            <button class="filter-btn commercial" onclick="filterCategory('Commercial')">Commercial</button>
+            <button class="filter-btn modern" onclick="filterCategory('Mobile/Modern')">Mobile/Modern</button>
+        </div>
+
+        <!-- Timeline Container -->
+        <div id="timeline"></div>
+
+        <!-- Instructions -->
+        <p class="instructions">
+            Scroll to zoom | Click and drag to pan | Click an event for details | Hover for context
+        </p>
+
+        <!-- Info Panel -->
+        <div class="info-panel">
+            <!-- Legend -->
+            <div class="legend">
+                <h3>Categories</h3>
+                <div class="legend-item">
+                    <div class="legend-color community"></div>
+                    <span class="legend-label">Community Milestones</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color technical"></div>
+                    <span class="legend-label">Technical Releases</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color commercial"></div>
+                    <span class="legend-label">Commercial Adoption</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color modern"></div>
+                    <span class="legend-label">Mobile/Modern Era</span>
+                </div>
+            </div>
+
+            <!-- Event Details -->
+            <div class="event-details">
+                <h3>Event Details</h3>
+                <div id="eventContent">
+                    <p class="placeholder">Click on an event to see details here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- vis-timeline JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-timeline/7.7.3/vis-timeline-graph2d.min.js"></script>
+
+    <script>
+        // Category colors
+        const categoryColors = {
+            'Community': '#27ae60',
+            'Technical': '#3498db',
+            'Commercial': '#e67e22',
+            'Mobile/Modern': '#9b59b6'
+        };
+
+        // Store all items for filtering
+        let allItems = [];
+        let timelineData;
+        let timeline;
+
+        // Load timeline data
+        fetch('timeline.json')
+            .then(response => response.json())
+            .then(data => {
+                initTimeline(data);
+            })
+            .catch(error => {
+                console.error('Error loading timeline data:', error);
+                document.getElementById('timeline').innerHTML =
+                    '<p style="padding: 20px; color: red;">Error loading timeline data. Please check the console.</p>';
+            });
+
+        function initTimeline(data) {
+            // Convert events to vis-timeline format
+            allItems = data.events.map((event, index) => {
+                const year = parseInt(event.start_date.year);
+                const month = parseInt(event.start_date.month || 1) - 1;
+                const day = parseInt(event.start_date.day || 1);
+
+                const category = event.group || 'Other';
+                const color = categoryColors[category] || '#95a5a6';
+
+                return {
+                    id: index,
+                    content: event.text.headline,
+                    start: new Date(year, month, day),
+                    title: `<div style="max-width: 280px; word-wrap: break-word; overflow-wrap: break-word; white-space: normal;">${event.notes || event.text.text}</div>`,
+                    style: `background-color: ${color}; border-color: ${color};`,
+                    category: category,
+                    displayDate: event.start_date.display_date || `${year}`,
+                    description: event.text.text,
+                    notes: event.notes
+                };
+            });
+
+            // Create dataset
+            timelineData = new vis.DataSet(allItems);
+
+            // Timeline options
+            const options = {
+                width: '100%',
+                height: '400px',
+                margin: { item: 20, axis: 40 },
+                orientation: 'top',
+                zoomMin: 1000 * 60 * 60 * 24 * 365 * 5,    // 5 years minimum zoom
+                zoomMax: 1000 * 60 * 60 * 24 * 365 * 50,   // 50 years maximum zoom
+                min: new Date(1989, 0, 1),   // Allow panning back to 1989
+                max: new Date(2027, 0, 1),   // Allow panning to 2027
+                tooltip: {
+                    followMouse: true
+                },
+                stack: true,
+                selectable: true,
+                showCurrentTime: false,
+                moveable: true,
+                zoomable: true
+            };
+
+            // Create timeline
+            const container = document.getElementById('timeline');
+            timeline = new vis.Timeline(container, timelineData, options);
+
+            // Event click handler
+            timeline.on('select', function(properties) {
+                if (properties.items.length > 0) {
+                    showEventDetails(properties.items[0]);
+                }
+            });
+
+            // Fit timeline to show all events
+            timeline.fit();
+        }
+
+        function showEventDetails(itemId) {
+            const item = allItems.find(i => i.id === itemId);
+            if (!item) return;
+
+            const categoryColor = categoryColors[item.category] || '#95a5a6';
+
+            let html = `
+                <div class="event-title" style="border-left: 4px solid ${categoryColor}; padding-left: 10px;">
+                    ${item.content}
+                </div>
+                <div class="event-date">${item.displayDate}</div>
+                <div class="event-description">${item.description}</div>
+            `;
+
+            if (item.notes) {
+                html += `<div class="event-context">${item.notes}</div>`;
+            }
+
+            document.getElementById('eventContent').innerHTML = html;
+        }
+
+        function filterCategory(category) {
+            if (category === 'all') {
+                timelineData.clear();
+                timelineData.add(allItems);
+            } else {
+                const filtered = allItems.filter(item => item.category === category);
+                timelineData.clear();
+                timelineData.add(filtered);
+            }
+            timeline.fit();
+        }
+    </script>
+</body>
+</html>
