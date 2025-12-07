@@ -57,6 +57,18 @@ This chapter builds on concepts from:
 
 ---
 
+## The "BOF" Story
+
+Early in my career I managed a small group of about 14 engineers.  Our team
+shared a file systems that was always running out of space and causing problems.
+We were spending a large part of our team meetings trying to manage the disk space.
+One day I got tiered of all the drama and sat down and wrote a program that
+created a Big-old-file scorecard.  It didn't just find the largest files or
+the oldest files.  It created a weighted score that combined these two
+numbers.  Our meetings were much more productive and we could then
+automate the process of automatically deleting big old files on
+a regular basis.
+
 ## Find It and Squeeze It!
 
 Ever wondered how to find that one config file you edited three weeks ago somewhere in your home directory? Or how you can send a 500MB folder as a 50MB attachment? This chapter has you covered!
