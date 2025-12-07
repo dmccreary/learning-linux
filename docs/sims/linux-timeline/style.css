@@ -102,6 +102,19 @@ h1 {
     font-weight: normal;
 }
 
+/* =============================================================================
+   EDGE CLIPPING PREVENTION - CSS Solutions (Part 3 of 3)
+   =============================================================================
+   Problem: vis-timeline clips event boxes when they extend beyond the visible
+   date range. This happens because:
+   1. The timeline container has overflow:hidden by default
+   2. Internal vis-timeline panels clip content at their boundaries
+   3. Event boxes near edges get cut off
+
+   Solution: A three-part approach combining CSS container padding and
+   overflow overrides with JavaScript window padding (see main.html).
+   ============================================================================= */
+
 /* Timeline Container */
 #timeline {
     background: white;
@@ -109,11 +122,17 @@ h1 {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     margin-bottom: 20px;
     overflow: hidden;
+    /* EDGE CLIPPING FIX: Add internal padding so event boxes near the edges
+       have room to render without being clipped by the container boundary.
+       This works together with the 2-year window padding in JavaScript. */
     padding-left: 80px;
     padding-right: 80px;
 }
 
-/* Allow items to extend beyond container edges */
+/* EDGE CLIPPING FIX: Override vis-timeline's default overflow:hidden behavior.
+   By default, vis-timeline clips content that extends beyond its boundaries.
+   These overrides allow event boxes to visually extend beyond the timeline's
+   calculated edges while still being contained within our padded #timeline div. */
 .vis-timeline {
     overflow: visible !important;
 }

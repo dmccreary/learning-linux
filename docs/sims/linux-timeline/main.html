@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linux Timeline - From Hobby to World Domination</title>
 
-    <!-- vis-timeline CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis-timeline/7.7.3/vis-timeline-graph2d.min.css" rel="stylesheet">
+    <!-- vis-timeline CSS (standalone build - the old graph2d build is deprecated) -->
+    <link href="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.css" rel="stylesheet">
 
     <!-- External Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -76,8 +76,8 @@
         </div>
     </div>
 
-    <!-- vis-timeline JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-timeline/7.7.3/vis-timeline-graph2d.min.js"></script>
+    <!-- vis-timeline JavaScript (standalone build - the old graph2d build is deprecated) -->
+    <script src="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js"></script>
 
     <script>
         // Category colors
@@ -137,6 +137,17 @@
             timelineData = new vis.DataSet(allItems);
 
             // Timeline options
+            // =========================================================================
+            // EDGE CLIPPING PREVENTION - JavaScript Configuration
+            // =========================================================================
+            // Problem: vis-timeline clips event boxes when they extend beyond the
+            // visible date range, especially for events near the left/right edges.
+            //
+            // Solution (Part 1 of 3): Configure margins and alignment options
+            // - margin.item.horizontal: Adds 50px buffer around each item
+            // - align: 'center': Centers items on their date point so text extends
+            //   equally in both directions, reducing edge overflow
+            // =========================================================================
             const options = {
                 width: '100%',
                 height: '400px',
@@ -171,7 +182,17 @@
                 }
             });
 
-            // Manually set window with padding instead of using fit()
+            // =========================================================================
+            // EDGE CLIPPING PREVENTION - Window Padding (Part 2 of 3)
+            // =========================================================================
+            // Problem: Using timeline.fit() sets the window exactly to the data range,
+            // causing the first and last events to be positioned at the very edge
+            // where their text boxes get clipped.
+            //
+            // Solution: Manually set the visible window with 2-year padding on each
+            // side instead of using fit(). This ensures edge events have room to
+            // render their full text boxes without clipping.
+            // =========================================================================
             const twoYears = 2 * 365 * 24 * 60 * 60 * 1000;
             timeline.setWindow(
                 new Date(minDate - twoYears),
@@ -229,7 +250,12 @@
             timelineData.clear();
             timelineData.add(itemsToShow);
 
-            // Manually set window with padding instead of using fit()
+            // =========================================================================
+            // EDGE CLIPPING PREVENTION - Filter Window Padding
+            // =========================================================================
+            // When filtering by category, we must also apply the 2-year padding
+            // to prevent edge clipping on the filtered subset of events.
+            // =========================================================================
             if (itemsToShow.length > 0) {
                 const dates = itemsToShow.map(item => item.start.getTime());
                 const minDate = Math.min(...dates);
