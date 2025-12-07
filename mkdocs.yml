@@ -61,7 +61,7 @@ nav:
     - 16. SSH and Security:
       - Content: chapters/16-ssh-security/index.md
       - Quiz: chapters/16-ssh-security/quiz.md
-    - 17. Compression:
+    - 17. Find and Compress:
       - Content: chapters/17-compression-search/index.md
       - Quiz: chapters/17-compression-search/quiz.md
     - 18. Storage and Performance:
