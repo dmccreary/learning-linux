@@ -1045,3 +1045,26 @@ Time to stop just looking at files and start manipulating them!
     3. `cd ~` or just `cd` with no arguments
     4. `/etc` contains configuration files; `/tmp` contains temporary files that may be deleted on reboot
     5. `ls -a` (the -a flag shows all files including hidden)
+
+## References
+
+1. [Linux Filesystem Hierarchy Standard (FHS) Official Documentation](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html) - The official specification defining the directory structure and contents of Linux systems.
+2. [Understanding the Linux File System](https://www.linuxfoundation.org/blog/blog/classic-sysadmin-the-linux-filesystem-explained) - Linux Foundation's comprehensive guide to the filesystem hierarchy.
+3. [Linux File System Tree Overview](https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/index.html) - The Linux Documentation Project's detailed breakdown of each directory and its purpose.
+4. [Filesystem Hierarchy Standard on Wikipedia](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard) - Historical context and overview of FHS development and adoption.
+5. [Linux Directory Structure Explained](https://www.geeksforgeeks.org/linux-directory-structure/) - GeeksforGeeks tutorial with clear explanations and visual diagrams of the directory tree.
+6. [Understanding Linux File System: A Complete Guide](https://www.linuxize.com/post/linux-directory-structure/) - Linuxize's beginner-friendly guide to navigating and understanding the filesystem.
+7. [The Linux File System Explained](https://www.howtogeek.com/117435/htg-explains-the-linux-directory-structure-explained/) - How-To Geek's accessible explanation of why Linux organizes files differently than Windows.
+8. [Absolute vs Relative Paths Explained](https://www.redhat.com/sysadmin/linux-path-absolute-relative) - Red Hat's guide to understanding and using different path types effectively.
+9. [Working with Directories in Linux](https://www.digitalocean.com/community/tutorials/how-to-use-cd-pwd-and-ls-to-explore-the-file-system-on-a-linux-server) - DigitalOcean tutorial on essential navigation commands.
+10. [Hidden Files and Dotfiles in Linux](https://www.cyberciti.biz/faq/linux-show-hidden-files-command/) - nixCraft's guide to working with hidden configuration files.
+11. [Using the Tree Command](https://www.tecmint.com/linux-tree-command-examples/) - TecMint's comprehensive tutorial on visualizing directory structures.
+12. [Linux File Command Tutorial](https://www.howtoforge.com/linux-file-command/) - HowtoForge guide to identifying file types regardless of extensions.
+13. [Understanding File Timestamps](https://www.unixtutorial.org/atime-ctime-mtime-in-unix-filesystems/) - Unix Tutorial's explanation of access, modification, and change times.
+14. [Ryan's Tutorials: Linux File System](https://ryanstutorials.net/linuxtutorial/navigation.php) - Beginner-friendly interactive tutorial on file system navigation.
+15. [Linux Journey: The Filesystem](https://linuxjourney.com/lesson/filesystem-hierarchy) - Interactive lessons on exploring and understanding the Linux filesystem.
+16. [The /proc Filesystem Explained](https://www.kernel.org/doc/html/latest/filesystems/proc.html) - Official kernel documentation on the virtual /proc filesystem.
+17. [Understanding /dev Directory](https://www.linux.com/training-tutorials/understanding-dev-directory/) - Linux.com's guide to device files and their purposes.
+18. [Ubuntu File System Organization](https://help.ubuntu.com/community/LinuxFilesystemTreeOverview) - Ubuntu community documentation on filesystem layout.
+19. [Stat Command Examples](https://www.geeksforgeeks.org/stat-command-in-linux-with-examples/) - GeeksforGeeks tutorial on viewing detailed file metadata.
+20. [Home Directory Best Practices](https://opensource.com/article/19/7/home-directory-linux) - Opensource.com article on organizing your personal Linux workspace.

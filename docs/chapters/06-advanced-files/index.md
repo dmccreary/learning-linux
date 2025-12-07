@@ -775,3 +775,26 @@ Now that you understand advanced file operations, it's time to learn about **per
     5. Brace expansion generates all combinations whether files exist or not. Bracket expressions only match existing files with that character in that position.
     6. atime (access), mtime (modification), ctime (change/metadata)
 
+## References
+
+1. [Understanding Linux Symbolic Links](https://www.redhat.com/sysadmin/linking-linux-explained) - Red Hat's comprehensive guide to symbolic and hard links with visual examples.
+2. [Hard Links vs Soft Links Explained](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/) - Linuxize tutorial on creating and managing different types of links.
+3. [Inodes and Links in Linux](https://www.grymoire.com/Unix/Inodes.html) - Grymoire's deep dive into how inodes work and why hard links behave differently.
+4. [Bash Wildcards and Globbing](https://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x11655.htm) - The Linux Documentation Project's guide to pattern matching.
+5. [File Globbing Patterns Explained](https://www.linuxjournal.com/content/bash-extended-globbing) - Linux Journal article on advanced globbing techniques.
+6. [Wildcards in Linux Commands](https://www.tecmint.com/use-wildcards-to-match-filenames-in-linux/) - TecMint's practical guide to using wildcards effectively.
+7. [Brace Expansion in Bash](https://www.gnu.org/software/bash/manual/html_node/Brace-Expansion.html) - GNU Bash manual section on brace expansion syntax and usage.
+8. [POSIX Character Classes](https://www.regular-expressions.info/posixbrackets.html) - Regular-Expressions.info guide to character classes in bracket expressions.
+9. [Understanding File Timestamps](https://linuxize.com/post/linux-touch-command/) - Linuxize explanation of atime, mtime, and ctime with modification examples.
+10. [File Attributes with lsattr and chattr](https://www.thegeekstuff.com/2009/02/3-linux-lsattr-chattr-command-examples/) - TheGeekStuff tutorial on extended file attributes.
+11. [Immutable Files in Linux](https://www.cyberciti.biz/tips/linux-password-trick.html) - nixCraft guide to using the immutable attribute for protection.
+12. [Bracket Expressions Tutorial](https://www.gnu.org/software/grep/manual/html_node/Character-Classes-and-Bracket-Expressions.html) - GNU grep manual on character classes and bracket syntax.
+13. [Tilde Expansion Explained](https://www.gnu.org/software/bash/manual/html_node/Tilde-Expansion.html) - Bash manual section on tilde expansion for home directories.
+14. [Working with Find Command](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/) - GeeksforGeeks comprehensive guide to finding files by various attributes.
+15. [Stat Command Deep Dive](https://man7.org/linux/man-pages/man1/stat.1.html) - Linux man page for stat with detailed timestamp explanations.
+16. [Symbolic Link Best Practices](https://opensource.com/article/19/8/understanding-file-paths-linux) - Opensource.com article on when and how to use symbolic links effectively.
+17. [Glob Patterns Cheat Sheet](https://www.linuxtrainingacademy.com/linux-wildcards/) - Linux Training Academy's quick reference for globbing patterns.
+18. [Advanced Ln Command Usage](https://www.computerhope.com/unix/uln.htm) - Computer Hope's reference for the ln command with all options.
+19. [Filesystem Metadata Overview](https://ext4.wiki.kernel.org/index.php/Ext4_Disk_Layout) - Kernel.org wiki explaining how filesystems store metadata including timestamps.
+20. [Pattern Matching in Shell Scripts](https://mywiki.wooledge.org/glob) - BashGuide wiki on glob patterns and their uses in scripting.
+

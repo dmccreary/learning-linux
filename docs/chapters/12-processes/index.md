@@ -991,3 +991,26 @@ Now that you understand processes, it's time to automate them! The next chapter 
     4. A process that has finished but whose exit status hasn't been collected by its parent
     5. Use the `renice` command (e.g., `renice 10 -p PID`)
     6. `htop`
+
+## References
+
+1. [Linux Process Management Guide](https://www.kernel.org/doc/html/latest/admin-guide/processes.html) - Official Linux kernel documentation on process scheduling and management.
+2. [Understanding Linux Processes](https://www.digitalocean.com/community/tutorials/process-management-in-linux) - DigitalOcean tutorial covering process basics, states, and control.
+3. [The ps Command Explained](https://www.tecmint.com/ps-command-examples-for-linux-process-monitoring/) - TecMint comprehensive guide to ps options and output format.
+4. [Top Command Tutorial](https://www.booleanworld.com/guide-linux-top-command/) - Detailed guide to using top for real-time process monitoring.
+5. [Htop Explained - Visual Guide](https://www.deonsworld.co.za/2012/12/20/understanding-and-using-htop-monitor-system-resources/) - Tutorial explaining htop's color codes, meters, and interactive features.
+6. [Linux Signals Explained](https://www.tutorialspoint.com/unix/unix-signals-traps.htm) - TutorialsPoint guide to understanding Unix/Linux signals and their purposes.
+7. [Process Priority and Nice Values](https://www.nixcraft.com/t/what-is-nice-value-and-priority-in-linux/3884) - NixCraft explanation of process scheduling priorities.
+8. [Understanding Zombie Processes](https://www.howtogeek.com/119815/htg-explains-what-is-a-zombie-process-on-linux/) - HowToGeek article on zombie processes and how to handle them.
+9. [Job Control in Bash](https://www.gnu.org/software/bash/manual/html_node/Job-Control.html) - GNU Bash manual chapter on foreground, background, and job management.
+10. [Kill Command with Examples](https://linuxize.com/post/kill-command-in-linux/) - Linuxize tutorial on sending signals to processes using kill.
+11. [pgrep and pkill Tutorial](https://www.geeksforgeeks.org/pgrep-and-pkill-commands-in-linux/) - GeeksforGeeks guide to finding and killing processes by name.
+12. [Nohup Command Explained](https://www.computerhope.com/unix/unohup.htm) - Computer Hope reference on running processes that survive logout.
+13. [Process States Visualization](https://www.baeldung.com/linux/process-states) - Baeldung article with diagrams showing different process states.
+14. [Parent and Child Processes](https://www.thegeekstuff.com/2012/03/linux-processes-environment/) - TheGeekStuff tutorial on process hierarchy and relationships.
+15. [System Load Average Explained](https://www.brendangregg.com/blog/2017-08-08/linux-load-averages.html) - Brendan Gregg's deep dive into understanding load average numbers.
+16. [CPU Temperature Monitoring Tools](https://www.tecmint.com/monitor-linux-cpu-temperature/) - TecMint guide to tools like sensors, lm-sensors for hardware monitoring.
+17. [Process Management Commands Cheat Sheet](https://www.linuxtrainingacademy.com/linux-process-management-commands/) - Linux Training Academy quick reference for process commands.
+18. [Real-Time Process Monitoring](https://www.redhat.com/sysadmin/htop-better-top) - Red Hat article comparing top and htop for system administrators.
+19. [Understanding /proc Filesystem](https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html) - The Linux Documentation Project guide to /proc for process information.
+20. [Advanced Process Management](https://www.oreilly.com/library/view/linux-system-programming/9781449341527/) - O'Reilly book chapter on process creation, scheduling, and inter-process communication.

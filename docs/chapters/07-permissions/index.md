@@ -985,3 +985,26 @@ Now that you understand who can access files and what they can do, it's time to 
     5. `chmod 600 file` or `chmod u=rw,go= file`
     6. Sets default permissions so new files are 640 (rw-r-----) and directories are 750 (rwxr-x---)
 
+## References
+
+1. [Understanding Linux File Permissions](https://www.redhat.com/sysadmin/linux-file-permissions-explained) - Red Hat's comprehensive guide to the permission system with visual diagrams.
+2. [Chmod Command Tutorial](https://linuxize.com/post/chmod-command-in-linux/) - Linuxize's detailed tutorial on changing permissions with symbolic and numeric modes.
+3. [Linux Permissions Explained](https://www.guru99.com/file-permissions.html) - Guru99's beginner-friendly guide with screenshots and examples.
+4. [Chown and Chgrp Commands](https://www.tecmint.com/chown-command-examples/) - TecMint tutorial on changing file ownership and groups.
+5. [Understanding Umask](https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html) - nixCraft's explanation of default permission calculation with umask.
+6. [Sudo Command Best Practices](https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file) - DigitalOcean guide to using sudo safely and configuring sudoers.
+7. [Linux Users and Groups](https://www.linode.com/docs/guides/linux-users-and-groups/) - Linode's guide to user account management and group membership.
+8. [Special Permissions: Setuid, Setgid, Sticky Bit](https://www.thegeekstuff.com/2013/02/sticky-bit/) - TheGeekStuff explanation of special permission bits with examples.
+9. [Permission Denied Troubleshooting](https://www.howtogeek.com/437958/how-to-use-the-chmod-command-on-linux/) - How-To Geek's guide to fixing permission problems.
+10. [Understanding Root User](https://www.linux.com/training-tutorials/understanding-root-account-linux/) - Linux.com article on the superuser account and when to use it.
+11. [Numeric Permissions Calculator](https://chmodcommand.com/) - Interactive web tool for understanding and calculating numeric permission values.
+12. [Linux Groups Explained](https://www.redhat.com/sysadmin/manage-groups-linux) - Red Hat guide to creating and managing user groups.
+13. [File Ownership and Permissions](https://wiki.archlinux.org/title/File_permissions_and_attributes) - Arch Linux wiki's comprehensive reference on permissions and attributes.
+14. [Sudo vs Su Explained](https://www.makeuseof.com/sudo-vs-su/) - MakeUseOf comparison of the two privilege escalation methods.
+15. [ACLs: Advanced Permissions](https://www.redhat.com/sysadmin/linux-access-control-lists) - Red Hat guide to Access Control Lists for fine-grained permissions.
+16. [Password and Shadow Files](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/) - nixCraft explanation of user account information storage.
+17. [Sticky Bit in Practice](https://www.geeksforgeeks.org/sticky-bit-in-linux/) - GeeksforGeeks guide to the sticky bit with /tmp directory examples.
+18. [Permission Security Best Practices](https://www.tecmint.com/rhcsa-exam-reviewing-essential-commands-system-documentation/) - TecMint article on secure permission configuration.
+19. [Understanding POSIX Permissions](https://en.wikipedia.org/wiki/File-system_permissions#POSIX_permissions) - Wikipedia overview of the POSIX permission model.
+20. [Setuid and Security Implications](https://www.redhat.com/sysadmin/suid-sgid-sticky-bit) - Red Hat guide to understanding security risks of special permission bits.
+

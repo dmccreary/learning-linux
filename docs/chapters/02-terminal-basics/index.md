@@ -995,3 +995,45 @@ The terminal is your spaceship, and you've just learned the controls. Time to ex
     3. Press Up Arrow and Enter, or type `!!` and Enter
     4. Cancels/kills the current command
     5. `-la` is the option(s), `/home` is the argument
+
+## References
+
+1. [The Linux Command Line for Beginners | Ubuntu](https://ubuntu.com/tutorials/command-line-for-beginners) - Official Ubuntu tutorial covering command line basics, shell history, and terminal navigation.
+
+2. [Linux Tutorial for Beginners | Ryan's Tutorials](https://ryanstutorials.net/linuxtutorial/) - Comprehensive 13-part tutorial with clear explanations of Bash commands and concepts.
+
+3. [The Bash Guide | Bash Academy](https://guide.bash.academy/) - Introduction to Bash shell concepts for both newcomers and experienced users.
+
+4. [Bash Scripting Tutorial | freeCodeCamp](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/) - Beginner-friendly guide to terminal commands, shell basics, and scripting fundamentals.
+
+5. [Introduction to Linux Shell and Shell Scripting | GeeksforGeeks](https://www.geeksforgeeks.org/linux-unix/introduction-linux-shell-shell-scripting/) - Clear explanation of what shells are and how they work in Linux.
+
+6. [Bash Scripting Tutorial for Beginners | It's FOSS](https://itsfoss.com/bash-scripting-tutorial/) - Updated tutorial covering Bash basics with practical examples.
+
+7. [Bash Scripting Course | Linux Handbook](https://linuxhandbook.com/courses/bash/) - Structured course with practice exercises for learning shell commands.
+
+8. [Bash Scripting Tutorial | Hostinger](https://www.hostinger.com/tutorials/bash-scripting-tutorial) - Step-by-step guide to Bash fundamentals and automation basics.
+
+9. [GNU Bash Manual](https://www.gnu.org/software/bash/manual/) - Official reference documentation for the Bash shell.
+
+10. [Zsh Documentation](https://zsh.sourceforge.io/Doc/) - Official documentation for the Z shell, covering advanced features and customization.
+
+11. [Oh My Zsh](https://ohmyz.sh/) - Popular framework for managing Zsh configuration with themes and plugins.
+
+12. [explainshell.com](https://explainshell.com/) - Interactive tool that explains shell commands by matching each argument to its help text.
+
+13. [ShellCheck](https://www.shellcheck.net/) - Online tool for finding bugs in shell scripts, excellent for learning proper syntax.
+
+14. [TLDR Pages](https://tldr.sh/) - Simplified, community-driven man pages with practical examples.
+
+15. [Readline Library Documentation](https://tiswww.case.edu/php/chet/readline/readline.html) - Documentation for the library that powers Bash keyboard shortcuts.
+
+16. [Terminal Emulator Comparison | ArchWiki](https://wiki.archlinux.org/title/List_of_applications#Terminal_emulators) - Comprehensive list of terminal emulators for Linux.
+
+17. [Bash Keyboard Shortcuts | ss64.com](https://ss64.com/bash/syntax-keyboard.html) - Reference for Ctrl key shortcuts and command-line editing.
+
+18. [Command Line Crash Course | Learn Enough](https://www.learnenough.com/command-line-tutorial) - Free tutorial covering command line fundamentals from scratch.
+
+19. [Linux Command Library](https://linuxcommandlibrary.com/) - Searchable database of Linux commands with examples and explanations.
+
+20. [Bash Reference Manual | GNU](https://www.gnu.org/software/bash/manual/bash.html) - Complete reference for Bash syntax, built-ins, and features.

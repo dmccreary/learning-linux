@@ -963,3 +963,26 @@ Now that you can process text like a pro, it's time to learn about **text editor
     5. tee sends output to BOTH a file AND stdout (continues the pipeline)
     6. `sed -i 's/old/new/g' file` - the -i flag edits in place
 
+## References
+
+1. [GNU sed Manual](https://www.gnu.org/software/sed/manual/) - Official documentation for sed stream editor with comprehensive examples and advanced features.
+2. [GNU awk Manual](https://www.gnu.org/software/gawk/manual/) - Complete reference for awk programming language including patterns, actions, and built-in functions.
+3. [The UNIX Philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) - Wikipedia article explaining the design principles behind small, composable UNIX tools.
+4. [Sed - An Introduction and Tutorial by Bruce Barnett](https://www.grymoire.com/Unix/Sed.html) - Comprehensive sed tutorial covering basic to advanced usage with practical examples.
+5. [Awk - A Tutorial and Introduction by Bruce Barnett](https://www.grymoire.com/Unix/Awk.html) - Detailed awk tutorial explaining field processing, patterns, and programming constructs.
+6. [Linux Pipes and Redirection Tutorial](https://www.guru99.com/linux-redirection.html) - Educational guide to understanding stdin, stdout, stderr, and redirection operators.
+7. [Advanced Bash-Scripting Guide: I/O Redirection](https://tldp.org/LDP/abs/html/io-redirection.html) - In-depth coverage of redirection techniques and file descriptors.
+8. [Text Processing Commands - Linux Journey](https://linuxjourney.com/lesson/regex-regular-expressions) - Beginner-friendly introduction to text processing tools and regular expressions.
+9. [Sed and Awk 101 Hacks eBook](https://www.thegeekstuff.com/ebooks/sed_awk_101_hacks/) - Practical examples and tips for sed and awk mastery.
+10. [Understanding Linux File Descriptors](https://www.digitalocean.com/community/tutorials/understanding-linux-file-descriptors) - Explains stdin (0), stdout (1), and stderr (2) in detail.
+11. [Xargs Tutorial with Examples](https://www.tecmint.com/xargs-command-examples/) - TecMint guide showing how to use xargs for batch operations.
+12. [The Tee Command Explained](https://linuxize.com/post/linux-tee-command/) - Tutorial on using tee for splitting output to files and pipelines.
+13. [Tr Command Tutorial](https://www.geeksforgeeks.org/tr-command-in-unix-linux-with-examples/) - GeeksforGeeks guide to character translation and deletion with tr.
+14. [Sed by Example Part 1](https://www.ibm.com/developerworks/library/l-sed1/) - IBM Developer tutorial series on practical sed usage.
+15. [Awk by Example](https://www.ibm.com/developerworks/library/l-awk1/) - IBM Developer tutorial introducing awk fundamentals for text processing.
+16. [Linux Pipeline Tutorial](https://ryanstutorials.net/linuxtutorial/piping.php) - Ryan's Tutorials guide to building command pipelines.
+17. [Regular Expressions in Sed and Awk](https://www.digitalocean.com/community/tutorials/using-grep-regular-expressions-to-search-for-text-patterns-in-linux) - DigitalOcean tutorial on regex patterns for text matching.
+18. [Advanced Awk: Arrays and Functions](https://www.gnu.org/software/gawk/manual/html_node/Arrays.html) - GNU documentation on awk's advanced programming features.
+19. [Sed Advanced Topics](https://www.gnu.org/software/sed/manual/html_node/advanced-sed.html) - GNU guide to sed's hold space, branching, and multi-line operations.
+20. [Unix Power Tools: Text Processing](https://www.oreilly.com/library/view/unix-power-tools/0596003307/) - O'Reilly book chapter covering sed, awk, and pipeline techniques for real-world problems.
+

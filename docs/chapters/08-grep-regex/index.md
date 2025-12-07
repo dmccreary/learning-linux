@@ -853,3 +853,26 @@ Now that you can find text, it's time to learn how to TRANSFORM it! Next chapter
     5. `grep "\." file.txt` - escape the dot with backslash
     6. `grep -v "pattern" file.txt` - the -v flag inverts the match
 
+## References
+
+1. [GNU Grep Manual](https://www.gnu.org/software/grep/manual/grep.html) - Official documentation for grep with comprehensive option and pattern references.
+2. [Regular Expressions Tutorial](https://www.regular-expressions.info/) - Extensive guide to regex syntax across different tools and languages.
+3. [Grep Command Examples](https://www.tecmint.com/12-practical-examples-of-linux-grep-command/) - TecMint's practical examples covering common grep use cases.
+4. [Regular Expressions in Linux](https://www.digitalocean.com/community/tutorials/using-grep-regular-expressions-to-search-for-text-patterns-in-linux) - DigitalOcean tutorial on using regex with grep effectively.
+5. [Understanding BRE and ERE](https://www.gnu.org/software/grep/manual/html_node/Basic-vs-Extended.html) - GNU grep manual explaining Basic and Extended Regular Expressions.
+6. [Regex Quick Reference](https://www.rexegg.com/regex-quickstart.html) - RexEgg's comprehensive regex cheat sheet with examples.
+7. [POSIX Regular Expressions](https://www.regular-expressions.info/posix.html) - Regular-Expressions.info guide to POSIX character classes and bracket expressions.
+8. [Grep for System Administrators](https://www.redhat.com/sysadmin/how-to-use-grep) - Red Hat's practical guide for using grep in system administration.
+9. [Regex Anchors Explained](https://www.regular-expressions.info/anchors.html) - Detailed explanation of ^ and $ anchor behavior.
+10. [Character Classes in Regex](https://www.geeksforgeeks.org/python-regex-character-classes/) - GeeksforGeeks guide to character classes applicable to grep patterns.
+11. [Grep Cheat Sheet](https://devhints.io/grep) - Devhints.io quick reference for grep options and patterns.
+12. [Introduction to Regular Expressions](https://www.grymoire.com/Unix/Regular.html) - Grymoire's detailed tutorial on regex fundamentals.
+13. [Regex Quantifiers Guide](https://www.regular-expressions.info/repeat.html) - Regular-Expressions.info explanation of quantifiers and repetition.
+14. [Advanced Grep Techniques](https://www.linuxjournal.com/content/pattern-matching-grep) - Linux Journal article on advanced pattern matching strategies.
+15. [Regex for Log Analysis](https://www.loggly.com/blog/regexes-the-bad-better-best/) - Loggly's guide to using regex effectively for parsing log files.
+16. [Grep vs Egrep vs Fgrep](https://www.geeksforgeeks.org/grep-command-in-unixlinux/) - GeeksforGeeks comparison of different grep variants.
+17. [Interactive Regex Tester: Regex101](https://regex101.com/) - Online tool for testing and debugging regular expressions with explanations.
+18. [Regex in Practice: Real Examples](https://opensource.com/article/18/5/getting-started-regular-expressions) - Opensource.com article with practical regex patterns for common tasks.
+19. [Grep Context Options](https://www.cyberciti.biz/faq/grep-show-lines-before-and-after-match/) - nixCraft tutorial on using -A, -B, and -C options for context.
+20. [Metacharacters Reference](https://www.gnu.org/software/findutils/manual/html_node/find_html/grep-regular-expression-syntax.html) - GNU findutils manual on metacharacter meanings and usage.
+

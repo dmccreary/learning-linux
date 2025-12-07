@@ -933,3 +933,26 @@ Now that you can automate tasks, it's time to learn about networking—how compu
     4. 0
     5. minute, hour, day of month, month, day of week
     6. Anacron runs missed jobs when the system starts; cron only runs at scheduled times
+
+## References
+
+1. [Advanced Bash-Scripting Guide](https://tldp.org/LDP/abs/html/) - Comprehensive free book covering all aspects of Bash scripting from basics to advanced.
+2. [Bash Scripting Tutorial for Beginners](https://linuxconfig.org/bash-scripting-tutorial-for-beginners) - LinuxConfig step-by-step introduction to writing shell scripts.
+3. [Shell Script Best Practices](https://sharats.me/posts/shell-script-best-practices/) - Blog post on writing robust, maintainable shell scripts.
+4. [Cron and Crontab Tutorial](https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-ubuntu-1804) - DigitalOcean complete guide to scheduling tasks with cron.
+5. [Understanding the Shebang](https://bash.cyberciti.biz/guide/Shebang) - Cyberciti guide explaining shebang lines and interpreter selection.
+6. [Bash Variables Explained](https://www.tutorialspoint.com/unix/unix-using-variables.htm) - TutorialsPoint tutorial on variable types, assignment, and usage.
+7. [Exit Codes and Error Handling](https://www.redhat.com/sysadmin/bash-error-handling) - Red Hat guide to proper error handling in Bash scripts.
+8. [Crontab Generator Tool](https://crontab.guru/) - Interactive web tool for building and understanding cron schedules.
+9. [Systemd Timers Tutorial](https://www.freedesktop.org/software/systemd/man/systemd.timer.html) - Official systemd documentation on creating timer units.
+10. [Shell Script Security](https://www.cyberciti.biz/tips/shell-script-security.html) - Cyberciti article on common security pitfalls in shell scripts.
+11. [At Command Tutorial](https://www.geeksforgeeks.org/at-command-in-linux-with-examples/) - GeeksforGeeks guide to scheduling one-time tasks.
+12. [Bash Functions Deep Dive](https://ryanstutorials.net/bash-scripting-tutorial/bash-functions.php) - Ryan's Tutorials comprehensive guide to shell functions.
+13. [Anacron for Desktop Linux](https://www.howtogeek.com/how-to/447/use-anacron-instead-of-cron-on-linux/) - HowToGeek explanation of anacron for machines that aren't always on.
+14. [Shell Script Debugging](https://www.shellcheck.net/) - ShellCheck online tool for finding bugs and improvements in shell scripts.
+15. [Command-Line Arguments Processing](https://www.baeldung.com/linux/bash-parse-command-line-arguments) - Baeldung tutorial on handling script arguments and options.
+16. [Cron Log Monitoring](https://www.cyberciti.biz/faq/where-is-the-cron-log-file-located/) - Guide to finding and monitoring cron job logs.
+17. [Writing Portable Shell Scripts](https://www.gnu.org/software/autoconf/manual/autoconf-2.70/html_node/Portable-Shell.html) - GNU guide to writing scripts that work across different shells.
+18. [Bash Arithmetic Operations](https://www.shell-tips.com/bash/math-arithmetic-calculation/) - Shell Tips tutorial on performing calculations in Bash.
+19. [Scheduling Scripts with Systemd](https://opensource.com/article/20/7/systemd-timers) - Opensource.com guide to replacing cron with systemd timers.
+20. [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html) - Google's official style guide for writing clean, consistent shell scripts.

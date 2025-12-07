@@ -1002,3 +1002,45 @@ The foundation is set. Let's explore the file system!
     3. `echo` automatically adds a newline and is simpler; `printf` gives precise formatting control
     4. `uname -r`
     5. `uptime` (or `uptime -p` for human-readable format)
+
+## References
+
+1. [The Linux man-pages project | kernel.org](https://www.kernel.org/doc/man-pages/) - Official source for Linux manual pages documentation.
+
+2. [Linux Tutorial - Manual Pages | Ryan's Tutorials](https://ryanstutorials.net/linuxtutorial/manual.php) - Beginner guide to understanding and navigating man pages.
+
+3. [How to Read Manual Pages in Linux | GeeksforGeeks](https://www.geeksforgeeks.org/man-command-in-linux-with-examples/) - Practical guide to using the man command with examples.
+
+4. [How to Navigate Man Pages Efficiently | TecMint](https://www.tecmint.com/linux-man-pages/) - Tips for efficiently finding information in manual pages.
+
+5. [Linux Man Pages | linux.die.net](https://linux.die.net/man/) - Online searchable database of Linux manual pages.
+
+6. [man7.org Linux Manual Pages](https://man7.org/linux/man-pages/) - Comprehensive online man page reference.
+
+7. [TLDR Pages](https://tldr.sh/) - Simplified man pages with practical examples, great for quick reference.
+
+8. [cheat.sh](https://cheat.sh/) - Community-driven cheat sheets accessible from the command line.
+
+9. [Explain Shell](https://explainshell.com/) - Web tool that breaks down shell commands and explains each part.
+
+10. [Linux Date Command Tutorial | phoenixNAP](https://phoenixnap.com/kb/linux-date-command) - Comprehensive guide to using the date command with format codes.
+
+11. [Echo Command in Linux | Linuxize](https://linuxize.com/post/echo-command-in-linux-with-examples/) - Detailed tutorial on echo command usage and options.
+
+12. [Printf Command in Linux | Baeldung](https://www.baeldung.com/linux/printf-command) - Guide to formatted output with printf.
+
+13. [Uptime Command in Linux | GeeksforGeeks](https://www.geeksforgeeks.org/uptime-command-in-linux-with-examples/) - Understanding system uptime and load averages.
+
+14. [Uname Command in Linux | Linuxize](https://linuxize.com/post/uname-command-in-linux/) - Getting system information with uname.
+
+15. [Cal Command in Linux | GeeksforGeeks](https://www.geeksforgeeks.org/cal-command-in-linux-with-examples/) - Using the calendar command for date calculations.
+
+16. [Linux Info Command | GNU](https://www.gnu.org/software/texinfo/manual/info-stnd/info-stnd.html) - Documentation for the info documentation system.
+
+17. [Apropos Command Tutorial | Linux Hint](https://linuxhint.com/apropos-command-linux/) - Finding commands by keyword search.
+
+18. [Whatis Command in Linux | phoenixNAP](https://phoenixnap.com/kb/linux-whatis-command) - Quick command description lookup.
+
+19. [Linux Command Reference | SS64](https://ss64.com/bash/) - Comprehensive A-Z index of Bash commands.
+
+20. [Linux Fundamentals | Linux Journey](https://linuxjourney.com/lesson/the-shell) - Interactive lessons on shell basics and help systems.

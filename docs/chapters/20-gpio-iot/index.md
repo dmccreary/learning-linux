@@ -1466,3 +1466,26 @@ For more hands-on projects, check out:
 - [Clocks and Watches](https://dmccreary.github.io/clocks-and-watches/) - Build your own smart timepieces
 
 Now go build something amazing! The world is waiting for your invention! 🔌🐧💡
+
+## References
+
+1. [GPIO Zero Documentation](https://gpiozero.readthedocs.io/) - Official Python library documentation for controlling Raspberry Pi GPIO pins with simple, intuitive commands.
+2. [Learning MicroPython Textbook](https://dmccreary.github.io/learning-micropython/) - Free comprehensive guide to programming microcontrollers with Thonny and MicroPython.
+3. [Moving Rainbow LED Projects](https://dmccreary.github.io/moving-rainbow/) - Complete guide to programming NeoPixel LED strips for costumes, decorations, and wearables.
+4. [Thonny Python IDE](https://thonny.org/) - Official website for the beginner-friendly Python IDE with MicroPython support.
+5. [Adafruit NeoPixel Guide](https://learn.adafruit.com/adafruit-neopixel-uberguide) - Comprehensive tutorial for NeoPixel LED strips including wiring, power, and programming.
+6. [SparkFun PIR Motion Sensor Tutorial](https://learn.sparkfun.com/tutorials/pir-motion-sensor-hookup-guide) - How to wire and program PIR sensors for motion detection projects.
+7. [Raspberry Pi GPIO Tutorial](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio-and-the-40-pin-header) - Official GPIO documentation including pinout and electrical specifications.
+8. [MQTT Protocol Overview](https://mqtt.org/) - Official MQTT website explaining the lightweight IoT messaging protocol.
+9. [Eclipse Mosquitto MQTT Broker](https://mosquitto.org/) - Open-source MQTT broker documentation and installation guide.
+10. [Home Assistant Documentation](https://www.home-assistant.io/docs/) - Complete guide to setting up and configuring the open-source smart home platform.
+11. [Node-RED Getting Started](https://nodered.org/docs/getting-started/) - Flow-based programming tool for wiring together IoT devices visually.
+12. [PWM Explained - SparkFun](https://learn.sparkfun.com/tutorials/pulse-width-modulation) - Understanding pulse width modulation for controlling LED brightness and motor speed.
+13. [L298N Motor Driver Tutorial](https://www.instructables.com/L298N-Motor-Driver-Tutorial/) - How to wire and control DC motors safely with a motor driver.
+14. [DS18B20 Temperature Sensor Guide](https://www.adafruit.com/product/381) - Wiring and programming the popular 1-Wire digital temperature sensor.
+15. [MCP3008 ADC Tutorial](https://learn.adafruit.com/raspberry-pi-analog-to-digital-converters) - Using analog-to-digital converters to read analog sensors on Raspberry Pi.
+16. [Flask Web Dashboard Tutorial](https://flask.palletsprojects.com/en/2.3.x/quickstart/) - Official Flask documentation for creating web applications and dashboards.
+17. [InfluxDB Time Series Database](https://docs.influxdata.com/influxdb/) - Guide to using InfluxDB for storing and analyzing sensor data over time.
+18. [GeeksforGeeks: Internet of Things](https://www.geeksforgeeks.org/introduction-to-internet-of-things-iot/) - Introduction to IoT concepts, protocols, and applications.
+19. [IFTTT Webhooks Documentation](https://ifttt.com/maker_webhooks) - Connect your IoT projects to hundreds of web services with IFTTT automation.
+20. [Raspberry Pi Servo Motor Tutorial](https://www.electronicshub.org/raspberry-pi-servo-motor-interface-tutorial/) - Controlling servo motors for robot arms, camera gimbals, and pan-tilt mechanisms.

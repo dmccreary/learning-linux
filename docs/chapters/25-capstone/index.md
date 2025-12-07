@@ -1406,3 +1406,45 @@ Remember: every Linux expert started exactly where you are now. The difference i
 ---
 
 *You've reached the end of the capstone chapter, but this is just the beginning of your Linux journey. Every expert was once a beginner who refused to give up. Keep building, keep learning, and remember—the best way to learn Linux is to use Linux. Now go make something amazing!*
+
+## References
+
+1. [Nginx Official Documentation](https://nginx.org/en/docs/) - Complete guide to installing, configuring, and optimizing Nginx web servers with tutorials and examples.
+
+2. [Apache HTTP Server Documentation](https://httpd.apache.org/docs/2.4/) - Official Apache documentation covering installation, virtual hosts, and security configuration.
+
+3. [DigitalOcean - How To Set Up a Nginx Web Server](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04) - Step-by-step tutorial for deploying and configuring production-ready Nginx servers.
+
+4. [Paper Minecraft Server Documentation](https://docs.papermc.io/) - Guide to running optimized Minecraft servers with performance tuning tips for Raspberry Pi.
+
+5. [Jellyfin Documentation](https://jellyfin.org/docs/) - Complete guide to setting up and configuring the free, open-source media server.
+
+6. [Plex Support - Getting Started](https://support.plex.tv/articles/) - Official tutorials for installing and managing Plex media servers.
+
+7. [Pi-hole Official Documentation](https://docs.pi-hole.net/) - Comprehensive guide to network-wide ad blocking, DNS configuration, and advanced features.
+
+8. [WireGuard Quick Start Guide](https://www.wireguard.com/quickstart/) - Official documentation for setting up fast, secure VPN servers and clients.
+
+9. [PiVPN Documentation](https://docs.pivpn.io/) - Easy-to-follow guide for installing WireGuard VPNs on Raspberry Pi systems.
+
+10. [RetroPie Official Documentation](https://retropie.org.uk/docs/) - Complete guide to building retro gaming systems with emulator configuration and ROM management.
+
+11. [OpenMediaVault Documentation](https://docs.openmediavault.org/) - Guide to setting up network-attached storage with web-based management interface.
+
+12. [Samba File Sharing Guide](https://ubuntu.com/tutorials/install-and-configure-samba) - Tutorial for configuring cross-platform file sharing with Windows, Mac, and Linux clients.
+
+13. [Grafana Getting Started Guide](https://grafana.com/docs/grafana/latest/getting-started/) - Official documentation for building monitoring dashboards and visualizing metrics.
+
+14. [Prometheus Documentation](https://prometheus.io/docs/introduction/overview/) - Guide to metrics collection, querying, and alerting for system monitoring.
+
+15. [Linux Foundation - Self-Hosted Services Guide](https://www.linuxfoundation.org/) - Resources on building and maintaining home server infrastructure.
+
+16. [r/selfhosted Reddit Community](https://www.reddit.com/r/selfhosted/) - Active community sharing projects, tutorials, and troubleshooting for self-hosted services.
+
+17. [Awesome-Selfhosted GitHub List](https://github.com/awesome-selfhosted/awesome-selfhosted) - Curated list of free software and services you can host yourself with installation guides.
+
+18. [LinuxServer.io Documentation](https://docs.linuxserver.io/) - Docker container guides for easy deployment of media servers, VPNs, and network services.
+
+19. [TecMint - Linux Server Projects](https://www.tecmint.com/category/web-servers/) - Collection of tutorials on web servers, game servers, and home lab projects.
+
+20. [Raspberry Pi Projects - Server Edition](https://projects.raspberrypi.org/en/projects?hardware%5B%5D=raspberry-pi) - Official Raspberry Pi project ideas including web servers, media centers, and network services.

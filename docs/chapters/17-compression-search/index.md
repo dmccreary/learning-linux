@@ -1290,3 +1290,26 @@ Congratulations on completing this chapter! You now have the tools to manage fil
 5. Use `-exec`: `find . -name "*.txt" -exec command {} \;`
 6. Maximum compression (slowest but smallest files)
 7. `find / -type f -exec du -h {} + 2>/dev/null | sort -rh | head -20`
+
+## References
+
+1. [tar Command Guide](https://www.gnu.org/software/tar/manual/tar.html) - GNU tar official documentation with comprehensive examples
+2. [gzip Tutorial](https://www.gnu.org/software/gzip/manual/gzip.html) - Official gzip compression manual
+3. [Understanding Compression Algorithms](https://www.prepressure.com/library/compression-algorithm) - How different compression methods work
+4. [find Command Examples](https://www.tecmint.com/35-practical-examples-of-linux-find-command/) - 35 practical find command examples for daily use
+5. [Advanced find Usage](https://www.digitalocean.com/community/tutorials/how-to-use-find-and-locate-to-search-for-files-on-linux) - DigitalOcean guide to finding files on Linux
+6. [zip vs tar.gz Comparison](https://www.howtogeek.com/248780/whats-the-difference-between-zip-and-tar.gz-files/) - When to use different archive formats
+7. [7-Zip Documentation](https://www.7-zip.org/7z.html) - Official 7z format and command documentation
+8. [locate Command Tutorial](https://linuxize.com/post/locate-command-in-linux/) - Using locate for fast file searches
+9. [xz Compression Guide](https://tukaani.org/xz/) - Official xz compression utility documentation
+10. [File Compression Benchmarks](https://www.rootusers.com/gzip-vs-bzip2-vs-xz-performance-comparison/) - Speed and compression ratio comparisons
+11. [Find with Exec Examples](https://www.baeldung.com/linux/find-exec-command) - Using find -exec for batch operations
+12. [tar Archive Best Practices](https://www.redhat.com/sysadmin/backup-dirs-tar) - Red Hat guide to backing up directories with tar
+13. [which vs whereis vs locate](https://www.geeksforgeeks.org/difference-between-locate-and-find-command-in-linux/) - Understanding different search command purposes
+14. [Regex Patterns with find](https://www.cyberciti.biz/faq/howto-use-grep-command-in-linux-unix/) - Using regular expressions in file searches
+15. [bzip2 Compression Tutorial](https://sourceware.org/bzip2/docs.html) - Official bzip2 documentation and usage
+16. [File Search Optimization](https://www.linuxjourney.com/lesson/find-command) - Linux Journey's guide to efficient file searching
+17. [Archive Formats Comparison](https://en.wikipedia.org/wiki/List_of_archive_formats) - Comprehensive list of archive formats and their uses
+18. [updatedb Configuration](https://www.cyberciti.biz/faq/updating-the-locate-database/) - Configuring the locate database
+19. [Pillow Image Library](https://pillow.readthedocs.io/en/stable/) - Python imaging library documentation for image compression
+20. [rsync for Backups](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories) - Using rsync for efficient file synchronization and backups

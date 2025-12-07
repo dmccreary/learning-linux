@@ -1396,3 +1396,26 @@ Now you understand storage and performance, you're ready to explore the Raspberr
 5. PCIe interface with parallel commands, deep queue depth, and low latency
 6. `sudo umount /mnt/usb` then physically remove
 7. `/etc/fstab`
+
+## References
+
+1. [Linux Filesystem Hierarchy](https://www.pathname.com/fhs/) - Official Filesystem Hierarchy Standard documentation
+2. [ext4 Filesystem Guide](https://ext4.wiki.kernel.org/index.php/Main_Page) - Kernel.org wiki on ext4 filesystem
+3. [fstab Configuration](https://help.ubuntu.com/community/Fstab) - Ubuntu community guide to /etc/fstab configuration
+4. [df and du Commands](https://www.tecmint.com/how-to-check-disk-space-in-linux/) - Checking disk space usage on Linux
+5. [Mount Command Tutorial](https://www.geeksforgeeks.org/mount-command-in-linux-with-examples/) - Comprehensive mount command examples
+6. [lsblk Command Guide](https://www.redhat.com/sysadmin/list-linux-disk-drives) - Red Hat guide to listing block devices
+7. [iostat Performance Monitoring](https://www.geeksforgeeks.org/iostat-command-in-linux-with-examples/) - Using iostat to monitor I/O statistics
+8. [vmstat Tutorial](https://www.tecmint.com/linux-performance-monitoring-with-vmstat-and-iostat-commands/) - Virtual memory statistics monitoring
+9. [free Command Explained](https://www.linuxatemyram.com/) - Understanding Linux memory usage with free
+10. [Swap Space Management](https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-20-04) - Creating and managing swap files
+11. [fio Benchmarking Guide](https://fio.readthedocs.io/en/latest/fio_doc.html) - Official fio flexible I/O tester documentation
+12. [hdparm Disk Testing](https://www.linux.com/training-tutorials/how-benchmark-your-linux-system/) - Benchmarking disk performance with hdparm
+13. [NVMe vs SATA Performance](https://www.crucial.com/articles/about-ssd/nvme-vs-m2-vs-sata-ssd) - Understanding SSD interface differences
+14. [Raspberry Pi 5 PCIe Setup](https://www.raspberrypi.com/documentation/computers/raspberry-pi-5.html) - Official Pi 5 documentation for NVMe
+15. [System Performance Tuning](https://www.kernel.org/doc/html/latest/admin-guide/sysctl/vm.html) - Kernel virtual memory tuning parameters
+16. [Block Device Concepts](https://www.kernel.org/doc/html/latest/block/index.html) - Kernel documentation on block devices
+17. [ioping Latency Testing](https://github.com/koct9i/ioping) - GitHub repository and documentation for ioping
+18. [sysbench Benchmarking](https://github.com/akopytov/sysbench) - Scriptable database and system performance benchmark
+19. [Understanding Load Average](https://www.brendangregg.com/blog/2017-08-08/linux-load-averages.html) - Brendan Gregg's deep dive into load averages
+20. [Bottleneck Analysis Guide](https://www.redhat.com/sysadmin/linux-performance-bottlenecks) - Red Hat guide to identifying performance bottlenecks

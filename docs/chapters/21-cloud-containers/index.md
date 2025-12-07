@@ -1231,3 +1231,26 @@ You've just leveled up from running Linux on single machines to orchestrating in
 The cloud and containers are where modern software lives. These skills are essential for DevOps, site reliability engineering, and backend development. You're now ready to deploy applications that can scale to millions of users!
 
 Keep experimenting—but always set those budget alerts! ☁️🐳🚀
+
+## References
+
+1. [Docker Official Documentation](https://docs.docker.com/) - Comprehensive guide to Docker installation, commands, Dockerfile syntax, and best practices.
+2. [Docker Hub](https://hub.docker.com/) - Official container registry with millions of pre-built images for applications and services.
+3. [Docker Compose Documentation](https://docs.docker.com/compose/) - Define and run multi-container applications with YAML configuration files.
+4. [AWS Documentation](https://docs.aws.amazon.com/) - Complete Amazon Web Services documentation including EC2, S3, and all cloud services.
+5. [Google Cloud Documentation](https://cloud.google.com/docs) - Official Google Cloud Platform guides for Compute Engine, Cloud Storage, and more.
+6. [Microsoft Azure Documentation](https://docs.microsoft.com/azure/) - Azure cloud services documentation and tutorials for virtual machines and containers.
+7. [Terraform Documentation](https://developer.hashicorp.com/terraform/docs) - Official HashiCorp guide to infrastructure as code with Terraform.
+8. [AWS Free Tier](https://aws.amazon.com/free/) - Details on AWS free tier offerings including 750 hours of EC2 per month for 12 months.
+9. [Google Cloud Free Tier](https://cloud.google.com/free) - Always-free tier with e2-micro instance and $300 credit for new users.
+10. [DigitalOcean: Docker Tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04) - Step-by-step guide to installing and using Docker on Linux.
+11. [Dockerfile Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) - Official recommendations for writing efficient, secure Dockerfiles.
+12. [Kubernetes vs Docker Swarm](https://www.geeksforgeeks.org/difference-between-kubernetes-and-docker-swarm/) - Comparison of container orchestration platforms.
+13. [AWS CLI Documentation](https://docs.aws.amazon.com/cli/) - Command-line interface for managing AWS services from the terminal.
+14. [Terraform AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs) - Complete reference for managing AWS resources with Terraform.
+15. [Container Security Best Practices](https://docs.docker.com/engine/security/) - Docker security recommendations including image scanning and runtime protection.
+16. [Microservices Architecture Guide](https://microservices.io/) - Patterns and best practices for building microservices-based applications.
+17. [Multi-Stage Docker Builds](https://docs.docker.com/build/building/multi-stage/) - Creating smaller production images by separating build and runtime stages.
+18. [Docker Volumes Tutorial](https://docs.docker.com/storage/volumes/) - Managing persistent data in containers with named volumes and bind mounts.
+19. [Infracost - Terraform Cost Estimation](https://www.infracost.io/) - Estimate cloud costs before deploying infrastructure with Terraform.
+20. [TecMint: Cloud Computing Basics](https://www.tecmint.com/what-is-cloud-computing/) - Introduction to cloud computing concepts, service models, and deployment types.

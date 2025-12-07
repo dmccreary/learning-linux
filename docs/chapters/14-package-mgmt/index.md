@@ -768,3 +768,26 @@ Now that you can manage software, it's time to connect to the world! The next ch
     4. Personal Package Archive - community-maintained Ubuntu repositories
     5. Snap and Flatpak
     6. `dpkg -i package.deb` (then `apt install -f` to fix dependencies)
+
+## References
+
+1. [Ubuntu APT Documentation](https://help.ubuntu.com/community/AptGet/Howto) - Comprehensive guide to using apt and apt-get on Ubuntu systems
+2. [Debian Package Management Guide](https://www.debian.org/doc/manuals/debian-reference/ch02.en.html) - Official Debian documentation on package management fundamentals
+3. [APT vs APT-GET](https://itsfoss.com/apt-vs-apt-get-difference/) - Explains the differences between apt and apt-get commands for students
+4. [Snap Documentation](https://snapcraft.io/docs) - Official Snap package format documentation from Canonical
+5. [Flatpak Official Guide](https://docs.flatpak.org/en/latest/) - Complete guide to using Flatpak for cross-distribution applications
+6. [Homebrew on Linux](https://docs.brew.sh/Homebrew-on-Linux) - Official documentation for installing and using Homebrew on Linux
+7. [Understanding Package Dependencies](https://www.linode.com/docs/guides/linux-package-management-overview/) - Explains how package dependencies work in Linux
+8. [PPA Best Practices](https://help.ubuntu.com/community/Repositories/Ubuntu) - Ubuntu community guide for safely using PPAs
+9. [Unattended Upgrades Tutorial](https://www.linuxbabe.com/ubuntu/automatic-security-update-unattended-upgrades-ubuntu) - Step-by-step guide for automatic security updates
+10. [dpkg Command Reference](https://www.cyberciti.biz/howto/question/linux/dpkg-cheat-sheet.php) - Complete dpkg command cheat sheet with examples
+11. [Software Updates Security](https://www.eff.org/deeplinks/2016/11/why-you-should-keep-your-software-updated) - EFF article explaining why updates are critical for security
+12. [Managing Software with APT](https://linuxize.com/post/how-to-use-apt-command/) - Practical apt command examples for beginners
+13. [Package Verification with GPG](https://www.techrepublic.com/article/how-to-verify-package-authenticity-in-linux/) - Guide to verifying package authenticity using GPG keys
+14. [Repository Mirror Selection](https://www.tecmint.com/find-fastest-apt-mirror-and-repo-in-ubuntu/) - How to find and use the fastest APT mirrors
+15. [Snap vs Flatpak Comparison](https://www.reddit.com/r/linux/wiki/snap_vs_flatpak) - Community comparison of universal package formats
+16. [Package Management Best Practices](https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg) - DigitalOcean guide covering package management fundamentals
+17. [Troubleshooting APT Problems](https://itsfoss.com/fix-update-errors-ubuntu/) - Common APT errors and their solutions for Ubuntu
+18. [Homebrew Formula Guide](https://formulae.brew.sh/formula/) - Browse all available Homebrew packages and formulas
+19. [Linux Package Formats Explained](https://www.howtogeek.com/117579/htg-explains-how-software-installation-package-managers-work-on-linux/) - HowToGeek guide explaining different package formats
+20. [Keeping Linux Systems Secure](https://www.cisecurity.org/insights/blog/updating-software-critical-security-practice) - CIS guide on the importance of regular updates

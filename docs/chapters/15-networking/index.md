@@ -1101,3 +1101,26 @@ Now that you understand networking, it's time to connect SECURELY! The next chap
 5. `ping` tests if a host is reachable; `traceroute` shows every hop along the path
 6. Port 443
 7. DNS is broken (you can reach the internet but can't resolve names)
+
+## References
+
+1. [TCP/IP Guide](https://www.rfc-editor.org/rfc/rfc1180.txt) - Classic introduction to TCP/IP networking fundamentals
+2. [IP Command Tutorial](https://www.tecmint.com/ip-command-examples/) - Comprehensive guide to the modern ip command with examples
+3. [DNS Explained](https://www.cloudflare.com/learning/dns/what-is-dns/) - Cloudflare's clear explanation of how DNS works
+4. [Understanding IPv4 vs IPv6](https://www.networkworld.com/article/3254575/what-is-ipv6-and-why-aren-t-we-there-yet.html) - Why IPv6 exists and the transition from IPv4
+5. [NetworkManager Guide](https://wiki.archlinux.org/title/NetworkManager) - Complete guide to NetworkManager and nmcli for WiFi configuration
+6. [Ping Command Tutorial](https://www.geeksforgeeks.org/ping-command-in-linux-with-examples/) - GeeksForGeeks guide to using ping for network diagnostics
+7. [Traceroute Explained](https://www.keycdn.com/support/traceroute-command) - How traceroute works and how to interpret results
+8. [Common Network Ports](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) - Official IANA port number registry
+9. [curl Tutorial](https://curl.se/docs/manual.html) - Official curl manual with comprehensive examples
+10. [wget Command Guide](https://www.gnu.org/software/wget/manual/wget.html) - GNU wget official documentation
+11. [NetworkManager nmcli Examples](https://www.redhat.com/sysadmin/nmcli-manage-connections) - Red Hat guide to managing network connections with nmcli
+12. [OSI Model Explained](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/) - Understanding the seven-layer network model
+13. [Netstat vs SS Command](https://www.tecmint.com/ss-command-examples-in-linux/) - Modern ss command replacing deprecated netstat
+14. [Network Troubleshooting Guide](https://www.digitalocean.com/community/tutorials/how-to-troubleshoot-common-connection-issues) - DigitalOcean's systematic approach to network issues
+15. [Understanding MAC Addresses](https://www.howtogeek.com/764868/what-is-a-mac-address-and-how-does-it-work/) - HowToGeek explanation of MAC addresses and their purpose
+16. [curl vs wget Comparison](https://www.baeldung.com/linux/curl-wget) - When to use curl versus wget for downloads
+17. [NAT Explained](https://www.howtogeek.com/122641/how-to-forward-ports-on-your-router/) - Understanding Network Address Translation and port forwarding
+18. [DNS Resolution Process](https://www.cloudflare.com/learning/dns/dns-server-types/) - Detailed walkthrough of how DNS queries work
+19. [Linux Network Commands](https://www.linuxjourney.com/lesson/network-basics) - Linux Journey's beginner-friendly networking lesson
+20. [WiFi Configuration on Linux](https://wiki.archlinux.org/title/Network_configuration/Wireless) - Complete guide to wireless networking on Linux

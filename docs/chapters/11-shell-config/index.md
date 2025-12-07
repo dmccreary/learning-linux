@@ -983,3 +983,26 @@ Now that your shell is customized and comfortable, it's time to write your own s
     4. Aliases are simple text substitutions; functions can accept arguments and contain logic
     5. `export`
     6. The primary shell prompt (what appears before your cursor)
+
+## References
+
+1. [Bash Manual: Shell Startup Files](https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html) - Official GNU documentation explaining when each configuration file is loaded.
+2. [Understanding Shell Initialization Files](https://www.linuxfromscratch.org/blfs/view/svn/postlfs/profile.html) - Linux From Scratch guide to .profile, .bashrc, and other dotfiles.
+3. [Zsh Documentation](https://zsh.sourceforge.io/Doc/) - Official Zsh reference covering .zshrc configuration and advanced features.
+4. [Oh My Zsh - Framework for Zsh](https://ohmyz.sh/) - Popular Zsh configuration framework with themes and plugins for enhanced productivity.
+5. [Bash Aliases Every Linux User Should Know](https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions) - DigitalOcean tutorial on creating useful aliases and functions.
+6. [Understanding the PATH Variable](https://opensource.com/article/17/6/set-path-linux) - Opensource.com article explaining how PATH works and how to modify it safely.
+7. [Environment Variables in Linux](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/) - Comprehensive guide to viewing, setting, and exporting environment variables.
+8. [Customizing Your Bash Prompt](https://phoenixnap.com/kb/change-bash-prompt-linux) - PhoenixNAP tutorial on customizing PS1 with colors and information.
+9. [Advanced Bash Prompt Customization](https://www.digitalocean.com/community/tutorials/how-to-customize-your-bash-prompt-on-a-linux-vps) - DigitalOcean guide to creating informative and colorful prompts.
+10. [Dotfiles Best Practices](https://dotfiles.github.io/) - Community guide to managing and versioning your configuration files.
+11. [Shell Functions Tutorial](https://tldp.org/LDP/abs/html/functions.html) - Advanced Bash Scripting Guide chapter on writing shell functions.
+12. [Login vs Non-Login Shells](https://unix.stackexchange.com/questions/38175/difference-between-login-shell-and-non-login-shell) - StackExchange explanation of shell types and configuration loading.
+13. [Bash Aliases vs Functions](https://www.tecmint.com/create-alias-in-linux/) - TecMint article comparing aliases and functions with examples.
+14. [Source vs Execute Scripts](https://superuser.com/questions/176783/what-is-the-difference-between-executing-a-bash-script-vs-sourcing-it) - SuperUser discussion explaining when to use source vs direct execution.
+15. [Powerline Shell - Enhanced Prompt](https://github.com/b-ryan/powerline-shell) - GitHub project for beautiful, informative shell prompts with git integration.
+16. [Bash History Configuration](https://www.redhat.com/sysadmin/better-bash-history) - Red Hat guide to configuring history size, deduplication, and timestamps.
+17. [Shell Startup Order Explained](https://shreevatsa.wordpress.com/2008/03/30/zshbash-startup-files-loading-order-bashrc-zshrc-etc/) - Detailed blog post visualizing startup file loading order for Bash and Zsh.
+18. [Nerd Fonts for Terminal](https://www.nerdfonts.com/) - Font collection with icons and glyphs for enhanced terminal prompts and displays.
+19. [Git Branch in Bash Prompt](https://coderwall.com/p/fasnya/add-git-branch-name-to-bash-prompt) - Tutorial on adding current git branch to your prompt.
+20. [Cross-Platform Shell Configuration](https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout) - Guide to organizing shell configuration for portability across systems.

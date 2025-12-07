@@ -1121,3 +1121,26 @@ Congratulations—you've completed the core Linux curriculum! The next chapters 
 5. `/var/log/auth.log` or `journalctl -u sshd`
 6. Fail2ban
 7. SCP copies everything; Rsync only copies what changed (and can resume interrupted transfers)
+
+## References
+
+1. [OpenSSH Manual](https://www.openssh.com/manual.html) - Official OpenSSH documentation covering all SSH features
+2. [SSH Key Authentication Guide](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-2) - DigitalOcean's comprehensive SSH key setup tutorial
+3. [SSH Config File Examples](https://www.cyberciti.biz/faq/create-ssh-config-file-on-linux-unix/) - How to create and use SSH client configuration files
+4. [UFW Firewall Guide](https://help.ubuntu.com/community/UFW) - Ubuntu community guide to Uncomplicated Firewall
+5. [Fail2ban Tutorial](https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-ubuntu-20-04) - Protecting SSH with automatic IP banning
+6. [rsync Tutorial](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories) - Complete guide to file synchronization with rsync
+7. [SSH Security Best Practices](https://www.ssh.com/academy/ssh/security) - Industry best practices for securing SSH
+8. [Two-Factor Authentication for SSH](https://www.digitalocean.com/community/tutorials/how-to-set-up-multi-factor-authentication-for-ssh-on-ubuntu-20-04) - Adding 2FA with Google Authenticator
+9. [Understanding Public Key Cryptography](https://www.cloudflare.com/learning/ssl/how-does-public-key-encryption-work/) - How SSH key pairs work
+10. [SCP Command Examples](https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/) - Secure copy command tutorial with examples
+11. [Linux Security Fundamentals](https://www.redhat.com/sysadmin/10-best-practices-linux-security) - Red Hat's top security practices for Linux
+12. [SSH Port Forwarding](https://www.ssh.com/academy/ssh/tunneling-example) - Using SSH tunnels for secure connections
+13. [Hardening SSH Configuration](https://www.sshaudit.com/hardening_guides.html) - Detailed SSH hardening guides
+14. [VNC Server Setup](https://www.realvnc.com/en/connect/docs/raspberry-pi.html) - RealVNC official Raspberry Pi documentation
+15. [Linux Audit System Guide](https://www.redhat.com/sysadmin/auditd-audit-logging) - Using auditd for security auditing
+16. [Password Policy Configuration](https://www.cyberciti.biz/faq/linux-password-policy-howto/) - Setting up strong password requirements
+17. [iptables vs UFW Comparison](https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands) - Understanding Linux firewall options
+18. [SSH Agent Forwarding](https://www.ssh.com/academy/ssh/agent) - Using ssh-agent for key management
+19. [Log Monitoring with journalctl](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs) - Viewing and analyzing system logs
+20. [CIS Linux Benchmark](https://www.cisecurity.org/benchmark/distribution_independent_linux) - Industry-standard security configuration benchmarks

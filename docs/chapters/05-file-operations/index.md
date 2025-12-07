@@ -1294,3 +1294,26 @@ But first, let's make sure all this knowledge sticks with some practice...
     5. `tail -f logfile.txt` follows the file and shows new lines as they're added
     6. `sort | uniq` removes ALL duplicates; `uniq` alone only removes ADJACENT duplicates
 
+## References
+
+1. [GNU Coreutils Manual](https://www.gnu.org/software/coreutils/manual/coreutils.html) - Official documentation for touch, mkdir, cp, mv, rm, and other core file utilities.
+2. [Linux cp Command Tutorial](https://www.linuxize.com/post/cp-command-in-linux/) - Linuxize's comprehensive guide to copying files and directories with practical examples.
+3. [Linux mv Command Examples](https://www.tecmint.com/mv-command-examples-in-linux/) - TecMint's tutorial on moving and renaming files safely.
+4. [Understanding rm and Safe Deletion](https://www.digitalocean.com/community/tutorials/rm-command-in-linux-with-examples) - DigitalOcean guide to using rm command safely and avoiding disasters.
+5. [Cat Command in Linux](https://www.geeksforgeeks.org/cat-command-in-linux-with-examples/) - GeeksforGeeks tutorial on viewing and concatenating files.
+6. [Head and Tail Commands Explained](https://www.howtogeek.com/412055/37-important-linux-commands-you-should-know/) - How-To Geek's guide including head and tail for file preview.
+7. [Less is More: Pager Commands](https://linuxize.com/post/less-command-in-linux/) - Linuxize tutorial on using less and more for viewing large files.
+8. [Linux wc Command Tutorial](https://www.geeksforgeeks.org/wc-command-linux-examples/) - GeeksforGeeks guide to counting lines, words, and characters in files.
+9. [Sort Command with Examples](https://www.tecmint.com/sort-command-linux/) - TecMint's comprehensive guide to sorting text data.
+10. [Uniq Command Tutorial](https://www.geeksforgeeks.org/uniq-command-in-linux-with-examples/) - GeeksforGeeks explanation of removing duplicate lines from sorted data.
+11. [Cut Command in Linux](https://linuxize.com/post/linux-cut-command/) - Linuxize guide to extracting columns and fields from text files.
+12. [Paste Command Examples](https://www.geeksforgeeks.org/paste-command-in-linux-with-examples/) - GeeksforGeeks tutorial on merging files line-by-line.
+13. [Using diff to Compare Files](https://www.computerhope.com/unix/udiff.htm) - Computer Hope's guide to finding differences between files.
+14. [Touch Command Tutorial](https://www.howtoforge.com/linux-touch-command/) - HowtoForge explanation of creating files and updating timestamps.
+15. [Mkdir Command with Examples](https://phoenixnap.com/kb/create-directory-linux-mkdir-command) - PhoenixNAP guide to creating directories including nested structures.
+16. [Ryan's Tutorials: Linux File Manipulation](https://ryanstutorials.net/linuxtutorial/filemanipulation.php) - Interactive tutorial on basic file operations for beginners.
+17. [Trash-CLI: Safer File Deletion](https://github.com/andreafrancia/trash-cli) - GitHub repository for command-line trash/recycle bin alternative to rm.
+18. [Brace Expansion in Bash](https://www.linuxjournal.com/content/bash-brace-expansion) - Linux Journal article on using brace expansion for efficient file creation.
+19. [Understanding Tail -f for Log Monitoring](https://www.howtogeek.com/481766/how-to-use-the-tail-command-on-linux/) - How-To Geek guide to watching log files in real-time.
+20. [File Operations Best Practices](https://opensource.com/article/19/8/moving-files-linux-depth) - Opensource.com article on safely managing files in Linux.
+

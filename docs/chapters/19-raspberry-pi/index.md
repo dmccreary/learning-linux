@@ -850,3 +850,26 @@ Key takeaways:
 - **The community** is huge—if you can imagine a project, someone's probably done it
 
 The Raspberry Pi isn't just a learning tool—it's a gateway to understanding how computers really work, from the operating system down to the metal. Now go build something amazing! 🥧🐧
+
+## References
+
+1. [Raspberry Pi Official Documentation](https://www.raspberrypi.com/documentation/) - Comprehensive official documentation covering hardware, software, and getting started guides for all Raspberry Pi models.
+2. [Raspberry Pi Imager Download](https://www.raspberrypi.com/software/) - Official tool for writing operating systems to SD cards with advanced configuration options.
+3. [Raspberry Pi OS Documentation](https://www.raspberrypi.com/documentation/computers/os.html) - Complete guide to using Raspberry Pi OS including raspi-config, networking, and system administration.
+4. [GPIO Pin Reference - Pinout.xyz](https://pinout.xyz/) - Interactive GPIO pinout diagram showing all 40 pins with detailed descriptions and functions.
+5. [Raspberry Pi 5 Release Announcement](https://www.raspberrypi.com/news/introducing-raspberry-pi-5/) - Official announcement detailing the RP1 I/O chip and performance improvements.
+6. [Understanding the RP1 Chip](https://www.raspberrypi.com/documentation/microcontrollers/rp1.html) - Technical documentation explaining the custom I/O controller in Raspberry Pi 5.
+7. [Raspberry Pi Camera Module Guide](https://www.raspberrypi.com/documentation/accessories/camera.html) - How to use the Camera Module with libcamera commands for photos and videos.
+8. [SSH Setup on Raspberry Pi](https://www.raspberrypi.com/documentation/computers/remote-access.html) - Enable and configure SSH for headless operation and remote access.
+9. [Raspberry Pi Power Supply Guide](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#power-supply) - Official recommendations for power supplies including USB-C PD requirements for Pi 5.
+10. [GeeksforGeeks: Introduction to Raspberry Pi](https://www.geeksforgeeks.org/introduction-to-raspberry-pi/) - Beginner-friendly introduction to Raspberry Pi hardware and use cases.
+11. [SparkFun: Raspberry Pi GPIO Tutorial](https://learn.sparkfun.com/tutorials/raspberry-gpio) - Hands-on tutorial for understanding and using GPIO pins safely.
+12. [Adafruit: Raspberry Pi Lesson 1 - Setup](https://learn.adafruit.com/series/learn-raspberry-pi) - Step-by-step lessons for setting up and using your first Raspberry Pi.
+13. [Raspberry Pi Foundation Projects](https://projects.raspberrypi.org/en/) - Free project tutorials for beginners through advanced users covering hardware and software.
+14. [MagPi Magazine](https://magpi.raspberrypi.com/) - Official Raspberry Pi magazine with monthly projects, tutorials, and reviews.
+15. [Tom's Hardware: Raspberry Pi Setup Guide](https://www.tomshardware.com/how-to/set-up-raspberry-pi) - Detailed setup guide with troubleshooting tips and best practices.
+16. [Wikipedia: Raspberry Pi](https://en.wikipedia.org/wiki/Raspberry_Pi) - Comprehensive history, models comparison, and technical specifications.
+17. [Raspberry Pi NVMe Base](https://www.raspberrypi.com/products/m2-hat-plus/) - Official NVMe HAT for adding SSD storage to Raspberry Pi 5.
+18. [DigitalOcean: Raspberry Pi Initial Setup](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-raspberry-pi) - Community tutorial for initial configuration and security hardening.
+19. [Raspberry Pi Cooling Solutions](https://www.raspberrypi.com/products/active-cooler/) - Official active cooler and thermal management for Raspberry Pi 5.
+20. [Jeff Geerling's Raspberry Pi Blog](https://www.jeffgeerling.com/blog/raspberry-pi) - In-depth technical articles, benchmarks, and advanced Raspberry Pi projects.

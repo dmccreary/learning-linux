@@ -868,3 +868,26 @@ Now that you can edit files like a pro, it's time to start writing your own prog
     4. `:%s/old/new/g`
     5. `~/.vimrc`
     6. Deletes the entire current line
+
+## References
+
+1. [Vim Official Documentation](https://www.vim.org/docs.php) - Complete official reference for Vim including user manual, reference guide, and FAQ.
+2. [Vimtutor - Interactive Tutorial](https://vimschool.netlify.app/introduction/vimtutor/) - Guide to using the built-in vimtutor command for hands-on Vim learning.
+3. [OpenVim Interactive Tutorial](https://www.openvim.com/) - Browser-based interactive Vim tutorial for practicing commands without installation.
+4. [Nano Editor Guide](https://www.nano-editor.org/dist/latest/nano.html) - Official Nano documentation covering all commands and configuration options.
+5. [Vim Adventures - Learn Vim Through Gaming](https://vim-adventures.com/) - Fun game-based approach to learning Vim navigation and commands.
+6. [Vi and Vim Editors: Power and Agility](https://www.oreilly.com/library/view/learning-the-vi/9780596529833/) - O'Reilly book covering vi and Vim from basics to advanced topics.
+7. [A Vim Guide for Beginners](https://thevaluable.dev/vim-beginner/) - Comprehensive beginner-friendly guide explaining Vim's philosophy and core concepts.
+8. [Vim Cheat Sheet](https://vim.rtorr.com/) - Visual cheat sheet with all essential Vim commands organized by category.
+9. [Mastering the Vim Language](https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim/mastering-vim-language/) - Tutorial explaining Vim's grammar of operators, motions, and text objects.
+10. [Nano Tutorial for Beginners](https://linuxize.com/post/how-to-use-nano-text-editor/) - Linuxize guide to Nano basics, shortcuts, and configuration.
+11. [Practical Vim: Edit Text at the Speed of Thought](https://pragprog.com/titles/dnvim2/practical-vim-second-edition/) - Book focusing on efficient Vim workflows and productivity tips.
+12. [Vim for Programmers](https://www.viemu.com/a-why-vi-vim.html) - Article explaining why Vim's modal editing is powerful for coding.
+13. [Customizing Nano with Syntax Highlighting](https://www.if-not-true-then-false.com/2009/tuning-nano-text-editor-with-nanorc/) - Guide to configuring Nano's appearance and enabling syntax highlighting.
+14. [Vim Regex Tutorial](https://learnvim.irian.to/basics/search_and_substitute) - Learn Vim guide to search and replace with regular expressions.
+15. [The Vi/Vim Editor History](https://en.wikipedia.org/wiki/Vi) - Wikipedia article covering the history and evolution from vi to Vim.
+16. [Vim Plugins for Beginners](https://opensource.com/article/20/2/how-install-vim-plugins) - Introduction to extending Vim with plugins using vim-plug or Vundle.
+17. [Nano vs Vim vs Emacs](https://itsfoss.com/nano-vs-vim-vs-emacs/) - It's FOSS comparison of popular Linux text editors with pros and cons.
+18. [Vim Golf - Code in Fewest Keystrokes](https://www.vimgolf.com/) - Challenge site for practicing efficient Vim commands through puzzles.
+19. [Vim for VS Code Users](https://code.visualstudio.com/docs/editor/vim) - Guide to using the Vim extension in Visual Studio Code.
+20. [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/) - Step-by-step approach to learning Vim gradually without overwhelming beginners.
