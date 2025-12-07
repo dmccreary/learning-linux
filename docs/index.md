@@ -16,7 +16,7 @@ hide:
 
 ![Cover Image](./img/cover.png)
 
-Welcome to the Learning Linux [intelligent textbook](glossary.md#intelligent-textbook).
+Welcome to the Learning Linux [intelligent textbook](glossary.md).
 
 Please contact me on [LinkedIn](https://www.linkedin.com/in/danmccreary/)
 

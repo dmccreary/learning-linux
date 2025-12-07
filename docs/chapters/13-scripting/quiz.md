@@ -18,7 +18,7 @@ Test your understanding of shell scripts, automation, and cron jobs.
 
     **Concept Tested:** Script Shebang
 
-    **See:** [Chapter 13 - Shebang](index.md#the-shebang)
+    **See:** [Chapter 13 - Shebang](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of shell scripts, automation, and cron jobs.
 
     **Concept Tested:** Script Permissions
 
-    **See:** [Chapter 13 - Making Scripts Executable](index.md#script-permissions)
+    **See:** [Chapter 13 - Making Scripts Executable](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of shell scripts, automation, and cron jobs.
 
     **Concept Tested:** Script Arguments
 
-    **See:** [Chapter 13 - Script Arguments](index.md#script-arguments)
+    **See:** [Chapter 13 - Script Arguments](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of shell scripts, automation, and cron jobs.
 
     **Concept Tested:** Cron Daemon
 
-    **See:** [Chapter 13 - Cron](index.md#cron-daemon)
+    **See:** [Chapter 13 - Cron](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of shell scripts, automation, and cron jobs.
 
     **Concept Tested:** Cron Syntax, Cron Schedule Fields
 
-    **See:** [Chapter 13 - Cron Syntax](index.md#cron-syntax)
+    **See:** [Chapter 13 - Cron Syntax](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of shell scripts, automation, and cron jobs.
 
     **Concept Tested:** Crontab Command
 
-    **See:** [Chapter 13 - Crontab Command](index.md#crontab-command)
+    **See:** [Chapter 13 - Crontab Command](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of shell scripts, automation, and cron jobs.
 
     **Concept Tested:** Script Exit Codes
 
-    **See:** [Chapter 13 - Exit Codes](index.md#exit-codes)
+    **See:** [Chapter 13 - Exit Codes](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of shell scripts, automation, and cron jobs.
 
     **Concept Tested:** Script Best Practices
 
-    **See:** [Chapter 13 - Script Safety](index.md#set-options)
+    **See:** [Chapter 13 - Script Safety](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of shell scripts, automation, and cron jobs.
 
     **Concept Tested:** At Command
 
-    **See:** [Chapter 13 - At Command](index.md#at-command)
+    **See:** [Chapter 13 - At Command](index.md)
 
 ---
 

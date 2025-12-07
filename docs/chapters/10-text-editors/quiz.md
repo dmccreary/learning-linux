@@ -18,7 +18,7 @@ Test your understanding of command-line text editors.
 
     **Concept Tested:** Nano Editor
 
-    **See:** [Chapter 10 - Nano Editor](index.md#nano-editor)
+    **See:** [Chapter 10 - Nano Editor](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of command-line text editors.
 
     **Concept Tested:** Nano Editor
 
-    **See:** [Chapter 10 - Nano Commands](index.md#nano-commands)
+    **See:** [Chapter 10 - Nano Commands](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of command-line text editors.
 
     **Concept Tested:** Vim Editor, Vim Modes
 
-    **See:** [Chapter 10 - Vim Modes](index.md#vim-modes)
+    **See:** [Chapter 10 - Vim Modes](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of command-line text editors.
 
     **Concept Tested:** Vim Commands
 
-    **See:** [Chapter 10 - Vim Commands](index.md#saving-and-quitting)
+    **See:** [Chapter 10 - Vim Commands](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of command-line text editors.
 
     **Concept Tested:** Vim Insert Mode
 
-    **See:** [Chapter 10 - Entering Insert Mode](index.md#insert-mode)
+    **See:** [Chapter 10 - Entering Insert Mode](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of command-line text editors.
 
     **Concept Tested:** Vim Commands
 
-    **See:** [Chapter 10 - Vim Editing](index.md#deleting-text)
+    **See:** [Chapter 10 - Vim Editing](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of command-line text editors.
 
     **Concept Tested:** Vim Commands
 
-    **See:** [Chapter 10 - Undo and Redo](index.md#undo-redo)
+    **See:** [Chapter 10 - Undo and Redo](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of command-line text editors.
 
     **Concept Tested:** Vim Copy and Paste
 
-    **See:** [Chapter 10 - Copy and Paste](index.md#copying-and-pasting)
+    **See:** [Chapter 10 - Copy and Paste](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of command-line text editors.
 
     **Concept Tested:** Vim Commands
 
-    **See:** [Chapter 10 - Exiting Vim](index.md#quitting-vim)
+    **See:** [Chapter 10 - Exiting Vim](index.md)

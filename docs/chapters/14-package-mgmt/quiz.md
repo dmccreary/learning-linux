@@ -18,7 +18,7 @@ Test your understanding of software installation and package management.
 
     **Concept Tested:** APT Package Manager
 
-    **See:** [Chapter 14 - APT](index.md#apt-package-manager)
+    **See:** [Chapter 14 - APT](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of software installation and package management.
 
     **Concept Tested:** Apt Update
 
-    **See:** [Chapter 14 - Apt Update](index.md#apt-update)
+    **See:** [Chapter 14 - Apt Update](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of software installation and package management.
 
     **Concept Tested:** Apt Upgrade
 
-    **See:** [Chapter 14 - Apt Upgrade](index.md#apt-upgrade)
+    **See:** [Chapter 14 - Apt Upgrade](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of software installation and package management.
 
     **Concept Tested:** Apt Install
 
-    **See:** [Chapter 14 - Installing Packages](index.md#apt-install)
+    **See:** [Chapter 14 - Installing Packages](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of software installation and package management.
 
     **Concept Tested:** Apt Search
 
-    **See:** [Chapter 14 - Searching Packages](index.md#apt-search)
+    **See:** [Chapter 14 - Searching Packages](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of software installation and package management.
 
     **Concept Tested:** Software Repositories
 
-    **See:** [Chapter 14 - Repositories](index.md#repositories)
+    **See:** [Chapter 14 - Repositories](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of software installation and package management.
 
     **Concept Tested:** Apt Remove
 
-    **See:** [Chapter 14 - Removing Packages](index.md#apt-remove)
+    **See:** [Chapter 14 - Removing Packages](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of software installation and package management.
 
     **Concept Tested:** System Maintenance
 
-    **See:** [Chapter 14 - Autoremove](index.md#apt-autoremove)
+    **See:** [Chapter 14 - Autoremove](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of software installation and package management.
 
     **Concept Tested:** Apt Show
 
-    **See:** [Chapter 14 - Package Information](index.md#apt-show)
+    **See:** [Chapter 14 - Package Information](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of software installation and package management.
 
     **Concept Tested:** DEB Packages
 
-    **See:** [Chapter 14 - Manual Installation](index.md#deb-packages)
+    **See:** [Chapter 14 - Manual Installation](index.md)

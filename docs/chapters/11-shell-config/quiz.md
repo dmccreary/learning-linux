@@ -18,7 +18,7 @@ Test your understanding of environment variables, aliases, and shell configurati
 
     **Concept Tested:** Environment Variables
 
-    **See:** [Chapter 11 - Environment Variables](index.md#environment-variables)
+    **See:** [Chapter 11 - Environment Variables](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of environment variables, aliases, and shell configurati
 
     **Concept Tested:** Environment Variables, Echo Command
 
-    **See:** [Chapter 11 - Viewing Variables](index.md#viewing-variables)
+    **See:** [Chapter 11 - Viewing Variables](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of environment variables, aliases, and shell configurati
 
     **Concept Tested:** PATH Variable
 
-    **See:** [Chapter 11 - PATH Variable](index.md#path-variable)
+    **See:** [Chapter 11 - PATH Variable](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of environment variables, aliases, and shell configurati
 
     **Concept Tested:** Alias Command
 
-    **See:** [Chapter 11 - Aliases](index.md#aliases)
+    **See:** [Chapter 11 - Aliases](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of environment variables, aliases, and shell configurati
 
     **Concept Tested:** Bashrc File
 
-    **See:** [Chapter 11 - Bashrc](index.md#bashrc-file)
+    **See:** [Chapter 11 - Bashrc](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of environment variables, aliases, and shell configurati
 
     **Concept Tested:** Export Command
 
-    **See:** [Chapter 11 - Exporting Variables](index.md#export-command)
+    **See:** [Chapter 11 - Exporting Variables](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of environment variables, aliases, and shell configurati
 
     **Concept Tested:** Source Command
 
-    **See:** [Chapter 11 - Sourcing Files](index.md#source-command)
+    **See:** [Chapter 11 - Sourcing Files](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of environment variables, aliases, and shell configurati
 
     **Concept Tested:** Shell Prompt, PS1
 
-    **See:** [Chapter 11 - Customizing the Prompt](index.md#ps1-prompt)
+    **See:** [Chapter 11 - Customizing the Prompt](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of environment variables, aliases, and shell configurati
 
     **Concept Tested:** Shell Configuration Files
 
-    **See:** [Chapter 11 - Configuration Files](index.md#configuration-files)
+    **See:** [Chapter 11 - Configuration Files](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of environment variables, aliases, and shell configurati
 
     **Concept Tested:** Environment Variables
 
-    **See:** [Chapter 11 - Temporary Variables](index.md#temporary-variables)
+    **See:** [Chapter 11 - Temporary Variables](index.md)

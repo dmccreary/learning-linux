@@ -36,7 +36,7 @@ Test your understanding of task automation, cron, and terminal customization.
 
     **Concept Tested:** Cron Syntax
 
-    **See:** [Chapter 24 - Cron Syntax](index.md#cron-syntax)
+    **See:** [Chapter 24 - Cron Syntax](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of task automation, cron, and terminal customization.
 
     **Concept Tested:** Terminal Customization
 
-    **See:** [Chapter 24 - PS1 Customization](index.md#ps1-prompt-customization)
+    **See:** [Chapter 24 - PS1 Customization](index.md)
 
 ---
 

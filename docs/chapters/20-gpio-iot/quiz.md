@@ -18,7 +18,7 @@ Test your understanding of GPIO, sensors, and IoT concepts.
 
     **Concept Tested:** GPIO Pins
 
-    **See:** [Chapter 20 - GPIO Overview](index.md#gpio-overview)
+    **See:** [Chapter 20 - GPIO Overview](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of GPIO, sensors, and IoT concepts.
 
     **Concept Tested:** GPIO Pin Types
 
-    **See:** [Chapter 20 - Pin Types](index.md#pin-types)
+    **See:** [Chapter 20 - Pin Types](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of GPIO, sensors, and IoT concepts.
 
     **Concept Tested:** I2C Protocol
 
-    **See:** [Chapter 20 - I2C](index.md#i2c-protocol)
+    **See:** [Chapter 20 - I2C](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of GPIO, sensors, and IoT concepts.
 
     **Concept Tested:** GPIO Voltage Safety
 
-    **See:** [Chapter 20 - Voltage Safety](index.md#voltage-safety)
+    **See:** [Chapter 20 - Voltage Safety](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of GPIO, sensors, and IoT concepts.
 
     **Concept Tested:** GPIO Programming
 
-    **See:** [Chapter 20 - GPIO Libraries](index.md#gpio-libraries)
+    **See:** [Chapter 20 - GPIO Libraries](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of GPIO, sensors, and IoT concepts.
 
     **Concept Tested:** PWM
 
-    **See:** [Chapter 20 - PWM](index.md#pwm)
+    **See:** [Chapter 20 - PWM](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of GPIO, sensors, and IoT concepts.
 
     **Concept Tested:** IoT Concept
 
-    **See:** [Chapter 20 - IoT](index.md#iot-overview)
+    **See:** [Chapter 20 - IoT](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of GPIO, sensors, and IoT concepts.
 
     **Concept Tested:** MQTT Protocol
 
-    **See:** [Chapter 20 - MQTT](index.md#mqtt)
+    **See:** [Chapter 20 - MQTT](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of GPIO, sensors, and IoT concepts.
 
     **Concept Tested:** Breadboard
 
-    **See:** [Chapter 20 - Breadboard](index.md#breadboard)
+    **See:** [Chapter 20 - Breadboard](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of GPIO, sensors, and IoT concepts.
 
     **Concept Tested:** SPI Protocol
 
-    **See:** [Chapter 20 - SPI](index.md#spi-protocol)
+    **See:** [Chapter 20 - SPI](index.md)

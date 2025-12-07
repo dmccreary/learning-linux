@@ -18,7 +18,7 @@ Test your understanding of Linux's permission system and user management.
 
     **Concept Tested:** Owner Permissions, Group Permissions, Other Permissions
 
-    **See:** [Chapter 7 - Permission Categories](index.md#permission-categories)
+    **See:** [Chapter 7 - Permission Categories](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of Linux's permission system and user management.
 
     **Concept Tested:** Permission Notation
 
-    **See:** [Chapter 7 - Reading Permissions](index.md#reading-permissions)
+    **See:** [Chapter 7 - Reading Permissions](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of Linux's permission system and user management.
 
     **Concept Tested:** Numeric Permissions
 
-    **See:** [Chapter 7 - Numeric Permissions](index.md#numeric-permissions)
+    **See:** [Chapter 7 - Numeric Permissions](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of Linux's permission system and user management.
 
     **Concept Tested:** Chmod Command
 
-    **See:** [Chapter 7 - Chmod Command](index.md#chmod-command)
+    **See:** [Chapter 7 - Chmod Command](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of Linux's permission system and user management.
 
     **Concept Tested:** Root User
 
-    **See:** [Chapter 7 - Root User](index.md#root-user)
+    **See:** [Chapter 7 - Root User](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of Linux's permission system and user management.
 
     **Concept Tested:** Sudo Command
 
-    **See:** [Chapter 7 - Sudo Command](index.md#sudo-command)
+    **See:** [Chapter 7 - Sudo Command](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of Linux's permission system and user management.
 
     **Concept Tested:** Chown Command
 
-    **See:** [Chapter 7 - Chown Command](index.md#chown-command)
+    **See:** [Chapter 7 - Chown Command](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of Linux's permission system and user management.
 
     **Concept Tested:** Sticky Bit, Special Permissions
 
-    **See:** [Chapter 7 - Sticky Bit](index.md#sticky-bit)
+    **See:** [Chapter 7 - Sticky Bit](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of Linux's permission system and user management.
 
     **Concept Tested:** Umask Command, Default Permissions
 
-    **See:** [Chapter 7 - Umask](index.md#umask-command)
+    **See:** [Chapter 7 - Umask](index.md)

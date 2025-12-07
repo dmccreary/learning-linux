@@ -18,7 +18,7 @@ Test your understanding of Docker, containers, and cloud concepts.
 
     **Concept Tested:** Containers
 
-    **See:** [Chapter 21 - What are Containers](index.md#what-are-containers)
+    **See:** [Chapter 21 - What are Containers](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of Docker, containers, and cloud concepts.
 
     **Concept Tested:** Docker
 
-    **See:** [Chapter 21 - Docker](index.md#docker)
+    **See:** [Chapter 21 - Docker](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of Docker, containers, and cloud concepts.
 
     **Concept Tested:** Docker Images
 
-    **See:** [Chapter 21 - Docker Images](index.md#docker-images)
+    **See:** [Chapter 21 - Docker Images](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of Docker, containers, and cloud concepts.
 
     **Concept Tested:** Containers vs VMs
 
-    **See:** [Chapter 21 - Containers vs VMs](index.md#containers-vs-vms)
+    **See:** [Chapter 21 - Containers vs VMs](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of Docker, containers, and cloud concepts.
 
     **Concept Tested:** Docker Commands
 
-    **See:** [Chapter 21 - Docker Run](index.md#docker-run)
+    **See:** [Chapter 21 - Docker Run](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of Docker, containers, and cloud concepts.
 
     **Concept Tested:** Docker Hub
 
-    **See:** [Chapter 21 - Docker Hub](index.md#docker-hub)
+    **See:** [Chapter 21 - Docker Hub](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of Docker, containers, and cloud concepts.
 
     **Concept Tested:** Dockerfile
 
-    **See:** [Chapter 21 - Dockerfile](index.md#dockerfile)
+    **See:** [Chapter 21 - Dockerfile](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of Docker, containers, and cloud concepts.
 
     **Concept Tested:** Kubernetes
 
-    **See:** [Chapter 21 - Kubernetes](index.md#kubernetes)
+    **See:** [Chapter 21 - Kubernetes](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of Docker, containers, and cloud concepts.
 
     **Concept Tested:** Cloud Computing
 
-    **See:** [Chapter 21 - Cloud Computing](index.md#cloud-computing)
+    **See:** [Chapter 21 - Cloud Computing](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of Docker, containers, and cloud concepts.
 
     **Concept Tested:** Terraform
 
-    **See:** [Chapter 21 - Terraform](index.md#terraform)
+    **See:** [Chapter 21 - Terraform](index.md)

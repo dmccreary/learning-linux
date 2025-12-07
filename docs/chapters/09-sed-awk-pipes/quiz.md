@@ -18,7 +18,7 @@ Test your understanding of stream editing, data processing, and command pipeline
 
     **Concept Tested:** Pipe Operator
 
-    **See:** [Chapter 9 - Pipes](index.md#the-pipe-operator)
+    **See:** [Chapter 9 - Pipes](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of stream editing, data processing, and command pipeline
 
     **Concept Tested:** Sed Command, Text Substitution
 
-    **See:** [Chapter 9 - Sed Substitution](index.md#sed-substitution)
+    **See:** [Chapter 9 - Sed Substitution](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of stream editing, data processing, and command pipeline
 
     **Concept Tested:** Awk Command
 
-    **See:** [Chapter 9 - Awk Basics](index.md#awk-command)
+    **See:** [Chapter 9 - Awk Basics](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of stream editing, data processing, and command pipeline
 
     **Concept Tested:** Standard Error, Redirection
 
-    **See:** [Chapter 9 - Error Redirection](index.md#error-redirection)
+    **See:** [Chapter 9 - Error Redirection](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of stream editing, data processing, and command pipeline
 
     **Concept Tested:** Sort Command
 
-    **See:** [Chapter 9 - Sort Command](index.md#sort-command)
+    **See:** [Chapter 9 - Sort Command](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of stream editing, data processing, and command pipeline
 
     **Concept Tested:** Uniq Command
 
-    **See:** [Chapter 9 - Uniq Command](index.md#uniq-command)
+    **See:** [Chapter 9 - Uniq Command](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of stream editing, data processing, and command pipeline
 
     **Concept Tested:** Tr Command
 
-    **See:** [Chapter 9 - Tr Command](index.md#tr-command)
+    **See:** [Chapter 9 - Tr Command](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of stream editing, data processing, and command pipeline
 
     **Concept Tested:** Redirection
 
-    **See:** [Chapter 9 - Combined Redirection](index.md#combined-redirection)
+    **See:** [Chapter 9 - Combined Redirection](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of stream editing, data processing, and command pipeline
 
     **Concept Tested:** Cut Command
 
-    **See:** [Chapter 9 - Cut Command](index.md#cut-command)
+    **See:** [Chapter 9 - Cut Command](index.md)

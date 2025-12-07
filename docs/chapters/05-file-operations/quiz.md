@@ -18,7 +18,7 @@ Test your understanding of creating, copying, moving, and deleting files and dir
 
     **Concept Tested:** Touch Command
 
-    **See:** [Chapter 5 - Touch Command](index.md#touch-command)
+    **See:** [Chapter 5 - Touch Command](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of creating, copying, moving, and deleting files and dir
 
     **Concept Tested:** Mkdir Command
 
-    **See:** [Chapter 5 - Mkdir Command](index.md#mkdir-command)
+    **See:** [Chapter 5 - Mkdir Command](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of creating, copying, moving, and deleting files and dir
 
     **Concept Tested:** Cp Command, Recursive Copy
 
-    **See:** [Chapter 5 - Cp Command](index.md#cp-command)
+    **See:** [Chapter 5 - Cp Command](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of creating, copying, moving, and deleting files and dir
 
     **Concept Tested:** Mv Command, Cp Command
 
-    **See:** [Chapter 5 - Mv Command](index.md#mv-command)
+    **See:** [Chapter 5 - Mv Command](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of creating, copying, moving, and deleting files and dir
 
     **Concept Tested:** Mv Command
 
-    **See:** [Chapter 5 - Renaming Files](index.md#renaming-files)
+    **See:** [Chapter 5 - Renaming Files](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of creating, copying, moving, and deleting files and dir
 
     **Concept Tested:** Rm Command
 
-    **See:** [Chapter 5 - Rm Command](index.md#rm-command)
+    **See:** [Chapter 5 - Rm Command](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of creating, copying, moving, and deleting files and dir
 
     **Concept Tested:** Cat Command
 
-    **See:** [Chapter 5 - Cat Command](index.md#cat-command)
+    **See:** [Chapter 5 - Cat Command](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of creating, copying, moving, and deleting files and dir
 
     **Concept Tested:** Head Command, Tail Command
 
-    **See:** [Chapter 5 - Head and Tail](index.md#head-and-tail)
+    **See:** [Chapter 5 - Head and Tail](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of creating, copying, moving, and deleting files and dir
 
     **Concept Tested:** Wc Command
 
-    **See:** [Chapter 5 - Wc Command](index.md#wc-command)
+    **See:** [Chapter 5 - Wc Command](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of creating, copying, moving, and deleting files and dir
 
     **Concept Tested:** Rmdir Command
 
-    **See:** [Chapter 5 - Rmdir Command](index.md#rmdir-command)
+    **See:** [Chapter 5 - Rmdir Command](index.md)

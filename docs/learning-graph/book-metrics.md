@@ -14,7 +14,7 @@ This file contains overall metrics for the intelligent textbook.
 | Chapters | 26 | [Chapters](../chapters/index.md) | Number of chapter directories |
 | Concepts | 550 | [Concept List](./concept-list.md) | Concepts from learning graph |
 | Glossary Terms | 540 | [Glossary](../glossary.md) | Defined terms |
-| FAQs | 0 | [FAQ](../faq.md) | Frequently asked questions |
+| FAQs | 0 | [FAQ](../faqs.md) | Frequently asked questions |
 | Quiz Questions | 260 | - | Questions across all chapters |
 | MicroSims | 2 | [Simulations](../sims/index.md) | Interactive MicroSims |
 

@@ -18,7 +18,7 @@ Test your understanding of pattern matching and text searching.
 
     **Concept Tested:** Grep Command
 
-    **See:** [Chapter 8 - Grep Command](index.md#grep-command)
+    **See:** [Chapter 8 - Grep Command](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of pattern matching and text searching.
 
     **Concept Tested:** Grep Options
 
-    **See:** [Chapter 8 - Grep Options](index.md#grep-options)
+    **See:** [Chapter 8 - Grep Options](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of pattern matching and text searching.
 
     **Concept Tested:** Regular Expressions
 
-    **See:** [Chapter 8 - Regex Basics](index.md#regex-metacharacters)
+    **See:** [Chapter 8 - Regex Basics](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of pattern matching and text searching.
 
     **Concept Tested:** Regular Expressions, Anchors
 
-    **See:** [Chapter 8 - Anchors](index.md#anchors)
+    **See:** [Chapter 8 - Anchors](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of pattern matching and text searching.
 
     **Concept Tested:** Grep Options, Recursive Search
 
-    **See:** [Chapter 8 - Recursive Search](index.md#recursive-search)
+    **See:** [Chapter 8 - Recursive Search](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of pattern matching and text searching.
 
     **Concept Tested:** Regular Expressions, Quantifiers
 
-    **See:** [Chapter 8 - Quantifiers](index.md#quantifiers)
+    **See:** [Chapter 8 - Quantifiers](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of pattern matching and text searching.
 
     **Concept Tested:** Regular Expressions, Character Classes
 
-    **See:** [Chapter 8 - Character Classes](index.md#character-classes)
+    **See:** [Chapter 8 - Character Classes](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of pattern matching and text searching.
 
     **Concept Tested:** Grep Options
 
-    **See:** [Chapter 8 - Counting Matches](index.md#counting-matches)
+    **See:** [Chapter 8 - Counting Matches](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of pattern matching and text searching.
 
     **Concept Tested:** Extended Regular Expressions
 
-    **See:** [Chapter 8 - Extended Regex](index.md#extended-regular-expressions)
+    **See:** [Chapter 8 - Extended Regex](index.md)

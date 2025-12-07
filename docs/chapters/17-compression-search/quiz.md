@@ -18,7 +18,7 @@ Test your understanding of file compression and search tools.
 
     **Concept Tested:** Tar Command
 
-    **See:** [Chapter 17 - Tar Command](index.md#tar-command)
+    **See:** [Chapter 17 - Tar Command](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of file compression and search tools.
 
     **Concept Tested:** Tar Options
 
-    **See:** [Chapter 17 - Creating Archives](index.md#creating-archives)
+    **See:** [Chapter 17 - Creating Archives](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of file compression and search tools.
 
     **Concept Tested:** Extracting Archives
 
-    **See:** [Chapter 17 - Extracting Archives](index.md#extracting-archives)
+    **See:** [Chapter 17 - Extracting Archives](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of file compression and search tools.
 
     **Concept Tested:** Gzip vs Zip
 
-    **See:** [Chapter 17 - Compression Tools](index.md#compression-tools)
+    **See:** [Chapter 17 - Compression Tools](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of file compression and search tools.
 
     **Concept Tested:** Find Command
 
-    **See:** [Chapter 17 - Find Command](index.md#find-command)
+    **See:** [Chapter 17 - Find Command](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of file compression and search tools.
 
     **Concept Tested:** Find Options
 
-    **See:** [Chapter 17 - Find by Time](index.md#find-by-time)
+    **See:** [Chapter 17 - Find by Time](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of file compression and search tools.
 
     **Concept Tested:** Locate Command
 
-    **See:** [Chapter 17 - Locate Command](index.md#locate-command)
+    **See:** [Chapter 17 - Locate Command](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of file compression and search tools.
 
     **Concept Tested:** Which Command
 
-    **See:** [Chapter 17 - Which Command](index.md#which-command)
+    **See:** [Chapter 17 - Which Command](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of file compression and search tools.
 
     **Concept Tested:** Xz Compression
 
-    **See:** [Chapter 17 - Xz Command](index.md#xz-command)
+    **See:** [Chapter 17 - Xz Command](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of file compression and search tools.
 
     **Concept Tested:** Find by Size
 
-    **See:** [Chapter 17 - Finding Large Files](index.md#find-by-size)
+    **See:** [Chapter 17 - Finding Large Files](index.md)

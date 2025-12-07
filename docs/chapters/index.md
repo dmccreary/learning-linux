@@ -27,7 +27,7 @@ This textbook is organized into 26 chapters covering 550 concepts across Linux f
 21. [Cloud Computing and Containers](21-cloud-containers/index.md) - Docker, cloud instances, and Terraform
 22. [Development Tools and Version Control](22-dev-tools/index.md) - Git, GitHub, Python, and IDEs
 23. [System Administration Essentials](23-sys-admin/index.md) - User management, services, and system configuration
-24. [Terminal Customization and Fun](24-customization/index.md) - Custom prompts, colors, and easter eggs
+24. [Automation and Some Fun](24-automation/index.md) - Automate tasks, custom prompts, colors, and easter eggs
 25. [Capstone Projects](25-capstone/index.md) - Web servers, game servers, and hands-on projects
 26. [Linux Careers and the Future](26-careers/index.md) - Career paths, certifications, and future trends
 

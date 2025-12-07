@@ -18,7 +18,7 @@ Test your understanding of disk management and performance monitoring.
 
     **Concept Tested:** Df Command
 
-    **See:** [Chapter 18 - Df Command](index.md#df-command)
+    **See:** [Chapter 18 - Df Command](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of disk management and performance monitoring.
 
     **Concept Tested:** Du Command
 
-    **See:** [Chapter 18 - Du Command](index.md#du-command)
+    **See:** [Chapter 18 - Du Command](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of disk management and performance monitoring.
 
     **Concept Tested:** Mounting Filesystems
 
-    **See:** [Chapter 18 - Mounting](index.md#mounting-filesystems)
+    **See:** [Chapter 18 - Mounting](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of disk management and performance monitoring.
 
     **Concept Tested:** Lsblk Command
 
-    **See:** [Chapter 18 - Listing Devices](index.md#lsblk-command)
+    **See:** [Chapter 18 - Listing Devices](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of disk management and performance monitoring.
 
     **Concept Tested:** Free Command
 
-    **See:** [Chapter 18 - Memory Usage](index.md#free-command)
+    **See:** [Chapter 18 - Memory Usage](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of disk management and performance monitoring.
 
     **Concept Tested:** Swap Space
 
-    **See:** [Chapter 18 - Swap](index.md#swap-space)
+    **See:** [Chapter 18 - Swap](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of disk management and performance monitoring.
 
     **Concept Tested:** Mount Command
 
-    **See:** [Chapter 18 - Mount Command](index.md#mount-command)
+    **See:** [Chapter 18 - Mount Command](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of disk management and performance monitoring.
 
     **Concept Tested:** Umount Command
 
-    **See:** [Chapter 18 - Unmounting](index.md#unmounting)
+    **See:** [Chapter 18 - Unmounting](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of disk management and performance monitoring.
 
     **Concept Tested:** Htop Command
 
-    **See:** [Chapter 18 - Htop](index.md#htop-command)
+    **See:** [Chapter 18 - Htop](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of disk management and performance monitoring.
 
     **Concept Tested:** Fstab Configuration
 
-    **See:** [Chapter 18 - Fstab](index.md#fstab)
+    **See:** [Chapter 18 - Fstab](index.md)

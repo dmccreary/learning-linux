@@ -83,11 +83,11 @@ The **file system** is how Linux organizes and stores files on disk. Unlike Wind
 
 ### What is the root directory?
 
-The **root directory** `/` is the top of the Linux file system hierarchy. All other directories branch from it. Don't confuse this with the root user (superuser) or the /root directory (root user's home). The root directory is like the trunk of a tree from which all branches grow. See [Chapter 4](chapters/04-file-system/index.md#the-root-directory).
+The **root directory** `/` is the top of the Linux file system hierarchy. All other directories branch from it. Don't confuse this with the root user (superuser) or the /root directory (root user's home). The root directory is like the trunk of a tree from which all branches grow. See [Chapter 4](chapters/04-file-system/index.md).
 
 ### What is my home directory?
 
-Your **home directory** is your personal space at `/home/username` (or `/Users/username` on Mac). It contains your files, configurations, and settings. The shortcut `~` (tilde) represents your home directory, so `cd ~` takes you home from anywhere. See [Chapter 4](chapters/04-file-system/index.md#home-directory).
+Your **home directory** is your personal space at `/home/username` (or `/Users/username` on Mac). It contains your files, configurations, and settings. The shortcut `~` (tilde) represents your home directory, so `cd ~` takes you home from anywhere. See [Chapter 4](chapters/04-file-system/index.md).
 
 ### What are file permissions?
 
@@ -95,11 +95,11 @@ Your **home directory** is your personal space at `/home/username` (or `/Users/u
 
 ### What is chmod?
 
-The **chmod** (change mode) command modifies file permissions. You can use symbolic mode (`chmod u+x file`) or numeric mode (`chmod 755 file`). Understanding chmod is essential for running scripts and securing files. See [Chapter 7](chapters/07-permissions/index.md#chmod-command).
+The **chmod** (change mode) command modifies file permissions. You can use symbolic mode (`chmod u+x file`) or numeric mode (`chmod 755 file`). Understanding chmod is essential for running scripts and securing files. See [Chapter 7](chapters/07-permissions/index.md).
 
 ### What is sudo?
 
-**Sudo** (superuser do) lets you run commands with administrator privileges. Instead of logging in as root (dangerous!), you prefix commands with sudo to temporarily gain elevated access. For example, `sudo apt update` updates packages with admin rights. See [Chapter 7](chapters/07-permissions/index.md#sudo-command).
+**Sudo** (superuser do) lets you run commands with administrator privileges. Instead of logging in as root (dangerous!), you prefix commands with sudo to temporarily gain elevated access. For example, `sudo apt update` updates packages with admin rights. See [Chapter 7](chapters/07-permissions/index.md).
 
 ### What is a process?
 
@@ -116,7 +116,7 @@ These are the three standard streams in Linux:
 - **stdout (1)**: Standard output (terminal by default)
 - **stderr (2)**: Standard error (terminal by default)
 
-You can redirect these using `<`, `>`, and `2>`. See [Chapter 9](chapters/09-sed-awk-pipes/index.md#redirection).
+You can redirect these using `<`, `>`, and `2>`. See [Chapter 9](chapters/09-sed-awk-pipes/index.md).
 
 ### What is an environment variable?
 
@@ -124,7 +124,7 @@ You can redirect these using `<`, `>`, and `2>`. See [Chapter 9](chapters/09-sed
 
 ### What is PATH?
 
-**PATH** is an environment variable listing directories where the shell looks for executable commands. When you type `python`, the shell searches each PATH directory until it finds the program. Incorrect PATH settings cause "command not found" errors. See [Chapter 11](chapters/11-shell-config/index.md#path-variable).
+**PATH** is an environment variable listing directories where the shell looks for executable commands. When you type `python`, the shell searches each PATH directory until it finds the program. Incorrect PATH settings cause "command not found" errors. See [Chapter 11](chapters/11-shell-config/index.md).
 
 ---
 
@@ -132,7 +132,7 @@ You can redirect these using `<`, `>`, and `2>`. See [Chapter 9](chapters/09-sed
 
 ### What does ls -la show?
 
-The command `ls -la` lists all files (including hidden ones starting with `.`) in long format showing permissions, owner, group, size, date, and filename. The `-l` flag means long format; `-a` means all files. See [Chapter 4](chapters/04-file-system/index.md#ls-command).
+The command `ls -la` lists all files (including hidden ones starting with `.`) in long format showing permissions, owner, group, size, date, and filename. The `-l` flag means long format; `-a` means all files. See [Chapter 4](chapters/04-file-system/index.md).
 
 ### What is the difference between rm and rmdir?
 
@@ -144,7 +144,7 @@ The command `ls -la` lists all files (including hidden ones starting with `.`) i
 
 ### What are regular expressions?
 
-**Regular expressions (regex)** are patterns for matching text. Special characters like `.` (any character), `*` (zero or more), and `^` (start of line) create powerful search patterns. Example: `grep "^error" log.txt` finds lines starting with "error". See [Chapter 8](chapters/08-grep-regex/index.md#regular-expressions).
+**Regular expressions (regex)** are patterns for matching text. Special characters like `.` (any character), `*` (zero or more), and `^` (start of line) create powerful search patterns. Example: `grep "^error" log.txt` finds lines starting with "error". See [Chapter 8](chapters/08-grep-regex/index.md).
 
 ### What is the difference between apt and brew?
 
@@ -200,7 +200,7 @@ This error occurs when you lack the necessary permissions. Solutions:
 3. Use `chmod` to add execute permission for scripts
 4. Ensure you own the file (`chown`)
 
-See [Chapter 7: Permissions](chapters/07-permissions/index.md#common-permission-errors).
+See [Chapter 7: Permissions](chapters/07-permissions/index.md).
 
 ### Why do I get "command not found"?
 
@@ -210,7 +210,7 @@ This error means the command isn't in your PATH. Fixes:
 3. Use the full path (`/usr/bin/command`)
 4. Check PATH with `echo $PATH`
 
-See [Chapter 11](chapters/11-shell-config/index.md#path-variable).
+See [Chapter 11](chapters/11-shell-config/index.md).
 
 ### How do I stop a running command?
 
@@ -218,7 +218,7 @@ See [Chapter 11](chapters/11-shell-config/index.md#path-variable).
 - **Ctrl+Z**: Suspend the command (use `fg` to resume, `bg` for background)
 - **Ctrl+D**: Send end-of-file (exits shells and programs waiting for input)
 
-See [Chapter 12: Process Management](chapters/12-processes/index.md#job-control).
+See [Chapter 12: Process Management](chapters/12-processes/index.md).
 
 ### How do I delete a file that starts with a dash?
 
@@ -236,7 +236,7 @@ Common issues:
 3. **Wrong path**: Use `./script.sh` not just `script.sh`
 4. **Windows line endings**: Fix with `dos2unix script.sh`
 
-See [Chapter 13: Shell Scripting](chapters/13-scripting/index.md#script-permissions).
+See [Chapter 13: Shell Scripting](chapters/13-scripting/index.md).
 
 ### How do I find a file?
 
@@ -246,7 +246,7 @@ Multiple approaches:
 - **which**: Find commands: `which python`
 - **whereis**: Find binaries, sources, manuals: `whereis bash`
 
-See [Chapter 17: Compression and Search](chapters/17-compression-search/index.md#finding-files).
+See [Chapter 17: Compression and Search](chapters/17-compression-search/index.md).
 
 ### How do I see what's using disk space?
 
@@ -264,7 +264,7 @@ Use `top` or `htop` to identify the process, then:
 - Use `nice` or `renice` to lower priority
 - Kill with `kill PID` or `kill -9 PID` (force kill)
 
-See [Chapter 12: Process Management](chapters/12-processes/index.md#monitoring-processes).
+See [Chapter 12: Process Management](chapters/12-processes/index.md).
 
 ### How do I safely shutdown my Raspberry Pi?
 
@@ -273,7 +273,7 @@ Never just unplug the power! Use:
 - `sudo shutdown -h +5` - Shutdown in 5 minutes
 - `sudo reboot` - Restart
 
-Improper shutdown can corrupt the SD card. See [Chapter 19](chapters/19-raspberry-pi/index.md#safe-shutdown).
+Improper shutdown can corrupt the SD card. See [Chapter 19](chapters/19-raspberry-pi/index.md).
 
 ---
 
@@ -281,7 +281,7 @@ Improper shutdown can corrupt the SD card. See [Chapter 19](chapters/19-raspberr
 
 ### Should I always use sudo?
 
-No! Only use sudo when necessary for system administration. Running everything as sudo is dangerous—you could accidentally delete system files. The principle of least privilege: use only the permissions you need. See [Chapter 7](chapters/07-permissions/index.md#sudo-safety).
+No! Only use sudo when necessary for system administration. Running everything as sudo is dangerous—you could accidentally delete system files. The principle of least privilege: use only the permissions you need. See [Chapter 7](chapters/07-permissions/index.md).
 
 ### How should I organize my files?
 
@@ -291,7 +291,7 @@ Follow the XDG Base Directory standard:
 - `~/Projects`: Your coding projects
 - `~/.config`: Application configurations
 
-Create meaningful subdirectories and use clear naming conventions. See [Chapter 4](chapters/04-file-system/index.md#home-directory).
+Create meaningful subdirectories and use clear naming conventions. See [Chapter 4](chapters/04-file-system/index.md).
 
 ### What's the best way to backup my files?
 
@@ -301,7 +301,7 @@ Multiple approaches:
 - **Git**: Version control for code projects
 - **Automated scripts**: Use cron to schedule backups
 
-Follow the 3-2-1 rule: 3 copies, 2 different media, 1 offsite. See [Chapter 17](chapters/17-compression-search/index.md#backup-strategies).
+Follow the 3-2-1 rule: 3 copies, 2 different media, 1 offsite. See [Chapter 17](chapters/17-compression-search/index.md).
 
 ### How do I write clean shell scripts?
 
@@ -313,7 +313,7 @@ Best practices:
 5. Check command success with exit codes
 6. Use `set -e` to exit on errors
 
-See [Chapter 13: Shell Scripting](chapters/13-scripting/index.md#best-practices).
+See [Chapter 13: Shell Scripting](chapters/13-scripting/index.md).
 
 ### How do I secure my Linux system?
 
@@ -332,7 +332,7 @@ See [Chapter 16: SSH and Security](chapters/16-ssh-security/index.md).
 - **Absolute paths** (`/home/user/file`): Use in scripts, cron jobs, and configurations where reliability is essential
 - **Relative paths** (`./file` or `../folder/file`): Use for convenience when working interactively
 
-Scripts should generally use absolute paths to avoid surprises. See [Chapter 4](chapters/04-file-system/index.md#paths).
+Scripts should generally use absolute paths to avoid surprises. See [Chapter 4](chapters/04-file-system/index.md).
 
 ### How do I keep my system clean?
 
@@ -343,7 +343,7 @@ Regular maintenance:
 - Remove old files from ~/Downloads
 - Use `du` to find space hogs
 
-See [Chapter 14: Package Management](chapters/14-package-mgmt/index.md#system-maintenance).
+See [Chapter 14: Package Management](chapters/14-package-mgmt/index.md).
 
 ---
 
@@ -351,27 +351,27 @@ See [Chapter 14: Package Management](chapters/14-package-mgmt/index.md#system-ma
 
 ### What is the difference between containers and virtual machines?
 
-**Virtual machines** run a complete operating system with its own kernel on virtualized hardware—heavy but fully isolated. **Containers** share the host kernel and package only the application with dependencies—lightweight and fast. Docker uses containers; VirtualBox uses VMs. See [Chapter 21](chapters/21-cloud-containers/index.md#containers-vs-vms).
+**Virtual machines** run a complete operating system with its own kernel on virtualized hardware—heavy but fully isolated. **Containers** share the host kernel and package only the application with dependencies—lightweight and fast. Docker uses containers; VirtualBox uses VMs. See [Chapter 21](chapters/21-cloud-containers/index.md).
 
 ### What is Kubernetes?
 
-**Kubernetes** (K8s) is a container orchestration platform that automates deployment, scaling, and management of containerized applications. It's the industry standard for running containers in production at scale. See [Chapter 21](chapters/21-cloud-containers/index.md#kubernetes).
+**Kubernetes** (K8s) is a container orchestration platform that automates deployment, scaling, and management of containerized applications. It's the industry standard for running containers in production at scale. See [Chapter 21](chapters/21-cloud-containers/index.md).
 
 ### What is Infrastructure as Code?
 
-**Infrastructure as Code (IaC)** means managing servers, networks, and cloud resources through configuration files rather than manual setup. Tools like Terraform and Ansible let you version control your infrastructure and recreate it reliably. See [Chapter 21](chapters/21-cloud-containers/index.md#terraform).
+**Infrastructure as Code (IaC)** means managing servers, networks, and cloud resources through configuration files rather than manual setup. Tools like Terraform and Ansible let you version control your infrastructure and recreate it reliably. See [Chapter 21](chapters/21-cloud-containers/index.md).
 
 ### What is DevOps?
 
-**DevOps** combines software development (Dev) and IT operations (Ops) practices to shorten the development lifecycle and deliver software continuously. DevOps engineers use Linux, containers, CI/CD pipelines, and automation tools. It's one of the hottest career paths. See [Chapter 26: Careers](chapters/26-careers/index.md#devops-engineer).
+**DevOps** combines software development (Dev) and IT operations (Ops) practices to shorten the development lifecycle and deliver software continuously. DevOps engineers use Linux, containers, CI/CD pipelines, and automation tools. It's one of the hottest career paths. See [Chapter 26: Careers](chapters/26-careers/index.md).
 
 ### What is the difference between C and Rust?
 
-**C** is the original systems programming language that UNIX and Linux are written in—fast but prone to memory errors. **Rust** is a modern alternative offering memory safety without garbage collection. The Linux kernel is gradually adopting Rust for new code. See [Chapter 26](chapters/26-careers/index.md#c-vs-rust).
+**C** is the original systems programming language that UNIX and Linux are written in—fast but prone to memory errors. **Rust** is a modern alternative offering memory safety without garbage collection. The Linux kernel is gradually adopting Rust for new code. See [Chapter 26](chapters/26-careers/index.md).
 
 ### How does Linux run on Mars?
 
-NASA's Ingenuity helicopter runs Linux! It uses a radiation-hardened processor running a real-time Linux variant. The Mars 2020 mission chose Linux for its reliability, open-source nature, and extensive testing. Space agencies worldwide trust Linux for critical missions. See [Chapter 26](chapters/26-careers/index.md#linux-in-space).
+NASA's Ingenuity helicopter runs Linux! It uses a radiation-hardened processor running a real-time Linux variant. The Mars 2020 mission chose Linux for its reliability, open-source nature, and extensive testing. Space agencies worldwide trust Linux for critical missions. See [Chapter 26](chapters/26-careers/index.md).
 
 ### What Linux certifications should I get?
 
@@ -380,7 +380,7 @@ Popular certifications:
 - **Intermediate**: LFCS (Linux Foundation Certified System Administrator), RHCSA
 - **Advanced**: LFCE, RHCE
 
-Start with hands-on experience, then consider certifications to validate your skills. See [Chapter 26](chapters/26-careers/index.md#linux-certifications).
+Start with hands-on experience, then consider certifications to validate your skills. See [Chapter 26](chapters/26-careers/index.md).
 
 ### What can I build with a Raspberry Pi?
 

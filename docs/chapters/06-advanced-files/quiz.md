@@ -18,7 +18,7 @@ Test your understanding of symbolic links, hard links, and advanced file concept
 
     **Concept Tested:** Symbolic Links
 
-    **See:** [Chapter 6 - Symbolic Links](index.md#symbolic-links)
+    **See:** [Chapter 6 - Symbolic Links](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of symbolic links, hard links, and advanced file concept
 
     **Concept Tested:** Ln Command, Symbolic Links
 
-    **See:** [Chapter 6 - Creating Symlinks](index.md#creating-symbolic-links)
+    **See:** [Chapter 6 - Creating Symlinks](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of symbolic links, hard links, and advanced file concept
 
     **Concept Tested:** Hard Links, Symbolic Links, Inodes
 
-    **See:** [Chapter 6 - Hard Links vs Symbolic Links](index.md#hard-links)
+    **See:** [Chapter 6 - Hard Links vs Symbolic Links](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of symbolic links, hard links, and advanced file concept
 
     **Concept Tested:** Inodes
 
-    **See:** [Chapter 6 - Inodes](index.md#understanding-inodes)
+    **See:** [Chapter 6 - Inodes](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of symbolic links, hard links, and advanced file concept
 
     **Concept Tested:** Inodes, Ls Command
 
-    **See:** [Chapter 6 - Viewing Inodes](index.md#viewing-inodes)
+    **See:** [Chapter 6 - Viewing Inodes](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of symbolic links, hard links, and advanced file concept
 
     **Concept Tested:** Hard Links
 
-    **See:** [Chapter 6 - Hard Link Limitations](index.md#hard-link-limitations)
+    **See:** [Chapter 6 - Hard Link Limitations](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of symbolic links, hard links, and advanced file concept
 
     **Concept Tested:** Symbolic Links
 
-    **See:** [Chapter 6 - Broken Symlinks](index.md#broken-symbolic-links)
+    **See:** [Chapter 6 - Broken Symlinks](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of symbolic links, hard links, and advanced file concept
 
     **Concept Tested:** Stat Command
 
-    **See:** [Chapter 6 - Stat Command](index.md#stat-command)
+    **See:** [Chapter 6 - Stat Command](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of symbolic links, hard links, and advanced file concept
 
     **Concept Tested:** File Command
 
-    **See:** [Chapter 6 - File Command](index.md#file-command)
+    **See:** [Chapter 6 - File Command](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of symbolic links, hard links, and advanced file concept
 
     **Concept Tested:** Symbolic Links, Hard Links
 
-    **See:** [Chapter 6 - When to Use Symlinks](index.md#choosing-between-links)
+    **See:** [Chapter 6 - When to Use Symlinks](index.md)

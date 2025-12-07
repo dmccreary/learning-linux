@@ -18,7 +18,7 @@ Test your understanding of processes, signals, and job control.
 
     **Concept Tested:** Process
 
-    **See:** [Chapter 12 - What is a Process](index.md#what-is-a-process)
+    **See:** [Chapter 12 - What is a Process](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of processes, signals, and job control.
 
     **Concept Tested:** Process ID
 
-    **See:** [Chapter 12 - Process IDs](index.md#process-ids)
+    **See:** [Chapter 12 - Process IDs](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of processes, signals, and job control.
 
     **Concept Tested:** Ps Command
 
-    **See:** [Chapter 12 - Ps Command](index.md#ps-command)
+    **See:** [Chapter 12 - Ps Command](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of processes, signals, and job control.
 
     **Concept Tested:** Top Command
 
-    **See:** [Chapter 12 - Top Command](index.md#top-command)
+    **See:** [Chapter 12 - Top Command](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of processes, signals, and job control.
 
     **Concept Tested:** Kill Command
 
-    **See:** [Chapter 12 - Kill Command](index.md#kill-command)
+    **See:** [Chapter 12 - Kill Command](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of processes, signals, and job control.
 
     **Concept Tested:** Background Processes
 
-    **See:** [Chapter 12 - Background Processes](index.md#background-processes)
+    **See:** [Chapter 12 - Background Processes](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of processes, signals, and job control.
 
     **Concept Tested:** Job Control
 
-    **See:** [Chapter 12 - Job Control](index.md#suspending-processes)
+    **See:** [Chapter 12 - Job Control](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of processes, signals, and job control.
 
     **Concept Tested:** Jobs Command
 
-    **See:** [Chapter 12 - Jobs Command](index.md#jobs-command)
+    **See:** [Chapter 12 - Jobs Command](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of processes, signals, and job control.
 
     **Concept Tested:** Daemon Processes
 
-    **See:** [Chapter 12 - Daemons](index.md#daemons)
+    **See:** [Chapter 12 - Daemons](index.md)

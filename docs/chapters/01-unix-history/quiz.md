@@ -54,7 +54,7 @@ Test your understanding of UNIX history, Linux origins, and the philosophy that 
 
     **Concept Tested:** Dennis Ritchie, C Programming Language
 
-    **See:** [Chapter 1 - The C Programming Language](index.md#the-c-programming-language)
+    **See:** [Chapter 1 - The C Programming Language](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of UNIX history, Linux origins, and the philosophy that 
 
     **Concept Tested:** UNIX Philosophy, Small Modular Tools
 
-    **See:** [Chapter 1 - UNIX Philosophy](index.md#the-unix-philosophy)
+    **See:** [Chapter 1 - UNIX Philosophy](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of UNIX history, Linux origins, and the philosophy that 
 
     **Concept Tested:** Portability
 
-    **See:** [Chapter 1 - Portability](index.md#portability)
+    **See:** [Chapter 1 - Portability](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of UNIX history, Linux origins, and the philosophy that 
 
     **Concept Tested:** GNU Project, Richard Stallman
 
-    **See:** [Chapter 1 - GNU Project](index.md#the-gnu-project)
+    **See:** [Chapter 1 - GNU Project](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of UNIX history, Linux origins, and the philosophy that 
 
     **Concept Tested:** Linus Torvalds, Linux Kernel
 
-    **See:** [Chapter 1 - Linux Origins](index.md#linux-the-peoples-operating-system)
+    **See:** [Chapter 1 - Linux Origins](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of UNIX history, Linux origins, and the philosophy that 
 
     **Concept Tested:** GNU Project, Linux Kernel, Open Source
 
-    **See:** [Chapter 1 - GNU/Linux](index.md#linux-the-peoples-operating-system)
+    **See:** [Chapter 1 - GNU/Linux](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of UNIX history, Linux origins, and the philosophy that 
 
     **Concept Tested:** Debian, Linux Distributions
 
-    **See:** [Chapter 1 - Linux Distributions](index.md#linux-distributions)
+    **See:** [Chapter 1 - Linux Distributions](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of UNIX history, Linux origins, and the philosophy that 
 
     **Concept Tested:** POSIX Standards
 
-    **See:** [Chapter 1 - POSIX](index.md#posix-standards)
+    **See:** [Chapter 1 - POSIX](index.md)

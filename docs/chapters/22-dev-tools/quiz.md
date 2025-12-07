@@ -18,7 +18,7 @@ Test your understanding of git, development tools, and programming environments.
 
     **Concept Tested:** Git
 
-    **See:** [Chapter 22 - Git Overview](index.md#git)
+    **See:** [Chapter 22 - Git Overview](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of git, development tools, and programming environments.
 
     **Concept Tested:** Git Clone
 
-    **See:** [Chapter 22 - Git Clone](index.md#git-clone)
+    **See:** [Chapter 22 - Git Clone](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of git, development tools, and programming environments.
 
     **Concept Tested:** Git Commit
 
-    **See:** [Chapter 22 - Git Commit](index.md#git-commit)
+    **See:** [Chapter 22 - Git Commit](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of git, development tools, and programming environments.
 
     **Concept Tested:** Git Pull, Git Fetch
 
-    **See:** [Chapter 22 - Git Pull](index.md#git-pull)
+    **See:** [Chapter 22 - Git Pull](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of git, development tools, and programming environments.
 
     **Concept Tested:** Python Virtual Environments
 
-    **See:** [Chapter 22 - Virtual Environments](index.md#virtual-environments)
+    **See:** [Chapter 22 - Virtual Environments](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of git, development tools, and programming environments.
 
     **Concept Tested:** Creating Virtual Environments
 
-    **See:** [Chapter 22 - Creating Venvs](index.md#creating-venvs)
+    **See:** [Chapter 22 - Creating Venvs](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of git, development tools, and programming environments.
 
     **Concept Tested:** Pip
 
-    **See:** [Chapter 22 - Pip](index.md#pip)
+    **See:** [Chapter 22 - Pip](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of git, development tools, and programming environments.
 
     **Concept Tested:** GitHub
 
-    **See:** [Chapter 22 - GitHub](index.md#github)
+    **See:** [Chapter 22 - GitHub](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of git, development tools, and programming environments.
 
     **Concept Tested:** Gitignore
 
-    **See:** [Chapter 22 - Gitignore](index.md#gitignore)
+    **See:** [Chapter 22 - Gitignore](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of git, development tools, and programming environments.
 
     **Concept Tested:** Git Branches
 
-    **See:** [Chapter 22 - Git Branches](index.md#git-branches)
+    **See:** [Chapter 22 - Git Branches](index.md)

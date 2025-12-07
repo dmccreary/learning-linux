@@ -36,7 +36,7 @@ Test your understanding of Raspberry Pi hardware and setup.
 
     **Concept Tested:** Raspberry Pi OS
 
-    **See:** [Chapter 19 - Raspberry Pi OS](index.md#raspberry-pi-os)
+    **See:** [Chapter 19 - Raspberry Pi OS](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of Raspberry Pi hardware and setup.
 
     **Concept Tested:** GPIO Header
 
-    **See:** [Chapter 19 - GPIO Header](index.md#gpio-header)
+    **See:** [Chapter 19 - GPIO Header](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of Raspberry Pi hardware and setup.
 
     **Concept Tested:** Pi Imager
 
-    **See:** [Chapter 19 - Pi Imager](index.md#pi-imager)
+    **See:** [Chapter 19 - Pi Imager](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of Raspberry Pi hardware and setup.
 
     **Concept Tested:** Raspberry Pi Zero
 
-    **See:** [Chapter 19 - Pi Zero](index.md#raspberry-pi-zero)
+    **See:** [Chapter 19 - Pi Zero](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of Raspberry Pi hardware and setup.
 
     **Concept Tested:** Pi HDMI Ports
 
-    **See:** [Chapter 19 - HDMI Ports](index.md#hdmi-ports)
+    **See:** [Chapter 19 - HDMI Ports](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of Raspberry Pi hardware and setup.
 
     **Concept Tested:** Raspi-Config
 
-    **See:** [Chapter 19 - Raspi-Config](index.md#raspi-config)
+    **See:** [Chapter 19 - Raspi-Config](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of Raspberry Pi hardware and setup.
 
     **Concept Tested:** Pi Safe Shutdown
 
-    **See:** [Chapter 19 - Safe Shutdown](index.md#safe-shutdown)
+    **See:** [Chapter 19 - Safe Shutdown](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of Raspberry Pi hardware and setup.
 
     **Concept Tested:** Raspberry Pi 500
 
-    **See:** [Chapter 19 - Pi 500](index.md#raspberry-pi-500)
+    **See:** [Chapter 19 - Pi 500](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of Raspberry Pi hardware and setup.
 
     **Concept Tested:** GPIO Voltage
 
-    **See:** [Chapter 19 - GPIO Voltage](index.md#gpio-voltage)
+    **See:** [Chapter 19 - GPIO Voltage](index.md)

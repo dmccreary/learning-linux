@@ -112,6 +112,10 @@ nav:
     - Quiz Generation Report: learning-graph/quiz-generation-report.md
     - FAQ Quality Report: learning-graph/faq-quality-report.md
     - Glossary Quality Report: learning-graph/glossary-quality-report.md
+    - learning-graph/book-metrics.md
+    - learning-graph/chapter-metrics.md
+    - learning-graph/diagram-details.md
+    - learning-graph/diagram-table.md
 
   - Sample Prompts:
     - List of Prompts: prompts/index.md

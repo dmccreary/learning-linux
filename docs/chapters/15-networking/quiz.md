@@ -18,7 +18,7 @@ Test your understanding of Linux networking concepts and commands.
 
     **Concept Tested:** Ping Command
 
-    **See:** [Chapter 15 - Ping](index.md#ping-command)
+    **See:** [Chapter 15 - Ping](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of Linux networking concepts and commands.
 
     **Concept Tested:** IP Command
 
-    **See:** [Chapter 15 - IP Command](index.md#ip-command)
+    **See:** [Chapter 15 - IP Command](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of Linux networking concepts and commands.
 
     **Concept Tested:** IP Addresses
 
-    **See:** [Chapter 15 - IP Addresses](index.md#ip-addresses)
+    **See:** [Chapter 15 - IP Addresses](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of Linux networking concepts and commands.
 
     **Concept Tested:** Curl Command
 
-    **See:** [Chapter 15 - Curl](index.md#curl-command)
+    **See:** [Chapter 15 - Curl](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of Linux networking concepts and commands.
 
     **Concept Tested:** Wget Command
 
-    **See:** [Chapter 15 - Wget](index.md#wget-command)
+    **See:** [Chapter 15 - Wget](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of Linux networking concepts and commands.
 
     **Concept Tested:** DNS
 
-    **See:** [Chapter 15 - DNS](index.md#dns)
+    **See:** [Chapter 15 - DNS](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of Linux networking concepts and commands.
 
     **Concept Tested:** Traceroute
 
-    **See:** [Chapter 15 - Traceroute](index.md#traceroute)
+    **See:** [Chapter 15 - Traceroute](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of Linux networking concepts and commands.
 
     **Concept Tested:** Netstat Command
 
-    **See:** [Chapter 15 - Netstat](index.md#netstat-command)
+    **See:** [Chapter 15 - Netstat](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of Linux networking concepts and commands.
 
     **Concept Tested:** Network Configuration
 
-    **See:** [Chapter 15 - DNS Configuration](index.md#dns-configuration)
+    **See:** [Chapter 15 - DNS Configuration](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of Linux networking concepts and commands.
 
     **Concept Tested:** Localhost
 
-    **See:** [Chapter 15 - Localhost](index.md#localhost)
+    **See:** [Chapter 15 - Localhost](index.md)

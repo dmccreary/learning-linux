@@ -18,7 +18,7 @@ Test your understanding of the Linux file system hierarchy and navigation comman
 
     **Concept Tested:** Root Directory
 
-    **See:** [Chapter 4 - Root Directory](index.md#the-root-directory)
+    **See:** [Chapter 4 - Root Directory](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of the Linux file system hierarchy and navigation comman
 
     **Concept Tested:** Pwd Command
 
-    **See:** [Chapter 4 - Pwd Command](index.md#pwd-command)
+    **See:** [Chapter 4 - Pwd Command](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of the Linux file system hierarchy and navigation comman
 
     **Concept Tested:** Parent Directory, Cd Command
 
-    **See:** [Chapter 4 - Directory Navigation](index.md#navigating-with-cd)
+    **See:** [Chapter 4 - Directory Navigation](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of the Linux file system hierarchy and navigation comman
 
     **Concept Tested:** Home Directory
 
-    **See:** [Chapter 4 - Home Directory](index.md#home-directory)
+    **See:** [Chapter 4 - Home Directory](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of the Linux file system hierarchy and navigation comman
 
     **Concept Tested:** Ls Command, Ls Options
 
-    **See:** [Chapter 4 - Ls Command](index.md#ls-command)
+    **See:** [Chapter 4 - Ls Command](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of the Linux file system hierarchy and navigation comman
 
     **Concept Tested:** Hidden Files, Dot Files
 
-    **See:** [Chapter 4 - Hidden Files](index.md#hidden-files)
+    **See:** [Chapter 4 - Hidden Files](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of the Linux file system hierarchy and navigation comman
 
     **Concept Tested:** Etc Directory
 
-    **See:** [Chapter 4 - Directory Structure](index.md#etc-directory)
+    **See:** [Chapter 4 - Directory Structure](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of the Linux file system hierarchy and navigation comman
 
     **Concept Tested:** Tree Command
 
-    **See:** [Chapter 4 - Tree Command](index.md#tree-command)
+    **See:** [Chapter 4 - Tree Command](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of the Linux file system hierarchy and navigation comman
 
     **Concept Tested:** Tmp Directory
 
-    **See:** [Chapter 4 - Tmp Directory](index.md#tmp-directory)
+    **See:** [Chapter 4 - Tmp Directory](index.md)

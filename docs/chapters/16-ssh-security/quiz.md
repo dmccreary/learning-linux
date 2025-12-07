@@ -18,7 +18,7 @@ Test your understanding of secure shell and remote system access.
 
     **Concept Tested:** SSH Protocol
 
-    **See:** [Chapter 16 - SSH Overview](index.md#what-is-ssh)
+    **See:** [Chapter 16 - SSH Overview](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of secure shell and remote system access.
 
     **Concept Tested:** SSH Command
 
-    **See:** [Chapter 16 - SSH Connections](index.md#ssh-connections)
+    **See:** [Chapter 16 - SSH Connections](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of secure shell and remote system access.
 
     **Concept Tested:** SSH Keys
 
-    **See:** [Chapter 16 - SSH Keys](index.md#ssh-key-pairs)
+    **See:** [Chapter 16 - SSH Keys](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of secure shell and remote system access.
 
     **Concept Tested:** SSH Key Storage
 
-    **See:** [Chapter 16 - SSH Key Location](index.md#key-location)
+    **See:** [Chapter 16 - SSH Key Location](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of secure shell and remote system access.
 
     **Concept Tested:** SSH Key Generation
 
-    **See:** [Chapter 16 - Generating Keys](index.md#generating-keys)
+    **See:** [Chapter 16 - Generating Keys](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of secure shell and remote system access.
 
     **Concept Tested:** SCP Command
 
-    **See:** [Chapter 16 - SCP](index.md#scp-command)
+    **See:** [Chapter 16 - SCP](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of secure shell and remote system access.
 
     **Concept Tested:** Firewall
 
-    **See:** [Chapter 16 - Firewalls](index.md#firewalls)
+    **See:** [Chapter 16 - Firewalls](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of secure shell and remote system access.
 
     **Concept Tested:** SSH Key Distribution
 
-    **See:** [Chapter 16 - SSH Copy ID](index.md#ssh-copy-id)
+    **See:** [Chapter 16 - SSH Copy ID](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of secure shell and remote system access.
 
     **Concept Tested:** SSH Port
 
-    **See:** [Chapter 16 - SSH Ports](index.md#ssh-configuration)
+    **See:** [Chapter 16 - SSH Ports](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of secure shell and remote system access.
 
     **Concept Tested:** SSH Security
 
-    **See:** [Chapter 16 - Key-Based Security](index.md#key-security)
+    **See:** [Chapter 16 - Key-Based Security](index.md)

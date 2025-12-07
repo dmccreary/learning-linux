@@ -18,7 +18,7 @@ Test your understanding of user management, services, and system administration.
 
     **Concept Tested:** User Management
 
-    **See:** [Chapter 23 - Adding Users](index.md#adding-users)
+    **See:** [Chapter 23 - Adding Users](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of user management, services, and system administration.
 
     **Concept Tested:** Systemd
 
-    **See:** [Chapter 23 - Systemd](index.md#systemd)
+    **See:** [Chapter 23 - Systemd](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of user management, services, and system administration.
 
     **Concept Tested:** Systemctl Commands
 
-    **See:** [Chapter 23 - Managing Services](index.md#managing-services)
+    **See:** [Chapter 23 - Managing Services](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of user management, services, and system administration.
 
     **Concept Tested:** Service Auto-start
 
-    **See:** [Chapter 23 - Enabling Services](index.md#enabling-services)
+    **See:** [Chapter 23 - Enabling Services](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of user management, services, and system administration.
 
     **Concept Tested:** Password Storage
 
-    **See:** [Chapter 23 - Shadow File](index.md#shadow-file)
+    **See:** [Chapter 23 - Shadow File](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of user management, services, and system administration.
 
     **Concept Tested:** User Modification
 
-    **See:** [Chapter 23 - Modifying Users](index.md#modifying-users)
+    **See:** [Chapter 23 - Modifying Users](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of user management, services, and system administration.
 
     **Concept Tested:** System Logs
 
-    **See:** [Chapter 23 - Journalctl](index.md#journalctl)
+    **See:** [Chapter 23 - Journalctl](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of user management, services, and system administration.
 
     **Concept Tested:** Boot Process
 
-    **See:** [Chapter 23 - Boot Process](index.md#boot-process)
+    **See:** [Chapter 23 - Boot Process](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of user management, services, and system administration.
 
     **Concept Tested:** Group Management
 
-    **See:** [Chapter 23 - Group Membership](index.md#group-membership)
+    **See:** [Chapter 23 - Group Membership](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of user management, services, and system administration.
 
     **Concept Tested:** Password Management
 
-    **See:** [Chapter 23 - Changing Passwords](index.md#changing-passwords)
+    **See:** [Chapter 23 - Changing Passwords](index.md)

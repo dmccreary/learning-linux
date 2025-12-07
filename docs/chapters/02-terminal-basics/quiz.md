@@ -18,7 +18,7 @@ Test your understanding of the command line interface, shells, and terminal navi
 
     **Concept Tested:** Terminal Emulator, Shell
 
-    **See:** [Chapter 2 - Shells vs Terminals](index.md#terminal-vs-shell)
+    **See:** [Chapter 2 - Shells vs Terminals](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of the command line interface, shells, and terminal navi
 
     **Concept Tested:** Bash Shell
 
-    **See:** [Chapter 2 - Bash Shell](index.md#bash-the-bourne-again-shell)
+    **See:** [Chapter 2 - Bash Shell](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of the command line interface, shells, and terminal navi
 
     **Concept Tested:** Arrow Key Navigation, Command History
 
-    **See:** [Chapter 2 - Command History](index.md#command-history)
+    **See:** [Chapter 2 - Command History](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of the command line interface, shells, and terminal navi
 
     **Concept Tested:** Tab Completion
 
-    **See:** [Chapter 2 - Tab Completion](index.md#tab-completion)
+    **See:** [Chapter 2 - Tab Completion](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of the command line interface, shells, and terminal navi
 
     **Concept Tested:** Shell Prompt
 
-    **See:** [Chapter 2 - Shell Prompt](index.md#the-shell-prompt)
+    **See:** [Chapter 2 - Shell Prompt](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of the command line interface, shells, and terminal navi
 
     **Concept Tested:** Command Options, Command Flags
 
-    **See:** [Chapter 2 - Command Syntax](index.md#command-syntax)
+    **See:** [Chapter 2 - Command Syntax](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of the command line interface, shells, and terminal navi
 
     **Concept Tested:** Ctrl Key Shortcuts
 
-    **See:** [Chapter 2 - Keyboard Shortcuts](index.md#keyboard-shortcuts)
+    **See:** [Chapter 2 - Keyboard Shortcuts](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of the command line interface, shells, and terminal navi
 
     **Concept Tested:** Login Shell, Interactive Shell
 
-    **See:** [Chapter 2 - Shell Types](index.md#types-of-shells)
+    **See:** [Chapter 2 - Shell Types](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of the command line interface, shells, and terminal navi
 
     **Concept Tested:** Clear Command
 
-    **See:** [Chapter 2 - Clear Command](index.md#clear-command)
+    **See:** [Chapter 2 - Clear Command](index.md)

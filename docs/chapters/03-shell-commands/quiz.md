@@ -36,7 +36,7 @@ Test your understanding of finding help and using fundamental shell commands.
 
     **Concept Tested:** Apropos Command
 
-    **See:** [Chapter 3 - Apropos Command](index.md#apropos-command)
+    **See:** [Chapter 3 - Apropos Command](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of finding help and using fundamental shell commands.
 
     **Concept Tested:** Man Pages, Help Command
 
-    **See:** [Chapter 3 - Getting Help](index.md#help-flag)
+    **See:** [Chapter 3 - Getting Help](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of finding help and using fundamental shell commands.
 
     **Concept Tested:** Echo Command
 
-    **See:** [Chapter 3 - Echo Command](index.md#echo-command)
+    **See:** [Chapter 3 - Echo Command](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of finding help and using fundamental shell commands.
 
     **Concept Tested:** Date Command
 
-    **See:** [Chapter 3 - Date Command](index.md#date-command)
+    **See:** [Chapter 3 - Date Command](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of finding help and using fundamental shell commands.
 
     **Concept Tested:** Whatis Command
 
-    **See:** [Chapter 3 - Whatis Command](index.md#whatis-command)
+    **See:** [Chapter 3 - Whatis Command](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of finding help and using fundamental shell commands.
 
     **Concept Tested:** Uname Command, Version Information
 
-    **See:** [Chapter 3 - Uname Command](index.md#uname-command)
+    **See:** [Chapter 3 - Uname Command](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of finding help and using fundamental shell commands.
 
     **Concept Tested:** Whoami Command
 
-    **See:** [Chapter 3 - Whoami Command](index.md#whoami-command)
+    **See:** [Chapter 3 - Whoami Command](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of finding help and using fundamental shell commands.
 
     **Concept Tested:** Cal Command
 
-    **See:** [Chapter 3 - Cal Command](index.md#cal-command)
+    **See:** [Chapter 3 - Cal Command](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of finding help and using fundamental shell commands.
 
     **Concept Tested:** Uptime Command
 
-    **See:** [Chapter 3 - Uptime Command](index.md#uptime-command)
+    **See:** [Chapter 3 - Uptime Command](index.md)

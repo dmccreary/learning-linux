@@ -18,7 +18,7 @@ Test your understanding of the server projects and applications covered in this 
 
     **Concept Tested:** Nginx Server
 
-    **See:** [Chapter 25 - Nginx](index.md#nginx-web-server)
+    **See:** [Chapter 25 - Nginx](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of the server projects and applications covered in this 
 
     **Concept Tested:** Pi-Hole
 
-    **See:** [Chapter 25 - Pi-Hole](index.md#pi-hole-ad-blocker)
+    **See:** [Chapter 25 - Pi-Hole](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of the server projects and applications covered in this 
 
     **Concept Tested:** Plex Server, Jellyfin
 
-    **See:** [Chapter 25 - Media Servers](index.md#media-servers)
+    **See:** [Chapter 25 - Media Servers](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of the server projects and applications covered in this 
 
     **Concept Tested:** WireGuard VPN
 
-    **See:** [Chapter 25 - WireGuard](index.md#wireguard-vpn)
+    **See:** [Chapter 25 - WireGuard](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of the server projects and applications covered in this 
 
     **Concept Tested:** RetroPie
 
-    **See:** [Chapter 25 - RetroPie](index.md#retropie-gaming)
+    **See:** [Chapter 25 - RetroPie](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of the server projects and applications covered in this 
 
     **Concept Tested:** NAS Server
 
-    **See:** [Chapter 25 - NAS](index.md#nas-storage)
+    **See:** [Chapter 25 - NAS](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of the server projects and applications covered in this 
 
     **Concept Tested:** Apache Server
 
-    **See:** [Chapter 25 - Apache](index.md#apache-web-server)
+    **See:** [Chapter 25 - Apache](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of the server projects and applications covered in this 
 
     **Concept Tested:** Minecraft Server
 
-    **See:** [Chapter 25 - Minecraft Server](index.md#minecraft-server)
+    **See:** [Chapter 25 - Minecraft Server](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of the server projects and applications covered in this 
 
     **Concept Tested:** Monitoring Dashboard
 
-    **See:** [Chapter 25 - Monitoring](index.md#monitoring-dashboard)
+    **See:** [Chapter 25 - Monitoring](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of the server projects and applications covered in this 
 
     **Concept Tested:** Portfolio Building
 
-    **See:** [Chapter 25 - Portfolio](index.md#building-your-portfolio)
+    **See:** [Chapter 25 - Portfolio](index.md)

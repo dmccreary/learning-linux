@@ -18,7 +18,7 @@ Test your understanding of Linux career paths, certifications, and future trends
 
     **Concept Tested:** System Administrator
 
-    **See:** [Chapter 26 - System Administrator](index.md#system-administrator)
+    **See:** [Chapter 26 - System Administrator](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of Linux career paths, certifications, and future trends
 
     **Concept Tested:** DevOps Engineer
 
-    **See:** [Chapter 26 - DevOps](index.md#devops-engineer)
+    **See:** [Chapter 26 - DevOps](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of Linux career paths, certifications, and future trends
 
     **Concept Tested:** Linux in Space
 
-    **See:** [Chapter 26 - Linux in Space](index.md#linux-in-space)
+    **See:** [Chapter 26 - Linux in Space](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of Linux career paths, certifications, and future trends
 
     **Concept Tested:** Linux in Cars
 
-    **See:** [Chapter 26 - Linux in Cars](index.md#linux-in-cars)
+    **See:** [Chapter 26 - Linux in Cars](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of Linux career paths, certifications, and future trends
 
     **Concept Tested:** C vs Rust
 
-    **See:** [Chapter 26 - C vs Rust](index.md#c-vs-rust)
+    **See:** [Chapter 26 - C vs Rust](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of Linux career paths, certifications, and future trends
 
     **Concept Tested:** Linux Certifications
 
-    **See:** [Chapter 26 - Certifications](index.md#linux-certifications)
+    **See:** [Chapter 26 - Certifications](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of Linux career paths, certifications, and future trends
 
     **Concept Tested:** Cloud Engineer
 
-    **See:** [Chapter 26 - Cloud Engineer](index.md#cloud-engineer)
+    **See:** [Chapter 26 - Cloud Engineer](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of Linux career paths, certifications, and future trends
 
     **Concept Tested:** Network Administrator
 
-    **See:** [Chapter 26 - Network Administrator](index.md#network-administrator)
+    **See:** [Chapter 26 - Network Administrator](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of Linux career paths, certifications, and future trends
 
     **Concept Tested:** Linux Certifications
 
-    **See:** [Chapter 26 - RHCSA](index.md#rhcsa)
+    **See:** [Chapter 26 - RHCSA](index.md)
 
 ---
 
@@ -180,4 +180,4 @@ Test your understanding of Linux career paths, certifications, and future trends
 
     **Concept Tested:** Future of Linux
 
-    **See:** [Chapter 26 - Linux Dominance](index.md#linux-everywhere)
+    **See:** [Chapter 26 - Linux Dominance](index.md)
