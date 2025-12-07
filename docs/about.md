@@ -2,7 +2,11 @@
 
 **TL;DR** - Linux knowledge can still be a critical part of careers in the age of AI.
 
-![Dan McCreary Business Card 1983](./img/dan-mccreary-bell-labs-business-card.jpg)
+![Dan at Bell Labs Cedar Crest Office in Allentown](./img/dan-at-bell-labs.jpeg){width="400px"}
+![Dan McCreary Business Card 1983](./img/dan-mccreary-bell-labs-business-card.jpg){width="300px"}
+
+Knowledge of UNIX and Linux can be a critical part of an engineer's career.
+Even for careers not directly within computer science.  Here is how I know this.
 
 I started working at Bell Labs in 1983 as a CMOS chip designer.
 Although I was right out of grad school, I was already
@@ -17,7 +21,10 @@ hours of time manually laying out repetitive chip masks.
 
 ## K&R
 
-![K&R Book cover](./img/k-and-r-book-cover.png)
+<style>
+img {border: solid black 2px;}
+</style>
+![K&R Book cover](./img/k-and-r-book-cover.png){ width="400px"}
 
 I was fortunate to lead efforts to move from fixed
 placement design to symbolic design, where chip
@@ -28,8 +35,9 @@ Brian Kernighan. Brian is the "K" in the famous "K&R"
 book, which became one of the [most popular programming
 books of all time](https://en.wikipedia.org/wiki/The_C_Programming_Language).
 
-![AWK Book Cover](./img/awk-book-cover.png)
+![AWK Book Cover](./img/awk-book-cover.png){ width="400px"}
 
+Brian was also the coauthor of the "awk" language.  He is the "K" in "awk".
 Brian suggested I work with him on a custom version of awk to generate
 symbolic layout for integrated circuits. This new language, called `awk-i`,
 became a central tool for our chip designers. I wrote hundreds of UNIX shell
