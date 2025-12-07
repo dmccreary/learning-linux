@@ -2,7 +2,8 @@
 
 An interactive timeline visualization showing key milestones in Linux history from 1991 to 2025.
 
-[Run the Linux Timeline](./main.html){ .md-button .md-button--primary }
+<iframe src="main.html" width="100%" height="580px" scrolling="no"></iframe>
+[Run the Linux Timeline Fullscreen](./main.html){ .md-button .md-button--primary }
 
 [View the Raw Timeline Data](timeline.json)
 

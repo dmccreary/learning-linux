@@ -26,12 +26,21 @@
             <button class="filter-btn modern" onclick="filterCategory('Mobile/Modern')">Mobile/Modern</button>
         </div>
 
+        <!-- Navigation Controls -->
+        <div class="zoom-controls">
+            <button class="zoom-btn" onclick="panLeft()" title="Pan Left">◀</button>
+            <button class="zoom-btn" onclick="zoomOut()" title="Zoom Out">−</button>
+            <button class="zoom-btn fit-btn" onclick="fitAll()" title="Fit All">Fit All</button>
+            <button class="zoom-btn" onclick="zoomIn()" title="Zoom In">+</button>
+            <button class="zoom-btn" onclick="panRight()" title="Pan Right">▶</button>
+        </div>
+
         <!-- Timeline Container -->
         <div id="timeline"></div>
 
         <!-- Instructions -->
         <p class="instructions">
-            Scroll to zoom | Click and drag to pan | Click an event for details | Hover for context
+            Use ◀ ▶ buttons to pan | Use + − buttons to zoom | Click an event for details
         </p>
 
         <!-- Info Panel -->
@@ -119,6 +128,11 @@
                 };
             });
 
+            // Calculate min/max dates for initial window
+            const dates = allItems.map(item => item.start.getTime());
+            const minDate = Math.min(...dates);
+            const maxDate = Math.max(...dates);
+
             // Create dataset
             timelineData = new vis.DataSet(allItems);
 
@@ -126,7 +140,10 @@
             const options = {
                 width: '100%',
                 height: '400px',
-                margin: { item: 20, axis: 40 },
+                margin: {
+                    item: { horizontal: 50, vertical: 10 },  // Explicit horizontal margin for edge padding
+                    axis: 40
+                },
                 orientation: 'top',
                 zoomMin: 1000 * 60 * 60 * 24 * 365 * 5,    // 5 years minimum zoom
                 zoomMax: 1000 * 60 * 60 * 24 * 365 * 50,   // 50 years maximum zoom
@@ -139,7 +156,8 @@
                 selectable: true,
                 showCurrentTime: false,
                 moveable: true,
-                zoomable: true
+                zoomable: false,             // Disable scroll-wheel zoom to not interfere with page scrolling
+                align: 'center'              // Center items on their date point
             };
 
             // Create timeline
@@ -153,8 +171,30 @@
                 }
             });
 
-            // Fit timeline to show all events
-            timeline.fit();
+            // Manually set window with padding instead of using fit()
+            const twoYears = 2 * 365 * 24 * 60 * 60 * 1000;
+            timeline.setWindow(
+                new Date(minDate - twoYears),
+                new Date(maxDate + twoYears),
+                { animation: false }
+            );
+        }
+
+        function addPaddingToView() {
+            // Get visible items and manually set window
+            const visibleItems = timelineData.get();
+            if (visibleItems.length > 0) {
+                const dates = visibleItems.map(item => item.start.getTime());
+                const minDate = Math.min(...dates);
+                const maxDate = Math.max(...dates);
+
+                const twoYears = 2 * 365 * 24 * 60 * 60 * 1000;
+                timeline.setWindow(
+                    new Date(minDate - twoYears),
+                    new Date(maxDate + twoYears),
+                    { animation: false }
+                );
+            }
         }
 
         function showEventDetails(itemId) {
@@ -179,15 +219,98 @@
         }
 
         function filterCategory(category) {
+            let itemsToShow;
             if (category === 'all') {
-                timelineData.clear();
-                timelineData.add(allItems);
+                itemsToShow = [...allItems];
             } else {
-                const filtered = allItems.filter(item => item.category === category);
-                timelineData.clear();
-                timelineData.add(filtered);
+                itemsToShow = allItems.filter(item => item.category === category);
             }
-            timeline.fit();
+
+            timelineData.clear();
+            timelineData.add(itemsToShow);
+
+            // Manually set window with padding instead of using fit()
+            if (itemsToShow.length > 0) {
+                const dates = itemsToShow.map(item => item.start.getTime());
+                const minDate = Math.min(...dates);
+                const maxDate = Math.max(...dates);
+
+                // Add 2 years padding on each side
+                const twoYears = 2 * 365 * 24 * 60 * 60 * 1000;
+                const startDate = new Date(minDate - twoYears);
+                const endDate = new Date(maxDate + twoYears);
+
+                timeline.setWindow(startDate, endDate, { animation: false });
+            }
+        }
+
+        function zoomIn() {
+            if (timeline) {
+                const range = timeline.getWindow();
+                const interval = range.end - range.start;
+                const newInterval = interval * 0.5; // Zoom in by 50%
+                const center = new Date((range.start.getTime() + range.end.getTime()) / 2);
+                timeline.setWindow(
+                    new Date(center.getTime() - newInterval / 2),
+                    new Date(center.getTime() + newInterval / 2)
+                );
+            }
+        }
+
+        function zoomOut() {
+            if (timeline) {
+                const range = timeline.getWindow();
+                const interval = range.end - range.start;
+                const newInterval = interval * 2; // Zoom out by 200%
+                const center = new Date((range.start.getTime() + range.end.getTime()) / 2);
+                timeline.setWindow(
+                    new Date(center.getTime() - newInterval / 2),
+                    new Date(center.getTime() + newInterval / 2)
+                );
+            }
+        }
+
+        function fitAll() {
+            if (timeline) {
+                // Get visible items and manually set window with padding
+                const visibleItems = timelineData.get();
+                if (visibleItems.length > 0) {
+                    const dates = visibleItems.map(item => item.start.getTime());
+                    const minDate = Math.min(...dates);
+                    const maxDate = Math.max(...dates);
+
+                    const twoYears = 2 * 365 * 24 * 60 * 60 * 1000;
+                    timeline.setWindow(
+                        new Date(minDate - twoYears),
+                        new Date(maxDate + twoYears),
+                        { animation: false }
+                    );
+                }
+            }
+        }
+
+        function panLeft() {
+            if (timeline) {
+                const range = timeline.getWindow();
+                const interval = range.end - range.start;
+                const shift = interval * 0.3; // Pan by 30% of visible range
+                timeline.setWindow(
+                    new Date(range.start.getTime() - shift),
+                    new Date(range.end.getTime() - shift)
+                );
+            }
+        }
+
+        function panRight() {
+            if (timeline) {
+                const range = timeline.getWindow();
+                const interval = range.end - range.start;
+                const shift = interval * 0.3; // Pan by 30% of visible range
+                timeline.setWindow(
+                    new Date(range.start.getTime() + shift),
+                    new Date(range.end.getTime() + shift)
+                );
+            }
         }
     </script>
 </body>

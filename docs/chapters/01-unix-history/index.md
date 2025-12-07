@@ -368,6 +368,9 @@ Let that sink in: When you use Google, Facebook, Amazon, or basically any websit
 
 #### Diagram: Linux Timeline
 
+<iframe src="../../sims/linux-timeline/main.html" width="100%" height="580px" scrolling="no"></iframe>
+[Run the Linux Timeline Fullscreen](../../sims/linux-timeline/main.html){ .md-button .md-button--primary }
+
 <details markdown="1">
     <summary>Linux Timeline - From Hobby to World Domination</summary>
     Type: timeline
