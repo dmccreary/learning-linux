@@ -1,0 +1,78 @@
+{
+  "$schema": "https://github.com/dmccreary/microsims/blob/main/src/microsim-schema/microsim-schema.json",
+  "title": "UNIX Philosophy Pipe Diagram",
+  "description": "An interactive visualization showing how small UNIX tools connect together via pipes to accomplish complex tasks, demonstrating the 'do one thing well' philosophy.",
+  "creator": "Dan McCreary",
+  "subject": ["Computer Science", "Operating Systems", "Linux"],
+  "date": "2025-12-07",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "educational": {
+    "gradeLevel": "High School (9-12)",
+    "subjectArea": "Computer Science",
+    "topic": "UNIX/Linux Command Line",
+    "learningObjectives": [
+      "Understand the UNIX philosophy of small, composable tools",
+      "Visualize how data flows through a pipeline of commands",
+      "Apply the concept of pipes to combine commands in the terminal",
+      "Recognize the pipe symbol (|) as a connector between commands"
+    ],
+    "bloomsTaxonomyLevels": ["Understand", "Apply"],
+    "duration": "15-20 minutes",
+    "prerequisites": [
+      "Basic understanding of command line interface",
+      "Familiarity with file system concepts"
+    ]
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": "responsive x 450",
+    "responsive": "Width-responsive",
+    "dependencies": ["p5.js CDN"],
+    "accessibility": ["Screen reader description via describe() function"]
+  },
+  "userInterface": {
+    "controls": [
+      {
+        "type": "button",
+        "name": "Play/Pause",
+        "description": "Toggle animation on/off"
+      },
+      {
+        "type": "button",
+        "name": "Reset",
+        "description": "Restart animation from beginning"
+      },
+      {
+        "type": "slider",
+        "name": "Speed",
+        "min": 0.2,
+        "max": 3,
+        "default": 1,
+        "step": 0.1,
+        "description": "Control animation speed"
+      }
+    ]
+  },
+  "simulationModel": {
+    "modelType": "Flow diagram with animation",
+    "variables": [
+      "animationSpeed",
+      "animationPhase",
+      "dataPackets"
+    ],
+    "assumptions": [
+      "Data flows sequentially through pipeline",
+      "Each command processes data instantly",
+      "Text streams are represented as document icons"
+    ],
+    "limitations": [
+      "Does not show actual command output",
+      "Simplified representation of pipe mechanism",
+      "Does not demonstrate error handling or parallel processing"
+    ]
+  }
+}

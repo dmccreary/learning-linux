@@ -1806,6 +1806,10 @@
           
         
       
+        
+          
+        
+      
     
     
     
@@ -2621,14 +2625,17 @@ Implementation: vis-network or HTML/CSS/SVG timeline
 </tbody>
 </table>
 <p>Here's a real example: Let's say you want to find all the large files on your computer and sort them by size. In UNIX/Linux, you can chain together <strong>small modular tools</strong>:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>find<span class="w"> </span>/home<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-size<span class="w"> </span>+100M<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>ls<span class="w"> </span>-lh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-k5<span class="w"> </span>-h
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.md&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>ls<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-k5<span class="w"> </span>-n
 </code></pre></div></td></tr></table></div>
 <p>This command:
 - <code>find</code> – locates files bigger than 100MB
-- <code>xargs ls -lh</code> – lists them with human-readable sizes
-- <code>sort -k5 -h</code> – sorts by the size column</p>
+- <code>xargs ls -l</code> – lists the files with the long form that includes sizes
+- <code>sort -k5 -n</code> – sorts by the size column (-k5 is key column 5) using numeric sort (-n)</p>
 <p>Three simple tools, piped together, solving a complex problem. Beautiful!</p>
 <h4 id="diagram-unix-philosophy-in-action">Diagram: UNIX Philosophy in Action</h4>
+<iframe src="../../sims/unix-pipe-diagram/main.html" height="372px" width="100%" scrolling="no"></iframe>
+
+<p><a class="md-button md-button--primary" href="../../sims/unix-pipe-diagram/main.html">Run the UNIX Pipe Diagram MicroSim Fullscreen</a></p>
 <details>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
