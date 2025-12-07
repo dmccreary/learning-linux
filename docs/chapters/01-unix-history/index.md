@@ -88,6 +88,7 @@ Yes, you read that right. One of the most important pieces of software in human 
 <details markdown="1">
     <summary>UNIX Family Tree</summary>
     Type: timeline
+    Status: done
 
     Bloom Taxonomy: Remember, Understand
     Learning Objective: Help students visualize how UNIX evolved into different branches over time, including BSD and System V, and how Linux emerged as a separate but compatible system.
@@ -124,7 +125,7 @@ Yes, you read that right. One of the most important pieces of software in human 
     - Hover over each node to see key features
     - Click to see more details about that version
 
-    Implementation: vis-network or HTML/CSS/SVG timeline
+    Implementation: timeline-generator skill that uses the vis-timline.js JavaScript library
 </details>
 
 ### The Dynamic Duo: Ken and Dennis
@@ -138,6 +139,11 @@ Before C, most operating systems were written in "assembly language," which is b
 C changed everything.
 
 ## C: The Programming Language That Changed Everything
+
+<style>
+img {border: solid black 2px;}
+</style>
+![](../../img/k-and-r-book-cover.png){ width="200px" }
 
 The **C programming language** (created by Dennis Ritchie around 1972) was a game-changer because it was:
 
@@ -201,34 +207,35 @@ Three simple tools, piped together, solving a complex problem. Beautiful!
 
 <details markdown="1">
     <summary>UNIX Philosophy in Action - Pipe Example</summary>
-    Type: diagram
+Type: diagram
+Status: Done
 
-    Bloom Taxonomy: Understand, Apply
-    Learning Objective: Visualize how small UNIX tools connect together via pipes to accomplish complex tasks, demonstrating the "do one thing well" philosophy.
+Bloom Taxonomy: Understand, Apply
+Learning Objective: Visualize how small UNIX tools connect together via pipes to accomplish complex tasks, demonstrating the "do one thing well" philosophy.
 
-    Components to show:
-    - Three colored boxes representing commands: find (blue), xargs/ls (green), sort (orange)
-    - Pipe symbols (|) connecting the boxes
-    - Data flowing between boxes shown as document icons
-    - Input (file system) on the left
-    - Output (sorted list) on the right
+Components to show:
+- Three colored boxes representing commands: find (blue), xargs/ls (green), sort (orange)
+- Pipe symbols (|) connecting the boxes
+- Data flowing between boxes shown as document icons
+- Input (file system) on the left
+- Output (sorted list) on the right
 
-    Layout: Horizontal flow diagram, left to right
+Layout: Horizontal flow diagram, left to right
 
-    Labels:
-    - Above each box: Command name and brief description
-    - On pipes: "text stream"
-    - Input label: "File System"
-    - Output label: "Sorted Results"
+Labels:
+- Above each box: Command name and brief description
+- On pipes: "text stream"
+- Input label: "File System"
+- Output label: "Sorted Results"
 
-    Annotations:
-    - Callout bubble: "Each tool does ONE job perfectly"
-    - Callout bubble: "Text flows between tools"
+Annotations:
+- Callout bubble: "Each tool does ONE job perfectly"
+- Callout bubble: "Text flows between tools"
 
-    Style: Clean, modern infographic style with rounded corners
-    Color scheme: Blue, green, orange boxes on light background
+Style: Clean, modern infographic style with rounded corners
+Color scheme: Blue, green, orange boxes on light background
 
-    Implementation: HTML/CSS or p5.js
+Implementation: done with the microsim-p5 claude skill
 </details>
 
 ## UNIX Spreads: System V and BSD
@@ -251,19 +258,31 @@ System V was the corporate, buttoned-up version of UNIX—stable, supported, and
 
 Meanwhile, at the University of California, Berkeley, students and researchers had been making their own modifications and improvements to UNIX. They called their version **BSD** (Berkeley Software Distribution). BSD introduced many innovations that we still use today:
 
+- **Virtual Memory** - where the operation says "no problem" when you program does not fit in RAM.
 - The `vi` text editor (which you'll learn to either love or... have opinions about)
-- The TCP/IP networking stack (literally how the internet works!)
-- The C shell (csh), a popular command-line interface
+- The **TCP/IP** networking stack (literally how the internet works!)
+- The **C shell** (csh), a popular command-line interface
+
+!!! Note "Dan's Trivia"
+    When I worked at AT&T Bell Labs in the 1980s, they sold the AT&T System V UNIX which had no virtual memory.  But I could
+    not use it because our chip simulators did not fit into memory.  Imagine my bosses frustration when
+    I walked into their office and told them I upgraded all our computers to BSD Unix because
+    it DID support virtual memory.  To say the meeting did not go well is an understatement!
 
 BSD was the rebellious, innovative, academic side of the UNIX family. It eventually spawned:
 
+- **Mach** - the microkernel architecture created by Carnegie Mellon University (CMU)
 - **FreeBSD** – powers Netflix's streaming infrastructure!
 - **NetBSD** – runs on everything from toasters to supercomputers
 - **OpenBSD** – famous for security
-- **macOS** – Yes! Apple's operating system is BSD-based!
+- **macOS** – Yes! Apple's operating system is BSD-based!  (Technically based on Mach from CMU)
 
 !!! question "Wait, macOS is UNIX?"
-    Yep! Next time you open Terminal on a Mac, you're using a UNIX system. Apple built macOS on top of BSD UNIX (specifically a version called Darwin). So if you've ever used a Mac, congratulations—you've already used UNIX!
+    Yep! Next time you open Terminal on a Mac, you're using a UNIX system. Apple built macOS on top of `Mach` which was
+    created by Carnegie Mellon University and then used at NeXT computer.
+    This eventually evolved into a version called Darwin. 
+    So if you've ever used a Mac, congratulations—you've already used UNIX!
+    Check out the story [Avie Tevanian Interview for the Computer History Museum](https://www.copetti.org/writings/blog/avie-tevanian-interview/)
 
 ## The Free Software Revolution: Enter Richard Stallman
 
@@ -289,9 +308,14 @@ By 1990, GNU had almost everything needed for a complete operating system. Almos
 
 #### Diagram: Open Source vs Proprietary Software
 
+<iframe src="../../sims/open-vs-closed/main.html" height="502" width="100%" scrolling="no"></iframe>
+
+[Run the Open vs Closed MicroSim Fullscreen](../../sims/open-vs-closed/main.html){ .md-button .md-button--primary }
+
 <details markdown="1">
     <summary>Open Source vs Proprietary Software</summary>
     Type: infographic
+    Status: Done
 
     Bloom Taxonomy: Understand
     Learning Objective: Help students understand the difference between open source and proprietary software through visual comparison.
@@ -345,6 +369,10 @@ The **Linux kernel** was the missing piece that the GNU Project needed. Combine 
     The kernel is the core of an operating system—the part that talks directly to the hardware. If the OS is a restaurant manager, the kernel is the manager's brain. Everything else (the shell, applications, utilities) builds on top of the kernel.
 
 ### Why Did Linux Take Off?
+
+<iframe src="../../sims/linux-marketshare/main.html" width="100%" height="500" scrolling="no"></iframe>
+
+[View Linux Web Server Marketshare Chart Fullscreen](../../sims/linux-marketshare/main.html){ .md-button .md-button--primary }
 
 Linux succeeded where other free UNIX alternatives struggled for several reasons:
 

@@ -101,8 +101,10 @@ nav:
   - MicroSims:
     - List of Microsims: sims/index.md
     - Learning Graph Viewer: sims/graph-viewer/index.md
+    - Linux Distro Comparison: sims/linux-distro-comparison/index.md
     - Linux Marketshare: sims/linux-marketshare/index.md
     - Linux Timeline: sims/linux-timeline/index.md
+    - Open vs Closed Source: sims/open-vs-closed/index.md
     - Unix Family Tree: sims/unix-family-tree/index.md
     - UNIX Pipe Diagram: sims/unix-pipe-diagram/index.md
   

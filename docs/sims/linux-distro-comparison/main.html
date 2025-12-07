@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Distribution Comparison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Linux Distribution Comparison</h2>
+
+        <div class="table-wrapper">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Distribution</th>
+                        <th>User Friendly</th>
+                        <th>Stability</th>
+                        <th>Fresh Software</th>
+                        <th>Learning Curve</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-tooltip="Debian: A community-driven distribution known for its rock-solid stability and strict adherence to free software principles, serving as the foundation for Ubuntu and many other distributions.">
+                        <td class="distro-cell">
+                            <img src="logos/debian.svg" alt="Debian" class="distro-logo">
+                            <span class="distro-name">Debian</span>
+                        </td>
+                        <td class="rating"><span class="stars stars-3">★★★</span><span class="stars-empty">★★</span></td>
+                        <td class="rating"><span class="stars stars-5">★★★★★</span></td>
+                        <td class="rating"><span class="stars stars-2">★★</span><span class="stars-empty">★★★</span></td>
+                        <td class="difficulty medium">Medium</td>
+                        <td class="best-for">Servers, stability-focused deployments</td>
+                    </tr>
+                    <tr data-tooltip="Ubuntu: Developed by Canonical, Ubuntu is the most popular desktop Linux distribution, offering a polished experience with extensive community support and commercial backing.">
+                        <td class="distro-cell">
+                            <img src="logos/ubuntu.svg" alt="Ubuntu" class="distro-logo">
+                            <span class="distro-name">Ubuntu</span>
+                        </td>
+                        <td class="rating"><span class="stars stars-5">★★★★★</span></td>
+                        <td class="rating"><span class="stars stars-4">★★★★</span><span class="stars-empty">★</span></td>
+                        <td class="rating"><span class="stars stars-4">★★★★</span><span class="stars-empty">★</span></td>
+                        <td class="difficulty easy">Easy</td>
+                        <td class="best-for">Beginners, desktop users</td>
+                    </tr>
+                    <tr data-tooltip="Fedora: Sponsored by Red Hat, Fedora showcases the latest open source technologies and serves as the upstream source for Red Hat Enterprise Linux.">
+                        <td class="distro-cell">
+                            <img src="logos/fedora.svg" alt="Fedora" class="distro-logo">
+                            <span class="distro-name">Fedora</span>
+                        </td>
+                        <td class="rating"><span class="stars stars-4">★★★★</span><span class="stars-empty">★</span></td>
+                        <td class="rating"><span class="stars stars-4">★★★★</span><span class="stars-empty">★</span></td>
+                        <td class="rating"><span class="stars stars-5">★★★★★</span></td>
+                        <td class="difficulty medium">Medium</td>
+                        <td class="best-for">Developers, cutting-edge tech</td>
+                    </tr>
+                    <tr data-tooltip="Arch Linux: A minimalist, rolling-release distribution that requires users to build their system from the ground up, following the KISS (Keep It Simple, Stupid) philosophy.">
+                        <td class="distro-cell">
+                            <img src="logos/arch.svg" alt="Arch Linux" class="distro-logo">
+                            <span class="distro-name">Arch Linux</span>
+                        </td>
+                        <td class="rating"><span class="stars stars-2">★★</span><span class="stars-empty">★★★</span></td>
+                        <td class="rating"><span class="stars stars-4">★★★★</span><span class="stars-empty">★</span></td>
+                        <td class="rating"><span class="stars stars-5">★★★★★</span></td>
+                        <td class="difficulty hard">Hard</td>
+                        <td class="best-for">Learning, full customization</td>
+                    </tr>
+                    <tr data-tooltip="Linux Mint: Built on Ubuntu, Linux Mint provides a traditional desktop experience with the Cinnamon desktop environment, making it especially welcoming for users transitioning from Windows.">
+                        <td class="distro-cell">
+                            <img src="logos/mint.svg" alt="Linux Mint" class="distro-logo">
+                            <span class="distro-name">Linux Mint</span>
+                        </td>
+                        <td class="rating"><span class="stars stars-5">★★★★★</span></td>
+                        <td class="rating"><span class="stars stars-4">★★★★</span><span class="stars-empty">★</span></td>
+                        <td class="rating"><span class="stars stars-3">★★★</span><span class="stars-empty">★★</span></td>
+                        <td class="difficulty easy">Easy</td>
+                        <td class="best-for">Windows converts, simplicity</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <span class="legend-badge easy">Easy</span>
+                <span>Beginner-friendly</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-badge medium">Medium</span>
+                <span>Some experience helpful</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-badge hard">Hard</span>
+                <span>Advanced users</span>
+            </div>
+        </div>
+
+        <p class="source">Ratings are approximate and may vary based on specific use cases</p>
+    </div>
+</body>
+</html>

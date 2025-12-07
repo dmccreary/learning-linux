@@ -1,0 +1,38 @@
+{
+    "title": "Open Source vs Proprietary Software",
+    "description": "Interactive infographic comparing open source and proprietary software licensing models with hover tooltips and interactive elements",
+    "creator": "Dan McCreary",
+    "subject": ["Software Licensing", "Open Source", "Linux", "Computer Science"],
+    "date": "2025-12-07",
+    "type": "Interactive Simulation",
+    "format": "text/html",
+    "language": "en",
+    "rights": "CC BY 4.0",
+    "gradeLevel": "High School (9-12)",
+    "subjectArea": "Computer Science",
+    "topic": "Software Licensing Models",
+    "learningObjectives": [
+        "Define open source and proprietary software",
+        "Identify examples of open source and proprietary software",
+        "Compare the rights users have with each licensing model",
+        "Evaluate the pros and cons of each approach"
+    ],
+    "bloomsTaxonomy": ["Remember", "Understand", "Analyze", "Evaluate"],
+    "duration": "5-10 minutes",
+    "prerequisites": ["Basic computer literacy"],
+    "framework": "p5.js",
+    "canvasDimensions": "600x500",
+    "responsive": "Width-responsive",
+    "dependencies": ["p5.js CDN"],
+    "controls": [
+        {
+            "type": "hover",
+            "description": "Hover over software examples to see descriptions"
+        },
+        {
+            "type": "button",
+            "label": "What if you modify proprietary software?",
+            "description": "Toggles display of lawyer joke overlay"
+        }
+    ]
+}
