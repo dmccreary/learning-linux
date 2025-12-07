@@ -1810,6 +1810,18 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -2516,8 +2528,10 @@
 <span class="normal">36</span>
 <span class="normal">37</span>
 <span class="normal">38</span>
-<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;summary&gt;UNIX Family Tree&lt;/summary&gt;
+<span class="normal">39</span>
+<span class="normal">40</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;summary&gt;UNIX Family Tree&lt;/summary&gt;
 Type: timeline
+Status: done
 
 Bloom Taxonomy: Remember, Understand
 Learning Objective: Help students visualize how UNIX evolved into different branches over time, including BSD and System V, and how Linux emerged as a separate but compatible system.
@@ -2554,7 +2568,7 @@ Interactive features:
 - Hover over each node to see key features
 - Click to see more details about that version
 
-Implementation: vis-network or HTML/CSS/SVG timeline
+Implementation: timeline-generator skill that uses the vis-timline.js JavaScript library
 </code></pre></div></td></tr></table></div>
 </details>
 <h3 id="the-dynamic-duo-ken-and-dennis">The Dynamic Duo: Ken and Dennis</h3>
@@ -2563,6 +2577,10 @@ Implementation: vis-network or HTML/CSS/SVG timeline
 <p>Before C, most operating systems were written in "assembly language," which is basically writing instructions directly for the computer's brain. It works, but it's like giving someone directions by saying "rotate your left leg 47 degrees, shift weight to right foot, rotate right leg..." instead of just saying "walk forward." Assembly code was specific to each type of computer, which meant if you wanted your program to run on a different machine, you basically had to rewrite the whole thing.</p>
 <p>C changed everything.</p>
 <h2 id="c-the-programming-language-that-changed-everything">C: The Programming Language That Changed Everything</h2>
+<style>
+img {border: solid black 2px;}
+</style>
+<p><img alt="" src="../../img/k-and-r-book-cover.png" width="200px" /></p>
 <p>The <strong>C programming language</strong> (created by Dennis Ritchie around 1972) was a game-changer because it was:</p>
 <ul>
 <li><strong>High-level enough</strong> to be readable by humans (unlike assembly)</li>
@@ -2637,64 +2655,30 @@ Implementation: vis-network or HTML/CSS/SVG timeline
 
 <p><a class="md-button md-button--primary" href="../../sims/unix-pipe-diagram/main.html">Run the UNIX Pipe Diagram MicroSim Fullscreen</a></p>
 <details>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;summary&gt;UNIX Philosophy in Action - Pipe Example&lt;/summary&gt;
-Type: diagram
-
-Bloom Taxonomy: Understand, Apply
-Learning Objective: Visualize how small UNIX tools connect together via pipes to accomplish complex tasks, demonstrating the &quot;do one thing well&quot; philosophy.
-
-Components to show:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;summary&gt;UNIX Philosophy in Action - Pipe Example&lt;/summary&gt;
+</code></pre></div></td></tr></table></div>
+<p>Type: diagram
+Status: Done</p>
+<p>Bloom Taxonomy: Understand, Apply
+Learning Objective: Visualize how small UNIX tools connect together via pipes to accomplish complex tasks, demonstrating the "do one thing well" philosophy.</p>
+<p>Components to show:
 - Three colored boxes representing commands: find (blue), xargs/ls (green), sort (orange)
 - Pipe symbols (|) connecting the boxes
 - Data flowing between boxes shown as document icons
 - Input (file system) on the left
-- Output (sorted list) on the right
-
-Layout: Horizontal flow diagram, left to right
-
-Labels:
+- Output (sorted list) on the right</p>
+<p>Layout: Horizontal flow diagram, left to right</p>
+<p>Labels:
 - Above each box: Command name and brief description
-- On pipes: &quot;text stream&quot;
-- Input label: &quot;File System&quot;
-- Output label: &quot;Sorted Results&quot;
-
-Annotations:
-- Callout bubble: &quot;Each tool does ONE job perfectly&quot;
-- Callout bubble: &quot;Text flows between tools&quot;
-
-Style: Clean, modern infographic style with rounded corners
-Color scheme: Blue, green, orange boxes on light background
-
-Implementation: HTML/CSS or p5.js
-</code></pre></div></td></tr></table></div>
+- On pipes: "text stream"
+- Input label: "File System"
+- Output label: "Sorted Results"</p>
+<p>Annotations:
+- Callout bubble: "Each tool does ONE job perfectly"
+- Callout bubble: "Text flows between tools"</p>
+<p>Style: Clean, modern infographic style with rounded corners
+Color scheme: Blue, green, orange boxes on light background</p>
+<p>Implementation: done with the microsim-p5 claude skill</p>
 </details>
 <h2 id="unix-spreads-system-v-and-bsd">UNIX Spreads: System V and BSD</h2>
 <p>Throughout the 1970s, UNIX spread like wildfire through universities and research labs. AT&amp;T (the company that owned Bell Labs) had regulations that prevented them from selling software, so they basically gave UNIX away to universities for educational purposes. Students learned UNIX, loved UNIX, and then went out into the world wanting to use UNIX.</p>
@@ -2710,20 +2694,33 @@ Implementation: HTML/CSS or p5.js
 <h3 id="bsd-unix-the-college-rebels">BSD Unix: The College Rebels</h3>
 <p>Meanwhile, at the University of California, Berkeley, students and researchers had been making their own modifications and improvements to UNIX. They called their version <strong>BSD</strong> (Berkeley Software Distribution). BSD introduced many innovations that we still use today:</p>
 <ul>
+<li><strong>Virtual Memory</strong> - where the operation says "no problem" when you program does not fit in RAM.</li>
 <li>The <code>vi</code> text editor (which you'll learn to either love or... have opinions about)</li>
-<li>The TCP/IP networking stack (literally how the internet works!)</li>
-<li>The C shell (csh), a popular command-line interface</li>
+<li>The <strong>TCP/IP</strong> networking stack (literally how the internet works!)</li>
+<li>The <strong>C shell</strong> (csh), a popular command-line interface</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Dan's Trivia</p>
+<p>When I worked at AT&amp;T Bell Labs in the 1980s, they sold the AT&amp;T System V UNIX which had no virtual memory.  But I could
+not use it because our chip simulators did not fit into memory.  Imagine my bosses frustration when
+I walked into their office and told them I upgraded all our computers to BSD Unix because
+it DID support virtual memory.  To say the meeting did not go well is an understatement!</p>
+</div>
 <p>BSD was the rebellious, innovative, academic side of the UNIX family. It eventually spawned:</p>
 <ul>
+<li><strong>Mach</strong> - the microkernel architecture created by Carnegie Mellon University (CMU)</li>
 <li><strong>FreeBSD</strong> – powers Netflix's streaming infrastructure!</li>
 <li><strong>NetBSD</strong> – runs on everything from toasters to supercomputers</li>
 <li><strong>OpenBSD</strong> – famous for security</li>
-<li><strong>macOS</strong> – Yes! Apple's operating system is BSD-based!</li>
+<li><strong>macOS</strong> – Yes! Apple's operating system is BSD-based!  (Technically based on Mach from CMU)</li>
 </ul>
 <div class="admonition question">
 <p class="admonition-title">Wait, macOS is UNIX?</p>
-<p>Yep! Next time you open Terminal on a Mac, you're using a UNIX system. Apple built macOS on top of BSD UNIX (specifically a version called Darwin). So if you've ever used a Mac, congratulations—you've already used UNIX!</p>
+<p>Yep! Next time you open Terminal on a Mac, you're using a UNIX system. Apple built macOS on top of <code>Mach</code> which was
+created by Carnegie Mellon University and then used at NeXT computer.
+This eventually evolved into a version called Darwin. 
+So if you've ever used a Mac, congratulations—you've already used UNIX!
+Check out the story <a href="https://www.copetti.org/writings/blog/avie-tevanian-interview/">Avie Tevanian Interview for the Computer History Museum</a></p>
 </div>
 <h2 id="the-free-software-revolution-enter-richard-stallman">The Free Software Revolution: Enter Richard Stallman</h2>
 <p>By the early 1980s, UNIX was everywhere in universities and corporations. But there was a problem: it wasn't free. As in, you couldn't share it, modify it, or see how it worked unless you paid AT&amp;T a lot of money.</p>
@@ -2744,6 +2741,9 @@ Implementation: HTML/CSS or p5.js
 </ul>
 <p>By 1990, GNU had almost everything needed for a complete operating system. Almost. They were missing one crucial piece: the <strong>kernel</strong>.</p>
 <h4 id="diagram-open-source-vs-proprietary-software">Diagram: Open Source vs Proprietary Software</h4>
+<iframe src="../../sims/open-vs-closed/main.html" height="502" width="100%" scrolling="no"></iframe>
+
+<p><a class="md-button md-button--primary" href="../../sims/open-vs-closed/main.html">Run the Open vs Closed MicroSim Fullscreen</a></p>
 <details>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -2777,8 +2777,10 @@ Implementation: HTML/CSS or p5.js
 <span class="normal">30</span>
 <span class="normal">31</span>
 <span class="normal">32</span>
-<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;summary&gt;Open Source vs Proprietary Software&lt;/summary&gt;
+<span class="normal">33</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;summary&gt;Open Source vs Proprietary Software&lt;/summary&gt;
 Type: infographic
+Status: Done
 
 Bloom Taxonomy: Understand
 Learning Objective: Help students understand the difference between open source and proprietary software through visual comparison.
@@ -2827,6 +2829,9 @@ Implementation: HTML/CSS or p5.js
 <p>The kernel is the core of an operating system—the part that talks directly to the hardware. If the OS is a restaurant manager, the kernel is the manager's brain. Everything else (the shell, applications, utilities) builds on top of the kernel.</p>
 </div>
 <h3 id="why-did-linux-take-off">Why Did Linux Take Off?</h3>
+<iframe src="../../sims/linux-marketshare/main.html" width="100%" height="500" scrolling="no"></iframe>
+
+<p><a class="md-button md-button--primary" href="../../sims/linux-marketshare/main.html">View Linux Web Server Marketshare Chart Fullscreen</a></p>
 <p>Linux succeeded where other free UNIX alternatives struggled for several reasons:</p>
 <ol>
 <li><strong>Perfect timing</strong> – Released just when the internet was starting to grow</li>
@@ -2868,6 +2873,8 @@ Implementation: HTML/CSS or p5.js
 </table>
 <p>Let that sink in: When you use Google, Facebook, Amazon, or basically any website, you're probably talking to a Linux server. Your Android phone runs Linux. Your smart TV probably runs Linux. The International Space Station runs Linux. Tesla cars run Linux. Linux is EVERYWHERE.</p>
 <h4 id="diagram-linux-timeline">Diagram: Linux Timeline</h4>
+<iframe src="../../sims/linux-timeline/main.html" width="100%" height="580px" scrolling="no"></iframe>
+<p><a class="md-button md-button--primary" href="../../sims/linux-timeline/main.html">Run the Linux Timeline Fullscreen</a></p>
 <details>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -2981,6 +2988,9 @@ Implementation: vis-timeline or HTML/CSS/SVG
 <p>When you see "based on," it means they inherited code, tools, and packaging systems from their parent distro.</p>
 </div>
 <h4 id="diagram-linux-distribution-comparison">Diagram: Linux Distribution Comparison</h4>
+<iframe src="../../sims/linux-distro-comparison/main.html" width="100%" height="470" scrolling="no"></iframe>
+
+<p><a class="md-button md-button--primary" href="../../sims/linux-distro-comparison/main.html">View Linux Distribution MicroSim Fullscreen</a></p>
 <details>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
