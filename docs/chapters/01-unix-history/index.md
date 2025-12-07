@@ -482,6 +482,11 @@ If you're running Linux on a Raspberry Pi for this class, there's a good chance 
 
 #### Diagram: Linux Distribution Comparison
 
+
+<iframe src="../../sims/linux-distro-comparison/main.html" width="100%" height="470" scrolling="no"></iframe>
+
+[View Linux Distribution MicroSim Fullscreen](../../sims/linux-distro-comparison/main.html){ .md-button .md-button--primary }
+
 <details markdown="1">
     <summary>Linux Distribution Comparison Chart</summary>
     Type: chart

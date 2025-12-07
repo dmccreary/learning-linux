@@ -7,7 +7,7 @@ description: Interactive comparison table of major Linux distributions with rati
 
 <iframe src="main.html" width="100%" height="470" scrolling="no"></iframe>
 
-[View Fullscreen](main.html){ .md-button .md-button--primary }
+[View Linux Distribution MicroSim Fullscreen](main.html){ .md-button .md-button--primary }
 
 ## About This Chart
 
