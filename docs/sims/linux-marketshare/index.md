@@ -7,7 +7,7 @@ description: Interactive visualization comparing Linux and Windows usage on web 
 
 This interactive visualization shows the market share of operating systems used on web servers worldwide as of December 2025.
 
-<iframe src="main.html" width="100%" height="520" scrolling="no"></iframe>
+<iframe src="main.html" width="100%" height="500" scrolling="no"></iframe>
 
 [View Fullscreen](main.html){ .md-button .md-button--primary }
 
