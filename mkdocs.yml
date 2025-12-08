@@ -93,10 +93,14 @@ nav:
       - Quiz: chapters/26-careers/quiz.md
   
   - Supplementary Content:
+    - List of Supplementary Content: supplementary-content/index.md
+    - Claude Code Skills: supplementary-content/claude-code-skills.md
+    - Docker MacOS Installation and Setup: supplementary-content/docker-mac/index.md
+    - Docker Practice Shell: supplementary-content/docker-practice-shell.md
+    - Intelligent Textbooks: supplementary-content/intelligent-textbook.md
     - Low Cost Raspberry Pi: supplementary-content/low-cost-raspberry-pd.md
     - Raspberry Pi 500+: supplementary-content/raspberry-pi-500-plus-impact.md
-    - Claude Code Skills: supplementary-content/claude-code-skills.md
-    - Intelligent Textbooks: supplementary-content/intelligent-textbook.md
+    - VM Options: supplementary-content/vm-options.md
 
   - MicroSims:
     - List of Microsims: sims/index.md
