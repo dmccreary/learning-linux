@@ -1,51 +1,111 @@
-# List of MicroSims
+---
+title: List of MicroSims for Learning Linux
+description: A list of all the MicroSims used in the Teaching Linux course
+image: /sims/index-screen-image.png
+og:image: /sims/index-screen-image.png
+hide:
+    toc
+---
+# List of MicroSims for Learning Linux
 
-Interactive visualizations to help students learn Linux fundamentals.
+Interactive Micro Simulations to help students learn Linux fundamentals.
 
-## [Learning Graph Viewer](./graph-viewer/index.md)
+<div class="grid cards" markdown>
 
-Interactive viewer for exploring the course's 550-concept learning graph with search, taxonomy filtering, and real-time statistics.
+-   **[Bash vs Zsh Comparison](./bash-vs-zsh/index.md)**
 
-## [UNIX Family Tree](./unix-family-tree/index.md)
+    ---
 
-Visual history showing how UNIX evolved from Bell Labs in 1969 into BSD, System V, and Linux branches.
+    ![Bash vs Zsh Comparison](./bash-vs-zsh/bash-vs-zsh.png)
 
-## [Linux Timeline](./linux-timeline/index.md)
+    Side-by-side comparison of `bash` and `zsh` shells with star ratings for compatibility, features, and customization.
 
-Interactive timeline of key milestones in Linux history from 1991 to 2025, with category filtering and event details.
+-   **[Command Syntax Visual Guide](./command-syntax/index.md)**
 
-## [Bash vs Zsh Comparison](./bash-vs-zsh/index.md)
+    ---
 
-Side-by-side comparison of Bash and Zsh shells with star ratings for compatibility, features, and customization.
+    ![Command Syntax Visual Guide](./command-syntax/command-syntax.png)
 
-## [Command Syntax Visual Guide](./command-syntax/index.md)
+    Color-coded breakdown of Linux command structure showing commands, options, and arguments with hover explanations.
 
-Color-coded breakdown of Linux command structure showing commands, options, and arguments with hover explanations.
+-   **[Learning Graph Viewer](./graph-viewer/index.md)**
 
-## [Linux Distribution Comparison](./linux-distro-comparison/index.md)
+    ---
 
-Comparison table of major Linux distributions with ratings for user-friendliness, stability, and software freshness.
+    ![Learning Graph Viewer](./graph-viewer/graph-viewer.png)
 
-## [Web Server OS Market Share](./linux-marketshare/index.md)
+    Interactive viewer for exploring the course's 550-concept learning graph with search, taxonomy filtering, and real-time statistics.
 
-Pie chart, bar chart, and data table showing Linux's ~90% dominance on web servers versus Windows.
+-   **[Linux Distribution Comparison](./linux-distro-comparison/index.md)**
 
-## [Open Source vs Proprietary Software](./open-vs-closed/index.md)
+    ---
 
-Visual infographic comparing open source and proprietary software licensing models with examples.
+    ![Linux Distribution Comparison](./linux-distro-comparison/linux-distro-comparison.png)
 
-## [Shell and Kernel Flow](./shell-kernel-flow/index.md)
+    Comparison table of major Linux distributions with ratings for user-friendliness, stability, and software freshness.
 
-Workflow diagram illustrating how user commands flow through the shell to the Linux kernel.
+-   **[Linux Timeline](./linux-timeline/index.md)**
 
-## [Shell Prompt Anatomy](./shell-prompt-anatomy/index.md)
+    ---
 
-Interactive breakdown of shell prompt components: username, hostname, current directory, and user indicator.
+    ![Linux Timeline](./linux-timeline/linux-timeline.png)
 
-## [Tab Completion Practice](./tab-completion/index.md)
+    Interactive timeline of key milestones in Linux history from 1991 to 2025, with category filtering and event details.
 
-Simulated terminal for practicing tab completion with three progressive difficulty levels.
+-   **[Open Source vs Proprietary Software](./open-vs-closed/index.md)**
 
-## [UNIX Philosophy Pipe Diagram](./unix-pipe-diagram/index.md)
+    ---
 
-Animated visualization of data flowing through piped commands, demonstrating the "do one thing well" philosophy.
+    ![Open Source vs Proprietary Software](./open-vs-closed/open-vs-closed.png)
+
+    Visual infographic comparing open source and proprietary software licensing models with examples.
+
+-   **[Shell and Kernel Flow](./shell-kernel-flow/index.md)**
+
+    ---
+
+    ![Shell and Kernel Flow](./shell-kernel-flow/shell-kernel-flow.png)
+
+    Workflow diagram illustrating how user commands flow through the shell to the Linux kernel.
+
+-   **[Shell Prompt Anatomy](./shell-prompt-anatomy/index.md)**
+
+    ---
+
+    ![Shell Prompt Anatomy](./shell-prompt-anatomy/shell-prompt-anatomy.png)
+
+    Interactive breakdown of shell prompt components: username, hostname, current directory, and user indicator.
+
+-   **[Tab Completion Practice](./tab-completion/index.md)**
+
+    ---
+
+    ![Tab Completion Practice](./tab-completion/tab-completion.png)
+
+    Simulated terminal for practicing tab completion with three progressive difficulty levels.
+
+-   **[UNIX Family Tree](./unix-family-tree/index.md)**
+
+    ---
+
+    ![UNIX Family Tree](./unix-family-tree/unix-family-tree.png)
+
+    Visual history showing how UNIX evolved from Bell Labs in 1969 into BSD, System V, and Linux branches.
+
+-   **[UNIX Philosophy Pipe Diagram](./unix-pipe-diagram/index.md)**
+
+    ---
+
+    ![UNIX Philosophy Pipe Diagram](./unix-pipe-diagram/unix-pipe-diagram.png)
+
+    Animated visualization of data flowing through piped commands, demonstrating the "do one thing well" philosophy.
+
+-   **[Web Server OS Market Share](./linux-marketshare/index.md)**
+
+    ---
+
+    ![Web Server OS Market Share](./linux-marketshare/linux-marketshare.png)
+
+    Pie chart, bar chart, and data table showing Linux's ~90% dominance on web servers versus Windows.
+
+</div>
