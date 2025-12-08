@@ -592,56 +592,56 @@ cd /home/dan/Documents/
 
 <details markdown="1">
     <summary>Interactive Tab Completion Demo</summary>
-    Type: microsim
+Type: microsim
 
-    Bloom Taxonomy: Apply
-    Learning Objective: Let students practice tab completion in a safe, interactive environment before trying it on a real terminal.
+Bloom Taxonomy: Apply
+Learning Objective: Let students practice tab completion in a safe, interactive environment before trying it on a real terminal.
 
-    Canvas layout (responsive, ~700px max width):
-    - Top area (350px): Simulated terminal display
-    - Bottom area (150px): Instructions and hint panel
+Canvas layout (responsive, ~700px max width):
+- Top area (350px): Simulated terminal display
+- Bottom area (150px): Instructions and hint panel
 
-    Visual elements:
-    - Terminal-style interface with black background, green text
-    - Blinking cursor
-    - File listing panel showing available files
-    - "Tab key" visual indicator that lights up when pressed
-    - Completion animation showing text being filled in
+Visual elements:
+- Terminal-style interface with black background, green text
+- Blinking cursor
+- File listing panel showing available files
+- "Tab key" visual indicator that lights up when pressed
+- Completion animation showing text being filled in
 
-    Simulated file system:
-    - Documents/
-      - report.txt
-      - readme.md
-      - research_notes.txt
-    - Downloads/
-      - image.png
-      - installer.deb
-    - Pictures/
+Simulated file system:
+- Documents/
+    - report.txt
+    - readme.md
+    - research_notes.txt
+- Downloads/
+    - image.png
+    - installer.deb
+- Pictures/
 
-    Interactive exercises (3 levels):
-    1. Basic: Type "cd Doc<Tab>" - completes to "cd Documents/"
-    2. Intermediate: Type "cat re<Tab><Tab>" - shows options, complete "cat readme.md"
-    3. Advanced: Type "ls ~/Do<Tab>" - multiple matches, narrow down
+Interactive exercises (3 levels):
+1. Basic: Type "cd Doc<Tab>" - completes to "cd Documents/"
+2. Intermediate: Type "cat re<Tab><Tab>" - shows options, complete "cat readme.md"
+3. Advanced: Type "ls ~/Do<Tab>" - multiple matches, narrow down
 
-    Controls:
-    - Text input field for typing commands
-    - Keyboard capture for Tab key
-    - "Reset" button
-    - "Next Challenge" button
-    - Hint toggle
+Controls:
+- Text input field for typing commands
+- Keyboard capture for Tab key
+- "Reset" button
+- "Next Challenge" button
+- Hint toggle
 
-    Behavior:
-    - Simulate actual tab completion behavior
-    - Show visual feedback when Tab is pressed
-    - Celebrate correct completions with brief animation
-    - Provide helpful hints if stuck
+Behavior:
+- Simulate actual tab completion behavior
+- Show visual feedback when Tab is pressed
+- Celebrate correct completions with brief animation
+- Provide helpful hints if stuck
 
-    Default state:
-    - Level 1 challenge active
-    - Instructions visible
-    - Cursor blinking in terminal
+Default state:
+- Level 1 challenge active
+- Instructions visible
+- Cursor blinking in terminal
 
-    Implementation: p5.js
+Implementation: p5.js
 </details>
 
 ## Command History: The Shell Remembers
