@@ -1,0 +1,1731 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/learning-linux/supplementary-content/docker-practice-shell/">
+      
+      
+        <link rel="prev" href="../docker-mac/">
+      
+      
+        <link rel="next" href="../intelligent-textbook/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Docker Practice Shell - Learning Linux</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-1PH8WBWH86"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-1PH8WBWH86",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-1PH8WBWH86",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Docker Practice Shell - Learning Linux" >
+      
+        <meta  property="og:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/supplementary-content/docker-practice-shell.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/learning-linux/supplementary-content/docker-practice-shell/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Docker Practice Shell - Learning Linux" >
+      
+        <meta  name="twitter:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/supplementary-content/docker-practice-shell.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#adding-a-practice-shell" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Learning Linux" class="md-header__button md-logo" aria-label="Learning Linux" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Learning Linux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Docker Practice Shell
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Learning Linux" class="md-nav__button md-logo" aria-label="Learning Linux" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Learning Linux
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Supplementary Content
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Supplementary Content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../claude-code-skills/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Claude Code Skills
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-mac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker MacOS Installation and Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Docker Practice Shell
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Docker Practice Shell
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Docker?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-alpine-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Alpine Linux?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Alpine Linux?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-musl-libc" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is musl libc?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-is-startup-so-fast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is Startup So Fast?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why is Startup So Fast?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-no-boot-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. No Boot Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-layered-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Layered File System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-shared-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Shared Kernel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-minimal-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Minimal Image
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-docker-command-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Docker Command Explained
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-an-alias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up an Alias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting Up an Alias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-add-the-alias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Add the Alias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-reload-your-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Reload Your Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-use-your-practice-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Use Your Practice Shell
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploring-your-practice-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploring Your Practice Environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exiting-the-practice-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exiting the Practice Shell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-happens-to-your-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Happens to Your Work?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intelligent-textbook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intelligent Textbooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../low-cost-raspberry-pd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Low Cost Raspberry Pi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raspberry-pi-500-plus-impact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raspberry Pi 500+
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vm-options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VM Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Sample Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary of Terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Docker?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-alpine-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Alpine Linux?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Alpine Linux?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-musl-libc" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is musl libc?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-is-startup-so-fast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is Startup So Fast?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why is Startup So Fast?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-no-boot-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. No Boot Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-layered-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Layered File System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-shared-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Shared Kernel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-minimal-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Minimal Image
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-docker-command-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Docker Command Explained
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-an-alias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up an Alias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting Up an Alias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-add-the-alias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Add the Alias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-reload-your-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Reload Your Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-use-your-practice-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Use Your Practice Shell
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploring-your-practice-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploring Your Practice Environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exiting-the-practice-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exiting the Practice Shell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-happens-to-your-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Happens to Your Work?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/learning-linux/blob/master/docs/supplementary-content/docker-practice-shell.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="adding-a-practice-shell">Adding a Practice Shell</h1>
+<p>When learning Linux commands, you need a safe environment to experiment without risking damage to your main computer. Docker provides the perfect solution: a lightweight, isolated Linux environment that starts in under a second.</p>
+<h2 id="what-is-docker">What is Docker?</h2>
+<p>Docker is a tool that runs <strong>containers</strong>—lightweight, isolated environments that share your computer's operating system kernel. Think of a container as a "mini computer" running inside your computer, but without the overhead of a full virtual machine.</p>
+<p>Key differences between containers and virtual machines:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Virtual Machine</th>
+<th>Docker Container</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Startup time</td>
+<td>30-60 seconds</td>
+<td>Less than 1 second</td>
+</tr>
+<tr>
+<td>Memory usage</td>
+<td>1-2 GB minimum</td>
+<td>5-50 MB</td>
+</tr>
+<tr>
+<td>Disk space</td>
+<td>10-40 GB</td>
+<td>5-200 MB</td>
+</tr>
+<tr>
+<td>Isolation</td>
+<td>Complete (separate OS)</td>
+<td>Process-level (shared kernel)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-is-alpine-linux">What is Alpine Linux?</h2>
+<p>Alpine Linux is a tiny Linux distribution designed for security and simplicity. The entire base image is only about <strong>5 MB</strong>—compare that to Ubuntu at 75 MB or a full desktop Linux at several gigabytes.</p>
+<p>Alpine achieves this small size by:</p>
+<ul>
+<li>Using <strong>musl libc</strong> instead of the larger glibc</li>
+<li>Using <strong>BusyBox</strong> for common utilities (a single binary that provides ls, cat, grep, and 300+ other commands)</li>
+<li>Including only essential packages—no extras</li>
+</ul>
+<h3 id="what-is-musl-libc">What is musl libc?</h3>
+<p>Every program on Linux needs a <strong>C library</strong> (libc)—it's the foundation that provides basic functions like printing text, reading files, and allocating memory. Think of it as the translator between your programs and the Linux kernel.</p>
+<p>Most Linux distributions use <strong>glibc</strong> (GNU C Library), which is feature-rich but large (~2 MB). Alpine uses <strong>musl</strong> (pronounced "mussel"), a lightweight alternative that's only about 600 KB.</p>
+<p>musl prioritizes:</p>
+<ul>
+<li><strong>Small size</strong> — Less code means smaller images</li>
+<li><strong>Simplicity</strong> — Easier to understand and audit</li>
+<li><strong>Standards compliance</strong> — Follows POSIX closely</li>
+</ul>
+<p>The tradeoff? Some programs compiled for glibc won't work directly on Alpine. But for learning Linux commands, musl works perfectly.</p>
+<p>Despite its tiny size, Alpine includes everything you need to practice Linux commands: a shell, file system, users, permissions, and all the standard utilities.</p>
+<h2 id="why-is-startup-so-fast">Why is Startup So Fast?</h2>
+<p>When you run <code>docker run alpine /bin/sh</code>, several things happen almost instantly:</p>
+<h3 id="1-no-boot-process">1. No Boot Process</h3>
+<p>A traditional computer or VM must:</p>
+<ol>
+<li>Initialize hardware (BIOS/UEFI)</li>
+<li>Load a bootloader (GRUB)</li>
+<li>Load and decompress the kernel</li>
+<li>Initialize kernel subsystems</li>
+<li>Start system services (systemd/init)</li>
+<li>Finally, present a login prompt</li>
+</ol>
+<p>This takes 30-60 seconds.</p>
+<p>A Docker container skips ALL of this. It simply starts a new process (<code>/bin/sh</code>) in an isolated namespace. The kernel is already running—it's your Mac's or Linux's kernel.</p>
+<h3 id="2-layered-file-system">2. Layered File System</h3>
+<p>Docker uses a <strong>copy-on-write</strong> file system. The Alpine image exists as read-only layers on your disk. When you start a container:</p>
+<ul>
+<li>Docker doesn't copy the 5 MB image</li>
+<li>It creates a thin writable layer on top</li>
+<li>Files are only copied when you modify them</li>
+</ul>
+<p>This means starting 10 containers uses barely more disk space than starting 1.</p>
+<h3 id="3-shared-kernel">3. Shared Kernel</h3>
+<p>The Linux kernel handles process isolation, memory management, and hardware access. Containers share this kernel with your host system (on Mac, Docker runs a lightweight Linux VM that provides this kernel).</p>
+<p>Since there's no kernel to load, containers start as fast as any regular program.</p>
+<h3 id="4-minimal-image">4. Minimal Image</h3>
+<p>Alpine's 5 MB footprint means:</p>
+<ul>
+<li>Less data to read from disk</li>
+<li>Less memory to allocate</li>
+<li>Faster image downloads</li>
+<li>Quicker container creation</li>
+</ul>
+<h2 id="the-docker-command-explained">The Docker Command Explained</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>alpine:latest<span class="w"> </span>/bin/sh
+</code></pre></div></td></tr></table></div>
+<p>Let's break down each part:</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker</code></td>
+<td>The Docker command-line tool</td>
+</tr>
+<tr>
+<td><code>run</code></td>
+<td>Create and start a new container</td>
+</tr>
+<tr>
+<td><code>-i</code></td>
+<td><strong>Interactive</strong> mode—keep STDIN open so you can type commands</td>
+</tr>
+<tr>
+<td><code>-t</code></td>
+<td>Allocate a <strong>TTY</strong> (terminal)—gives you a proper command prompt</td>
+</tr>
+<tr>
+<td><code>--rm</code></td>
+<td><strong>Remove</strong> the container automatically when you exit</td>
+</tr>
+<tr>
+<td><code>alpine:latest</code></td>
+<td>The image to use (Alpine Linux, latest version)</td>
+</tr>
+<tr>
+<td><code>/bin/sh</code></td>
+<td>The command to run inside the container (a shell)</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>-it</code> flags together give you an interactive terminal session. Without them, the container would start and immediately exit because there's no input.</p>
+<p>The <code>--rm</code> flag is important for practice—it ensures each session starts fresh and doesn't leave old containers cluttering your system.</p>
+<h2 id="setting-up-an-alias">Setting Up an Alias</h2>
+<p>Typing the full command every time is tedious. Create a shortcut by adding an alias to your shell configuration.</p>
+<h3 id="step-1-add-the-alias">Step 1: Add the Alias</h3>
+<p>Open your shell configuration file and add this line:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">alias</span><span class="w"> </span><span class="nv">psh</span><span class="o">=</span><span class="s1">&#39;docker run -it --rm alpine:latest /bin/sh&#39;</span>
+</code></pre></div></td></tr></table></div>
+<p>For <strong>zsh</strong> (default on macOS):
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;alias psh=&#39;docker run -it --rm alpine:latest /bin/sh&#39;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+</code></pre></div></td></tr></table></div></p>
+<p>For <strong>bash</strong>:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;alias psh=&#39;docker run -it --rm alpine:latest /bin/sh&#39;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+</code></pre></div></td></tr></table></div></p>
+<h3 id="step-2-reload-your-configuration">Step 2: Reload Your Configuration</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/.zshrc<span class="w">    </span><span class="c1"># for zsh</span>
+<span class="nb">source</span><span class="w"> </span>~/.bashrc<span class="w">   </span><span class="c1"># for bash</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="step-3-use-your-practice-shell">Step 3: Use Your Practice Shell</h3>
+<p>Now just type:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>psh
+</code></pre></div></td></tr></table></div>
+<p>You'll immediately see the Alpine shell prompt:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>/ #
+</code></pre></div></td></tr></table></div>
+<p>The <code>#</code> indicates you're running as root (administrator) inside the container.</p>
+<h2 id="exploring-your-practice-environment">Exploring Your Practice Environment</h2>
+<p>Once inside, try some commands:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code>/<span class="w"> </span><span class="c1"># ls</span>
+bin<span class="w">    </span>etc<span class="w">    </span>lib<span class="w">    </span>mnt<span class="w">    </span>proc<span class="w">   </span>run<span class="w">    </span>srv<span class="w">    </span>tmp<span class="w">    </span>var
+dev<span class="w">    </span>home<span class="w">   </span>media<span class="w">  </span>opt<span class="w">    </span>root<span class="w">   </span>sbin<span class="w">   </span>sys<span class="w">    </span>usr
+
+/<span class="w"> </span><span class="c1"># whoami</span>
+root
+
+/<span class="w"> </span><span class="c1"># cat /etc/os-release</span>
+<span class="nv">NAME</span><span class="o">=</span><span class="s2">&quot;Alpine Linux&quot;</span>
+<span class="nv">ID</span><span class="o">=</span>alpine
+<span class="nv">VERSION_ID</span><span class="o">=</span><span class="m">3</span>.19.0
+<span class="nv">PRETTY_NAME</span><span class="o">=</span><span class="s2">&quot;Alpine Linux v3.19&quot;</span>
+
+/<span class="w"> </span><span class="c1"># pwd</span>
+/
+</code></pre></div></td></tr></table></div>
+<h2 id="exiting-the-practice-shell">Exiting the Practice Shell</h2>
+<p>When you're done, simply type:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">exit</span>
+</code></pre></div></td></tr></table></div>
+<p>Or press <code>Ctrl+D</code>.</p>
+<p>The container stops and is automatically removed (thanks to <code>--rm</code>). Your next <code>psh</code> command will create a fresh environment.</p>
+<h2 id="what-happens-to-your-work">What Happens to Your Work?</h2>
+<p>Because we use <code>--rm</code>, everything inside the container is deleted when you exit:</p>
+<ul>
+<li>Files you created? Gone.</li>
+<li>Packages you installed? Gone.</li>
+<li>Changes you made? Gone.</li>
+</ul>
+<p>This is actually a <strong>feature</strong> for learning:</p>
+<ul>
+<li>You can't permanently break anything</li>
+<li>Each session starts clean</li>
+<li>You can experiment without fear</li>
+</ul>
+<p>If you need to save work, you'll learn about Docker volumes later—but for practicing commands, the ephemeral nature is perfect.</p>
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>What It Means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Docker</td>
+<td>Tool for running lightweight containers</td>
+</tr>
+<tr>
+<td>Container</td>
+<td>Isolated environment sharing the host kernel</td>
+</tr>
+<tr>
+<td>Alpine</td>
+<td>Tiny (5 MB) Linux distribution</td>
+</tr>
+<tr>
+<td>Fast startup</td>
+<td>No boot process—just starts a process</td>
+</tr>
+<tr>
+<td><code>--rm</code> flag</td>
+<td>Auto-cleanup when container exits</td>
+</tr>
+<tr>
+<td><code>psh</code> alias</td>
+<td>Your shortcut to a practice Linux shell</td>
+</tr>
+</tbody>
+</table>
+<p>You now have a safe, fast, disposable Linux environment for practicing commands. Break things, experiment, and learn—then just type <code>exit</code> and start fresh!</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../docker-mac/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Docker MacOS Installation and Setup">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Docker MacOS Installation and Setup
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../intelligent-textbook/" class="md-footer__link md-footer__link--next" aria-label="Next: Intelligent Textbooks">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Intelligent Textbooks
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>
