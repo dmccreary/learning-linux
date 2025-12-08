@@ -1,0 +1,83 @@
+{
+  "$schema": "https://github.com/dmccreary/microsims/blob/main/src/microsim-schema/microsim-schema.json",
+  "title": "Tab Completion Practice",
+  "description": "An interactive simulation that lets students practice using tab completion in a simulated terminal environment with three progressive difficulty levels.",
+  "creator": "Dan McCreary",
+  "subject": ["Linux", "Terminal", "Shell", "Command Line"],
+  "date": "2025-12-07",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "educationalMetadata": {
+    "gradeLevel": "High School (9-12)",
+    "subjectArea": "Computer Science",
+    "topic": "Linux Terminal Commands",
+    "learningObjectives": [
+      "Apply tab completion to efficiently navigate directories",
+      "Understand how tab completion handles single vs. multiple matches",
+      "Practice using tab completion with paths and filenames"
+    ],
+    "bloomsTaxonomyLevel": "Apply",
+    "duration": "10-15 minutes",
+    "prerequisites": ["Basic understanding of files and directories", "Familiarity with terminal concepts"]
+  },
+  "technicalMetadata": {
+    "framework": "p5.js",
+    "version": "1.11.10",
+    "canvasDimensions": "700x500",
+    "responsive": "Width-responsive (max 700px)",
+    "dependencies": ["p5.js CDN"]
+  },
+  "userInterface": {
+    "controls": [
+      {
+        "type": "keyboard",
+        "name": "Tab key",
+        "description": "Triggers tab completion in the simulated terminal"
+      },
+      {
+        "type": "keyboard",
+        "name": "Enter key",
+        "description": "Confirms the completed command"
+      },
+      {
+        "type": "button",
+        "name": "Reset",
+        "description": "Resets the current level to start over"
+      },
+      {
+        "type": "button",
+        "name": "Next Challenge",
+        "description": "Advances to the next difficulty level"
+      },
+      {
+        "type": "checkbox",
+        "name": "Show Hints",
+        "description": "Toggles display of helpful hints"
+      }
+    ],
+    "interactiveElements": [
+      "Simulated terminal with text input",
+      "Visual Tab key indicator",
+      "File system panel",
+      "Completion animation"
+    ]
+  },
+  "simulationModel": {
+    "modelType": "Interactive Practice",
+    "variables": [
+      "currentLevel",
+      "currentInput",
+      "completionOptions"
+    ],
+    "assumptions": [
+      "Simulates bash-style tab completion",
+      "Simplified file system for learning"
+    ],
+    "limitations": [
+      "Does not simulate all real terminal behaviors",
+      "Fixed file system structure"
+    ]
+  }
+}
