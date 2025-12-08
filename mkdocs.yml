@@ -116,6 +116,7 @@ nav:
     - Tab Completion: sims/tab-completion/index.md
     - Unix Family Tree: sims/unix-family-tree/index.md
     - UNIX Pipe Diagram: sims/unix-pipe-diagram/index.md
+    - VM History Timeline: sims/vm-timeline/index.md
 
   - Learning Graph:
     - Introduction: learning-graph/index.md

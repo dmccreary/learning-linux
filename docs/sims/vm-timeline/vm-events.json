@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "content": "IBM CP-40 / CP-67 Virtual Machines",
+    "start": "1967-01",
+    "description": "IBM develops CP-40 (later CP-67), pioneering full hardware virtualization on mainframes."
+  },
+  {
+    "id": 2,
+    "content": "IBM VM/370",
+    "start": "1972-08",
+    "description": "IBM releases VM/370, the first widely deployed commercial VM OS for System/370."
+  },
+  {
+    "id": 3,
+    "content": "Founding of VMware",
+    "start": "1998-02",
+    "description": "VMware is founded by Diane Greene, Mendel Rosenblum and others, accelerating x86 virtualization."
+  },
+  {
+    "id": 4,
+    "content": "VMware Workstation 1.0",
+    "start": "1999-05",
+    "description": "VMware ships its first x86 virtualization product."
+  },
+  {
+    "id": 5,
+    "content": "FreeBSD Jails",
+    "start": "2000-03",
+    "description": "FreeBSD 4.0 introduces 'jails', providing early OS-level process isolation."
+  },
+  {
+    "id": 6,
+    "content": "Public Release of Xen",
+    "start": "2003-10",
+    "description": "Xen hypervisor publicly released, enabling paravirtualized and full virtualization on x86."
+  },
+  {
+    "id": 7,
+    "content": "KVM Merged into Linux Kernel",
+    "start": "2007-02-05",
+    "description": "KVM integrated into Linux kernel v2.6.20, enabling Linux to act as a native hypervisor."
+  },
+  {
+    "id": 8,
+    "content": "Introduction of Linux Containers (LXC)",
+    "start": "2008-07",
+    "description": "Linux Containers emerge through cgroups and namespaces, providing OS-level isolation."
+  },
+  {
+    "id": 9,
+    "content": "Intel VT-x Announced",
+    "start": "2005-11",
+    "description": "Intel introduces VT-x hardware virtualization extensions to reduce VM/host transition costs."
+  },
+  {
+    "id": 10,
+    "content": "AMD-V Introduced",
+    "start": "2006-05",
+    "description": "AMD releases AMD-V hardware virtualization extensions."
+  },
+  {
+    "id": 11,
+    "content": "Docker Public Launch",
+    "start": "2013-03",
+    "description": "Docker introduces a modern workflow for application containers using layered images."
+  },
+  {
+    "id": 12,
+    "content": "AWS Lambda Launches (Serverless Debut)",
+    "start": "2014-11",
+    "description": "AWS Lambda introduces serverless computing—event-driven execution without servers."
+  },
+  {
+    "id": 13,
+    "content": "Terraform 0.1 Release",
+    "start": "2014-07",
+    "description": "Terraform introduces cloud-vendor-agnostic infrastructure-as-code."
+  },
+  {
+    "id": 14,
+    "content": "HashiCorp Packer 1.0",
+    "start": "2015-07",
+    "description": "Packer reaches 1.0, automating VM, cloud image, and container image creation."
+  },
+  {
+    "id": 15,
+    "content": "HashiCorp Nomad 0.1",
+    "start": "2015-09",
+    "description": "Nomad introduces flexible cluster scheduling for both VMs and containers."
+  },
+  {
+    "id": 16,
+    "content": "Google Cloud Functions GA",
+    "start": "2017-03",
+    "description": "Google Cloud Functions reaches GA, expanding serverless to multi-cloud ecosystems."
+  },
+  {
+    "id": 17,
+    "content": "Firecracker MicroVMs Introduced",
+    "start": "2020-02",
+    "description": "AWS releases Firecracker for lightweight, secure microVMs powering serverless workloads."
+  },
+  {
+    "id": 18,
+    "content": "Crossplane 1.0 Release",
+    "start": "2020-12",
+    "description": "Crossplane turns Kubernetes into a universal cloud control plane for multi-cloud IaC."
+  },
+  {
+    "id": 19,
+    "content": "Research: History of VMs & Containers (Survey)",
+    "start": "2019-04",
+    "description": "The Ideal Versus the Real – Revisiting the History of Virtual Machines and Containers published."
+  },
+  {
+    "id": 20,
+    "content": "Performance Comparison: Containers vs VMs",
+    "start": "2024-01",
+    "description": "arXiv 2401.07539 reports up to 50% performance gains when running containers on bare-metal vs VMs."
+  },
+  {
+    "id": 21,
+    "content": "Comparative Study: Virtualization vs Containerization",
+    "start": "2024-11",
+    "description": "Study comparing hypervisors, containers, microVMs, and energy use in edge & cloud environments."
+  },
+  {
+    "id": 22,
+    "content": "Real-Time Workloads: Containers vs Unikernels vs VMs",
+    "start": "2024-06",
+    "description": "Analysis shows unikernels and microVMs rival containers for predictable latency."
+  },
+  {
+    "id": 23,
+    "content": "Hybrid Container + Unikernel Strategies",
+    "start": "2024-12",
+    "description": "Research proposes hybrid container/unikernel architectures for IoT and edge deployments."
+  },
+  {
+    "id": 24,
+    "content": "Container & VM Performance in Automotive Systems",
+    "start": "2024-12",
+    "description": "Study evaluates container and VM performance on ARM64/AMD64 for software-defined vehicle workloads."
+  },
+  {
+    "id": 25,
+    "content": "Containerized Virtualization Efficiency Study",
+    "start": "2025-01",
+    "description": "2025 benchmark paper analyzes how container image structure impacts performance across workloads."
+  }
+]

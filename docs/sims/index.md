@@ -100,6 +100,14 @@ Interactive Micro Simulations to help students learn Linux fundamentals.
 
     Animated visualization of data flowing through piped commands, demonstrating the "do one thing well" philosophy.
 
+-   **[VM History Timeline](./vm-timeline/index.md)**
+
+    ---
+
+    ![VM History Timeline](./vm-timeline/vm-timeline.png)
+
+    Interactive timeline tracing virtualization from IBM mainframes (1967) through containers, serverless, and microVMs to 2025.
+
 -   **[Web Server OS Market Share](./linux-marketshare/index.md)**
 
     ---
