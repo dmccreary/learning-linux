@@ -1,0 +1,331 @@
+/*
+================================================================================
+BASH VS ZSH COMPARISON - STYLESHEET
+================================================================================
+Two-column comparison with orange (Bash) and green (Zsh) color themes.
+Features hover tooltips, star ratings, and a Venn diagram showing common ground.
+================================================================================
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background-color: aliceblue;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* =============================================================================
+   TWO-COLUMN LAYOUT
+   ============================================================================= */
+
+.comparison-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.shell-column {
+    flex: 1;
+    min-width: 0;
+    background: aliceblue;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Bash Column - Orange Theme */
+.bash-column {
+    border-top: 4px solid #f97316;
+}
+
+.bash-column .shell-header {
+    background: linear-gradient(135deg, #fff7ed, #ffedd5);
+}
+
+.bash-column .shell-icon {
+    background: #f97316;
+    color: white;
+}
+
+.bash-column h3 {
+    color: #c2410c;
+}
+
+.bash-column h4 {
+    color: #ea580c;
+    border-bottom-color: #fed7aa;
+}
+
+/* Zsh Column - Green Theme */
+.zsh-column {
+    border-top: 4px solid #22c55e;
+}
+
+.zsh-column .shell-header {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+}
+
+.zsh-column .shell-icon {
+    background: #22c55e;
+    color: white;
+}
+
+.zsh-column h3 {
+    color: #15803d;
+}
+
+.zsh-column h4 {
+    color: #16a34a;
+    border-bottom-color: #bbf7d0;
+}
+
+/* =============================================================================
+   SHELL HEADER
+   ============================================================================= */
+
+.shell-header {
+    text-align: center;
+    padding: 6px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}
+
+.shell-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 auto 6px;
+}
+
+.shell-header h3 {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+
+.tagline {
+    font-style: italic;
+    color: #6b7280;
+    font-size: 0.8rem;
+}
+
+/* =============================================================================
+   RATINGS SECTIONS
+   ============================================================================= */
+
+.ratings-section {
+    margin-bottom: 6px;
+}
+
+.ratings-section h4 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-bottom: 2px;
+    margin-bottom: 4px;
+    border-bottom: 2px solid;
+}
+
+.rating-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 6px;
+    margin-bottom: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    position: relative;
+}
+
+.rating-row:hover {
+    background-color: #f8f9fa;
+}
+
+.rating-label {
+    font-size: 0.75rem;
+    color: #374151;
+}
+
+/* =============================================================================
+   STAR RATINGS
+   ============================================================================= */
+
+.star-group {
+    white-space: nowrap;
+}
+
+.stars {
+    letter-spacing: 0px;
+    font-size: 12px;
+}
+
+.stars-5 { color: #22c55e; }
+.stars-4 { color: #84cc16; }
+.stars-3 { color: #f59e0b; }
+.stars-2 { color: #f97316; }
+.stars-1 { color: #ef4444; }
+
+.stars-empty {
+    color: #d1d5db;
+    letter-spacing: 0px;
+}
+
+/* =============================================================================
+   TOOLTIPS
+   ============================================================================= */
+
+.rating-row[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(100% + 8px);
+    background-color: rgba(45, 55, 72, 0.95);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 1.4;
+    width: max-content;
+    max-width: 250px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.rating-row[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(100%);
+    border: 6px solid transparent;
+    border-top-color: rgba(45, 55, 72, 0.95);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+}
+
+.rating-row[data-tooltip]:hover::after,
+.rating-row[data-tooltip]:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* =============================================================================
+   COMMON SECTION WITH VENN DIAGRAM
+   ============================================================================= */
+
+.common-section {
+    background: aliceblue;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.venn-diagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    position: relative;
+    height: 50px;
+}
+
+.venn-circle {
+    width: 70px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.bash-circle {
+    background: linear-gradient(135deg, #fed7aa, #f97316);
+    margin-right: -20px;
+}
+
+.zsh-circle {
+    background: linear-gradient(135deg, #bbf7d0, #22c55e);
+    margin-left: -20px;
+}
+
+.venn-text {
+    position: absolute;
+    background: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #374151;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* =============================================================================
+   RECOMMENDATION & SOURCE
+   ============================================================================= */
+
+.recommendation {
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 8px;
+    padding: 8px;
+    background: linear-gradient(135deg, #fef3c7, #d1fae5);
+    border-radius: 6px;
+}
+
+.source {
+    text-align: center;
+    font-size: 10px;
+    color: #9ca3af;
+}
+
+/* =============================================================================
+   RESPONSIVE STYLES - Tables always side-by-side
+   ============================================================================= */
+
+.comparison-wrapper {
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+}
+
+.shell-column {
+    flex: 1 1 50%;
+    max-width: 50%;
+}

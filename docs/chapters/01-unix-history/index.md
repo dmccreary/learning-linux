@@ -556,56 +556,8 @@ Here's why:
 
 5. **It's actually a cool story!** – A video game, a student's hobby project, a bearded guy who really cares about freedom... tech history is wild, and knowing it makes you a more interesting person at parties. (Okay, specific kinds of parties.)
 
-#### Diagram: MicroSim - UNIX Commands Explorer
-
-<details markdown="1">
-    <summary>UNIX Commands Explorer MicroSim</summary>
-    Type: microsim
-
-    Bloom Taxonomy: Remember, Apply
-    Learning Objective: Help students interactively explore common UNIX/Linux commands and their origins, reinforcing the connection between history and practical skills.
-
-    Canvas layout (responsive, ~700px max width):
-    - Top area (400px height): Visualization area
-    - Bottom area (150px height): Control panel
-
-    Visual elements:
-    - Interactive terminal-like display showing command preview
-    - Timeline ribbon showing when command was introduced
-    - Category icons (file management, text processing, system, network)
-    - "Fun fact" bubble that appears with historical context
-
-    Interactive controls:
-    - Dropdown: Select category (Files, Text, System, Network)
-    - List/buttons: Select specific command
-    - "Try it!" button that shows example usage
-    - "History" button that shows when/where command originated
-
-    Command data (subset):
-    - ls (1971, original UNIX) - "List files - Ken Thompson's creation"
-    - cat (1971, original UNIX) - "ConCATenate files together"
-    - grep (1973, Ken Thompson) - "Name comes from ed command g/re/p"
-    - chmod (1971) - "CHange MODe of file permissions"
-    - sudo (1980, BSD) - "Super User DO - get root powers!"
-
-    Behavior:
-    - When command selected, show:
-      - Basic syntax example
-      - When it was created
-      - Fun historical fact
-      - Common use case
-    - Animation: Command typing effect in terminal preview
-    - Sound option: Terminal beep (muted by default)
-
-    Default state:
-    - Category: Files
-    - Selected: ls
-    - Shows welcoming message about exploring UNIX history
-
-    Implementation: p5.js
-
-    Note: This MicroSim bridges history content with practical command learning that will come in later chapters.
-</details>
+In the next chapter you will dive right into learning how to use a terminal
+to create directories and files and use commands to move and copy the files.
 
 ## Key Takeaways
 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shell and Kernel Flow</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis',
+                arrowMarkerAbsolute: true
+            },
+            themeVariables: {
+                edgeStrokeWidth: '4px'
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Shell and Kernel Flow</h1>
+            <p class="subtitle">How Commands Travel Through Linux</p>
+        </header>
+
+        <main>
+            <div class="diagram-container">
+                <div class="mermaid">
+flowchart TD
+    You("You<br/>typing commands"):::userNode
+    Shell["Shell<br/>interprets commands"]:::shellNode
+    Kernel["Kernel<br/>does the actual work"]:::kernelNode
+
+    You --> Shell --> Kernel
+
+    classDef userNode fill:#667eea,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+    classDef shellNode fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+    classDef kernelNode fill:#f093fb,stroke:#333,stroke-width:2px,color:#333,font-size:16px
+
+    linkStyle default stroke:#999,stroke-width:2px,font-size:16px
+                </div>
+            </div>
+
+            <div class="description">
+                <h2>About This Diagram</h2>
+                <p>This diagram shows the three-layer architecture of how user commands are processed in Linux. When you type a command, the shell interprets it and translates it into system calls that the kernel executes to perform the actual work on hardware.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Generated with <a href="https://mermaid.js.org/" target="_blank">Mermaid.js</a></p>
+        </footer>
+    </div>
+</body>
+</html>

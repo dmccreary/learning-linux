@@ -1,0 +1,64 @@
+{
+  "$schema": "https://github.com/dmccreary/microsims/blob/main/src/microsim-schema/microsim-schema.json",
+  "title": "Command Syntax Visual Guide",
+  "description": "An interactive diagram that helps students understand the structure of Linux commands, including how commands, options, and arguments work together.",
+  "creator": "Dan McCreary",
+  "subject": ["Linux", "Terminal", "Shell", "Command Line", "Commands"],
+  "date": "2025-12-07",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "gradeLevel": "High School (9-12)",
+  "subjectArea": "Computer Science",
+  "topic": "Linux Command Structure",
+  "learningObjectives": [
+    "Understand the three main parts of a Linux command",
+    "Identify commands, options, and arguments in any command",
+    "Apply this knowledge to read and construct new commands",
+    "Analyze unfamiliar commands by breaking them into components"
+  ],
+  "bloomsTaxonomy": ["Understand", "Apply"],
+  "duration": "15-20 minutes",
+  "prerequisites": ["Basic familiarity with the terminal", "Understanding of files and directories"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 450",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "keyboardNavigation": false,
+    "colorblindSafe": true
+  },
+  "controls": [
+    {
+      "type": "select",
+      "name": "Example Command",
+      "description": "Choose from different command examples to explore"
+    },
+    {
+      "type": "hover",
+      "description": "Hover over command parts for detailed explanations"
+    },
+    {
+      "type": "click",
+      "description": "Click on a component to lock the selection"
+    }
+  ],
+  "modelType": "Diagram/Annotation",
+  "variables": [
+    "command",
+    "options",
+    "argument1",
+    "argument2"
+  ],
+  "assumptions": [
+    "Bash-style command syntax",
+    "Standard Linux/Unix commands"
+  ],
+  "limitations": [
+    "Does not cover piping or redirection",
+    "Does not show command output",
+    "Limited to common command patterns"
+  ]
+}

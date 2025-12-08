@@ -62,6 +62,16 @@ The command line might look intimidating at first—just a blinking cursor waiti
 
 Let's dive in!
 
+### Play with a Micro-Sandbox Terminal
+
+If you don't have access to a real terminal on your computer, no worries!
+We have a "micro shell" using the handy browser based [Data ti Vis](http://data-to-viz.com) program.
+It only has 16 basic commands that run in a tiny virtual environment that will not
+damage any of your local files.  It is a good safe "sandbox" for you to learn shell
+commands.  Just click the **Data to Vis** link above and type "help" in the web-based terminal.
+
+This is just the first of many small virtual machines we be using in this course. 
+
 ## What is a Shell?
 
 When you type commands in the terminal, you're not actually talking directly to the Linux kernel (the core of the operating system). Instead, you're talking to a program called a **shell**.
@@ -70,7 +80,12 @@ Think of the shell as a translator between you and the operating system. You spe
 
 The word "shell" makes sense when you think about it—it's the outer layer that wraps around the kernel, just like an egg shell wraps around the egg inside. (I promise that's the last egg-related metaphor. Maybe.)
 
-```
+#### Diagram: Shell and Kernel Flow
+
+<iframe src="../../sims/shell-kernel-flow/main.html" width="100%" height="500" scrolling="no"></iframe>
+[View Shell and Kernel Flow Fullscreen](../../sims/shell-kernel-flow/main.html)
+
+<details>
 ┌─────────────────────────────────┐
 │            YOU                  │
 │     (typing commands)           │
@@ -87,7 +102,7 @@ The word "shell" makes sense when you think about it—it's the outer layer that
 │          KERNEL                 │
 │   (does the actual work)        │
 └─────────────────────────────────┘
-```
+</details>
 
 The shell does several important jobs:
 
@@ -107,7 +122,7 @@ Just like there are different web browsers (Chrome, Firefox, Safari), there are 
 | csh | C Shell | 1978 | Syntax looks like C programming |
 | ksh | Korn Shell | 1983 | Combined best of sh and csh |
 | bash | Bourne Again Shell | 1989 | Get it? "Born again"? Programmers love puns |
-| zsh | Z Shell | 1990 | The "ultimate" shell (z = last letter) |
+| zsh | Z Shell | 1990 | The "ultimate" shell (z = last letter) - the MacOS default|
 | fish | Friendly Interactive Shell | 2005 | Focus on user-friendliness |
 
 For this course, we'll focus on the two most popular shells on modern Linux systems: **Bash** and **Zsh**.
@@ -119,8 +134,8 @@ The **Bash Shell** (Bourne Again Shell) is the most widely used shell in the Lin
 - Most Linux servers
 - Raspberry Pi (Raspberry Pi OS)
 - macOS (until recently)
-- Windows Subsystem for Linux (WSL)
-- Git Bash on Windows
+- Windows Subsystem for Linux (WSL) - must be installed - about a 2GB download if you have the right permissions
+- Git Bash on Windows - a small lightweight shell used with the `git` software package
 
 Bash was created in 1989 by Brian Fox as a free software replacement for the original Bourne shell. Remember the GNU Project from Chapter 1? Bash was one of their key achievements!
 
@@ -170,7 +185,11 @@ zsh --version
 
     That said, if you're on a Mac or just want a fancier experience, Zsh is great too! Most commands work identically in both.
 
-#### Diagram: Shell Comparison
+#### Diagram: Bash vs Zsh Shell Comparison
+
+<iframe src="../../sims/bash-vs-zsh/main.html" width="100%" height="570px" scrolling="no"></iframe>
+
+[View the Bash vs. Zsh Fullscreen](../../sims/bash-vs-zsh/main.html)
 
 <details markdown="1">
     <summary>Bash vs Zsh Feature Comparison</summary>
@@ -304,9 +323,14 @@ The prompt can be customized to show all sorts of information—time, git branch
 
 #### Diagram: Anatomy of a Shell Prompt
 
+<iframe src="../../sims/shell-prompt-anatomy/main.html" height="482px" width="100%" scrolling="no"></iframe>
+
+[Run the Shell Prompt Anatomy MicroSim Fullscreen](../../sims/shell-prompt-anatomy/main.html){ .md-button .md-button--primary }
+
 <details markdown="1">
     <summary>Understanding the Shell Prompt</summary>
     Type: diagram
+    Status: done
 
     Bloom Taxonomy: Remember, Understand
     Learning Objective: Help students recognize and understand each component of a typical shell prompt.
@@ -423,6 +447,10 @@ ls --all
 ```
 
 #### Diagram: Command Syntax Breakdown
+
+<iframe src="../../sims/command-syntax/main.html" height="452px" width="100%" scrolling="no"></iframe>
+
+[Run the Command Syntax MicroSim Fullscreen](../../sims/command-syntax/main.html){ .md-button .md-button--primary }
 
 <details markdown="1">
     <summary>Command Syntax Visual Guide</summary>
