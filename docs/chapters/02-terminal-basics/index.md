@@ -65,7 +65,7 @@ Let's dive in!
 ### Play with a Micro-Sandbox Terminal
 
 If you don't have access to a real terminal on your computer, no worries!
-We have a "micro shell" using the handy browser based [Data ti Vis](http://data-to-viz.com) program.
+We have a "micro shell" using the handy browser based [Terminal Temple](http://terminaltemple.com) program.
 It only has 16 basic commands that run in a tiny virtual environment that will not
 damage any of your local files.  It is a good safe "sandbox" for you to learn shell
 commands.  Just click the **Data to Vis** link above and type "help" in the web-based terminal.
