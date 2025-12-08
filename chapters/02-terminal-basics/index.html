@@ -1822,6 +1822,22 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -2114,6 +2130,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Welcome to the Matrix (Sort Of)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#play-with-a-micro-sandbox-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Play with a Micro-Sandbox Terminal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2125,6 +2156,15 @@
   
     <nav class="md-nav" aria-label="What is a Shell?">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-shell-and-kernel-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Shell and Kernel Flow
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#a-brief-history-of-shells" class="md-nav__link">
@@ -2160,9 +2200,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#diagram-shell-comparison" class="md-nav__link">
+  <a href="#diagram-bash-vs-zsh-shell-comparison" class="md-nav__link">
     <span class="md-ellipsis">
-      Diagram: Shell Comparison
+      Diagram: Bash vs Zsh Shell Comparison
     </span>
   </a>
   
@@ -2673,26 +2713,22 @@
 </ul>
 </div>
 <p>Let's dive in!</p>
+<h3 id="play-with-a-micro-sandbox-terminal">Play with a Micro-Sandbox Terminal</h3>
+<p>If you don't have access to a real terminal on your computer, no worries!
+We have a "micro shell" using the handy browser based <a href="http://data-to-viz.com">Data ti Vis</a> program.
+It only has 16 basic commands that run in a tiny virtual environment that will not
+damage any of your local files.  It is a good safe "sandbox" for you to learn shell
+commands.  Just click the <strong>Data to Vis</strong> link above and type "help" in the web-based terminal.</p>
+<p>This is just the first of many small virtual machines we be using in this course. </p>
 <h2 id="what-is-a-shell">What is a Shell?</h2>
 <p>When you type commands in the terminal, you're not actually talking directly to the Linux kernel (the core of the operating system). Instead, you're talking to a program called a <strong>shell</strong>.</p>
 <p>Think of the shell as a translator between you and the operating system. You speak Human (well, Human-ish commands), the shell translates that into something the kernel understands, the kernel does the work, and then the shell shows you the results.</p>
 <p>The word "shell" makes sense when you think about it—it's the outer layer that wraps around the kernel, just like an egg shell wraps around the egg inside. (I promise that's the last egg-related metaphor. Maybe.)</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>┌─────────────────────────────────┐
+<h4 id="diagram-shell-and-kernel-flow">Diagram: Shell and Kernel Flow</h4>
+<iframe src="../../sims/shell-kernel-flow/main.html" width="100%" height="500" scrolling="no"></iframe>
+<p><a href="../../sims/shell-kernel-flow/main.html">View Shell and Kernel Flow Fullscreen</a></p>
+<details>
+┌─────────────────────────────────┐
 │            YOU                  │
 │     (typing commands)           │
 └───────────────┬─────────────────┘
@@ -2708,7 +2744,8 @@
 │          KERNEL                 │
 │   (does the actual work)        │
 └─────────────────────────────────┘
-</code></pre></div></td></tr></table></div>
+</details>
+
 <p>The shell does several important jobs:</p>
 <ul>
 <li><strong>Interprets commands</strong> – Figures out what you're asking for</li>
@@ -2757,7 +2794,7 @@
 <td>zsh</td>
 <td>Z Shell</td>
 <td>1990</td>
-<td>The "ultimate" shell (z = last letter)</td>
+<td>The "ultimate" shell (z = last letter) - the MacOS default</td>
 </tr>
 <tr>
 <td>fish</td>
@@ -2774,8 +2811,8 @@
 <li>Most Linux servers</li>
 <li>Raspberry Pi (Raspberry Pi OS)</li>
 <li>macOS (until recently)</li>
-<li>Windows Subsystem for Linux (WSL)</li>
-<li>Git Bash on Windows</li>
+<li>Windows Subsystem for Linux (WSL) - must be installed - about a 2GB download if you have the right permissions</li>
+<li>Git Bash on Windows - a small lightweight shell used with the <code>git</code> software package</li>
 </ul>
 <p>Bash was created in 1989 by Brian Fox as a free software replacement for the original Bourne shell. Remember the GNU Project from Chapter 1? Bash was one of their key achievements!</p>
 <p>Bash is like the Honda Civic of shells—reliable, everywhere, well-documented, and gets the job done. Not flashy, but you can't go wrong with it.</p>
@@ -2829,7 +2866,10 @@ zsh<span class="w"> </span>--version
 </ul>
 <p>That said, if you're on a Mac or just want a fancier experience, Zsh is great too! Most commands work identically in both.</p>
 </div>
-<h4 id="diagram-shell-comparison">Diagram: Shell Comparison</h4>
+<h4 id="diagram-bash-vs-zsh-shell-comparison">Diagram: Bash vs Zsh Shell Comparison</h4>
+<iframe src="../../sims/bash-vs-zsh/main.html" width="100%" height="570px" scrolling="no"></iframe>
+
+<p><a href="../../sims/bash-vs-zsh/main.html">View the Bash vs. Zsh Fullscreen</a></p>
 <details>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -3053,6 +3093,9 @@ Implementation: HTML/CSS or p5.js
 </code></pre></div></td></tr></table></div>
 </div>
 <h4 id="diagram-anatomy-of-a-shell-prompt">Diagram: Anatomy of a Shell Prompt</h4>
+<iframe src="../../sims/shell-prompt-anatomy/main.html" height="482px" width="100%" scrolling="no"></iframe>
+
+<p><a class="md-button md-button--primary" href="../../sims/shell-prompt-anatomy/main.html">Run the Shell Prompt Anatomy MicroSim Fullscreen</a></p>
 <details>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -3090,8 +3133,10 @@ Implementation: HTML/CSS or p5.js
 <span class="normal">34</span>
 <span class="normal">35</span>
 <span class="normal">36</span>
-<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;summary&gt;Understanding the Shell Prompt&lt;/summary&gt;
+<span class="normal">37</span>
+<span class="normal">38</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;summary&gt;Understanding the Shell Prompt&lt;/summary&gt;
 Type: diagram
+Status: done
 
 Bloom Taxonomy: Remember, Understand
 Learning Objective: Help students recognize and understand each component of a typical shell prompt.
@@ -3212,6 +3257,9 @@ ls<span class="w"> </span>--all
 <span class="c1"># Most people use -a because it&#39;s faster to type</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="diagram-command-syntax-breakdown">Diagram: Command Syntax Breakdown</h4>
+<iframe src="../../sims/command-syntax/main.html" height="452px" width="100%" scrolling="no"></iframe>
+
+<p><a class="md-button md-button--primary" href="../../sims/command-syntax/main.html">Run the Command Syntax MicroSim Fullscreen</a></p>
 <details>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -3372,108 +3420,49 @@ cat<span class="w"> </span>file1.txt
 </div>
 <h4 id="diagram-tab-completion-microsim">Diagram: Tab Completion MicroSim</h4>
 <details>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;summary&gt;Interactive Tab Completion Demo&lt;/summary&gt;
-Type: microsim
-
-Bloom Taxonomy: Apply
-Learning Objective: Let students practice tab completion in a safe, interactive environment before trying it on a real terminal.
-
-Canvas layout (responsive, ~700px max width):
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;summary&gt;Interactive Tab Completion Demo&lt;/summary&gt;
+</code></pre></div></td></tr></table></div>
+<p>Type: microsim</p>
+<p>Bloom Taxonomy: Apply
+Learning Objective: Let students practice tab completion in a safe, interactive environment before trying it on a real terminal.</p>
+<p>Canvas layout (responsive, ~700px max width):
 - Top area (350px): Simulated terminal display
-- Bottom area (150px): Instructions and hint panel
-
-Visual elements:
+- Bottom area (150px): Instructions and hint panel</p>
+<p>Visual elements:
 - Terminal-style interface with black background, green text
 - Blinking cursor
 - File listing panel showing available files
-- &quot;Tab key&quot; visual indicator that lights up when pressed
-- Completion animation showing text being filled in
-
-Simulated file system:
+- "Tab key" visual indicator that lights up when pressed
+- Completion animation showing text being filled in</p>
+<p>Simulated file system:
 - Documents/
-  - report.txt
-  - readme.md
-  - research_notes.txt
+    - report.txt
+    - readme.md
+    - research_notes.txt
 - Downloads/
-  - image.png
-  - installer.deb
-- Pictures/
-
-Interactive exercises (3 levels):
-1. Basic: Type &quot;cd Doc&lt;Tab&gt;&quot; - completes to &quot;cd Documents/&quot;
-2. Intermediate: Type &quot;cat re&lt;Tab&gt;&lt;Tab&gt;&quot; - shows options, complete &quot;cat readme.md&quot;
-3. Advanced: Type &quot;ls ~/Do&lt;Tab&gt;&quot; - multiple matches, narrow down
-
-Controls:
+    - image.png
+    - installer.deb
+- Pictures/</p>
+<p>Interactive exercises (3 levels):
+1. Basic: Type "cd Doc<Tab>" - completes to "cd Documents/"
+2. Intermediate: Type "cat re<Tab><Tab>" - shows options, complete "cat readme.md"
+3. Advanced: Type "ls ~/Do<Tab>" - multiple matches, narrow down</p>
+<p>Controls:
 - Text input field for typing commands
 - Keyboard capture for Tab key
-- &quot;Reset&quot; button
-- &quot;Next Challenge&quot; button
-- Hint toggle
-
-Behavior:
+- "Reset" button
+- "Next Challenge" button
+- Hint toggle</p>
+<p>Behavior:
 - Simulate actual tab completion behavior
 - Show visual feedback when Tab is pressed
 - Celebrate correct completions with brief animation
-- Provide helpful hints if stuck
-
-Default state:
+- Provide helpful hints if stuck</p>
+<p>Default state:
 - Level 1 challenge active
 - Instructions visible
-- Cursor blinking in terminal
-
-Implementation: p5.js
-</code></pre></div></td></tr></table></div>
+- Cursor blinking in terminal</p>
+<p>Implementation: p5.js</p>
 </details>
 <h2 id="command-history-the-shell-remembers">Command History: The Shell Remembers</h2>
 <p>Here's another massive productivity booster: the shell remembers every command you've typed. This is called <strong>command history</strong>, and it's saved even after you close the terminal.</p>

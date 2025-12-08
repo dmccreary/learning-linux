@@ -1,0 +1,63 @@
+{
+  "$schema": "https://github.com/dmccreary/microsims/blob/main/src/microsim-schema/microsim-schema.json",
+  "title": "Shell Prompt Anatomy",
+  "description": "An interactive diagram that helps students recognize and understand each component of a typical Linux shell prompt, including username, hostname, current directory, and user indicator symbols.",
+  "creator": "Dan McCreary",
+  "subject": ["Linux", "Terminal", "Shell", "Command Line"],
+  "date": "2025-12-07",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "gradeLevel": "High School (9-12)",
+  "subjectArea": "Computer Science",
+  "topic": "Shell Prompt Components",
+  "learningObjectives": [
+    "Remember the six main components of a Linux shell prompt",
+    "Understand what each component represents",
+    "Identify whether logged in as a normal user or root user",
+    "Recognize prompts from different Linux distributions"
+  ],
+  "bloomsTaxonomy": ["Remember", "Understand"],
+  "duration": "10-15 minutes",
+  "prerequisites": ["Basic familiarity with opening a terminal"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 480",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "keyboardNavigation": false,
+    "colorblindSafe": true
+  },
+  "controls": [
+    {
+      "type": "hover",
+      "description": "Hover over prompt components to see detailed explanations"
+    },
+    {
+      "type": "click",
+      "description": "Click on a component to lock the selection"
+    },
+    {
+      "type": "select",
+      "name": "Prompt Style",
+      "description": "Choose between different prompt display styles"
+    }
+  ],
+  "modelType": "Diagram/Annotation",
+  "variables": [
+    "username",
+    "hostname",
+    "currentDirectory",
+    "userIndicator"
+  ],
+  "assumptions": [
+    "Bash-style prompt format (PS1)",
+    "Standard Linux distribution defaults"
+  ],
+  "limitations": [
+    "Does not cover all possible prompt customizations",
+    "Does not show prompt configuration (PS1 variable)"
+  ]
+}

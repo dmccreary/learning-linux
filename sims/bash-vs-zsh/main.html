@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bash vs Zsh Comparison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Bash vs Zsh: Which Shell Should You Use?</h2>
+
+        <div class="comparison-wrapper">
+            <!-- Bash Column -->
+            <div class="shell-column bash-column">
+                <div class="shell-header">
+                    <div class="shell-icon">$</div>
+                    <h3>Bash</h3>
+                    <p class="tagline">"The Classic"</p>
+                </div>
+
+                <div class="ratings-section">
+                    <h4>Strengths</h4>
+                    <div class="rating-row" data-tooltip="Works on virtually every Unix/Linux system out of the box">
+                        <span class="rating-label">Universal Compatibility</span>
+                        <span class="stars stars-5">★★★★★</span>
+                    </div>
+                    <div class="rating-row" data-tooltip="Decades of tutorials, books, and Stack Overflow answers available">
+                        <span class="rating-label">Documentation</span>
+                        <span class="stars stars-5">★★★★★</span>
+                    </div>
+                    <div class="rating-row" data-tooltip="The default shell on most Linux servers and cloud platforms">
+                        <span class="rating-label">Server Standard</span>
+                        <span class="stars stars-5">★★★★★</span>
+                    </div>
+                    <div class="rating-row" data-tooltip="Most Linux tutorials and courses assume you're using Bash">
+                        <span class="rating-label">Beginner Resources</span>
+                        <span class="stars stars-5">★★★★★</span>
+                    </div>
+                </div>
+
+                <div class="ratings-section">
+                    <h4>Weaknesses</h4>
+                    <div class="rating-row" data-tooltip="Basic prompt customization requires more manual configuration">
+                        <span class="rating-label">Customization</span>
+                        <span class="star-group"><span class="stars stars-3">★★★</span><span class="stars-empty">★★</span></span>
+                    </div>
+                    <div class="rating-row" data-tooltip="Tab completion works but lacks advanced features like fuzzy matching">
+                        <span class="rating-label">Tab Completion</span>
+                        <span class="star-group"><span class="stars stars-3">★★★</span><span class="stars-empty">★★</span></span>
+                    </div>
+                    <div class="rating-row" data-tooltip="Fewer modern conveniences compared to newer shells">
+                        <span class="rating-label">Modern Features</span>
+                        <span class="star-group"><span class="stars stars-3">★★★</span><span class="stars-empty">★★</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Zsh Column -->
+            <div class="shell-column zsh-column">
+                <div class="shell-header">
+                    <div class="shell-icon">%</div>
+                    <h3>Zsh</h3>
+                    <p class="tagline">"The Modern Choice"</p>
+                </div>
+
+                <div class="ratings-section">
+                    <h4>Strengths</h4>
+                    <div class="rating-row" data-tooltip="Powerful completion with fuzzy matching, descriptions, and menu selection">
+                        <span class="rating-label">Tab Completion</span>
+                        <span class="stars stars-5">★★★★★</span>
+                    </div>
+                    <div class="rating-row" data-tooltip="Highly themeable prompts with frameworks like Oh My Zsh">
+                        <span class="rating-label">Customization</span>
+                        <span class="stars stars-5">★★★★★</span>
+                    </div>
+                    <div class="rating-row" data-tooltip="Thousands of plugins available through Oh My Zsh and other frameworks">
+                        <span class="rating-label">Plugin Ecosystem</span>
+                        <span class="stars stars-5">★★★★★</span>
+                    </div>
+                    <div class="rating-row" data-tooltip="Spelling correction, syntax highlighting, and smart history">
+                        <span class="rating-label">User Experience</span>
+                        <span class="stars stars-5">★★★★★</span>
+                    </div>
+                </div>
+
+                <div class="ratings-section">
+                    <h4>Weaknesses</h4>
+                    <div class="rating-row" data-tooltip="More features means more to learn, especially with frameworks">
+                        <span class="rating-label">Learning Curve</span>
+                        <span class="star-group"><span class="stars stars-4">★★★★</span><span class="stars-empty">★</span></span>
+                    </div>
+                    <div class="rating-row" data-tooltip="Some Zsh-specific features may not work in Bash scripts">
+                        <span class="rating-label">Script Portability</span>
+                        <span class="star-group"><span class="stars stars-4">★★★★</span><span class="stars-empty">★</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Common Ground Section -->
+        <div class="common-section">
+            <div class="venn-diagram">
+                <div class="venn-circle bash-circle"></div>
+                <div class="venn-circle zsh-circle"></div>
+                <div class="venn-text">Both support the same basic commands</div>
+            </div>
+        </div>
+
+        <p class="recommendation">Start with Bash, graduate to Zsh when ready!</p>
+
+        <p class="source">Hover over ratings for detailed explanations</p>
+    </div>
+</body>
+</html>

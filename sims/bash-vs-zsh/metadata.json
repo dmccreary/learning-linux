@@ -1,0 +1,26 @@
+{
+  "title": "Bash vs Zsh Comparison",
+  "description": "Interactive two-column comparison infographic showing the strengths and weaknesses of Bash and Zsh shells with star ratings, hover tooltips, and a Venn diagram illustrating their common ground.",
+  "creator": "Learning Linux Course",
+  "date": "2025-12-07",
+  "subject": [
+    "shell comparison",
+    "bash",
+    "zsh",
+    "command line",
+    "terminal",
+    "Linux shells"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "educationalLevel": "High School",
+  "learningResourceType": "comparison infographic",
+  "library": "CSS (no JavaScript library)",
+  "bloomTaxonomy": [
+    "Understand",
+    "Analyze"
+  ],
+  "learningObjective": "Help students understand the key differences between Bash and Zsh to make informed choices about which shell to use."
+}
