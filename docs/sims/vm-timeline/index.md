@@ -1,3 +1,9 @@
+---
+title: History of Virtual Machines & Containers
+description: An interactive timeline visualization tracing the evolution of virtualization technology and containers.
+image: /sims/vm-timeline/vm-timeline.png
+og:image: /sims/vm-timeline/vm-timeline.png
+---
 # History of Virtual Machines & Containers
 
 An interactive timeline visualization tracing the evolution of virtualization technology from IBM mainframes in 1967 to modern containers, serverless computing, and cutting-edge research in 2025.
