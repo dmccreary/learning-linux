@@ -176,7 +176,7 @@ A **shell script** is a text file containing commands that execute sequentially.
 
 ### What is Docker?
 
-**Docker** is a containerization platform that packages applications with their dependencies into isolated containers. Unlike virtual machines, containers share the host OS kernel, making them lightweight and fast. Docker is widely used in DevOps and cloud deployment. See [Chapter 21: Cloud and Containers](chapters/21-cloud-containers/index.md).
+**Docker** is a containerization platform that packages applications with their dependencies into isolated containers. Unlike virtual machines, containers share the host OS kernel, making them lightweight and fast. Docker is widely used in DevOps and cloud deployment. See [Chapter 21: Virtual Machines, Containers and the Cloud](chapters/21-vm-containers-cloud/index.md).
 
 ### What are tar, gzip, and zip?
 
@@ -351,15 +351,15 @@ See [Chapter 14: Package Management](chapters/14-package-mgmt/index.md).
 
 ### What is the difference between containers and virtual machines?
 
-**Virtual machines** run a complete operating system with its own kernel on virtualized hardware—heavy but fully isolated. **Containers** share the host kernel and package only the application with dependencies—lightweight and fast. Docker uses containers; VirtualBox uses VMs. See [Chapter 21](chapters/21-cloud-containers/index.md).
+**Virtual machines** run a complete operating system with its own kernel on virtualized hardware—heavy but fully isolated. **Containers** share the host kernel and package only the application with dependencies—lightweight and fast. Docker uses containers; VirtualBox uses VMs. See [Chapter 21](chapters/21-vm-containers-cloud/index.md).
 
 ### What is Kubernetes?
 
-**Kubernetes** (K8s) is a container orchestration platform that automates deployment, scaling, and management of containerized applications. It's the industry standard for running containers in production at scale. See [Chapter 21](chapters/21-cloud-containers/index.md).
+**Kubernetes** (K8s) is a container orchestration platform that automates deployment, scaling, and management of containerized applications. It's the industry standard for running containers in production at scale. See [Chapter 21](chapters/21-vm-containers-cloud/index.md).
 
 ### What is Infrastructure as Code?
 
-**Infrastructure as Code (IaC)** means managing servers, networks, and cloud resources through configuration files rather than manual setup. Tools like Terraform and Ansible let you version control your infrastructure and recreate it reliably. See [Chapter 21](chapters/21-cloud-containers/index.md).
+**Infrastructure as Code (IaC)** means managing servers, networks, and cloud resources through configuration files rather than manual setup. Tools like Terraform and Ansible let you version control your infrastructure and recreate it reliably. See [Chapter 21](chapters/21-vm-containers-cloud/index.md).
 
 ### What is DevOps?
 

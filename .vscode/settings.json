@@ -25,6 +25,7 @@
         "Pkill",
         "Renice",
         "Ritchie",
+        "sandboxed",
         "Setgid",
         "Setuid",
         "Stallman",

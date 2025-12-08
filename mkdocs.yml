@@ -73,9 +73,9 @@ nav:
     - 20. GPIO and IoT:
       - Content: chapters/20-gpio-iot/index.md
       - Quiz: chapters/20-gpio-iot/quiz.md
-    - 21. Cloud and Containers:
-      - Content: chapters/21-cloud-containers/index.md
-      - Quiz: chapters/21-cloud-containers/quiz.md
+    - 21. Virtual Machines, Containers and the Cloud:
+      - Content: chapters/21-vm-containers-cloud/index.md
+      - Quiz: chapters/21-vm-containers-cloud/quiz.md
     - 22. Dev Tools:
       - Content: chapters/22-dev-tools/index.md
       - Quiz: chapters/22-dev-tools/quiz.md

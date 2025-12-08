@@ -206,9 +206,9 @@ Use the chapter-content-generator skill to write chapter 20 @docs/chapters/20-gp
     https://dmccreary.github.io/moving-rainbow/ - Using Thonny to program LED strips for lights,costumes etc.
     https://dmccreary.github.io/clocks-and-watches/ - Using Thonny to build your own smart clock and watch
 
-## 21 Cloud Containers
+## 21 Virtual Machines, Containers and the Cloud
 
-Use the chapter-content-generator skill to write chapter 21 @docs/chapters/21-cloud-containers/index.md
+Use the chapter-content-generator skill to write chapter 21 @docs/chapters/21-vm-containers-cloud/index.md
     Maintain a fun informal tone as though you are having a conversation with a high-school student that is curious about Linux.
     Feel free to and puns and jokes to break up the text.
     Make the text compelling and encouraging people to take the journey to become a master of Linux.

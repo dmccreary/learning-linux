@@ -24,7 +24,7 @@ This textbook is organized into 26 chapters covering 550 concepts across Linux f
 18. [Storage Devices and System Performance](18-storage-perf/index.md) - Disks, mounting, and performance monitoring
 19. [Introduction to Raspberry Pi](19-raspberry-pi/index.md) - Pi models, setup, and hardware interfaces
 20. [GPIO Programming and Hardware Projects](20-gpio-iot/index.md) - LEDs, sensors, motors, and IoT
-21. [Cloud Computing and Containers](21-cloud-containers/index.md) - Docker, cloud instances, and Terraform
+21. [Virtual Machines, Containers and the Cloud](21-vm-containers-cloud/index.md) - VMs, Docker, cloud instances, and Terraform
 22. [Development Tools and Version Control](22-dev-tools/index.md) - Git, GitHub, Python, and IDEs
 23. [System Administration Essentials](23-sys-admin/index.md) - User management, services, and system configuration
 24. [Automation and Some Fun](24-automation/index.md) - Automate tasks, custom prompts, colors, and easter eggs

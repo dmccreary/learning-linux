@@ -390,7 +390,7 @@
       "difficulty": "medium",
       "concepts": ["Docker", "Containers"],
       "keywords": ["docker", "container", "virtualization", "deployment"],
-      "source_links": ["docs/chapters/21-cloud-containers/index.md"],
+      "source_links": ["docs/chapters/21-vm-containers-cloud/index.md"],
       "has_example": false,
       "word_count": 34
     },
@@ -611,7 +611,7 @@
       "difficulty": "hard",
       "concepts": ["Docker", "Containers", "Virtual Machines"],
       "keywords": ["container", "vm", "virtual machine", "difference"],
-      "source_links": ["docs/chapters/21-cloud-containers/index.md"],
+      "source_links": ["docs/chapters/21-vm-containers-cloud/index.md"],
       "has_example": false,
       "word_count": 45
     },
@@ -624,7 +624,7 @@
       "difficulty": "hard",
       "concepts": ["Kubernetes", "Container Orchestration"],
       "keywords": ["kubernetes", "k8s", "orchestration", "containers"],
-      "source_links": ["docs/chapters/21-cloud-containers/index.md"],
+      "source_links": ["docs/chapters/21-vm-containers-cloud/index.md"],
       "has_example": false,
       "word_count": 33
     },
@@ -637,7 +637,7 @@
       "difficulty": "hard",
       "concepts": ["Terraform", "Infrastructure as Code"],
       "keywords": ["infrastructure", "code", "terraform", "automation"],
-      "source_links": ["docs/chapters/21-cloud-containers/index.md"],
+      "source_links": ["docs/chapters/21-vm-containers-cloud/index.md"],
       "has_example": false,
       "word_count": 38
     },

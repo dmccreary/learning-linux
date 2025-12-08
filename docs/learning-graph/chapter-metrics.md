@@ -27,7 +27,7 @@ This file contains chapter-by-chapter metrics for student-facing content.
 | 18 | [Storage Devices and System Performance](../chapters/18-storage-perf/index.md) | 87 | 0 | 17 | 3,356 | 32 |
 | 19 | [Introduction to Raspberry Pi](../chapters/19-raspberry-pi/index.md) | 64 | 0 | 0 | 5,122 | 34 |
 | 20 | [GPIO Programming and Hardware Projects](../chapters/20-gpio-iot/index.md) | 69 | 0 | 0 | 4,147 | 40 |
-| 21 | [Cloud Computing and Containers](../chapters/21-cloud-containers/index.md) | 80 | 0 | 2 | 3,601 | 33 |
+| 21 | [Virtual Machines, Containers and the Cloud](../chapters/21-vm-containers-cloud/index.md) | 80 | 0 | 2 | 3,601 | 33 |
 | 22 | [Development Tools and Version Control](../chapters/22-dev-tools/index.md) | 81 | 0 | 1 | 2,503 | 34 |
 | 23 | [System Administration Essentials](../chapters/23-sys-admin/index.md) | 51 | 9 | 5 | 5,535 | 33 |
 | 24 | [Automation and Some Fun](../chapters/24-automation/index.md) | 23 | 4 | 54 | 3,764 | 33 |

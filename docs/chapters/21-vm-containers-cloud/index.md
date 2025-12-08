@@ -1,8 +1,8 @@
-# Cloud Computing and Containers
+# Virtual Machines, Containers and the Cloud
 
 ## Summary
 
-This chapter introduces modern cloud computing and containerization. You'll learn about cloud providers, virtual machines, and how to launch Linux instances in the cloud. Master Docker containers from building images to running multi-container applications with Docker Compose. Explore Terraform for infrastructure-as-code to automate cloud deployments.
+This chapter introduces virtual machines, containerization, and modern cloud computing. You'll learn about cloud providers, virtual machines, and how to launch Linux instances in the cloud. Master Docker containers from building images to running multi-container applications with Docker Compose. Explore Terraform for infrastructure-as-code to automate cloud deployments.
 
 ## Concepts Covered
 

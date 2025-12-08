@@ -45,7 +45,7 @@ This chapter builds on concepts from:
 - [Chapter 15: Networking Fundamentals](../15-networking/index.md)
 - [Chapter 16: SSH and Remote Access](../16-ssh-security/index.md)
 - [Chapter 19: Introduction to Raspberry Pi](../19-raspberry-pi/index.md)
-- [Chapter 21: Cloud Computing and Containers](../21-cloud-containers/index.md)
+- [Chapter 21: Virtual Machines, Containers and the Cloud](../21-vm-containers-cloud/index.md)
 
 ---
 

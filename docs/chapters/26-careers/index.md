@@ -32,7 +32,7 @@ This chapter covers the following 10 concepts from the learning graph:
 This chapter builds on concepts from:
 
 - [Chapter 1: Introduction to Operating Systems and UNIX History](../01-unix-history/index.md)
-- [Chapter 21: Cloud Computing and Containers](../21-cloud-containers/index.md)
+- [Chapter 21: Virtual Machines, Containers and the Cloud](../21-vm-containers-cloud/index.md)
 - [Chapter 23: System Administration Essentials](../23-sys-admin/index.md)
 
 ---
