@@ -7,13 +7,13 @@ hide:
 
 **Total Visual Elements:** 65
 **Diagrams:** 11
-**MicroSims:** 39
+**MicroSims:** 38
 
 ## Summary by Difficulty
 
-- **Easy:** 30
+- **Easy:** 31
 - **Medium:** 24
-- **Hard:** 10
+- **Hard:** 9
 - **Very Hard:** 1
 
 ## All Visual Elements
@@ -22,14 +22,14 @@ hide:
 |---------|---------------|--------|------|--------------|-------------|------------|-----------------------|
 | 1 | [Linux Distribution Comparison](../chapters/01-unix-history/index.md#diagram-linux-distribution-comparison) |  | Unknown | Not specified | 0 | Easy |  |
 | 1 | [Linux Timeline](../chapters/01-unix-history/index.md#diagram-linux-timeline) |  | Unknown | Not specified | 0 | Easy |  |
-| 1 | [MicroSim - UNIX Commands Explorer](../chapters/01-unix-history/index.md#diagram-microsim-unix-commands-explorer) |  | Microsim | Not specified | 8 | Hard |  |
 | 1 | [Open Source vs Proprietary Software](../chapters/01-unix-history/index.md#diagram-open-source-vs-proprietary-software) |  | Microsim | Not specified | 1 | Medium |  |
 | 1 | [UNIX Family Tree](../chapters/01-unix-history/index.md#diagram-unix-family-tree) |  | Unknown | Not specified | 0 | Easy |  |
 | 1 | [UNIX Philosophy in Action](../chapters/01-unix-history/index.md#diagram-unix-philosophy-in-action) |  | Microsim | Not specified | 2 | Medium |  |
 | 2 | [Anatomy of a Shell Prompt](../chapters/02-terminal-basics/index.md#diagram-anatomy-of-a-shell-prompt) |  | Microsim | Not specified | 0 | Easy |  |
+| 2 | [Bash vs Zsh Shell Comparison](../chapters/02-terminal-basics/index.md#diagram-bash-vs-zsh-shell-comparison) |  | Microsim | Not specified | 0 | Medium |  |
 | 2 | [Command Syntax Breakdown](../chapters/02-terminal-basics/index.md#diagram-command-syntax-breakdown) |  | Microsim | Not specified | 1 | Medium |  |
-| 2 | [Shell Comparison](../chapters/02-terminal-basics/index.md#diagram-shell-comparison) |  | Microsim | Not specified | 0 | Medium |  |
 | 2 | [Shell Types Flowchart](../chapters/02-terminal-basics/index.md#diagram-shell-types-flowchart) |  | Unknown | Not specified | 0 | Easy |  |
+| 2 | [Shell and Kernel Flow](../chapters/02-terminal-basics/index.md#diagram-shell-and-kernel-flow) |  | Unknown | Not specified | 0 | Easy |  |
 | 2 | [Tab Completion MicroSim](../chapters/02-terminal-basics/index.md#diagram-tab-completion-microsim) |  | Microsim | Not specified | 8 | Hard |  |
 | 3 | [Help System Decision Tree](../chapters/03-shell-commands/index.md#diagram-help-system-decision-tree) |  | Unknown | Not specified | 0 | Easy |  |
 | 3 | [Man Page Anatomy](../chapters/03-shell-commands/index.md#diagram-man-page-anatomy) |  | Microsim | Not specified | 0 | Easy |  |

@@ -2,11 +2,11 @@
 
 **Total Visual Elements:** 65
 **Diagrams:** 11
-**MicroSims:** 39
+**MicroSims:** 38
 
 ## Chapter 1: Unix History
 
-**Total elements:** 6
+**Total elements:** 5
 
 ### [Linux Distribution Comparison](../chapters/01-unix-history/index.md#diagram-linux-distribution-comparison)
 - **Type:** Unknown
@@ -19,12 +19,6 @@
 - **Bloom's Taxonomy:** Not specified
 - **UI Elements:** 0
 - **Difficulty:** Easy
-
-### [MicroSim - UNIX Commands Explorer](../chapters/01-unix-history/index.md#diagram-microsim-unix-commands-explorer)
-- **Type:** Microsim
-- **Bloom's Taxonomy:** Not specified
-- **UI Elements:** 8
-- **Difficulty:** Hard
 
 ### [Open Source vs Proprietary Software](../chapters/01-unix-history/index.md#diagram-open-source-vs-proprietary-software)
 - **Type:** Microsim
@@ -46,7 +40,7 @@
 
 ## Chapter 2: Terminal Basics
 
-**Total elements:** 5
+**Total elements:** 6
 
 ### [Anatomy of a Shell Prompt](../chapters/02-terminal-basics/index.md#diagram-anatomy-of-a-shell-prompt)
 - **Type:** Microsim
@@ -54,19 +48,25 @@
 - **UI Elements:** 0
 - **Difficulty:** Easy
 
+### [Bash vs Zsh Shell Comparison](../chapters/02-terminal-basics/index.md#diagram-bash-vs-zsh-shell-comparison)
+- **Type:** Microsim
+- **Bloom's Taxonomy:** Not specified
+- **UI Elements:** 0
+- **Difficulty:** Medium
+
 ### [Command Syntax Breakdown](../chapters/02-terminal-basics/index.md#diagram-command-syntax-breakdown)
 - **Type:** Microsim
 - **Bloom's Taxonomy:** Not specified
 - **UI Elements:** 1
 - **Difficulty:** Medium
 
-### [Shell Comparison](../chapters/02-terminal-basics/index.md#diagram-shell-comparison)
-- **Type:** Microsim
+### [Shell Types Flowchart](../chapters/02-terminal-basics/index.md#diagram-shell-types-flowchart)
+- **Type:** Unknown
 - **Bloom's Taxonomy:** Not specified
 - **UI Elements:** 0
-- **Difficulty:** Medium
+- **Difficulty:** Easy
 
-### [Shell Types Flowchart](../chapters/02-terminal-basics/index.md#diagram-shell-types-flowchart)
+### [Shell and Kernel Flow](../chapters/02-terminal-basics/index.md#diagram-shell-and-kernel-flow)
 - **Type:** Unknown
 - **Bloom's Taxonomy:** Not specified
 - **UI Elements:** 0
