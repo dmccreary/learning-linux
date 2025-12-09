@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Help System Decision Flowchart</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Linux Help System Decision Flowchart</h1>
+            <p class="subtitle">Choose the Right Help Command for Your Situation</p>
+        </header>
+
+        <main>
+            <div class="diagram-container">
+                <div class="mermaid">
+flowchart TD
+    Start("I need help with a Linux command"):::startNode
+    KnowCmd{"Do you know the command name?"}:::decisionNode
+    Apropos["Use: apropos keyword"]:::discoveryNode
+    DetailLevel{"How much detail do you need?"}:::decisionNode
+    Reminder["Just a reminder"]:::processNode
+    FullDocs["Use: man command"]:::manNode
+    BuiltIn{"Is it a shell built-in?"}:::decisionNode
+    HelpBuiltIn["Use: help command"]:::quickNode
+    DashHelp["Use: command --help"]:::quickNode
+
+    Summary["Want one-line summary?"]:::processNode
+    Whatis["Use: whatis command"]:::summaryNode
+
+    CheckType["Check if built-in?"]:::processNode
+    TypeCmd["Use: type command"]:::summaryNode
+
+    Start --> KnowCmd
+    KnowCmd -->|No| Apropos
+    KnowCmd -->|Yes| DetailLevel
+    DetailLevel -->|Just a reminder| Reminder
+    DetailLevel -->|Full documentation| FullDocs
+    Reminder --> BuiltIn
+    BuiltIn -->|Yes| HelpBuiltIn
+    BuiltIn -->|No/Unsure| DashHelp
+
+    Apropos -.->|Example| AproposEx["apropos compress"]:::exampleNode
+    FullDocs -.->|Example| ManEx["man tar"]:::exampleNode
+    DashHelp -.->|Example| HelpEx["ls --help"]:::exampleNode
+
+    Summary --> Whatis
+    CheckType --> TypeCmd
+
+    classDef startNode fill:#667eea,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+    classDef decisionNode fill:#ffd700,stroke:#333,stroke-width:2px,color:#333,font-size:16px
+    classDef discoveryNode fill:#4a90d9,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+    classDef manNode fill:#28a745,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+    classDef quickNode fill:#fd7e14,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+    classDef summaryNode fill:#9b59b6,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+    classDef processNode fill:#6c757d,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+    classDef exampleNode fill:#e9ecef,stroke:#999,stroke-width:1px,color:#333,font-size:14px,font-style:italic
+
+    linkStyle default stroke:#999,stroke-width:2px,font-size:16px
+                </div>
+            </div>
+
+            <div class="description">
+                <h2>About This Diagram</h2>
+                <p>This flowchart helps you quickly determine which Linux help system to use based on your situation. Start at the top and follow the decision path that matches your needs. Blue nodes indicate discovery commands for finding unknown commands, green indicates comprehensive documentation (man pages), orange indicates quick reference options, and purple indicates summary commands.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Generated with <a href="https://mermaid.js.org/" target="_blank">Mermaid.js</a></p>
+        </footer>
+    </div>
+</body>
+</html>
