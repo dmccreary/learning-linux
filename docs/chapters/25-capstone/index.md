@@ -5,7 +5,6 @@ generated_by: chapter-content-generator skill
 date: 2025-12-06
 version: 0.03
 ---
-
 # Capstone Projects
 
 ## Summary
@@ -97,11 +96,13 @@ Categories and Projects:
 Visual style: Mind map with icons for each project type
 
 Color coding:
+
 - Green: Beginner projects
 - Yellow: Intermediate projects
 - Orange: Advanced projects
 
 Interactive features:
+
 - Click on any project to jump to that section
 - Hover to see brief description and estimated time
 

@@ -1,6 +1,11 @@
 # Glossary of Terms
 
-This glossary provides definitions for key concepts covered in the Learning Linux course. Definitions follow ISO 11179 standards: precise, concise, distinct, and non-circular.
+This glossary provides definitions for key concepts covered in the Learning Linux course. Definitions follow ISO 11179 metadata registry standards: precise, concise, distinct, and non-circular.
+When appropriate and example follows each definition.
+
+## Terms
+
+### A-Z
 
 ---
 
@@ -1329,6 +1334,14 @@ Managing and provisioning computing infrastructure through configuration files r
 Sending file contents to a command instead of keyboard input.
 
 **Example:** `sort < unsorted.txt` reads from the file instead of waiting for typed input.
+
+#### Intelligent Textbook
+
+A textbook that responds to the needs of the student.
+
+**Example:** The Learning Linux textbook is currently a level 2 intelligent textbook, however
+by providing xAPI interfaces for interactive elements, we can convert it to a level 3 textbook
+if we use a LRS and an intelligent agent to suggest content to students.
 
 #### Interactive Shell
 

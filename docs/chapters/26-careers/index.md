@@ -5,7 +5,6 @@ generated_by: chapter-content-generator skill
 date: 2025-12-06
 version: 0.03
 ---
-
 # Linux Careers and the Future
 
 ## Summary
@@ -68,6 +67,7 @@ Learning Objective: Students will understand the variety of Linux career paths a
 Layout: Central hub (Linux Skills) with four main career branches radiating outward
 
 Central Hub:
+
 - "Core Linux Skills" - command line, scripting, networking, security
 
 Career Branches:
@@ -107,11 +107,13 @@ Connecting lines between careers showing shared skills:
 - Network ↔ Cloud: Cloud networking, security groups
 
 Color scheme:
+
 - Blue: Traditional IT roles
 - Green: Modern cloud/DevOps roles
 - Gold: Advanced/architect roles
 
 Interactive features:
+
 - Hover over career to see typical salary range
 - Click to expand required skills list
 - Highlight path progression on selection
@@ -201,24 +203,28 @@ Learning Objective: Students will understand how DevOps creates a continuous fee
 Visual style: Infinity loop (figure-8) diagram with stages
 
 Left loop (Development - "Dev"):
+
 - PLAN: Define features, create user stories
 - CODE: Write application code
 - BUILD: Compile, create artifacts
 - TEST: Automated testing, QA
 
 Right loop (Operations - "Ops"):
+
 - RELEASE: Package for deployment
 - DEPLOY: Push to production
 - OPERATE: Run and manage
 - MONITOR: Collect metrics, logs
 
 Center intersection:
+
 - "Continuous Integration" (left side)
 - "Continuous Deployment" (right side)
 
 Arrows showing continuous flow in infinity pattern
 
 Labels:
+
 - "Faster Feedback" on bottom curve
 - "Faster Delivery" on top curve
 - "Automation" throughout
