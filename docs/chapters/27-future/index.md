@@ -149,6 +149,223 @@ Your Raspberry Pi, running Linux, can:
 
 The skills you've learned—managing processes, optimizing performance, writing scripts—are exactly what edge AI developers need.
 
+### GPUs for AI Inference on Linux
+
+While AI *training* requires massive data centers, AI *inference*—actually using trained models to make predictions—is increasingly happening everywhere. And Linux is at the center of this GPU revolution.
+
+**Training vs. Inference:**
+
+| Aspect | Training | Inference |
+|--------|----------|-----------|
+| Purpose | Teaching the model | Using the model |
+| Compute | Massive (weeks on thousands of GPUs) | Modest (milliseconds on one GPU) |
+| Where | Data centers | Everywhere—phones, cars, your Pi |
+| Cost | Millions of dollars | Pennies per query |
+
+**How Linux Manages GPUs:**
+
+Linux treats GPUs as specialized compute devices through a layered architecture:
+
+```
+┌─────────────────────────────────────┐
+│     AI Application (PyTorch, etc.) │
+├─────────────────────────────────────┤
+│     CUDA / ROCm / OpenCL Runtime   │
+├─────────────────────────────────────┤
+│     Linux Kernel GPU Driver        │
+├─────────────────────────────────────┤
+│     Hardware (NVIDIA, AMD, Intel)  │
+└─────────────────────────────────────┘
+```
+
+**GPU Drivers on Linux:**
+
+- **NVIDIA** – Proprietary drivers + open-source kernel modules (since 2022)
+- **AMD** – Fully open-source AMDGPU driver in the kernel
+- **Intel** – Open-source i915 driver for integrated and Arc GPUs
+
+You can check your GPU status with commands you've learned:
+
+```bash
+# See GPU information (NVIDIA)
+nvidia-smi
+
+# Check loaded GPU kernel modules
+lsmod | grep -E 'nvidia|amdgpu|i915'
+
+# Monitor GPU memory and utilization
+watch -n 1 nvidia-smi
+```
+
+**Inference Accelerators Beyond Traditional GPUs:**
+
+The future includes specialized AI chips that Linux already supports:
+
+| Accelerator | Vendor | Linux Support | Use Case |
+|-------------|--------|---------------|----------|
+| Tensor Cores | NVIDIA | CUDA drivers | General AI |
+| Neural Engine | Apple | Limited (M-series) | Edge inference |
+| TPU | Google | Cloud API | Large-scale inference |
+| Coral Edge TPU | Google | Full driver support | Raspberry Pi AI |
+| Hailo-8 | Hailo | Linux drivers | Edge AI acceleration |
+
+**Running AI on Your Raspberry Pi:**
+
+Your Raspberry Pi can run AI inference today! The Coral USB Accelerator plugs into a Pi and provides 4 trillion operations per second for AI workloads:
+
+```bash
+# Install Edge TPU runtime on Raspberry Pi
+echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | \
+    sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
+sudo apt update
+sudo apt install libedgetpu1-std
+
+# Run object detection at 30+ FPS!
+python3 detect_objects.py --model mobilenet_ssd.tflite
+```
+
+This is the democratization of AI—powerful inference capabilities on a $35 computer, all managed by Linux.
+
+### AI-Assisted Linux: The Self-Healing Kernel
+
+Here's where things get really exciting: what if Linux itself could use AI to diagnose and fix problems? This isn't science fiction—it's actively being developed.
+
+**The Vision: Intelligent System Administration**
+
+Imagine a Linux system that:
+
+- Detects performance problems before users notice them
+- Identifies the root cause of crashes automatically
+- Suggests or applies fixes without human intervention
+- Learns from patterns across millions of systems
+- Predicts hardware failures before they happen
+
+This is the future of Linux system administration, and early versions exist today.
+
+**Current AI-Assisted Linux Tools:**
+
+| Tool | Function | How It Uses AI |
+|------|----------|----------------|
+| **PCP + AI** | Performance monitoring | Anomaly detection in metrics |
+| **Sysdig** | Security monitoring | ML-based threat detection |
+| **Dynatrace** | Application monitoring | Automatic root cause analysis |
+| **Elastic SIEM** | Log analysis | Pattern recognition in logs |
+| **Cockpit + plugins** | System management | Predictive recommendations |
+
+**How AI Could Transform the Linux Kernel:**
+
+Researchers and developers are exploring several possibilities:
+
+**1. Intelligent Scheduling**
+
+The kernel's scheduler decides which process runs on which core. AI could optimize this based on:
+
+- Learned patterns of application behavior
+- Prediction of future resource needs
+- Energy efficiency optimization
+- Thermal management
+
+```
+Traditional Scheduler:
+Process A → Core 1 (based on simple rules)
+
+AI-Enhanced Scheduler:
+Process A → Core 3 (learned: A works best near its data,
+                    predicted: A will need more memory soon,
+                    thermal: Core 1 is running hot)
+```
+
+**2. Predictive Failure Detection**
+
+Linux already collects hardware telemetry. AI can analyze this to predict failures:
+
+```bash
+# Current: Check SMART data manually
+sudo smartctl -a /dev/sda
+
+# Future: AI analyzes patterns and warns you
+# "Drive sda showing early signs of sector degradation.
+#  Estimated 2-3 weeks before potential failure.
+#  Recommended: Begin backup and replacement process."
+```
+
+**3. Automatic Bug Diagnosis**
+
+When a kernel panic or application crash occurs, AI could:
+
+- Analyze the stack trace and memory dump
+- Compare against known bug patterns
+- Search kernel mailing lists and bug databases
+- Suggest likely causes and fixes
+
+**4. Self-Tuning Parameters**
+
+Linux has thousands of tunable parameters (`sysctl` settings). AI could:
+
+- Monitor system performance continuously
+- Experiment with parameter changes safely
+- Learn optimal settings for your specific workload
+- Adapt as workloads change
+
+```bash
+# Current: Manual tuning requires expertise
+sudo sysctl -w vm.swappiness=10
+sudo sysctl -w net.core.somaxconn=65535
+
+# Future: AI-driven auto-tuning
+# System automatically adjusts based on learned patterns
+# and real-time workload analysis
+```
+
+**5. Natural Language System Administration**
+
+Imagine administering Linux by simply describing what you want:
+
+```
+You: "The web server is slow during peak hours"
+
+AI Assistant: "I've analyzed your system and found:
+1. MySQL queries spiking at 2pm (indexing issue)
+2. PHP-FPM running out of workers
+3. Swap usage increasing due to memory pressure
+
+I can apply these fixes:
+- Add index to users.last_login column
+- Increase pm.max_children from 50 to 100
+- Increase vm.swappiness and add 2GB swap
+
+Apply these changes? [y/n]"
+```
+
+**Challenges and Considerations:**
+
+AI in the kernel isn't without challenges:
+
+- **Determinism** – Kernels need predictable behavior; AI can be unpredictable
+- **Security** – AI models could be attacked or manipulated
+- **Transparency** – Users need to understand why decisions are made
+- **Resource Usage** – AI inference takes CPU/memory the kernel might need
+- **Trust** – Critical systems need proven, auditable code
+
+**The Hybrid Approach:**
+
+The likely future is a hybrid model:
+
+- **Kernel**: Remains deterministic, stable C/Rust code
+- **Userspace AI**: Intelligent agents analyze and recommend
+- **eBPF**: Safe, sandboxed AI-informed kernel extensions
+- **Human oversight**: AI suggests, humans (or policies) approve
+
+!!! tip "You Can Experiment Today"
+    You don't have to wait for AI-integrated kernels. You can build AI-assisted administration tools right now using:
+
+    - Python scripts that analyze logs with ML libraries
+    - eBPF programs that collect data for AI analysis
+    - LLM APIs to help interpret error messages
+    - Anomaly detection on system metrics
+
+    The skills you've learned in this course—shell scripting, process management, log analysis—are the foundation for building these intelligent tools.
+
 ## The Migration from C to Rust
 
 One of the most significant changes happening in Linux development right now is the gradual adoption of the Rust programming language alongside C.
@@ -508,3 +725,13 @@ Welcome to the community. We're glad you're here.
 14. [NVIDIA CUDA on Linux](https://developer.nvidia.com/cuda-downloads) - GPU computing platform that powers AI development on Linux.
 
 15. [Kubernetes Documentation](https://kubernetes.io/docs/) - Container orchestration platform that runs on Linux and manages millions of containers.
+
+16. [Google Coral Edge TPU](https://coral.ai/) - AI accelerator hardware and software for running inference on edge devices like Raspberry Pi.
+
+17. [NVIDIA GPU Management on Linux](https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html) - Official documentation for installing and managing NVIDIA GPUs on Linux systems.
+
+18. [AMD ROCm Platform](https://rocm.docs.amd.com/) - AMD's open-source software platform for GPU computing on Linux.
+
+19. [Performance Co-Pilot (PCP)](https://pcp.io/) - Open-source framework for system performance analysis that can be extended with AI-based anomaly detection.
+
+20. [Linux Kernel Machine Learning Discussions](https://lore.kernel.org/lkml/) - Linux kernel mailing list archives where AI integration proposals are discussed.
