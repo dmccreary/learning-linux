@@ -91,6 +91,74 @@ Modern AI models like GPT-4 and Claude are trained on clusters with thousands of
 **Cloud Data Centers:**
 When you use Google, Amazon, or Microsoft's cloud services, your requests are processed by servers with 64-128 cores each, orchestrated by Linux.
 
+### RISC-V: The Open-Source Processor Revolution
+
+While Intel and AMD dominate traditional computing, a revolution is brewing with **RISC-V**—an open-source processor architecture that's enabling unprecedented core counts. And Linux is the operating system making it all possible.
+
+**What is RISC-V?**
+
+RISC-V (pronounced "risk-five") is an open, royalty-free instruction set architecture. Unlike proprietary designs from Intel (x86) or ARM, anyone can build RISC-V processors without paying licensing fees. This openness has sparked an explosion of innovation, particularly in many-core designs.
+
+**Why RISC-V Matters for Many-Core Systems:**
+
+- **No licensing costs** – Companies can add hundreds of cores without per-core fees
+- **Customization** – Designers can add specialized instructions for AI, cryptography, etc.
+- **Simplicity** – Clean architecture makes it easier to scale to many cores
+- **Open ecosystem** – Linux support is first-class and community-driven
+
+**Breakthrough Many-Core RISC-V Chips:**
+
+| Chip | Cores | Developer | Purpose |
+|------|-------|-----------|---------|
+| Occamy | 432 | ETH Zurich | Research/HPC |
+| ET-SoC-1 | ~1,093 | Esperanto Technologies | AI Inference |
+| Ventana Veyron | 192 | Ventana Micro | Data Center |
+| SiFive P870 | Scalable | SiFive | General Purpose |
+
+**Occamy: 432 Cores of Research Power**
+
+Developed by ETH Zurich, Occamy packs 432 RISC-V cores onto a single chip. It's designed for high-performance computing research, demonstrating that open-source hardware can compete with proprietary designs. Linux runs on Occamy, managing all 432 cores with the same kernel that runs on your Raspberry Pi.
+
+**Esperanto ET-SoC-1: Over 1,000 Cores for AI**
+
+Perhaps the most impressive RISC-V chip is Esperanto Technologies' ET-SoC-1, which packs approximately **1,093 RISC-V cores** onto a single chip. These aren't general-purpose cores—they're optimized specifically for AI inference workloads.
+
+The ET-SoC-1 demonstrates a key trend: specialized many-core processors designed for specific tasks like AI, running Linux as their control plane. Each of those 1,093 cores can execute RISC-V instructions, coordinated by Linux's scheduler and memory management.
+
+**Linux and RISC-V: A Perfect Partnership**
+
+Linux was one of the first operating systems to fully support RISC-V, and the support continues to improve:
+
+```bash
+# Check if your system supports RISC-V (on a RISC-V machine)
+uname -m
+# Output: riscv64
+
+# View RISC-V specific CPU information
+cat /proc/cpuinfo | grep -E 'processor|isa'
+```
+
+The Linux kernel's RISC-V port includes:
+
+- Full 64-bit support (RV64)
+- SMP (Symmetric Multi-Processing) for many cores
+- Vector extensions for AI acceleration
+- Hypervisor support for virtualization
+
+**Why This Matters for Your Future:**
+
+RISC-V represents the democratization of processor design. Just as Linux democratized operating systems, RISC-V is democratizing hardware. Companies in China, Europe, India, and startups worldwide are building RISC-V chips, and they all run Linux.
+
+The skills you've learned—process management, kernel understanding, performance monitoring—apply directly to these revolutionary new processors. When you run `htop` on a 1,000-core RISC-V system, you'll see the same interface you learned on your 4-core Raspberry Pi, just with a lot more cores to watch!
+
+!!! tip "Try RISC-V Today"
+    You can experiment with RISC-V Linux without special hardware:
+
+    - **QEMU emulation** – Run RISC-V Linux on any computer
+    - **SiFive boards** – Affordable RISC-V development boards (~$50-200)
+    - **Milk-V boards** – Budget RISC-V single-board computers
+    - **StarFive VisionFive 2** – Raspberry Pi-like RISC-V board
+
 ### Seeing Cores on Your Own System
 
 You can explore your own system's parallelism using commands you've already learned:
@@ -729,3 +797,11 @@ Welcome to the community. We're glad you're here.
 19. [Performance Co-Pilot (PCP)](https://pcp.io/) - Open-source framework for system performance analysis that can be extended with AI-based anomaly detection.
 
 20. [Linux Kernel Machine Learning Discussions](https://lore.kernel.org/lkml/) - Linux kernel mailing list archives where AI integration proposals are discussed.
+
+21. [RISC-V International](https://riscv.org/) - Official organization for the RISC-V open instruction set architecture.
+
+22. [Linux RISC-V Port](https://www.kernel.org/doc/html/latest/riscv/index.html) - Official Linux kernel documentation for RISC-V architecture support.
+
+23. [Esperanto Technologies ET-SoC-1](https://www.esperanto.ai/) - Information about the 1,093-core RISC-V chip designed for AI inference.
+
+24. [ETH Zurich Occamy Project](https://pulp-platform.org/) - Research on many-core RISC-V systems from the PULP Platform at ETH Zurich.
