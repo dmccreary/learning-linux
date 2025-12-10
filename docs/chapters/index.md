@@ -1,6 +1,6 @@
 # Chapters
 
-This textbook is organized into 26 chapters covering 550 concepts across Linux fundamentals, from UNIX history to career pathways.
+This textbook is organized into 27 chapters covering 550 concepts across Linux fundamentals, from UNIX history to the exciting future of many-core computing.
 
 ## Chapter Overview
 
@@ -29,7 +29,8 @@ This textbook is organized into 26 chapters covering 550 concepts across Linux f
 23. [System Administration Essentials](23-sys-admin/index.md) - User management, services, and system configuration
 24. [Automation and Some Fun](24-automation/index.md) - Automate tasks, custom prompts, colors, and easter eggs
 25. [Capstone Projects](25-capstone/index.md) - Web servers, game servers, and hands-on projects
-26. [Linux Careers and the Future](26-careers/index.md) - Career paths, certifications, and future trends
+26. [Linux Careers](26-careers/index.md) - Career paths, certifications, and industry opportunities
+27. [The Future of Linux](27-future/index.md) - Many-core systems, AI infrastructure, C vs Rust, and Linux's role in shaping tomorrow's computing
 
 ## How to Use This Textbook
 
@@ -38,7 +39,7 @@ This textbook follows a carefully designed learning progression where each chapt
 - **Beginners**: Start with Chapter 1 and progress sequentially
 - **Intermediate users**: Review the concept list in each chapter to find your starting point
 - **Raspberry Pi focus**: After completing Chapters 1-18, jump to Chapters 19-20 for hardware projects
-- **Career preparation**: Complete all chapters, with emphasis on Chapters 21-26 for modern skills
+- **Career preparation**: Complete all chapters, with emphasis on Chapters 21-27 for modern skills and future trends
 
 ---
 
