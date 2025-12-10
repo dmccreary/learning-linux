@@ -510,12 +510,6 @@ Linux is already on Mars, running the Ingenuity helicopter. But that's just the 
 
 NASA and SpaceX have demonstrated that Linux is reliable enough for the most demanding environments in existence.
 
-### Quantum Computing
-
-Quantum computers are still in their infancy, but guess what operating system controls them? Linux. Companies like IBM, Google, and IonQ use Linux systems to manage quantum processors, run calibration routines, and execute quantum algorithms.
-
-When quantum computing becomes practical, Linux expertise will be essential for working with these revolutionary machines.
-
 ## The Open Source Community's Role
 
 ### Collaborative Development at Scale
