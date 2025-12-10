@@ -68,9 +68,10 @@ If you don't have access to a real terminal on your computer, no worries!
 We have a "micro shell" using the handy browser based [Terminal Temple](http://terminaltemple.com) program.
 It only has 16 basic commands that run in a tiny virtual environment that will not
 damage any of your local files.  It is a good safe "sandbox" for you to learn shell
-commands.  Just click the **Data to Vis** link above and type "help" in the web-based terminal.
+commands.  Just click the **Terminal Temple** link above and type "help" in the web-based terminal.
 
-This is just the first of many small virtual machines we be using in this course. 
+This is just the first of many small virtual machines we be using in this course.  If you want to setup a safe "sandbox" that has all
+the shell commands, you can try the [Docker Practice Shell](../../supplementary-content/docker-practice-shell.md).  On a Mac or a Linux machine like the Raspberry Pi, the practice shell can be setup in about 20 minutes.
 
 ## What is a Shell?
 

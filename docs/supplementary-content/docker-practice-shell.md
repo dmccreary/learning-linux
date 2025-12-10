@@ -202,6 +202,19 @@ This is actually a **feature** for learning:
 
 If you need to save work, you'll learn about Docker volumes later—but for practicing commands, the ephemeral nature is perfect.
 
+## Timing a Simple Command Running Within Docker
+
+We can add the unix `time` command by just adding the word `time` in front of any shell command.  It will return
+
+```sh
+time docker run --rm alpine:latest echo "Hello World!"
+```
+
+   0.02s user 0.02s system 15% cpu 0.264 total
+
+- **First run:** 0.6 seconds (time to load the image into RAM)
+- **Subsequent runs:** 0.3 seconds
+
 ## Summary
 
 | Concept | What It Means |
