@@ -8,7 +8,9 @@ og:image: /sims/vm-timeline/vm-timeline.png
 
 An interactive timeline visualization tracing the evolution of virtualization technology from IBM mainframes in 1967 to modern containers, serverless computing, and cutting-edge research in 2025.
 
-[Run the VM Timeline](./main.html){ .md-button .md-button--primary }
+<iframe src="main.html" width="100%" height="500" scrolling="no"></iframe>
+
+[Run the VM Timeline](main.html){ .md-button .md-button--primary }
 
 [View Timeline Data (JSON)](./timeline.json){ .md-button }
 

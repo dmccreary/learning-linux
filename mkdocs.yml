@@ -100,6 +100,8 @@ nav:
     - Intelligent Textbooks: supplementary-content/intelligent-textbook.md
     - Low Cost Raspberry Pi: supplementary-content/low-cost-raspberry-pd.md
     - Raspberry Pi 500+: supplementary-content/raspberry-pi-500-plus-impact.md
+    - MasOS Terminal Startup: supplementary-content/macos-terminal-startup.md
+    - Raspberry Pi Terminal Startup: supplementary-content/pi-terminal-startup.md
     - VM Options: supplementary-content/vm-options.md
 
   - MicroSims:
