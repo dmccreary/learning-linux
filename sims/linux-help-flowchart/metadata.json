@@ -1,0 +1,31 @@
+{
+  "title": "Linux Help System Decision Flowchart",
+  "description": "Interactive decision flowchart helping students determine which Linux help command to use based on their situation and needs",
+  "subject": "Linux Operating Systems",
+  "creator": "Claude AI with Mermaid Generator Skill",
+  "date": "2025-12-07",
+  "type": "Interactive Workflow Diagram",
+  "format": "text/html",
+  "language": "en-US",
+  "coverage": "Introductory",
+  "rights": "Educational Use",
+  "audience": "High School",
+  "diagram_type": "flowchart",
+  "direction": "TD",
+  "node_count": "14",
+  "edge_count": "12",
+  "concepts": [
+    "apropos command",
+    "man pages",
+    "help command",
+    "--help flag",
+    "whatis command",
+    "type command",
+    "shell built-ins",
+    "command discovery",
+    "documentation systems"
+  ],
+  "bloom_taxonomy": "Apply, Analyze",
+  "learning_objective": "Help students quickly determine which help system to use based on their situation",
+  "version": "1.0"
+}

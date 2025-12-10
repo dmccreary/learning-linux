@@ -460,6 +460,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -757,6 +761,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#timing-a-simple-command-running-within-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timing a Simple Command Running Within Docker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
       Summary
@@ -828,6 +841,48 @@
   
   <span class="md-ellipsis">
     Raspberry Pi 500+
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macos-terminal-startup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MasOS Terminal Startup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pi-terminal-startup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raspberry Pi Terminal Startup
   </span>
   
 
@@ -1351,6 +1406,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#timing-a-simple-command-running-within-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timing a Simple Command Running Within Docker
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
       Summary
@@ -1591,6 +1655,15 @@ root
 <li>You can experiment without fear</li>
 </ul>
 <p>If you need to save work, you'll learn about Docker volumes later—but for practicing commands, the ephemeral nature is perfect.</p>
+<h2 id="timing-a-simple-command-running-within-docker">Timing a Simple Command Running Within Docker</h2>
+<p>We can add the unix <code>time</code> command by just adding the word <code>time</code> in front of any shell command.  It will return</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">time</span><span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>alpine:latest<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello World!&quot;</span>
+</code></pre></div></td></tr></table></div>
+<p>0.02s user 0.02s system 15% cpu 0.264 total</p>
+<ul>
+<li><strong>First run:</strong> 0.6 seconds (time to load the image into RAM)</li>
+<li><strong>Subsequent runs:</strong> 0.3 seconds</li>
+</ul>
 <h2 id="summary">Summary</h2>
 <table>
 <thead>

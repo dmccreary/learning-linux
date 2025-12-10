@@ -1,0 +1,2394 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive 15-week course teaching high school students Linux fundamentals">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/learning-linux/supplementary-content/macos-terminal-startup/">
+      
+      
+        <link rel="prev" href="../raspberry-pi-500-plus-impact/">
+      
+      
+        <link rel="next" href="../pi-terminal-startup/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>MasOS Terminal Startup - Learning Linux</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-1PH8WBWH86"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-1PH8WBWH86",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-1PH8WBWH86",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="MasOS Terminal Startup - Learning Linux" >
+      
+        <meta  property="og:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/supplementary-content/macos-terminal-startup.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/learning-linux/supplementary-content/macos-terminal-startup/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="MasOS Terminal Startup - Learning Linux" >
+      
+        <meta  name="twitter:description"  content="A comprehensive 15-week course teaching high school students Linux fundamentals" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-linux/assets/images/social/supplementary-content/macos-terminal-startup.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#automating-macos-terminal-windows-on-startup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Learning Linux" class="md-header__button md-logo" aria-label="Learning Linux" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Learning Linux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MasOS Terminal Startup
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Learning Linux" class="md-nav__button md-logo" aria-label="Learning Linux" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Learning Linux
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/learning-linux" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Supplementary Content
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Supplementary Content
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../claude-code-skills/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Claude Code Skills
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-mac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker MacOS Installation and Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-practice-shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Practice Shell
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intelligent-textbook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intelligent Textbooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../low-cost-raspberry-pd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Low Cost Raspberry Pi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raspberry-pi-500-plus-impact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raspberry Pi 500+
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    MasOS Terminal Startup
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    MasOS Terminal Startup
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-osascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is osascript?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminal-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal Profiles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-screen-coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Screen Coordinates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Screen Coordinates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#window-bounds-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Window Bounds Format
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-script-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Script Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Script Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-the-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create the Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-make-it-executable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Make It Executable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-run-the-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Run the Script
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-example-three-window-development-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Example: Three-Window Development Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complete Example: Three-Window Development Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Script
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-commands-on-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Commands on Startup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Commands on Startup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-a-single-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run a Single Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-multiple-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Multiple Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-directory-then-run-interactive-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change Directory Then Run Interactive Program
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-commands-with-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Commands with Environment Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-script-at-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the Script at Login
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running the Script at Login">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-login-items-easiest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1: Login Items (Easiest)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-create-an-application-wrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 2: Create an Application Wrapper
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-3-launchagent-most-reliable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 3: LaunchAgent (Most Reliable)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-your-screen-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding Your Screen Resolution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applescript-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      AppleScript Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AppleScript Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-window-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Window Information
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-cant-set-settings-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error: "Can't set settings set..."
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-open-but-dont-position-correctly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Open But Don't Position Correctly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-works-manually-but-not-at-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script Works Manually But Not at Login
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-denied" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permission Denied
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminal-asks-for-automation-permission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal Asks for Automation Permission
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-and-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips and Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      See Also
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pi-terminal-startup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raspberry Pi Terminal Startup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vm-options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VM Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../prompts/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Sample Prompts
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary of Terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-osascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is osascript?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminal-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal Profiles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-screen-coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Screen Coordinates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Screen Coordinates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#window-bounds-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Window Bounds Format
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-script-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Script Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Script Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-the-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create the Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-make-it-executable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Make It Executable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-run-the-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Run the Script
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-example-three-window-development-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Example: Three-Window Development Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complete Example: Three-Window Development Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Script
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-commands-on-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Commands on Startup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Commands on Startup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-a-single-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run a Single Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-multiple-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Multiple Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-directory-then-run-interactive-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change Directory Then Run Interactive Program
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-commands-with-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Commands with Environment Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-script-at-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the Script at Login
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running the Script at Login">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-login-items-easiest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 1: Login Items (Easiest)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-create-an-application-wrapper" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 2: Create an Application Wrapper
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-3-launchagent-most-reliable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method 3: LaunchAgent (Most Reliable)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-your-screen-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding Your Screen Resolution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applescript-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      AppleScript Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AppleScript Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-window-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Window Information
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-cant-set-settings-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error: "Can't set settings set..."
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-open-but-dont-position-correctly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Open But Don't Position Correctly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-works-manually-but-not-at-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script Works Manually But Not at Login
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-denied" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permission Denied
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminal-asks-for-automation-permission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal Asks for Automation Permission
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-and-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips and Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      See Also
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/learning-linux/blob/master/docs/supplementary-content/macos-terminal-startup.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="automating-macos-terminal-windows-on-startup">Automating macOS Terminal Windows on Startup</h1>
+<p><img alt="" src="../macos-terminal-startup.png" /></p>
+<p>This guide explains how to automatically open and configure multiple Terminal windows with specific profiles, sizes, positions, and commands when you log into macOS.</p>
+<h2 id="overview">Overview</h2>
+<p>Using a combination of shell scripts and AppleScript (via <code>osascript</code>), you can:</p>
+<ul>
+<li>Open multiple Terminal windows automatically</li>
+<li>Apply different Terminal profiles (themes) to each window</li>
+<li>Position and size windows precisely on your screen</li>
+<li>Run startup commands in each window (like launching Claude Code)</li>
+<li>Execute this setup on login</li>
+</ul>
+<h2 id="what-is-osascript">What is osascript?</h2>
+<p>The <code>osascript</code> command is a command-line tool that executes AppleScript and other Open Scripting Architecture (OSA) languages from the terminal. Apple created AppleScript in 1993 as part of System 7 to provide a natural language-like scripting language that could automate and control Mac applications. Unlike shell scripts that work with files and processes, AppleScript was designed specifically for inter-application communication—allowing users to script the GUI, send commands between apps, and automate complex workflows that span multiple applications. The <code>osascript</code> command bridges the gap between traditional Unix shell scripting and AppleScript, letting you embed powerful GUI automation directly within bash scripts. This is why we use it here: shell scripts alone cannot control window positions or apply Terminal profiles, but AppleScript can communicate directly with Terminal.app to manipulate its windows.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>macOS (tested on Ventura, Sonoma and Tahoe)</li>
+<li>Terminal.app (built-in)</li>
+<li>Basic familiarity with shell scripting</li>
+</ul>
+<h2 id="terminal-profiles">Terminal Profiles</h2>
+<p>macOS Terminal comes with several built-in profiles (themes):</p>
+<table>
+<thead>
+<tr>
+<th>Profile</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic</td>
+<td>Default white background</td>
+</tr>
+<tr>
+<td>Grass</td>
+<td>Green text on black background</td>
+</tr>
+<tr>
+<td>Homebrew</td>
+<td>Green text, classic terminal look</td>
+</tr>
+<tr>
+<td>Ocean</td>
+<td>Blue tones</td>
+</tr>
+<tr>
+<td>Pro</td>
+<td>Professional dark theme</td>
+</tr>
+<tr>
+<td>Red Sands</td>
+<td>Warm reddish tones</td>
+</tr>
+<tr>
+<td>Silver Aerogel</td>
+<td>Light gray theme</td>
+</tr>
+<tr>
+<td>Novel</td>
+<td>Sepia/paper-like appearance</td>
+</tr>
+</tbody>
+</table>
+<p>To see your available profiles:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>osascript<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;tell application &quot;Terminal&quot; to get name of every settings set&#39;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="understanding-screen-coordinates">Understanding Screen Coordinates</h2>
+<p>Terminal window positioning uses screen coordinates:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>(0,0) -----&gt; X increases
+  |
+  |
+  v
+  Y increases
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>Origin (0,0)</strong> is the top-left corner of the screen</li>
+<li><strong>X</strong> increases moving right</li>
+<li><strong>Y</strong> increases moving down</li>
+<li><strong>Menu bar</strong> is typically 25 pixels tall</li>
+</ul>
+<h3 id="window-bounds-format">Window Bounds Format</h3>
+<p>Window bounds are specified as: <code>{left, top, right, bottom}</code></p>
+<p>For example, a window in the top-left quarter of a 1920x1080 screen:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">set</span> <span class="na">bounds</span> <span class="k">of</span> <span class="nb">front</span> <span class="na">window</span> <span class="k">to</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">960</span><span class="p">,</span> <span class="mi">540</span><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<h2 id="basic-script-structure">Basic Script Structure</h2>
+<h3 id="step-1-create-the-script">Step 1: Create the Script</h3>
+<p>Create a new file at <code>~/bin/setup-terminals.sh</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># Setup Terminal Windows for Development</span>
+
+<span class="c1"># Screen dimensions (adjust for your display)</span>
+<span class="nv">SCREEN_WIDTH</span><span class="o">=</span><span class="m">1920</span>
+<span class="nv">SCREEN_HEIGHT</span><span class="o">=</span><span class="m">1080</span>
+<span class="nv">MENU_BAR</span><span class="o">=</span><span class="m">25</span>
+
+<span class="c1"># Open a terminal with the Grass profile</span>
+osascript<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
+<span class="s">tell application &quot;Terminal&quot;</span>
+<span class="s">    activate</span>
+
+<span class="s">    -- Get the profile settings</span>
+<span class="s">    set grassSettings to settings set &quot;Grass&quot;</span>
+
+<span class="s">    -- Open new window and run a command</span>
+<span class="s">    do script &quot;echo &#39;Hello from Grass terminal&#39;&quot;</span>
+
+<span class="s">    -- Apply profile to the window</span>
+<span class="s">    set current settings of front window to grassSettings</span>
+
+<span class="s">    -- Position and size the window</span>
+<span class="s">    set bounds of front window to {0, $MENU_BAR, 960, 540}</span>
+
+<span class="s">    -- Set a custom title</span>
+<span class="s">    set custom title of front window to &quot;My Terminal&quot;</span>
+<span class="s">end tell</span>
+<span class="s">EOF</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="step-2-make-it-executable">Step 2: Make It Executable</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>~/bin/setup-terminals.sh
+</code></pre></div></td></tr></table></div>
+<h3 id="step-3-run-the-script">Step 3: Run the Script</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>~/bin/setup-terminals.sh
+</code></pre></div></td></tr></table></div>
+<h2 id="complete-example-three-window-development-setup">Complete Example: Three-Window Development Setup</h2>
+<p>This example creates three terminal windows arranged in a specific layout:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>+------------+------------+------------+
+|            |            |            |
+|   GRASS    |            |   OCEAN    |
+|  (Claude)  |            |   (Git)    |
+|            |            |            |
++------------+------------+------------+
+             |  HOMEBREW  |
+             |  (Server)  |
+             +------------+
+</code></pre></div></td></tr></table></div>
+<h3 id="the-script">The Script</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># Setup Terminal Windows for Development</span>
+<span class="c1">#</span>
+<span class="c1"># Layout:</span>
+<span class="c1">#   +------------+------------+------------+</span>
+<span class="c1">#   |            |            |            |</span>
+<span class="c1">#   |   GRASS    |            |   OCEAN    |</span>
+<span class="c1">#   |   (left)   |            |   (right)  |</span>
+<span class="c1">#   |  half-ht   |            |  half-ht   |</span>
+<span class="c1">#   |            |            |            |</span>
+<span class="c1">#   +------------+------------+------------+</span>
+<span class="c1">#   |            |  HOMEBREW  |            |</span>
+<span class="c1">#   |            |  (bottom)  |            |</span>
+<span class="c1">#   +------------+------------+------------+</span>
+<span class="c1">#</span>
+<span class="c1"># Terminal Profiles: Grass, Homebrew, Ocean</span>
+
+<span class="c1"># Screen dimensions (adjust for your display)</span>
+<span class="c1"># To find your screen size: system_profiler SPDisplaysDataType | grep Resolution</span>
+<span class="nv">SCREEN_WIDTH</span><span class="o">=</span><span class="m">1920</span>
+<span class="nv">SCREEN_HEIGHT</span><span class="o">=</span><span class="m">1080</span>
+<span class="nv">MENU_BAR</span><span class="o">=</span><span class="m">25</span>
+
+<span class="c1"># Calculate positions</span>
+<span class="nv">THIRD_WIDTH</span><span class="o">=</span><span class="k">$((</span><span class="nv">$SCREEN_WIDTH</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">3</span><span class="k">))</span>
+<span class="nv">HALF_HEIGHT</span><span class="o">=</span><span class="k">$((</span><span class="o">(</span><span class="nv">$SCREEN_HEIGHT</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">$MENU_BAR</span><span class="o">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">2</span><span class="k">))</span>
+<span class="nv">BOTTOM_TOP</span><span class="o">=</span><span class="k">$((</span><span class="nv">$MENU_BAR</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">$HALF_HEIGHT</span><span class="k">))</span>
+
+<span class="c1"># Terminal 1: GRASS (left side, top half) - runs Claude Code</span>
+osascript<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
+<span class="s">tell application &quot;Terminal&quot;</span>
+<span class="s">    activate</span>
+
+<span class="s">    -- Get the Grass settings</span>
+<span class="s">    set grassSettings to settings set &quot;Grass&quot;</span>
+
+<span class="s">    -- Open new window with Grass profile and run claude</span>
+<span class="s">    do script &quot;/usr/local/bin/claude&quot;</span>
+<span class="s">    set current settings of front window to grassSettings</span>
+<span class="s">    set bounds of front window to {0, $MENU_BAR, $THIRD_WIDTH, $BOTTOM_TOP}</span>
+<span class="s">    set custom title of front window to &quot;Claude&quot;</span>
+<span class="s">end tell</span>
+<span class="s">EOF</span>
+
+<span class="c1"># Small delay to ensure windows don&#39;t overlap during creation</span>
+sleep<span class="w"> </span><span class="m">0</span>.5
+
+<span class="c1"># Terminal 2: HOMEBREW (center bottom)</span>
+osascript<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
+<span class="s">tell application &quot;Terminal&quot;</span>
+<span class="s">    -- Get the Homebrew settings</span>
+<span class="s">    set brewSettings to settings set &quot;Homebrew&quot;</span>
+
+<span class="s">    -- Open new window with Homebrew profile</span>
+<span class="s">    do script &quot;&quot;</span>
+<span class="s">    set current settings of front window to brewSettings</span>
+<span class="s">    set bounds of front window to {$THIRD_WIDTH, $BOTTOM_TOP, $(($THIRD_WIDTH * 2)), $SCREEN_HEIGHT}</span>
+<span class="s">    set custom title of front window to &quot;Homebrew&quot;</span>
+<span class="s">end tell</span>
+<span class="s">EOF</span>
+
+sleep<span class="w"> </span><span class="m">0</span>.5
+
+<span class="c1"># Terminal 3: OCEAN (right side, top half)</span>
+osascript<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
+<span class="s">tell application &quot;Terminal&quot;</span>
+<span class="s">    -- Get the Ocean settings</span>
+<span class="s">    set oceanSettings to settings set &quot;Ocean&quot;</span>
+
+<span class="s">    -- Open new window with Ocean profile</span>
+<span class="s">    do script &quot;&quot;</span>
+<span class="s">    set current settings of front window to oceanSettings</span>
+<span class="s">    set bounds of front window to {$(($THIRD_WIDTH * 2)), $MENU_BAR, $SCREEN_WIDTH, $BOTTOM_TOP}</span>
+<span class="s">    set custom title of front window to &quot;Ocean&quot;</span>
+<span class="s">end tell</span>
+<span class="s">EOF</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Terminal windows configured!&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  - Grass (left, half height)&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  - Homebrew (center, bottom)&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  - Ocean (right, half height)&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="running-commands-on-startup">Running Commands on Startup</h2>
+<p>The <code>do script</code> command accepts any shell command:</p>
+<h3 id="run-a-single-command">Run a Single Command</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">do</span> <span class="nv">script</span> <span class="s2">&quot;/usr/local/bin/claude&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="run-multiple-commands">Run Multiple Commands</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">do</span> <span class="nv">script</span> <span class="s2">&quot;cd ~/Documents/ws/my-project &amp;&amp; npm run dev&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="change-directory-then-run-interactive-program">Change Directory Then Run Interactive Program</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">do</span> <span class="nv">script</span> <span class="s2">&quot;cd ~/Documents/ws/graph-data-modeling-course &amp;&amp; /usr/local/bin/claude&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="run-commands-with-environment-variables">Run Commands with Environment Variables</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">do</span> <span class="nv">script</span> <span class="s2">&quot;export NODE_ENV=development &amp;&amp; npm start&quot;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="running-the-script-at-login">Running the Script at Login</h2>
+<h3 id="method-1-login-items-easiest">Method 1: Login Items (Easiest)</h3>
+<ol>
+<li>Open <strong>System Settings</strong> → <strong>General</strong> → <strong>Login Items</strong></li>
+<li>Click the <strong>+</strong> button</li>
+<li>Navigate to <code>~/bin/setup-terminals.sh</code></li>
+<li>Select it and click <strong>Add</strong></li>
+</ol>
+<p><strong>Note:</strong> You may need to convert the script to an Application first (see Method 2).</p>
+<h3 id="method-2-create-an-application-wrapper">Method 2: Create an Application Wrapper</h3>
+<ol>
+<li>Open <strong>Script Editor</strong> (in Applications → Utilities)</li>
+<li>Enter this code:</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">do shell script</span> <span class="s2">&quot;/Users/yourusername/bin/setup-terminals.sh&quot;</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Go to <strong>File</strong> → <strong>Export</strong></li>
+<li>Set <strong>File Format</strong> to <strong>Application</strong></li>
+<li>Save as "Setup Terminals.app" in your Applications folder</li>
+<li>Add the app to Login Items (System Settings → General → Login Items)</li>
+</ol>
+<h3 id="method-3-launchagent-most-reliable">Method 3: LaunchAgent (Most Reliable)</h3>
+<p>Create a LaunchAgent plist file:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>nano<span class="w"> </span>~/Library/LaunchAgents/com.user.setup-terminals.plist
+</code></pre></div></td></tr></table></div>
+<p>Add this content:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+<span class="nt">&lt;plist</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;dict&gt;</span>
+<span class="w">    </span><span class="nt">&lt;key&gt;</span>Label<span class="nt">&lt;/key&gt;</span>
+<span class="w">    </span><span class="nt">&lt;string&gt;</span>com.user.setup-terminals<span class="nt">&lt;/string&gt;</span>
+<span class="w">    </span><span class="nt">&lt;key&gt;</span>ProgramArguments<span class="nt">&lt;/key&gt;</span>
+<span class="w">    </span><span class="nt">&lt;array&gt;</span>
+<span class="w">        </span><span class="nt">&lt;string&gt;</span>/bin/bash<span class="nt">&lt;/string&gt;</span>
+<span class="w">        </span><span class="nt">&lt;string&gt;</span>/Users/yourusername/bin/setup-terminals.sh<span class="nt">&lt;/string&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/array&gt;</span>
+<span class="w">    </span><span class="nt">&lt;key&gt;</span>RunAtLoad<span class="nt">&lt;/key&gt;</span>
+<span class="w">    </span><span class="nt">&lt;true/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;key&gt;</span>LaunchOnlyOnce<span class="nt">&lt;/key&gt;</span>
+<span class="w">    </span><span class="nt">&lt;true/&gt;</span>
+<span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/plist&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p>Load the LaunchAgent:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>launchctl<span class="w"> </span>load<span class="w"> </span>~/Library/LaunchAgents/com.user.setup-terminals.plist
+</code></pre></div></td></tr></table></div>
+<p>To unload:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>launchctl<span class="w"> </span>unload<span class="w"> </span>~/Library/LaunchAgents/com.user.setup-terminals.plist
+</code></pre></div></td></tr></table></div>
+<h2 id="finding-your-screen-resolution">Finding Your Screen Resolution</h2>
+<p>To determine your screen dimensions for the script:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>system_profiler<span class="w"> </span>SPDisplaysDataType<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Resolution
+</code></pre></div></td></tr></table></div>
+<p>Example output:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Resolution: 1920 x 1080 (1080p FHD - Full High Definition)
+</code></pre></div></td></tr></table></div></p>
+<p>For multiple monitors, you'll see multiple resolutions listed.</p>
+<h2 id="applescript-reference">AppleScript Reference</h2>
+<h3 id="key-commands">Key Commands</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>activate</code></td>
+<td>Bring Terminal to the front</td>
+</tr>
+<tr>
+<td><code>do script "command"</code></td>
+<td>Open new window and run command</td>
+</tr>
+<tr>
+<td><code>do script "command" in front window</code></td>
+<td>Run command in existing window</td>
+</tr>
+<tr>
+<td><code>set bounds of front window to {l,t,r,b}</code></td>
+<td>Position/size window</td>
+</tr>
+<tr>
+<td><code>set current settings of front window to X</code></td>
+<td>Apply a profile</td>
+</tr>
+<tr>
+<td><code>set custom title of front window to "Name"</code></td>
+<td>Set window title</td>
+</tr>
+<tr>
+<td><code>settings set "ProfileName"</code></td>
+<td>Reference a profile by name</td>
+</tr>
+</tbody>
+</table>
+<h3 id="getting-window-information">Getting Window Information</h3>
+<p>To get the current bounds of the front Terminal window:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>osascript<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;tell application &quot;Terminal&quot; to get bounds of front window&#39;</span>
+</code></pre></div></td></tr></table></div>
+<p>This is useful for figuring out exact positions when designing your layout.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="error-cant-set-settings-set">Error: "Can't set settings set..."</h3>
+<p><strong>Cause:</strong> Profile name doesn't match exactly.</p>
+<p><strong>Solution:</strong> List available profiles and use the exact name:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>osascript<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;tell application &quot;Terminal&quot; to get name of every settings set&#39;</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="windows-open-but-dont-position-correctly">Windows Open But Don't Position Correctly</h3>
+<p><strong>Cause:</strong> Screen dimensions in script don't match your display.</p>
+<p><strong>Solution:</strong> Update <code>SCREEN_WIDTH</code> and <code>SCREEN_HEIGHT</code> variables to match your actual resolution.</p>
+<h3 id="script-works-manually-but-not-at-login">Script Works Manually But Not at Login</h3>
+<p><strong>Cause:</strong> The script runs before the GUI is ready.</p>
+<p><strong>Solution:</strong> Add a delay at the beginning of your script:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sleep<span class="w"> </span><span class="m">3</span><span class="w">  </span><span class="c1"># Wait 3 seconds for GUI to be ready</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="permission-denied">Permission Denied</h3>
+<p><strong>Cause:</strong> Script isn't executable.</p>
+<p><strong>Solution:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>~/bin/setup-terminals.sh
+</code></pre></div></td></tr></table></div></p>
+<h3 id="terminal-asks-for-automation-permission">Terminal Asks for Automation Permission</h3>
+<p><strong>Cause:</strong> macOS security requires permission for scripts to control apps.</p>
+<p><strong>Solution:</strong>
+1. Go to <strong>System Settings</strong> → <strong>Privacy &amp; Security</strong> → <strong>Automation</strong>
+2. Allow your terminal or script to control Terminal.app</p>
+<h2 id="tips-and-best-practices">Tips and Best Practices</h2>
+<ol>
+<li>
+<p><strong>Use delays between windows</strong> - A <code>sleep 0.5</code> between window creation prevents race conditions.</p>
+</li>
+<li>
+<p><strong>Test coordinates manually</strong> - Use <code>get bounds of front window</code> to find good positions before scripting.</p>
+</li>
+<li>
+<p><strong>Keep scripts in ~/bin</strong> - Add <code>export PATH="$HOME/bin:$PATH"</code> to your <code>~/.zshrc</code> for easy access.</p>
+</li>
+<li>
+<p><strong>Version control your scripts</strong> - Keep your setup scripts in a git repository for backup.</p>
+</li>
+<li>
+<p><strong>Document your layout</strong> - Add ASCII art comments showing your intended window arrangement.</p>
+</li>
+</ol>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/">AppleScript Language Guide</a></li>
+<li><a href="Open Script Editor → File → Open Dictionary → Terminal">Terminal.app Scripting Dictionary</a></li>
+<li><a href="https://ss64.com/osx/launchctl.html">launchd.plist man page</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../raspberry-pi-500-plus-impact/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Raspberry Pi 500+">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Raspberry Pi 500+
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../pi-terminal-startup/" class="md-footer__link md-footer__link--next" aria-label="Next: Raspberry Pi Terminal Startup">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Raspberry Pi Terminal Startup
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>
