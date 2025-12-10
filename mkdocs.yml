@@ -91,7 +91,9 @@ nav:
     - 26. Careers:
       - Content: chapters/26-careers/index.md
       - Quiz: chapters/26-careers/quiz.md
-  
+    - 27. Future of Linux:
+      - Content: chapters/27-future/index.md
+
   - Supplementary Content:
     - List of Supplementary Content: supplementary-content/index.md
     - Claude Code Skills: supplementary-content/claude-code-skills.md
