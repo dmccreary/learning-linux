@@ -1,0 +1,47 @@
+{
+  "title": "Linux Distribution Comparison",
+  "description": "Interactive comparison table of major Linux distributions with ratings for user-friendliness, stability, and software freshness",
+  "subject": "Computer Science",
+  "topic": "Linux Distribution Comparison",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "vanilla-js",
+  "url": "https://dmccreary.github.io/learning-linux/sims/linux-distro-comparison/",
+  "identifier": "https://dmccreary.github.io/learning-linux/sims/linux-distro-comparison/",
+  "_source": {
+    "repo": "learning-linux",
+    "sim": "linux-distro-comparison",
+    "github_url": "https://github.com/dmccreary/learning-linux/tree/main/docs/sims/linux-distro-comparison",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Computer Science",
+    "Chemistry",
+    "Biology",
+    "Statistics"
+  ],
+  "visualizationType": [
+    "chart",
+    "graph",
+    "interactive-demo",
+    "network"
+  ],
+  "learningObjectives": [
+    "Understand how linux distribution comparison algorithms work",
+    "Visualize linux distribution comparison data structures and operations",
+    "Analyze the efficiency and behavior of linux distribution comparison",
+    "Experiment with parameters to observe their effects on linux distribution comparison"
+  ]
+}

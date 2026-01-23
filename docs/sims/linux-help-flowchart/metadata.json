@@ -27,5 +27,22 @@
   ],
   "bloom_taxonomy": "Apply, Analyze",
   "learning_objective": "Help students quickly determine which help system to use based on their situation",
-  "version": "1.0"
+  "version": "1.0",
+  "visualizationType": [
+    "diagram",
+    "graph",
+    "interactive-demo"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of linux help system decision flowchart",
+    "Explore linux help system decision flowchart through interactive visualization",
+    "Apply knowledge of linux help system decision flowchart to solve problems",
+    "Experiment with parameters to observe their effects on linux help system decision flowchart"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Create"
+  ]
 }

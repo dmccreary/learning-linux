@@ -3,7 +3,11 @@
   "title": "UNIX Philosophy Pipe Diagram",
   "description": "An interactive visualization showing how small UNIX tools connect together via pipes to accomplish complex tasks, demonstrating the 'do one thing well' philosophy.",
   "creator": "Dan McCreary",
-  "subject": ["Computer Science", "Operating Systems", "Linux"],
+  "subject": [
+    "Computer Science",
+    "Operating Systems",
+    "Linux"
+  ],
   "date": "2025-12-07",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -19,7 +23,10 @@
       "Apply the concept of pipes to combine commands in the terminal",
       "Recognize the pipe symbol (|) as a connector between commands"
     ],
-    "bloomsTaxonomyLevels": ["Understand", "Apply"],
+    "bloomsTaxonomyLevels": [
+      "Understand",
+      "Apply"
+    ],
     "duration": "15-20 minutes",
     "prerequisites": [
       "Basic understanding of command line interface",
@@ -31,8 +38,12 @@
     "version": "1.11.10",
     "canvasDimensions": "responsive x 450",
     "responsive": "Width-responsive",
-    "dependencies": ["p5.js CDN"],
-    "accessibility": ["Screen reader description via describe() function"]
+    "dependencies": [
+      "p5.js CDN"
+    ],
+    "accessibility": [
+      "Screen reader description via describe() function"
+    ]
   },
   "userInterface": {
     "controls": [
@@ -74,5 +85,24 @@
       "Simplified representation of pipe mechanism",
       "Does not demonstrate error handling or parallel processing"
     ]
-  }
+  },
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "interactive-demo",
+    "network"
+  ],
+  "learningObjectives": [
+    "Understand how unix philosophy pipe diagram algorithms work",
+    "Visualize unix philosophy pipe diagram data structures and operations",
+    "Analyze the efficiency and behavior of unix philosophy pipe diagram",
+    "Experiment with parameters to observe their effects on unix philosophy pipe diagram"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Create"
+  ]
 }

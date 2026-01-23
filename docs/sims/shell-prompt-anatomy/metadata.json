@@ -3,7 +3,12 @@
   "title": "Shell Prompt Anatomy",
   "description": "An interactive diagram that helps students recognize and understand each component of a typical Linux shell prompt, including username, hostname, current directory, and user indicator symbols.",
   "creator": "Dan McCreary",
-  "subject": ["Linux", "Terminal", "Shell", "Command Line"],
+  "subject": [
+    "Linux",
+    "Terminal",
+    "Shell",
+    "Command Line"
+  ],
   "date": "2025-12-07",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -18,13 +23,20 @@
     "Identify whether logged in as a normal user or root user",
     "Recognize prompts from different Linux distributions"
   ],
-  "bloomsTaxonomy": ["Remember", "Understand"],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand"
+  ],
   "duration": "10-15 minutes",
-  "prerequisites": ["Basic familiarity with opening a terminal"],
+  "prerequisites": [
+    "Basic familiarity with opening a terminal"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 480",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "keyboardNavigation": false,
@@ -59,5 +71,10 @@
   "limitations": [
     "Does not cover all possible prompt customizations",
     "Does not show prompt configuration (PS1 variable)"
+  ],
+  "visualizationType": [
+    "diagram",
+    "interactive-demo",
+    "network"
   ]
 }
