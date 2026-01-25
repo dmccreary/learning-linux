@@ -45,5 +45,29 @@
     "Understand the mathematical concept of linux timeline - from hobby to world domination",
     "Apply linux timeline - from hobby to world domination to solve problems",
     "Visualize and interpret linux timeline - from hobby to world domination relationships"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "remember",
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "recall",
+      "recognize",
+      "classify",
+      "interpret",
+      "summarize"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "manipulate"
+  }
 }

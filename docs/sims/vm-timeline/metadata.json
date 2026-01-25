@@ -45,5 +45,27 @@
     "Understand the mathematical concept of history of virtual machines & containers",
     "Apply history of virtual machines & containers to solve problems",
     "Visualize and interpret history of virtual machines & containers relationships"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "compare",
+      "summarize",
+      "illustrate",
+      "implement"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate",
+      "corrective"
+    ],
+    "interactionStyle": "manipulate"
+  }
 }

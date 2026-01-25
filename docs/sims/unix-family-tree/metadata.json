@@ -48,5 +48,28 @@
     "network",
     "simulation",
     "timeline"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "remember",
+      "understand",
+      "evaluate"
+    ],
+    "bloomVerbs": [
+      "define",
+      "identify",
+      "recognize",
+      "explain",
+      "assess"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "observe"
+  }
 }

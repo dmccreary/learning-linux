@@ -76,5 +76,26 @@
     "diagram",
     "interactive-demo",
     "network"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "guided-discovery",
+    "bloomAlignment": [
+      "remember",
+      "understand"
+    ],
+    "bloomVerbs": [
+      "identify",
+      "recall",
+      "recognize",
+      "state",
+      "describe"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "explanatory"
+    ],
+    "interactionStyle": "respond"
+  }
 }

@@ -43,5 +43,28 @@
     "Visualize linux distribution comparison data structures and operations",
     "Analyze the efficiency and behavior of linux distribution comparison",
     "Experiment with parameters to observe their effects on linux distribution comparison"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "reference",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "compare",
+      "explain",
+      "summarize",
+      "apply",
+      "implement"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate",
+      "explanatory"
+    ],
+    "interactionStyle": "manipulate"
+  }
 }
