@@ -22,5 +22,47 @@
     "Understand",
     "Analyze"
   ],
-  "learningObjective": "Help students understand the key differences between Bash and Zsh to make informed choices about which shell to use."
+  "learningObjective": "Help students understand the key differences between Bash and Zsh to make informed choices about which shell to use.",
+  "visualizationType": [
+    "data-visualization",
+    "diagram",
+    "graph",
+    "interactive-demo",
+    "timeline"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of bash vs zsh comparison",
+    "Explore bash vs zsh comparison through interactive visualization",
+    "Apply knowledge of bash vs zsh comparison to solve problems"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate"
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "compare",
+      "interpret",
+      "apply",
+      "illustrate"
+    ],
+    "pacing": "step-through",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "observe"
+  }
 }
