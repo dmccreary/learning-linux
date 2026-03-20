@@ -1,0 +1,71 @@
+{
+  "title": "History of Virtual Machines & Containers",
+  "description": "An interactive timeline visualization tracing the evolution of virtualization technology and containers.",
+  "subject": "Mathematics",
+  "topic": "History of Virtual Machines & Containers",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "vanilla-js",
+  "url": "https://dmccreary.github.io/learning-linux/sims/vm-timeline/",
+  "identifier": "https://dmccreary.github.io/learning-linux/sims/vm-timeline/",
+  "_source": {
+    "repo": "learning-linux",
+    "sim": "vm-timeline",
+    "github_url": "https://github.com/dmccreary/learning-linux/tree/main/docs/sims/vm-timeline",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Computer Science",
+    "Chemistry",
+    "Biology",
+    "Engineering"
+  ],
+  "visualizationType": [
+    "animation",
+    "graph",
+    "interactive-demo",
+    "network",
+    "timeline",
+    "map"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of history of virtual machines & containers",
+    "Apply history of virtual machines & containers to solve problems",
+    "Visualize and interpret history of virtual machines & containers relationships"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "compare",
+      "summarize",
+      "illustrate",
+      "implement"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate",
+      "corrective"
+    ],
+    "interactionStyle": "manipulate"
+  }
+}

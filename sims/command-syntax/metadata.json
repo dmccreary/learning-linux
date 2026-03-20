@@ -3,7 +3,13 @@
   "title": "Command Syntax Visual Guide",
   "description": "An interactive diagram that helps students understand the structure of Linux commands, including how commands, options, and arguments work together.",
   "creator": "Dan McCreary",
-  "subject": ["Linux", "Terminal", "Shell", "Command Line", "Commands"],
+  "subject": [
+    "Linux",
+    "Terminal",
+    "Shell",
+    "Command Line",
+    "Commands"
+  ],
   "date": "2025-12-07",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -18,13 +24,21 @@
     "Apply this knowledge to read and construct new commands",
     "Analyze unfamiliar commands by breaking them into components"
   ],
-  "bloomsTaxonomy": ["Understand", "Apply"],
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
   "duration": "15-20 minutes",
-  "prerequisites": ["Basic familiarity with the terminal", "Understanding of files and directories"],
+  "prerequisites": [
+    "Basic familiarity with the terminal",
+    "Understanding of files and directories"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 450",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "keyboardNavigation": false,
@@ -60,5 +74,34 @@
     "Does not cover piping or redirection",
     "Does not show command output",
     "Limited to common command patterns"
-  ]
+  ],
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "interactive-demo",
+    "simulation"
+  ],
+  "pedagogical": {
+    "pattern": "worked-example",
+    "bloomAlignment": [
+      "remember",
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "define",
+      "identify",
+      "list",
+      "state",
+      "compare"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "respond"
+  }
 }

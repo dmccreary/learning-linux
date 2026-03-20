@@ -1,0 +1,73 @@
+{
+  "title": "Linux Timeline - From Hobby to World Domination",
+  "description": "An interactive timeline visualization showing key milestones in Linux history from 1991 to 2025.",
+  "subject": "Mathematics",
+  "topic": "Linux Timeline - From Hobby to World Domination",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "vanilla-js",
+  "url": "https://dmccreary.github.io/learning-linux/sims/linux-timeline/",
+  "identifier": "https://dmccreary.github.io/learning-linux/sims/linux-timeline/",
+  "_source": {
+    "repo": "learning-linux",
+    "sim": "linux-timeline",
+    "github_url": "https://github.com/dmccreary/learning-linux/tree/main/docs/sims/linux-timeline",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Computer Science",
+    "Chemistry",
+    "Statistics",
+    "Engineering"
+  ],
+  "visualizationType": [
+    "animation",
+    "graph",
+    "interactive-demo",
+    "network",
+    "timeline",
+    "map"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of linux timeline - from hobby to world domination",
+    "Apply linux timeline - from hobby to world domination to solve problems",
+    "Visualize and interpret linux timeline - from hobby to world domination relationships"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "remember",
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "recall",
+      "recognize",
+      "classify",
+      "interpret",
+      "summarize"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "manipulate"
+  }
+}

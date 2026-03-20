@@ -1,6 +1,6 @@
 {
   "title": "Shell and Kernel Flow",
-  "description": "Interactive workflow diagram showing the three-layer architecture of how user commands are processed in Linux: User → Shell → Kernel",
+  "description": "Interactive workflow diagram showing the three-layer architecture of how user commands are processed in Linux: User \u2192 Shell \u2192 Kernel",
   "subject": "Linux",
   "creator": "Claude AI with Mermaid Generator Skill",
   "date": "2025-12-07",
@@ -23,5 +23,44 @@
     "Kernel Space"
   ],
   "bloom_taxonomy": "Understand",
-  "version": "1.0"
+  "version": "1.0",
+  "visualizationType": [
+    "diagram",
+    "graph",
+    "interactive-demo",
+    "map"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of shell and kernel flow",
+    "Explore shell and kernel flow through interactive visualization",
+    "Apply knowledge of shell and kernel flow to solve problems"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "remember",
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "identify",
+      "describe",
+      "explain",
+      "interpret",
+      "summarize"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "explanatory"
+    ],
+    "interactionStyle": "observe"
+  }
 }
