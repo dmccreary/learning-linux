@@ -1,0 +1,335 @@
+{
+  "project": {
+    "title": "Learning Linux",
+    "subtitle": "Auto-scanned intelligent textbook",
+    "author": "Dan McCreary",
+    "costPerMTokens": 15,
+    "sessionBudget": {
+      "pro": 900000,
+      "max": 3500000
+    }
+  },
+  "sections": {
+    "scaffold": {
+      "status": "published",
+      "tokensTarget": 2000,
+      "tokensDone": 2000
+    },
+    "course-description": {
+      "status": "published",
+      "tokensTarget": 4000,
+      "tokensDone": 1706
+    },
+    "learning-graph": {
+      "status": "published",
+      "tokensTarget": 20000,
+      "tokensDone": 20000
+    },
+    "chapter-structure": {
+      "status": "published",
+      "tokensTarget": 15000,
+      "tokensDone": 15000
+    },
+    "chapter-content": {
+      "countLabel": "27 chapters",
+      "children": [
+        {
+          "n": 1,
+          "title": "Introduction to Operating Systems and UNIX History",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 2,
+          "title": "Getting Started with the Terminal",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 3,
+          "title": "Basic Shell Commands and Help Systems",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 4,
+          "title": "File System Fundamentals",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 5,
+          "title": "File Operations and Manipulation",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 6,
+          "title": "Advanced File Operations",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 7,
+          "title": "File Permissions and Ownership",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 8,
+          "title": "Text Processing with Grep and Regular Expressions",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 9,
+          "title": "Advanced Text Processing: Sed, Awk, and Pipes",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 10,
+          "title": "Text Editors: Nano and Vim",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 11,
+          "title": "Shell Configuration and Environment",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 12,
+          "title": "Process Management and Job Control",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 13,
+          "title": "Shell Scripting and Automation",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 14,
+          "title": "Package Management",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 15,
+          "title": "Networking Fundamentals",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 16,
+          "title": "SSH and Remote Access",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 17,
+          "title": "Finding Files, Archives and Compression",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 18,
+          "title": "Storage Devices and System Performance",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 19,
+          "title": "Introduction to Raspberry Pi",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 20,
+          "title": "GPIO Programming and Hardware Projects",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 21,
+          "title": "Virtual Machines, Containers and the Cloud",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 22,
+          "title": "Development Tools and Version Control",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 23,
+          "title": "System Administration Essentials",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 24,
+          "title": "Automation and Some Fun",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 25,
+          "title": "Capstone Projects",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 26,
+          "title": "Linux Careers and the Future",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 27,
+          "title": "The Future of Linux",
+          "status": "reviewed",
+          "tokens": 10000
+        }
+      ]
+    },
+    "chapter-images": {
+      "status": "drafted",
+      "tokensTarget": 8000,
+      "tokensDone": 3600
+    },
+    "microsims": {
+      "countLabel": "14 simulations",
+      "children": [
+        {
+          "n": 1,
+          "title": "Bash vs Zsh Comparison",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 2,
+          "title": "Command Syntax Visual Guide",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 3,
+          "title": "Learning Graph Viewer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 4,
+          "title": "Linux Distribution Comparison",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 5,
+          "title": "Linux Help System Decision Flowchart",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 6,
+          "title": "Web Server OS Market Share",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 7,
+          "title": "Linux Timeline - From Hobby to World Domination",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 8,
+          "title": "Open Source vs Proprietary Software",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 9,
+          "title": "Shell and Kernel Flow",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 10,
+          "title": "Shell Prompt Anatomy",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 11,
+          "title": "Tab Completion Practice",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 12,
+          "title": "UNIX Family Tree (1969-2025)",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 13,
+          "title": "UNIX Philosophy Pipe Diagram",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 14,
+          "title": "History of Virtual Machines & Containers",
+          "status": "published",
+          "tokens": 5000
+        }
+      ]
+    },
+    "glossary": {
+      "status": "published",
+      "tokensTarget": 18246,
+      "tokensDone": 18246
+    },
+    "faq": {
+      "status": "published",
+      "tokensTarget": 12000,
+      "tokensDone": 4304
+    },
+    "quiz": {
+      "status": "published",
+      "tokensTarget": 30000,
+      "tokensDone": 29687
+    },
+    "reference": {
+      "status": "not-started",
+      "tokensTarget": 20000,
+      "tokensDone": 0
+    },
+    "teachers-guide": {
+      "status": "not-started",
+      "tokensTarget": 15000,
+      "tokensDone": 0
+    },
+    "book-metrics": {
+      "status": "published",
+      "tokensTarget": 2000,
+      "tokensDone": 2000
+    },
+    "publish": {
+      "status": "published",
+      "tokensTarget": 10000,
+      "tokensDone": 10000
+    },
+    "stories": {
+      "status": "not-started",
+      "tokensTarget": 30000,
+      "tokensDone": 0
+    }
+  }
+}
